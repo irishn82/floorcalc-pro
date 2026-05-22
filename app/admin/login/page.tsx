@@ -6,6 +6,7 @@ import {
   setAdminSessionCookie,
   validateAdminPassword
 } from "@/lib/admin/auth";
+import { BrandMark } from "@/components/BrandMark";
 
 export const metadata: Metadata = {
   title: "Admin Login",
@@ -64,11 +65,12 @@ export default async function AdminLoginPage({ searchParams }: LoginPageProps) {
   const isConfigured = isAdminAuthConfigured();
 
   return (
-    <main className="grid min-h-screen place-items-center bg-slate-100 px-4 py-12">
-      <section className="w-full max-w-md rounded-lg border border-slate-200 bg-white p-6 shadow-sm">
+    <main className="grid min-h-screen place-items-center bg-field px-4 py-12">
+      <section className="w-full max-w-md rounded-lg border border-line bg-white p-6 shadow-sm">
         <div>
-          <p className="text-sm font-bold uppercase tracking-wide text-blue-700">Internal Editorial</p>
-          <h1 className="mt-3 text-2xl font-black text-slate-950">Admin Login</h1>
+          <BrandMark className="h-11 w-11 rounded-xl object-contain shadow-brand ring-1 ring-brand-900/10" />
+          <p className="mt-5 text-sm font-bold uppercase tracking-wide text-accent-700">Internal Editorial</p>
+          <h1 className="mt-3 text-2xl font-black text-ink">Admin Login</h1>
           <p className="mt-2 text-sm leading-6 text-slate-600">
             Enter the solo-operator admin password to access the FloorCalc Pro editorial dashboard.
           </p>
@@ -91,7 +93,7 @@ export default async function AdminLoginPage({ searchParams }: LoginPageProps) {
           <label className="block">
             <span className="text-sm font-semibold text-slate-700">Admin password</span>
             <input
-              className="mt-2 w-full rounded-md border border-slate-300 bg-white px-3 py-2.5 text-slate-950 outline-none transition focus:border-blue-600 focus:ring-2 focus:ring-blue-100"
+              className="mt-2 w-full rounded-md border border-line bg-white px-3 py-2.5 text-ink outline-none transition focus:border-accent-500 focus:ring-2 focus:ring-accent-100"
               type="password"
               name="password"
               autoComplete="current-password"
@@ -100,7 +102,7 @@ export default async function AdminLoginPage({ searchParams }: LoginPageProps) {
           </label>
           <button
             type="submit"
-            className="w-full rounded-md bg-slate-950 px-4 py-3 text-sm font-bold text-white transition hover:bg-slate-800"
+            className="w-full rounded-md bg-brand-900 px-4 py-3 text-sm font-bold text-white transition hover:bg-accent-700"
           >
             Log In
           </button>

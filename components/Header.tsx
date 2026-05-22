@@ -13,11 +13,11 @@ export function Header() {
     <header className="sticky top-0 z-40 border-b border-line/80 bg-white/95 shadow-sm backdrop-blur">
       <Container className="flex min-h-16 items-center justify-between gap-5">
         <Link href="/" className="flex items-center gap-3 font-semibold text-ink" aria-label="FloorCalc Pro home">
-          <BrandMark className="h-10 w-10" />
+          <BrandMark priority className="h-10 w-10 rounded-xl object-contain shadow-brand ring-1 ring-brand-900/10" />
           <span className="leading-tight">
             <span className="block text-base font-black sm:text-lg">FloorCalc Pro</span>
             <span className="hidden text-xs font-bold uppercase tracking-wide text-slate-500 sm:block">
-              Flooring calculators
+              Flooring calculators & guides
             </span>
           </span>
         </Link>
@@ -26,7 +26,7 @@ export function Header() {
             <Link
               key={item.href}
               href={item.href}
-              className="inline-flex items-center gap-2 rounded-md px-3 py-2 transition hover:bg-brand-50 hover:text-ink"
+              className="inline-flex items-center gap-2 rounded-md px-3 py-2 transition hover:bg-accent-50 hover:text-accent-700"
             >
               <FlooringIcon name={item.icon} className="hidden h-4 w-4 text-accent-700 sm:block" />
               {item.label}

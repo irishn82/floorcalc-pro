@@ -45,33 +45,33 @@ export default async function AdminOverviewPage() {
           description="Current production-safe editorial capabilities. None of these steps auto-publish content."
         >
           <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-4">
-            <div className="rounded-lg border border-slate-200 p-4">
+            <div className="rounded-lg border border-line bg-white p-4">
               <div className="flex items-center justify-between gap-3">
                 <h3 className="font-bold">Phase 1</h3>
                 <StatusBadge tone="success">Live foundation</StatusBadge>
               </div>
               <p className="mt-2 text-sm leading-6 text-slate-600">Public calculators, starter guides, SEO metadata, sitemap.</p>
             </div>
-            <div className="rounded-lg border border-slate-200 p-4">
+            <div className="rounded-lg border border-line bg-white p-4">
               <div className="flex items-center justify-between gap-3">
                 <h3 className="font-bold">Phase 2</h3>
                 <StatusBadge tone="success">Draft workflow</StatusBadge>
               </div>
               <p className="mt-2 text-sm leading-6 text-slate-600">Keyword data and local markdown draft generation.</p>
             </div>
-            <div className="rounded-lg border border-slate-200 p-4">
+            <div className="rounded-lg border border-line bg-white p-4">
               <div className="flex items-center justify-between gap-3">
                 <h3 className="font-bold">Phase 3</h3>
                 <StatusBadge tone="success">Manual promotion</StatusBadge>
               </div>
               <p className="mt-2 text-sm leading-6 text-slate-600">Validation, checklist, and promotion-ready snippets.</p>
             </div>
-            <div className="rounded-lg border border-slate-200 p-4">
+            <div className="rounded-lg border border-line bg-white p-4">
               <div className="flex items-center justify-between gap-3">
                 <h3 className="font-bold">Admin UI</h3>
-                <StatusBadge tone="warning">Internal only</StatusBadge>
+                <StatusBadge tone="warning">Protected</StatusBadge>
               </div>
-              <p className="mt-2 text-sm leading-6 text-slate-600">Read-only dashboard. Auth required before deployment exposure.</p>
+              <p className="mt-2 text-sm leading-6 text-slate-600">Read-only dashboard behind the solo-admin password flow.</p>
             </div>
           </div>
         </AdminCard>

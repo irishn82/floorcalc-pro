@@ -223,7 +223,7 @@ function CarpetSeamLayoutVisualizer({
           preserveAspectRatio="xMidYMid meet"
         >
           <rect width="420" height="270" fill="#f8fafc" />
-          <text x="20" y="24" fill="#1e40af" fontSize="12" fontWeight="700">
+          <text x="20" y="24" fill="#154fa8" fontSize="12" fontWeight="700">
             Planning visual only
           </text>
           <text x="210" y="246" fill="#475569" fontSize="11" fontWeight="700" textAnchor="middle">
@@ -241,7 +241,7 @@ function CarpetSeamLayoutVisualizer({
             Room width: {formatNumber(roomWidth)} ft
           </text>
 
-          <rect x={roomX} y={roomY} width={roomSvgWidth} height={roomSvgHeight} rx="6" fill="#ffffff" stroke="#1e40af" strokeWidth="2" />
+          <rect x={roomX} y={roomY} width={roomSvgWidth} height={roomSvgHeight} rx="6" fill="#ffffff" stroke="#1f6feb" strokeWidth="2" />
 
           {drops.map((drop, index) => {
             const y = roomY + (drop.startFeet / safeWidth) * roomSvgHeight;
@@ -254,13 +254,13 @@ function CarpetSeamLayoutVisualizer({
                   y={y}
                   width={roomSvgWidth}
                   height={height}
-                  fill={index % 2 === 0 ? "#dbeafe" : "#eff6ff"}
+                  fill={index % 2 === 0 ? "#dcecff" : "#eff7ff"}
                   opacity="0.85"
                 />
                 <text
                   x={roomX + roomSvgWidth / 2}
                   y={y + Math.max(18, height / 2)}
-                  fill="#172033"
+                  fill="#0d1624"
                   fontSize="11"
                   fontWeight="700"
                   textAnchor="middle"

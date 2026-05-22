@@ -33,7 +33,7 @@ export function CalculatorLayout({ title, intro, flooringSystem, children, formu
         </section>
         <section className="rounded-lg border border-line bg-white p-5 shadow-sm">
           <h2 className="inline-flex items-center gap-2 text-lg font-bold text-ink">
-            <FlooringIcon name="layers" className="h-5 w-5 text-moss-700" />
+            <FlooringIcon name="layers" className="h-5 w-5 text-accent-700" />
             Practical Flooring Notes
           </h2>
           <ul className="mt-3 space-y-3 text-sm leading-6 text-slate-600">

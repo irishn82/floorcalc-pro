@@ -22,6 +22,7 @@ export default function ToolsIndexPage() {
             eyebrow="Tools"
             title="Flooring calculators"
             description="Choose a calculator below to estimate the most common material planning questions before a flooring project."
+            headingLevel="h1"
           />
           <div className="grid gap-3 sm:grid-cols-3">
             {[

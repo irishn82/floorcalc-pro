@@ -17,14 +17,14 @@ export function WorkflowStepCard({ step, title, description, status }: WorkflowS
   const badge = statusCopy[status];
 
   return (
-    <article className="rounded-lg border border-slate-200 bg-white p-4">
+    <article className="rounded-lg border border-line bg-white p-4 shadow-sm">
       <div className="flex items-start justify-between gap-3">
-        <span className="grid h-8 w-8 shrink-0 place-items-center rounded-md bg-slate-100 text-sm font-black text-slate-700">
+        <span className="grid h-8 w-8 shrink-0 place-items-center rounded-md border border-accent-100 bg-accent-50 text-sm font-black text-accent-700">
           {step}
         </span>
         <StatusBadge tone={badge.tone}>{badge.label}</StatusBadge>
       </div>
-      <h3 className="mt-4 font-bold text-slate-950">{title}</h3>
+      <h3 className="mt-4 font-bold text-ink">{title}</h3>
       <p className="mt-2 text-sm leading-6 text-slate-600">{description}</p>
     </article>
   );

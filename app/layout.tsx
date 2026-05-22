@@ -15,6 +15,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/"
   },
+  icons: {
+    icon: "/fcplogo-icon.png",
+    apple: "/fcplogo-icon.png"
+  },
   verification: {
     google: "_sO36QmSBNF8qvOAcf8EUW2l5szTVJEmdgKi50-B_tQ"
   },

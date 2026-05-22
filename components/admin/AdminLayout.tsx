@@ -6,7 +6,7 @@ type AdminLayoutProps = {
 
 export function AdminLayout({ children }: AdminLayoutProps) {
   return (
-    <div className="min-h-screen bg-slate-100 text-slate-950 lg:flex">
+    <div className="min-h-screen bg-field text-ink lg:flex">
       <AdminSidebar />
       <div className="min-w-0 flex-1">{children}</div>
     </div>

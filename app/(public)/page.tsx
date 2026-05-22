@@ -26,8 +26,8 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-gradient-to-r from-brand-900 via-brand-900/78 to-brand-900/20" />
         <Container className="relative min-h-[560px] pb-24 pt-20 sm:pt-28">
           <div className="max-w-2xl text-white">
-            <p className="inline-flex items-center gap-2 rounded-md border border-white/15 bg-white/10 px-3 py-1 text-sm font-bold uppercase tracking-wide text-blue-100">
-              <FlooringIcon name="calculator" className="h-4 w-4 text-copper-100" />
+            <p className="inline-flex items-center gap-2 rounded-md border border-white/15 bg-white/10 px-3 py-1 text-sm font-bold uppercase tracking-wide text-accent-100">
+              <FlooringIcon name="calculator" className="h-4 w-4 text-accent-100" />
               Free flooring calculators
             </p>
             <h1 className="mt-4 text-4xl font-black tracking-normal sm:text-5xl lg:text-6xl">
@@ -40,7 +40,7 @@ export default function HomePage() {
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Link
                 href="/tools"
-                className="inline-flex items-center justify-center gap-2 rounded-md bg-white px-5 py-3 text-sm font-bold text-ink transition hover:bg-blue-50"
+                className="inline-flex items-center justify-center gap-2 rounded-md bg-white px-5 py-3 text-sm font-bold text-ink transition hover:bg-accent-50"
               >
                 <FlooringIcon name="ruler" className="h-4 w-4 text-accent-700" />
                 Use Calculators
@@ -49,7 +49,7 @@ export default function HomePage() {
                 href="/guides"
                 className="inline-flex items-center justify-center gap-2 rounded-md border border-white/35 px-5 py-3 text-sm font-bold text-white transition hover:bg-white/10"
               >
-                <FlooringIcon name="guide" className="h-4 w-4 text-copper-100" />
+                <FlooringIcon name="guide" className="h-4 w-4 text-accent-100" />
                 Read Guides
               </Link>
             </div>
@@ -60,7 +60,7 @@ export default function HomePage() {
                 ["transition", "Plan trim"]
               ].map(([icon, label]) => (
                 <div key={label} className="inline-flex items-center gap-2 rounded-md border border-white/15 bg-white/10 px-3 py-2">
-                  <FlooringIcon name={icon as "ruler" | "waste" | "transition"} className="h-4 w-4 text-copper-100" />
+                  <FlooringIcon name={icon as "ruler" | "waste" | "transition"} className="h-4 w-4 text-accent-100" />
                   {label}
                 </div>
               ))}
@@ -117,7 +117,7 @@ export default function HomePage() {
         <Container>
           <div className="grid gap-8 border-y border-line py-8 md:grid-cols-[0.85fr_1.15fr]">
             <div className="flex gap-4">
-              <span className="grid h-12 w-12 shrink-0 place-items-center rounded-lg border border-moss-100 bg-moss-50 text-moss-700">
+              <span className="grid h-12 w-12 shrink-0 place-items-center rounded-lg border border-accent-100 bg-accent-50 text-accent-700">
                 <FlooringIcon name="shield" />
               </span>
               <h2 className="text-2xl font-black text-ink">Trustworthy estimates, not overpromises</h2>

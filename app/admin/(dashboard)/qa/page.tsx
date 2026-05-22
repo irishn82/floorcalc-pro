@@ -34,10 +34,10 @@ export default async function AdminQaPage() {
             <StatusBadge>No publish actions</StatusBadge>
           </div>
           {latestReport ? (
-            <div className="mt-5 rounded-lg border border-slate-200 bg-slate-50 p-4">
+            <div className="mt-5 rounded-lg border border-line bg-field p-4">
               <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
                 <div>
-                  <h2 className="font-bold text-slate-950">Latest Report</h2>
+                  <h2 className="font-bold text-ink">Latest Report</h2>
                   <p className="mt-1 text-sm text-slate-600">{latestReport.fileName}</p>
                   <p className="mt-2 text-sm leading-6 text-slate-600">
                     {latestReport.failures} critical failure(s), {latestReport.warnings} warning(s). Updated{" "}
@@ -48,7 +48,7 @@ export default async function AdminQaPage() {
               </div>
             </div>
           ) : (
-            <p className="mt-5 rounded-lg border border-slate-200 bg-slate-50 p-4 text-sm text-slate-600">
+            <p className="mt-5 rounded-lg border border-line bg-field p-4 text-sm text-slate-600">
               No QA summary is available yet. Run <code className="font-semibold">npm run qa:promoted</code> to create
               local report files.
             </p>
@@ -62,15 +62,15 @@ export default async function AdminQaPage() {
         />
         <AdminCard title="QA Meaning" description="The scanner is a local gate before manual publishing.">
           <div className="grid gap-4 md:grid-cols-3">
-            <div className="rounded-lg border border-slate-200 p-4">
+            <div className="rounded-lg border border-line bg-white p-4">
               <StatusBadge tone="success">PASS</StatusBadge>
               <p className="mt-3 text-sm leading-6 text-slate-600">No critical issues or warnings were found.</p>
             </div>
-            <div className="rounded-lg border border-slate-200 p-4">
+            <div className="rounded-lg border border-line bg-white p-4">
               <StatusBadge tone="warning">WARN</StatusBadge>
               <p className="mt-3 text-sm leading-6 text-slate-600">Review the warning before manually publishing.</p>
             </div>
-            <div className="rounded-lg border border-slate-200 p-4">
+            <div className="rounded-lg border border-line bg-white p-4">
               <StatusBadge tone="danger">FAIL</StatusBadge>
               <p className="mt-3 text-sm leading-6 text-slate-600">Resolve critical issues before adding content to live guide data.</p>
             </div>

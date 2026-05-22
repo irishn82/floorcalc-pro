@@ -1,4 +1,8 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { BrandMark } from "@/components/BrandMark";
 
 const adminNav = [
   { href: "/admin", label: "Overview" },
@@ -10,28 +14,36 @@ const adminNav = [
 ];
 
 export function AdminSidebar() {
+  const pathname = usePathname();
+
   return (
-    <aside className="border-b border-slate-200 bg-slate-950 text-white lg:min-h-screen lg:w-64 lg:border-b-0 lg:border-r lg:border-slate-800">
+    <aside className="border-b border-brand-800 bg-brand-900 text-white lg:min-h-screen lg:w-64 lg:border-b-0 lg:border-r">
       <div className="px-4 py-5 sm:px-6 lg:px-5">
         <div className="flex items-center gap-3">
-          <span className="grid h-9 w-9 place-items-center rounded-lg bg-white text-sm font-black text-slate-950">
-            FC
-          </span>
+          <BrandMark className="h-10 w-10 rounded-xl object-contain shadow-brand ring-1 ring-white/15" />
           <div>
             <div className="font-bold">FloorCalc Pro</div>
             <div className="text-xs text-slate-300">Editorial Admin</div>
           </div>
         </div>
         <nav className="mt-6 flex gap-2 overflow-x-auto lg:flex-col lg:overflow-visible" aria-label="Admin navigation">
-          {adminNav.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className="whitespace-nowrap rounded-md px-3 py-2 text-sm font-semibold text-slate-200 transition hover:bg-slate-800 hover:text-white"
-            >
-              {item.label}
-            </Link>
-          ))}
+          {adminNav.map((item) => {
+            const isActive = pathname === item.href || (item.href !== "/admin" && pathname.startsWith(`${item.href}/`));
+
+            return (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={`whitespace-nowrap rounded-md px-3 py-2 text-sm font-semibold transition ${
+                  isActive
+                    ? "bg-accent-600 text-white shadow-brand"
+                    : "text-slate-200 hover:bg-white/10 hover:text-white"
+                }`}
+              >
+                {item.label}
+              </Link>
+            );
+          })}
         </nav>
       </div>
     </aside>

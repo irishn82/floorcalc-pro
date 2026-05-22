@@ -30,7 +30,7 @@ export function GuideCard({ guide }: GuideCardProps) {
   return (
     <article className="flooring-card overflow-hidden rounded-lg border border-line bg-white p-5 pt-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-soft">
       <div className="flex items-start gap-4">
-        <span className="grid h-10 w-10 shrink-0 place-items-center rounded-lg border border-moss-100 bg-moss-50 text-moss-700">
+        <span className="grid h-10 w-10 shrink-0 place-items-center rounded-lg border border-accent-100 bg-accent-50 text-accent-700">
           <FlooringIcon name={getGuideIcon(guide.slug)} />
         </span>
         <div>

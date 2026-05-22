@@ -17,11 +17,11 @@ html {
 
 body {
   margin: 0;
-  color: #172033;
+  color: #0d1624;
   background:
-    linear-gradient(90deg, rgba(216, 224, 234, 0.22) 1px, transparent 1px),
-    linear-gradient(180deg, rgba(216, 224, 234, 0.16) 1px, transparent 1px),
-    linear-gradient(180deg, #ffffff 0%, #f6f8fb 48%, #ffffff 100%);
+    linear-gradient(90deg, rgba(213, 222, 234, 0.2) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(213, 222, 234, 0.14) 1px, transparent 1px),
+    linear-gradient(180deg, #ffffff 0%, #f5f8fc 48%, #ffffff 100%);
   background-size:
     52px 52px,
     52px 52px,
@@ -44,14 +44,14 @@ button {
 
 ::selection {
   color: #ffffff;
-  background: #2563eb;
+  background: #1f6feb;
 }
 
 .brand-panel {
   background:
-    linear-gradient(135deg, rgba(23, 32, 51, 0.98), rgba(35, 58, 85, 0.92)),
-    linear-gradient(90deg, rgba(248, 196, 113, 0.16) 1px, transparent 1px),
-    linear-gradient(180deg, rgba(108, 199, 183, 0.13) 1px, transparent 1px);
+    linear-gradient(135deg, rgba(13, 22, 36, 0.98), rgba(23, 38, 59, 0.94)),
+    linear-gradient(90deg, rgba(31, 111, 235, 0.16) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(220, 236, 255, 0.12) 1px, transparent 1px);
   background-size:
     auto,
     42px 42px,
@@ -68,7 +68,7 @@ button {
   inset: 0 0 auto 0;
   height: 4px;
   border-radius: 0.5rem 0.5rem 0 0;
-  background: linear-gradient(90deg, #2563eb, #348f7b, #c47a20);
+  background: linear-gradient(90deg, #1f6feb, #5b8bd6, #0d1624);
 }
 
 .prose-flooring {
@@ -82,7 +82,7 @@ button {
 
 .prose-flooring h2 {
   margin-top: 2.5rem;
-  color: #172033;
+  color: #0d1624;
   font-size: clamp(1.35rem, 2vw, 1.75rem);
   font-weight: 800;
   letter-spacing: 0;

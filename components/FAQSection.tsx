@@ -10,7 +10,7 @@ export function FAQSection({ items }: FAQSectionProps) {
     <section className="border-t border-line bg-white py-14 sm:py-16">
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
         <h2 className="inline-flex items-center gap-3 text-2xl font-black text-ink">
-          <span className="grid h-9 w-9 place-items-center rounded-lg border border-copper-100 bg-copper-50 text-copper-600">
+          <span className="grid h-9 w-9 place-items-center rounded-lg border border-accent-100 bg-accent-50 text-accent-700">
             <FlooringIcon name="guide" className="h-4 w-4" />
           </span>
           Frequently Asked Questions

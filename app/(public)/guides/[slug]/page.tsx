@@ -67,7 +67,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
             </aside>
             <div>
               <p className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wide text-accent-600">
-                <span className="grid h-8 w-8 place-items-center rounded-lg border border-moss-100 bg-moss-50 text-moss-700">
+                <span className="grid h-8 w-8 place-items-center rounded-lg border border-accent-100 bg-accent-50 text-accent-700">
                   <FlooringIcon name="guide" className="h-4 w-4" />
                 </span>
                 Flooring guide

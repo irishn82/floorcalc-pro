@@ -45,14 +45,14 @@ export default function AdminSystemPage() {
 
         <AdminCard title="Runtime Snapshot" description="This page does not display secrets or private environment values.">
           <dl className="grid gap-4 md:grid-cols-2">
-            <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+            <div className="rounded-lg border border-line bg-field p-4">
               <dt className="text-sm font-bold text-slate-700">Current timestamp</dt>
               <dd className="mt-2 text-sm text-slate-600">{new Date().toISOString()}</dd>
             </div>
-            <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+            <div className="rounded-lg border border-line bg-field p-4">
               <dt className="text-sm font-bold text-slate-700">Health endpoint</dt>
               <dd className="mt-2">
-                <Link className="text-sm font-bold text-blue-700 hover:text-blue-600" href="/api/health">
+                <Link className="text-sm font-bold text-accent-700 hover:text-accent-600" href="/api/health">
                   /api/health
                 </Link>
               </dd>
@@ -63,7 +63,7 @@ export default function AdminSystemPage() {
         <AdminCard title="Deployment Checks" description="Use this as a quick post-deploy review list.">
           <ul className="space-y-3 text-sm leading-6 text-slate-600">
             {deploymentChecks.map((item) => (
-              <li key={item} className="rounded-lg border border-slate-200 bg-white p-3">
+              <li key={item} className="rounded-lg border border-line bg-white p-3">
                 {item}
               </li>
             ))}

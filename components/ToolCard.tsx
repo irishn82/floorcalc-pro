@@ -22,7 +22,7 @@ export function ToolCard({ tool }: ToolCardProps) {
       className="flooring-card group block overflow-hidden rounded-lg border border-line bg-white p-5 pt-6 shadow-sm transition hover:-translate-y-0.5 hover:border-accent-100 hover:shadow-soft"
     >
       <div className="flex items-start gap-4">
-        <span className="grid h-11 w-11 shrink-0 place-items-center rounded-lg border border-accent-100 bg-accent-50 text-accent-700 transition group-hover:border-moss-100 group-hover:bg-moss-50 group-hover:text-moss-700">
+        <span className="grid h-11 w-11 shrink-0 place-items-center rounded-lg border border-accent-100 bg-accent-50 text-accent-700 transition group-hover:border-accent-100 group-hover:bg-white group-hover:text-accent-600">
           <FlooringIcon name={toolIcons[tool.calculatorType]} />
         </span>
         <div className="min-w-0">

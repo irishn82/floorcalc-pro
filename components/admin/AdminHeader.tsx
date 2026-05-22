@@ -8,11 +8,11 @@ type AdminHeaderProps = {
 
 export function AdminHeader({ title, description }: AdminHeaderProps) {
   return (
-    <header className="border-b border-slate-200 bg-white px-4 py-5 sm:px-6 lg:px-8">
+    <header className="border-b border-line bg-white px-4 py-5 sm:px-6 lg:px-8">
       <div className="flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
         <div>
-          <p className="text-sm font-bold uppercase tracking-wide text-blue-700">Internal Editorial</p>
-          <h1 className="mt-2 text-2xl font-black tracking-normal text-slate-950 sm:text-3xl">{title}</h1>
+          <p className="text-sm font-bold uppercase tracking-wide text-accent-700">Internal Editorial</p>
+          <h1 className="mt-2 text-2xl font-black tracking-normal text-ink sm:text-3xl">{title}</h1>
           <p className="mt-2 max-w-3xl text-sm leading-6 text-slate-600">{description}</p>
         </div>
         <div className="flex flex-wrap items-center gap-2">

@@ -22,6 +22,7 @@ export default function GuidesIndexPage() {
             eyebrow="Guides"
             title="Flooring planning guides"
             description="Practical flooring articles for measuring rooms, estimating waste, planning carpet seams, choosing transitions, and checking installation details before you buy."
+            headingLevel="h1"
           />
           <div className="grid gap-3 sm:grid-cols-3">
             {[
@@ -30,7 +31,7 @@ export default function GuidesIndexPage() {
               ["guide", "Buying checks"]
             ].map(([icon, label]) => (
               <div key={label} className="inline-flex items-center gap-2 rounded-lg border border-line bg-field px-3 py-2 text-sm font-bold text-slate-700">
-                <FlooringIcon name={icon as "layers" | "transition" | "guide"} className="h-4 w-4 text-moss-700" />
+                <FlooringIcon name={icon as "layers" | "transition" | "guide"} className="h-4 w-4 text-accent-700" />
                 {label}
               </div>
             ))}
