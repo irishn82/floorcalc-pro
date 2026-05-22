@@ -54,9 +54,18 @@ export default async function ToolPage({ params }: ToolPageProps) {
             <p className="text-sm font-bold uppercase tracking-wide text-accent-600">Flooring calculator</p>
             <h1 className="mt-3 text-3xl font-black tracking-normal text-ink sm:text-5xl">{tool.title}</h1>
             <p className="mt-5 text-lg leading-8 text-slate-600">{tool.description}</p>
+            <p className="mt-4 inline-block max-w-full break-words whitespace-normal rounded-md border border-accent-100 bg-accent-50 px-3 py-1 text-xs font-bold uppercase leading-5 tracking-wide text-accent-700">
+              Flooring type: {tool.flooringSystem}
+            </p>
           </div>
           <div className="mt-10">
-            <CalculatorLayout title={tool.title} intro={tool.description} formula={tool.formula} notes={tool.notes}>
+            <CalculatorLayout
+              title={tool.title}
+              intro={tool.description}
+              flooringSystem={tool.flooringSystem}
+              formula={tool.formula}
+              notes={tool.notes}
+            >
               <ToolCalculator type={tool.calculatorType} />
             </CalculatorLayout>
           </div>

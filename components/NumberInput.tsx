@@ -23,13 +23,14 @@ export function NumberInput({ label, value, onChange, min = 0, step = 0.1, suffi
         <input
           className="min-w-0 flex-1 border-0 px-3 py-2.5 text-ink outline-none"
           type="number"
+          inputMode="decimal"
           min={min}
           step={step}
           value={Number.isNaN(value) ? "" : value}
           onChange={handleChange}
         />
         {suffix ? (
-          <span className="grid min-w-14 place-items-center border-l border-line bg-field px-3 text-sm font-semibold text-slate-500">
+          <span className="grid min-w-[3.5rem] place-items-center border-l border-line bg-field px-3 text-sm font-semibold text-slate-500">
             {suffix}
           </span>
         ) : null}

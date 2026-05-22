@@ -18,6 +18,9 @@ export function ToolCard({ tool }: ToolCardProps) {
         </span>
       </div>
       <p className="mt-3 text-sm leading-6 text-slate-600">{tool.description}</p>
+      <p className="mt-4 break-words rounded-md border border-line bg-field px-3 py-2 text-xs font-bold uppercase leading-5 tracking-wide text-slate-600">
+        Best for: {tool.flooringSystem}
+      </p>
     </Link>
   );
 }

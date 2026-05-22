@@ -4,19 +4,25 @@ import { DisclaimerBox } from "@/components/DisclaimerBox";
 type CalculatorLayoutProps = {
   title: string;
   intro: string;
+  flooringSystem: string;
   children: ReactNode;
   formula: string;
   notes: string[];
 };
 
-export function CalculatorLayout({ title, intro, children, formula, notes }: CalculatorLayoutProps) {
+export function CalculatorLayout({ title, intro, flooringSystem, children, formula, notes }: CalculatorLayoutProps) {
   return (
-    <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_360px]">
-      <section className="rounded-lg border border-line bg-white p-5 shadow-sm sm:p-6" aria-label={`${title} inputs`}>
-        <p className="text-base leading-7 text-slate-600">{intro}</p>
-        <div className="mt-6">{children}</div>
+    <div className="grid min-w-0 gap-8 lg:grid-cols-[minmax(0,1fr)_360px] lg:items-start">
+      <section className="min-w-0 rounded-lg border border-line bg-white p-5 shadow-sm sm:p-6" aria-label={`${title} inputs`}>
+        <div className="space-y-3">
+          <span className="inline-block max-w-full break-words whitespace-normal rounded-md border border-accent-100 bg-accent-50 px-3 py-1 text-xs font-bold uppercase leading-5 tracking-wide text-accent-700">
+            Best for: {flooringSystem}
+          </span>
+          <p className="text-base leading-7 text-slate-600">{intro}</p>
+        </div>
+        <div className="mt-7">{children}</div>
       </section>
-      <aside className="space-y-5">
+      <aside className="min-w-0 space-y-5">
         <section className="rounded-lg border border-line bg-white p-5 shadow-sm">
           <h2 className="text-lg font-bold text-ink">Formula</h2>
           <p className="mt-3 text-sm leading-6 text-slate-600">{formula}</p>

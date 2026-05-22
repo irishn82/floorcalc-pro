@@ -24,6 +24,7 @@ export type Tool = {
   title: string;
   shortTitle: string;
   description: string;
+  flooringSystem: string;
   metadataTitle: string;
   metadataDescription: string;
   calculatorType: CalculatorType;

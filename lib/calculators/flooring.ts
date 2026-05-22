@@ -45,6 +45,17 @@ export function calculateWaste(baseSquareFeet: number, wastePercentage: number) 
   return { extraSquareFeet, totalSquareFeet };
 }
 
+export function calculateCartons(materialSquareFeet: number, squareFeetPerCarton: number) {
+  const material = positive(materialSquareFeet);
+  const cartonCoverage = positive(squareFeetPerCarton);
+
+  if (material === 0 || cartonCoverage === 0) {
+    return null;
+  }
+
+  return Math.ceil(material / cartonCoverage);
+}
+
 export function calculateStairFlooring(
   stairCount: number,
   treadDepthInches: number,
