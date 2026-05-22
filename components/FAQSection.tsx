@@ -1,4 +1,5 @@
 import type { FAQItem } from "@/data/types";
+import { FlooringIcon } from "@/components/FlooringIcon";
 
 type FAQSectionProps = {
   items: FAQItem[];
@@ -8,10 +9,15 @@ export function FAQSection({ items }: FAQSectionProps) {
   return (
     <section className="border-t border-line bg-white py-14 sm:py-16">
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-        <h2 className="text-2xl font-black text-ink">Frequently Asked Questions</h2>
-        <div className="mt-6 divide-y divide-line rounded-lg border border-line bg-white">
+        <h2 className="inline-flex items-center gap-3 text-2xl font-black text-ink">
+          <span className="grid h-9 w-9 place-items-center rounded-lg border border-copper-100 bg-copper-50 text-copper-600">
+            <FlooringIcon name="guide" className="h-4 w-4" />
+          </span>
+          Frequently Asked Questions
+        </h2>
+        <div className="mt-6 divide-y divide-line rounded-lg border border-line bg-white shadow-sm">
           {items.map((item) => (
-            <details key={item.question} className="group p-5">
+            <details key={item.question} className="group p-5 transition open:bg-field/60">
               <summary className="cursor-pointer list-none text-base font-bold text-ink">
                 <span className="inline-flex w-full items-center justify-between gap-4">
                   {item.question}

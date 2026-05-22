@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { Container } from "@/components/Container";
 import { DisclaimerBox } from "@/components/DisclaimerBox";
 import { FAQSection } from "@/components/FAQSection";
+import { FlooringIcon } from "@/components/FlooringIcon";
 import { JsonLd } from "@/components/JsonLd";
 import { RelatedLinks } from "@/components/RelatedLinks";
 import { TableOfContents } from "@/components/TableOfContents";
@@ -65,15 +66,23 @@ export default async function GuidePage({ params }: GuidePageProps) {
               <TableOfContents items={guide.sections.map((section) => ({ id: section.id, title: section.title }))} />
             </aside>
             <div>
-              <p className="text-sm font-bold uppercase tracking-wide text-accent-600">Flooring guide</p>
+              <p className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wide text-accent-600">
+                <span className="grid h-8 w-8 place-items-center rounded-lg border border-moss-100 bg-moss-50 text-moss-700">
+                  <FlooringIcon name="guide" className="h-4 w-4" />
+                </span>
+                Flooring guide
+              </p>
               <h1 className="mt-3 text-3xl font-black tracking-normal text-ink sm:text-5xl">{guide.title}</h1>
               <p className="mt-5 text-lg leading-8 text-slate-600">{guide.description}</p>
               <div className="mt-4 flex flex-wrap gap-3 text-sm text-slate-500">
                 <span>Updated {guide.dateModified}</span>
                 <span>{guide.readTime}</span>
               </div>
-              <div className="mt-8 rounded-lg border border-line bg-field p-5">
-                <h2 className="text-lg font-bold text-ink">Useful calculators for this guide</h2>
+              <div className="mt-8 rounded-lg border border-line bg-field p-5 shadow-sm">
+                <h2 className="inline-flex items-center gap-2 text-lg font-bold text-ink">
+                  <FlooringIcon name="calculator" className="h-5 w-5 text-accent-700" />
+                  Useful calculators for this guide
+                </h2>
                 <div className="mt-3 flex flex-wrap gap-2">
                   {relatedTools.map((tool) => (
                     <Link

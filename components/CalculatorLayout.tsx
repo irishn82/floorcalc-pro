@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import { DisclaimerBox } from "@/components/DisclaimerBox";
+import { FlooringIcon } from "@/components/FlooringIcon";
 
 type CalculatorLayoutProps = {
   title: string;
@@ -24,11 +25,17 @@ export function CalculatorLayout({ title, intro, flooringSystem, children, formu
       </section>
       <aside className="min-w-0 space-y-5">
         <section className="rounded-lg border border-line bg-white p-5 shadow-sm">
-          <h2 className="text-lg font-bold text-ink">Formula</h2>
+          <h2 className="inline-flex items-center gap-2 text-lg font-bold text-ink">
+            <FlooringIcon name="ruler" className="h-5 w-5 text-accent-700" />
+            Formula
+          </h2>
           <p className="mt-3 text-sm leading-6 text-slate-600">{formula}</p>
         </section>
         <section className="rounded-lg border border-line bg-white p-5 shadow-sm">
-          <h2 className="text-lg font-bold text-ink">Practical Flooring Notes</h2>
+          <h2 className="inline-flex items-center gap-2 text-lg font-bold text-ink">
+            <FlooringIcon name="layers" className="h-5 w-5 text-moss-700" />
+            Practical Flooring Notes
+          </h2>
           <ul className="mt-3 space-y-3 text-sm leading-6 text-slate-600">
             {notes.map((note) => (
               <li key={note}>{note}</li>
