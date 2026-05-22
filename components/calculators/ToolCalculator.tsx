@@ -36,6 +36,24 @@ type ResultMetricProps = {
   value: string;
 };
 
+type OptionalMeasurementInputProps = {
+  label: string;
+  value: string;
+  onChange: (value: string) => void;
+  suffix: string;
+  placeholder?: string;
+};
+
+type CarpetSeamLayoutVisualizerProps = {
+  roomLength: number;
+  roomWidth: number;
+  rollWidth: number;
+  drops: ReturnType<typeof calculateCarpetSeams>["dropWidths"];
+  seamCount: number;
+  patternRepeatLength: number;
+  patternRepeatWidth: number;
+};
+
 const cartonHelpText =
   "Carton and box coverage varies by product. Verify the square footage on the product label or spec sheet before ordering.";
 
@@ -107,6 +125,35 @@ function CartonInput({ value, onChange }: CartonInputProps) {
   );
 }
 
+function OptionalMeasurementInput({
+  label,
+  value,
+  onChange,
+  suffix,
+  placeholder = "Optional"
+}: OptionalMeasurementInputProps) {
+  return (
+    <label className="block">
+      <span className="text-sm font-semibold text-slate-700">{label}</span>
+      <div className="mt-2 flex overflow-hidden rounded-md border border-line bg-white focus-within:border-accent-500 focus-within:ring-2 focus-within:ring-accent-100">
+        <input
+          className="min-w-0 flex-1 border-0 px-3 py-2.5 text-ink outline-none"
+          type="number"
+          min={0}
+          step={0.1}
+          inputMode="decimal"
+          placeholder={placeholder}
+          value={value}
+          onChange={(event) => onChange(event.target.value)}
+        />
+        <span className="grid min-w-[3.5rem] place-items-center border-l border-line bg-field px-3 text-sm font-semibold text-slate-500">
+          {suffix}
+        </span>
+      </div>
+    </label>
+  );
+}
+
 function CartonResult({ materialSquareFeet, squareFeetPerCarton, context }: CartonResultProps) {
   const cartonsNeeded = calculateCartons(materialSquareFeet, squareFeetPerCarton);
 
@@ -122,6 +169,149 @@ function CartonResult({ materialSquareFeet, squareFeetPerCarton, context }: Cart
         {context}
       </p>
     </div>
+  );
+}
+
+function CarpetSeamLayoutVisualizer({
+  roomLength,
+  roomWidth,
+  rollWidth,
+  drops,
+  seamCount,
+  patternRepeatLength,
+  patternRepeatWidth
+}: CarpetSeamLayoutVisualizerProps) {
+  const safeLength = Math.max(roomLength, 1);
+  const safeWidth = Math.max(roomWidth, 1);
+  const maxRoomWidth = 320;
+  const maxRoomHeight = 170;
+  const scale = Math.min(maxRoomWidth / safeLength, maxRoomHeight / safeWidth);
+  const roomSvgWidth = Math.max(120, safeLength * scale);
+  const roomSvgHeight = Math.max(64, safeWidth * scale);
+  const roomX = 58 + (maxRoomWidth - roomSvgWidth) / 2;
+  const roomY = 38 + (maxRoomHeight - roomSvgHeight) / 2;
+  const seamPositions = drops.slice(0, -1).map((drop) => roomY + (drop.endFeet / safeWidth) * roomSvgHeight);
+  const hasPatternRepeat = patternRepeatLength > 0 || patternRepeatWidth > 0;
+
+  return (
+    <section className="rounded-lg border border-line bg-white p-4 shadow-sm">
+      <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+        <div>
+          <h3 className="text-base font-black text-ink">Carpet seam layout visualizer</h3>
+          <p className="mt-1 text-sm leading-6 text-slate-600">
+            SVG planning view based on the selected room size and carpet roll width.
+          </p>
+        </div>
+        <span className="inline-flex w-fit rounded-md border border-amber-200 bg-amber-50 px-2.5 py-1 text-xs font-bold uppercase tracking-wide text-amber-900">
+          Planning visual only
+        </span>
+      </div>
+
+      <div className="mt-4 grid gap-2 sm:grid-cols-2">
+        <ResultMetric label="Room length" value={`${formatNumber(roomLength)} ft`} />
+        <ResultMetric label="Room width" value={`${formatNumber(roomWidth)} ft`} />
+        <ResultMetric label="Carpet roll width" value={`${formatNumber(rollWidth)} ft`} />
+        <ResultMetric label="Estimated drop count" value={drops.length.toLocaleString()} />
+      </div>
+
+      <div className="mt-4 overflow-hidden rounded-md border border-line bg-field">
+        <svg
+          className="block h-auto w-full"
+          role="img"
+          aria-label="Planning visual only carpet seam layout diagram"
+          viewBox="0 0 420 270"
+          preserveAspectRatio="xMidYMid meet"
+        >
+          <rect width="420" height="270" fill="#f8fafc" />
+          <text x="20" y="24" fill="#1e40af" fontSize="12" fontWeight="700">
+            Planning visual only
+          </text>
+          <text x="210" y="246" fill="#475569" fontSize="11" fontWeight="700" textAnchor="middle">
+            Room length: {formatNumber(roomLength)} ft
+          </text>
+          <text
+            x="24"
+            y="135"
+            fill="#475569"
+            fontSize="11"
+            fontWeight="700"
+            textAnchor="middle"
+            transform="rotate(-90 24 135)"
+          >
+            Room width: {formatNumber(roomWidth)} ft
+          </text>
+
+          <rect x={roomX} y={roomY} width={roomSvgWidth} height={roomSvgHeight} rx="6" fill="#ffffff" stroke="#1e40af" strokeWidth="2" />
+
+          {drops.map((drop, index) => {
+            const y = roomY + (drop.startFeet / safeWidth) * roomSvgHeight;
+            const height = Math.max(1, (drop.widthFeet / safeWidth) * roomSvgHeight);
+
+            return (
+              <g key={drop.index}>
+                <rect
+                  x={roomX}
+                  y={y}
+                  width={roomSvgWidth}
+                  height={height}
+                  fill={index % 2 === 0 ? "#dbeafe" : "#eff6ff"}
+                  opacity="0.85"
+                />
+                <text
+                  x={roomX + roomSvgWidth / 2}
+                  y={y + Math.max(18, height / 2)}
+                  fill="#172033"
+                  fontSize="11"
+                  fontWeight="700"
+                  textAnchor="middle"
+                >
+                  Drop {drop.index}
+                </text>
+              </g>
+            );
+          })}
+
+          {seamPositions.map((y, index) => (
+            <g key={`seam-${index + 1}`}>
+              <line x1={roomX} y1={y} x2={roomX + roomSvgWidth} y2={y} stroke="#dc2626" strokeWidth="2" strokeDasharray="6 5" />
+              <text x={roomX + roomSvgWidth + 10} y={y + 4} fill="#991b1b" fontSize="10" fontWeight="700">
+                likely seam
+              </text>
+            </g>
+          ))}
+
+          <line x1={roomX} y1={roomY + roomSvgHeight + 16} x2={roomX + roomSvgWidth} y2={roomY + roomSvgHeight + 16} stroke="#64748b" strokeWidth="1.5" />
+          <line x1={roomX} y1={roomY + roomSvgHeight + 11} x2={roomX} y2={roomY + roomSvgHeight + 21} stroke="#64748b" strokeWidth="1.5" />
+          <line x1={roomX + roomSvgWidth} y1={roomY + roomSvgHeight + 11} x2={roomX + roomSvgWidth} y2={roomY + roomSvgHeight + 21} stroke="#64748b" strokeWidth="1.5" />
+
+          <line x1={roomX - 16} y1={roomY} x2={roomX - 16} y2={roomY + roomSvgHeight} stroke="#64748b" strokeWidth="1.5" />
+          <line x1={roomX - 21} y1={roomY} x2={roomX - 11} y2={roomY} stroke="#64748b" strokeWidth="1.5" />
+          <line x1={roomX - 21} y1={roomY + roomSvgHeight} x2={roomX - 11} y2={roomY + roomSvgHeight} stroke="#64748b" strokeWidth="1.5" />
+
+          <text x="210" y="264" fill="#64748b" fontSize="10" textAnchor="middle">
+            Carpet roll width: {formatNumber(rollWidth)} ft | Estimated drops: {drops.length}
+          </text>
+          {seamCount === 0 ? (
+            <text x="210" y="44" fill="#166534" fontSize="11" fontWeight="700" textAnchor="middle">
+              One carpet drop covers the room width in this planning view.
+            </text>
+          ) : null}
+        </svg>
+      </div>
+
+      <p className="mt-3 text-sm leading-6 text-slate-600">
+        This diagram assumes carpet drops run along the room length. It does not show exact installer-ready seam
+        placement, doorway decisions, pattern matching, or pile direction.
+      </p>
+      {hasPatternRepeat ? (
+        <p className="mt-3 rounded-md border border-amber-200 bg-amber-50 p-3 text-sm leading-6 text-amber-950">
+          Pattern repeat entered: {patternRepeatLength > 0 ? `${formatNumber(patternRepeatLength)} in length` : "no length value"}
+          {" and "}
+          {patternRepeatWidth > 0 ? `${formatNumber(patternRepeatWidth)} in width` : "no width value"}. Pattern repeat may
+          increase carpet material and affect seam planning. Confirm pattern matching with the carpet installer.
+        </p>
+      ) : null}
+    </section>
   );
 }
 
@@ -324,7 +514,11 @@ function CarpetSeamCalculator() {
   const [roomLength, setRoomLength] = useState(18);
   const [roomWidth, setRoomWidth] = useState(14);
   const [rollWidth, setRollWidth] = useState("12");
+  const [patternRepeatLength, setPatternRepeatLength] = useState("");
+  const [patternRepeatWidth, setPatternRepeatWidth] = useState("");
   const result = calculateCarpetSeams(roomLength, roomWidth, Number(rollWidth));
+  const patternRepeatLengthValue = parseOptionalNumber(patternRepeatLength);
+  const patternRepeatWidthValue = parseOptionalNumber(patternRepeatWidth);
 
   return (
     <div className="space-y-7">
@@ -344,6 +538,22 @@ function CarpetSeamCalculator() {
           ]}
         />
       </div>
+      <div className="grid gap-4 sm:grid-cols-2">
+        <OptionalMeasurementInput
+          label="Pattern repeat length (optional)"
+          value={patternRepeatLength}
+          onChange={setPatternRepeatLength}
+          suffix="in"
+          placeholder="Example: 18"
+        />
+        <OptionalMeasurementInput
+          label="Pattern repeat width (optional)"
+          value={patternRepeatWidth}
+          onChange={setPatternRepeatWidth}
+          suffix="in"
+          placeholder="Example: 12"
+        />
+      </div>
       <ResultBox
         title="Carpet seam estimate"
         value={result.seamLikelihood}
@@ -356,6 +566,15 @@ function CarpetSeamCalculator() {
           ]}
         />
       </ResultBox>
+      <CarpetSeamLayoutVisualizer
+        roomLength={roomLength}
+        roomWidth={roomWidth}
+        rollWidth={Number(rollWidth)}
+        drops={result.dropWidths}
+        seamCount={result.seams}
+        patternRepeatLength={patternRepeatLengthValue}
+        patternRepeatWidth={patternRepeatWidthValue}
+      />
     </div>
   );
 }

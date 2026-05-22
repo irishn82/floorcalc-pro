@@ -129,7 +129,8 @@ export const tools: Tool[] = [
     notes: [
       "The calculator assumes carpet drops run along the room length.",
       "Final carpet seam placement depends on roll width, layout, pattern, lighting, traffic direction, pile direction, doorways, and installer judgment.",
-      "Patterned carpet, berber, stairs, and connected rooms often require a more detailed seam diagram."
+      "Patterned carpet, berber, stairs, and connected rooms often require a more detailed seam diagram.",
+      "The SVG layout visualizer is for planning only and does not replace an installer seam layout."
     ],
     faq: [
       {

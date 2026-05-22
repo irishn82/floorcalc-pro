@@ -79,11 +79,22 @@ export function calculateCarpetSeams(
   const width = positive(roomWidthFeet);
   const roll = positive(rollWidthFeet) || 12;
   const drops = width > 0 ? Math.ceil(width / roll) : 0;
+  const dropWidths = Array.from({ length: drops }, (_, index) => {
+    const startFeet = index * roll;
+    const endFeet = Math.min(width, (index + 1) * roll);
+
+    return {
+      index: index + 1,
+      startFeet: roundTo(startFeet),
+      endFeet: roundTo(endFeet),
+      widthFeet: roundTo(Math.max(0, endFeet - startFeet))
+    };
+  });
   const estimatedMaterialSquareFeet = roundTo(drops * roll * length, 1);
   const seams = Math.max(0, drops - 1);
   const seamLikelihood = seams === 0 ? "No seam likely" : seams === 1 ? "One seam likely" : `${seams} seams likely`;
 
-  return { drops, seams, seamLikelihood, estimatedMaterialSquareFeet };
+  return { drops, seams, seamLikelihood, estimatedMaterialSquareFeet, dropWidths };
 }
 
 export function calculatePatternRepeat(
