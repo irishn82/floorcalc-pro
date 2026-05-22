@@ -60,5 +60,6 @@ export type Guide = {
   sections: GuideSection[];
   faq: FAQItem[];
   relatedTools: ToolSlug[];
+  relatedGuides?: GuideSlug[];
   disclaimer?: string;
 };

@@ -8,7 +8,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { RelatedLinks } from "@/components/RelatedLinks";
 import { TableOfContents } from "@/components/TableOfContents";
 import { guides } from "@/data/guides";
-import { getGuideBySlug, getRelatedTools } from "@/lib/content/paths";
+import { getGuideBySlug, getRelatedGuides, getRelatedTools } from "@/lib/content/paths";
 import { createSeoMetadata } from "@/lib/seo/metadata";
 import { articleJsonLd, faqJsonLd } from "@/lib/seo/schema";
 
@@ -45,6 +45,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
   }
 
   const relatedTools = getRelatedTools(guide.relatedTools);
+  const relatedGuides = getRelatedGuides(guide.relatedGuides ?? []);
 
   return (
     <>
@@ -117,6 +118,14 @@ export default async function GuidePage({ params }: GuidePageProps) {
           href: `/tools/${tool.slug}`,
           label: tool.title,
           description: tool.description
+        }))}
+      />
+      <RelatedLinks
+        title="Related Flooring Guides"
+        links={relatedGuides.map((relatedGuide) => ({
+          href: `/guides/${relatedGuide.slug}`,
+          label: relatedGuide.title,
+          description: relatedGuide.description
         }))}
       />
       <FAQSection items={guide.faq} />
