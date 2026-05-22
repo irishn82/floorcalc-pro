@@ -5,49 +5,158 @@ export const guides: Guide[] = [
     slug: "how-much-flooring-do-i-need",
     title: "How Much Flooring Do I Need?",
     description:
-      "A practical guide to measuring rooms, adding waste, and planning a flooring order with fewer surprises.",
-    metadataTitle: "How Much Flooring Do I Need? Room Measuring Guide",
+      "A practical homeowner guide to measuring rooms, adding the right waste factor, and planning a flooring order with fewer surprises.",
+    metadataTitle: "How Much Flooring Do I Need? Square Footage and Waste Guide",
     metadataDescription:
-      "Learn how to measure rooms for flooring, calculate square footage, add waste, and plan a more accurate flooring order.",
+      "Learn how to measure flooring square footage, choose waste for LVP, laminate, hardwood, carpet, tile, and estimate materials.",
     dateModified: "2026-05-22",
-    readTime: "5 min read",
-    relatedTools: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"],
+    readTime: "9 min read",
+    relatedTools: [
+      "flooring-square-footage-calculator",
+      "waste-calculator",
+      "stair-flooring-calculator",
+      "transition-estimator"
+    ],
     sections: [
       {
-        id: "measure-each-space",
-        title: "Measure each space separately",
+        id: "quick-answer",
+        title: "Quick answer",
         paragraphs: [
-          "Start by measuring the length and width of every room that will receive flooring. For simple rectangular rooms, multiply length by width to get square footage.",
-          "For irregular rooms, divide the area into smaller rectangles. Measure closets, pantry spaces, hallway turns, and alcoves as their own small areas so they do not disappear from the estimate."
+          "To estimate how much flooring you need, measure each room's length and width, multiply length by width to get square footage, add all room totals together, then add a waste allowance based on the flooring type and layout.",
+          "For many simple plank flooring projects, 5% to 10% waste is a reasonable planning range. Tile, patterned products, stairs, diagonal layouts, and rooms with lots of angles or small cuts often need more."
         ],
         bullets: [
-          "Use feet for room dimensions when calculating square footage.",
-          "Round up small measurements rather than rounding down.",
-          "Write down each room name so the estimate can be checked later."
+          "Basic formula: length x width = square feet.",
+          "Project formula: total measured square feet + waste = estimated material needed.",
+          "Ordering formula: estimated material needed divided by product coverage, rounded up to the next full carton, roll, box, or piece."
         ]
       },
       {
-        id: "add-waste",
-        title: "Add a waste allowance",
+        id: "measure-rooms",
+        title: "Measure every room and area separately",
         paragraphs: [
-          "The measured square footage is only the starting point. Flooring orders usually need extra material for cuts, damaged boards, layout decisions, and attic stock for future repairs.",
-          "A common starting point is 5% to 10% waste for simple layouts. Stairs, diagonal installs, patterned products, and chopped-up rooms can require more."
+          "Start with a room-by-room list. Measure the length and width of every room that will receive flooring, including closets, pantry spaces, hallway turns, alcoves, and small connected areas. It is easier to review a room-by-room estimate than one large number with no backup.",
+          "For a rectangular room, multiply length by width. A 12 ft by 15 ft bedroom is 180 square feet. If the room is not a clean rectangle, divide it into smaller rectangles, calculate each part, and add them together.",
+          "Use the Flooring Square Footage Calculator when you want to enter multiple rooms and keep the room totals visible. That helps catch missing spaces before you move on to waste and carton counts."
+        ],
+        bullets: [
+          "Measure in feet, or convert inches to decimals before multiplying.",
+          "Round up small fractions instead of rounding down.",
+          "Measure closets and door recesses instead of assuming they are too small to matter.",
+          "Write down room names, dimensions, and square footage so an installer can check the estimate later."
         ]
       },
       {
-        id: "convert-to-cartons",
-        title: "Convert square footage into cartons",
+        id: "irregular-spaces",
+        title: "Account for irregular rooms, closets, and hallways",
         paragraphs: [
-          "Flooring is usually sold by carton, roll, piece, or bundle. Once you know the total square footage with waste, divide it by the coverage listed on the product carton and round up to a whole carton.",
-          "Keep the product coverage number tied to the exact SKU you are ordering. Similar products can have different carton coverage."
+          "Irregular layouts are where flooring estimates often get too low. Hallways, closets, angled walls, bay windows, islands, fireplaces, stair openings, and connected rooms all create cuts. Cut pieces are not always reusable in another spot, especially with planks, directional products, tile patterns, or carpet roll layouts.",
+          "When a room has angled walls, sketch a rough floor plan and break the room into rectangles plus triangles if needed. If you are unsure, measure the largest rectangle that contains the room and treat the extra as a cushion until an installer verifies the layout."
+        ],
+        bullets: [
+          "Long narrow hallways usually create more cuts than one open square room.",
+          "Small closets can add meaningful material when there are several of them.",
+          "Open floor plans may need fewer transitions but still need careful layout planning.",
+          "Diagonal or herringbone layouts should not be estimated like a basic straight-lay floor."
         ]
       },
       {
-        id: "check-the-system",
-        title: "Check trim, transitions, and installation requirements",
+        id: "waste-factors",
+        title: "Choose a waste factor by flooring type",
         paragraphs: [
-          "Material planning should include more than the floor surface. Doorways may need transitions, stairs may need approved stair noses, and floating floors may require expansion gaps.",
-          "Read the product installation instructions before buying. Manufacturer requirements can affect waste, trim, underlayment, adhesives, and acceptable subfloors."
+          "Waste is extra material for cuts, damaged pieces, layout choices, pattern alignment, and future repairs. The right percentage depends on both the product and the shape of the project. The Waste Calculator can help compare 5%, 10%, 15%, and 20% scenarios after you know the base square footage.",
+          "Do not treat waste as optional. Ordering exactly the measured square footage can leave you short if the installer needs to discard a damaged piece, keep plank joints staggered, align a pattern, avoid tiny end cuts, or replace a board later."
+        ],
+        bullets: [
+          "LVP and vinyl plank: 5% to 10% for simple straight layouts; 10% to 15% or more for diagonal layouts, stairs, many small rooms, or products with directional visuals.",
+          "Laminate: 5% to 10% for straightforward rooms; 10% to 15% for angled layouts, many doorways, or rooms where cutoffs are hard to reuse.",
+          "Hardwood and engineered wood: 7% to 10% is a common planning range; consider 10% to 15% for site-finished projects, natural variation, board selection, diagonal layouts, or complex rooms.",
+          "Carpet: square footage alone is not enough because roll width, seam placement, pile direction, and pattern match affect material. A room may need more carpet than its measured area suggests.",
+          "Tile: 10% is a common starting point for straight layouts; 15% or more may be needed for diagonal layouts, large-format tile cuts, patterns, borders, or fragile materials.",
+          "Patterned products: pattern repeat, direction, and matching can increase waste beyond normal percentages. Get the repeat information before ordering."
+        ]
+      },
+      {
+        id: "stairs",
+        title: "Measure stairs separately",
+        paragraphs: [
+          "Stairs should be estimated separately from flat rooms because they include treads, risers, nosing, landings, returns, and trim details. The same square footage can produce different material needs depending on how each stair is finished.",
+          "For a basic planning estimate, multiply tread depth by stair width, multiply riser height by stair width, add those two areas together, and multiply by the number of stairs. Then add material for landings and any required stair nose pieces. The Stair Flooring Calculator can help with the first-pass square footage."
+        ],
+        bullets: [
+          "Count stairs, landings, and any pie-shaped or curved steps separately.",
+          "Confirm whether risers will be flooring, painted material, skirt boards, or another finish.",
+          "Check whether the flooring system has approved stair noses or stair treads.",
+          "Expect stairs to require installer review before ordering final material."
+        ]
+      },
+      {
+        id: "transitions-trim",
+        title: "Do not forget transitions and trim",
+        paragraphs: [
+          "Flooring material is only one part of the order. Doorways, room breaks, sliding doors, stairs, fireplaces, and height changes may need transitions or trim. These pieces can affect both cost and installation planning.",
+          "Use the Transition Estimator to total doorway and opening widths, then confirm the correct profile for each location. T-molds, reducers, end caps, thresholds, and stair noses serve different purposes and are not always interchangeable."
+        ],
+        bullets: [
+          "T-molds are commonly used between surfaces of similar height.",
+          "Reducers help handle height changes between floors.",
+          "End caps finish exposed edges or terminations.",
+          "Stair noses are specific stair-edge pieces and should match the approved installation method."
+        ]
+      },
+      {
+        id: "cartons-rolls-boxes",
+        title: "Convert the estimate into cartons, rolls, boxes, or pieces",
+        paragraphs: [
+          "After you add waste, convert the estimate into the way the product is sold. Plank flooring is often sold by carton, tile by box, hardwood by bundle, carpet by roll or cut length, and trim by individual piece. Always round up to a full selling unit.",
+          "For example, if your project needs 742 square feet after waste and the carton covers 23.8 square feet, divide 742 by 23.8. The result is 31.18 cartons, so you would plan for 32 cartons before final installer review.",
+          "Keep the coverage number tied to the exact product you are buying. Similar-looking products can have different carton coverage, plank sizes, roll widths, or trim lengths."
+        ]
+      },
+      {
+        id: "before-ordering",
+        title: "Review the estimate before ordering",
+        paragraphs: [
+          "Before placing an order, compare your room list against the actual project scope. Make sure you included closets, landings, transitions, stair pieces, underlayment if required, adhesive if applicable, and any attic stock you want to keep for future repairs.",
+          "If an installer will do the work, ask them to verify the measurements, layout direction, waste percentage, transitions, and product requirements before material is purchased. A small measuring error can become expensive if the product sells out or a dye lot, color run, or locking profile changes."
+        ],
+        bullets: [
+          "Confirm product coverage per carton, box, roll, bundle, or trim piece.",
+          "Check layout direction before finalizing waste.",
+          "Verify transitions and stair parts against the installation instructions.",
+          "Keep extra material from the same order when future repairs are likely."
+        ]
+      },
+      {
+        id: "common-mistakes",
+        title: "Common flooring estimate mistakes",
+        paragraphs: [
+          "Most bad flooring estimates come from missing small areas, using too little waste, or converting the final number incorrectly. The estimate should be detailed enough that someone else can review it room by room.",
+          "Another common mistake is using one waste percentage for every project. A simple square bedroom and a connected main floor with closets, hallways, stairs, and angled cuts should not be treated the same."
+        ],
+        bullets: [
+          "Forgetting closets, pantries, and hallway turns.",
+          "Adding waste after rounding cartons instead of before.",
+          "Ignoring stair noses, reducers, T-molds, and end caps.",
+          "Estimating carpet only by room square footage without considering roll width and seams.",
+          "Using a basic plank waste factor for patterned tile, patterned carpet, herringbone, or diagonal layouts."
+        ]
+      },
+      {
+        id: "example",
+        title: "Example flooring estimate",
+        paragraphs: [
+          "Imagine a project with a 180 sq ft bedroom, a 42 sq ft closet, a 95 sq ft hallway, and a 210 sq ft living room. The measured total is 527 square feet.",
+          "For a straightforward LVP installation with a few doorways and closet cuts, you might compare 10% and 15% waste. At 10%, the estimated material is 579.7 square feet. At 15%, the estimated material is 606.05 square feet.",
+          "If the product covers 23.8 square feet per carton, the 10% scenario rounds up to 25 cartons, while the 15% scenario rounds up to 26 cartons. That one-carton difference may be worth discussing with the installer, especially if the layout has extra cuts or you want attic stock."
+        ]
+      },
+      {
+        id: "when-to-get-help",
+        title: "When to get installer help",
+        paragraphs: [
+          "A calculator is useful for planning, budgeting, and checking rough material quantities. It should not replace a field measurement for complex installations, expensive materials, stairs, patterned products, moisture-sensitive floors, or layouts where seam placement matters.",
+          "Get installer help when the floor plan has many connected rooms, when the product has a pattern repeat, when carpet seams are likely, when stairs are included, or when transitions and subfloor conditions could affect the order."
         ]
       }
     ],
@@ -55,21 +164,46 @@ export const guides: Guide[] = [
       {
         question: "How do I calculate flooring square footage?",
         answer:
-          "Multiply each room's length by width, add the room totals together, then add a waste percentage before converting to cartons."
+          "Measure each room's length and width in feet, multiply length by width, then add the room totals together. For irregular rooms, break the space into smaller rectangles and add those areas."
       },
       {
-        question: "Should I include waste before or after carton count?",
+        question: "How much extra flooring should I order for waste?",
         answer:
-          "Add waste to the measured square footage first, then divide by the carton coverage and round up to a whole carton."
+          "Many simple projects use 5% to 10% waste, but tile, hardwood, stairs, patterns, diagonal layouts, and rooms with many cuts may need 10% to 15% or more."
       },
       {
-        question: "Can I order the exact measured square footage?",
+        question: "Should I add waste before or after calculating cartons?",
         answer:
-          "Ordering exact measured square footage is risky because cuts, defects, and layout choices usually require extra material."
+          "Add waste to the measured square footage first. Then divide by the product's carton, box, roll, or bundle coverage and round up to the next full selling unit."
+      },
+      {
+        question: "Does carpet waste work the same way as plank flooring?",
+        answer:
+          "No. Carpet material depends on roll width, drop layout, seam placement, pile direction, and pattern match. The measured room area is only a starting point."
+      },
+      {
+        question: "How much waste should I use for tile?",
+        answer:
+          "Ten percent is a common planning starting point for a simple straight tile layout. Diagonal layouts, borders, large-format cuts, patterns, or fragile materials can need 15% or more."
+      },
+      {
+        question: "Do stairs count in square footage?",
+        answer:
+          "Yes, but stairs should be measured separately because treads, risers, landings, stair noses, and returns can change the final material amount."
+      },
+      {
+        question: "Should I keep extra flooring after installation?",
+        answer:
+          "Keeping attic stock is often useful for future repairs because color, texture, size, locking profiles, and availability can change over time."
+      },
+      {
+        question: "Can I use a calculator instead of an installer measurement?",
+        answer:
+          "A calculator is helpful for planning and budgeting, but final ordering should be verified against site conditions, product instructions, installer measurements, and project requirements."
       }
     ],
     disclaimer:
-      "This guide is for planning purposes only. Confirm measurements, waste, trim, and product requirements with your installer or manufacturer before ordering."
+      "This guide and the related calculators provide planning estimates only. Always verify measurements, waste percentage, material quantities, transitions, stair parts, subfloor conditions, and installation requirements with your installer, retailer, and the product manufacturer's written instructions before ordering."
   },
   {
     slug: "lvp-waste-percentage-guide",
