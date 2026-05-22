@@ -75,9 +75,9 @@ export default function HomePage() {
         <Container>
           <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
             <SectionHeading
-              eyebrow="SEO guide library"
+              eyebrow="Flooring planning guides"
               title="Practical guides that connect measurements to real flooring choices"
-              description="Each starter article is written for useful search intent: measuring, waste, transitions, carpet seams, pets, tile overlays, and radiant heat."
+              description="Clear flooring advice for measuring, waste, transitions, carpet seams, pets, tile overlays, radiant heat, and other project decisions."
             />
             <div className="grid gap-5 md:grid-cols-2">
               {featuredGuides.map((guide) => (

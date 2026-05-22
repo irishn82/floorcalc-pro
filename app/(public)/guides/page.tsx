@@ -19,7 +19,7 @@ export default function GuidesIndexPage() {
         <SectionHeading
           eyebrow="Guides"
           title="Flooring planning guides"
-          description="Production-ready starter articles built around practical search intent and internal links to the calculators."
+          description="Practical flooring articles for measuring rooms, estimating waste, planning carpet seams, choosing transitions, and checking installation details before you buy."
         />
         <div className="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {guides.map((guide) => (
