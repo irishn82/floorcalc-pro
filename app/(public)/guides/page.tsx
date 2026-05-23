@@ -6,7 +6,7 @@ import { GuideCard } from "@/components/GuideCard";
 import { SectionHeading } from "@/components/SectionHeading";
 import { guideEcosystems } from "@/data/ecosystems";
 import { guides } from "@/data/guides";
-import { getGuidesByEcosystem } from "@/lib/content/paths";
+import { getPrimaryGuidesByEcosystem, getSecondaryGuidesByEcosystem } from "@/lib/content/paths";
 import { createSeoMetadata } from "@/lib/seo/metadata";
 
 export const metadata: Metadata = createSeoMetadata({
@@ -63,7 +63,8 @@ export default function GuidesIndexPage() {
           </div>
           <div className="mt-5 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
             {guideEcosystems.map((ecosystem) => {
-              const ecosystemGuides = getGuidesByEcosystem(ecosystem.slug);
+              const coreGuides = getPrimaryGuidesByEcosystem(ecosystem.slug);
+              const relatedGuides = getSecondaryGuidesByEcosystem(ecosystem.slug);
 
               return (
                 <Link
@@ -76,11 +77,16 @@ export default function GuidesIndexPage() {
                       <FlooringIcon name={ecosystem.slug === "carpet-padding" ? "carpet" : "layers"} />
                     </span>
                     <span className="rounded-md bg-field px-2 py-1 text-xs font-bold text-slate-600">
-                      {ecosystemGuides.length} guides
+                      {coreGuides.length} core
                     </span>
                   </div>
                   <h3 className="mt-4 text-lg font-black text-ink group-hover:text-accent-700">{ecosystem.title}</h3>
                   <p className="mt-3 text-sm leading-6 text-slate-600">{ecosystem.description}</p>
+                  {relatedGuides.length > 0 ? (
+                    <p className="mt-3 text-xs font-semibold uppercase tracking-wide text-slate-500">
+                      {relatedGuides.length} also relevant
+                    </p>
+                  ) : null}
                 </Link>
               );
             })}
@@ -101,7 +107,8 @@ export default function GuidesIndexPage() {
 
         <div className="mt-14 space-y-12 border-t border-line pt-10">
           {guideEcosystems.map((ecosystem) => {
-            const ecosystemGuides = getGuidesByEcosystem(ecosystem.slug);
+            const coreGuides = getPrimaryGuidesByEcosystem(ecosystem.slug);
+            const relatedGuides = getSecondaryGuidesByEcosystem(ecosystem.slug);
 
             return (
               <section key={ecosystem.slug} id={ecosystem.slug} className="scroll-mt-24">
@@ -118,9 +125,9 @@ export default function GuidesIndexPage() {
                     View ecosystem
                   </Link>
                 </div>
-                {ecosystemGuides.length > 0 ? (
+                {coreGuides.length > 0 ? (
                   <div className="mt-5 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-                    {ecosystemGuides.slice(0, 6).map((guide) => (
+                    {coreGuides.slice(0, 6).map((guide) => (
                       <GuideCard key={guide.slug} guide={guide} />
                     ))}
                   </div>
@@ -129,6 +136,22 @@ export default function GuidesIndexPage() {
                     Guides for this ecosystem are planned for a future editorial pass.
                   </div>
                 )}
+                {relatedGuides.length > 0 ? (
+                  <div className="mt-5 rounded-lg border border-line bg-field p-4">
+                    <h3 className="text-sm font-bold uppercase tracking-wide text-slate-500">Also relevant</h3>
+                    <div className="mt-3 flex flex-wrap gap-2">
+                      {relatedGuides.slice(0, 4).map((guide) => (
+                        <Link
+                          key={guide.slug}
+                          href={`/guides/${guide.slug}`}
+                          className="rounded-md border border-line bg-white px-3 py-2 text-sm font-bold text-slate-700 transition hover:border-accent-100 hover:text-accent-700"
+                        >
+                          {guide.title}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                ) : null}
               </section>
             );
           })}

@@ -8,7 +8,7 @@ import { GuideCard } from "@/components/GuideCard";
 import { SectionHeading } from "@/components/SectionHeading";
 import { ToolCard } from "@/components/ToolCard";
 import { getGuideEcosystemBySlug, guideEcosystems } from "@/data/ecosystems";
-import { getGuidesByEcosystem, getRelatedTools } from "@/lib/content/paths";
+import { getPrimaryGuidesByEcosystem, getRelatedTools, getSecondaryGuidesByEcosystem } from "@/lib/content/paths";
 import { createSeoMetadata } from "@/lib/seo/metadata";
 
 type EcosystemPageProps = {
@@ -42,7 +42,8 @@ export default async function GuideEcosystemPage({ params }: EcosystemPageProps)
     notFound();
   }
 
-  const ecosystemGuides = getGuidesByEcosystem(ecosystem.slug);
+  const coreGuides = getPrimaryGuidesByEcosystem(ecosystem.slug);
+  const relatedGuides = getSecondaryGuidesByEcosystem(ecosystem.slug);
   const relatedTools = getRelatedTools(ecosystem.relatedTools);
   const siblingEcosystems = guideEcosystems.filter((item) => item.slug !== ecosystem.slug).slice(0, 4);
 
@@ -73,10 +74,13 @@ export default async function GuideEcosystemPage({ params }: EcosystemPageProps)
         </div>
 
         <div className="mt-10">
-          <h2 className="text-2xl font-black tracking-normal text-ink">Guides in this ecosystem</h2>
-          {ecosystemGuides.length > 0 ? (
+          <h2 className="text-2xl font-black tracking-normal text-ink">Core guides in this ecosystem</h2>
+          <p className="mt-2 max-w-2xl text-sm leading-6 text-slate-600">
+            These guides are primarily about {ecosystem.shortTitle} or this exact planning category.
+          </p>
+          {coreGuides.length > 0 ? (
             <div className="mt-6 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-              {ecosystemGuides.map((guide) => (
+              {coreGuides.map((guide) => (
                 <GuideCard key={guide.slug} guide={guide} />
               ))}
             </div>
@@ -86,6 +90,20 @@ export default async function GuideEcosystemPage({ params }: EcosystemPageProps)
             </div>
           )}
         </div>
+
+        {relatedGuides.length > 0 ? (
+          <div className="mt-14 border-t border-line pt-10">
+            <h2 className="text-2xl font-black tracking-normal text-ink">Also relevant</h2>
+            <p className="mt-2 max-w-2xl text-sm leading-6 text-slate-600">
+              These guides overlap with this ecosystem, but their main home is another flooring category.
+            </p>
+            <div className="mt-6 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+              {relatedGuides.map((guide) => (
+                <GuideCard key={guide.slug} guide={guide} />
+              ))}
+            </div>
+          </div>
+        ) : null}
 
         <div className="mt-14 border-t border-line pt-10">
           <h2 className="text-2xl font-black tracking-normal text-ink">Useful calculators</h2>

@@ -19,15 +19,18 @@ export function getRelatedGuides(slugs: string[]) {
   return slugs.map(getGuideBySlug).filter((guide): guide is Guide => Boolean(guide));
 }
 
-export function getGuidesByEcosystem(ecosystemSlug: GuideEcosystemSlug) {
+export function getPrimaryGuidesByEcosystem(ecosystemSlug: GuideEcosystemSlug) {
+  return guides.filter((guide) => guide.primaryEcosystem === ecosystemSlug);
+}
+
+export function getSecondaryGuidesByEcosystem(ecosystemSlug: GuideEcosystemSlug) {
   return guides.filter(
-    (guide) =>
-      guide.primaryEcosystem === ecosystemSlug || Boolean(guide.secondaryEcosystems?.includes(ecosystemSlug))
+    (guide) => guide.primaryEcosystem !== ecosystemSlug && Boolean(guide.secondaryEcosystems?.includes(ecosystemSlug))
   );
 }
 
 export function getEcosystemRelatedGuides(guide: Guide, limit = 4) {
-  return getGuidesByEcosystem(guide.primaryEcosystem)
+  return getPrimaryGuidesByEcosystem(guide.primaryEcosystem)
     .filter((relatedGuide) => relatedGuide.slug !== guide.slug)
     .slice(0, limit);
 }
