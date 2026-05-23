@@ -32,24 +32,24 @@ export default function GuidesIndexPage() {
   return (
     <section className="bg-white py-14 sm:py-16">
       <Container>
-        <div className="grid gap-6 border-b border-line pb-8 lg:grid-cols-[0.8fr_1fr] lg:items-end">
+        <div className="border-b border-line pb-8">
           <SectionHeading
             eyebrow="Guides"
             title="Flooring planning guides"
             description="Practical flooring articles for measuring rooms, estimating waste, planning carpet seams, choosing transitions, and checking installation details before you buy."
             headingLevel="h1"
           />
-          <GuideTypeSelect options={guideEcosystems} />
         </div>
 
         <div className="mt-10" id="guide-categories">
-          <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+          <div className="grid gap-5 lg:grid-cols-[minmax(0,1fr)_20rem] lg:items-end">
             <div>
               <h2 className="text-2xl font-black tracking-normal text-ink">Browse by flooring type</h2>
               <p className="mt-2 max-w-2xl text-sm leading-6 text-slate-600">
                 Choose the flooring type you are planning so the right measuring, waste, transition, and installation articles stay together.
               </p>
             </div>
+            <GuideTypeSelect options={guideEcosystems} />
           </div>
           <div className="mt-5 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
             {guideEcosystems.map((ecosystem) => {
