@@ -88,6 +88,14 @@ button {
   letter-spacing: 0;
 }
 
+.prose-flooring h3 {
+  margin-top: 1.75rem;
+  color: #0d1624;
+  font-size: 1.05rem;
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
 .prose-flooring ul {
   margin-top: 1rem;
   padding-left: 1.25rem;

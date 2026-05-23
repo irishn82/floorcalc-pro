@@ -109,6 +109,21 @@ export default async function GuidePage({ params }: GuidePageProps) {
                         ))}
                       </ul>
                     ) : null}
+                    {section.subsections?.map((subsection) => (
+                      <div key={subsection.title}>
+                        <h3>{subsection.title}</h3>
+                        {subsection.paragraphs.map((paragraph) => (
+                          <p key={paragraph}>{paragraph}</p>
+                        ))}
+                        {subsection.bullets ? (
+                          <ul>
+                            {subsection.bullets.map((bullet) => (
+                              <li key={bullet}>{bullet}</li>
+                            ))}
+                          </ul>
+                        ) : null}
+                      </div>
+                    ))}
                   </section>
                 ))}
               </div>

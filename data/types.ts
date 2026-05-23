@@ -41,13 +41,23 @@ export type GuideSlug =
   | "flooring-transition-guide"
   | "best-flooring-for-dogs"
   | "luxury-vinyl-over-tile"
-  | "flooring-over-radiant-heat";
+  | "flooring-over-radiant-heat"
+  | "which-direction-should-flooring-run"
+  | "glue-down-vs-floating-floor"
+  | "subfloor-flatness-requirements-lvp"
+  | "how-much-extra-flooring-should-i-keep"
+  | "t-mold-vs-reducer-vs-end-cap";
 
 export type GuideSection = {
   id: string;
   title: string;
   paragraphs: string[];
   bullets?: string[];
+  subsections?: {
+    title: string;
+    paragraphs: string[];
+    bullets?: string[];
+  }[];
 };
 
 export type Guide = {

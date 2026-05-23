@@ -1042,5 +1042,833 @@ export const guides: Guide[] = [
     ],
     disclaimer:
       "This guide provides general planning information only. Radiant heat compatibility, temperature limits, moisture testing, acclimation, adhesives, underlayments, and startup procedures must be verified with the flooring manufacturer, heating system manufacturer, and installer."
+  },
+  {
+    slug: "which-direction-should-flooring-run",
+    title: "Which Direction Should Flooring Run?",
+    description:
+      "A practical guide to choosing flooring direction for plank floors, hallways, open layouts, stairs, transitions, natural light, and waste planning.",
+    metadataTitle: "Which Direction Should Flooring Run? Practical Layout Guide",
+    metadataDescription:
+      "Learn how to choose flooring direction using longest walls, natural light, hallways, open layouts, stairs, transitions, and waste planning.",
+    dateModified: "2026-05-22",
+    readTime: "8 min read",
+    relatedTools: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"],
+    relatedGuides: ["luxury-vinyl-over-tile", "flooring-transition-guide"],
+    sections: [
+      {
+        id: "quick-answer",
+        title: "Quick answer",
+        paragraphs: [
+          "Flooring often looks best when planks run with the longest wall, the main line of sight, or the flow of a hallway. Natural light, room shape, stairs, transitions, and the manufacturer's installation instructions can change that choice.",
+          "There is no single direction that is correct for every project. The best direction is the one that makes the layout look intentional, keeps plank joints practical, manages waste, and works with the product and jobsite conditions."
+        ],
+        bullets: [
+          "Long rooms usually look more balanced when planks run lengthwise.",
+          "Hallways usually look cleaner when flooring runs down the hall.",
+          "Open concept spaces often need one consistent direction through the main sight line.",
+          "Direction changes may need transitions and installer review."
+        ]
+      },
+      {
+        id: "main-layout-factors",
+        title: "Main factors that affect flooring direction",
+        paragraphs: [
+          "Start by looking at the whole project, not just one room. Flooring direction affects how rooms connect, how cuts land at walls, how transitions look, and how much waste the job may produce.",
+          "Before ordering material, measure the rooms with the Flooring Square Footage Calculator and compare waste scenarios with the Waste Calculator. Direction can change the number of end cuts, starting rows, hallway cuts, and usable offcuts."
+        ],
+        subsections: [
+          {
+            title: "Longest wall",
+            paragraphs: [
+              "Running planks parallel with the longest wall can make the room feel longer and more settled. This is a common starting point for bedrooms, living rooms, and rectangular spaces."
+            ]
+          },
+          {
+            title: "Natural light direction",
+            paragraphs: [
+              "Some installers prefer running planks in the direction of natural light because it can make seams and plank edges less noticeable. This matters most when a strong window wall lights the floor across the room."
+            ]
+          },
+          {
+            title: "Main traffic flow",
+            paragraphs: [
+              "In hallways and long connected spaces, flooring usually looks more natural when it runs with the walking path. Running planks across a narrow hallway can make the space feel chopped up and can create many short cuts."
+            ]
+          }
+        ]
+      },
+      {
+        id: "open-concept-layouts",
+        title: "Open concept layouts need a primary direction",
+        paragraphs: [
+          "Open concept floors can include kitchens, dining areas, living rooms, entryways, and hallways that all share one floor. In these layouts, choose the direction that works for the largest visual area and the longest uninterrupted view.",
+          "If one direction looks good in the living room but awkward in the kitchen, sketch the layout and think through cabinet runs, islands, hallway openings, stair edges, and transitions before making a final decision."
+        ],
+        bullets: [
+          "Use one direction through the largest connected space when possible.",
+          "Check how planks will meet islands, cabinets, fireplaces, and stair openings.",
+          "Avoid direction changes in the middle of open space unless a transition or room break makes it intentional.",
+          "Plan doorways and floor breaks with the Transition Estimator."
+        ]
+      },
+      {
+        id: "visual-widening",
+        title: "Can flooring direction make a room look wider?",
+        paragraphs: [
+          "Running planks across a narrow room can visually widen it, but it may also create more end cuts and a busier look. This tradeoff can make sense in a small room where the main goal is visual width, but it is not always best for connected spaces.",
+          "In a narrow hallway, running planks across the width often creates many seams and short pieces. In a single small bedroom, running across the width may be acceptable if it improves the room visually and the installation instructions allow it."
+        ]
+      },
+      {
+        id: "stairs-and-transitions",
+        title: "Stairs, transitions, and direction changes",
+        paragraphs: [
+          "Stairs can force layout decisions because stair noses, landings, and hallway directions need to meet cleanly. If flooring continues from a hallway to a stair landing, the plank direction should be reviewed with the stair nose and landing layout together.",
+          "When direction changes between rooms, the change usually needs a doorway, transition strip, threshold, or other logical break. The flooring transition guide explains common profiles, and the Transition Estimator can help estimate total trim length."
+        ],
+        bullets: [
+          "Review stair noses and landings before ordering.",
+          "Use transitions where direction changes need a clean break.",
+          "Check floating floor expansion gap requirements at doorways.",
+          "Avoid forcing a direction change where no transition can hide or finish it."
+        ]
+      },
+      {
+        id: "waste-and-plank-direction",
+        title: "Plank direction can affect waste",
+        paragraphs: [
+          "Direction changes the cut pattern. A direction that looks good but creates many short starter pieces, awkward closet cuts, or narrow final rows may need more waste. That is especially true in hallways, diagonal layouts, and rooms with many doorways.",
+          "If you are comparing two directions, calculate the same measured square footage with different waste percentages. A simple direction may work with 10% waste, while a more complex direction may need 15% or more."
+        ]
+      },
+      {
+        id: "when-direction-changes",
+        title: "When direction may change between rooms",
+        paragraphs: [
+          "Direction may change when rooms are separated by a doorway, the floor system requires a transition, the hallway flow is more important than the adjacent room, or the product has installation limits for long runs. It can also change when different flooring types meet.",
+          "The key is to make direction changes deliberate. A transition at a doorway is easier to accept visually than a random change in the middle of a connected space."
+        ]
+      },
+      {
+        id: "example",
+        title: "Example direction decision",
+        paragraphs: [
+          "Imagine an open main floor with a long living room connected to a narrow hallway and a kitchen island. Running planks with the long living room wall creates the best main view, but it means the hallway runs across the planks.",
+          "The homeowner and installer might compare two options: keep one direction through the whole main floor, or use a transition at the hallway to run flooring down the hall. The right answer depends on sight lines, product requirements, transition placement, and acceptable waste."
+        ]
+      },
+      {
+        id: "common-mistakes",
+        title: "Common mistakes",
+        paragraphs: [
+          "The biggest mistake is choosing direction from one room without considering the whole floor plan. Another is ignoring transitions until after installation starts.",
+          "Homeowners also sometimes choose direction based only on appearance and forget product limits, subfloor conditions, or waste. Direction should be a layout decision and a material planning decision."
+        ],
+        bullets: [
+          "Choosing direction before checking hallways and connected rooms.",
+          "Ignoring stair noses, landings, and doorway transitions.",
+          "Forgetting that diagonal or direction-change layouts can increase waste.",
+          "Assuming every product allows every layout direction.",
+          "Letting the final row become too narrow because the starting layout was not planned."
+        ]
+      }
+    ],
+    faq: [
+      {
+        question: "Should flooring run the same direction in every room?",
+        answer:
+          "Often yes in connected spaces, but direction can change at doorways, transitions, hallways, stairs, or product-required breaks when the layout calls for it."
+      },
+      {
+        question: "Should flooring run toward the window?",
+        answer:
+          "Natural light can be a useful guide because it may make seams less noticeable, but room shape, hallway flow, transitions, and product instructions also matter."
+      },
+      {
+        question: "Which direction should flooring run in a hallway?",
+        answer:
+          "Flooring usually looks cleaner when it runs down the length of a hallway. Running across a hallway can create more short cuts and a busier look."
+      },
+      {
+        question: "Does plank direction affect waste?",
+        answer:
+          "Yes. Direction affects cut patterns, usable offcuts, narrow rows, hallway cuts, and doorway cuts. Complex directions can require a higher waste allowance."
+      },
+      {
+        question: "Can I change flooring direction between rooms?",
+        answer:
+          "Yes, but it usually needs a logical break such as a doorway or transition. Confirm expansion, trim, and installation requirements before planning the change."
+      },
+      {
+        question: "Should flooring run parallel or perpendicular to stairs?",
+        answer:
+          "It depends on the landing, hallway, stair nose system, and product instructions. Stairs should be reviewed as part of the full layout, not as an afterthought."
+      }
+    ],
+    disclaimer:
+      "Flooring direction is a planning decision that can depend on product instructions, subfloor conditions, room shape, installer layout methods, stair details, and transitions. Verify the final layout with the manufacturer instructions and installer before ordering materials."
+  },
+  {
+    slug: "glue-down-vs-floating-floor",
+    title: "Glue-Down vs Floating Floor",
+    description:
+      "Compare glue-down and floating flooring for LVP, laminate, and engineered wood, including subfloor prep, moisture, feel, movement, and repairs.",
+    metadataTitle: "Glue-Down vs Floating Floor: Which Installation Is Better?",
+    metadataDescription:
+      "Compare glue-down and floating floors for LVP, laminate, engineered hardwood, moisture, flatness, sound, movement, furniture, and repairs.",
+    dateModified: "2026-05-22",
+    readTime: "9 min read",
+    relatedTools: ["flooring-square-footage-calculator", "waste-calculator"],
+    relatedGuides: ["flooring-over-radiant-heat", "luxury-vinyl-over-tile", "subfloor-flatness-requirements-lvp"],
+    sections: [
+      {
+        id: "quick-answer",
+        title: "Quick answer",
+        paragraphs: [
+          "A floating floor locks together and rests over the subfloor with required expansion space. A glue-down floor is bonded to the prepared substrate with adhesive. Neither method is automatically better; the right choice depends on the product, subfloor, room use, moisture conditions, sound expectations, furniture loads, and manufacturer instructions.",
+          "Floating floors are common for laminate and many LVP products because they can be faster to install and easier to replace in sections. Glue-down floors can feel more solid underfoot and are common in some commercial LVP and engineered wood applications, but they demand careful substrate and adhesive preparation."
+        ]
+      },
+      {
+        id: "how-they-differ",
+        title: "How glue-down and floating floors differ",
+        paragraphs: [
+          "The main difference is attachment. Floating floors are not glued to the subfloor across the whole room. They rely on a locking system, proper expansion gaps, approved underlayment, and a flat substrate. Glue-down floors depend on adhesive bond, substrate porosity, trowel size, open time, moisture conditions, and cure time.",
+          "That difference affects sound, feel, repairs, movement, and what happens when the substrate is not flat enough."
+        ],
+        subsections: [
+          {
+            title: "Floating floors",
+            paragraphs: [
+              "Floating floors can be a good fit for many residential rooms when the subfloor is flat, stable, clean, and dry enough for the product. They still need expansion space and should not be pinned by cabinets, heavy fixed objects, or improper trim."
+            ]
+          },
+          {
+            title: "Glue-down floors",
+            paragraphs: [
+              "Glue-down floors can be useful where a more bonded feel is desired or where the product is designed for adhesive installation. They are less forgiving of surface contamination, moisture, and poor adhesive technique."
+            ]
+          }
+        ]
+      },
+      {
+        id: "product-types",
+        title: "Product considerations by flooring type",
+        paragraphs: [
+          "LVP, laminate, and engineered hardwood are not interchangeable categories. Always review the exact product instructions before choosing an installation method."
+        ],
+        subsections: [
+          {
+            title: "LVP",
+            paragraphs: [
+              "Luxury vinyl plank is sold in both floating and glue-down formats. Floating click LVP needs a flat subfloor and room to move. Glue-down LVP needs compatible adhesive and a substrate that will not telegraph defects through the finished floor."
+            ]
+          },
+          {
+            title: "Laminate",
+            paragraphs: [
+              "Laminate is commonly installed as a floating floor. It is sensitive to flatness, expansion space, moisture exposure, and underlayment selection."
+            ]
+          },
+          {
+            title: "Engineered hardwood",
+            paragraphs: [
+              "Engineered hardwood may be floating, glue-down, nail-down, or staple-down depending on the product. Moisture, acclimation, adhesive, and substrate requirements are especially important."
+            ]
+          }
+        ]
+      },
+      {
+        id: "subfloor-flatness-moisture",
+        title: "Subfloor flatness and moisture",
+        paragraphs: [
+          "Both installation methods need a properly prepared subfloor. Floating floors can unlock, click, bounce, or make noise when the subfloor has high spots, low spots, or hollow areas. Glue-down floors can release, telegraph imperfections, or fail to bond when the substrate is not prepared correctly.",
+          "Moisture matters for both methods. Concrete slabs, basements, bathrooms, kitchens, laundry rooms, and existing tile installations may need extra review. If you are installing over tile, read the luxury vinyl over tile guide before assuming the substrate is ready."
+        ],
+        bullets: [
+          "Verify flatness tolerance from the flooring instructions.",
+          "Test moisture when required by the product, adhesive, or subfloor.",
+          "Correct loose tile, cracks, residue, humps, and dips before installation.",
+          "Do not assume a previous builder or installer prepared the floor to current product standards."
+        ]
+      },
+      {
+        id: "sound-feel-and-movement",
+        title: "Sound, feel, and movement underfoot",
+        paragraphs: [
+          "Floating floors can feel slightly different underfoot because they are not bonded across the entire substrate. Approved underlayment can help with sound and comfort, but too much cushion or the wrong underlayment can create movement problems.",
+          "Glue-down floors often feel more directly connected to the substrate. That can feel solid, but it also means the finished floor may reveal substrate imperfections more readily."
+        ]
+      },
+      {
+        id: "use-cases",
+        title: "Residential, commercial, furniture, and radiant heat",
+        paragraphs: [
+          "Commercial spaces may favor glue-down products when traffic, rolling loads, or repair practices call for a bonded floor. Residential spaces often use floating floors because they are practical and widely available, but heavy furniture, cabinets, islands, and fixed objects still need careful review.",
+          "Radiant heat adds another layer. Some floating and glue-down floors are compatible, but the exact flooring, adhesive, underlayment, temperature limits, and heat startup process must all be approved."
+        ],
+        bullets: [
+          "Commercial traffic may require a specific product and installation system.",
+          "Heavy fixed furniture or cabinets can restrict floating floor movement.",
+          "Radiant heat compatibility must come from the flooring and heating system instructions.",
+          "Replacement can be easier with some floating floors but depends on room layout and product design."
+        ]
+      },
+      {
+        id: "measuring-and-waste",
+        title: "Measuring and waste are still required",
+        paragraphs: [
+          "The installation method does not replace material planning. Use the Flooring Square Footage Calculator to build a room-by-room estimate, then use the Waste Calculator to compare material allowances.",
+          "Glue-down products, floating planks, diagonal layouts, closets, hallways, and attic stock can all affect the final material order."
+        ]
+      },
+      {
+        id: "example",
+        title: "Example decision",
+        paragraphs: [
+          "A homeowner wants LVP in a finished basement. The floating option is attractive because it installs quickly, but the concrete has a few low spots and the room has heavy storage cabinets. A glue-down product may feel more solid, but it requires moisture testing, adhesive compatibility, and more substrate preparation.",
+          "The better choice is not just glue-down or floating. It is the product system that matches the slab conditions, moisture results, furniture plan, and manufacturer instructions."
+        ]
+      },
+      {
+        id: "common-mistakes",
+        title: "Common mistakes",
+        paragraphs: [
+          "A common mistake is choosing the method before checking the subfloor. Another is assuming floating floors require less preparation. Floating floors are often easier to install, but they still need flatness, expansion space, and correct underlayment.",
+          "For glue-down floors, the biggest problems often come from moisture, residue, wrong adhesive, wrong trowel, or installing before the adhesive system is ready."
+        ],
+        bullets: [
+          "Installing floating floors over low spots or high spots.",
+          "Pinning a floating floor under cabinets or fixed objects.",
+          "Using unapproved underlayment.",
+          "Skipping adhesive and moisture requirements for glue-down products.",
+          "Ignoring radiant heat compatibility."
+        ]
+      }
+    ],
+    faq: [
+      {
+        question: "Is glue-down flooring better than floating flooring?",
+        answer:
+          "Not automatically. Glue-down can feel more bonded and may suit some commercial products, while floating floors are common in residential LVP and laminate. The right choice depends on the product and site conditions."
+      },
+      {
+        question: "Does a floating floor need a flat subfloor?",
+        answer:
+          "Yes. Floating floors can click, bounce, separate, or make noise when installed over humps, dips, or hollow areas outside the manufacturer's tolerance."
+      },
+      {
+        question: "Is glue-down LVP good over concrete?",
+        answer:
+          "It can be when the concrete meets moisture, flatness, cleanliness, porosity, and adhesive requirements. Follow the product and adhesive instructions."
+      },
+      {
+        question: "Which floor is easier to repair?",
+        answer:
+          "Some floating floors can be easier to disassemble and repair, but access depends on the layout. Glue-down repairs may be localized but require adhesive and surface preparation."
+      },
+      {
+        question: "Can heavy furniture go on floating floors?",
+        answer:
+          "Furniture is usually expected, but very heavy fixed objects, cabinets, islands, or built-ins can restrict movement. Check the installation instructions."
+      },
+      {
+        question: "Can floating or glue-down flooring go over radiant heat?",
+        answer:
+          "Some can, but radiant heat approval, temperature limits, underlayment, adhesive, and startup procedures must be verified for the exact product system."
+      }
+    ],
+    disclaimer:
+      "This guide is general planning information. Always verify installation method, adhesive, underlayment, moisture testing, subfloor flatness, expansion space, furniture restrictions, radiant heat approval, and repair procedures with the flooring manufacturer's written instructions and installer."
+  },
+  {
+    slug: "subfloor-flatness-requirements-lvp",
+    title: "How Flat Should a Subfloor Be for LVP?",
+    description:
+      "Learn why subfloor flatness matters for LVP, including low spots, high spots, locking stress, noise, telegraphing, tile substrates, and prep.",
+    metadataTitle: "How Flat Should a Subfloor Be for LVP? Flatness Guide",
+    metadataDescription:
+      "Learn why LVP subfloor flatness matters, how low spots, high spots, tile, telegraphing, and locking stress affect installation.",
+    dateModified: "2026-05-22",
+    readTime: "9 min read",
+    relatedTools: ["flooring-square-footage-calculator", "waste-calculator"],
+    relatedGuides: ["luxury-vinyl-over-tile", "flooring-over-radiant-heat", "glue-down-vs-floating-floor"],
+    sections: [
+      {
+        id: "quick-answer",
+        title: "Quick answer",
+        paragraphs: [
+          "A subfloor for LVP should be flat enough to meet the exact manufacturer's tolerance for the product being installed. The tolerance varies by product, so the installation instructions are the authority.",
+          "Flat does not mean perfectly level. A floor can slope and still be flat enough if it does not have humps, dips, ridges, hollow areas, or abrupt changes that stress the planks."
+        ],
+        bullets: [
+          "Verify the flatness tolerance in the LVP installation instructions.",
+          "High spots and low spots can stress locking systems.",
+          "Loose tile, cracked tile, and deep grout joints need careful review.",
+          "Prior construction may not meet the requirements of a new floating floor."
+        ]
+      },
+      {
+        id: "why-flatness-matters",
+        title: "Why flatness matters for LVP",
+        paragraphs: [
+          "LVP planks are designed to sit on a stable surface. When the surface has dips or humps, planks may flex as people walk across them. That movement can create noise, joint stress, locking damage, gaps, or visible unevenness.",
+          "Flatness is especially important for click-lock floating floors because the locking profile depends on the planks being supported evenly. Glue-down products also need a prepared surface because imperfections can telegraph through or affect adhesive bond."
+        ]
+      },
+      {
+        id: "common-subfloor-problems",
+        title: "Common subfloor problems",
+        paragraphs: [
+          "The most common flatness problems are low spots, high spots, hollow areas, ridges, uneven seams, tile lippage, and debris under the floor. Each problem affects the finished floor differently."
+        ],
+        subsections: [
+          {
+            title: "Low spots",
+            paragraphs: [
+              "Low spots can leave unsupported areas below floating planks. When stepped on, the plank may deflect, click, or stress the locking edge."
+            ]
+          },
+          {
+            title: "High spots",
+            paragraphs: [
+              "High spots can force planks to bridge over nearby areas or create pressure points. Grinding, sanding, or other approved correction may be needed depending on the substrate."
+            ]
+          },
+          {
+            title: "Hollow areas",
+            paragraphs: [
+              "Hollow-sounding tile, loose panels, or weak patches can move under the new floor. Covering movement with LVP can transfer the problem to the finished surface."
+            ]
+          },
+          {
+            title: "Telegraphing",
+            paragraphs: [
+              "Telegraphing happens when substrate lines, grout joints, ridges, or imperfections become visible through the finished floor. Thin products and glue-down installations can be more sensitive to this."
+            ]
+          }
+        ]
+      },
+      {
+        id: "tile-under-lvp",
+        title: "Loose or cracked tile underneath LVP",
+        paragraphs: [
+          "Existing tile is not automatically a suitable substrate. Loose, cracked, hollow, uneven, or moisture-damaged tile can create problems under LVP. Deep grout lines can also telegraph or leave unsupported areas depending on the product.",
+          "If you are considering vinyl plank over tile, review the luxury vinyl over tile guide and the LVP manufacturer's instructions before assuming the tile can stay."
+        ],
+        bullets: [
+          "Tap for hollow or loose tile.",
+          "Check lippage and grout depth.",
+          "Look for cracks that indicate movement below.",
+          "Confirm whether patching, skim coating, removal, or another prep method is required."
+        ]
+      },
+      {
+        id: "patching-leveling",
+        title: "Patching and self-leveling concepts",
+        paragraphs: [
+          "Subfloor correction can include patching low spots, grinding high spots, fastening loose panels, skim coating grout joints, or using a self-leveling underlayment where appropriate. The correct method depends on the substrate, product, moisture conditions, and installer judgment.",
+          "Self-leveling materials are not a magic fix. They need proper surface preparation, primer if required, perimeter control, cure time, and compatibility with the flooring system."
+        ]
+      },
+      {
+        id: "prior-work",
+        title: "Prior work may not meet current flooring specs",
+        paragraphs: [
+          "A builder-grade subfloor or an older tile installation may have been acceptable for the original floor but still fail the requirements for a new LVP product. Modern click systems and thinner vinyl products can be more sensitive to surface variation.",
+          "Do not assume that because the old floor looked acceptable, the surface underneath is ready. Measure, inspect, and compare the site to the written product tolerance."
+        ]
+      },
+      {
+        id: "measure-and-waste",
+        title: "Measure material after the floor plan is confirmed",
+        paragraphs: [
+          "Subfloor prep can change the installation plan, especially if tile removal, transitions, or room breaks are added. Use the Flooring Square Footage Calculator for the base amount and the Waste Calculator after the layout and prep approach are clearer.",
+          "If flatness problems lead to direction changes, extra transitions, or additional cuts, revisit the waste allowance before ordering."
+        ]
+      },
+      {
+        id: "example",
+        title: "Example flatness scenario",
+        paragraphs: [
+          "A homeowner wants floating LVP over a kitchen tile floor. The tile is mostly intact, but several tiles sound hollow, one doorway has lippage, and the grout joints are wide. The room measures 180 square feet.",
+          "The square footage estimate is useful, but the project is not ready to order until the installer checks tile stability, flatness tolerance, grout depth, door clearance, moisture concerns, and transition requirements."
+        ]
+      },
+      {
+        id: "common-mistakes",
+        title: "Common mistakes",
+        paragraphs: [
+          "The biggest mistake is checking level but not flatness. A floor can be sloped and still work, or level and still have dips and humps that cause problems.",
+          "Another mistake is using underlayment to hide subfloor defects. Underlayment must be approved for the product and usually does not replace required floor preparation."
+        ],
+        bullets: [
+          "Using a short level instead of a long straightedge.",
+          "Ignoring hollow tile or loose panels.",
+          "Installing over debris, paint ridges, adhesive residue, or drywall mud.",
+          "Assuming underlayment fixes low spots.",
+          "Skipping the manufacturer's flatness tolerance."
+        ]
+      }
+    ],
+    faq: [
+      {
+        question: "Does an LVP subfloor need to be level?",
+        answer:
+          "It needs to meet the manufacturer's flatness tolerance. Level and flat are different; a floor can slope but still be flat enough if it does not have unacceptable humps or dips."
+      },
+      {
+        question: "What happens if LVP is installed over low spots?",
+        answer:
+          "Low spots can leave planks unsupported, causing flexing, clicking, noise, gaps, locking stress, or damage over time."
+      },
+      {
+        question: "Can underlayment fix an uneven subfloor?",
+        answer:
+          "Usually no. Underlayment must be approved for the product and does not replace required patching, grinding, fastening, or leveling work."
+      },
+      {
+        question: "Can LVP go over cracked tile?",
+        answer:
+          "Only if the tile is stable and allowed by the LVP instructions. Loose, cracked, hollow, or moving tile may need repair or removal before installation."
+      },
+      {
+        question: "Can grout lines show through LVP?",
+        answer:
+          "Yes, grout lines can telegraph through some vinyl products, especially if they are deep, wide, or not prepared according to the product instructions."
+      },
+      {
+        question: "Who decides if the subfloor is flat enough?",
+        answer:
+          "The manufacturer's written tolerance sets the requirement, and the installer should evaluate the actual site conditions against that requirement."
+      }
+    ],
+    disclaimer:
+      "This guide is general planning information. LVP flatness tolerance, substrate approval, patching products, moisture testing, underlayment rules, and installation method must be verified with the manufacturer's written instructions and a qualified installer."
+  },
+  {
+    slug: "how-much-extra-flooring-should-i-keep",
+    title: "How Much Extra Flooring Should I Keep for Repairs?",
+    description:
+      "Learn how much attic stock to keep for future flooring repairs, including LVP, laminate, hardwood, tile, carpet remnants, dye lots, and remodel changes.",
+    metadataTitle: "How Much Extra Flooring Should I Keep for Repairs?",
+    metadataDescription:
+      "Learn how much extra flooring to keep for repairs, attic stock, dye lots, discontinued products, water damage, pets, cabinets, and remodels.",
+    dateModified: "2026-05-22",
+    readTime: "8 min read",
+    relatedTools: ["waste-calculator", "flooring-square-footage-calculator"],
+    relatedGuides: ["how-much-flooring-do-i-need", "lvp-waste-percentage-guide"],
+    sections: [
+      {
+        id: "quick-answer",
+        title: "Quick answer",
+        paragraphs: [
+          "For many hard surface floors, keeping one or two unopened cartons from the same order is useful for future repairs. Larger homes, discontinued styles, pets, water-risk areas, rental properties, or rooms likely to change later may justify more attic stock.",
+          "For carpet, keeping a remnant can help with small repairs, but pile direction, wear, fading, and seam visibility can keep the repair from being invisible."
+        ]
+      },
+      {
+        id: "what-attic-stock-means",
+        title: "What attic stock is",
+        paragraphs: [
+          "Attic stock is extra material kept after installation for future repairs or changes. It does not have to be stored in an attic; it simply means saved material from the original order.",
+          "The reason attic stock matters is simple: flooring products change. Color lots, textures, plank sizes, locking systems, backing, thickness, and trim profiles can be discontinued or revised."
+        ],
+        bullets: [
+          "Keep labels and product information with the saved material.",
+          "Store cartons flat and dry according to product guidance.",
+          "Avoid storing flooring where moisture, heat, or freezing conditions can damage it.",
+          "Keep trim pieces when matching transitions may be difficult later."
+        ]
+      },
+      {
+        id: "why-extra-material-helps",
+        title: "Why extra material helps later",
+        paragraphs: [
+          "Extra flooring can make future repairs easier after water damage, pet damage, scratches, dropped objects, cabinet changes, island changes, doorway changes, or remodel work. Matching a floor several years later can be difficult even when the product name still exists.",
+          "Dye lot and color variation matter. A new carton bought later may not match the original floor exactly, and a discontinued product may not be available at all."
+        ]
+      },
+      {
+        id: "how-much-by-flooring-type",
+        title: "How much extra to keep by flooring type",
+        paragraphs: [
+          "The right amount depends on the flooring type, room size, risk of damage, and how likely the product is to be available later. Use the Waste Calculator to compare material totals before ordering."
+        ],
+        subsections: [
+          {
+            title: "LVP and laminate",
+            paragraphs: [
+              "One or two unopened cartons is often a practical target for many homes. Keep more if the product has strong color variation, covers a large connected area, or may be discontinued."
+            ]
+          },
+          {
+            title: "Hardwood and engineered wood",
+            paragraphs: [
+              "Extra boards can be useful because natural variation, milling, thickness, finish, and species appearance may be hard to match later. Keep enough for board replacement in the highest-risk areas."
+            ]
+          },
+          {
+            title: "Tile",
+            paragraphs: [
+              "Tile can vary by lot and caliber, and styles can disappear quickly. Keeping a box or more is often useful, especially for bathrooms, kitchens, laundry rooms, and high-breakage areas."
+            ]
+          },
+          {
+            title: "Carpet",
+            paragraphs: [
+              "A carpet remnant can help with patches, closet repairs, or small damaged areas, but wear, fading, pile direction, and pattern alignment can make a repair visible."
+            ]
+          }
+        ]
+      },
+      {
+        id: "risk-factors",
+        title: "When to keep more extra flooring",
+        paragraphs: [
+          "Some homes have a higher chance of needing repair material later. Pets, kids, rolling chairs, rentals, basements, kitchens, laundry rooms, entryways, and water-prone areas all increase the value of attic stock.",
+          "Future remodel plans matter too. If cabinets, islands, walls, or appliances may move, extra flooring from the same order can help fill areas that were previously covered."
+        ],
+        bullets: [
+          "Pets that may scratch, stain, or damage flooring.",
+          "Water-risk rooms such as kitchens, bathrooms, laundry rooms, and basements.",
+          "Rental properties where turnover repairs are likely.",
+          "Cabinet, island, closet, or wall layout changes.",
+          "Products with unique color variation, patterning, or locking systems."
+        ]
+      },
+      {
+        id: "connect-to-waste",
+        title: "Attic stock is separate from installation waste",
+        paragraphs: [
+          "Installation waste covers cuts, damaged pieces, layout decisions, and pattern alignment during the install. Attic stock is material intentionally kept after the job is complete. Do not assume every leftover cutoff is useful attic stock.",
+          "The how much flooring guide explains the full estimate process, and the LVP waste percentage guide explains why a project may need different waste levels. If you want attic stock, include it intentionally when planning the order."
+        ]
+      },
+      {
+        id: "example",
+        title: "Example attic stock decision",
+        paragraphs: [
+          "A homeowner installs 760 square feet of LVP across a kitchen, hallway, living room, and laundry area. The product covers 23.6 square feet per carton. After adding waste, the estimate rounds to 36 cartons.",
+          "Because the floor covers water-risk areas and a large connected space, the homeowner may choose to order 37 or 38 cartons so one or two unopened cartons remain for future repairs after the install."
+        ]
+      },
+      {
+        id: "common-mistakes",
+        title: "Common mistakes",
+        paragraphs: [
+          "A common mistake is returning every unopened carton without considering repairs. Another is keeping only small cut pieces that may not help with future plank or tile replacement.",
+          "For carpet, a remnant is helpful only if it can be stored cleanly and used with the correct pile direction and pattern. A random leftover piece may not make an invisible patch years later."
+        ],
+        bullets: [
+          "Relying on future availability of the same product.",
+          "Ignoring dye lot, color run, and texture variation.",
+          "Keeping only tiny offcuts instead of usable pieces or cartons.",
+          "Storing material in damp or extreme conditions.",
+          "Forgetting to save product labels and carton information."
+        ]
+      }
+    ],
+    faq: [
+      {
+        question: "How much extra LVP should I keep?",
+        answer:
+          "One or two unopened cartons is a practical target for many homes, especially if the floor covers a large connected space or the product may be hard to match later."
+      },
+      {
+        question: "Is attic stock the same as waste?",
+        answer:
+          "No. Waste is extra material used during installation for cuts and layout. Attic stock is material intentionally saved after installation for future repairs."
+      },
+      {
+        question: "Should I keep extra tile?",
+        answer:
+          "Yes, keeping extra tile is often useful because tile styles, lot colors, sizes, and calibrations can be difficult to match later."
+      },
+      {
+        question: "Are carpet remnants useful?",
+        answer:
+          "They can be useful for small patches, but wear, fading, pile direction, and pattern matching can make carpet repairs visible."
+      },
+      {
+        question: "Why keep unopened cartons?",
+        answer:
+          "Unopened cartons protect the material, preserve labels, and give you full usable pieces instead of only small cutoffs."
+      },
+      {
+        question: "Can I buy matching flooring later?",
+        answer:
+          "Sometimes, but there is no guarantee. Products can be discontinued or changed, and later lots may not match the original floor exactly."
+      }
+    ],
+    disclaimer:
+      "This guide provides general planning advice. Storage requirements, repair methods, replacement availability, and matching expectations vary by product and site conditions. Verify product storage and repair guidance with the manufacturer, retailer, or installer."
+  },
+  {
+    slug: "t-mold-vs-reducer-vs-end-cap",
+    title: "T-Mold vs Reducer vs End Cap",
+    description:
+      "Learn the difference between T-molds, reducers, end caps, stair noses, and other flooring transitions for doorways, height changes, and exposed edges.",
+    metadataTitle: "T-Mold vs Reducer vs End Cap: Flooring Transition Guide",
+    metadataDescription:
+      "Compare T-molds, reducers, end caps, stair noses, carpet transitions, tile transitions, height changes, doorways, and expansion gaps.",
+    dateModified: "2026-05-22",
+    readTime: "8 min read",
+    relatedTools: ["transition-estimator"],
+    relatedGuides: ["flooring-transition-guide", "luxury-vinyl-over-tile", "which-direction-should-flooring-run"],
+    sections: [
+      {
+        id: "quick-answer",
+        title: "Quick answer",
+        paragraphs: [
+          "A T-mold is commonly used between floors of similar height, a reducer handles a height difference between two floors, and an end cap finishes an exposed flooring edge or termination. Stair noses finish stair edges and are not interchangeable with ordinary doorway transitions.",
+          "The correct transition depends on floor height, flooring type, expansion requirements, doorway location, adjacent surfaces, and the manufacturer's installation instructions."
+        ]
+      },
+      {
+        id: "why-transitions-matter",
+        title: "Why flooring transitions matter",
+        paragraphs: [
+          "Transitions are not just cosmetic. They can protect flooring edges, cover expansion gaps, handle height changes, separate different flooring systems, and finish doorways or exposed edges.",
+          "Floating floors often require expansion space at walls, doorways, long runs, and fixed objects. The transition profile must cover the gap without pinning the floor in a way that conflicts with product instructions."
+        ],
+        bullets: [
+          "Use the Transition Estimator to total doorway and opening widths.",
+          "Review the full flooring transition guide when planning multiple profiles.",
+          "Confirm trim compatibility with the exact flooring product.",
+          "Do not assume every profile can be substituted for another."
+        ]
+      },
+      {
+        id: "profile-types",
+        title: "Common transition profiles",
+        paragraphs: [
+          "The names can vary by brand, but the basic functions are consistent: bridge similar heights, reduce height changes, finish edges, or finish stairs."
+        ],
+        subsections: [
+          {
+            title: "T-mold",
+            paragraphs: [
+              "A T-mold is commonly used between two hard surfaces of similar height, often in a doorway or room break. It can also be used where a floating floor needs an expansion break between areas."
+            ]
+          },
+          {
+            title: "Reducer",
+            paragraphs: [
+              "A reducer slopes from a higher floor down to a lower floor. It is commonly used where new hard surface flooring meets thinner flooring, concrete, vinyl, or another lower surface."
+            ]
+          },
+          {
+            title: "End cap",
+            paragraphs: [
+              "An end cap finishes an exposed flooring edge. It may be used at sliding doors, fireplaces, carpet edges, thresholds, or places where the flooring stops against a different surface."
+            ]
+          },
+          {
+            title: "Stair nose",
+            paragraphs: [
+              "A stair nose finishes the front edge of a stair tread or landing. Stair noses are product-specific and should be installed according to the approved stair method."
+            ]
+          }
+        ]
+      },
+      {
+        id: "where-to-use-each",
+        title: "Where to use each transition",
+        paragraphs: [
+          "The surface on each side matters. A doorway between two similar hard floors may use a T-mold. A hallway where LVP meets lower sheet vinyl may need a reducer. A sliding glass door, fireplace, or exposed edge may need an end cap.",
+          "Carpet transitions can require different profiles depending on carpet thickness, tack strip, stretch-in installation, and the hard surface edge. Tile transitions can involve height differences, Schluter-style metal trims, reducers, or thresholds depending on the assembly."
+        ],
+        bullets: [
+          "Similar hard surface height: often T-mold.",
+          "Higher floor to lower floor: often reducer.",
+          "Exposed edge or termination: often end cap.",
+          "Stair edge or landing edge: stair nose.",
+          "Carpet or tile connection: profile depends on height, edge detail, and installation method."
+        ]
+      },
+      {
+        id: "height-and-expansion",
+        title: "Height differences and floating floor expansion gaps",
+        paragraphs: [
+          "Height difference is one of the first things to check. A profile that looks right in color may not work if it cannot handle the actual floor height change.",
+          "Floating floors also need expansion gaps. The transition should cover the gap and allow the floor to move as intended. Fastening through the floating floor or trapping it tightly can conflict with installation requirements."
+        ]
+      },
+      {
+        id: "doorways-and-layout",
+        title: "Doorways, layout direction, and room breaks",
+        paragraphs: [
+          "Doorways are common transition locations because they create a natural break between rooms. They can also help when flooring direction changes, when a floating floor needs a break, or when two flooring systems meet.",
+          "The guide on which direction flooring should run can help you think through plank direction and transition placement together. Direction and transition planning should happen before the material order is finalized."
+        ]
+      },
+      {
+        id: "luxury-vinyl-over-tile",
+        title: "Transitions when installing LVP over tile",
+        paragraphs: [
+          "Installing LVP over tile can raise the finished floor height. That may create a reducer need at adjacent rooms, a threshold issue at exterior doors, or a clearance issue at appliances and interior doors.",
+          "The luxury vinyl over tile guide covers grout lines, height, door clearance, and tile stability. Transition choices should be reviewed as part of that same planning step."
+        ]
+      },
+      {
+        id: "example",
+        title: "Example transition plan",
+        paragraphs: [
+          "A homeowner installs LVP in a living room and hallway. The new LVP meets existing tile at one bathroom, carpet at two bedrooms, and a sliding patio door at the back wall.",
+          "The bathroom may need a reducer or T-mold depending on height, the bedrooms may need carpet transition details, and the patio door may need an end cap. The homeowner can use the Transition Estimator to total the opening widths, then verify the correct profile for each location."
+        ]
+      },
+      {
+        id: "common-mistakes",
+        title: "Common mistakes",
+        paragraphs: [
+          "The most common mistake is buying one trim profile for every doorway. Different edges may need different profiles even when the flooring color is the same.",
+          "Another mistake is ignoring manufacturer requirements for expansion gaps, stair noses, and approved trim systems. Transitions may be required when connecting new flooring to an existing floor."
+        ],
+        bullets: [
+          "Using a T-mold where a reducer is needed.",
+          "Forgetting stair noses and landing edges.",
+          "Ignoring height differences until installation day.",
+          "Pinning a floating floor with trim fasteners.",
+          "Assuming carpet, tile, and LVP transitions all use the same profile."
+        ]
+      }
+    ],
+    faq: [
+      {
+        question: "What is the difference between a T-mold and a reducer?",
+        answer:
+          "A T-mold usually bridges two surfaces of similar height. A reducer transitions from a higher floor down to a lower floor."
+      },
+      {
+        question: "When should I use an end cap?",
+        answer:
+          "Use an end cap where flooring ends at an exposed edge, sliding door, fireplace, threshold, carpet edge, or other termination when the product system calls for it."
+      },
+      {
+        question: "Do floating floors need transitions?",
+        answer:
+          "Often yes. Floating floors may require expansion breaks at doorways, long runs, or room changes. Follow the product's written installation requirements."
+      },
+      {
+        question: "Can I use a reducer instead of a T-mold?",
+        answer:
+          "Only if the height difference and product instructions make it appropriate. The profiles serve different purposes and are not always interchangeable."
+      },
+      {
+        question: "What transition is used between LVP and carpet?",
+        answer:
+          "It depends on floor height, carpet thickness, installation method, and the LVP edge. An end cap, reducer, threshold, or carpet-specific trim may be used."
+      },
+      {
+        question: "Is a stair nose the same as an end cap?",
+        answer:
+          "No. A stair nose is designed for stair edges and landings. It should match the approved stair installation method for the flooring product."
+      }
+    ],
+    disclaimer:
+      "This guide provides general transition planning information. Transition profiles, expansion gaps, stair noses, fastening methods, height limits, and warranty-related requirements vary by flooring system. Verify with the manufacturer's written instructions and installer before ordering trim."
   }
 ];
