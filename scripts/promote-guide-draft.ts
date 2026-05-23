@@ -2,6 +2,7 @@ import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { guides } from "../data/guides";
+import type { GuideEcosystemSlug, MaterialType, TopicCluster } from "../data/types";
 import { renderEditorialChecklistMarkdown } from "../lib/content/editorial-checklist";
 import type { GuidePromotionCandidate, PromotionInternalLink } from "../lib/content/validation";
 import { validateGuideContent } from "../lib/content/validation";
@@ -171,6 +172,77 @@ function unique<T>(items: T[]) {
   return [...new Set(items)];
 }
 
+function inferText(candidate: GuidePromotionCandidate) {
+  return `${candidate.title ?? ""} ${candidate.slug ?? ""} ${candidate.category ?? ""} ${candidate.metaDescription ?? ""}`.toLowerCase();
+}
+
+function inferPrimaryEcosystem(candidate: GuidePromotionCandidate): GuideEcosystemSlug {
+  const text = inferText(candidate);
+
+  if (text.includes("carpet")) {
+    return "carpet-padding";
+  }
+
+  if (text.includes("sheet vinyl")) {
+    return "sheet-vinyl";
+  }
+
+  if (text.includes("lvt") || text.includes("luxury vinyl tile")) {
+    return "lvt";
+  }
+
+  if (text.includes("lvp") || text.includes("vinyl plank") || text.includes("luxury vinyl plank")) {
+    return "lvp";
+  }
+
+  if (text.includes("laminate")) {
+    return "laminate";
+  }
+
+  if (text.includes("hardwood") || text.includes("engineered wood")) {
+    return "hardwood-engineered-hardwood";
+  }
+
+  if (text.includes("tile") || text.includes("ceramic") || text.includes("porcelain") || text.includes("stone")) {
+    return "tile";
+  }
+
+  return "planning-measuring-transitions";
+}
+
+function inferTopicCluster(candidate: GuidePromotionCandidate): TopicCluster {
+  const text = inferText(candidate);
+
+  if (text.includes("waste")) return "waste";
+  if (text.includes("transition") || text.includes("t-mold") || text.includes("reducer")) return "transitions";
+  if (text.includes("flatness") || text.includes("subfloor") || text.includes("underlayment")) return "subfloor-prep";
+  if (text.includes("direction") || text.includes("layout") || text.includes("seam")) return "layout";
+  if (text.includes("stair")) return "stairs";
+  if (text.includes("radiant")) return "radiant-heat";
+  if (text.includes("dog") || text.includes("pet")) return "pets";
+  if (text.includes("repair") || text.includes("extra flooring") || text.includes("attic stock")) return "repairs";
+  if (text.includes("glue") || text.includes("floating")) return "installation-method";
+
+  return "measurement";
+}
+
+function inferMaterialTypes(candidate: GuidePromotionCandidate): MaterialType[] {
+  const text = inferText(candidate);
+  const materialTypes: MaterialType[] = [];
+
+  if (text.includes("lvp") || text.includes("vinyl plank") || text.includes("luxury vinyl plank")) materialTypes.push("lvp");
+  if (text.includes("lvt") || text.includes("luxury vinyl tile")) materialTypes.push("lvt");
+  if (text.includes("laminate")) materialTypes.push("laminate");
+  if (text.includes("hardwood")) materialTypes.push("hardwood", "engineered-hardwood");
+  if (text.includes("tile") || text.includes("ceramic")) materialTypes.push("ceramic-tile", "porcelain-tile");
+  if (text.includes("stone")) materialTypes.push("stone-tile");
+  if (text.includes("sheet vinyl")) materialTypes.push("sheet-vinyl");
+  if (text.includes("carpet")) materialTypes.push("carpet");
+  if (text.includes("transition") || text.includes("t-mold") || text.includes("reducer")) materialTypes.push("transitions");
+
+  return unique(materialTypes);
+}
+
 function buildCandidate(frontmatter: Frontmatter, body: string): GuidePromotionCandidate {
   const relatedCalculatorLinks = extractLinks(extractSection(body, "Related Calculator Links"));
   const internalLinks = extractLinks(extractSection(body, "Internal Link Suggestions"));
@@ -205,6 +277,9 @@ function renderTsSnippet(candidate: GuidePromotionCandidate) {
   const date = new Date().toISOString().slice(0, 10);
   const sections = candidate.headings ?? [];
   const faqs = candidate.faqItems ?? [];
+  const primaryEcosystem = inferPrimaryEcosystem(candidate);
+  const topicCluster = inferTopicCluster(candidate);
+  const materialTypes = inferMaterialTypes(candidate);
 
   return `import type { Guide } from "../../data/types";
 
@@ -225,6 +300,10 @@ export const ${constName}: PromotionGuideSnippet = {
   metadataDescription: ${JSON.stringify(candidate.metaDescription ?? "")},
   dateModified: ${JSON.stringify(date)},
   readTime: "Review before publishing",
+  primaryEcosystem: ${JSON.stringify(primaryEcosystem)},
+  secondaryEcosystems: ${JSON.stringify(primaryEcosystem === "planning-measuring-transitions" ? [] : ["planning-measuring-transitions"])},
+  materialTypes: ${JSON.stringify(materialTypes, null, 2)},
+  topicCluster: ${JSON.stringify(topicCluster)},
   relatedTools: ${JSON.stringify(candidate.relatedTools ?? [], null, 2)},
   sections: ${JSON.stringify(
     sections.map((heading) => ({

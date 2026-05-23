@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { FlooringIcon, type FlooringIconName } from "@/components/FlooringIcon";
+import { getGuideEcosystemBySlug } from "@/data/ecosystems";
 import type { Guide } from "@/data/types";
 
 type GuideCardProps = {
@@ -27,6 +28,8 @@ function getGuideIcon(slug: Guide["slug"]): FlooringIconName {
 }
 
 export function GuideCard({ guide }: GuideCardProps) {
+  const ecosystem = getGuideEcosystemBySlug(guide.primaryEcosystem);
+
   return (
     <article className="flooring-card overflow-hidden rounded-lg border border-line bg-white p-5 pt-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-soft">
       <div className="flex items-start gap-4">
@@ -41,6 +44,11 @@ export function GuideCard({ guide }: GuideCardProps) {
         </div>
       </div>
       <p className="mt-3 text-sm leading-6 text-slate-600">{guide.description}</p>
+      {ecosystem ? (
+        <p className="mt-4 inline-flex rounded-md border border-line bg-field px-2.5 py-1 text-xs font-bold uppercase tracking-wide text-slate-600">
+          {ecosystem.shortTitle}
+        </p>
+      ) : null}
       <Link href={`/guides/${guide.slug}`} className="mt-4 inline-flex text-sm font-bold text-accent-700">
         Read guide
       </Link>

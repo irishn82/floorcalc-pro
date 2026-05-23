@@ -17,6 +17,10 @@ export const lvpWastePercentageGuide: PromotionGuideSnippet = {
   metadataDescription: "Learn about LVP Waste Percentage, including planning steps, common mistakes, related calculators, and what to verify before ordering flooring materials.",
   dateModified: "2026-05-22",
   readTime: "Review before publishing",
+  primaryEcosystem: "lvp",
+  secondaryEcosystems: ["planning-measuring-transitions"],
+  materialTypes: ["lvp"],
+  topicCluster: "waste",
   relatedTools: [
   "waste-calculator",
   "flooring-square-footage-calculator"

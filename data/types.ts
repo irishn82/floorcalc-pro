@@ -34,6 +34,42 @@ export type Tool = {
   relatedTools: ToolSlug[];
 };
 
+export type GuideEcosystemSlug =
+  | "lvp"
+  | "lvt"
+  | "laminate"
+  | "hardwood-engineered-hardwood"
+  | "tile"
+  | "sheet-vinyl"
+  | "carpet-padding"
+  | "planning-measuring-transitions";
+
+export type MaterialType =
+  | "lvp"
+  | "lvt"
+  | "laminate"
+  | "hardwood"
+  | "engineered-hardwood"
+  | "ceramic-tile"
+  | "porcelain-tile"
+  | "stone-tile"
+  | "sheet-vinyl"
+  | "carpet"
+  | "carpet-padding"
+  | "transitions";
+
+export type TopicCluster =
+  | "measurement"
+  | "waste"
+  | "layout"
+  | "subfloor-prep"
+  | "transitions"
+  | "stairs"
+  | "radiant-heat"
+  | "pets"
+  | "repairs"
+  | "installation-method";
+
 export type GuideSlug =
   | "how-much-flooring-do-i-need"
   | "lvp-waste-percentage-guide"
@@ -68,6 +104,10 @@ export type Guide = {
   metadataDescription: string;
   dateModified: string;
   readTime: string;
+  primaryEcosystem: GuideEcosystemSlug;
+  secondaryEcosystems?: GuideEcosystemSlug[];
+  materialTypes?: MaterialType[];
+  topicCluster?: TopicCluster;
   sections: GuideSection[];
   faq: FAQItem[];
   relatedTools: ToolSlug[];

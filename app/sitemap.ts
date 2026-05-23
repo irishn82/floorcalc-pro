@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { guideEcosystems } from "@/data/ecosystems";
 import { guides } from "@/data/guides";
 import { tools } from "@/data/tools";
 import { siteConfig } from "@/lib/seo/metadata";
@@ -19,5 +20,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date(guide.dateModified)
   }));
 
-  return [...staticRoutes, ...toolRoutes, ...guideRoutes];
+  const ecosystemRoutes = guideEcosystems.map((ecosystem) => ({
+    url: `${siteConfig.url}/guides/ecosystems/${ecosystem.slug}`,
+    lastModified: new Date("2026-05-23")
+  }));
+
+  return [...staticRoutes, ...toolRoutes, ...guideRoutes, ...ecosystemRoutes];
 }

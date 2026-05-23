@@ -11,6 +11,20 @@ export const guides: Guide[] = [
       "Learn how to measure flooring square footage, choose waste for LVP, laminate, hardwood, carpet, tile, and estimate materials.",
     dateModified: "2026-05-22",
     readTime: "9 min read",
+    primaryEcosystem: "planning-measuring-transitions",
+    secondaryEcosystems: ["lvp", "lvt", "laminate", "hardwood-engineered-hardwood", "tile", "sheet-vinyl", "carpet-padding"],
+    materialTypes: [
+      "lvp",
+      "lvt",
+      "laminate",
+      "hardwood",
+      "engineered-hardwood",
+      "ceramic-tile",
+      "porcelain-tile",
+      "sheet-vinyl",
+      "carpet"
+    ],
+    topicCluster: "measurement",
     relatedTools: [
       "flooring-square-footage-calculator",
       "waste-calculator",
@@ -215,6 +229,10 @@ export const guides: Guide[] = [
       "Learn how much LVP waste to add for straight lay, diagonal layouts, closets, kitchens, bathrooms, plank direction, and repairs.",
     dateModified: "2026-05-22",
     readTime: "10 min read",
+    primaryEcosystem: "lvp",
+    secondaryEcosystems: ["planning-measuring-transitions"],
+    materialTypes: ["lvp"],
+    topicCluster: "waste",
     relatedTools: ["flooring-square-footage-calculator", "waste-calculator", "pattern-repeat-calculator"],
     relatedGuides: ["how-much-flooring-do-i-need", "luxury-vinyl-over-tile"],
     sections: [
@@ -390,6 +408,10 @@ export const guides: Guide[] = [
       "Learn how carpet seam direction is planned around roll width, room size, light, traffic paths, pattern match, stairs, and installer judgment.",
     dateModified: "2026-05-22",
     readTime: "9 min read",
+    primaryEcosystem: "carpet-padding",
+    secondaryEcosystems: ["planning-measuring-transitions"],
+    materialTypes: ["carpet"],
+    topicCluster: "layout",
     relatedTools: ["carpet-seam-planner", "flooring-square-footage-calculator", "pattern-repeat-calculator"],
     relatedGuides: ["how-much-flooring-do-i-need"],
     sections: [
@@ -562,6 +584,10 @@ export const guides: Guide[] = [
       "Learn the difference between T-molds, reducers, end caps, thresholds, and stair noses for flooring projects.",
     dateModified: "2026-05-22",
     readTime: "5 min read",
+    primaryEcosystem: "planning-measuring-transitions",
+    secondaryEcosystems: ["lvp", "lvt", "laminate", "hardwood-engineered-hardwood", "tile", "sheet-vinyl", "carpet-padding"],
+    materialTypes: ["transitions", "lvp", "lvt", "laminate", "engineered-hardwood", "ceramic-tile", "sheet-vinyl", "carpet"],
+    topicCluster: "transitions",
     relatedTools: ["transition-estimator", "flooring-square-footage-calculator", "stair-flooring-calculator"],
     sections: [
       {
@@ -633,6 +659,10 @@ export const guides: Guide[] = [
       "Compare flooring options for homes with dogs, including LVP, tile, laminate, carpet, and engineered wood considerations.",
     dateModified: "2026-05-22",
     readTime: "6 min read",
+    primaryEcosystem: "planning-measuring-transitions",
+    secondaryEcosystems: ["lvp", "laminate", "hardwood-engineered-hardwood", "tile", "sheet-vinyl", "carpet-padding"],
+    materialTypes: ["lvp", "laminate", "engineered-hardwood", "ceramic-tile", "porcelain-tile", "sheet-vinyl", "carpet"],
+    topicCluster: "pets",
     relatedTools: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"],
     sections: [
       {
@@ -704,6 +734,10 @@ export const guides: Guide[] = [
       "Learn when LVP can go over tile, when removal may be better, and how grout lines, height, doors, moisture, and flatness affect the job.",
     dateModified: "2026-05-22",
     readTime: "10 min read",
+    primaryEcosystem: "lvp",
+    secondaryEcosystems: ["lvt", "tile", "planning-measuring-transitions"],
+    materialTypes: ["lvp", "lvt", "ceramic-tile", "porcelain-tile", "stone-tile"],
+    topicCluster: "subfloor-prep",
     relatedTools: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"],
     relatedGuides: ["lvp-waste-percentage-guide", "flooring-transition-guide"],
     sections: [
@@ -879,6 +913,10 @@ export const guides: Guide[] = [
       "Learn what to check before installing flooring over radiant heat, including compatibility, temperature limits, moisture, flatness, and acclimation.",
     dateModified: "2026-05-22",
     readTime: "10 min read",
+    primaryEcosystem: "planning-measuring-transitions",
+    secondaryEcosystems: ["lvp", "lvt", "laminate", "hardwood-engineered-hardwood", "tile", "sheet-vinyl", "carpet-padding"],
+    materialTypes: ["lvp", "lvt", "laminate", "hardwood", "engineered-hardwood", "ceramic-tile", "sheet-vinyl", "carpet"],
+    topicCluster: "radiant-heat",
     relatedTools: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"],
     relatedGuides: ["lvp-waste-percentage-guide", "luxury-vinyl-over-tile"],
     sections: [
@@ -1053,6 +1091,10 @@ export const guides: Guide[] = [
       "Learn how to choose flooring direction using longest walls, natural light, hallways, open layouts, stairs, transitions, and waste planning.",
     dateModified: "2026-05-22",
     readTime: "8 min read",
+    primaryEcosystem: "planning-measuring-transitions",
+    secondaryEcosystems: ["lvp", "laminate", "hardwood-engineered-hardwood"],
+    materialTypes: ["lvp", "laminate", "hardwood", "engineered-hardwood"],
+    topicCluster: "layout",
     relatedTools: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"],
     relatedGuides: ["luxury-vinyl-over-tile", "flooring-transition-guide"],
     sections: [
@@ -1219,6 +1261,10 @@ export const guides: Guide[] = [
       "Compare glue-down and floating floors for LVP, laminate, engineered hardwood, moisture, flatness, sound, movement, furniture, and repairs.",
     dateModified: "2026-05-22",
     readTime: "9 min read",
+    primaryEcosystem: "lvp",
+    secondaryEcosystems: ["lvt", "laminate", "hardwood-engineered-hardwood", "planning-measuring-transitions"],
+    materialTypes: ["lvp", "lvt", "laminate", "engineered-hardwood"],
+    topicCluster: "installation-method",
     relatedTools: ["flooring-square-footage-calculator", "waste-calculator"],
     relatedGuides: ["flooring-over-radiant-heat", "luxury-vinyl-over-tile", "subfloor-flatness-requirements-lvp"],
     sections: [
@@ -1392,6 +1438,10 @@ export const guides: Guide[] = [
       "Learn why LVP subfloor flatness matters, how low spots, high spots, tile, telegraphing, and locking stress affect installation.",
     dateModified: "2026-05-22",
     readTime: "9 min read",
+    primaryEcosystem: "lvp",
+    secondaryEcosystems: ["lvt", "planning-measuring-transitions"],
+    materialTypes: ["lvp", "lvt"],
+    topicCluster: "subfloor-prep",
     relatedTools: ["flooring-square-footage-calculator", "waste-calculator"],
     relatedGuides: ["luxury-vinyl-over-tile", "flooring-over-radiant-heat", "glue-down-vs-floating-floor"],
     sections: [
@@ -1557,6 +1607,10 @@ export const guides: Guide[] = [
       "Learn how much extra flooring to keep for repairs, attic stock, dye lots, discontinued products, water damage, pets, cabinets, and remodels.",
     dateModified: "2026-05-22",
     readTime: "8 min read",
+    primaryEcosystem: "planning-measuring-transitions",
+    secondaryEcosystems: ["lvp", "laminate", "hardwood-engineered-hardwood", "tile", "sheet-vinyl", "carpet-padding"],
+    materialTypes: ["lvp", "laminate", "hardwood", "engineered-hardwood", "ceramic-tile", "porcelain-tile", "sheet-vinyl", "carpet"],
+    topicCluster: "repairs",
     relatedTools: ["waste-calculator", "flooring-square-footage-calculator"],
     relatedGuides: ["how-much-flooring-do-i-need", "lvp-waste-percentage-guide"],
     sections: [
@@ -1715,6 +1769,10 @@ export const guides: Guide[] = [
       "Compare T-molds, reducers, end caps, stair noses, carpet transitions, tile transitions, height changes, doorways, and expansion gaps.",
     dateModified: "2026-05-22",
     readTime: "8 min read",
+    primaryEcosystem: "planning-measuring-transitions",
+    secondaryEcosystems: ["lvp", "lvt", "laminate", "hardwood-engineered-hardwood", "tile", "sheet-vinyl", "carpet-padding"],
+    materialTypes: ["transitions", "lvp", "lvt", "laminate", "engineered-hardwood", "ceramic-tile", "sheet-vinyl", "carpet"],
+    topicCluster: "transitions",
     relatedTools: ["transition-estimator"],
     relatedGuides: ["flooring-transition-guide", "luxury-vinyl-over-tile", "which-direction-should-flooring-run"],
     sections: [

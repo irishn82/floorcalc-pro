@@ -9,7 +9,13 @@ import { JsonLd } from "@/components/JsonLd";
 import { RelatedLinks } from "@/components/RelatedLinks";
 import { TableOfContents } from "@/components/TableOfContents";
 import { guides } from "@/data/guides";
-import { getGuideBySlug, getRelatedGuides, getRelatedTools } from "@/lib/content/paths";
+import {
+  getEcosystemRelatedGuides,
+  getGuideBySlug,
+  getGuideEcosystemLinks,
+  getRelatedGuides,
+  getRelatedTools
+} from "@/lib/content/paths";
 import { createSeoMetadata } from "@/lib/seo/metadata";
 import { articleJsonLd, faqJsonLd } from "@/lib/seo/schema";
 
@@ -46,7 +52,12 @@ export default async function GuidePage({ params }: GuidePageProps) {
   }
 
   const relatedTools = getRelatedTools(guide.relatedTools);
-  const relatedGuides = getRelatedGuides(guide.relatedGuides ?? []);
+  const explicitRelatedGuides = getRelatedGuides(guide.relatedGuides ?? []);
+  const ecosystemRelatedGuides = getEcosystemRelatedGuides(guide);
+  const relatedGuides = [...explicitRelatedGuides, ...ecosystemRelatedGuides]
+    .filter((relatedGuide, index, allGuides) => allGuides.findIndex((item) => item.slug === relatedGuide.slug) === index)
+    .slice(0, 4);
+  const ecosystemLinks = getGuideEcosystemLinks(guide);
 
   return (
     <>
@@ -77,6 +88,17 @@ export default async function GuidePage({ params }: GuidePageProps) {
               <div className="mt-4 flex flex-wrap gap-3 text-sm text-slate-500">
                 <span>Updated {guide.dateModified}</span>
                 <span>{guide.readTime}</span>
+              </div>
+              <div className="mt-5 flex flex-wrap gap-2">
+                {ecosystemLinks.slice(0, 4).map((ecosystem) => (
+                  <Link
+                    key={ecosystem.slug}
+                    href={`/guides/ecosystems/${ecosystem.slug}`}
+                    className="rounded-md border border-accent-100 bg-accent-50 px-3 py-1 text-xs font-bold uppercase leading-5 tracking-wide text-accent-700 transition hover:border-accent-200 hover:bg-white"
+                  >
+                    {ecosystem.shortTitle}
+                  </Link>
+                ))}
               </div>
               <div className="mt-8 rounded-lg border border-line bg-field p-5 shadow-sm">
                 <h2 className="inline-flex items-center gap-2 text-lg font-bold text-ink">
@@ -150,6 +172,14 @@ export default async function GuidePage({ params }: GuidePageProps) {
           href: `/guides/${relatedGuide.slug}`,
           label: relatedGuide.title,
           description: relatedGuide.description
+        }))}
+      />
+      <RelatedLinks
+        title="Related Flooring Ecosystems"
+        links={ecosystemLinks.slice(0, 4).map((ecosystem) => ({
+          href: `/guides/ecosystems/${ecosystem.slug}`,
+          label: ecosystem.title,
+          description: ecosystem.description
         }))}
       />
       <FAQSection items={guide.faq} />
