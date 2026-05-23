@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     apple: "/fcplogo-icon.png"
   },
   verification: {
-    google: "_sO36QmSBNF8qvOAcf8EUW2l5szTVJEmdgKi50-B_tQ"
+    google: "doSIMaEQHgyTV--cri6BFRUDWRhDkLH1RfzuH7aYcQ0"
   },
   openGraph: {
     type: "website",
