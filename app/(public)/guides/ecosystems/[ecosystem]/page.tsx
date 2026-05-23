@@ -52,7 +52,7 @@ export default async function GuideEcosystemPage({ params }: EcosystemPageProps)
       <Container>
         <div className="grid gap-8 border-b border-line pb-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
           <SectionHeading
-            eyebrow="Flooring ecosystem"
+            eyebrow="Flooring type"
             title={ecosystem.title}
             description={ecosystem.description}
             headingLevel="h1"
@@ -63,7 +63,7 @@ export default async function GuideEcosystemPage({ params }: EcosystemPageProps)
               Planning focus
             </h2>
             <p className="mt-3 text-sm leading-6 text-slate-600">
-              Use this hub to keep material-specific articles, measuring tools, and transition planning in the same workflow before ordering flooring.
+              Use this page to keep material-specific articles, measuring tools, and transition planning in the same place before ordering flooring.
             </p>
             <div className="mt-4">
               <Link className="text-sm font-bold text-accent-700 hover:text-accent-600" href="/guides">
@@ -74,7 +74,7 @@ export default async function GuideEcosystemPage({ params }: EcosystemPageProps)
         </div>
 
         <div className="mt-10">
-          <h2 className="text-2xl font-black tracking-normal text-ink">Core guides in this ecosystem</h2>
+          <h2 className="text-2xl font-black tracking-normal text-ink">Core guides for this flooring type</h2>
           <p className="mt-2 max-w-2xl text-sm leading-6 text-slate-600">
             These guides are primarily about {ecosystem.shortTitle} or this exact planning category.
           </p>
@@ -86,7 +86,7 @@ export default async function GuideEcosystemPage({ params }: EcosystemPageProps)
             </div>
           ) : (
             <div className="mt-6 rounded-lg border border-dashed border-line bg-field p-5 text-sm leading-6 text-slate-600">
-              Guides for this ecosystem are planned for a future editorial pass.
+              Guides for this flooring type are planned for a future editorial pass.
             </div>
           )}
         </div>
@@ -95,7 +95,7 @@ export default async function GuideEcosystemPage({ params }: EcosystemPageProps)
           <div className="mt-14 border-t border-line pt-10">
             <h2 className="text-2xl font-black tracking-normal text-ink">Also relevant</h2>
             <p className="mt-2 max-w-2xl text-sm leading-6 text-slate-600">
-              These guides overlap with this ecosystem, but their main home is another flooring category.
+              These guides also apply here, but their main home is another flooring category.
             </p>
             <div className="mt-6 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
               {relatedGuides.map((guide) => (
@@ -108,7 +108,7 @@ export default async function GuideEcosystemPage({ params }: EcosystemPageProps)
         <div className="mt-14 border-t border-line pt-10">
           <h2 className="text-2xl font-black tracking-normal text-ink">Useful calculators</h2>
           <p className="mt-2 max-w-2xl text-sm leading-6 text-slate-600">
-            These tools support the measuring, waste, stair, seam, pattern, and transition decisions connected to this flooring ecosystem.
+            These tools support the measuring, waste, stair, seam, pattern, and transition decisions connected to this flooring type.
           </p>
           <div className="mt-6 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {relatedTools.map((tool) => (
@@ -119,11 +119,11 @@ export default async function GuideEcosystemPage({ params }: EcosystemPageProps)
 
         <div className="mt-14 grid gap-8 border-t border-line pt-10 lg:grid-cols-[1fr_0.8fr]">
           <DisclaimerBox>
-            Ecosystem pages organize general flooring planning information. Product compatibility, installation methods, subfloor requirements,
+            Flooring type pages organize general flooring planning information. Product compatibility, installation methods, subfloor requirements,
             transition profiles, and warranty-related requirements vary by manufacturer and project conditions.
           </DisclaimerBox>
           <div>
-            <h2 className="text-lg font-bold text-ink">Related ecosystems</h2>
+            <h2 className="text-lg font-bold text-ink">Related flooring types</h2>
             <div className="mt-3 flex flex-wrap gap-2">
               {siblingEcosystems.map((sibling) => (
                 <Link

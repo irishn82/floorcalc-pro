@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Container } from "@/components/Container";
 import { FlooringIcon } from "@/components/FlooringIcon";
 import { GuideCard } from "@/components/GuideCard";
+import { GuideTypeSelect } from "@/components/GuideTypeSelect";
 import { SectionHeading } from "@/components/SectionHeading";
 import { guideEcosystems } from "@/data/ecosystems";
 import { guides } from "@/data/guides";
@@ -31,33 +32,22 @@ export default function GuidesIndexPage() {
   return (
     <section className="bg-white py-14 sm:py-16">
       <Container>
-        <div className="grid gap-6 border-b border-line pb-8 lg:grid-cols-[0.75fr_1.25fr] lg:items-end">
+        <div className="grid gap-6 border-b border-line pb-8 lg:grid-cols-[0.8fr_1fr] lg:items-end">
           <SectionHeading
             eyebrow="Guides"
             title="Flooring planning guides"
             description="Practical flooring articles for measuring rooms, estimating waste, planning carpet seams, choosing transitions, and checking installation details before you buy."
             headingLevel="h1"
           />
-          <div className="grid gap-3 sm:grid-cols-3">
-            {[
-              ["layers", "Floor systems"],
-              ["transition", "Trim decisions"],
-              ["guide", "Buying checks"]
-            ].map(([icon, label]) => (
-              <div key={label} className="inline-flex items-center gap-2 rounded-lg border border-line bg-field px-3 py-2 text-sm font-bold text-slate-700">
-                <FlooringIcon name={icon as "layers" | "transition" | "guide"} className="h-4 w-4 text-accent-700" />
-                {label}
-              </div>
-            ))}
-          </div>
+          <GuideTypeSelect options={guideEcosystems} />
         </div>
 
-        <div className="mt-10">
+        <div className="mt-10" id="guide-categories">
           <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
             <div>
-              <h2 className="text-2xl font-black tracking-normal text-ink">Flooring ecosystems</h2>
+              <h2 className="text-2xl font-black tracking-normal text-ink">Browse by flooring type</h2>
               <p className="mt-2 max-w-2xl text-sm leading-6 text-slate-600">
-                Browse guides by material system so planning advice, calculators, transitions, and installation details stay connected.
+                Choose the flooring type you are planning so the right measuring, waste, transition, and installation articles stay together.
               </p>
             </div>
           </div>
@@ -77,7 +67,7 @@ export default function GuidesIndexPage() {
                       <FlooringIcon name={ecosystem.slug === "carpet-padding" ? "carpet" : "layers"} />
                     </span>
                     <span className="rounded-md bg-field px-2 py-1 text-xs font-bold text-slate-600">
-                      {coreGuides.length} core
+                      {coreGuides.length} guides
                     </span>
                   </div>
                   <h3 className="mt-4 text-lg font-black text-ink group-hover:text-accent-700">{ecosystem.title}</h3>
@@ -122,7 +112,7 @@ export default function GuidesIndexPage() {
                     href={`/guides/ecosystems/${ecosystem.slug}`}
                     className="inline-flex text-sm font-bold text-accent-700 hover:text-accent-600"
                   >
-                    View ecosystem
+                    View all {ecosystem.shortTitle} guides
                   </Link>
                 </div>
                 {coreGuides.length > 0 ? (
@@ -133,7 +123,7 @@ export default function GuidesIndexPage() {
                   </div>
                 ) : (
                   <div className="mt-5 rounded-lg border border-dashed border-line bg-field p-5 text-sm leading-6 text-slate-600">
-                    Guides for this ecosystem are planned for a future editorial pass.
+                    Guides for this flooring type are planned for a future editorial pass.
                   </div>
                 )}
                 {relatedGuides.length > 0 ? (

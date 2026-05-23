@@ -175,7 +175,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
         }))}
       />
       <RelatedLinks
-        title="Related Flooring Ecosystems"
+        title="Related Flooring Types"
         links={ecosystemLinks.slice(0, 4).map((ecosystem) => ({
           href: `/guides/ecosystems/${ecosystem.slug}`,
           label: ecosystem.title,

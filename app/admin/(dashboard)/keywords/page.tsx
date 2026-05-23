@@ -21,7 +21,7 @@ export default function AdminKeywordsPage() {
               <span>Keyword</span>
               <span>Intent</span>
               <span>Category</span>
-              <span>Live Ecosystem</span>
+              <span>Live Category</span>
               <span>Priority</span>
             </div>
             <div className="divide-y divide-line">
