@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const siteConfig = {
   name: "FloorCalc Pro",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://floorcalcpro.com",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.floorcalcpro.net",
   description:
     "Free flooring calculators and practical installation guides for planning material quantities, waste, stairs, carpet seams, patterns, and transitions."
 };

@@ -20,13 +20,13 @@ npm run smoke:test -- --base-url http://localhost:3000
 ## Run Against A Deployed URL
 
 ```bash
-npm run smoke:test -- --base-url https://your-domain.example
+npm run smoke:test -- --base-url https://www.floorcalcpro.net
 ```
 
 You can also use an environment variable:
 
 ```bash
-BASE_URL=https://your-domain.example npm run smoke:test
+BASE_URL=https://www.floorcalcpro.net npm run smoke:test
 ```
 
 ## Routes Checked

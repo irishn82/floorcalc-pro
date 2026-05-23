@@ -7,12 +7,7 @@ export function websiteJsonLd() {
     "@type": "WebSite",
     name: siteConfig.name,
     url: siteConfig.url,
-    description: siteConfig.description,
-    potentialAction: {
-      "@type": "SearchAction",
-      target: `${siteConfig.url}/guides?search={search_term_string}`,
-      "query-input": "required name=search_term_string"
-    }
+    description: siteConfig.description
   };
 }
 

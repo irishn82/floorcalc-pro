@@ -304,7 +304,7 @@ Phase 6 adds deployment safety hardening without adding new product features.
 Start with `.env.example` and set real values outside the repository:
 
 ```bash
-NEXT_PUBLIC_SITE_URL="https://your-production-domain.com"
+NEXT_PUBLIC_SITE_URL="https://www.floorcalcpro.net"
 ADMIN_PASSWORD="use-a-long-random-password"
 ADMIN_SESSION_SECRET="use-a-separate-long-random-session-secret"
 ```
@@ -430,13 +430,13 @@ npm run smoke:test -- --base-url http://localhost:3000
 ### Run Against Production
 
 ```bash
-npm run smoke:test -- --base-url https://your-production-domain.com
+npm run smoke:test -- --base-url https://www.floorcalcpro.net
 ```
 
 or:
 
 ```bash
-BASE_URL=https://your-production-domain.com npm run smoke:test
+BASE_URL=https://www.floorcalcpro.net npm run smoke:test
 ```
 
 ### Routes Checked

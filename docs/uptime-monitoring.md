@@ -34,7 +34,7 @@ The health route does not expose secrets and does not require admin login.
 Monitor the production URL:
 
 ```text
-https://your-domain.example/api/health
+https://www.floorcalcpro.net/api/health
 ```
 
 Recommended check behavior:
