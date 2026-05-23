@@ -82,7 +82,32 @@ export type GuideSlug =
   | "glue-down-vs-floating-floor"
   | "subfloor-flatness-requirements-lvp"
   | "how-much-extra-flooring-should-i-keep"
-  | "t-mold-vs-reducer-vs-end-cap";
+  | "t-mold-vs-reducer-vs-end-cap"
+  | "best-underlayment-for-lvp"
+  | "can-you-install-lvp-over-concrete"
+  | "how-long-should-lvp-acclimate"
+  | "why-is-my-lvp-floor-clicking"
+  | "can-you-install-cabinets-over-floating-lvp"
+  | "best-underlayment-for-laminate-flooring"
+  | "can-laminate-flooring-be-waterproof"
+  | "why-is-my-laminate-floor-separating"
+  | "how-flat-should-a-subfloor-be-for-laminate"
+  | "laminate-vs-lvp-for-pets"
+  | "solid-hardwood-vs-engineered-hardwood"
+  | "how-long-should-hardwood-acclimate"
+  | "can-engineered-hardwood-go-over-concrete"
+  | "why-is-my-hardwood-floor-cupping"
+  | "best-hardwood-flooring-for-dogs"
+  | "carpet-padding-thickness-guide"
+  | "what-direction-should-carpet-run"
+  | "what-is-pattern-match-in-carpet"
+  | "can-carpet-be-installed-over-concrete"
+  | "how-much-extra-carpet-should-i-order"
+  | "porcelain-vs-ceramic-tile"
+  | "how-flat-should-a-floor-be-for-tile"
+  | "can-you-install-tile-over-tile"
+  | "what-size-grout-line-should-i-use"
+  | "tile-layout-planning-guide";
 
 export type GuideSection = {
   id: string;
