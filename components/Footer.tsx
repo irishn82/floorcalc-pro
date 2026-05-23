@@ -8,11 +8,14 @@ export function Footer() {
     <footer className="border-t border-line bg-brand-900 text-white">
       <Container className="grid gap-8 py-10 md:grid-cols-[1.4fr_1fr_1fr]">
         <div>
-          <Link href="/" className="inline-flex max-w-[260px] items-center" aria-label="FloorCalc Pro home">
-            <BrandMark
-              variant="wordmark"
-              className="h-16 w-auto max-w-full rounded-md object-contain shadow-brand ring-1 ring-white/10"
-            />
+          <Link href="/" className="inline-flex items-center gap-3" aria-label="FloorCalc Pro home">
+            <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl border border-white/10 bg-brand-800 p-1 shadow-brand">
+              <BrandMark className="h-full w-full rounded-lg object-contain" />
+            </span>
+            <span>
+              <span className="block text-xl font-black tracking-normal text-white">FloorCalc Pro</span>
+              <span className="mt-1 block h-0.5 w-14 rounded-full bg-accent-500" aria-hidden="true" />
+            </span>
           </Link>
           <p className="mt-4 max-w-md text-sm leading-6 text-slate-300">
             Free flooring calculators and practical planning guides for homeowners, remodelers, and flooring shoppers.
