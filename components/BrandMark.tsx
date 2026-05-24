@@ -14,8 +14,8 @@ export function BrandMark({ className, priority = false, variant = "mark" }: Bra
       src={isWordmark ? "/fcplogo-wordmark.png" : "/fcplogo-icon.png"}
       alt=""
       aria-hidden="true"
-      width={isWordmark ? 970 : 512}
-      height={isWordmark ? 330 : 512}
+      width={isWordmark ? 194 : 96}
+      height={isWordmark ? 66 : 96}
       priority={priority}
       className={
         className ??

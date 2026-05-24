@@ -36,7 +36,7 @@ export function Header() {
       <Container className="flex min-h-[4.25rem] items-center justify-between gap-2 sm:min-h-[4.5rem] sm:gap-4">
         <Link href="/" className="group flex min-w-0 items-center gap-2.5 font-semibold sm:gap-3" aria-label="FloorCalc Pro home">
           <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl border border-white/10 bg-brand-800 p-1 shadow-brand sm:h-11 sm:w-11">
-            <BrandMark priority className="h-full w-full rounded-lg object-contain" />
+            <BrandMark className="h-full w-full rounded-lg object-contain" />
           </span>
           <span className="leading-tight">
             <span className="block whitespace-nowrap text-base font-black tracking-normal text-white sm:text-xl">FloorCalc Pro</span>
