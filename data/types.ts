@@ -107,7 +107,12 @@ export type GuideSlug =
   | "how-flat-should-a-floor-be-for-tile"
   | "can-you-install-tile-over-tile"
   | "what-size-grout-line-should-i-use"
-  | "tile-layout-planning-guide";
+  | "tile-layout-planning-guide"
+  | "why-is-my-floor-clicking"
+  | "why-are-my-carpet-seams-visible"
+  | "why-is-my-lvp-lifting"
+  | "why-is-my-transition-strip-moving"
+  | "why-does-my-floor-feel-hollow";
 
 export type GuideSection = {
   id: string;

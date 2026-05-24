@@ -1,4 +1,5 @@
 import { ecosystemGuideBatch } from "@/data/guides-ecosystem-batch";
+import { troubleshootingGuides } from "@/data/guides-troubleshooting";
 import type { Guide } from "@/data/types";
 
 export const guides: Guide[] = [
@@ -1922,5 +1923,6 @@ export const guides: Guide[] = [
     disclaimer:
       "This guide provides general transition planning information. Transition profiles, expansion gaps, stair noses, fastening methods, height limits, and warranty-related requirements vary by flooring system. Verify with the manufacturer's written instructions and installer before ordering trim."
   },
-  ...ecosystemGuideBatch
+  ...ecosystemGuideBatch,
+  ...troubleshootingGuides
 ];
