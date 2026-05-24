@@ -21,53 +21,37 @@ export default function HomePage() {
           fill
           priority
           sizes="100vw"
-          className="object-cover opacity-55"
+          className="object-cover opacity-45"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-brand-900 via-brand-900/78 to-brand-900/20" />
-        <Container className="relative min-h-[500px] pb-20 pt-16 sm:pt-24">
-          <div className="max-w-2xl text-white">
-            <p className="inline-flex items-center gap-2 rounded-md border border-white/15 bg-white/10 px-3 py-1 text-sm font-bold uppercase tracking-wide text-accent-100">
+        <div className="absolute inset-0 bg-gradient-to-r from-brand-900 via-brand-900/72 to-brand-900/28" />
+        <Container className="relative flex min-h-[360px] items-center py-12 sm:min-h-[400px] sm:py-16 lg:min-h-[430px]">
+          <div className="max-w-xl text-white">
+            <p className="inline-flex items-center gap-2 rounded-md border border-white/15 bg-white/10 px-2.5 py-1 text-xs font-bold uppercase tracking-wide text-accent-100">
               <FlooringIcon name="calculator" className="h-4 w-4 text-accent-100" />
               Free flooring calculators
             </p>
-            <h1 className="mt-4 text-3xl font-black tracking-normal sm:text-4xl lg:text-5xl">
+            <h1 className="mt-4 text-3xl font-black leading-tight tracking-normal sm:text-4xl lg:text-[2.75rem]">
               Estimate flooring materials with cleaner numbers.
             </h1>
-            <p className="mt-5 max-w-xl text-base leading-7 text-slate-100 sm:text-lg">
+            <p className="mt-4 max-w-lg text-base leading-7 text-slate-100">
               FloorCalc Pro helps homeowners and remodelers plan square footage, waste, stairs, carpet seams,
               pattern repeats, and transitions before ordering materials.
             </p>
-            <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+            <div className="mt-6 flex flex-col gap-3 sm:flex-row">
               <Link
                 href="/tools"
-                className="inline-flex items-center justify-center gap-2 rounded-md bg-white px-5 py-3 text-sm font-bold text-ink transition hover:bg-accent-50"
+                className="inline-flex items-center justify-center gap-2 rounded-md bg-white px-4 py-2.5 text-sm font-bold text-ink transition hover:bg-accent-50"
               >
                 <FlooringIcon name="ruler" className="h-4 w-4 text-accent-700" />
                 Use Calculators
               </Link>
               <Link
                 href="/guides"
-                className="inline-flex items-center justify-center gap-2 rounded-md border border-white/35 px-5 py-3 text-sm font-bold text-white transition hover:bg-white/10"
+                className="inline-flex items-center justify-center gap-2 rounded-md border border-white/35 px-4 py-2.5 text-sm font-bold text-white transition hover:bg-white/10"
               >
                 <FlooringIcon name="guide" className="h-4 w-4 text-accent-100" />
                 Read Guides
               </Link>
-            </div>
-            <div className="mt-7 grid max-w-xl gap-3 text-sm font-bold text-slate-100 sm:grid-cols-3">
-              {[
-                ["ruler", "Measure rooms", "/tools/flooring-square-footage-calculator"],
-                ["waste", "Add waste", "/tools/waste-calculator"],
-                ["transition", "Plan trim", "/tools/transition-estimator"]
-              ].map(([icon, label, href]) => (
-                <Link
-                  key={label}
-                  href={href}
-                  className="inline-flex items-center gap-2 rounded-md border border-white/15 bg-white/10 px-3 py-2 transition hover:border-white/30 hover:bg-white/15"
-                >
-                  <FlooringIcon name={icon as "ruler" | "waste" | "transition"} className="h-4 w-4 text-accent-100" />
-                  {label}
-                </Link>
-              ))}
             </div>
           </div>
         </Container>
