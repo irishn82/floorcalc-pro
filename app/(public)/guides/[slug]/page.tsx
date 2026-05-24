@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Container } from "@/components/Container";
 import { DisclaimerBox } from "@/components/DisclaimerBox";
 import { FAQSection } from "@/components/FAQSection";
 import { FlooringIcon } from "@/components/FlooringIcon";
 import { JsonLd } from "@/components/JsonLd";
+import { NextStepPanel } from "@/components/NextStepPanel";
 import { RelatedLinks } from "@/components/RelatedLinks";
 import { TableOfContents } from "@/components/TableOfContents";
 import { guides } from "@/data/guides";
@@ -14,7 +16,8 @@ import {
   getGuideBySlug,
   getGuideEcosystemLinks,
   getRelatedGuides,
-  getRelatedTools
+  getRelatedTools,
+  getTroubleshootingGuidesForGuide
 } from "@/lib/content/paths";
 import { createSeoMetadata } from "@/lib/seo/metadata";
 import { articleJsonLd, faqJsonLd } from "@/lib/seo/schema";
@@ -54,10 +57,11 @@ export default async function GuidePage({ params }: GuidePageProps) {
   const relatedTools = getRelatedTools(guide.relatedTools);
   const explicitRelatedGuides = getRelatedGuides(guide.relatedGuides ?? []);
   const ecosystemRelatedGuides = getEcosystemRelatedGuides(guide);
-  const relatedGuides = [...explicitRelatedGuides, ...ecosystemRelatedGuides]
-    .filter((relatedGuide, index, allGuides) => allGuides.findIndex((item) => item.slug === relatedGuide.slug) === index)
-    .slice(0, 4);
+  const troubleshootingGuides = getTroubleshootingGuidesForGuide(guide);
   const ecosystemLinks = getGuideEcosystemLinks(guide);
+  const primaryEcosystem = ecosystemLinks[0];
+  const nextStepTool = relatedTools[0];
+  const nextStepGuide = explicitRelatedGuides.find((relatedGuide) => relatedGuide.slug !== guide.slug) ?? ecosystemRelatedGuides[0];
 
   return (
     <>
@@ -72,6 +76,16 @@ export default async function GuidePage({ params }: GuidePageProps) {
       <JsonLd data={faqJsonLd(guide.faq)} />
       <article className="bg-white py-12 sm:py-16">
         <Container>
+          <Breadcrumbs
+            items={[
+              { href: "/", label: "Home" },
+              { href: "/guides", label: "Guides" },
+              ...(primaryEcosystem
+                ? [{ href: `/guides/ecosystems/${primaryEcosystem.slug}`, label: primaryEcosystem.shortTitle }]
+                : []),
+              { label: guide.title }
+            ]}
+          />
           <div className="grid gap-10 lg:grid-cols-[260px_minmax(0,760px)] lg:items-start">
             <aside className="lg:sticky lg:top-24">
               <TableOfContents items={guide.sections.map((section) => ({ id: section.id, title: section.title }))} />
@@ -168,10 +182,26 @@ export default async function GuidePage({ params }: GuidePageProps) {
       />
       <RelatedLinks
         title="Related Flooring Guides"
-        links={relatedGuides.map((relatedGuide) => ({
+        links={explicitRelatedGuides.slice(0, 4).map((relatedGuide) => ({
           href: `/guides/${relatedGuide.slug}`,
           label: relatedGuide.title,
           description: relatedGuide.description
+        }))}
+      />
+      <RelatedLinks
+        title={primaryEcosystem ? `More ${primaryEcosystem.shortTitle} Guides` : "More Flooring Guides"}
+        links={ecosystemRelatedGuides.slice(0, 4).map((relatedGuide) => ({
+          href: `/guides/${relatedGuide.slug}`,
+          label: relatedGuide.title,
+          description: relatedGuide.description
+        }))}
+      />
+      <RelatedLinks
+        title="Troubleshooting Guides"
+        links={troubleshootingGuides.map((troubleshootingGuide) => ({
+          href: `/guides/${troubleshootingGuide.slug}`,
+          label: troubleshootingGuide.title,
+          description: troubleshootingGuide.description
         }))}
       />
       <RelatedLinks
@@ -181,6 +211,38 @@ export default async function GuidePage({ params }: GuidePageProps) {
           label: ecosystem.title,
           description: ecosystem.description
         }))}
+      />
+      <NextStepPanel
+        description="Use the related calculator to turn the article into a material estimate, then compare the next guide before ordering or calling an installer."
+        primaryLink={{
+          href: nextStepTool ? `/tools/${nextStepTool.slug}` : "/tools",
+          label: nextStepTool ? `Use ${nextStepTool.shortTitle}` : "Open flooring calculators"
+        }}
+        secondaryLinks={[
+          ...(nextStepGuide
+            ? [
+                {
+                  href: `/guides/${nextStepGuide.slug}`,
+                  label: nextStepGuide.title,
+                  description: "Read the next guide connected to this topic."
+                }
+              ]
+            : []),
+          ...(primaryEcosystem
+            ? [
+                {
+                  href: `/guides/ecosystems/${primaryEcosystem.slug}`,
+                  label: `Browse ${primaryEcosystem.shortTitle} guides`,
+                  description: "See the full flooring type section."
+                }
+              ]
+            : []),
+          {
+            href: "/guides/troubleshooting",
+            label: "Troubleshooting hub",
+            description: "Compare common flooring problems and causes."
+          }
+        ].slice(0, 3)}
       />
       <FAQSection items={guide.faq} />
     </>

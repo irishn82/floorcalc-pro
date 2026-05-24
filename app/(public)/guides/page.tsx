@@ -5,9 +5,11 @@ import { FlooringIcon } from "@/components/FlooringIcon";
 import { GuideCard } from "@/components/GuideCard";
 import { GuideTypeSelect } from "@/components/GuideTypeSelect";
 import { SectionHeading } from "@/components/SectionHeading";
+import { ToolCard } from "@/components/ToolCard";
 import { guideEcosystems } from "@/data/ecosystems";
 import { guides } from "@/data/guides";
-import { getPrimaryGuidesByEcosystem, getSecondaryGuidesByEcosystem } from "@/lib/content/paths";
+import { tools } from "@/data/tools";
+import { getPrimaryGuidesByEcosystem, getSecondaryGuidesByEcosystem, getTroubleshootingGuides } from "@/lib/content/paths";
 import { createSeoMetadata } from "@/lib/seo/metadata";
 
 export const metadata: Metadata = createSeoMetadata({
@@ -24,10 +26,15 @@ const featuredGuides = [
   "flooring-transition-guide"
 ];
 
+const planningTools = tools.filter((tool) =>
+  ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"].includes(tool.slug)
+);
+
 export default function GuidesIndexPage() {
   const featured = featuredGuides
     .map((slug) => guides.find((guide) => guide.slug === slug))
     .filter((guide): guide is (typeof guides)[number] => Boolean(guide));
+  const troubleshootingGuides = getTroubleshootingGuides();
 
   return (
     <section className="bg-white py-14 sm:py-16">
@@ -80,6 +87,46 @@ export default function GuidesIndexPage() {
                 </Link>
               );
             })}
+          </div>
+        </div>
+
+        <div className="mt-14 border-t border-line pt-10">
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <p className="text-sm font-bold uppercase tracking-wide text-accent-600">Troubleshooting</p>
+              <h2 className="mt-2 text-2xl font-black tracking-normal text-ink">Solve common flooring problems</h2>
+              <p className="mt-2 max-w-2xl text-sm leading-6 text-slate-600">
+                Find problem-based guides for clicking floors, visible seams, lifting LVP, moving transitions, hollow sounds, gaps, and cupping.
+              </p>
+            </div>
+            <Link href="/guides/troubleshooting" className="inline-flex text-sm font-bold text-accent-700 hover:text-accent-600">
+              View troubleshooting guides
+            </Link>
+          </div>
+          <div className="mt-6 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+            {troubleshootingGuides.slice(0, 4).map((guide) => (
+              <GuideCard key={guide.slug} guide={guide} />
+            ))}
+          </div>
+        </div>
+
+        <div className="mt-14 border-t border-line pt-10">
+          <div className="grid gap-6 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
+            <div>
+              <p className="text-sm font-bold uppercase tracking-wide text-accent-600">Calculators</p>
+              <h2 className="mt-2 text-2xl font-black tracking-normal text-ink">Start with measurements before choosing materials</h2>
+              <p className="mt-2 text-sm leading-6 text-slate-600">
+                Use calculators to estimate square footage, waste, and transition lengths, then move into the guide section that matches the flooring type.
+              </p>
+              <Link href="/tools" className="mt-4 inline-flex text-sm font-bold text-accent-700 hover:text-accent-600">
+                Open all calculators
+              </Link>
+            </div>
+            <div className="grid gap-5 md:grid-cols-3">
+              {planningTools.map((tool) => (
+                <ToolCard key={tool.slug} tool={tool} />
+              ))}
+            </div>
           </div>
         </div>
 

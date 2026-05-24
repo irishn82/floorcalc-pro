@@ -1,14 +1,16 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CalculatorLayout } from "@/components/CalculatorLayout";
 import { Container } from "@/components/Container";
 import { FAQSection } from "@/components/FAQSection";
 import { FlooringIcon } from "@/components/FlooringIcon";
 import { JsonLd } from "@/components/JsonLd";
+import { NextStepPanel } from "@/components/NextStepPanel";
 import { RelatedLinks } from "@/components/RelatedLinks";
 import { ToolCalculator } from "@/components/calculators/ToolCalculator";
 import { tools } from "@/data/tools";
-import { getRelatedTools, getToolBySlug } from "@/lib/content/paths";
+import { getRelatedTools, getToolBySlug, getToolRelatedGuides } from "@/lib/content/paths";
 import { createSeoMetadata } from "@/lib/seo/metadata";
 import { faqJsonLd, toolJsonLd } from "@/lib/seo/schema";
 
@@ -44,6 +46,7 @@ export default async function ToolPage({ params }: ToolPageProps) {
   }
 
   const relatedTools = getRelatedTools(tool.relatedTools);
+  const relatedGuides = getToolRelatedGuides(tool.slug);
 
   return (
     <>
@@ -51,6 +54,13 @@ export default async function ToolPage({ params }: ToolPageProps) {
       <JsonLd data={faqJsonLd(tool.faq)} />
       <section className="bg-white py-12 sm:py-16">
         <Container>
+          <Breadcrumbs
+            items={[
+              { href: "/", label: "Home" },
+              { href: "/tools", label: "Tools" },
+              { label: tool.shortTitle }
+            ]}
+          />
           <div className="max-w-3xl">
             <p className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wide text-accent-600">
               <span className="grid h-8 w-8 place-items-center rounded-lg border border-accent-100 bg-accent-50 text-accent-700">
@@ -84,6 +94,26 @@ export default async function ToolPage({ params }: ToolPageProps) {
           label: related.title,
           description: related.description
         }))}
+      />
+      <RelatedLinks
+        title="Guides for This Calculator"
+        links={relatedGuides.map((guide) => ({
+          href: `/guides/${guide.slug}`,
+          label: guide.title,
+          description: guide.description
+        }))}
+      />
+      <NextStepPanel
+        description="Use the calculator result as a planning estimate, then compare the related guide before ordering flooring or trim."
+        primaryLink={{
+          href: relatedGuides[0] ? `/guides/${relatedGuides[0].slug}` : "/guides",
+          label: relatedGuides[0] ? `Read ${relatedGuides[0].title}` : "Browse flooring guides"
+        }}
+        secondaryLinks={[
+          { href: "/guides/troubleshooting", label: "Troubleshooting guides" },
+          { href: "/guides", label: "All guides" },
+          { href: "/tools", label: "All calculators" }
+        ]}
       />
       <FAQSection items={tool.faq} />
     </>

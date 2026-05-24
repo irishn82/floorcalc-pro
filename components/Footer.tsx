@@ -21,10 +21,19 @@ export function Footer() {
             Free flooring calculators and practical planning guides for homeowners, remodelers, and flooring shoppers.
           </p>
           <div className="mt-5 flex flex-wrap gap-2">
-            {["Measure", "Waste", "Stairs", "Seams"].map((label) => (
-              <span key={label} className="rounded-md border border-accent-100/10 bg-accent-100/5 px-2.5 py-1 text-xs font-bold text-slate-200">
+            {[
+              ["Measure", "/tools/flooring-square-footage-calculator"],
+              ["Waste", "/tools/waste-calculator"],
+              ["Stairs", "/tools/stair-flooring-calculator"],
+              ["Seams", "/tools/carpet-seam-planner"]
+            ].map(([label, href]) => (
+              <Link
+                key={label}
+                href={href}
+                className="rounded-md border border-accent-100/10 bg-accent-100/5 px-2.5 py-1 text-xs font-bold text-slate-200 transition hover:border-accent-100/30 hover:bg-accent-100/10 hover:text-white"
+              >
                 {label}
-              </span>
+              </Link>
             ))}
           </div>
         </div>

@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Container } from "@/components/Container";
 import { FlooringIcon } from "@/components/FlooringIcon";
 import { SectionHeading } from "@/components/SectionHeading";
 import { ToolCard } from "@/components/ToolCard";
 import { tools } from "@/data/tools";
+import { getToolRelatedGuides } from "@/lib/content/paths";
 import { createSeoMetadata } from "@/lib/seo/metadata";
 
 export const metadata: Metadata = createSeoMetadata({
@@ -26,20 +28,24 @@ export default function ToolsIndexPage() {
           />
           <div className="grid gap-3 sm:grid-cols-3">
             {[
-              ["ruler", "Room measurements"],
-              ["waste", "Material waste"],
-              ["carpet", "Carpet planning"]
-            ].map(([icon, label]) => (
-              <div key={label} className="inline-flex items-center gap-2 rounded-lg border border-line bg-field px-3 py-2 text-sm font-bold text-slate-700">
+              ["ruler", "Room measurements", "/tools/flooring-square-footage-calculator"],
+              ["waste", "Material waste", "/tools/waste-calculator"],
+              ["carpet", "Carpet planning", "/tools/carpet-seam-planner"]
+            ].map(([icon, label, href]) => (
+              <Link
+                key={label}
+                href={href}
+                className="inline-flex items-center gap-2 rounded-lg border border-line bg-field px-3 py-2 text-sm font-bold text-slate-700 transition hover:border-accent-100 hover:bg-white hover:text-accent-700"
+              >
                 <FlooringIcon name={icon as "ruler" | "waste" | "carpet"} className="h-4 w-4 text-accent-700" />
                 {label}
-              </div>
+              </Link>
             ))}
           </div>
         </div>
         <div className="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {tools.map((tool) => (
-            <ToolCard key={tool.slug} tool={tool} />
+            <ToolCard key={tool.slug} tool={tool} relatedGuides={getToolRelatedGuides(tool.slug)} />
           ))}
         </div>
       </Container>

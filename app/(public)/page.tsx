@@ -55,14 +55,18 @@ export default function HomePage() {
             </div>
             <div className="mt-8 grid max-w-xl gap-3 text-sm font-bold text-slate-100 sm:grid-cols-3">
               {[
-                ["ruler", "Measure rooms"],
-                ["waste", "Add waste"],
-                ["transition", "Plan trim"]
-              ].map(([icon, label]) => (
-                <div key={label} className="inline-flex items-center gap-2 rounded-md border border-white/15 bg-white/10 px-3 py-2">
+                ["ruler", "Measure rooms", "/tools/flooring-square-footage-calculator"],
+                ["waste", "Add waste", "/tools/waste-calculator"],
+                ["transition", "Plan trim", "/tools/transition-estimator"]
+              ].map(([icon, label, href]) => (
+                <Link
+                  key={label}
+                  href={href}
+                  className="inline-flex items-center gap-2 rounded-md border border-white/15 bg-white/10 px-3 py-2 transition hover:border-white/30 hover:bg-white/15"
+                >
                   <FlooringIcon name={icon as "ruler" | "waste" | "transition"} className="h-4 w-4 text-accent-100" />
                   {label}
-                </div>
+                </Link>
               ))}
             </div>
           </div>

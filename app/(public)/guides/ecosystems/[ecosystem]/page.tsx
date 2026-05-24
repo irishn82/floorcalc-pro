@@ -1,14 +1,21 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Container } from "@/components/Container";
 import { DisclaimerBox } from "@/components/DisclaimerBox";
 import { FlooringIcon } from "@/components/FlooringIcon";
 import { GuideCard } from "@/components/GuideCard";
+import { NextStepPanel } from "@/components/NextStepPanel";
 import { SectionHeading } from "@/components/SectionHeading";
 import { ToolCard } from "@/components/ToolCard";
 import { getGuideEcosystemBySlug, guideEcosystems } from "@/data/ecosystems";
-import { getPrimaryGuidesByEcosystem, getRelatedTools, getSecondaryGuidesByEcosystem } from "@/lib/content/paths";
+import {
+  getPrimaryGuidesByEcosystem,
+  getRelatedTools,
+  getSecondaryGuidesByEcosystem,
+  getTroubleshootingGuides
+} from "@/lib/content/paths";
 import { createSeoMetadata } from "@/lib/seo/metadata";
 
 type EcosystemPageProps = {
@@ -45,11 +52,21 @@ export default async function GuideEcosystemPage({ params }: EcosystemPageProps)
   const coreGuides = getPrimaryGuidesByEcosystem(ecosystem.slug);
   const relatedGuides = getSecondaryGuidesByEcosystem(ecosystem.slug);
   const relatedTools = getRelatedTools(ecosystem.relatedTools);
+  const troubleshootingGuides = getTroubleshootingGuides()
+    .filter((guide) => guide.primaryEcosystem === ecosystem.slug || Boolean(guide.secondaryEcosystems?.includes(ecosystem.slug)))
+    .slice(0, 3);
   const siblingEcosystems = guideEcosystems.filter((item) => item.slug !== ecosystem.slug).slice(0, 4);
 
   return (
     <section className="bg-white py-14 sm:py-16">
       <Container>
+        <Breadcrumbs
+          items={[
+            { href: "/", label: "Home" },
+            { href: "/guides", label: "Guides" },
+            { label: ecosystem.shortTitle }
+          ]}
+        />
         <div className="grid gap-8 border-b border-line pb-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
           <SectionHeading
             eyebrow="Flooring type"
@@ -105,6 +122,27 @@ export default async function GuideEcosystemPage({ params }: EcosystemPageProps)
           </div>
         ) : null}
 
+        {troubleshootingGuides.length > 0 ? (
+          <div className="mt-14 border-t border-line pt-10">
+            <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+              <div>
+                <h2 className="text-2xl font-black tracking-normal text-ink">Troubleshooting for {ecosystem.shortTitle}</h2>
+                <p className="mt-2 max-w-2xl text-sm leading-6 text-slate-600">
+                  Problem-based guides that help diagnose movement, noise, seams, transitions, and installation concerns.
+                </p>
+              </div>
+              <Link href="/guides/troubleshooting" className="inline-flex text-sm font-bold text-accent-700 hover:text-accent-600">
+                View all troubleshooting
+              </Link>
+            </div>
+            <div className="mt-6 grid gap-5 md:grid-cols-3">
+              {troubleshootingGuides.map((guide) => (
+                <GuideCard key={guide.slug} guide={guide} />
+              ))}
+            </div>
+          </div>
+        ) : null}
+
         <div className="mt-14 border-t border-line pt-10">
           <h2 className="text-2xl font-black tracking-normal text-ink">Useful calculators</h2>
           <p className="mt-2 max-w-2xl text-sm leading-6 text-slate-600">
@@ -116,6 +154,19 @@ export default async function GuideEcosystemPage({ params }: EcosystemPageProps)
             ))}
           </div>
         </div>
+
+        <NextStepPanel
+          description={`Start with the most relevant calculator for ${ecosystem.shortTitle}, then use the core guides to check layout, waste, subfloor, and transition decisions.`}
+          primaryLink={{
+            href: relatedTools[0] ? `/tools/${relatedTools[0].slug}` : "/tools",
+            label: relatedTools[0] ? `Use ${relatedTools[0].shortTitle}` : "Open calculators"
+          }}
+          secondaryLinks={[
+            { href: "/guides/troubleshooting", label: "Troubleshooting guides" },
+            { href: "/tools", label: "All calculators" },
+            { href: "/guides", label: "All flooring guides" }
+          ]}
+        />
 
         <div className="mt-14 grid gap-8 border-t border-line pt-10 lg:grid-cols-[1fr_0.8fr]">
           <DisclaimerBox>

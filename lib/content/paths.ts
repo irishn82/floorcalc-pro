@@ -1,5 +1,6 @@
 import { guides } from "@/data/guides";
 import { getGuideEcosystemBySlug, guideEcosystems } from "@/data/ecosystems";
+import { toolGuideLinks, troubleshootingGuideSlugs } from "@/data/navigation";
 import { tools } from "@/data/tools";
 import type { Guide, GuideEcosystemSlug, Tool } from "@/data/types";
 
@@ -17,6 +18,31 @@ export function getRelatedTools(slugs: string[]) {
 
 export function getRelatedGuides(slugs: string[]) {
   return slugs.map(getGuideBySlug).filter((guide): guide is Guide => Boolean(guide));
+}
+
+export function getToolRelatedGuides(toolSlug: string) {
+  const guideSlugs = toolGuideLinks[toolSlug as keyof typeof toolGuideLinks] ?? [];
+  return getRelatedGuides(guideSlugs);
+}
+
+export function getTroubleshootingGuides() {
+  return getRelatedGuides(troubleshootingGuideSlugs);
+}
+
+export function getTroubleshootingGuidesForGuide(guide: Guide, limit = 4) {
+  const guideEcosystems = [guide.primaryEcosystem, ...(guide.secondaryEcosystems ?? [])];
+
+  return getTroubleshootingGuides()
+    .filter((troubleshootingGuide) => troubleshootingGuide.slug !== guide.slug)
+    .filter((troubleshootingGuide) => {
+      const troubleshootingEcosystems = [
+        troubleshootingGuide.primaryEcosystem,
+        ...(troubleshootingGuide.secondaryEcosystems ?? [])
+      ];
+
+      return troubleshootingEcosystems.some((ecosystemSlug) => guideEcosystems.includes(ecosystemSlug));
+    })
+    .slice(0, limit);
 }
 
 export function getPrimaryGuidesByEcosystem(ecosystemSlug: GuideEcosystemSlug) {
