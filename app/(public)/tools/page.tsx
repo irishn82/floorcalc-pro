@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Container } from "@/components/Container";
 import { FlooringIcon } from "@/components/FlooringIcon";
 import { SectionHeading } from "@/components/SectionHeading";
@@ -19,6 +20,12 @@ export default function ToolsIndexPage() {
   return (
     <section className="bg-white py-10 sm:py-12">
       <Container>
+        <Breadcrumbs
+          items={[
+            { href: "/", label: "Home" },
+            { label: "Tools" }
+          ]}
+        />
         <div className="grid gap-6 border-b border-line pb-6 lg:grid-cols-[0.75fr_1.25fr] lg:items-end">
           <SectionHeading
             eyebrow="Tools"

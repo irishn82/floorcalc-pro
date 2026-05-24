@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Container } from "@/components/Container";
 import { FlooringIcon } from "@/components/FlooringIcon";
 import { GuideCard } from "@/components/GuideCard";
@@ -39,6 +40,12 @@ export default function GuidesIndexPage() {
   return (
     <section className="bg-white py-10 sm:py-12">
       <Container>
+        <Breadcrumbs
+          items={[
+            { href: "/", label: "Home" },
+            { label: "Guides" }
+          ]}
+        />
         <div className="border-b border-line pb-6">
           <SectionHeading
             eyebrow="Guides"
