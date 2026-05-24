@@ -57,14 +57,14 @@ export default function HomePage() {
         </Container>
       </section>
 
-      <section className="bg-white py-10 sm:py-12">
+      <section className="bg-white py-8 sm:py-10">
         <Container>
           <SectionHeading
             eyebrow="Plan before you buy"
             title="Free flooring calculators for common project decisions"
             description="Use the tools as a planning layer before you convert measurements into cartons, trim pieces, rolls, or installer quotes."
           />
-          <div className="mt-6 grid gap-4 md:grid-cols-3">
+          <div className="mt-5 grid gap-3 md:grid-cols-3">
             {featuredTools.map((tool) => (
               <ToolCard key={tool.slug} tool={tool} />
             ))}
@@ -78,15 +78,15 @@ export default function HomePage() {
         </Container>
       </section>
 
-      <section className="bg-field py-10 sm:py-12">
+      <section className="bg-field py-8 sm:py-10">
         <Container>
-          <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
+          <div className="grid gap-7 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
             <SectionHeading
               eyebrow="Flooring planning guides"
               title="Practical guides that connect measurements to real flooring choices"
               description="Clear flooring advice for measuring, waste, transitions, carpet seams, pets, tile overlays, radiant heat, and other project decisions."
             />
-            <div className="grid gap-4 md:grid-cols-2">
+            <div className="grid gap-3 md:grid-cols-2">
               {featuredGuides.map((guide) => (
                 <GuideCard key={guide.slug} guide={guide} />
               ))}
@@ -108,7 +108,7 @@ export default function HomePage() {
         </Container>
       </section>
 
-      <section className="bg-white py-10 sm:py-12">
+      <section className="bg-white py-8 sm:py-10">
         <Container>
           <div className="grid gap-6 border-y border-line py-7 md:grid-cols-[0.85fr_1.15fr]">
             <div className="flex gap-4">

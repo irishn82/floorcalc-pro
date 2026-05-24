@@ -36,7 +36,7 @@ export default function TroubleshootingGuidesPage() {
 
   return (
     <>
-      <section className="bg-white py-10 sm:py-12">
+      <section className="bg-white py-8 sm:py-10">
         <Container>
           <Breadcrumbs
             items={[
@@ -45,7 +45,7 @@ export default function TroubleshootingGuidesPage() {
               { label: "Troubleshooting" }
             ]}
           />
-          <div className="grid gap-6 border-b border-line pb-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
+          <div className="grid gap-6 border-b border-line pb-7 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
             <SectionHeading
               eyebrow="Troubleshooting"
               title="Flooring problem guides"
@@ -64,19 +64,19 @@ export default function TroubleshootingGuidesPage() {
             </div>
           </div>
 
-          <div className="mt-8">
+          <div className="mt-7">
             <h2 className="text-xl font-black tracking-normal text-ink sm:text-2xl">Problem-based guides</h2>
             <p className="mt-2 max-w-2xl text-sm leading-6 text-slate-600">
               These articles focus on high-intent homeowner problems and connect back to the calculators and flooring type guides that help with next steps.
             </p>
-            <div className="mt-5 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            <div className="mt-4 grid gap-3 md:grid-cols-2 lg:grid-cols-3">
               {troubleshootingGuides.map((guide) => (
                 <GuideCard key={guide.slug} guide={guide} />
               ))}
             </div>
           </div>
 
-          <div className="mt-10 border-t border-line pt-8">
+          <div className="mt-8 border-t border-line pt-7">
             <h2 className="text-xl font-black tracking-normal text-ink sm:text-2xl">Troubleshooting by flooring type</h2>
             <div className="mt-5 grid gap-3 md:grid-cols-3">
               {nearbyEcosystems.map((ecosystem) => (
@@ -94,13 +94,13 @@ export default function TroubleshootingGuidesPage() {
         </Container>
       </section>
 
-      <section className="bg-field py-10">
+      <section className="bg-field py-8">
         <Container>
           <h2 className="text-xl font-black tracking-normal text-ink sm:text-2xl">Useful calculators while troubleshooting</h2>
           <p className="mt-2 max-w-2xl text-sm leading-6 text-slate-600">
             Rechecking measurements, waste, seams, and transition lengths can help you explain the issue clearly before a repair or installer visit.
           </p>
-          <div className="mt-5 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-4 grid gap-3 md:grid-cols-2 lg:grid-cols-4">
             {troubleshootingTools.map((tool) => (
               <ToolCard key={tool.slug} tool={tool} />
             ))}
@@ -118,7 +118,7 @@ export default function TroubleshootingGuidesPage() {
         ]}
       />
 
-      <section className="bg-white pb-10">
+      <section className="bg-white pb-8">
         <Container>
           <DisclaimerBox>
             Troubleshooting guides are for planning and conversation only. Product compatibility, repair methods, moisture limits,

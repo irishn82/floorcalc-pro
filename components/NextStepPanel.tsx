@@ -21,9 +21,9 @@ export function NextStepPanel({
   secondaryLinks = []
 }: NextStepPanelProps) {
   return (
-    <section className="bg-white py-10">
+    <section className="bg-white py-8">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <div className="rounded-lg border border-line bg-field p-5 shadow-sm">
+        <div className="rounded-lg border border-line bg-field p-4 shadow-sm">
           <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
             <div className="max-w-2xl">
               <h2 className="inline-flex items-center gap-3 text-xl font-black text-ink">
@@ -32,7 +32,7 @@ export function NextStepPanel({
                 </span>
                 {title}
               </h2>
-              <p className="mt-3 text-sm leading-6 text-slate-600">{description}</p>
+              <p className="mt-2 text-sm leading-6 text-slate-600">{description}</p>
             </div>
             <Link
               href={primaryLink.href}
@@ -42,7 +42,7 @@ export function NextStepPanel({
             </Link>
           </div>
           {secondaryLinks.length > 0 ? (
-            <div className="mt-4 grid gap-3 md:grid-cols-3">
+            <div className="mt-3 grid gap-3 md:grid-cols-3">
               {secondaryLinks.map((link) => (
                 <Link
                   key={link.href}

@@ -6,6 +6,7 @@ import { Container } from "@/components/Container";
 import { DisclaimerBox } from "@/components/DisclaimerBox";
 import { FAQSection } from "@/components/FAQSection";
 import { FlooringIcon } from "@/components/FlooringIcon";
+import { GuideUtilityVisual } from "@/components/GuideUtilityVisual";
 import { JsonLd } from "@/components/JsonLd";
 import { NextStepPanel } from "@/components/NextStepPanel";
 import { RelatedLinks } from "@/components/RelatedLinks";
@@ -74,7 +75,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
         })}
       />
       <JsonLd data={faqJsonLd(guide.faq)} />
-      <article className="bg-white py-10 sm:py-12">
+      <article className="bg-white py-8 sm:py-10">
         <Container>
           <Breadcrumbs
             items={[
@@ -86,7 +87,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
               { label: guide.title }
             ]}
           />
-          <div className="grid gap-8 lg:grid-cols-[240px_minmax(0,760px)] lg:items-start">
+          <div className="grid gap-7 lg:grid-cols-[240px_minmax(0,760px)] lg:items-start">
             <aside className="lg:sticky lg:top-24">
               <TableOfContents items={guide.sections.map((section) => ({ id: section.id, title: section.title }))} />
             </aside>
@@ -98,12 +99,12 @@ export default async function GuidePage({ params }: GuidePageProps) {
                 Flooring guide
               </p>
               <h1 className="mt-3 text-3xl font-black tracking-normal text-ink sm:text-4xl">{guide.title}</h1>
-              <p className="mt-5 text-base leading-7 text-slate-600 sm:text-lg">{guide.description}</p>
+              <p className="mt-4 text-base leading-7 text-slate-600 sm:text-lg">{guide.description}</p>
               <div className="mt-4 flex flex-wrap gap-3 text-sm text-slate-500">
                 <span>Updated {guide.dateModified}</span>
                 <span>{guide.readTime}</span>
               </div>
-              <div className="mt-5 flex flex-wrap gap-2">
+              <div className="mt-4 flex flex-wrap gap-2">
                 {ecosystemLinks.slice(0, 4).map((ecosystem) => (
                   <Link
                     key={ecosystem.slug}
@@ -114,7 +115,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
                   </Link>
                 ))}
               </div>
-              <div className="mt-7 rounded-lg border border-line bg-field p-4 shadow-sm">
+              <div className="mt-6 rounded-lg border border-line bg-field p-4 shadow-sm">
                 <h2 className="inline-flex items-center gap-2 text-lg font-bold text-ink">
                   <FlooringIcon name="calculator" className="h-5 w-5 text-accent-700" />
                   Useful calculators for this guide
@@ -131,7 +132,8 @@ export default async function GuidePage({ params }: GuidePageProps) {
                   ))}
                 </div>
               </div>
-              <div className="prose-flooring mt-7">
+              <GuideUtilityVisual guide={guide} />
+              <div className="prose-flooring mt-6">
                 {guide.sections.map((section) => (
                   <section key={section.id} id={section.id} className="scroll-mt-24">
                     <h2>{section.title}</h2>
@@ -164,7 +166,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
                 ))}
               </div>
               {guide.disclaimer ? (
-                <div className="mt-10">
+                <div className="mt-8">
                   <DisclaimerBox>{guide.disclaimer}</DisclaimerBox>
                 </div>
               ) : null}

@@ -18,7 +18,7 @@ const toolIcons: Record<Tool["calculatorType"], FlooringIconName> = {
 
 export function ToolCard({ tool, relatedGuides = [] }: ToolCardProps) {
   return (
-    <article className="flooring-card overflow-hidden rounded-lg border border-line bg-white p-4 pt-5 shadow-sm transition hover:-translate-y-0.5 hover:border-accent-100 hover:shadow-soft">
+    <article className="flooring-card overflow-hidden rounded-lg border border-line bg-white p-3.5 pt-5 shadow-sm transition hover:-translate-y-0.5 hover:border-accent-100 hover:shadow-soft">
       <div className="flex items-start gap-3">
         <span className="grid h-9 w-9 shrink-0 place-items-center rounded-lg border border-accent-100 bg-accent-50 text-accent-700">
           <FlooringIcon name={toolIcons[tool.calculatorType]} />
@@ -31,7 +31,7 @@ export function ToolCard({ tool, relatedGuides = [] }: ToolCardProps) {
               </Link>
             </h3>
           </div>
-          <p className="mt-2.5 text-sm leading-6 text-slate-600">{tool.description}</p>
+          <p className="mt-2 text-sm leading-6 text-slate-600">{tool.description}</p>
         </div>
       </div>
       <p className="mt-3 break-words rounded-md border border-line bg-field px-3 py-2 text-xs font-bold uppercase leading-5 tracking-wide text-slate-600">

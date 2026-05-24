@@ -56,9 +56,10 @@ export default async function GuideEcosystemPage({ params }: EcosystemPageProps)
     .filter((guide) => guide.primaryEcosystem === ecosystem.slug || Boolean(guide.secondaryEcosystems?.includes(ecosystem.slug)))
     .slice(0, 3);
   const siblingEcosystems = guideEcosystems.filter((item) => item.slug !== ecosystem.slug).slice(0, 4);
+  const startGuide = coreGuides[0] ?? relatedGuides[0];
 
   return (
-    <section className="bg-white py-10 sm:py-12">
+    <section className="bg-white py-8 sm:py-10">
       <Container>
         <Breadcrumbs
           items={[
@@ -67,7 +68,7 @@ export default async function GuideEcosystemPage({ params }: EcosystemPageProps)
             { label: ecosystem.shortTitle }
           ]}
         />
-        <div className="grid gap-6 border-b border-line pb-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
+        <div className="grid gap-6 border-b border-line pb-7 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
           <SectionHeading
             eyebrow="Flooring type"
             title={ecosystem.title}
@@ -90,8 +91,38 @@ export default async function GuideEcosystemPage({ params }: EcosystemPageProps)
           </div>
         </div>
 
+        <div className="mt-6 grid gap-3 rounded-lg border border-line bg-field p-4 md:grid-cols-3">
+          <Link
+            href={startGuide ? `/guides/${startGuide.slug}` : "/guides"}
+            className="rounded-md border border-line bg-white p-3 text-sm font-bold text-slate-800 transition hover:border-accent-100 hover:text-accent-700"
+          >
+            Start here
+            <span className="mt-1 block font-normal leading-6 text-slate-600">
+              {startGuide ? startGuide.title : "Browse all flooring guides"}
+            </span>
+          </Link>
+          <Link
+            href={relatedTools[0] ? `/tools/${relatedTools[0].slug}` : "/tools"}
+            className="rounded-md border border-line bg-white p-3 text-sm font-bold text-slate-800 transition hover:border-accent-100 hover:text-accent-700"
+          >
+            Recommended calculator
+            <span className="mt-1 block font-normal leading-6 text-slate-600">
+              {relatedTools[0] ? relatedTools[0].title : "All flooring calculators"}
+            </span>
+          </Link>
+          <Link
+            href={troubleshootingGuides[0] ? `/guides/${troubleshootingGuides[0].slug}` : "/guides/troubleshooting"}
+            className="rounded-md border border-line bg-white p-3 text-sm font-bold text-slate-800 transition hover:border-accent-100 hover:text-accent-700"
+          >
+            Common problems
+            <span className="mt-1 block font-normal leading-6 text-slate-600">
+              {troubleshootingGuides[0] ? troubleshootingGuides[0].title : "Troubleshooting guides"}
+            </span>
+          </Link>
+        </div>
+
         <div className="mt-8">
-          <h2 className="text-xl font-black tracking-normal text-ink sm:text-2xl">Core guides for this flooring type</h2>
+          <h2 className="text-xl font-black tracking-normal text-ink sm:text-2xl">Popular in this ecosystem</h2>
           <p className="mt-2 max-w-2xl text-sm leading-6 text-slate-600">
             These guides are primarily about {ecosystem.shortTitle} or this exact planning category.
           </p>
@@ -109,7 +140,7 @@ export default async function GuideEcosystemPage({ params }: EcosystemPageProps)
         </div>
 
         {relatedGuides.length > 0 ? (
-          <div className="mt-10 border-t border-line pt-8">
+          <div className="mt-8 border-t border-line pt-7">
             <h2 className="text-xl font-black tracking-normal text-ink sm:text-2xl">Also relevant</h2>
             <p className="mt-2 max-w-2xl text-sm leading-6 text-slate-600">
               These guides also apply here, but their main home is another flooring category.
@@ -123,10 +154,10 @@ export default async function GuideEcosystemPage({ params }: EcosystemPageProps)
         ) : null}
 
         {troubleshootingGuides.length > 0 ? (
-          <div className="mt-10 border-t border-line pt-8">
+          <div className="mt-8 border-t border-line pt-7">
             <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
               <div>
-                <h2 className="text-xl font-black tracking-normal text-ink sm:text-2xl">Troubleshooting for {ecosystem.shortTitle}</h2>
+                <h2 className="text-xl font-black tracking-normal text-ink sm:text-2xl">Common problems for {ecosystem.shortTitle}</h2>
                 <p className="mt-2 max-w-2xl text-sm leading-6 text-slate-600">
                   Problem-based guides that help diagnose movement, noise, seams, transitions, and installation concerns.
                 </p>
@@ -143,8 +174,8 @@ export default async function GuideEcosystemPage({ params }: EcosystemPageProps)
           </div>
         ) : null}
 
-        <div className="mt-10 border-t border-line pt-8">
-          <h2 className="text-xl font-black tracking-normal text-ink sm:text-2xl">Useful calculators</h2>
+        <div className="mt-8 border-t border-line pt-7">
+          <h2 className="text-xl font-black tracking-normal text-ink sm:text-2xl">Recommended calculators</h2>
           <p className="mt-2 max-w-2xl text-sm leading-6 text-slate-600">
             These tools support the measuring, waste, stair, seam, pattern, and transition decisions connected to this flooring type.
           </p>
@@ -168,7 +199,7 @@ export default async function GuideEcosystemPage({ params }: EcosystemPageProps)
           ]}
         />
 
-        <div className="mt-10 grid gap-6 border-t border-line pt-8 lg:grid-cols-[1fr_0.8fr]">
+        <div className="mt-8 grid gap-6 border-t border-line pt-7 lg:grid-cols-[1fr_0.8fr]">
           <DisclaimerBox>
             Flooring type pages organize general flooring planning information. Product compatibility, installation methods, subfloor requirements,
             transition profiles, and warranty-related requirements vary by manufacturer and project conditions.

@@ -7,7 +7,7 @@ type FAQSectionProps = {
 
 export function FAQSection({ items }: FAQSectionProps) {
   return (
-    <section className="border-t border-line bg-white py-10 sm:py-12">
+    <section className="border-t border-line bg-white py-8 sm:py-10">
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
         <h2 className="inline-flex items-center gap-3 text-xl font-black text-ink">
           <span className="grid h-8 w-8 place-items-center rounded-lg border border-accent-100 bg-accent-50 text-accent-700">
@@ -15,7 +15,7 @@ export function FAQSection({ items }: FAQSectionProps) {
           </span>
           Frequently Asked Questions
         </h2>
-        <div className="mt-5 divide-y divide-line rounded-lg border border-line bg-white shadow-sm">
+        <div className="mt-4 divide-y divide-line rounded-lg border border-line bg-white shadow-sm">
           {items.map((item) => (
             <details key={item.question} className="group p-4 transition open:bg-field/60">
               <summary className="cursor-pointer list-none text-base font-bold text-ink">

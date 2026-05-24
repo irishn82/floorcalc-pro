@@ -38,7 +38,7 @@ export default function GuidesIndexPage() {
   const troubleshootingGuides = getTroubleshootingGuides();
 
   return (
-    <section className="bg-white py-10 sm:py-12">
+    <section className="bg-white py-8 sm:py-10">
       <Container>
         <Breadcrumbs
           items={[
@@ -55,7 +55,7 @@ export default function GuidesIndexPage() {
           />
         </div>
 
-        <div className="mt-8" id="guide-categories">
+        <div className="mt-7" id="guide-categories">
           <div className="grid gap-5 lg:grid-cols-[minmax(0,1fr)_20rem] lg:items-end">
             <div>
               <h2 className="text-xl font-black tracking-normal text-ink sm:text-2xl">Browse by flooring type</h2>
@@ -65,7 +65,7 @@ export default function GuidesIndexPage() {
             </div>
             <GuideTypeSelect options={guideEcosystems} />
           </div>
-          <div className="mt-5 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+          <div className="mt-4 grid gap-3 md:grid-cols-2 xl:grid-cols-4">
             {guideEcosystems.map((ecosystem) => {
               const coreGuides = getPrimaryGuidesByEcosystem(ecosystem.slug);
               const relatedGuides = getSecondaryGuidesByEcosystem(ecosystem.slug);
@@ -74,7 +74,7 @@ export default function GuidesIndexPage() {
                 <Link
                   key={ecosystem.slug}
                   href={`/guides/ecosystems/${ecosystem.slug}`}
-                  className="flooring-card group rounded-lg border border-line bg-white p-4 pt-5 shadow-sm transition hover:-translate-y-0.5 hover:border-accent-100 hover:shadow-soft"
+                  className="flooring-card group rounded-lg border border-line bg-white p-3.5 pt-5 shadow-sm transition hover:-translate-y-0.5 hover:border-accent-100 hover:shadow-soft"
                 >
                   <div className="flex items-start justify-between gap-4">
                     <span className="grid h-9 w-9 shrink-0 place-items-center rounded-lg border border-accent-100 bg-accent-50 text-accent-700">
@@ -85,7 +85,7 @@ export default function GuidesIndexPage() {
                     </span>
                   </div>
                   <h3 className="mt-3 text-base font-black text-ink group-hover:text-accent-700">{ecosystem.title}</h3>
-                  <p className="mt-2.5 text-sm leading-6 text-slate-600">{ecosystem.description}</p>
+                  <p className="mt-2 text-sm leading-6 text-slate-600">{ecosystem.description}</p>
                   {relatedGuides.length > 0 ? (
                     <p className="mt-3 text-xs font-semibold uppercase tracking-wide text-slate-500">
                       {relatedGuides.length} also relevant
@@ -97,7 +97,7 @@ export default function GuidesIndexPage() {
           </div>
         </div>
 
-        <div className="mt-10 border-t border-line pt-8">
+        <div className="mt-8 border-t border-line pt-7">
           <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
             <div>
               <p className="text-sm font-bold uppercase tracking-wide text-accent-600">Troubleshooting</p>
@@ -110,14 +110,14 @@ export default function GuidesIndexPage() {
               View troubleshooting guides
             </Link>
           </div>
-          <div className="mt-5 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-4 grid gap-3 md:grid-cols-2 lg:grid-cols-4">
             {troubleshootingGuides.slice(0, 4).map((guide) => (
               <GuideCard key={guide.slug} guide={guide} />
             ))}
           </div>
         </div>
 
-        <div className="mt-10 border-t border-line pt-8">
+        <div className="mt-8 border-t border-line pt-7">
           <div className="grid gap-6 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
             <div>
               <p className="text-sm font-bold uppercase tracking-wide text-accent-600">Calculators</p>
@@ -129,7 +129,7 @@ export default function GuidesIndexPage() {
                 Open all calculators
               </Link>
             </div>
-            <div className="grid gap-4 md:grid-cols-3">
+            <div className="grid gap-3 md:grid-cols-3">
               {planningTools.map((tool) => (
                 <ToolCard key={tool.slug} tool={tool} />
               ))}
@@ -137,19 +137,19 @@ export default function GuidesIndexPage() {
           </div>
         </div>
 
-        <div className="mt-10 border-t border-line pt-8">
+        <div className="mt-8 border-t border-line pt-7">
           <h2 className="text-xl font-black tracking-normal text-ink sm:text-2xl">Featured flooring guides</h2>
           <p className="mt-2 max-w-2xl text-sm leading-6 text-slate-600">
             Start with the guides that support the most common measuring, waste, subfloor, and transition decisions.
           </p>
-          <div className="mt-5 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-4 grid gap-3 md:grid-cols-2 lg:grid-cols-4">
             {featured.map((guide) => (
               <GuideCard key={guide.slug} guide={guide} />
             ))}
           </div>
         </div>
 
-        <div className="mt-10 space-y-10 border-t border-line pt-8">
+        <div className="mt-8 space-y-8 border-t border-line pt-7">
           {guideEcosystems.map((ecosystem) => {
             const coreGuides = getPrimaryGuidesByEcosystem(ecosystem.slug);
             const relatedGuides = getSecondaryGuidesByEcosystem(ecosystem.slug);
@@ -170,18 +170,18 @@ export default function GuidesIndexPage() {
                   </Link>
                 </div>
                 {coreGuides.length > 0 ? (
-                  <div className="mt-5 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+                  <div className="mt-4 grid gap-3 md:grid-cols-2 lg:grid-cols-3">
                     {coreGuides.slice(0, 6).map((guide) => (
                       <GuideCard key={guide.slug} guide={guide} />
                     ))}
                   </div>
                 ) : (
-                  <div className="mt-5 rounded-lg border border-dashed border-line bg-field p-5 text-sm leading-6 text-slate-600">
+                  <div className="mt-4 rounded-lg border border-dashed border-line bg-field p-4 text-sm leading-6 text-slate-600">
                     Guides for this flooring type are planned for a future editorial pass.
                   </div>
                 )}
                 {relatedGuides.length > 0 ? (
-                  <div className="mt-5 rounded-lg border border-line bg-field p-4">
+                  <div className="mt-4 rounded-lg border border-line bg-field p-3.5">
                     <h3 className="text-sm font-bold uppercase tracking-wide text-slate-500">Also relevant</h3>
                     <div className="mt-3 flex flex-wrap gap-2">
                       {relatedGuides.slice(0, 4).map((guide) => (

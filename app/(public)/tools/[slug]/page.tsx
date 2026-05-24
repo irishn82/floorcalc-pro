@@ -47,12 +47,15 @@ export default async function ToolPage({ params }: ToolPageProps) {
 
   const relatedTools = getRelatedTools(tool.relatedTools);
   const relatedGuides = getToolRelatedGuides(tool.slug);
+  const troubleshootingGuides = relatedGuides.filter((guide) => guide.slug.startsWith("why-"));
+  const commonQuestionGuides = relatedGuides.filter((guide) => !guide.slug.startsWith("why-"));
+  const primaryGuide = commonQuestionGuides[0] ?? troubleshootingGuides[0];
 
   return (
     <>
       <JsonLd data={toolJsonLd({ name: tool.title, description: tool.description, path: `/tools/${tool.slug}` })} />
       <JsonLd data={faqJsonLd(tool.faq)} />
-      <section className="bg-white py-10 sm:py-12">
+      <section className="bg-white py-8 sm:py-10">
         <Container>
           <Breadcrumbs
             items={[
@@ -69,12 +72,12 @@ export default async function ToolPage({ params }: ToolPageProps) {
               Flooring calculator
             </p>
             <h1 className="mt-3 text-3xl font-black tracking-normal text-ink sm:text-4xl">{tool.title}</h1>
-            <p className="mt-5 text-base leading-7 text-slate-600 sm:text-lg">{tool.description}</p>
+            <p className="mt-4 text-base leading-7 text-slate-600 sm:text-lg">{tool.description}</p>
             <p className="mt-4 inline-block max-w-full break-words whitespace-normal rounded-md border border-accent-100 bg-accent-50 px-3 py-1 text-xs font-bold uppercase leading-5 tracking-wide text-accent-700">
               Flooring type: {tool.flooringSystem}
             </p>
           </div>
-          <div className="mt-8">
+          <div className="mt-7">
             <CalculatorLayout
               title={tool.title}
               intro={tool.description}
@@ -96,8 +99,16 @@ export default async function ToolPage({ params }: ToolPageProps) {
         }))}
       />
       <RelatedLinks
-        title="Guides for This Calculator"
-        links={relatedGuides.map((guide) => ({
+        title="Common Flooring Questions"
+        links={commonQuestionGuides.map((guide) => ({
+          href: `/guides/${guide.slug}`,
+          label: guide.title,
+          description: guide.description
+        }))}
+      />
+      <RelatedLinks
+        title="Troubleshooting for This Calculator"
+        links={troubleshootingGuides.map((guide) => ({
           href: `/guides/${guide.slug}`,
           label: guide.title,
           description: guide.description
@@ -106,8 +117,8 @@ export default async function ToolPage({ params }: ToolPageProps) {
       <NextStepPanel
         description="Use the calculator result as a planning estimate, then compare the related guide before ordering flooring or trim."
         primaryLink={{
-          href: relatedGuides[0] ? `/guides/${relatedGuides[0].slug}` : "/guides",
-          label: relatedGuides[0] ? `Read ${relatedGuides[0].title}` : "Browse flooring guides"
+          href: primaryGuide ? `/guides/${primaryGuide.slug}` : "/guides",
+          label: primaryGuide ? `Read ${primaryGuide.title}` : "Browse flooring guides"
         }}
         secondaryLinks={[
           { href: "/guides/troubleshooting", label: "Troubleshooting guides" },

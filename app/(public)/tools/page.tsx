@@ -18,7 +18,7 @@ export const metadata: Metadata = createSeoMetadata({
 
 export default function ToolsIndexPage() {
   return (
-    <section className="bg-white py-10 sm:py-12">
+    <section className="bg-white py-8 sm:py-10">
       <Container>
         <Breadcrumbs
           items={[
@@ -26,7 +26,7 @@ export default function ToolsIndexPage() {
             { label: "Tools" }
           ]}
         />
-        <div className="grid gap-6 border-b border-line pb-6 lg:grid-cols-[0.75fr_1.25fr] lg:items-end">
+        <div className="grid gap-6 border-b border-line pb-5 lg:grid-cols-[0.75fr_1.25fr] lg:items-end">
           <SectionHeading
             eyebrow="Tools"
             title="Flooring calculators"
@@ -50,7 +50,7 @@ export default function ToolsIndexPage() {
             ))}
           </div>
         </div>
-        <div className="mt-6 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-5 grid gap-3 md:grid-cols-2 lg:grid-cols-3">
           {tools.map((tool) => (
             <ToolCard key={tool.slug} tool={tool} relatedGuides={getToolRelatedGuides(tool.slug)} />
           ))}

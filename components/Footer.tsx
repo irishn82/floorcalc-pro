@@ -6,21 +6,21 @@ import { FlooringIcon } from "@/components/FlooringIcon";
 export function Footer() {
   return (
     <footer className="border-t border-line bg-brand-900 text-white">
-      <Container className="grid gap-8 py-10 md:grid-cols-[1.4fr_1fr_1fr]">
+      <Container className="grid gap-7 py-8 md:grid-cols-[1.4fr_1fr_1fr]">
         <div>
           <Link href="/" className="inline-flex items-center gap-3" aria-label="FloorCalc Pro home">
-            <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl border border-white/10 bg-brand-800 p-1 shadow-brand">
+            <span className="grid h-10 w-10 shrink-0 place-items-center rounded-lg border border-white/10 bg-brand-800 p-1 shadow-brand">
               <BrandMark className="h-full w-full rounded-lg object-contain" />
             </span>
             <span>
-              <span className="block text-xl font-black tracking-normal text-white">FloorCalc Pro</span>
-              <span className="mt-1 block h-0.5 w-14 rounded-full bg-accent-500" aria-hidden="true" />
+              <span className="block text-lg font-black tracking-normal text-white">FloorCalc Pro</span>
+              <span className="mt-1 block h-0.5 w-12 rounded-full bg-accent-500" aria-hidden="true" />
             </span>
           </Link>
-          <p className="mt-4 max-w-md text-sm leading-6 text-slate-300">
+          <p className="mt-3 max-w-md text-sm leading-6 text-slate-300">
             Free flooring calculators and practical planning guides for homeowners, remodelers, and flooring shoppers.
           </p>
-          <div className="mt-5 flex flex-wrap gap-2">
+          <div className="mt-4 flex flex-wrap gap-2">
             {[
               ["Measure", "/tools/flooring-square-footage-calculator"],
               ["Waste", "/tools/waste-calculator"],
@@ -84,7 +84,7 @@ export function Footer() {
           </ul>
         </div>
       </Container>
-      <Container className="flex flex-col gap-3 border-t border-white/10 py-5 text-xs text-slate-400 sm:flex-row sm:items-center sm:justify-between">
+      <Container className="flex flex-col gap-3 border-t border-white/10 py-4 text-xs text-slate-400 sm:flex-row sm:items-center sm:justify-between">
         <p>Copyright {new Date().getFullYear()} FloorCalc Pro. All rights reserved.</p>
         <p>Calculator results are estimates and should be verified before ordering materials.</p>
       </Container>
