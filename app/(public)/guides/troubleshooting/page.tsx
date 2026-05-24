@@ -36,7 +36,7 @@ export default function TroubleshootingGuidesPage() {
 
   return (
     <>
-      <section className="bg-white py-12 sm:py-16">
+      <section className="bg-white py-10 sm:py-12">
         <Container>
           <Breadcrumbs
             items={[
@@ -45,14 +45,14 @@ export default function TroubleshootingGuidesPage() {
               { label: "Troubleshooting" }
             ]}
           />
-          <div className="grid gap-8 border-b border-line pb-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
+          <div className="grid gap-6 border-b border-line pb-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
             <SectionHeading
               eyebrow="Troubleshooting"
               title="Flooring problem guides"
               description="Start here when a floor is clicking, lifting, separating, sounding hollow, showing carpet seams, or causing transition problems."
               headingLevel="h1"
             />
-            <div className="rounded-lg border border-line bg-field p-5">
+            <div className="rounded-lg border border-line bg-field p-4">
               <h2 className="inline-flex items-center gap-2 text-lg font-bold text-ink">
                 <FlooringIcon name="shield" className="h-5 w-5 text-accent-700" />
                 What to do first
@@ -64,20 +64,20 @@ export default function TroubleshootingGuidesPage() {
             </div>
           </div>
 
-          <div className="mt-10">
-            <h2 className="text-2xl font-black tracking-normal text-ink">Problem-based guides</h2>
+          <div className="mt-8">
+            <h2 className="text-xl font-black tracking-normal text-ink sm:text-2xl">Problem-based guides</h2>
             <p className="mt-2 max-w-2xl text-sm leading-6 text-slate-600">
               These articles focus on high-intent homeowner problems and connect back to the calculators and flooring type guides that help with next steps.
             </p>
-            <div className="mt-6 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+            <div className="mt-5 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
               {troubleshootingGuides.map((guide) => (
                 <GuideCard key={guide.slug} guide={guide} />
               ))}
             </div>
           </div>
 
-          <div className="mt-14 border-t border-line pt-10">
-            <h2 className="text-2xl font-black tracking-normal text-ink">Troubleshooting by flooring type</h2>
+          <div className="mt-10 border-t border-line pt-8">
+            <h2 className="text-xl font-black tracking-normal text-ink sm:text-2xl">Troubleshooting by flooring type</h2>
             <div className="mt-5 grid gap-3 md:grid-cols-3">
               {nearbyEcosystems.map((ecosystem) => (
                 <Link
@@ -94,13 +94,13 @@ export default function TroubleshootingGuidesPage() {
         </Container>
       </section>
 
-      <section className="bg-field py-12">
+      <section className="bg-field py-10">
         <Container>
-          <h2 className="text-2xl font-black tracking-normal text-ink">Useful calculators while troubleshooting</h2>
+          <h2 className="text-xl font-black tracking-normal text-ink sm:text-2xl">Useful calculators while troubleshooting</h2>
           <p className="mt-2 max-w-2xl text-sm leading-6 text-slate-600">
             Rechecking measurements, waste, seams, and transition lengths can help you explain the issue clearly before a repair or installer visit.
           </p>
-          <div className="mt-6 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-5 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
             {troubleshootingTools.map((tool) => (
               <ToolCard key={tool.slug} tool={tool} />
             ))}
@@ -118,7 +118,7 @@ export default function TroubleshootingGuidesPage() {
         ]}
       />
 
-      <section className="bg-white pb-14">
+      <section className="bg-white pb-10">
         <Container>
           <DisclaimerBox>
             Troubleshooting guides are for planning and conversation only. Product compatibility, repair methods, moisture limits,

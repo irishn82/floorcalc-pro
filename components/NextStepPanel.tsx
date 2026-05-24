@@ -21,13 +21,13 @@ export function NextStepPanel({
   secondaryLinks = []
 }: NextStepPanelProps) {
   return (
-    <section className="bg-white py-12">
+    <section className="bg-white py-10">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <div className="rounded-lg border border-line bg-field p-6 shadow-sm">
-          <div className="flex flex-col gap-5 md:flex-row md:items-start md:justify-between">
+        <div className="rounded-lg border border-line bg-field p-5 shadow-sm">
+          <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
             <div className="max-w-2xl">
-              <h2 className="inline-flex items-center gap-3 text-2xl font-black text-ink">
-                <span className="grid h-9 w-9 place-items-center rounded-lg border border-accent-100 bg-white text-accent-700">
+              <h2 className="inline-flex items-center gap-3 text-xl font-black text-ink">
+                <span className="grid h-8 w-8 place-items-center rounded-lg border border-accent-100 bg-white text-accent-700">
                   <FlooringIcon name="guide" className="h-4 w-4" />
                 </span>
                 {title}
@@ -42,12 +42,12 @@ export function NextStepPanel({
             </Link>
           </div>
           {secondaryLinks.length > 0 ? (
-            <div className="mt-5 grid gap-3 md:grid-cols-3">
+            <div className="mt-4 grid gap-3 md:grid-cols-3">
               {secondaryLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="rounded-md border border-line bg-white p-4 text-sm font-bold text-slate-800 transition hover:border-accent-100 hover:text-accent-700"
+                  className="rounded-md border border-line bg-white p-3.5 text-sm font-bold text-slate-800 transition hover:border-accent-100 hover:text-accent-700"
                 >
                   {link.label}
                   {link.description ? <span className="mt-2 block font-normal leading-6 text-slate-600">{link.description}</span> : null}

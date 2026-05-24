@@ -52,7 +52,7 @@ export default async function ToolPage({ params }: ToolPageProps) {
     <>
       <JsonLd data={toolJsonLd({ name: tool.title, description: tool.description, path: `/tools/${tool.slug}` })} />
       <JsonLd data={faqJsonLd(tool.faq)} />
-      <section className="bg-white py-12 sm:py-16">
+      <section className="bg-white py-10 sm:py-12">
         <Container>
           <Breadcrumbs
             items={[
@@ -68,13 +68,13 @@ export default async function ToolPage({ params }: ToolPageProps) {
               </span>
               Flooring calculator
             </p>
-            <h1 className="mt-3 text-3xl font-black tracking-normal text-ink sm:text-5xl">{tool.title}</h1>
-            <p className="mt-5 text-lg leading-8 text-slate-600">{tool.description}</p>
+            <h1 className="mt-3 text-3xl font-black tracking-normal text-ink sm:text-4xl">{tool.title}</h1>
+            <p className="mt-5 text-base leading-7 text-slate-600 sm:text-lg">{tool.description}</p>
             <p className="mt-4 inline-block max-w-full break-words whitespace-normal rounded-md border border-accent-100 bg-accent-50 px-3 py-1 text-xs font-bold uppercase leading-5 tracking-wide text-accent-700">
               Flooring type: {tool.flooringSystem}
             </p>
           </div>
-          <div className="mt-10">
+          <div className="mt-8">
             <CalculatorLayout
               title={tool.title}
               intro={tool.description}

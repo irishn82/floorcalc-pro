@@ -74,7 +74,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
         })}
       />
       <JsonLd data={faqJsonLd(guide.faq)} />
-      <article className="bg-white py-12 sm:py-16">
+      <article className="bg-white py-10 sm:py-12">
         <Container>
           <Breadcrumbs
             items={[
@@ -86,7 +86,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
               { label: guide.title }
             ]}
           />
-          <div className="grid gap-10 lg:grid-cols-[260px_minmax(0,760px)] lg:items-start">
+          <div className="grid gap-8 lg:grid-cols-[240px_minmax(0,760px)] lg:items-start">
             <aside className="lg:sticky lg:top-24">
               <TableOfContents items={guide.sections.map((section) => ({ id: section.id, title: section.title }))} />
             </aside>
@@ -97,8 +97,8 @@ export default async function GuidePage({ params }: GuidePageProps) {
                 </span>
                 Flooring guide
               </p>
-              <h1 className="mt-3 text-3xl font-black tracking-normal text-ink sm:text-5xl">{guide.title}</h1>
-              <p className="mt-5 text-lg leading-8 text-slate-600">{guide.description}</p>
+              <h1 className="mt-3 text-3xl font-black tracking-normal text-ink sm:text-4xl">{guide.title}</h1>
+              <p className="mt-5 text-base leading-7 text-slate-600 sm:text-lg">{guide.description}</p>
               <div className="mt-4 flex flex-wrap gap-3 text-sm text-slate-500">
                 <span>Updated {guide.dateModified}</span>
                 <span>{guide.readTime}</span>
@@ -114,7 +114,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
                   </Link>
                 ))}
               </div>
-              <div className="mt-8 rounded-lg border border-line bg-field p-5 shadow-sm">
+              <div className="mt-7 rounded-lg border border-line bg-field p-4 shadow-sm">
                 <h2 className="inline-flex items-center gap-2 text-lg font-bold text-ink">
                   <FlooringIcon name="calculator" className="h-5 w-5 text-accent-700" />
                   Useful calculators for this guide
@@ -131,7 +131,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
                   ))}
                 </div>
               </div>
-              <div className="prose-flooring mt-8">
+              <div className="prose-flooring mt-7">
                 {guide.sections.map((section) => (
                   <section key={section.id} id={section.id} className="scroll-mt-24">
                     <h2>{section.title}</h2>

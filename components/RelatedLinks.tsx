@@ -18,20 +18,20 @@ export function RelatedLinks({ title = "Related Resources", links }: RelatedLink
   }
 
   return (
-    <section className="bg-field py-12">
+    <section className="bg-field py-10">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <h2 className="inline-flex items-center gap-3 text-2xl font-black text-ink">
-          <span className="grid h-9 w-9 place-items-center rounded-lg border border-accent-100 bg-white text-accent-700">
+        <h2 className="inline-flex items-center gap-3 text-xl font-black text-ink">
+          <span className="grid h-8 w-8 place-items-center rounded-lg border border-accent-100 bg-white text-accent-700">
             <FlooringIcon name="layers" className="h-4 w-4" />
           </span>
           {title}
         </h2>
-        <div className="mt-6 grid gap-4 md:grid-cols-3">
+        <div className="mt-5 grid gap-4 md:grid-cols-3">
           {links.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="group rounded-lg border border-line bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-accent-100 hover:shadow-soft"
+              className="group rounded-lg border border-line bg-white p-4 shadow-sm transition hover:-translate-y-0.5 hover:border-accent-100 hover:shadow-soft"
             >
               <h3 className="font-bold text-ink group-hover:text-accent-700">{link.label}</h3>
               {link.description ? <p className="mt-2 text-sm leading-6 text-slate-600">{link.description}</p> : null}

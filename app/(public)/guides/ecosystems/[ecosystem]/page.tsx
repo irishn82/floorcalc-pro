@@ -58,7 +58,7 @@ export default async function GuideEcosystemPage({ params }: EcosystemPageProps)
   const siblingEcosystems = guideEcosystems.filter((item) => item.slug !== ecosystem.slug).slice(0, 4);
 
   return (
-    <section className="bg-white py-14 sm:py-16">
+    <section className="bg-white py-10 sm:py-12">
       <Container>
         <Breadcrumbs
           items={[
@@ -67,14 +67,14 @@ export default async function GuideEcosystemPage({ params }: EcosystemPageProps)
             { label: ecosystem.shortTitle }
           ]}
         />
-        <div className="grid gap-8 border-b border-line pb-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
+        <div className="grid gap-6 border-b border-line pb-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
           <SectionHeading
             eyebrow="Flooring type"
             title={ecosystem.title}
             description={ecosystem.description}
             headingLevel="h1"
           />
-          <div className="rounded-lg border border-line bg-field p-5">
+          <div className="rounded-lg border border-line bg-field p-4">
             <h2 className="inline-flex items-center gap-2 text-lg font-bold text-ink">
               <FlooringIcon name={ecosystem.slug === "carpet-padding" ? "carpet" : "layers"} className="h-5 w-5 text-accent-700" />
               Planning focus
@@ -90,13 +90,13 @@ export default async function GuideEcosystemPage({ params }: EcosystemPageProps)
           </div>
         </div>
 
-        <div className="mt-10">
-          <h2 className="text-2xl font-black tracking-normal text-ink">Core guides for this flooring type</h2>
+        <div className="mt-8">
+          <h2 className="text-xl font-black tracking-normal text-ink sm:text-2xl">Core guides for this flooring type</h2>
           <p className="mt-2 max-w-2xl text-sm leading-6 text-slate-600">
             These guides are primarily about {ecosystem.shortTitle} or this exact planning category.
           </p>
           {coreGuides.length > 0 ? (
-            <div className="mt-6 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+            <div className="mt-5 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
               {coreGuides.map((guide) => (
                 <GuideCard key={guide.slug} guide={guide} />
               ))}
@@ -109,12 +109,12 @@ export default async function GuideEcosystemPage({ params }: EcosystemPageProps)
         </div>
 
         {relatedGuides.length > 0 ? (
-          <div className="mt-14 border-t border-line pt-10">
-            <h2 className="text-2xl font-black tracking-normal text-ink">Also relevant</h2>
+          <div className="mt-10 border-t border-line pt-8">
+            <h2 className="text-xl font-black tracking-normal text-ink sm:text-2xl">Also relevant</h2>
             <p className="mt-2 max-w-2xl text-sm leading-6 text-slate-600">
               These guides also apply here, but their main home is another flooring category.
             </p>
-            <div className="mt-6 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+            <div className="mt-5 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
               {relatedGuides.map((guide) => (
                 <GuideCard key={guide.slug} guide={guide} />
               ))}
@@ -123,10 +123,10 @@ export default async function GuideEcosystemPage({ params }: EcosystemPageProps)
         ) : null}
 
         {troubleshootingGuides.length > 0 ? (
-          <div className="mt-14 border-t border-line pt-10">
+          <div className="mt-10 border-t border-line pt-8">
             <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
               <div>
-                <h2 className="text-2xl font-black tracking-normal text-ink">Troubleshooting for {ecosystem.shortTitle}</h2>
+                <h2 className="text-xl font-black tracking-normal text-ink sm:text-2xl">Troubleshooting for {ecosystem.shortTitle}</h2>
                 <p className="mt-2 max-w-2xl text-sm leading-6 text-slate-600">
                   Problem-based guides that help diagnose movement, noise, seams, transitions, and installation concerns.
                 </p>
@@ -135,7 +135,7 @@ export default async function GuideEcosystemPage({ params }: EcosystemPageProps)
                 View all troubleshooting
               </Link>
             </div>
-            <div className="mt-6 grid gap-5 md:grid-cols-3">
+            <div className="mt-5 grid gap-4 md:grid-cols-3">
               {troubleshootingGuides.map((guide) => (
                 <GuideCard key={guide.slug} guide={guide} />
               ))}
@@ -143,12 +143,12 @@ export default async function GuideEcosystemPage({ params }: EcosystemPageProps)
           </div>
         ) : null}
 
-        <div className="mt-14 border-t border-line pt-10">
-          <h2 className="text-2xl font-black tracking-normal text-ink">Useful calculators</h2>
+        <div className="mt-10 border-t border-line pt-8">
+          <h2 className="text-xl font-black tracking-normal text-ink sm:text-2xl">Useful calculators</h2>
           <p className="mt-2 max-w-2xl text-sm leading-6 text-slate-600">
             These tools support the measuring, waste, stair, seam, pattern, and transition decisions connected to this flooring type.
           </p>
-          <div className="mt-6 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-5 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {relatedTools.map((tool) => (
               <ToolCard key={tool.slug} tool={tool} />
             ))}
@@ -168,7 +168,7 @@ export default async function GuideEcosystemPage({ params }: EcosystemPageProps)
           ]}
         />
 
-        <div className="mt-14 grid gap-8 border-t border-line pt-10 lg:grid-cols-[1fr_0.8fr]">
+        <div className="mt-10 grid gap-6 border-t border-line pt-8 lg:grid-cols-[1fr_0.8fr]">
           <DisclaimerBox>
             Flooring type pages organize general flooring planning information. Product compatibility, installation methods, subfloor requirements,
             transition profiles, and warranty-related requirements vary by manufacturer and project conditions.

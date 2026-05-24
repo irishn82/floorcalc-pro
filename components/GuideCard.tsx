@@ -31,25 +31,25 @@ export function GuideCard({ guide }: GuideCardProps) {
   const ecosystem = getGuideEcosystemBySlug(guide.primaryEcosystem);
 
   return (
-    <article className="flooring-card overflow-hidden rounded-lg border border-line bg-white p-5 pt-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-soft">
-      <div className="flex items-start gap-4">
-        <span className="grid h-10 w-10 shrink-0 place-items-center rounded-lg border border-accent-100 bg-accent-50 text-accent-700">
+    <article className="flooring-card overflow-hidden rounded-lg border border-line bg-white p-4 pt-5 shadow-sm transition hover:-translate-y-0.5 hover:shadow-soft">
+      <div className="flex items-start gap-3">
+        <span className="grid h-9 w-9 shrink-0 place-items-center rounded-lg border border-accent-100 bg-accent-50 text-accent-700">
           <FlooringIcon name={getGuideIcon(guide.slug)} />
         </span>
         <div>
           <div className="text-xs font-semibold uppercase tracking-wide text-slate-500">{guide.readTime}</div>
-          <h3 className="mt-2 text-lg font-black text-ink">
+          <h3 className="mt-2 text-base font-black text-ink">
             <Link href={`/guides/${guide.slug}`}>{guide.title}</Link>
           </h3>
         </div>
       </div>
-      <p className="mt-3 text-sm leading-6 text-slate-600">{guide.description}</p>
+      <p className="mt-2.5 text-sm leading-6 text-slate-600">{guide.description}</p>
       {ecosystem ? (
-        <p className="mt-4 inline-flex rounded-md border border-line bg-field px-2.5 py-1 text-xs font-bold uppercase tracking-wide text-slate-600">
+        <p className="mt-3 inline-flex rounded-md border border-line bg-field px-2.5 py-1 text-xs font-bold uppercase tracking-wide text-slate-600">
           {ecosystem.shortTitle}
         </p>
       ) : null}
-      <Link href={`/guides/${guide.slug}`} className="mt-4 inline-flex text-sm font-bold text-accent-700">
+      <Link href={`/guides/${guide.slug}`} className="mt-3 inline-flex text-sm font-bold text-accent-700">
         Read guide
       </Link>
     </article>
