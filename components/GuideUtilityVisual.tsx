@@ -40,6 +40,71 @@ function TransitionTable() {
   );
 }
 
+function ComparisonTable({ columns, rows }: { columns: string[]; rows: string[][] }) {
+  return (
+    <div className="overflow-x-auto rounded-md border border-line bg-white">
+      <table className="w-full min-w-[34rem] text-left text-sm">
+        <thead className="bg-accent-50 text-xs font-bold uppercase tracking-wide text-accent-800">
+          <tr>
+            {columns.map((column) => (
+              <th key={column} className="p-2">
+                {column}
+              </th>
+            ))}
+          </tr>
+        </thead>
+        <tbody className="divide-y divide-line">
+          {rows.map((row) => (
+            <tr key={row.join("-")} className="align-top">
+              {row.map((cell, index) => (
+                <td key={cell} className={index === 0 ? "p-2 font-bold text-ink" : "p-2 leading-5 text-slate-600"}>
+                  {cell}
+                </td>
+              ))}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
+function EngineeredConcreteVisual() {
+  const rows = [
+    ["Floating", "Approved underlayment and expansion space", "Can help with acoustic requirements; may be easier to repair"],
+    ["Glue-down", "Compatible adhesive, slab prep, and moisture testing", "Can feel more bonded; prep and moisture control are critical"]
+  ];
+
+  return (
+    <div className="grid gap-3">
+      <div className="rounded-md border border-line bg-white p-3">
+        <div className="space-y-2" aria-label="Concrete slab to engineered hardwood layer diagram">
+          {[
+            ["Engineered hardwood", "Finished wood surface"],
+            ["Approved adhesive, underlayment, or moisture system", "Product-specific layer"],
+            ["Concrete slab", "Flat, clean, and moisture-tested"]
+          ].map(([label, detail], index) => (
+            <div
+              key={label}
+              className={`rounded border p-3 ${
+                index === 0
+                  ? "border-accent-200 bg-white"
+                  : index === 1
+                    ? "border-accent-100 bg-accent-50"
+                    : "border-slate-200 bg-slate-100"
+              }`}
+            >
+              <p className="text-sm font-bold text-ink">{label}</p>
+              <p className="mt-1 text-xs leading-5 text-slate-600">{detail}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+      <ComparisonTable columns={["Method", "Must verify", "Practical note"]} rows={rows} />
+    </div>
+  );
+}
+
 function PlankDirectionVisual() {
   return (
     <div className="grid gap-3 sm:grid-cols-2">
@@ -61,6 +126,22 @@ function PlankDirectionVisual() {
   );
 }
 
+function DirectionDecisionVisual() {
+  const rows = [
+    ["Longest sight line", "Usually run with the main view", "Helps connected rooms feel intentional"],
+    ["Hallway flow", "Often run down the hallway", "Avoids a chopped-up look and many short pieces"],
+    ["Natural light", "Consider running with strong light", "May make plank edges less noticeable"],
+    ["Direction changes", "Use a doorway or transition", "Plan trim and expansion requirements early"]
+  ];
+
+  return (
+    <div className="grid gap-3">
+      <PlankDirectionVisual />
+      <ComparisonTable columns={["Layout factor", "Direction consideration", "Why it matters"]} rows={rows} />
+    </div>
+  );
+}
+
 function SeamVisual() {
   return (
     <div className="rounded-md border border-line bg-white p-3">
@@ -73,6 +154,22 @@ function SeamVisual() {
       <p className="mt-2 text-xs leading-5 text-slate-600">
         Seam visibility depends on roll width, light, traffic, pile direction, pattern match, and installer layout.
       </p>
+    </div>
+  );
+}
+
+function LaminateSeparationVisual() {
+  const rows = [
+    ["Uneven subfloor", "Gap returns in the same area", "Check for bounce, low spots, or humps"],
+    ["Moisture or humidity", "Swollen edges, seasonal movement", "Look for leaks, wet cleaning, or room humidity swings"],
+    ["Pinned floating floor", "Gaps away from tight trim or transitions", "Check expansion space and fixed objects"],
+    ["Damaged locking joint", "Joint will not stay closed", "Inspect plank edges before forcing repair"]
+  ];
+
+  return (
+    <div className="grid gap-3">
+      <ExpansionGapVisual />
+      <ComparisonTable columns={["Common cause", "Likely symptom", "What to check"]} rows={rows} />
     </div>
   );
 }
@@ -98,6 +195,36 @@ function ExpansionGapVisual() {
   );
 }
 
+function HardwoodAcclimationVisual() {
+  const rows = [
+    ["Solid hardwood", "Often more sensitive to moisture movement", "Moisture readings and stable HVAC are especially important"],
+    ["Engineered hardwood", "Usually more dimensionally stable, but not immune", "Follow the exact product storage and acclimation instructions"]
+  ];
+
+  return (
+    <div className="grid gap-3">
+      <div className="rounded-md border border-line bg-white p-3">
+        <div className="grid gap-2 sm:grid-cols-3" aria-label="Hardwood acclimation timeline diagram">
+          {[
+            ["1", "Home stabilized", "HVAC running and wet work complete"],
+            ["2", "Material stored correctly", "Cartons handled per product instructions"],
+            ["3", "Readings verified", "Flooring and subfloor within required range"]
+          ].map(([step, title, detail]) => (
+            <div key={step} className="rounded border border-accent-100 bg-accent-50 p-3">
+              <span className="grid h-7 w-7 place-items-center rounded-full bg-accent-700 text-xs font-black text-white">
+                {step}
+              </span>
+              <p className="mt-2 text-sm font-bold text-ink">{title}</p>
+              <p className="mt-1 text-xs leading-5 text-slate-600">{detail}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+      <ComparisonTable columns={["Product type", "Acclimation concern", "Planning note"]} rows={rows} />
+    </div>
+  );
+}
+
 function TileLayoutVisual() {
   return (
     <div className="rounded-md border border-line bg-white p-3">
@@ -114,6 +241,30 @@ function TileLayoutVisual() {
 }
 
 export function GuideUtilityVisual({ guide }: GuideUtilityVisualProps) {
+  if (guide.slug === "can-engineered-hardwood-go-over-concrete") {
+    return (
+      <VisualShell title="Engineered hardwood over concrete planning view">
+        <EngineeredConcreteVisual />
+      </VisualShell>
+    );
+  }
+
+  if (guide.slug === "how-long-should-hardwood-acclimate") {
+    return (
+      <VisualShell title="Hardwood acclimation planning view">
+        <HardwoodAcclimationVisual />
+      </VisualShell>
+    );
+  }
+
+  if (guide.slug === "why-is-my-laminate-floor-separating") {
+    return (
+      <VisualShell title="Laminate separation troubleshooting view">
+        <LaminateSeparationVisual />
+      </VisualShell>
+    );
+  }
+
   if (["flooring-transition-guide", "t-mold-vs-reducer-vs-end-cap", "why-is-my-transition-strip-moving"].includes(guide.slug)) {
     return (
       <VisualShell title="Transition profile quick comparison">
@@ -125,7 +276,7 @@ export function GuideUtilityVisual({ guide }: GuideUtilityVisualProps) {
   if (["which-direction-should-flooring-run", "flooring-direction-mistakes", "luxury-vinyl-over-tile"].includes(guide.slug)) {
     return (
       <VisualShell title="Layout direction examples">
-        <PlankDirectionVisual />
+        <DirectionDecisionVisual />
       </VisualShell>
     );
   }
@@ -143,6 +294,7 @@ export function GuideUtilityVisual({ guide }: GuideUtilityVisualProps) {
       "why-is-my-floor-clicking",
       "why-is-my-lvp-floor-clicking",
       "why-is-my-lvp-lifting",
+      "why-is-my-laminate-floor-separating",
       "laminate-floor-separating-what-to-check-first",
       "why-does-my-floor-feel-hollow",
       "subfloor-flatness-requirements-lvp",

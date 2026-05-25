@@ -228,7 +228,7 @@ export const guides: Guide[] = [
     metadataTitle: "LVP Waste Percentage Guide: 5%, 10%, 15%, or 20%?",
     metadataDescription:
       "Learn how much LVP waste to add for straight lay, diagonal layouts, closets, kitchens, bathrooms, plank direction, and repairs.",
-    dateModified: "2026-05-22",
+    dateModified: "2026-05-25",
     readTime: "10 min read",
     primaryEcosystem: "lvp",
     materialTypes: ["lvp"],
@@ -1097,6 +1097,7 @@ export const guides: Guide[] = [
       "flooring-direction-mistakes",
       "flooring-transition-guide",
       "t-mold-vs-reducer-vs-end-cap",
+      "why-is-my-transition-strip-moving",
       "luxury-vinyl-over-tile"
     ],
     sections: [
@@ -1104,7 +1105,7 @@ export const guides: Guide[] = [
         id: "quick-answer",
         title: "Quick answer",
         paragraphs: [
-          "In most homes, plank flooring should run with the longest main sight line, the flow of a hallway, or the direction that makes connected rooms look intentional. Natural light, stairs, transitions, and product limits can change that decision.",
+          "In most homes, plank flooring should run with the longest main sight line, the flow of a hallway, or the direction that makes connected rooms look intentional. Natural light, stairs, transitions, waste, and product limits can change that decision.",
           "There is no single direction that is correct for every floor. The best direction is the one that looks consistent, keeps plank joints practical, avoids awkward transitions, manages waste, and works with the product and jobsite conditions."
         ],
         bullets: [
@@ -1119,7 +1120,7 @@ export const guides: Guide[] = [
         title: "What to check first",
         paragraphs: [
           "Before choosing a direction, stand at the main entry point and look through the largest connected space. Then check hallways, stair landings, doorways, islands, fireplaces, and any place where the floor may need a transition.",
-          "Also check the product instructions for maximum run length, expansion breaks, stair nose requirements, and installation limits. Direction is a design choice, but it still has to work with the flooring system."
+          "Also check the product instructions for maximum run length, expansion breaks, stair nose requirements, and installation limits. Direction is a design choice, but it still has to work with the flooring system. If a direction change is likely, plan the transition type before ordering."
         ],
         bullets: [
           "Find the longest uninterrupted sight line.",
@@ -1172,6 +1173,21 @@ export const guides: Guide[] = [
         ]
       },
       {
+        id: "layout-decision-checklist",
+        title: "Layout decision checklist",
+        paragraphs: [
+          "A good flooring direction decision balances appearance and installation practicality. If one option looks better but creates narrow final rows, multiple direction changes, or extra transitions, compare it against a simpler layout before ordering material.",
+          "Use the waste calculator when a layout creates diagonal cuts, many closets, or direction changes. Use the transition estimator when different rooms or flooring types meet."
+        ],
+        bullets: [
+          "Choose the main visual direction first.",
+          "Check hallway flow and stair landings second.",
+          "Mark every doorway where a transition may be needed.",
+          "Compare waste before choosing a direction with many short cuts.",
+          "Ask an installer to review long runs and product-required expansion breaks."
+        ]
+      },
+      {
         id: "visual-widening",
         title: "Can flooring direction make a room look wider?",
         paragraphs: [
@@ -1213,8 +1229,8 @@ export const guides: Guide[] = [
         id: "example",
         title: "Example direction decision",
         paragraphs: [
-          "Imagine an open main floor with a long living room connected to a narrow hallway and a kitchen island. Running planks with the long living room wall creates the best main view, but it means the hallway runs across the planks.",
-          "The homeowner and installer might compare two options: keep one direction through the whole main floor, or use a transition at the hallway to run flooring down the hall. The right answer depends on sight lines, product requirements, transition placement, and acceptable waste."
+          "Imagine an open main floor with a long living room connected to a narrow hallway, a kitchen island, and stairs near the entry. Running planks with the long living room wall creates the best main view, but it means the hallway runs across the planks.",
+          "The homeowner and installer compare two options: keep one direction through the whole main floor for a cleaner open concept look, or use a transition at the hallway to run flooring down the hall. The final choice depends on sight lines, product requirements, transition placement, stair nose layout, and acceptable waste."
         ]
       },
       {
@@ -1245,37 +1261,47 @@ export const guides: Guide[] = [
       {
         question: "Should flooring run the same direction in every room?",
         answer:
-          "Often yes in connected spaces, but direction can change at doorways, transitions, hallways, stairs, or product-required breaks when the layout calls for it."
+          "Often yes in connected spaces because one direction usually looks cleaner and avoids unnecessary breaks. Direction can still change at doorways, transitions, hallways, stairs, or product-required expansion breaks when the layout calls for it."
       },
       {
         question: "Which direction should wood or engineered hardwood flooring run?",
         answer:
-          "Wood and engineered hardwood often look best with the main sight line or longest wall, but joist direction, subfloor requirements, room layout, and product instructions can affect the final layout."
+          "Wood and engineered hardwood often look best with the main sight line or longest wall, but joist direction, subfloor requirements, room layout, plank width, and product instructions can affect the final layout. Ask the installer to review the full floor plan before committing."
       },
       {
         question: "Should flooring run toward the window?",
         answer:
-          "Natural light can be a useful guide because it may make seams less noticeable, but room shape, hallway flow, transitions, and product instructions also matter."
+          "Natural light can be a useful guide because it may make seams and plank edges less noticeable, especially when strong light enters from one side of the room. It is only one factor. Room shape, hallway flow, transitions, stairs, and product instructions also matter."
       },
       {
         question: "Which direction should flooring run in a hallway?",
         answer:
-          "Flooring usually looks cleaner when it runs down the length of a hallway. Running across a hallway can create more short cuts and a busier look."
+          "Flooring usually looks cleaner when it runs down the length of a hallway. Running across a hallway can create more short cuts, a busier look, and more seams. If the hallway conflicts with the main room direction, a doorway transition may be worth considering."
       },
       {
         question: "Does plank direction affect waste?",
         answer:
-          "Yes. Direction affects cut patterns, usable offcuts, narrow rows, hallway cuts, and doorway cuts. Complex directions can require a higher waste allowance."
+          "Yes. Direction affects cut patterns, usable offcuts, narrow rows, hallway cuts, and doorway cuts. Complex directions, diagonal layouts, and direction changes can require a higher waste allowance than a simple straight layout."
       },
       {
         question: "Can I change flooring direction between rooms?",
         answer:
-          "Yes, but it usually needs a logical break such as a doorway or transition. Confirm expansion, trim, and installation requirements before planning the change."
+          "Yes, but it usually needs a logical break such as a doorway or transition. Confirm expansion, trim, transition profile, and installation requirements before planning the change so the finished floor looks intentional."
       },
       {
         question: "Should flooring run parallel or perpendicular to stairs?",
         answer:
-          "It depends on the landing, hallway, stair nose system, and product instructions. Stairs should be reviewed as part of the full layout, not as an afterthought."
+          "It depends on the landing, hallway, stair nose system, product instructions, and where the eye naturally travels from the stairs. Stairs should be reviewed as part of the full layout, not as an afterthought."
+      },
+      {
+        question: "Can flooring direction make a small room look bigger?",
+        answer:
+          "It can. Running planks with the longest line can make a room feel longer, while running across a narrow room can make it feel wider. In connected rooms, the overall flow usually matters more than one room by itself."
+      },
+      {
+        question: "Should LVP, laminate, and hardwood follow the same direction rules?",
+        answer:
+          "The visual rules are similar, but each product can have different limits for expansion, long runs, underlayment, stair noses, and transitions. Check the specific installation instructions before assuming one layout works for every material."
       }
     ],
     disclaimer:

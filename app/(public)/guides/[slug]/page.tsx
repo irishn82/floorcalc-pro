@@ -12,6 +12,7 @@ import { NextStepPanel } from "@/components/NextStepPanel";
 import { RelatedLinks } from "@/components/RelatedLinks";
 import { TableOfContents } from "@/components/TableOfContents";
 import { guides } from "@/data/guides";
+import type { GuideSlug, ToolSlug } from "@/data/types";
 import {
   getEcosystemRelatedGuides,
   getGuideBySlug,
@@ -25,6 +26,54 @@ import { articleJsonLd, faqJsonLd } from "@/lib/seo/schema";
 
 type GuidePageProps = {
   params: Promise<{ slug: string }>;
+};
+
+type NextStepTarget = { type: "guide"; slug: GuideSlug } | { type: "tool"; slug: ToolSlug };
+
+const targetedNextStepTargets: Partial<
+  Record<
+    GuideSlug,
+    {
+      primary: NextStepTarget;
+      secondary: NextStepTarget[];
+    }
+  >
+> = {
+  "can-engineered-hardwood-go-over-concrete": {
+    primary: { type: "tool", slug: "flooring-square-footage-calculator" },
+    secondary: [
+      { type: "guide", slug: "moisture-barrier-engineered-hardwood-over-concrete" },
+      { type: "guide", slug: "floating-vs-glue-down-engineered-hardwood-over-concrete" },
+      { type: "guide", slug: "how-long-should-hardwood-acclimate" },
+      { type: "tool", slug: "waste-calculator" }
+    ]
+  },
+  "why-is-my-laminate-floor-separating": {
+    primary: { type: "guide", slug: "laminate-floor-separating-what-to-check-first" },
+    secondary: [
+      { type: "guide", slug: "how-flat-should-a-subfloor-be-for-laminate" },
+      { type: "guide", slug: "best-underlayment-for-laminate-flooring" },
+      { type: "guide", slug: "flooring-direction-mistakes" },
+      { type: "guide", slug: "why-is-my-floor-clicking" }
+    ]
+  },
+  "which-direction-should-flooring-run": {
+    primary: { type: "tool", slug: "waste-calculator" },
+    secondary: [
+      { type: "tool", slug: "transition-estimator" },
+      { type: "guide", slug: "flooring-direction-mistakes" },
+      { type: "guide", slug: "flooring-transition-guide" },
+      { type: "tool", slug: "flooring-square-footage-calculator" }
+    ]
+  },
+  "how-long-should-hardwood-acclimate": {
+    primary: { type: "guide", slug: "hardwood-acclimation-mistakes" },
+    secondary: [
+      { type: "guide", slug: "can-engineered-hardwood-go-over-concrete" },
+      { type: "guide", slug: "why-is-my-hardwood-floor-cupping" },
+      { type: "guide", slug: "moisture-barrier-engineered-hardwood-over-concrete" }
+    ]
+  }
 };
 
 export function generateStaticParams() {
@@ -63,6 +112,38 @@ export default async function GuidePage({ params }: GuidePageProps) {
   const primaryEcosystem = ecosystemLinks[0];
   const nextStepTool = relatedTools[0];
   const nextStepGuide = explicitRelatedGuides.find((relatedGuide) => relatedGuide.slug !== guide.slug) ?? ecosystemRelatedGuides[0];
+  const targetedNextSteps = targetedNextStepTargets[guide.slug];
+  const resolveNextStepTarget = (target: NextStepTarget) => {
+    if (target.type === "guide") {
+      const targetGuide = getGuideBySlug(target.slug);
+
+      return targetGuide
+        ? {
+            href: `/guides/${targetGuide.slug}`,
+            label: targetGuide.title,
+            description: "Read the next guide connected to this topic."
+          }
+        : null;
+    }
+
+    const targetTool = getRelatedTools([target.slug])[0];
+
+    return targetTool
+      ? {
+          href: `/tools/${targetTool.slug}`,
+          label: `Use ${targetTool.shortTitle}`,
+          description: targetTool.description
+        }
+      : null;
+  };
+  const targetedPrimaryLink = targetedNextSteps ? resolveNextStepTarget(targetedNextSteps.primary) : null;
+  const targetedSecondaryLinks = targetedNextSteps
+    ? targetedNextSteps.secondary.flatMap((target) => {
+        const resolvedLink = resolveNextStepTarget(target);
+
+        return resolvedLink ? [resolvedLink] : [];
+      })
+    : null;
 
   return (
     <>
@@ -215,36 +296,47 @@ export default async function GuidePage({ params }: GuidePageProps) {
         }))}
       />
       <NextStepPanel
-        description="Use the related calculator to turn the article into a material estimate, then compare the next guide before ordering or calling an installer."
-        primaryLink={{
-          href: nextStepTool ? `/tools/${nextStepTool.slug}` : "/tools",
-          label: nextStepTool ? `Use ${nextStepTool.shortTitle}` : "Open flooring calculators"
-        }}
-        secondaryLinks={[
-          ...(nextStepGuide
-            ? [
-                {
-                  href: `/guides/${nextStepGuide.slug}`,
-                  label: nextStepGuide.title,
-                  description: "Read the next guide connected to this topic."
-                }
-              ]
-            : []),
-          ...(primaryEcosystem
-            ? [
-                {
-                  href: `/guides/ecosystems/${primaryEcosystem.slug}`,
-                  label: `Browse ${primaryEcosystem.shortTitle} guides`,
-                  description: "See the full flooring type section."
-                }
-              ]
-            : []),
-          {
-            href: "/guides/troubleshooting",
-            label: "Troubleshooting hub",
-            description: "Compare common flooring problems and causes."
+        title="Next recommended steps"
+        description="Use these calculators and related guides to turn the article into a practical plan before ordering material or calling an installer."
+        primaryLink={
+          targetedPrimaryLink ?? {
+            href: nextStepTool ? `/tools/${nextStepTool.slug}` : "/tools",
+            label: nextStepTool ? `Use ${nextStepTool.shortTitle}` : "Open flooring calculators"
           }
-        ].slice(0, 3)}
+        }
+        secondaryLinks={
+          targetedSecondaryLinks ??
+          [
+            ...(nextStepGuide
+              ? [
+                  {
+                    href: `/guides/${nextStepGuide.slug}`,
+                    label: nextStepGuide.title,
+                    description: "Read the next guide connected to this topic."
+                  }
+                ]
+              : []),
+            ...(relatedTools.slice(1, 3).map((tool) => ({
+              href: `/tools/${tool.slug}`,
+              label: `Use ${tool.shortTitle}`,
+              description: tool.description
+            })) ?? []),
+            ...(primaryEcosystem
+              ? [
+                  {
+                    href: `/guides/ecosystems/${primaryEcosystem.slug}`,
+                    label: `Browse ${primaryEcosystem.shortTitle} guides`,
+                    description: "See the full flooring type section."
+                  }
+                ]
+              : []),
+            {
+              href: "/guides/troubleshooting",
+              label: "Troubleshooting hub",
+              description: "Compare common flooring problems and causes."
+            }
+          ].slice(0, 4)
+        }
       />
       <FAQSection items={guide.faq} />
     </>
