@@ -122,7 +122,7 @@ export function GuideUtilityVisual({ guide }: GuideUtilityVisualProps) {
     );
   }
 
-  if (["which-direction-should-flooring-run", "luxury-vinyl-over-tile"].includes(guide.slug)) {
+  if (["which-direction-should-flooring-run", "flooring-direction-mistakes", "luxury-vinyl-over-tile"].includes(guide.slug)) {
     return (
       <VisualShell title="Layout direction examples">
         <PlankDirectionVisual />
@@ -143,6 +143,7 @@ export function GuideUtilityVisual({ guide }: GuideUtilityVisualProps) {
       "why-is-my-floor-clicking",
       "why-is-my-lvp-floor-clicking",
       "why-is-my-lvp-lifting",
+      "laminate-floor-separating-what-to-check-first",
       "why-does-my-floor-feel-hollow",
       "subfloor-flatness-requirements-lvp",
       "glue-down-vs-floating-floor"

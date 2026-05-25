@@ -15,6 +15,7 @@ type GuideDraft = {
   description: string;
   metadataTitle: string;
   metadataDescription: string;
+  dateModified?: string;
   readTime: string;
   primaryEcosystem: GuideEcosystemSlug;
   secondaryEcosystems?: GuideEcosystemSlug[];
@@ -37,7 +38,7 @@ function buildGuide(input: GuideDraft): Guide {
     description: input.description,
     metadataTitle: input.metadataTitle,
     metadataDescription: input.metadataDescription,
-    dateModified: "2026-05-23",
+    dateModified: input.dateModified ?? "2026-05-23",
     readTime: input.readTime,
     primaryEcosystem: input.primaryEcosystem,
     secondaryEcosystems: input.secondaryEcosystems,
@@ -731,22 +732,39 @@ const guideDrafts: GuideDraft[] = [
     metadataTitle: "Why Is My Laminate Floor Separating? Gaps and Joint Problems",
     metadataDescription:
       "Learn common causes of laminate floor separation, including subfloor flatness, moisture, locking damage, expansion gaps, and acclimation.",
+    dateModified: "2026-05-25",
     readTime: "9 min read",
     primaryEcosystem: "laminate",
     materialTypes: ["laminate"],
     topicCluster: "installation-method",
     relatedTools: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"],
     relatedGuides: [
+      "laminate-floor-separating-what-to-check-first",
       "how-flat-should-a-subfloor-be-for-laminate",
       "best-underlayment-for-laminate-flooring",
       "can-laminate-flooring-be-waterproof",
       "which-direction-should-flooring-run"
     ],
     quickAnswer: [
-      "Laminate floors separate when the locking joints lose support, movement becomes excessive, or the floor cannot expand and contract as intended. Common causes include uneven subfloors, moisture changes, damaged locking edges, poor acclimation, wrong underlayment, or tight expansion gaps.",
+      "Laminate floors separate when locking joints lose support, the floating floor moves too much, or the floor cannot expand and contract as intended. Common causes include uneven subfloors, moisture or humidity changes, damaged locking edges, wrong underlayment, heavy fixed objects, or tight expansion gaps.",
       "The repair depends on the cause. Tapping planks back together may only be temporary if the floor is still moving or the joints are damaged."
     ],
     keySections: [
+      {
+        id: "what-to-check-first",
+        title: "What to check first",
+        paragraphs: [
+          "Start by locating where the gaps repeat. End gaps in one hallway, side gaps near a doorway, and separation across a whole room can point to different causes.",
+          "Check expansion space around walls, transitions, cabinets, islands, and door frames. Then look for bounce, hollow areas, moisture sources, and signs that the locking joint itself is damaged."
+        ],
+        bullets: [
+          "Mark every gap and note whether it returns after being closed.",
+          "Check whether the floor is pinned by trim, transitions, cabinets, or heavy fixed objects.",
+          "Look for low spots or flexing near the separated joints.",
+          "Inspect for moisture, swollen edges, or recent humidity changes.",
+          "Review whether the underlayment is approved for the laminate."
+        ]
+      },
       {
         id: "movement-causes",
         title: "Movement and unsupported joints",
@@ -776,6 +794,14 @@ const guideDrafts: GuideDraft[] = [
           "Damaged locking joints, planks installed out of alignment, underlayment that is too soft, or missing expansion gaps can all create separation later.",
           "Heavy furniture or fixed objects can also restrict floating floor movement. If the floor is trapped in one area, pressure may show up as gaps somewhere else."
         ]
+      },
+      {
+        id: "when-to-call-a-professional",
+        title: "When to call a professional",
+        paragraphs: [
+          "Call an installer if gaps keep returning, the floor is lifting, joints look broken, moisture is suspected, or the separation runs through a large connected area.",
+          "A professional can check whether repair means closing a gap, replacing damaged planks, correcting a low spot, changing a transition, or lifting part of the floor."
+        ]
       }
     ],
     example: [
@@ -794,6 +820,11 @@ const guideDrafts: GuideDraft[] = [
         question: "Can laminate gaps be fixed?",
         answer:
           "Sometimes. Small gaps may be closed if the joints are intact, but recurring gaps usually need the cause corrected."
+      },
+      {
+        question: "Why does my laminate floor keep separating after I tap it back?",
+        answer:
+          "Recurring separation usually means the floor is still moving, the joint is damaged, the subfloor is not supporting the joint, or expansion is restricted somewhere nearby."
       },
       {
         question: "Does humidity make laminate separate?",
@@ -1092,22 +1123,39 @@ const guideDrafts: GuideDraft[] = [
     metadataTitle: "How Long Should Hardwood Acclimate? Moisture and Jobsite Guide",
     metadataDescription:
       "Understand hardwood acclimation, moisture testing, HVAC conditions, solid versus engineered products, and when flooring is ready to install.",
+    dateModified: "2026-05-25",
     readTime: "9 min read",
     primaryEcosystem: "hardwood-engineered-hardwood",
     materialTypes: ["hardwood", "engineered-hardwood"],
     topicCluster: "installation-method",
     relatedTools: ["flooring-square-footage-calculator", "waste-calculator"],
     relatedGuides: [
+      "hardwood-acclimation-mistakes",
       "solid-hardwood-vs-engineered-hardwood",
       "why-is-my-hardwood-floor-cupping",
       "can-engineered-hardwood-go-over-concrete",
       "flooring-over-radiant-heat"
     ],
     quickAnswer: [
-      "Hardwood acclimation should be based on moisture readings and stable jobsite conditions, not only a number of days. Solid and engineered hardwood products can have different requirements, and the room should be close to normal living conditions before installation.",
+      "Hardwood flooring acclimation time should be based on moisture readings and stable jobsite conditions, not only a fixed number of days. Solid and engineered hardwood products can have different requirements, and the room should be close to normal living conditions before installation.",
       "The installer should verify the flooring and subfloor moisture levels are within the product's required range before installing."
     ],
     keySections: [
+      {
+        id: "what-to-check-first",
+        title: "What to check first",
+        paragraphs: [
+          "Before installing hardwood, check whether HVAC is running, the room is at normal living conditions, wet construction work is complete, and the flooring has been stored exactly as the product instructions require.",
+          "Then compare moisture readings for the flooring and subfloor. A calendar day count is useful only after the jobsite is stable enough for the product."
+        ],
+        bullets: [
+          "Confirm temperature and humidity are within the product's required range.",
+          "Check flooring storage instructions before opening or stacking cartons.",
+          "Verify wood subfloor or concrete slab moisture requirements.",
+          "Do not acclimate in a garage, porch, or unconditioned room unless the manufacturer allows it.",
+          "Document readings when the installer or manufacturer requires it."
+        ]
+      },
       {
         id: "not-just-time",
         title: "Acclimation is not just waiting",
@@ -1137,6 +1185,14 @@ const guideDrafts: GuideDraft[] = [
           "Solid hardwood is usually more sensitive to moisture movement across the board width. Engineered hardwood can be more stable, but it still needs proper jobsite conditions.",
           "Some engineered products have specific instructions not to acclimate in the same way as solid wood. Follow the written instructions for the actual product."
         ]
+      },
+      {
+        id: "when-to-call-a-professional",
+        title: "When to call a professional",
+        paragraphs: [
+          "Call a flooring professional when moisture readings are outside the product range, the home is still drying from construction, the subfloor is concrete, or the project uses wide planks, solid hardwood, radiant heat, or below-grade conditions.",
+          "Professional moisture testing is especially important when the consequence of installing too early could be cupping, gapping, adhesive failure, or a rejected claim later."
+        ]
       }
     ],
     example: [
@@ -1155,6 +1211,11 @@ const guideDrafts: GuideDraft[] = [
         question: "Is 72 hours enough for hardwood acclimation?",
         answer:
           "Sometimes, but not always. Moisture readings and jobsite conditions matter more than a universal time period."
+      },
+      {
+        question: "How long should hardwood flooring acclimate before installation?",
+        answer:
+          "The right acclimation time depends on the product, wood species, plank width, packaging instructions, subfloor moisture, and whether the home is already at normal temperature and humidity."
       },
       {
         question: "Should hardwood boxes be opened during acclimation?",
@@ -1182,22 +1243,40 @@ const guideDrafts: GuideDraft[] = [
     metadataTitle: "Can Engineered Hardwood Go Over Concrete? Slab Prep Guide",
     metadataDescription:
       "Find out when engineered hardwood can go over concrete and what to check for moisture, slab flatness, adhesives, and installation method.",
+    dateModified: "2026-05-25",
     readTime: "9 min read",
     primaryEcosystem: "hardwood-engineered-hardwood",
     materialTypes: ["engineered-hardwood"],
     topicCluster: "subfloor-prep",
     relatedTools: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"],
     relatedGuides: [
+      "moisture-barrier-engineered-hardwood-over-concrete",
+      "floating-vs-glue-down-engineered-hardwood-over-concrete",
       "solid-hardwood-vs-engineered-hardwood",
       "how-long-should-hardwood-acclimate",
       "why-is-my-hardwood-floor-cupping",
       "flooring-over-radiant-heat"
     ],
     quickAnswer: [
-      "Some engineered hardwood products can be installed over concrete when the product is approved for that use and the slab meets moisture, flatness, cleanliness, and installation method requirements.",
-      "The details matter. A glue-down engineered hardwood floor needs adhesive compatibility and moisture control, while a floating engineered floor needs approved underlayment, expansion space, and a flat slab."
+      "Yes, some engineered hardwood flooring can be installed over concrete when the product is approved for that use and the slab meets moisture, flatness, cleanliness, and installation method requirements.",
+      "The details matter. Laying engineered wood flooring on concrete may require slab moisture testing, a compatible vapor retarder or moisture mitigation system, approved adhesive or underlayment, expansion space, and a flat slab."
     ],
     keySections: [
+      {
+        id: "what-to-check-first",
+        title: "What to check first",
+        paragraphs: [
+          "Start with the installation instructions for the exact engineered hardwood product. Confirm that concrete is an approved substrate and whether the allowed method is floating, glue-down, or another system.",
+          "Next, check slab grade level, moisture testing requirements, flatness, surface contamination, and transition height. These details decide whether the project is simple planning or needs installer review before ordering."
+        ],
+        bullets: [
+          "Confirm the product is approved over concrete and for the room grade level.",
+          "Find the required slab moisture test and acceptable result range.",
+          "Check whether the system needs a vapor retarder, moisture barrier, adhesive, or underlayment.",
+          "Verify slab flatness before flooring is delivered.",
+          "Plan door clearances and transitions to adjacent floors."
+        ]
+      },
       {
         id: "product-approval",
         title: "Start with product approval",
@@ -1227,6 +1306,14 @@ const guideDrafts: GuideDraft[] = [
           "Floating engineered hardwood can be a good fit for some concrete projects when the product allows it. It needs expansion space and approved underlayment.",
           "Glue-down engineered hardwood can feel very solid, but it relies on the correct adhesive, spread rate, open time, and slab conditions. Moisture mitigation may be needed in some projects."
         ]
+      },
+      {
+        id: "when-to-call-a-professional",
+        title: "When to call a professional",
+        paragraphs: [
+          "Use a professional installer when the slab is below grade, moisture readings are uncertain, the floor will be glued down, the building has sound requirements, or the product instructions require documented testing.",
+          "Concrete can look dry and still exceed the flooring system's limits. A professional review can prevent choosing the wrong adhesive, underlayment, or moisture control method."
+        ]
       }
     ],
     example: [
@@ -1245,6 +1332,11 @@ const guideDrafts: GuideDraft[] = [
         question: "Can solid hardwood go over concrete like engineered hardwood?",
         answer:
           "Usually not in the same way. Engineered hardwood has more concrete-approved options, but product approval still matters."
+      },
+      {
+        question: "Can engineered hardwood flooring be laid directly on concrete?",
+        answer:
+          "Only when the product and installation method allow it and the slab meets the moisture, flatness, cleanliness, and preparation requirements. Many projects still need a vapor retarder, underlayment, adhesive system, or moisture mitigation."
       },
       {
         question: "Is floating engineered hardwood good over concrete?",
@@ -2348,6 +2440,517 @@ const guideDrafts: GuideDraft[] = [
         question: "Can tile layout hide crooked walls?",
         answer:
           "It can reduce how noticeable they are, but very out-of-square rooms require careful cut planning."
+      }
+    ],
+    disclaimer: manufacturerDisclaimer
+  },
+  {
+    slug: "moisture-barrier-engineered-hardwood-over-concrete",
+    title: "Moisture Barrier for Engineered Hardwood Over Concrete",
+    description:
+      "Learn when engineered hardwood over concrete may need a vapor barrier, moisture mitigation system, slab testing, or product-specific adhesive setup.",
+    metadataTitle: "Moisture Barrier for Engineered Hardwood Over Concrete",
+    metadataDescription:
+      "Plan engineered hardwood over concrete with moisture testing, vapor barriers, mitigation systems, adhesives, and slab preparation.",
+    dateModified: "2026-05-25",
+    readTime: "9 min read",
+    primaryEcosystem: "hardwood-engineered-hardwood",
+    secondaryEcosystems: ["planning-measuring-transitions"],
+    materialTypes: ["engineered-hardwood"],
+    topicCluster: "subfloor-prep",
+    relatedTools: ["flooring-square-footage-calculator", "waste-calculator"],
+    relatedGuides: [
+      "can-engineered-hardwood-go-over-concrete",
+      "floating-vs-glue-down-engineered-hardwood-over-concrete",
+      "glue-down-vs-floating-floor",
+      "how-long-should-hardwood-acclimate"
+    ],
+    quickAnswer: [
+      "Engineered hardwood over concrete often needs moisture control, but the right solution depends on the product and installation method. Some systems use a vapor retarder under floating floors, while glue-down systems may require a specific adhesive, primer, or moisture mitigation product.",
+      "Do not guess based on the slab looking dry. Concrete moisture should be checked using the testing method required by the flooring, adhesive, or underlayment manufacturer."
+    ],
+    keySections: [
+      {
+        id: "why-concrete-moisture-matters",
+        title: "Why concrete moisture matters",
+        paragraphs: [
+          "Concrete can hold and release moisture even when the surface feels dry. That moisture can affect engineered hardwood, adhesives, underlayments, and the stability of the installation.",
+          "Moisture problems can show up as cupping, edge swelling, adhesive failure, hollow spots, odor, or movement. The risk is higher in basements, newer slabs, slabs without a known vapor retarder, and spaces with poor humidity control."
+        ]
+      },
+      {
+        id: "what-to-check-first",
+        title: "What to check first",
+        paragraphs: [
+          "Start by confirming the engineered hardwood is approved over concrete and whether the installation will be floating or glue-down. Then identify the required moisture test and the acceptable result range.",
+          "Also check whether the slab is below grade, on grade, or above grade. Basement slabs and ground-contact slabs usually deserve more caution than an above-grade concrete subfloor."
+        ],
+        bullets: [
+          "Find the flooring manufacturer's concrete moisture limits.",
+          "Check adhesive or underlayment requirements separately.",
+          "Verify whether a vapor retarder is required for floating installation.",
+          "Check whether glue-down installation needs a moisture-control adhesive or mitigation system.",
+          "Inspect the slab for sealers, old adhesive, paint, cracks, and contamination."
+        ]
+      },
+      {
+        id: "vapor-barrier-vs-mitigation",
+        title: "Vapor barrier versus moisture mitigation",
+        paragraphs: [
+          "A vapor barrier or vapor retarder helps slow moisture vapor movement. It is often discussed with floating floors and underlayment systems. A moisture mitigation system is more involved and may include coatings, primers, or adhesive systems designed for specific slab conditions.",
+          "These terms are not interchangeable. The product instructions should define what is allowed and what test results the system can handle."
+        ]
+      },
+      {
+        id: "floating-vs-glue-down",
+        title: "Floating versus glue-down considerations",
+        paragraphs: [
+          "A floating engineered hardwood floor may use an approved underlayment with vapor protection and required expansion space. The slab still needs to be flat, clean, and dry enough for the system.",
+          "A glue-down engineered hardwood floor depends on adhesive bond and slab preparation. The adhesive manufacturer may require specific moisture testing, trowel size, open time, and approved mitigation products."
+        ]
+      },
+      {
+        id: "when-to-call-a-professional",
+        title: "When to call a professional",
+        paragraphs: [
+          "Call a flooring professional when the slab is below grade, moisture readings are high or unknown, the floor will be glued down, or the product instructions require documented moisture testing.",
+          "Professional testing and system selection are usually cheaper than repairing cupping, loose boards, or adhesive failure after installation."
+        ]
+      }
+    ],
+    example: [
+      "A homeowner wants engineered hardwood over a basement slab. The slab looks dry, but the product instructions require concrete moisture testing and a floating installation over an approved vapor-retarding underlayment.",
+      "Instead of buying flooring first, they verify the slab results, underlayment approval, transition height, and waste amount. That prevents choosing a system that the product does not support."
+    ],
+    commonMistakes: [
+      "Assuming a dry-looking slab does not need testing.",
+      "Using plastic sheeting when the product requires a different system.",
+      "Treating floating and glue-down moisture requirements as the same.",
+      "Ignoring basement or below-grade risk.",
+      "Skipping adhesive manufacturer instructions."
+    ],
+    faq: [
+      {
+        question: "Do I need a moisture barrier under engineered hardwood on concrete?",
+        answer:
+          "Often yes, but the exact requirement depends on the product and installation method. Follow the flooring, underlayment, and adhesive instructions."
+      },
+      {
+        question: "Is a vapor barrier the same as moisture mitigation?",
+        answer:
+          "No. A vapor barrier slows moisture vapor movement, while moisture mitigation usually refers to a tested system designed to handle specific slab moisture conditions."
+      },
+      {
+        question: "Can glue-down engineered hardwood use a moisture barrier?",
+        answer:
+          "Only if the adhesive and flooring system allow it. Glue-down systems usually require compatible primers, adhesives, or mitigation products rather than a loose sheet barrier."
+      },
+      {
+        question: "Should a concrete slab be moisture tested before engineered hardwood?",
+        answer:
+          "Yes when the product or adhesive instructions require it, and it is especially important on new slabs, basement slabs, and ground-contact concrete."
+      }
+    ],
+    disclaimer: manufacturerDisclaimer
+  },
+  {
+    slug: "floating-vs-glue-down-engineered-hardwood-over-concrete",
+    title: "Floating vs Glue-Down Engineered Hardwood Over Concrete",
+    description:
+      "Compare floating and glue-down engineered hardwood over concrete, including moisture, flatness, sound, feel, repairs, and product compatibility.",
+    metadataTitle: "Floating vs Glue-Down Engineered Hardwood Over Concrete",
+    metadataDescription:
+      "Compare floating and glue-down engineered hardwood over concrete for moisture, slab flatness, sound, adhesive, underlayment, and repairs.",
+    dateModified: "2026-05-25",
+    readTime: "9 min read",
+    primaryEcosystem: "hardwood-engineered-hardwood",
+    secondaryEcosystems: ["planning-measuring-transitions"],
+    materialTypes: ["engineered-hardwood"],
+    topicCluster: "installation-method",
+    relatedTools: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"],
+    relatedGuides: [
+      "can-engineered-hardwood-go-over-concrete",
+      "moisture-barrier-engineered-hardwood-over-concrete",
+      "glue-down-vs-floating-floor",
+      "flooring-over-radiant-heat"
+    ],
+    quickAnswer: [
+      "Floating and glue-down engineered hardwood can both work over concrete when the product is approved and the slab meets requirements. Floating floors rely on approved underlayment and expansion space; glue-down floors rely on adhesive bond, slab prep, and moisture control.",
+      "The better choice depends on the specific engineered hardwood, slab moisture, flatness, building sound requirements, repair expectations, and installer experience."
+    ],
+    keySections: [
+      {
+        id: "floating-over-concrete",
+        title: "Floating engineered hardwood over concrete",
+        paragraphs: [
+          "A floating engineered hardwood floor locks or connects together and rests over an approved underlayment. It is not bonded across the slab, so it needs perimeter expansion space and should not be pinned by cabinets, fixed islands, or tight transitions.",
+          "Floating can be useful in condos or concrete spaces where an acoustic underlayment is required, but the underlayment must be approved for the product."
+        ]
+      },
+      {
+        id: "glue-down-over-concrete",
+        title: "Glue-down engineered hardwood over concrete",
+        paragraphs: [
+          "Glue-down engineered hardwood can feel more solid underfoot because the floor is bonded to the prepared slab. It requires compatible adhesive, correct trowel size, clean substrate, moisture testing, and careful installation timing.",
+          "Surface contamination, slab sealers, old adhesive, or moisture outside the adhesive limit can create bond failure."
+        ]
+      },
+      {
+        id: "what-to-check-first",
+        title: "What to check first",
+        paragraphs: [
+          "Check the product instructions before comparing methods. Some engineered hardwood is floating only, some is glue-down approved, and some allows multiple methods with different requirements.",
+          "Then check slab moisture, flatness, sound rules, transition heights, and whether future plank replacement matters to you."
+        ],
+        bullets: [
+          "Confirm allowed installation methods for the exact product.",
+          "Check concrete moisture and slab flatness requirements.",
+          "Confirm underlayment or adhesive compatibility.",
+          "Review sound requirements in condos or multifamily buildings.",
+          "Plan repairs, transitions, and door clearance before ordering."
+        ]
+      },
+      {
+        id: "when-to-call-a-professional",
+        title: "When to call a professional",
+        paragraphs: [
+          "Use a professional installer for glue-down engineered hardwood over concrete, high-value materials, basement slabs, radiant heat, or projects that require documented moisture testing.",
+          "Professional review also helps when the slab has cracks, old adhesive, uneven patching, or unknown sealers."
+        ]
+      }
+    ],
+    example: [
+      "A condo owner wants engineered hardwood over concrete. The building requires an acoustic underlayment, and the flooring is approved as a floating installation. In that case, floating may fit the building rules better than glue-down.",
+      "A different home with an above-grade slab and a product approved for glue-down may choose adhesive installation for a more bonded feel, but only after moisture and surface prep are verified."
+    ],
+    commonMistakes: [
+      "Choosing glue-down without checking adhesive compatibility.",
+      "Using underlayment that is too soft for a floating engineered floor.",
+      "Ignoring slab flatness because the floor is floating.",
+      "Skipping moisture tests before glue-down installation.",
+      "Pinning a floating floor with cabinets or fixed trim."
+    ],
+    faq: [
+      {
+        question: "Is floating engineered hardwood better over concrete?",
+        answer:
+          "Not automatically. Floating can be a good fit with approved underlayment and expansion space, but glue-down can also work when the product, slab, and adhesive system allow it."
+      },
+      {
+        question: "Does glue-down engineered hardwood feel more solid?",
+        answer:
+          "Often it can feel more bonded underfoot, but that depends on slab prep, adhesive, product construction, and installation quality."
+      },
+      {
+        question: "Can floating engineered hardwood go in a basement?",
+        answer:
+          "Only if the product is approved for below-grade use and the slab moisture, underlayment, and room conditions meet requirements."
+      },
+      {
+        question: "Is glue-down engineered hardwood hard to repair?",
+        answer:
+          "It can be more difficult than some floating repairs because boards are bonded to the substrate. Repair expectations should be discussed before choosing the method."
+      }
+    ],
+    disclaimer: manufacturerDisclaimer
+  },
+  {
+    slug: "hardwood-acclimation-mistakes",
+    title: "Hardwood Acclimation Mistakes",
+    description:
+      "Avoid common hardwood acclimation mistakes involving HVAC, humidity, unopened boxes, moisture testing, concrete slabs, and jobsite conditions.",
+    metadataTitle: "Hardwood Acclimation Mistakes to Avoid Before Installation",
+    metadataDescription:
+      "Avoid hardwood acclimation mistakes with HVAC, humidity, storage, moisture testing, solid vs engineered wood, and jobsite readiness.",
+    dateModified: "2026-05-25",
+    readTime: "8 min read",
+    primaryEcosystem: "hardwood-engineered-hardwood",
+    materialTypes: ["hardwood", "engineered-hardwood"],
+    topicCluster: "installation-method",
+    relatedTools: ["flooring-square-footage-calculator", "waste-calculator"],
+    relatedGuides: [
+      "how-long-should-hardwood-acclimate",
+      "why-is-my-hardwood-floor-cupping",
+      "can-engineered-hardwood-go-over-concrete",
+      "solid-hardwood-vs-engineered-hardwood"
+    ],
+    quickAnswer: [
+      "The biggest hardwood acclimation mistake is treating acclimation as a simple waiting period. The flooring, subfloor, and home conditions need to be within the product's required range before installation.",
+      "Wrong storage, unstable HVAC, ignored moisture readings, and assuming solid and engineered hardwood behave the same can all create avoidable movement after installation."
+    ],
+    keySections: [
+      {
+        id: "wrong-room-conditions",
+        title: "Acclimating in the wrong conditions",
+        paragraphs: [
+          "Hardwood should be stored in conditions that match the intended living space, unless the product instructions say otherwise. A garage, porch, damp basement, or construction site with no HVAC can push the flooring in the wrong direction.",
+          "The home should be close to normal temperature and humidity before the material is evaluated for installation."
+        ]
+      },
+      {
+        id: "what-to-check-first",
+        title: "What to check first",
+        paragraphs: [
+          "Before installation, check HVAC operation, indoor humidity, flooring storage instructions, subfloor moisture, and whether wet trades are complete.",
+          "Then review whether the product requires cartons to stay closed, be opened, be cross-stacked, or be handled another way. Instructions vary."
+        ],
+        bullets: [
+          "Confirm the jobsite is enclosed and conditioned.",
+          "Check whether drywall, paint, concrete, or other wet work is still drying.",
+          "Measure subfloor moisture and compare it to the flooring requirements.",
+          "Follow the carton opening and stacking instructions.",
+          "Treat solid hardwood and engineered hardwood as different products."
+        ]
+      },
+      {
+        id: "unopened-boxes",
+        title: "Leaving boxes unopened when instructions say otherwise",
+        paragraphs: [
+          "Some hardwood instructions tell installers to open or cross-stack material. Others may tell them to keep packaging intact until installation. The mistake is assuming one rule applies to every product.",
+          "The product data sheet should drive the storage method, not a generic rule from another flooring type."
+        ]
+      },
+      {
+        id: "when-to-call-a-professional",
+        title: "When to call a professional",
+        paragraphs: [
+          "Call a professional when moisture readings are close to the limit, the subfloor is concrete, the home has radiant heat, the hardwood is wide plank, or the site has recently had major construction moisture.",
+          "A professional can document readings and decide whether to wait, dehumidify, improve HVAC stability, or choose a different installation approach."
+        ]
+      }
+    ],
+    example: [
+      "A homeowner stores engineered hardwood in a garage for a week and then moves it inside the day before installation. The garage storage did not acclimate the floor to the finished living space.",
+      "A better approach is to condition the home, store the product as instructed, verify moisture readings, and install only when the flooring and subfloor are within range."
+    ],
+    commonMistakes: [
+      "Using a fixed day count without moisture readings.",
+      "Acclimating in a garage or unconditioned room.",
+      "Installing before HVAC is stable.",
+      "Ignoring concrete or wood subfloor moisture.",
+      "Opening or closing cartons against product instructions."
+    ],
+    faq: [
+      {
+        question: "Can hardwood acclimate in unopened boxes?",
+        answer:
+          "It depends on the product instructions. Some products require specific packaging or stacking methods, and others should remain packaged until installation."
+      },
+      {
+        question: "What happens if hardwood is not acclimated correctly?",
+        answer:
+          "The floor may gap, cup, crown, shrink, swell, or move more than expected after installation."
+      },
+      {
+        question: "Does engineered hardwood need the same acclimation as solid hardwood?",
+        answer:
+          "Not always. Engineered hardwood can be more stable, but it still needs stable site conditions and the product's written instructions should be followed."
+      },
+      {
+        question: "Should HVAC be running before hardwood installation?",
+        answer:
+          "Usually yes. The home should be close to normal living conditions unless the manufacturer gives different instructions."
+      }
+    ],
+    disclaimer: manufacturerDisclaimer
+  },
+  {
+    slug: "laminate-floor-separating-what-to-check-first",
+    title: "Laminate Floor Separating: What to Check First",
+    description:
+      "A practical first-check guide for laminate floor separation, including expansion gaps, subfloor flatness, moisture, underlayment, and damaged locking joints.",
+    metadataTitle: "Laminate Floor Separating: What to Check First",
+    metadataDescription:
+      "Check expansion gaps, subfloor flatness, moisture, underlayment, locking joints, and heavy fixed objects when laminate floors separate.",
+    dateModified: "2026-05-25",
+    readTime: "8 min read",
+    primaryEcosystem: "laminate",
+    materialTypes: ["laminate"],
+    topicCluster: "subfloor-prep",
+    relatedTools: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"],
+    relatedGuides: [
+      "why-is-my-laminate-floor-separating",
+      "how-flat-should-a-subfloor-be-for-laminate",
+      "best-underlayment-for-laminate-flooring",
+      "which-direction-should-flooring-run"
+    ],
+    quickAnswer: [
+      "When laminate flooring separates, first check whether the floor is pinned, unsupported, wet, or damaged. Expansion gaps, uneven subfloors, moisture, underlayment, and locking joint damage are the most common places to start.",
+      "Do not assume the fix is simply tapping boards together. If the cause is still active, the gap can come back."
+    ],
+    keySections: [
+      {
+        id: "what-to-check-first",
+        title: "What to check first",
+        paragraphs: [
+          "Walk the floor and mark every gap. Notice whether the separation is at end joints, side joints, doorways, long runs, or near heavy fixed objects.",
+          "Then check the edges of the room. A floating laminate floor needs room to move, and tight trim, pinned transitions, cabinets, or islands can transfer pressure into the field of the floor."
+        ],
+        bullets: [
+          "Check expansion space around walls and door frames.",
+          "Look for bounce or low spots near the separation.",
+          "Inspect for moisture, swollen edges, or leaks.",
+          "Confirm the underlayment is approved and not doubled up.",
+          "Look for broken locking tabs before trying to close the gap."
+        ]
+      },
+      {
+        id: "subfloor-and-underlayment",
+        title: "Subfloor and underlayment checks",
+        paragraphs: [
+          "Laminate locking joints need support. Low spots allow the floor to flex, while high spots can create pressure points. Both can stress joints over time.",
+          "Underlayment should match the laminate system. Underlayment that is too soft, too thick, or installed in multiple layers can let the floor move more than intended."
+        ]
+      },
+      {
+        id: "moisture-and-long-runs",
+        title: "Moisture, humidity, and long runs",
+        paragraphs: [
+          "Moisture can swell laminate edges or damage the core. Very dry conditions can also contribute to movement. Long runs and direction choices may need expansion breaks depending on the product.",
+          "If separation appears near kitchens, exterior doors, bathrooms, or large open areas, check both moisture and expansion requirements."
+        ]
+      },
+      {
+        id: "when-to-call-a-professional",
+        title: "When to call a professional",
+        paragraphs: [
+          "Call an installer when separation is spreading, joints look broken, the floor is lifting, moisture is suspected, or the floor must be lifted to correct a subfloor issue.",
+          "Some repairs require plank replacement, not just closing the gap."
+        ]
+      }
+    ],
+    example: [
+      "A laminate floor opens at several end joints in a hallway. The homeowner closes one gap, but it reappears after a few days. A straightedge shows a low spot under the same area.",
+      "The likely fix is to address the support issue, inspect the locking joints, and replace damaged planks if needed."
+    ],
+    commonMistakes: [
+      "Closing a gap without checking why it opened.",
+      "Ignoring low spots under repeating gaps.",
+      "Using extra underlayment to hide a subfloor problem.",
+      "Leaving a floating floor pinned under cabinets or transitions.",
+      "Assuming water-resistant laminate cannot be affected by moisture."
+    ],
+    faq: [
+      {
+        question: "What should I check first when laminate flooring separates?",
+        answer:
+          "Check expansion gaps, subfloor support, moisture, underlayment approval, and whether the locking joints are damaged."
+      },
+      {
+        question: "Can I tap laminate floor gaps closed?",
+        answer:
+          "Sometimes, but recurring gaps usually mean movement, damage, or support problems still need to be fixed."
+      },
+      {
+        question: "Can heavy cabinets make laminate separate?",
+        answer:
+          "Fixed cabinets or islands can restrict a floating floor if they pin it in place. Product instructions should be checked before installing over or around fixed objects."
+      },
+      {
+        question: "Can plank direction cause laminate separation?",
+        answer:
+          "Direction itself is not usually the only cause, but long runs, missing transitions, and expansion limits can contribute to movement and gaps."
+      }
+    ],
+    disclaimer: manufacturerDisclaimer
+  },
+  {
+    slug: "flooring-direction-mistakes",
+    title: "Flooring Direction Mistakes",
+    description:
+      "Avoid common flooring direction mistakes with plank layout, hallways, natural light, open concept rooms, transitions, stairs, and waste planning.",
+    metadataTitle: "Flooring Direction Mistakes: Plank Layout Problems to Avoid",
+    metadataDescription:
+      "Avoid flooring direction mistakes with hallways, natural light, transitions, stairs, open concept layouts, waste, and plank direction changes.",
+    dateModified: "2026-05-25",
+    readTime: "8 min read",
+    primaryEcosystem: "planning-measuring-transitions",
+    secondaryEcosystems: ["lvp", "laminate", "hardwood-engineered-hardwood"],
+    materialTypes: ["lvp", "laminate", "hardwood", "engineered-hardwood", "transitions"],
+    topicCluster: "layout",
+    relatedTools: ["waste-calculator", "transition-estimator", "flooring-square-footage-calculator"],
+    relatedGuides: [
+      "which-direction-should-flooring-run",
+      "flooring-transition-guide",
+      "t-mold-vs-reducer-vs-end-cap",
+      "glue-down-vs-floating-floor"
+    ],
+    quickAnswer: [
+      "The most common flooring direction mistakes are choosing direction one room at a time, changing direction too often, ignoring hallway flow, forgetting transitions, and underestimating waste.",
+      "A good plank layout should look intentional from the main sight lines and still follow the product's installation limits."
+    ],
+    keySections: [
+      {
+        id: "changing-direction-too-often",
+        title: "Changing direction too often",
+        paragraphs: [
+          "Direction changes can be useful, but too many changes make a home feel chopped up. They also add transitions, cuts, and decisions about expansion gaps.",
+          "Use doorways, thresholds, or natural room breaks when a change is needed. Avoid random direction changes in open areas."
+        ]
+      },
+      {
+        id: "what-to-check-first",
+        title: "What to check first",
+        paragraphs: [
+          "Before setting plank direction, walk the home from the main entry point and identify the longest sight line, hallway flow, stair landings, and open concept areas.",
+          "Then use the waste and transition tools to think through the material impact. A direction that looks better but creates many short cuts may need more waste."
+        ],
+        bullets: [
+          "Check hallways before deciding based on one room.",
+          "Look at how natural light hits the plank edges.",
+          "Plan transitions before direction changes.",
+          "Check stairs, landings, and open concept spaces together.",
+          "Compare waste if the layout creates angled cuts or short starter pieces."
+        ]
+      },
+      {
+        id: "ignoring-light-and-flow",
+        title: "Ignoring natural light and traffic flow",
+        paragraphs: [
+          "Natural light can make plank edges more or less visible depending on direction. Traffic flow matters because flooring that runs down a hallway often feels cleaner than flooring that runs across it.",
+          "These are visual guidelines, not absolute rules. Product instructions and installation limits still matter."
+        ]
+      },
+      {
+        id: "when-to-call-a-professional",
+        title: "When to call a professional",
+        paragraphs: [
+          "Call an installer when the floor runs through multiple rooms, when stairs are included, when transitions need to be minimized, or when the product has maximum run length requirements.",
+          "A layout review before ordering can prevent narrow rows, awkward transitions, and avoidable material waste."
+        ]
+      }
+    ],
+    example: [
+      "A homeowner chooses plank direction based on the living room only. After installation starts, the hallway would run across the planks and need several short cuts. The installer suggests either keeping one direction for the main floor or adding a planned transition at the hallway.",
+      "The better decision is the one that balances sight lines, hallway flow, transition placement, and waste before material is ordered."
+    ],
+    commonMistakes: [
+      "Choosing direction from one room without checking the whole project.",
+      "Changing direction without a doorway or transition.",
+      "Ignoring hallway flow.",
+      "Forgetting that direction affects waste.",
+      "Planning stairs and landings after the main floor layout is already set."
+    ],
+    faq: [
+      {
+        question: "Is it bad to change flooring direction between rooms?",
+        answer:
+          "Not always, but direction changes should happen at logical breaks such as doorways or transitions and should follow the product's requirements."
+      },
+      {
+        question: "Can flooring direction increase waste?",
+        answer:
+          "Yes. Direction affects cut patterns, starter pieces, narrow rows, hallway cuts, and how many offcuts can be reused."
+      },
+      {
+        question: "Should planks run down a hallway?",
+        answer:
+          "Often yes because it follows the walking path and can look cleaner, but connected rooms and product requirements should also be reviewed."
+      },
+      {
+        question: "Should flooring direction follow natural light?",
+        answer:
+          "Natural light is a useful consideration because it can affect seam visibility, but it should be balanced with layout, hallway flow, transitions, and installation instructions."
       }
     ],
     disclaimer: manufacturerDisclaimer

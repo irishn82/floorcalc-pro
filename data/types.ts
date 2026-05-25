@@ -96,6 +96,9 @@ export type GuideSlug =
   | "solid-hardwood-vs-engineered-hardwood"
   | "how-long-should-hardwood-acclimate"
   | "can-engineered-hardwood-go-over-concrete"
+  | "moisture-barrier-engineered-hardwood-over-concrete"
+  | "floating-vs-glue-down-engineered-hardwood-over-concrete"
+  | "hardwood-acclimation-mistakes"
   | "why-is-my-hardwood-floor-cupping"
   | "best-hardwood-flooring-for-dogs"
   | "carpet-padding-thickness-guide"
@@ -111,6 +114,8 @@ export type GuideSlug =
   | "why-is-my-floor-clicking"
   | "why-are-my-carpet-seams-visible"
   | "why-is-my-lvp-lifting"
+  | "laminate-floor-separating-what-to-check-first"
+  | "flooring-direction-mistakes"
   | "why-is-my-transition-strip-moving"
   | "why-does-my-floor-feel-hollow";
 
