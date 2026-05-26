@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Container } from "@/components/Container";
 import { DisclaimerBox } from "@/components/DisclaimerBox";
@@ -8,8 +7,9 @@ import { GuideCard } from "@/components/GuideCard";
 import { NextStepPanel } from "@/components/NextStepPanel";
 import { SectionHeading } from "@/components/SectionHeading";
 import { ToolCard } from "@/components/ToolCard";
-import { guideEcosystems } from "@/data/ecosystems";
-import { getRelatedTools, getTroubleshootingGuides } from "@/lib/content/paths";
+import { TroubleshootingLinkGrid } from "@/components/troubleshooting/TroubleshootingLinkGrid";
+import { getRelatedGuides, getRelatedTools } from "@/lib/content/paths";
+import { troubleshootingProblemGroups } from "@/lib/content/troubleshooting-flow";
 import { createSeoMetadata } from "@/lib/seo/metadata";
 
 export const metadata: Metadata = createSeoMetadata({
@@ -27,13 +27,6 @@ const troubleshootingTools = getRelatedTools([
 ]);
 
 export default function TroubleshootingGuidesPage() {
-  const troubleshootingGuides = getTroubleshootingGuides();
-  const nearbyEcosystems = guideEcosystems.filter((ecosystem) =>
-    ["lvp", "laminate", "hardwood-engineered-hardwood", "tile", "carpet-padding", "planning-measuring-transitions"].includes(
-      ecosystem.slug
-    )
-  );
-
   return (
     <>
       <section className="bg-white py-8 sm:py-10">
@@ -65,30 +58,42 @@ export default function TroubleshootingGuidesPage() {
           </div>
 
           <div className="mt-7">
-            <h2 className="text-xl font-black tracking-normal text-ink sm:text-2xl">Problem-based guides</h2>
-            <p className="mt-2 max-w-2xl text-sm leading-6 text-slate-600">
-              These articles focus on high-intent homeowner problems and connect back to the calculators and flooring type guides that help with next steps.
-            </p>
-            <div className="mt-4 grid gap-3 md:grid-cols-2 lg:grid-cols-3">
-              {troubleshootingGuides.map((guide) => (
-                <GuideCard key={guide.slug} guide={guide} />
-              ))}
-            </div>
-          </div>
-
-          <div className="mt-8 border-t border-line pt-7">
             <h2 className="text-xl font-black tracking-normal text-ink sm:text-2xl">Troubleshooting by flooring type</h2>
-            <div className="mt-5 grid gap-3 md:grid-cols-3">
-              {nearbyEcosystems.map((ecosystem) => (
-                <Link
-                  key={ecosystem.slug}
-                  href={`/guides/ecosystems/${ecosystem.slug}`}
-                  className="rounded-lg border border-line bg-field p-4 text-sm font-bold text-slate-800 transition hover:border-accent-100 hover:bg-white hover:text-accent-700"
-                >
-                  {ecosystem.title}
-                  <span className="mt-2 block font-normal leading-6 text-slate-600">{ecosystem.description}</span>
-                </Link>
-              ))}
+            <p className="mt-2 max-w-2xl text-sm leading-6 text-slate-600">
+              Start with the material and symptom, then use the related calculator or prep guide to narrow the likely cause.
+            </p>
+            <div className="mt-5 space-y-6">
+              {troubleshootingProblemGroups.map((group) => {
+                const groupGuides = getRelatedGuides(group.guideSlugs);
+                const groupTools = getRelatedTools(group.toolSlugs);
+
+                return (
+                  <section key={group.slug} className="rounded-lg border border-line bg-field p-4 shadow-sm">
+                    <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
+                      <div>
+                        <p className="text-xs font-bold uppercase tracking-wide text-accent-700">Problem ecosystem</p>
+                        <h3 className="mt-1 text-xl font-black text-ink">{group.title}</h3>
+                        <p className="mt-2 max-w-3xl text-sm leading-6 text-slate-600">{group.description}</p>
+                      </div>
+                    </div>
+                    <div className="mt-4 grid gap-3 md:grid-cols-2 lg:grid-cols-3">
+                      {groupGuides.map((guide) => (
+                        <GuideCard key={guide.slug} guide={guide} />
+                      ))}
+                    </div>
+                    <div className="mt-4">
+                      <TroubleshootingLinkGrid
+                        title="Related calculators"
+                        links={groupTools.map((tool) => ({
+                          href: `/tools/${tool.slug}`,
+                          label: tool.title,
+                          description: tool.description
+                        }))}
+                      />
+                    </div>
+                  </section>
+                );
+              })}
             </div>
           </div>
         </Container>

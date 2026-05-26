@@ -11,6 +11,8 @@ import { JsonLd } from "@/components/JsonLd";
 import { NextStepPanel } from "@/components/NextStepPanel";
 import { RelatedLinks } from "@/components/RelatedLinks";
 import { TableOfContents } from "@/components/TableOfContents";
+import { NextRecommendedSteps } from "@/components/troubleshooting/NextRecommendedSteps";
+import { TroubleshootingGuideFlow } from "@/components/troubleshooting/TroubleshootingGuideFlow";
 import { guides } from "@/data/guides";
 import type { GuideSlug, ToolSlug } from "@/data/types";
 import {
@@ -21,6 +23,7 @@ import {
   getRelatedTools,
   getTroubleshootingGuidesForGuide
 } from "@/lib/content/paths";
+import { getTroubleshootingFlow } from "@/lib/content/troubleshooting-flow";
 import { createSeoMetadata } from "@/lib/seo/metadata";
 import { articleJsonLd, faqJsonLd } from "@/lib/seo/schema";
 
@@ -187,6 +190,65 @@ export default async function GuidePage({ params }: GuidePageProps) {
         return resolvedLink ? [resolvedLink] : [];
       })
     : null;
+  const troubleshootingFlow = getTroubleshootingFlow(guide.slug);
+  const troubleshootingFlowGuideLinks = [
+    ...explicitRelatedGuides,
+    ...troubleshootingGuides.filter(
+      (troubleshootingGuide) => !explicitRelatedGuides.some((relatedGuide) => relatedGuide.slug === troubleshootingGuide.slug)
+    )
+  ]
+    .filter((relatedGuide) => relatedGuide.slug !== guide.slug)
+    .slice(0, 6)
+    .map((relatedGuide) => ({
+      href: `/guides/${relatedGuide.slug}`,
+      label: relatedGuide.title,
+      description: relatedGuide.description
+    }));
+  const troubleshootingFlowToolLinks = relatedTools.slice(0, 4).map((tool) => ({
+    href: `/tools/${tool.slug}`,
+    label: tool.title,
+    description: tool.description
+  }));
+  const nextRecommendedDescription = troubleshootingFlow
+    ? "Use the next guide or calculator to narrow the likely cause before opening the floor, replacing material, or scheduling a repair."
+    : "Use these calculators and related guides to turn the article into a practical plan before ordering material or calling an installer.";
+  const nextRecommendedPrimaryLink =
+    targetedPrimaryLink ?? {
+      href: nextStepTool ? `/tools/${nextStepTool.slug}` : "/tools",
+      label: nextStepTool ? `Use ${nextStepTool.shortTitle}` : "Open flooring calculators"
+    };
+  const nextRecommendedSecondaryLinks =
+    targetedSecondaryLinks ??
+    [
+      ...(nextStepGuide
+        ? [
+            {
+              href: `/guides/${nextStepGuide.slug}`,
+              label: nextStepGuide.title,
+              description: "Read the next guide connected to this topic."
+            }
+          ]
+        : []),
+      ...(relatedTools.slice(1, 3).map((tool) => ({
+        href: `/tools/${tool.slug}`,
+        label: `Use ${tool.shortTitle}`,
+        description: tool.description
+      })) ?? []),
+      ...(primaryEcosystem
+        ? [
+            {
+              href: `/guides/ecosystems/${primaryEcosystem.slug}`,
+              label: `Browse ${primaryEcosystem.shortTitle} guides`,
+              description: "See the full flooring type section."
+            }
+          ]
+        : []),
+      {
+        href: "/guides/troubleshooting",
+        label: "Troubleshooting hub",
+        description: "Compare common flooring problems and causes."
+      }
+    ].slice(0, 4);
 
   return (
     <>
@@ -256,7 +318,17 @@ export default async function GuidePage({ params }: GuidePageProps) {
                   ))}
                 </div>
               </div>
-              <GuideUtilityVisual guide={guide} />
+              {troubleshootingFlow ? (
+                <TroubleshootingGuideFlow
+                  causeRows={troubleshootingFlow.causeRows}
+                  whatToCheckFirst={troubleshootingFlow.whatToCheckFirst}
+                  whenToCallAPro={troubleshootingFlow.whenToCallAPro}
+                  relatedLinks={troubleshootingFlowGuideLinks}
+                  toolLinks={troubleshootingFlowToolLinks}
+                />
+              ) : (
+                <GuideUtilityVisual guide={guide} />
+              )}
               <div className="prose-flooring mt-6">
                 {guide.sections.map((section) => (
                   <section key={section.id} id={section.id} className="scroll-mt-24">
@@ -338,49 +410,20 @@ export default async function GuidePage({ params }: GuidePageProps) {
           description: ecosystem.description
         }))}
       />
-      <NextStepPanel
-        title="Next recommended steps"
-        description="Use these calculators and related guides to turn the article into a practical plan before ordering material or calling an installer."
-        primaryLink={
-          targetedPrimaryLink ?? {
-            href: nextStepTool ? `/tools/${nextStepTool.slug}` : "/tools",
-            label: nextStepTool ? `Use ${nextStepTool.shortTitle}` : "Open flooring calculators"
-          }
-        }
-        secondaryLinks={
-          targetedSecondaryLinks ??
-          [
-            ...(nextStepGuide
-              ? [
-                  {
-                    href: `/guides/${nextStepGuide.slug}`,
-                    label: nextStepGuide.title,
-                    description: "Read the next guide connected to this topic."
-                  }
-                ]
-              : []),
-            ...(relatedTools.slice(1, 3).map((tool) => ({
-              href: `/tools/${tool.slug}`,
-              label: `Use ${tool.shortTitle}`,
-              description: tool.description
-            })) ?? []),
-            ...(primaryEcosystem
-              ? [
-                  {
-                    href: `/guides/ecosystems/${primaryEcosystem.slug}`,
-                    label: `Browse ${primaryEcosystem.shortTitle} guides`,
-                    description: "See the full flooring type section."
-                  }
-                ]
-              : []),
-            {
-              href: "/guides/troubleshooting",
-              label: "Troubleshooting hub",
-              description: "Compare common flooring problems and causes."
-            }
-          ].slice(0, 4)
-        }
-      />
+      {troubleshootingFlow ? (
+        <NextRecommendedSteps
+          description={nextRecommendedDescription}
+          primaryLink={nextRecommendedPrimaryLink}
+          secondaryLinks={nextRecommendedSecondaryLinks.slice(0, 4)}
+        />
+      ) : (
+        <NextStepPanel
+          title="Next recommended steps"
+          description={nextRecommendedDescription}
+          primaryLink={nextRecommendedPrimaryLink}
+          secondaryLinks={nextRecommendedSecondaryLinks}
+        />
+      )}
       <FAQSection items={guide.faq} />
     </>
   );
