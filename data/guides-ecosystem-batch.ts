@@ -73,7 +73,7 @@ function buildGuide(input: GuideDraft): Guide {
 }
 
 const manufacturerDisclaimer =
-  "This guide is general planning information, not a substitute for the flooring manufacturer's installation instructions, product data sheet, local building requirements, or installer judgment. Verify moisture limits, flatness tolerances, underlayment rules, transitions, adhesives, and warranty-related requirements for the specific product before installation.";
+  "This guide is general planning information, not a substitute for the flooring manufacturer's installation instructions, product data sheet, local building requirements, or installer judgment. Verify moisture limits, flatness tolerances, underlayment rules, transitions, adhesives, and product-specific installation requirements before installation.";
 
 const guideDrafts: GuideDraft[] = [
   {

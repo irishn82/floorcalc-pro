@@ -619,10 +619,10 @@ export const guides: Guide[] = [
         ]
       },
       {
-        id: "warranty-requirements",
-        title: "Check warranty requirements",
+        id: "product-requirements",
+        title: "Check product requirements",
         paragraphs: [
-          "Some products require transitions at certain room lengths, doorway widths, or changes in direction. Skipping required transitions can create movement issues or warranty problems.",
+          "Some products require transitions at certain room lengths, doorway widths, or changes in direction. Skipping required transitions can create movement issues and may conflict with the written installation requirements.",
           "Read the installation guide before committing to a continuous floor layout."
         ]
       }
@@ -1985,7 +1985,7 @@ export const guides: Guide[] = [
       }
     ],
     disclaimer:
-      "This guide provides general transition planning information. Transition profiles, expansion gaps, stair noses, fastening methods, height limits, and warranty-related requirements vary by flooring system. Verify with the manufacturer's written instructions and installer before ordering trim."
+      "This guide provides general transition planning information. Transition profiles, expansion gaps, stair noses, fastening methods, height limits, and product requirements vary by flooring system. Verify with the manufacturer's written instructions and installer before ordering trim."
   },
   ...ecosystemGuideBatch,
   ...troubleshootingGuides

@@ -5,11 +5,13 @@ import { CalculatorLayout } from "@/components/CalculatorLayout";
 import { Container } from "@/components/Container";
 import { FAQSection } from "@/components/FAQSection";
 import { FlooringIcon } from "@/components/FlooringIcon";
+import { IndustryReferences } from "@/components/IndustryReferences";
 import { JsonLd } from "@/components/JsonLd";
 import { NextStepPanel } from "@/components/NextStepPanel";
 import { RelatedLinks } from "@/components/RelatedLinks";
 import { ToolCalculator } from "@/components/calculators/ToolCalculator";
 import { tools } from "@/data/tools";
+import { getToolIndustryReferences } from "@/lib/content/industry-references";
 import { getRelatedTools, getToolBySlug, getToolRelatedGuides } from "@/lib/content/paths";
 import { createSeoMetadata } from "@/lib/seo/metadata";
 import { faqJsonLd, toolJsonLd } from "@/lib/seo/schema";
@@ -50,6 +52,7 @@ export default async function ToolPage({ params }: ToolPageProps) {
   const troubleshootingGuides = relatedGuides.filter((guide) => guide.slug.startsWith("why-"));
   const commonQuestionGuides = relatedGuides.filter((guide) => !guide.slug.startsWith("why-"));
   const primaryGuide = commonQuestionGuides[0] ?? troubleshootingGuides[0];
+  const industryReferences = getToolIndustryReferences(tool);
 
   return (
     <>
@@ -88,6 +91,7 @@ export default async function ToolPage({ params }: ToolPageProps) {
               <ToolCalculator type={tool.calculatorType} />
             </CalculatorLayout>
           </div>
+          <IndustryReferences references={industryReferences} />
         </Container>
       </section>
       <RelatedLinks

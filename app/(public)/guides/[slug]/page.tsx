@@ -7,6 +7,7 @@ import { DisclaimerBox } from "@/components/DisclaimerBox";
 import { FAQSection } from "@/components/FAQSection";
 import { FlooringIcon } from "@/components/FlooringIcon";
 import { GuideUtilityVisual } from "@/components/GuideUtilityVisual";
+import { IndustryReferences } from "@/components/IndustryReferences";
 import { JsonLd } from "@/components/JsonLd";
 import { NextStepPanel } from "@/components/NextStepPanel";
 import { RelatedLinks } from "@/components/RelatedLinks";
@@ -23,6 +24,7 @@ import {
   getRelatedTools,
   getTroubleshootingGuidesForGuide
 } from "@/lib/content/paths";
+import { getGuideIndustryReferences } from "@/lib/content/industry-references";
 import { getTroubleshootingFlow } from "@/lib/content/troubleshooting-flow";
 import { createSeoMetadata } from "@/lib/seo/metadata";
 import { articleJsonLd, faqJsonLd } from "@/lib/seo/schema";
@@ -156,6 +158,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
   const troubleshootingGuides = getTroubleshootingGuidesForGuide(guide);
   const ecosystemLinks = getGuideEcosystemLinks(guide);
   const primaryEcosystem = ecosystemLinks[0];
+  const industryReferences = getGuideIndustryReferences(guide);
   const nextStepTool = relatedTools[0];
   const nextStepGuide = explicitRelatedGuides.find((relatedGuide) => relatedGuide.slug !== guide.slug) ?? ecosystemRelatedGuides[0];
   const targetedNextSteps = targetedNextStepTargets[guide.slug];
@@ -366,6 +369,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
                   <DisclaimerBox>{guide.disclaimer}</DisclaimerBox>
                 </div>
               ) : null}
+              <IndustryReferences references={industryReferences} />
             </div>
           </div>
         </Container>

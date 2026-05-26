@@ -148,7 +148,7 @@ function buildDisclaimer(topic: KeywordTopic) {
   }
 
   if (topic.category === "stairs" || topic.category === "transitions") {
-    return "Stair and transition details can affect safety, fit, and warranty coverage. Confirm product profiles and installation requirements with the manufacturer and installer.";
+    return "Stair and transition details can affect safety, fit, and product compliance. Confirm product profiles and installation requirements with the manufacturer and installer.";
   }
 
   return "This draft is for planning and editorial review only. Flooring quantities, compatibility, and installation requirements should be verified with the manufacturer, retailer, or installer before publication or purchase decisions.";

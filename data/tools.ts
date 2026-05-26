@@ -52,7 +52,7 @@ export const tools: Tool[] = [
     formula: "Base square footage x waste percentage = extra square footage. Base square footage + extra = total material needed.",
     notes: [
       "Many simple floating floors use 5% to 10% waste, but angled layouts, small rooms, and patterned products can need more.",
-      "Installer requirements and manufacturer warranties may specify minimum extra material.",
+      "Installer instructions or manufacturer ordering guidance may require a minimum extra material allowance.",
       "Keep leftover material for future repairs when possible, especially with dye lots and discontinued products.",
       "Carton coverage varies by product, so verify the square footage per carton before ordering."
     ],
@@ -204,7 +204,7 @@ export const tools: Tool[] = [
       "Number of openings x average opening width = estimated linear feet of transition material.",
     notes: [
       "Different height changes may require different profiles, including T-molds, reducers, end caps, stair noses, or threshold pieces.",
-      "Some floating floors require expansion gaps and approved transition placement for warranty coverage.",
+      "Some floating floors require expansion gaps and approved transition placement as part of the product installation requirements.",
       "Measure each opening separately when widths vary significantly."
     ],
     faq: [

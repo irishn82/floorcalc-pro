@@ -202,7 +202,7 @@ export default async function GuideEcosystemPage({ params }: EcosystemPageProps)
         <div className="mt-8 grid gap-6 border-t border-line pt-7 lg:grid-cols-[1fr_0.8fr]">
           <DisclaimerBox>
             Flooring type pages organize general flooring planning information. Product compatibility, installation methods, subfloor requirements,
-            transition profiles, and warranty-related requirements vary by manufacturer and project conditions.
+            transition profiles, and product-specific requirements vary by manufacturer and project conditions.
           </DisclaimerBox>
           <div>
             <h2 className="text-lg font-bold text-ink">Related flooring types</h2>

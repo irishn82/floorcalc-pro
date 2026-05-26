@@ -127,7 +127,7 @@ export default function TroubleshootingGuidesPage() {
         <Container>
           <DisclaimerBox>
             Troubleshooting guides are for planning and conversation only. Product compatibility, repair methods, moisture limits,
-            adhesive requirements, subfloor tolerances, and warranty-related requirements vary by manufacturer and project conditions.
+            adhesive requirements, subfloor tolerances, and product-specific requirements vary by manufacturer and project conditions.
           </DisclaimerBox>
         </Container>
       </section>

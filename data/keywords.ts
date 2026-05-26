@@ -47,7 +47,7 @@ export const keywordTopics: KeywordTopic[] = [
     priority: "high",
     relatedKeywords: ["floor transition strip", "transition strip types", "flooring threshold strip"],
     relatedTools: ["transition-estimator", "flooring-square-footage-calculator"],
-    notes: "Cover T-molds, reducers, end caps, thresholds, stair noses, and warranty constraints."
+    notes: "Cover T-molds, reducers, end caps, thresholds, stair noses, and product requirement constraints."
   },
   {
     id: "kw-vinyl-plank-over-tile",
@@ -71,7 +71,7 @@ export const keywordTopics: KeywordTopic[] = [
     priority: "high",
     relatedKeywords: ["dog friendly flooring", "scratch resistant flooring dogs", "waterproof flooring pets"],
     relatedTools: ["flooring-square-footage-calculator", "waste-calculator"],
-    notes: "Blend practical buying advice with maintenance realities and warranty caveats."
+    notes: "Blend practical buying advice with maintenance realities and product requirement caveats."
   },
   {
     id: "kw-flooring-radiant-heat",
@@ -215,7 +215,7 @@ export const keywordTopics: KeywordTopic[] = [
     priority: "high",
     relatedKeywords: ["lvp subfloor requirements", "vinyl plank flatness tolerance", "floor prep for lvp"],
     relatedTools: ["flooring-square-footage-calculator", "waste-calculator"],
-    notes: "Stress manufacturer tolerances, patching, grinding, moisture, and warranty implications."
+    notes: "Stress manufacturer tolerances, patching, grinding, moisture, and product-specific requirements."
   },
   {
     id: "kw-t-mold-vs-reducer",
