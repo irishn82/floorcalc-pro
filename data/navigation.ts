@@ -4,12 +4,17 @@ export const troubleshootingGuideSlugs: GuideSlug[] = [
   "why-is-my-floor-clicking",
   "why-is-my-lvp-floor-clicking",
   "why-is-my-lvp-lifting",
+  "why-is-my-lvp-floor-separating",
   "why-is-my-laminate-floor-separating",
+  "why-is-my-laminate-floor-buckling",
   "laminate-floor-separating-what-to-check-first",
   "why-does-my-floor-feel-hollow",
   "why-are-my-carpet-seams-visible",
+  "why-is-my-carpet-wrinkling-or-buckling",
   "why-is-my-transition-strip-moving",
-  "why-is-my-hardwood-floor-cupping"
+  "why-is-my-hardwood-floor-cupping",
+  "why-is-my-hardwood-floor-gapping",
+  "why-is-my-tile-cracking"
 ];
 
 export const toolGuideLinks: Record<ToolSlug, GuideSlug[]> = {
@@ -35,6 +40,7 @@ export const toolGuideLinks: Record<ToolSlug, GuideSlug[]> = {
   "carpet-seam-planner": [
     "carpet-seam-direction-guide",
     "why-are-my-carpet-seams-visible",
+    "why-is-my-carpet-wrinkling-or-buckling",
     "what-is-pattern-match-in-carpet",
     "what-direction-should-carpet-run"
   ],
@@ -48,6 +54,7 @@ export const toolGuideLinks: Record<ToolSlug, GuideSlug[]> = {
     "t-mold-vs-reducer-vs-end-cap",
     "flooring-direction-mistakes",
     "why-is-my-transition-strip-moving",
+    "why-is-my-tile-cracking",
     "luxury-vinyl-over-tile"
   ]
 };

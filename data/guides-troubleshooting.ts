@@ -22,7 +22,9 @@ export const troubleshootingGuides: Guide[] = [
     relatedGuides: [
       "subfloor-flatness-requirements-lvp",
       "why-is-my-lvp-floor-clicking",
+      "why-is-my-lvp-floor-separating",
       "why-is-my-laminate-floor-separating",
+      "why-is-my-laminate-floor-buckling",
       "glue-down-vs-floating-floor"
     ],
     sections: [
@@ -121,6 +123,7 @@ export const troubleshootingGuides: Guide[] = [
     relatedTools: ["carpet-seam-planner", "pattern-repeat-calculator", "flooring-square-footage-calculator"],
     relatedGuides: [
       "carpet-seam-direction-guide",
+      "why-is-my-carpet-wrinkling-or-buckling",
       "what-is-pattern-match-in-carpet",
       "what-direction-should-carpet-run",
       "how-much-extra-carpet-should-i-order"
@@ -221,6 +224,7 @@ export const troubleshootingGuides: Guide[] = [
     topicCluster: "subfloor-prep",
     relatedTools: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"],
     relatedGuides: [
+      "why-is-my-lvp-floor-separating",
       "can-you-install-cabinets-over-floating-lvp",
       "how-long-should-lvp-acclimate",
       "subfloor-flatness-requirements-lvp",
@@ -425,6 +429,7 @@ export const troubleshootingGuides: Guide[] = [
     relatedGuides: [
       "subfloor-flatness-requirements-lvp",
       "glue-down-vs-floating-floor",
+      "why-is-my-tile-cracking",
       "how-flat-should-a-floor-be-for-tile",
       "can-you-install-lvp-over-concrete"
     ],
@@ -504,6 +509,537 @@ export const troubleshootingGuides: Guide[] = [
         question: "Can underlayment make a floor sound hollow?",
         answer:
           "Yes. Underlayment affects sound and feel, especially under floating floors. It should still be approved for the flooring product."
+      }
+    ],
+    disclaimer: troubleshootingDisclaimer
+  },
+  {
+    slug: "why-is-my-lvp-floor-separating",
+    title: "Why Is My LVP Floor Separating?",
+    description:
+      "Troubleshoot LVP plank gaps and separation by checking locking system stress, subfloor flatness, moisture, expansion space, cabinets, and long runs.",
+    metadataTitle: "Why Is My LVP Floor Separating? Gaps and Locking Joint Causes",
+    metadataDescription:
+      "Learn why LVP floors separate, including locking system stress, uneven subfloors, expansion gaps, moisture, cabinets, long runs, and poor installation.",
+    dateModified: "2026-05-26",
+    readTime: "9 min read",
+    primaryEcosystem: "lvp",
+    secondaryEcosystems: ["lvt"],
+    materialTypes: ["lvp", "lvt"],
+    topicCluster: "subfloor-prep",
+    relatedTools: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"],
+    relatedGuides: [
+      "why-is-my-lvp-floor-clicking",
+      "why-is-my-lvp-lifting",
+      "subfloor-flatness-requirements-lvp",
+      "can-you-install-cabinets-over-floating-lvp",
+      "glue-down-vs-floating-floor"
+    ],
+    sections: [
+      {
+        id: "quick-answer",
+        title: "Quick answer",
+        paragraphs: [
+          "LVP floors usually separate when the locking system is stressed, unsupported, damaged, trapped, or moving more than the floor was designed to handle. Uneven subfloors, missing expansion space, moisture, heavy fixed cabinets or islands, long runs, and installation damage are common causes.",
+          "The fix depends on whether the planks are simply out of position or whether the locking edges are damaged. If joints are broken, swollen, or repeatedly opening, repair may require lifting the floor and replacing planks."
+        ]
+      },
+      {
+        id: "common-causes",
+        title: "Common causes",
+        paragraphs: [
+          "LVP separation is often a movement problem. A floating LVP floor needs support below the joints and room to expand and contract. When the floor flexes over low spots or gets pinned by fixed objects, stress can show up as gaps."
+        ],
+        bullets: [
+          "Low spots or humps that let planks flex and stress locking joints.",
+          "Expansion gaps that are too tight at walls, doorways, transitions, cabinets, or islands.",
+          "Moisture from slabs, leaks, wet cleaning, or trapped water affecting the floor system.",
+          "Heavy fixed cabinets or islands installed over a floating floor when the product does not allow it.",
+          "Long runs that exceed product requirements for expansion breaks.",
+          "Planks forced together, struck too hard, or installed over debris that damaged locking edges."
+        ]
+      },
+      {
+        id: "what-to-check-first",
+        title: "What to check first",
+        paragraphs: [
+          "Mark every gap and look for a pattern. Gaps in one hallway may point to subfloor movement or long-run stress. Gaps near a kitchen island, cabinet run, or transition may point to a pinned floating floor. Gaps near exterior doors, bathrooms, or concrete slabs deserve a moisture check.",
+          "Do not repeatedly force the joint closed without inspecting the locking edge. A damaged joint may open again or transfer stress to nearby planks."
+        ],
+        bullets: [
+          "Check whether the LVP is floating or glue-down.",
+          "Look for bounce, clicking, hollow movement, or low spots near the gap.",
+          "Check expansion space around walls, door jambs, transitions, cabinets, and islands.",
+          "Inspect the plank edges for broken locking tabs or swelling.",
+          "Review product limits for long runs and required transition breaks."
+        ]
+      },
+      {
+        id: "when-to-call-an-installer",
+        title: "When to call an installer",
+        paragraphs: [
+          "Call an installer if gaps keep returning, the floor is lifting, several joints are opening, moisture is suspected, or the floor is trapped under cabinets or fixed objects. A professional can usually identify whether the problem is subfloor support, expansion, moisture, or damaged locking edges.",
+          "If the plank locking system is damaged, repair may require replacing affected planks rather than simply tapping the floor together."
+        ]
+      },
+      {
+        id: "example-scenario",
+        title: "Example scenario",
+        paragraphs: [
+          "A floating LVP floor starts separating near a kitchen island a few months after installation. The same end gaps reopen after being tapped closed, and the floor feels tight at the island trim.",
+          "The likely issue is not just loose planks. The island may be restricting floor movement, causing stress to show up at the joints. The repair should start by checking product instructions, expansion space, and whether damaged planks need replacement."
+        ]
+      }
+    ],
+    faq: [
+      {
+        question: "Can LVP gaps be fixed?",
+        answer:
+          "Sometimes. If the locking joints are intact and the cause has been corrected, gaps may close. If locking tabs are broken, swollen, or stressed by an uneven subfloor or pinned floor, plank replacement or partial floor removal may be needed."
+      },
+      {
+        question: "Can an uneven subfloor make LVP separate?",
+        answer:
+          "Yes. Low spots can let the planks flex under foot traffic, which stresses the locking joints and can create gaps, clicking, or lifting."
+      },
+      {
+        question: "Can cabinets cause LVP plank separation?",
+        answer:
+          "Fixed cabinets or islands can restrict a floating floor if the product does not allow that installation detail. When a floating floor cannot move as designed, gaps or lifting can appear elsewhere."
+      },
+      {
+        question: "Should I glue separating LVP joints?",
+        answer:
+          "Only if the product instructions allow that repair. Spot-gluing a floating floor can block movement and may create new stress points."
+      },
+      {
+        question: "When does LVP separation require plank replacement?",
+        answer:
+          "Replacement may be needed when locking edges are broken, plank edges are swollen, the wear surface is chipped, or a joint will not stay closed after subfloor, moisture, and expansion issues are corrected."
+      }
+    ],
+    disclaimer: troubleshootingDisclaimer
+  },
+  {
+    slug: "why-is-my-laminate-floor-buckling",
+    title: "Why Is My Laminate Floor Buckling?",
+    description:
+      "Troubleshoot laminate floor buckling by checking moisture, expansion gaps, fixed objects, acclimation, subfloor flatness, and underlayment.",
+    metadataTitle: "Why Is My Laminate Floor Buckling? Moisture and Expansion Causes",
+    metadataDescription:
+      "Learn why laminate floors buckle or peak and what to check first with moisture, expansion gaps, fixed objects, acclimation, subfloors, and underlayment.",
+    dateModified: "2026-05-26",
+    readTime: "9 min read",
+    primaryEcosystem: "laminate",
+    materialTypes: ["laminate"],
+    topicCluster: "subfloor-prep",
+    relatedTools: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"],
+    relatedGuides: [
+      "why-is-my-laminate-floor-separating",
+      "laminate-floor-separating-what-to-check-first",
+      "best-underlayment-for-laminate-flooring",
+      "can-laminate-flooring-be-waterproof",
+      "how-flat-should-a-subfloor-be-for-laminate"
+    ],
+    sections: [
+      {
+        id: "quick-answer",
+        title: "Quick answer",
+        paragraphs: [
+          "Laminate flooring usually buckles when it swells from moisture or when a floating floor has no room to expand. Missing expansion gaps, tight trim, heavy fixed objects, poor acclimation, uneven subfloors, and incorrect underlayment can all contribute.",
+          "Buckling is more urgent than a small gap because the floor is under pressure. Do not just press it flat. Find what is causing the pressure or swelling first."
+        ]
+      },
+      {
+        id: "common-causes",
+        title: "Common causes",
+        paragraphs: [
+          "Laminate is commonly installed as a floating floor, so it needs movement space at the perimeter and approved underlayment below it. Moisture can also swell the core and create raised edges or peaking."
+        ],
+        bullets: [
+          "Water from leaks, wet mopping, pet accidents, exterior doors, or damp subfloors.",
+          "Expansion gaps missing or blocked by tight baseboards, door jambs, transitions, cabinets, or islands.",
+          "Heavy fixed objects pinning a floating laminate floor.",
+          "Flooring installed before product and room conditions were stable.",
+          "Uneven subfloor pushing joints upward or creating pressure points.",
+          "Underlayment that is too thick, too soft, doubled up, or not approved."
+        ]
+      },
+      {
+        id: "what-to-check-first",
+        title: "What to check first",
+        paragraphs: [
+          "First, look for moisture. Check nearby kitchens, bathrooms, exterior doors, appliances, plants, pet areas, concrete, and cleaning habits. If edges look swollen or darkened, moisture may be involved.",
+          "Next, check whether the floor has expansion space. Remove a piece of trim only if you can do it safely, or ask an installer to inspect the perimeter and transitions."
+        ],
+        bullets: [
+          "Check for leaks or standing moisture before walking the floor flat.",
+          "Look for raised seams, peaking, edge swelling, or soft spots.",
+          "Inspect the perimeter for blocked expansion space.",
+          "Review underlayment and acclimation requirements.",
+          "Check whether the buckle follows a long run or tight doorway."
+        ]
+      },
+      {
+        id: "when-to-call-an-installer",
+        title: "When to call an installer",
+        paragraphs: [
+          "Call an installer quickly if buckling is spreading, moisture is present, boards are swollen, or the floor is lifting across a large area. Waiting can damage more planks or hide a leak that needs repair.",
+          "A pro can determine whether the floor can be relieved and reinstalled, whether planks need replacement, or whether the subfloor or moisture source needs correction first."
+        ]
+      },
+      {
+        id: "example-scenario",
+        title: "Example scenario",
+        paragraphs: [
+          "A laminate floor buckles near a sliding door after a storm. The trim is tight, and the plank edges near the door look slightly swollen.",
+          "The likely problem may be both moisture exposure and restricted expansion space. The repair should start with stopping the moisture source, drying the area, and inspecting whether the affected planks and perimeter details can be corrected."
+        ]
+      }
+    ],
+    faq: [
+      {
+        question: "Can laminate buckling go back down?",
+        answer:
+          "Sometimes minor pressure can relax after the expansion issue is corrected, but moisture-swollen boards often do not return perfectly. Damaged planks may need replacement."
+      },
+      {
+        question: "Is laminate buckling caused by water?",
+        answer:
+          "Water is a common cause, but not the only one. Tight expansion gaps, pinned floors, wrong underlayment, and subfloor pressure can also cause buckling or peaking."
+      },
+      {
+        question: "Can heavy cabinets make laminate buckle?",
+        answer:
+          "Fixed cabinets or islands can restrict a floating laminate floor if installed over it against product instructions. That can force pressure to show up as buckling or separation."
+      },
+      {
+        question: "Should I cut expansion gaps after laminate buckles?",
+        answer:
+          "Only after identifying the cause and confirming the product requirements. Cutting blindly can damage the floor or miss a moisture problem."
+      },
+      {
+        question: "Can underlayment cause laminate buckling?",
+        answer:
+          "Yes. Underlayment that is too soft, too thick, doubled, or unapproved can add movement and stress. It cannot replace proper subfloor prep or expansion space."
+      }
+    ],
+    disclaimer: troubleshootingDisclaimer
+  },
+  {
+    slug: "why-is-my-hardwood-floor-gapping",
+    title: "Why Is My Hardwood Floor Gapping?",
+    description:
+      "Understand hardwood floor gaps, including seasonal humidity, acclimation, moisture imbalance, solid versus engineered wood, and when gaps are concerning.",
+    metadataTitle: "Why Is My Hardwood Floor Gapping? Seasonal and Moisture Causes",
+    metadataDescription:
+      "Learn why hardwood floors gap, what seasonal gaps mean, and what to monitor with humidity, acclimation, moisture imbalance, solid wood, and engineered hardwood.",
+    dateModified: "2026-05-26",
+    readTime: "9 min read",
+    primaryEcosystem: "hardwood-engineered-hardwood",
+    materialTypes: ["hardwood", "engineered-hardwood"],
+    topicCluster: "installation-method",
+    relatedTools: ["flooring-square-footage-calculator", "waste-calculator"],
+    relatedGuides: [
+      "how-long-should-hardwood-acclimate",
+      "hardwood-acclimation-mistakes",
+      "why-is-my-hardwood-floor-cupping",
+      "can-engineered-hardwood-go-over-concrete",
+      "solid-hardwood-vs-engineered-hardwood"
+    ],
+    sections: [
+      {
+        id: "quick-answer",
+        title: "Quick answer",
+        paragraphs: [
+          "Hardwood floors gap when boards shrink or move apart. Small seasonal gaps can be normal in dry months, especially with solid hardwood, but wide, uneven, growing, or year-round gaps may point to moisture imbalance, poor acclimation, installation issues, or unstable indoor humidity.",
+          "The most useful first step is to track indoor humidity and whether the gaps close during more humid seasons. That pattern helps separate normal seasonal movement from a problem that needs repair."
+        ]
+      },
+      {
+        id: "common-causes",
+        title: "Common causes",
+        paragraphs: [
+          "Wood expands and contracts with moisture. Gapping usually means the boards have lost moisture, were installed before reaching suitable conditions, or are responding to indoor humidity that is outside the expected range."
+        ],
+        bullets: [
+          "Dry winter indoor air causing seasonal shrinkage.",
+          "Hardwood installed before flooring and subfloor moisture were within range.",
+          "HVAC or humidity conditions changing after installation.",
+          "Moisture imbalance from crawlspaces, basements, slabs, or leaks.",
+          "Solid hardwood moving more noticeably than some engineered products.",
+          "Fastening, milling, or installation issues that leave irregular gaps."
+        ]
+      },
+      {
+        id: "what-to-check-first",
+        title: "What to check first",
+        paragraphs: [
+          "Measure indoor relative humidity and note the season. If gaps appear in winter and close in spring or summer, the movement may be seasonal. If gaps stay open year-round, grow quickly, or appear with cupping, crowning, squeaks, or loose boards, investigate further.",
+          "Look at whether the gaps are even across the room or concentrated in one area. Local gaps near exterior doors, vents, fireplaces, leaks, or concrete may point to room-specific conditions."
+        ],
+        bullets: [
+          "Track humidity for several weeks instead of guessing.",
+          "Note whether gaps are seasonal, stable, growing, or localized.",
+          "Look for cupping, crowning, loose boards, or moisture stains.",
+          "Review acclimation and moisture readings if available.",
+          "Compare solid hardwood and engineered hardwood expectations for the exact product."
+        ]
+      },
+      {
+        id: "when-to-call-an-installer",
+        title: "When to call an installer",
+        paragraphs: [
+          "Call a hardwood professional if gaps are large, uneven, increasing, paired with cupping or crowning, or not changing seasonally. Also call if the floor is over concrete, near a crawlspace, or installed recently without documented moisture readings.",
+          "Filling gaps too soon can backfire. If boards expand later, filler can crack, squeeze out, or create pressure."
+        ]
+      },
+      {
+        id: "example-scenario",
+        title: "Example scenario",
+        paragraphs: [
+          "A solid oak floor develops thin gaps in January after the heat has been running for weeks. The homeowner measures low indoor humidity, and the gaps narrow again in late spring.",
+          "That pattern is different from a floor with wide permanent gaps after installation. Monitoring humidity, product expectations, and seasonal movement helps decide whether the issue is normal movement or a repair concern."
+        ]
+      }
+    ],
+    faq: [
+      {
+        question: "Are gaps in hardwood floors normal?",
+        answer:
+          "Small seasonal gaps can be normal, especially in dry months. Large, uneven, permanent, or growing gaps should be evaluated."
+      },
+      {
+        question: "Will hardwood floor gaps close on their own?",
+        answer:
+          "Seasonal gaps may narrow when indoor humidity rises. Gaps caused by installation, moisture imbalance, damaged boards, or unstable conditions may not close without correction."
+      },
+      {
+        question: "Should I fill hardwood floor gaps?",
+        answer:
+          "Do not rush to fill seasonal gaps. If the boards expand later, filler can crack or create pressure. Have persistent or wide gaps evaluated before repair."
+      },
+      {
+        question: "Does engineered hardwood gap less than solid hardwood?",
+        answer:
+          "Engineered hardwood is often more dimensionally stable, but it can still gap if indoor conditions, moisture, acclimation, or installation details are wrong."
+      },
+      {
+        question: "Can poor acclimation cause hardwood gaps?",
+        answer:
+          "Yes. If hardwood is installed before the flooring, subfloor, and home are within required conditions, movement after installation can show up as gaps, cupping, or other problems."
+      }
+    ],
+    disclaimer: troubleshootingDisclaimer
+  },
+  {
+    slug: "why-is-my-carpet-wrinkling-or-buckling",
+    title: "Why Is My Carpet Wrinkling or Buckling?",
+    description:
+      "Troubleshoot carpet wrinkles and buckling by checking stretch, padding, humidity, furniture movement, age, delamination, and when restretching may help.",
+    metadataTitle: "Why Is My Carpet Wrinkling or Buckling? Causes and Restretching",
+    metadataDescription:
+      "Learn why carpet wrinkles, ripples, or buckles and what to check with poor stretch, padding, humidity, furniture movement, carpet age, and delamination.",
+    dateModified: "2026-05-26",
+    readTime: "8 min read",
+    primaryEcosystem: "carpet-padding",
+    materialTypes: ["carpet", "carpet-padding"],
+    topicCluster: "installation-method",
+    relatedTools: ["carpet-seam-planner", "pattern-repeat-calculator", "flooring-square-footage-calculator"],
+    relatedGuides: [
+      "carpet-padding-thickness-guide",
+      "carpet-seam-direction-guide",
+      "why-are-my-carpet-seams-visible",
+      "what-direction-should-carpet-run",
+      "how-much-extra-carpet-should-i-order"
+    ],
+    sections: [
+      {
+        id: "quick-answer",
+        title: "Quick answer",
+        paragraphs: [
+          "Carpet wrinkles or buckles when the carpet is loose, stretched poorly, moving over the wrong pad, affected by humidity, shifted by heavy furniture, aging, or separating internally. In many cases, professional restretching can help, but not every wrinkle is only a stretch issue.",
+          "If wrinkles are new, spreading, near seams, or paired with a soft or crunchy feel, the installer should evaluate the carpet, pad, tack strip, seams, and backing."
+        ]
+      },
+      {
+        id: "common-causes",
+        title: "Common causes",
+        paragraphs: [
+          "Carpet needs to be stretched and held properly. Padding, backing condition, room humidity, furniture movement, and age all affect whether carpet stays flat."
+        ],
+        bullets: [
+          "Carpet was not power-stretched properly during installation.",
+          "Padding is too thick, too soft, worn out, or not suited to the carpet.",
+          "Humidity changes temporarily relax or move the carpet.",
+          "Heavy furniture was dragged and shifted the carpet.",
+          "Older carpet has lost backing strength or dimensional stability.",
+          "Delamination where the carpet backing separates internally."
+        ]
+      },
+      {
+        id: "what-to-check-first",
+        title: "What to check first",
+        paragraphs: [
+          "Look at where the wrinkles start. Wrinkles across the center of a room often point to looseness or stretch. Wrinkles near a seam may point to seam stress. Wrinkles near furniture paths may point to movement from dragging or rolling loads.",
+          "Also check how the carpet feels. A loose ripple is different from backing delamination, where the carpet can feel soft, bubbly, crunchy, or separated."
+        ],
+        bullets: [
+          "Check whether wrinkles run across the room, near seams, or near furniture paths.",
+          "Look for seam opening, fraying, or visible backing problems.",
+          "Review whether the carpet was power-stretched during installation.",
+          "Check whether the pad thickness and density match the carpet requirements.",
+          "Avoid cutting or trimming carpet before a professional review."
+        ]
+      },
+      {
+        id: "when-to-call-an-installer",
+        title: "When to call an installer",
+        paragraphs: [
+          "Call a carpet installer if wrinkles create a trip hazard, if the carpet is newer, if wrinkles are spreading, if seams are affected, or if the carpet feels separated from the backing. Restretching may solve loose carpet, but damaged backing or bad pad may need a different fix.",
+          "A professional can determine whether the carpet can be restretched, whether tack strips or seams need work, or whether replacement is more realistic."
+        ]
+      },
+      {
+        id: "example-scenario",
+        title: "Example scenario",
+        paragraphs: [
+          "A bedroom carpet develops ripples six months after installation. The wrinkles run across the center of the room, and the carpet otherwise feels intact.",
+          "That may be a restretching candidate. A different room with old carpet, soft bubbles, and backing separation may not respond well to restretching because the carpet itself may be failing."
+        ]
+      }
+    ],
+    faq: [
+      {
+        question: "Can wrinkled carpet be restretched?",
+        answer:
+          "Often yes, especially when the carpet is loose but still structurally sound. Restretching is less effective when the carpet backing is damaged, the pad is wrong, or the carpet is very old."
+      },
+      {
+        question: "Is carpet wrinkling a trip hazard?",
+        answer:
+          "It can be. Ripples in walking paths should be addressed because they can catch feet, furniture, or vacuum cleaners."
+      },
+      {
+        question: "Can humidity make carpet buckle?",
+        answer:
+          "Humidity can contribute to temporary movement or relaxation in some carpets, but recurring or severe buckling should still be inspected."
+      },
+      {
+        question: "Can bad padding cause carpet wrinkles?",
+        answer:
+          "Yes. Padding that is too soft, too thick, worn out, or not approved for the carpet can let the carpet move and wear poorly."
+      },
+      {
+        question: "Should carpet seams be checked when carpet wrinkles?",
+        answer:
+          "Yes. Wrinkles near seams can stress the seam, make it more visible, or indicate that the layout and stretch need professional review."
+      }
+    ],
+    disclaimer: troubleshootingDisclaimer
+  },
+  {
+    slug: "why-is-my-tile-cracking",
+    title: "Why Is My Tile Cracking?",
+    description:
+      "Troubleshoot cracked tile by checking subfloor movement, deflection, underlayment, hollow spots, mortar coverage, expansion movement, and slab cracks.",
+    metadataTitle: "Why Is My Tile Cracking? Subfloor, Mortar, and Movement Causes",
+    metadataDescription:
+      "Learn why tile floors crack and what to check first with subfloor movement, deflection, underlayment, hollow spots, mortar coverage, expansion, and slab cracks.",
+    dateModified: "2026-05-26",
+    readTime: "9 min read",
+    primaryEcosystem: "tile",
+    materialTypes: ["ceramic-tile", "porcelain-tile", "stone-tile"],
+    topicCluster: "subfloor-prep",
+    relatedTools: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"],
+    relatedGuides: [
+      "how-flat-should-a-floor-be-for-tile",
+      "can-you-install-tile-over-tile",
+      "tile-layout-planning-guide",
+      "porcelain-vs-ceramic-tile",
+      "flooring-transition-guide"
+    ],
+    sections: [
+      {
+        id: "quick-answer",
+        title: "Quick answer",
+        paragraphs: [
+          "Tile cracks when the tile assembly cannot handle movement, stress, or poor support. Common causes include subfloor movement, joist deflection, missing or incorrect underlayment, hollow spots, poor mortar coverage, expansion movement, impacts, or cracks transferring from a concrete slab.",
+          "One cracked tile may be an isolated impact. Repeating cracks, cracks following a straight line, loose tiles, cracked grout, or hollow sounds usually point to a substrate or installation issue that should be evaluated before replacing tile."
+        ]
+      },
+      {
+        id: "common-causes",
+        title: "Common causes",
+        paragraphs: [
+          "Tile is hard but not flexible. The layers below it need to be flat, stable, supported, and prepared for the tile size and setting material. If the structure moves, the tile often shows the stress."
+        ],
+        bullets: [
+          "Wood subfloor or framing movement causing deflection under the tile.",
+          "Missing, wrong, or poorly installed backer board, membrane, or underlayment.",
+          "Insufficient mortar coverage leaving hollow or unsupported areas.",
+          "Concrete slab cracks transferring through the tile without an appropriate isolation strategy.",
+          "Expansion movement at walls, doorways, sunny areas, or large rooms.",
+          "Large-format tile installed over a floor that was not flat or stable enough."
+        ]
+      },
+      {
+        id: "what-to-check-first",
+        title: "What to check first",
+        paragraphs: [
+          "Look at the crack pattern. A single cracked tile in the middle of a kitchen may be an impact. A line of cracked tiles can point to slab movement, underlayment seams, framing movement, or expansion stress.",
+          "Tap nearby tiles and listen for hollow areas. Also check grout cracks, loose tile movement, doorways, transitions, and whether the floor flexes under normal walking."
+        ],
+        bullets: [
+          "Map whether cracks are isolated, repeating, or following a straight line.",
+          "Check for hollow sounds, loose tiles, or cracked grout nearby.",
+          "Review subfloor structure and underlayment if the floor is over wood framing.",
+          "Look for slab cracks or moisture if the tile is over concrete.",
+          "Check whether movement joints or perimeter gaps were planned where required."
+        ]
+      },
+      {
+        id: "when-to-call-an-installer",
+        title: "When to call an installer",
+        paragraphs: [
+          "Call a tile professional if cracks repeat, if tiles sound hollow, if grout is cracking, if the floor flexes, if a slab crack is involved, or if the tile is in a wet area. Replacing only the visible tile may fail again if the cause is still active.",
+          "A professional can review substrate preparation, mortar coverage, underlayment, movement joints, and whether a crack isolation product or structural repair is needed."
+        ]
+      },
+      {
+        id: "example-scenario",
+        title: "Example scenario",
+        paragraphs: [
+          "A porcelain kitchen floor develops three cracked tiles in a straight line. The grout is cracked along the same path, and tapping the tiles nearby reveals hollow spots.",
+          "That pattern suggests the issue may be below the tile, such as substrate movement, poor coverage, or an underlayment seam. Replacing only the cracked tiles without checking the assembly may lead to repeat cracking."
+        ]
+      }
+    ],
+    faq: [
+      {
+        question: "Can one cracked tile be replaced?",
+        answer:
+          "Yes, if the cause is isolated and matching tile is available. If the crack is caused by movement, poor support, or slab cracking, replacement alone may not last."
+      },
+      {
+        question: "Do hollow tiles always crack?",
+        answer:
+          "Not always, but hollow-sounding tile can indicate poor support or bond. Hollow tile with movement, cracked grout, or spreading cracks should be inspected."
+      },
+      {
+        question: "Can a cracked concrete slab crack tile?",
+        answer:
+          "Yes. Movement or cracks in concrete can transfer through tile if the assembly is not designed to manage that condition."
+      },
+      {
+        question: "Does tile need an underlayment over wood subfloor?",
+        answer:
+          "Tile over wood framing usually needs an appropriate tile underlayment or membrane system, but the exact requirement depends on the structure, tile, and installation method."
+      },
+      {
+        question: "Can large-format tile crack more easily?",
+        answer:
+          "Large-format tile is not automatically weaker, but it often needs a flatter, better-supported substrate and careful mortar coverage. Poor prep can make problems more noticeable."
       }
     ],
     disclaimer: troubleshootingDisclaimer

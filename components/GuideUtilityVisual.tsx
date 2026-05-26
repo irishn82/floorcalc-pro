@@ -174,6 +174,15 @@ function LaminateSeparationVisual() {
   );
 }
 
+function ProblemCauseVisual({ rows, includeExpansion = false }: { rows: string[][]; includeExpansion?: boolean }) {
+  return (
+    <div className="grid gap-3">
+      {includeExpansion ? <ExpansionGapVisual /> : null}
+      <ComparisonTable columns={["Cause", "Likely symptom", "What to check"]} rows={rows} />
+    </div>
+  );
+}
+
 function ExpansionGapVisual() {
   return (
     <div className="rounded-md border border-line bg-white p-3">
@@ -265,6 +274,83 @@ export function GuideUtilityVisual({ guide }: GuideUtilityVisualProps) {
     );
   }
 
+  if (guide.slug === "why-is-my-lvp-floor-separating") {
+    return (
+      <VisualShell title="LVP separation troubleshooting view">
+        <ProblemCauseVisual
+          includeExpansion
+          rows={[
+            ["Locking stress", "End gaps or joints reopening", "Inspect locking edges and nearby flex"],
+            ["Uneven subfloor", "Gap returns in one traffic path", "Check for low spots, humps, and hollow movement"],
+            ["Pinned floating floor", "Gaps near cabinets or transitions", "Check expansion space and fixed objects"],
+            ["Moisture", "Swollen edges or lifting", "Look for slab moisture, leaks, or wet cleaning"]
+          ]}
+        />
+      </VisualShell>
+    );
+  }
+
+  if (guide.slug === "why-is-my-laminate-floor-buckling") {
+    return (
+      <VisualShell title="Laminate buckling troubleshooting view">
+        <ProblemCauseVisual
+          includeExpansion
+          rows={[
+            ["Moisture", "Raised seams, swollen edges", "Check leaks, doors, cleaning, and subfloor moisture"],
+            ["Blocked expansion", "Peaking or buckling near walls", "Inspect perimeter gaps, trim, and transitions"],
+            ["Fixed objects", "Pressure away from cabinets or islands", "Check whether the floating floor is pinned"],
+            ["Wrong underlayment", "Soft feel or movement", "Verify approved pad and no doubled layers"]
+          ]}
+        />
+      </VisualShell>
+    );
+  }
+
+  if (guide.slug === "why-is-my-hardwood-floor-gapping") {
+    return (
+      <VisualShell title="Hardwood gapping troubleshooting view">
+        <ProblemCauseVisual
+          rows={[
+            ["Seasonal dryness", "Small gaps in winter", "Track indoor humidity and whether gaps close later"],
+            ["Poor acclimation", "Gaps soon after install", "Review jobsite conditions and moisture readings"],
+            ["Moisture imbalance", "Gaps plus cupping or crowning", "Check crawlspace, slab, leaks, and HVAC"],
+            ["Product behavior", "Wider gaps in solid wood", "Compare solid vs engineered expectations"]
+          ]}
+        />
+      </VisualShell>
+    );
+  }
+
+  if (guide.slug === "why-is-my-carpet-wrinkling-or-buckling") {
+    return (
+      <VisualShell title="Carpet wrinkling troubleshooting view">
+        <ProblemCauseVisual
+          rows={[
+            ["Loose stretch", "Ripples across open room", "Ask whether power stretching was used"],
+            ["Padding issue", "Soft movement or premature wrinkles", "Check pad thickness, density, and condition"],
+            ["Furniture movement", "Wrinkles along traffic paths", "Look for dragged furniture or rolling loads"],
+            ["Backing failure", "Bubbles, soft spots, or crunching", "Have backing and delamination evaluated"]
+          ]}
+        />
+      </VisualShell>
+    );
+  }
+
+  if (guide.slug === "why-is-my-tile-cracking") {
+    return (
+      <VisualShell title="Tile cracking troubleshooting view">
+        <ProblemCauseVisual
+          rows={[
+            ["Subfloor movement", "Cracks or grout lines repeating", "Check framing, deflection, and underlayment"],
+            ["Poor coverage", "Hollow sound near cracks", "Tap nearby tiles and check for loose areas"],
+            ["Slab crack", "Crack follows a straight line", "Inspect concrete and isolation requirements"],
+            ["Expansion movement", "Cracks near edges or sunny areas", "Review movement joints and perimeter gaps"]
+          ]}
+        />
+      </VisualShell>
+    );
+  }
+
   if (["flooring-transition-guide", "t-mold-vs-reducer-vs-end-cap", "why-is-my-transition-strip-moving"].includes(guide.slug)) {
     return (
       <VisualShell title="Transition profile quick comparison">
@@ -294,7 +380,9 @@ export function GuideUtilityVisual({ guide }: GuideUtilityVisualProps) {
       "why-is-my-floor-clicking",
       "why-is-my-lvp-floor-clicking",
       "why-is-my-lvp-lifting",
+      "why-is-my-lvp-floor-separating",
       "why-is-my-laminate-floor-separating",
+      "why-is-my-laminate-floor-buckling",
       "laminate-floor-separating-what-to-check-first",
       "why-does-my-floor-feel-hollow",
       "subfloor-flatness-requirements-lvp",

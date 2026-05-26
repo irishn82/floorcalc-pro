@@ -51,6 +51,7 @@ const targetedNextStepTargets: Partial<
   "why-is-my-laminate-floor-separating": {
     primary: { type: "guide", slug: "laminate-floor-separating-what-to-check-first" },
     secondary: [
+      { type: "guide", slug: "why-is-my-laminate-floor-buckling" },
       { type: "guide", slug: "how-flat-should-a-subfloor-be-for-laminate" },
       { type: "guide", slug: "best-underlayment-for-laminate-flooring" },
       { type: "guide", slug: "flooring-direction-mistakes" },
@@ -70,8 +71,50 @@ const targetedNextStepTargets: Partial<
     primary: { type: "guide", slug: "hardwood-acclimation-mistakes" },
     secondary: [
       { type: "guide", slug: "can-engineered-hardwood-go-over-concrete" },
+      { type: "guide", slug: "why-is-my-hardwood-floor-gapping" },
       { type: "guide", slug: "why-is-my-hardwood-floor-cupping" },
       { type: "guide", slug: "moisture-barrier-engineered-hardwood-over-concrete" }
+    ]
+  },
+  "why-is-my-lvp-floor-separating": {
+    primary: { type: "guide", slug: "subfloor-flatness-requirements-lvp" },
+    secondary: [
+      { type: "guide", slug: "why-is-my-lvp-floor-clicking" },
+      { type: "guide", slug: "why-is-my-lvp-lifting" },
+      { type: "guide", slug: "can-you-install-cabinets-over-floating-lvp" },
+      { type: "tool", slug: "transition-estimator" }
+    ]
+  },
+  "why-is-my-laminate-floor-buckling": {
+    primary: { type: "guide", slug: "why-is-my-laminate-floor-separating" },
+    secondary: [
+      { type: "guide", slug: "how-flat-should-a-subfloor-be-for-laminate" },
+      { type: "guide", slug: "best-underlayment-for-laminate-flooring" },
+      { type: "guide", slug: "can-laminate-flooring-be-waterproof" }
+    ]
+  },
+  "why-is-my-hardwood-floor-gapping": {
+    primary: { type: "guide", slug: "how-long-should-hardwood-acclimate" },
+    secondary: [
+      { type: "guide", slug: "hardwood-acclimation-mistakes" },
+      { type: "guide", slug: "why-is-my-hardwood-floor-cupping" },
+      { type: "guide", slug: "can-engineered-hardwood-go-over-concrete" }
+    ]
+  },
+  "why-is-my-carpet-wrinkling-or-buckling": {
+    primary: { type: "guide", slug: "carpet-padding-thickness-guide" },
+    secondary: [
+      { type: "tool", slug: "carpet-seam-planner" },
+      { type: "guide", slug: "why-are-my-carpet-seams-visible" },
+      { type: "guide", slug: "carpet-seam-direction-guide" }
+    ]
+  },
+  "why-is-my-tile-cracking": {
+    primary: { type: "guide", slug: "how-flat-should-a-floor-be-for-tile" },
+    secondary: [
+      { type: "guide", slug: "tile-layout-planning-guide" },
+      { type: "guide", slug: "can-you-install-tile-over-tile" },
+      { type: "tool", slug: "transition-estimator" }
     ]
   }
 };

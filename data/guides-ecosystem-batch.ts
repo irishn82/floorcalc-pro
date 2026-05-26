@@ -376,8 +376,10 @@ const guideDrafts: GuideDraft[] = [
     topicCluster: "subfloor-prep",
     relatedTools: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"],
     relatedGuides: [
+      "why-is-my-lvp-floor-separating",
       "subfloor-flatness-requirements-lvp",
       "best-underlayment-for-lvp",
+      "why-is-my-lvp-lifting",
       "can-you-install-cabinets-over-floating-lvp",
       "can-you-install-lvp-over-concrete"
     ],
@@ -740,6 +742,7 @@ const guideDrafts: GuideDraft[] = [
     relatedTools: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"],
     relatedGuides: [
       "laminate-floor-separating-what-to-check-first",
+      "why-is-my-laminate-floor-buckling",
       "how-flat-should-a-subfloor-be-for-laminate",
       "best-underlayment-for-laminate-flooring",
       "why-is-my-floor-clicking",
@@ -1449,6 +1452,8 @@ const guideDrafts: GuideDraft[] = [
     topicCluster: "subfloor-prep",
     relatedTools: ["flooring-square-footage-calculator", "waste-calculator"],
     relatedGuides: [
+      "why-is-my-hardwood-floor-gapping",
+      "hardwood-acclimation-mistakes",
       "how-long-should-hardwood-acclimate",
       "solid-hardwood-vs-engineered-hardwood",
       "can-engineered-hardwood-go-over-concrete",
@@ -2175,6 +2180,7 @@ const guideDrafts: GuideDraft[] = [
     topicCluster: "subfloor-prep",
     relatedTools: ["flooring-square-footage-calculator", "waste-calculator"],
     relatedGuides: [
+      "why-is-my-tile-cracking",
       "tile-layout-planning-guide",
       "porcelain-vs-ceramic-tile",
       "can-you-install-tile-over-tile",
