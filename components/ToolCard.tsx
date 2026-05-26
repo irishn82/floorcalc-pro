@@ -18,7 +18,7 @@ const toolIcons: Record<Tool["calculatorType"], FlooringIconName> = {
 
 export function ToolCard({ tool, relatedGuides = [] }: ToolCardProps) {
   return (
-    <article className="flooring-card overflow-hidden rounded-lg border border-line bg-white p-3.5 pt-5 shadow-sm transition hover:-translate-y-0.5 hover:border-accent-100 hover:shadow-soft">
+    <article className="flooring-card overflow-hidden rounded-lg border border-line bg-white p-3 pt-4 shadow-sm transition hover:-translate-y-0.5 hover:border-accent-100 hover:shadow-soft">
       <div className="flex items-start gap-3">
         <span className="grid h-9 w-9 shrink-0 place-items-center rounded-lg border border-accent-100 bg-accent-50 text-accent-700">
           <FlooringIcon name={toolIcons[tool.calculatorType]} />
@@ -34,11 +34,11 @@ export function ToolCard({ tool, relatedGuides = [] }: ToolCardProps) {
           <p className="mt-2 text-sm leading-6 text-slate-600">{tool.description}</p>
         </div>
       </div>
-      <p className="mt-3 break-words rounded-md border border-line bg-field px-3 py-2 text-xs font-bold uppercase leading-5 tracking-wide text-slate-600">
+      <p className="mt-2.5 break-words rounded-md border border-line bg-field px-3 py-2 text-xs font-bold uppercase leading-5 tracking-wide text-slate-600">
         Best for: {tool.flooringSystem}
       </p>
       {relatedGuides.length > 0 ? (
-        <div className="mt-3 border-t border-line pt-3">
+        <div className="mt-2.5 border-t border-line pt-2.5">
           <p className="text-xs font-bold uppercase tracking-wide text-slate-500">Helpful guides</p>
           <div className="mt-2 flex flex-wrap gap-2">
             {relatedGuides.slice(0, 3).map((guide) => (
@@ -53,7 +53,7 @@ export function ToolCard({ tool, relatedGuides = [] }: ToolCardProps) {
           </div>
         </div>
       ) : null}
-      <Link href={`/tools/${tool.slug}`} className="mt-3 inline-flex text-sm font-bold text-accent-700 hover:text-accent-600">
+      <Link href={`/tools/${tool.slug}`} className="mt-2.5 inline-flex text-sm font-bold text-accent-700 hover:text-accent-600">
         Open calculator
         <span aria-hidden="true" className="ml-1">
           -&gt;

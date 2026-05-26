@@ -322,17 +322,20 @@ export default async function GuidePage({ params }: GuidePageProps) {
                 </div>
               </div>
               {troubleshootingFlow ? (
-                <TroubleshootingGuideFlow
-                  causeRows={troubleshootingFlow.causeRows}
-                  whatToCheckFirst={troubleshootingFlow.whatToCheckFirst}
-                  whenToCallAPro={troubleshootingFlow.whenToCallAPro}
-                  relatedLinks={troubleshootingFlowGuideLinks}
-                  toolLinks={troubleshootingFlowToolLinks}
-                />
+                <>
+                  <TroubleshootingGuideFlow
+                    causeRows={troubleshootingFlow.causeRows}
+                    whatToCheckFirst={troubleshootingFlow.whatToCheckFirst}
+                    whenToCallAPro={troubleshootingFlow.whenToCallAPro}
+                    relatedLinks={troubleshootingFlowGuideLinks}
+                    toolLinks={troubleshootingFlowToolLinks}
+                  />
+                  <GuideUtilityVisual guide={guide} />
+                </>
               ) : (
                 <GuideUtilityVisual guide={guide} />
               )}
-              <div className="prose-flooring mt-6">
+              <div className="prose-flooring mt-5">
                 {guide.sections.map((section) => (
                   <section key={section.id} id={section.id} className="scroll-mt-24">
                     <h2>{section.title}</h2>

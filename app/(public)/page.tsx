@@ -124,6 +124,7 @@ export default function HomePage() {
                 stair parts, transitions, and jobsite conditions.
               </p>
               <p className="mt-4 text-base leading-7 text-slate-600">
+                Most flooring problems begin with movement, moisture, substrate flatness, transitions, or jobsite conditions.
                 Use the numbers as a better starting point, then verify final quantities with the installer, retailer,
                 or product documentation before purchasing materials.
               </p>

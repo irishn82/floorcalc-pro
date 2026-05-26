@@ -45,14 +45,14 @@ export default function TroubleshootingGuidesPage() {
               description="Start here when a floor is clicking, lifting, separating, sounding hollow, showing carpet seams, or causing transition problems."
               headingLevel="h1"
             />
-            <div className="rounded-lg border border-line bg-field p-4">
+            <div className="rounded-lg border border-line bg-field p-3.5">
               <h2 className="inline-flex items-center gap-2 text-lg font-bold text-ink">
                 <FlooringIcon name="shield" className="h-5 w-5 text-accent-700" />
                 What to do first
               </h2>
               <p className="mt-3 text-sm leading-6 text-slate-600">
-                Identify the flooring type, mark where the problem repeats, check for moisture or movement, and avoid forcing repairs
-                before the cause is clear.
+                Start with the jobsite conditions: identify the flooring type, mark where the problem repeats, check for moisture
+                or movement, and avoid forcing repairs before the cause is clear.
               </p>
             </div>
           </div>
@@ -62,13 +62,13 @@ export default function TroubleshootingGuidesPage() {
             <p className="mt-2 max-w-2xl text-sm leading-6 text-slate-600">
               Start with the material and symptom, then use the related calculator or prep guide to narrow the likely cause.
             </p>
-            <div className="mt-5 space-y-6">
+            <div className="mt-5 space-y-5">
               {troubleshootingProblemGroups.map((group) => {
                 const groupGuides = getRelatedGuides(group.guideSlugs);
                 const groupTools = getRelatedTools(group.toolSlugs);
 
                 return (
-                  <section key={group.slug} className="rounded-lg border border-line bg-field p-4 shadow-sm">
+                  <section key={group.slug} className="rounded-lg border border-line bg-field p-3.5 shadow-sm">
                     <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
                       <div>
                         <p className="text-xs font-bold uppercase tracking-wide text-accent-700">Problem ecosystem</p>

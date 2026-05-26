@@ -21,9 +21,9 @@ export function NextStepPanel({
   secondaryLinks = []
 }: NextStepPanelProps) {
   return (
-    <section className="bg-white py-8">
+    <section className="bg-white py-7">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <div className="rounded-lg border border-line bg-field p-4 shadow-sm">
+        <div className="rounded-lg border border-line bg-field p-3.5 shadow-sm">
           <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
             <div className="max-w-2xl">
               <h2 className="inline-flex items-center gap-3 text-xl font-black text-ink">
@@ -47,7 +47,7 @@ export function NextStepPanel({
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="rounded-md border border-line bg-white p-3.5 text-sm font-bold text-slate-800 transition hover:border-accent-100 hover:text-accent-700"
+                  className="rounded-md border border-line bg-white p-3 text-sm font-bold text-slate-800 transition hover:border-accent-100 hover:text-accent-700"
                 >
                   {link.label}
                   {link.description ? <span className="mt-2 block font-normal leading-6 text-slate-600">{link.description}</span> : null}

@@ -6,7 +6,7 @@ import { FlooringIcon } from "@/components/FlooringIcon";
 export function Footer() {
   return (
     <footer className="border-t border-line bg-brand-900 text-white">
-      <Container className="grid gap-7 py-8 md:grid-cols-[1.4fr_1fr_1fr]">
+      <Container className="grid gap-6 py-7 md:grid-cols-[1.4fr_1fr_1fr]">
         <div>
           <Link href="/" className="inline-flex items-center gap-3" aria-label="FloorCalc Pro home">
             <span className="grid h-10 w-10 shrink-0 place-items-center rounded-lg border border-white/10 bg-brand-800 p-1 shadow-brand">
@@ -20,7 +20,7 @@ export function Footer() {
           <p className="mt-3 max-w-md text-sm leading-6 text-slate-300">
             Free flooring calculators and practical planning guides for homeowners, remodelers, and flooring shoppers.
           </p>
-          <div className="mt-4 flex flex-wrap gap-2">
+          <div className="mt-3 flex flex-wrap gap-2">
             {[
               ["Measure", "/tools/flooring-square-footage-calculator"],
               ["Waste", "/tools/waste-calculator"],
@@ -84,7 +84,7 @@ export function Footer() {
           </ul>
         </div>
       </Container>
-      <Container className="flex flex-col gap-3 border-t border-white/10 py-4 text-xs text-slate-400 sm:flex-row sm:items-center sm:justify-between">
+      <Container className="flex flex-col gap-3 border-t border-white/10 py-3.5 text-xs text-slate-400 sm:flex-row sm:items-center sm:justify-between">
         <p>Copyright {new Date().getFullYear()} FloorCalc Pro. All rights reserved.</p>
         <p>Calculator results are estimates and should be verified before ordering materials.</p>
       </Container>

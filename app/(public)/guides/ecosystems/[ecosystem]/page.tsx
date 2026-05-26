@@ -75,7 +75,7 @@ export default async function GuideEcosystemPage({ params }: EcosystemPageProps)
             description={ecosystem.description}
             headingLevel="h1"
           />
-          <div className="rounded-lg border border-line bg-field p-4">
+          <div className="rounded-lg border border-line bg-field p-3.5">
             <h2 className="inline-flex items-center gap-2 text-lg font-bold text-ink">
               <FlooringIcon name={ecosystem.slug === "carpet-padding" ? "carpet" : "layers"} className="h-5 w-5 text-accent-700" />
               Planning focus
@@ -91,7 +91,7 @@ export default async function GuideEcosystemPage({ params }: EcosystemPageProps)
           </div>
         </div>
 
-        <div className="mt-6 grid gap-3 rounded-lg border border-line bg-field p-4 md:grid-cols-3">
+        <div className="mt-6 grid gap-3 rounded-lg border border-line bg-field p-3.5 md:grid-cols-3">
           <Link
             href={startGuide ? `/guides/${startGuide.slug}` : "/guides"}
             className="rounded-md border border-line bg-white p-3 text-sm font-bold text-slate-800 transition hover:border-accent-100 hover:text-accent-700"
@@ -121,31 +121,31 @@ export default async function GuideEcosystemPage({ params }: EcosystemPageProps)
           </Link>
         </div>
 
-        <div className="mt-8">
+        <div className="mt-7">
           <h2 className="text-xl font-black tracking-normal text-ink sm:text-2xl">Popular in this ecosystem</h2>
           <p className="mt-2 max-w-2xl text-sm leading-6 text-slate-600">
             These guides are primarily about {ecosystem.shortTitle} or this exact planning category.
           </p>
           {coreGuides.length > 0 ? (
-            <div className="mt-5 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            <div className="mt-4 grid gap-3 md:grid-cols-2 lg:grid-cols-3">
               {coreGuides.map((guide) => (
                 <GuideCard key={guide.slug} guide={guide} />
               ))}
             </div>
           ) : (
-            <div className="mt-6 rounded-lg border border-dashed border-line bg-field p-5 text-sm leading-6 text-slate-600">
+            <div className="mt-5 rounded-lg border border-dashed border-line bg-field p-4 text-sm leading-6 text-slate-600">
               Guides for this flooring type are planned for a future editorial pass.
             </div>
           )}
         </div>
 
         {relatedGuides.length > 0 ? (
-          <div className="mt-8 border-t border-line pt-7">
+          <div className="mt-7 border-t border-line pt-6">
             <h2 className="text-xl font-black tracking-normal text-ink sm:text-2xl">Also relevant</h2>
             <p className="mt-2 max-w-2xl text-sm leading-6 text-slate-600">
               These guides also apply here, but their main home is another flooring category.
             </p>
-            <div className="mt-5 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            <div className="mt-4 grid gap-3 md:grid-cols-2 lg:grid-cols-3">
               {relatedGuides.map((guide) => (
                 <GuideCard key={guide.slug} guide={guide} />
               ))}
@@ -154,7 +154,7 @@ export default async function GuideEcosystemPage({ params }: EcosystemPageProps)
         ) : null}
 
         {troubleshootingGuides.length > 0 ? (
-          <div className="mt-8 border-t border-line pt-7">
+          <div className="mt-7 border-t border-line pt-6">
             <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
               <div>
                 <h2 className="text-xl font-black tracking-normal text-ink sm:text-2xl">Common problems for {ecosystem.shortTitle}</h2>
@@ -166,7 +166,7 @@ export default async function GuideEcosystemPage({ params }: EcosystemPageProps)
                 View all troubleshooting
               </Link>
             </div>
-            <div className="mt-5 grid gap-4 md:grid-cols-3">
+            <div className="mt-4 grid gap-3 md:grid-cols-3">
               {troubleshootingGuides.map((guide) => (
                 <GuideCard key={guide.slug} guide={guide} />
               ))}
@@ -174,12 +174,12 @@ export default async function GuideEcosystemPage({ params }: EcosystemPageProps)
           </div>
         ) : null}
 
-        <div className="mt-8 border-t border-line pt-7">
+        <div className="mt-7 border-t border-line pt-6">
           <h2 className="text-xl font-black tracking-normal text-ink sm:text-2xl">Recommended calculators</h2>
           <p className="mt-2 max-w-2xl text-sm leading-6 text-slate-600">
             These tools support the measuring, waste, stair, seam, pattern, and transition decisions connected to this flooring type.
           </p>
-          <div className="mt-5 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-4 grid gap-3 md:grid-cols-2 lg:grid-cols-3">
             {relatedTools.map((tool) => (
               <ToolCard key={tool.slug} tool={tool} />
             ))}
@@ -199,7 +199,7 @@ export default async function GuideEcosystemPage({ params }: EcosystemPageProps)
           ]}
         />
 
-        <div className="mt-8 grid gap-6 border-t border-line pt-7 lg:grid-cols-[1fr_0.8fr]">
+        <div className="mt-7 grid gap-5 border-t border-line pt-6 lg:grid-cols-[1fr_0.8fr]">
           <DisclaimerBox>
             Flooring type pages organize general flooring planning information. Product compatibility, installation methods, subfloor requirements,
             transition profiles, and product-specific requirements vary by manufacturer and project conditions.

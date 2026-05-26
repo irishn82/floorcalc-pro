@@ -31,7 +31,7 @@ export function GuideCard({ guide }: GuideCardProps) {
   const ecosystem = getGuideEcosystemBySlug(guide.primaryEcosystem);
 
   return (
-    <article className="flooring-card overflow-hidden rounded-lg border border-line bg-white p-3.5 pt-5 shadow-sm transition hover:-translate-y-0.5 hover:shadow-soft">
+    <article className="flooring-card overflow-hidden rounded-lg border border-line bg-white p-3 pt-4 shadow-sm transition hover:-translate-y-0.5 hover:shadow-soft">
       <div className="flex items-start gap-3">
         <span className="grid h-9 w-9 shrink-0 place-items-center rounded-lg border border-accent-100 bg-accent-50 text-accent-700">
           <FlooringIcon name={getGuideIcon(guide.slug)} />
@@ -45,11 +45,11 @@ export function GuideCard({ guide }: GuideCardProps) {
       </div>
       <p className="mt-2 text-sm leading-6 text-slate-600">{guide.description}</p>
       {ecosystem ? (
-        <p className="mt-3 inline-flex rounded-md border border-line bg-field px-2.5 py-1 text-xs font-bold uppercase tracking-wide text-slate-600">
+        <p className="mt-2.5 inline-flex rounded-md border border-line bg-field px-2.5 py-1 text-xs font-bold uppercase tracking-wide text-slate-600">
           {ecosystem.shortTitle}
         </p>
       ) : null}
-      <Link href={`/guides/${guide.slug}`} className="mt-3 inline-flex text-sm font-bold text-accent-700">
+      <Link href={`/guides/${guide.slug}`} className="mt-2.5 inline-flex text-sm font-bold text-accent-700">
         Read guide
       </Link>
     </article>

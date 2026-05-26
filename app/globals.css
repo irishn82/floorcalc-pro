@@ -76,12 +76,12 @@ button {
 }
 
 .prose-flooring p {
-  margin-top: 1rem;
+  margin-top: 0.9rem;
   line-height: 1.7;
 }
 
 .prose-flooring h2 {
-  margin-top: 2.25rem;
+  margin-top: 2rem;
   color: #0d1624;
   font-size: clamp(1.25rem, 1.8vw, 1.6rem);
   font-weight: 800;
@@ -89,7 +89,7 @@ button {
 }
 
 .prose-flooring h3 {
-  margin-top: 1.5rem;
+  margin-top: 1.25rem;
   color: #0d1624;
   font-size: 1rem;
   font-weight: 800;
@@ -97,11 +97,11 @@ button {
 }
 
 .prose-flooring ul {
-  margin-top: 1rem;
+  margin-top: 0.85rem;
   padding-left: 1.25rem;
 }
 
 .prose-flooring li {
-  margin-top: 0.45rem;
+  margin-top: 0.35rem;
   line-height: 1.7;
 }

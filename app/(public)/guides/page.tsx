@@ -27,12 +27,23 @@ const featuredGuides = [
   "flooring-transition-guide"
 ];
 
+const startHereGuideSlugs = [
+  "how-much-flooring-do-i-need",
+  "which-direction-should-flooring-run",
+  "can-engineered-hardwood-go-over-concrete",
+  "why-is-my-laminate-floor-separating",
+  "why-are-my-carpet-seams-visible"
+];
+
 const planningTools = tools.filter((tool) =>
   ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"].includes(tool.slug)
 );
 
 export default function GuidesIndexPage() {
   const featured = featuredGuides
+    .map((slug) => guides.find((guide) => guide.slug === slug))
+    .filter((guide): guide is (typeof guides)[number] => Boolean(guide));
+  const startHereGuides = startHereGuideSlugs
     .map((slug) => guides.find((guide) => guide.slug === slug))
     .filter((guide): guide is (typeof guides)[number] => Boolean(guide));
   const troubleshootingGuides = getTroubleshootingGuides();
@@ -74,7 +85,7 @@ export default function GuidesIndexPage() {
                 <Link
                   key={ecosystem.slug}
                   href={`/guides/ecosystems/${ecosystem.slug}`}
-                  className="flooring-card group rounded-lg border border-line bg-white p-3.5 pt-5 shadow-sm transition hover:-translate-y-0.5 hover:border-accent-100 hover:shadow-soft"
+                  className="flooring-card group rounded-lg border border-line bg-white p-3 pt-4 shadow-sm transition hover:-translate-y-0.5 hover:border-accent-100 hover:shadow-soft"
                 >
                   <div className="flex items-start justify-between gap-4">
                     <span className="grid h-9 w-9 shrink-0 place-items-center rounded-lg border border-accent-100 bg-accent-50 text-accent-700">
@@ -94,6 +105,27 @@ export default function GuidesIndexPage() {
                 </Link>
               );
             })}
+          </div>
+        </div>
+
+        <div className="mt-8 border-t border-line pt-7">
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <p className="text-sm font-bold uppercase tracking-wide text-accent-600">Start here</p>
+              <h2 className="mt-2 text-xl font-black tracking-normal text-ink sm:text-2xl">Common flooring questions</h2>
+              <p className="mt-2 max-w-2xl text-sm leading-6 text-slate-600">
+                Most flooring surprises start with measurements, direction, moisture, movement, seams, or substrate conditions.
+                These guides help you check the basics before you buy or troubleshoot.
+              </p>
+            </div>
+            <Link href="/guides/troubleshooting" className="inline-flex text-sm font-bold text-accent-700 hover:text-accent-600">
+              Open troubleshooting
+            </Link>
+          </div>
+          <div className="mt-4 grid gap-3 md:grid-cols-2 xl:grid-cols-5">
+            {startHereGuides.map((guide) => (
+              <GuideCard key={guide.slug} guide={guide} />
+            ))}
           </div>
         </div>
 
@@ -149,7 +181,7 @@ export default function GuidesIndexPage() {
           </div>
         </div>
 
-        <div className="mt-8 space-y-8 border-t border-line pt-7">
+        <div className="mt-8 space-y-7 border-t border-line pt-7">
           {guideEcosystems.map((ecosystem) => {
             const coreGuides = getPrimaryGuidesByEcosystem(ecosystem.slug);
             const relatedGuides = getSecondaryGuidesByEcosystem(ecosystem.slug);
@@ -181,7 +213,7 @@ export default function GuidesIndexPage() {
                   </div>
                 )}
                 {relatedGuides.length > 0 ? (
-                  <div className="mt-4 rounded-lg border border-line bg-field p-3.5">
+                  <div className="mt-4 rounded-lg border border-line bg-field p-3">
                     <h3 className="text-sm font-bold uppercase tracking-wide text-slate-500">Also relevant</h3>
                     <div className="mt-3 flex flex-wrap gap-2">
                       {relatedGuides.slice(0, 4).map((guide) => (
