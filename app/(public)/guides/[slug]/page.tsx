@@ -15,7 +15,7 @@ import { TableOfContents } from "@/components/TableOfContents";
 import { NextRecommendedSteps } from "@/components/troubleshooting/NextRecommendedSteps";
 import { TroubleshootingGuideFlow } from "@/components/troubleshooting/TroubleshootingGuideFlow";
 import { guides } from "@/data/guides";
-import type { GuideSlug, ToolSlug } from "@/data/types";
+import type { GuideSection, GuideSlug, ToolSlug } from "@/data/types";
 import {
   getEcosystemRelatedGuides,
   getGuideBySlug,
@@ -40,6 +40,8 @@ type ResourceLink = {
   description?: string;
 };
 
+const troubleshootingFlowDuplicateSectionIds = new Set(["common-causes", "what-to-check-first", "when-to-call-a-professional"]);
+
 function uniqueLinks(links: ResourceLink[]) {
   const seen = new Set<string>();
 
@@ -51,6 +53,39 @@ function uniqueLinks(links: ResourceLink[]) {
     seen.add(link.href);
     return true;
   });
+}
+
+function GuideSectionContent({ section }: { section: GuideSection }) {
+  return (
+    <section id={section.id} className="scroll-mt-24">
+      <h2>{section.title}</h2>
+      {section.paragraphs.map((paragraph) => (
+        <p key={paragraph}>{paragraph}</p>
+      ))}
+      {section.bullets ? (
+        <ul>
+          {section.bullets.map((bullet) => (
+            <li key={bullet}>{bullet}</li>
+          ))}
+        </ul>
+      ) : null}
+      {section.subsections?.map((subsection) => (
+        <div key={subsection.title}>
+          <h3>{subsection.title}</h3>
+          {subsection.paragraphs.map((paragraph) => (
+            <p key={paragraph}>{paragraph}</p>
+          ))}
+          {subsection.bullets ? (
+            <ul>
+              {subsection.bullets.map((bullet) => (
+                <li key={bullet}>{bullet}</li>
+              ))}
+            </ul>
+          ) : null}
+        </div>
+      ))}
+    </section>
+  );
 }
 
 const targetedNextStepTargets: Partial<
@@ -237,6 +272,11 @@ export default async function GuidePage({ params }: GuidePageProps) {
   const troubleshootingGuides = getTroubleshootingGuidesForGuide(guide);
   const ecosystemLinks = getGuideEcosystemLinks(guide);
   const primaryEcosystem = ecosystemLinks[0];
+  const ecosystemBadgeLinks = ecosystemLinks.filter((ecosystem) => ecosystem.slug !== primaryEcosystem?.slug).slice(0, 3);
+  const topUtilityHrefSet = new Set([
+    ...ecosystemBadgeLinks.map((ecosystem) => `/guides/ecosystems/${ecosystem.slug}`),
+    ...relatedTools.map((tool) => `/tools/${tool.slug}`)
+  ]);
   const industryReferences = getGuideIndustryReferences(guide);
   const nextStepTool = relatedTools[0];
   const nextStepGuide = explicitRelatedGuides.find((relatedGuide) => relatedGuide.slug !== guide.slug) ?? ecosystemRelatedGuides[0];
@@ -276,7 +316,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
   const nextRecommendedDescription = troubleshootingFlow
     ? "Use the next guide or calculator to narrow the likely cause before opening the floor, replacing material, or scheduling a repair."
     : "Use these calculators and related guides to turn the article into a practical plan before ordering material or calling an installer.";
-  const nextRecommendedPrimaryLink =
+  const nextRecommendedPrimaryCandidate =
     targetedPrimaryLink ?? {
       href: nextStepTool ? `/tools/${nextStepTool.slug}` : "/tools",
       label: nextStepTool ? `Use ${nextStepTool.shortTitle}` : "Open flooring calculators"
@@ -311,9 +351,12 @@ export default async function GuidePage({ params }: GuidePageProps) {
       description: "Compare common flooring problems and causes."
     }
   ];
-  const nextRecommendedSecondaryLinks = uniqueLinks(
-    targetedSecondaryLinkCandidates ?? fallbackNextRecommendedSecondaryLinks
-  )
+  const nextRecommendedLinkCandidates = uniqueLinks([
+    nextRecommendedPrimaryCandidate,
+    ...(targetedSecondaryLinkCandidates ?? fallbackNextRecommendedSecondaryLinks)
+  ]).filter((link) => !topUtilityHrefSet.has(link.href));
+  const nextRecommendedPrimaryLink = nextRecommendedLinkCandidates[0] ?? nextRecommendedPrimaryCandidate;
+  const nextRecommendedSecondaryLinks = nextRecommendedLinkCandidates
     .filter((link) => link.href !== nextRecommendedPrimaryLink.href)
     .slice(0, 3);
   const nextStepHrefSet = new Set([
@@ -325,36 +368,29 @@ export default async function GuidePage({ params }: GuidePageProps) {
     label: relatedGuide.title,
     description: relatedGuide.description
   });
-  const toolToLink = (tool: (typeof relatedTools)[number]): ResourceLink => ({
-    href: `/tools/${tool.slug}`,
-    label: tool.title,
-    description: tool.description
-  });
   const troubleshootingLinkCandidates = uniqueLinks(
     troubleshootingGuides.filter((relatedGuide) => relatedGuide.slug !== guide.slug).map(guideToLink)
   ).filter((link) => !nextStepHrefSet.has(link.href));
   const troubleshootingHrefSet = new Set(troubleshootingLinkCandidates.map((link) => link.href));
-  const troubleshootingFlowGuideLinks = uniqueLinks(
-    [...explicitRelatedGuides, ...troubleshootingGuides]
-      .filter((relatedGuide) => relatedGuide.slug !== guide.slug)
-      .map(guideToLink)
-  )
-    .filter((link) => !nextStepHrefSet.has(link.href))
-    .slice(0, 5);
-  const troubleshootingFlowGuideHrefSet = new Set(troubleshootingFlowGuideLinks.map((link) => link.href));
-  const troubleshootingFlowToolLinks = uniqueLinks(relatedTools.slice(0, 4).map(toolToLink));
   const relatedGuideLinks = uniqueLinks(
     [...explicitRelatedGuides, ...ecosystemRelatedGuides].filter((relatedGuide) => relatedGuide.slug !== guide.slug).map(guideToLink)
   )
     .filter((link) => !nextStepHrefSet.has(link.href))
     .filter((link) => !troubleshootingHrefSet.has(link.href))
-    .filter((link) => !troubleshootingFlowGuideHrefSet.has(link.href))
     .slice(0, 4);
   const relatedGuideHrefSet = new Set(relatedGuideLinks.map((link) => link.href));
   const troubleshootingRelatedLinks = troubleshootingLinkCandidates
     .filter((link) => !relatedGuideHrefSet.has(link.href))
-    .filter((link) => !troubleshootingFlowGuideHrefSet.has(link.href))
     .slice(0, 4);
+  const visibleGuideSections = troubleshootingFlow
+    ? guide.sections.filter((section) => !troubleshootingFlowDuplicateSectionIds.has(section.id))
+    : guide.sections;
+  const quickAnswerSection = troubleshootingFlow
+    ? visibleGuideSections.find((section) => section.id === "quick-answer")
+    : null;
+  const bodySections = quickAnswerSection
+    ? visibleGuideSections.filter((section) => section.id !== quickAnswerSection.id)
+    : visibleGuideSections;
 
   return (
     <>
@@ -381,7 +417,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
           />
           <div className="grid min-w-0 gap-7 lg:grid-cols-[240px_minmax(0,760px)] lg:items-start">
             <aside className="min-w-0 lg:sticky lg:top-24">
-              <TableOfContents items={guide.sections.map((section) => ({ id: section.id, title: section.title }))} />
+              <TableOfContents items={visibleGuideSections.map((section) => ({ id: section.id, title: section.title }))} />
             </aside>
             <div className="min-w-0">
               <p className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wide text-accent-600">
@@ -396,17 +432,19 @@ export default async function GuidePage({ params }: GuidePageProps) {
                 <span>Updated {guide.dateModified}</span>
                 <span>{guide.readTime}</span>
               </div>
-              <div className="mt-4 flex flex-wrap gap-2">
-                {ecosystemLinks.slice(0, 4).map((ecosystem) => (
-                  <Link
-                    key={ecosystem.slug}
-                    href={`/guides/ecosystems/${ecosystem.slug}`}
-                    className="rounded-md border border-accent-100 bg-accent-50 px-3 py-1 text-xs font-bold uppercase leading-5 tracking-wide text-accent-700 transition hover:border-accent-200 hover:bg-white"
-                  >
-                    {ecosystem.shortTitle}
-                  </Link>
-                ))}
-              </div>
+              {ecosystemBadgeLinks.length > 0 ? (
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {ecosystemBadgeLinks.map((ecosystem) => (
+                    <Link
+                      key={ecosystem.slug}
+                      href={`/guides/ecosystems/${ecosystem.slug}`}
+                      className="rounded-md border border-accent-100 bg-accent-50 px-3 py-1 text-xs font-bold uppercase leading-5 tracking-wide text-accent-700 transition hover:border-accent-200 hover:bg-white"
+                    >
+                      {ecosystem.shortTitle}
+                    </Link>
+                  ))}
+                </div>
+              ) : null}
               <div className="mt-6 rounded-lg border border-line bg-field p-4 shadow-sm">
                 <h2 className="inline-flex items-center gap-2 text-lg font-bold text-ink">
                   <FlooringIcon name="calculator" className="h-5 w-5 text-accent-700" />
@@ -424,50 +462,26 @@ export default async function GuidePage({ params }: GuidePageProps) {
                   ))}
                 </div>
               </div>
+              {quickAnswerSection ? (
+                <div className="prose-flooring mt-5">
+                  <GuideSectionContent section={quickAnswerSection} />
+                </div>
+              ) : null}
               {troubleshootingFlow ? (
                 <>
                   <TroubleshootingGuideFlow
                     causeRows={troubleshootingFlow.causeRows}
                     whatToCheckFirst={troubleshootingFlow.whatToCheckFirst}
                     whenToCallAPro={troubleshootingFlow.whenToCallAPro}
-                    relatedLinks={troubleshootingFlowGuideLinks}
-                    toolLinks={troubleshootingFlowToolLinks}
                   />
-                  <GuideUtilityVisual guide={guide} />
+                  <GuideUtilityVisual guide={guide} hideDiagnosticTables />
                 </>
               ) : (
                 <GuideUtilityVisual guide={guide} />
               )}
               <div className="prose-flooring mt-5">
-                {guide.sections.map((section) => (
-                  <section key={section.id} id={section.id} className="scroll-mt-24">
-                    <h2>{section.title}</h2>
-                    {section.paragraphs.map((paragraph) => (
-                      <p key={paragraph}>{paragraph}</p>
-                    ))}
-                    {section.bullets ? (
-                      <ul>
-                        {section.bullets.map((bullet) => (
-                          <li key={bullet}>{bullet}</li>
-                        ))}
-                      </ul>
-                    ) : null}
-                    {section.subsections?.map((subsection) => (
-                      <div key={subsection.title}>
-                        <h3>{subsection.title}</h3>
-                        {subsection.paragraphs.map((paragraph) => (
-                          <p key={paragraph}>{paragraph}</p>
-                        ))}
-                        {subsection.bullets ? (
-                          <ul>
-                            {subsection.bullets.map((bullet) => (
-                              <li key={bullet}>{bullet}</li>
-                            ))}
-                          </ul>
-                        ) : null}
-                      </div>
-                    ))}
-                  </section>
+                {bodySections.map((section) => (
+                  <GuideSectionContent key={section.id} section={section} />
                 ))}
               </div>
               {guide.disclaimer ? (

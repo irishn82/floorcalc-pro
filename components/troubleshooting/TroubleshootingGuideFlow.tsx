@@ -1,5 +1,4 @@
 import { CauseSymptomCheckTable, type CauseSymptomCheckRow } from "@/components/troubleshooting/CauseSymptomCheckTable";
-import { TroubleshootingLinkGrid, type TroubleshootingLink } from "@/components/troubleshooting/TroubleshootingLinkGrid";
 import { WhatToCheckFirst } from "@/components/troubleshooting/WhatToCheckFirst";
 import { WhenToCallAPro } from "@/components/troubleshooting/WhenToCallAPro";
 
@@ -7,16 +6,12 @@ type TroubleshootingGuideFlowProps = {
   causeRows: CauseSymptomCheckRow[];
   whatToCheckFirst: string[];
   whenToCallAPro: string[];
-  relatedLinks: TroubleshootingLink[];
-  toolLinks: TroubleshootingLink[];
 };
 
 export function TroubleshootingGuideFlow({
   causeRows,
   whatToCheckFirst,
-  whenToCallAPro,
-  relatedLinks,
-  toolLinks
+  whenToCallAPro
 }: TroubleshootingGuideFlowProps) {
   return (
     <div className="mt-6 space-y-4 rounded-lg border border-line bg-field p-4 shadow-sm">
@@ -31,18 +26,6 @@ export function TroubleshootingGuideFlow({
       <div className="grid gap-4 lg:grid-cols-2">
         <WhatToCheckFirst items={whatToCheckFirst} />
         <WhenToCallAPro items={whenToCallAPro} />
-      </div>
-      <div className="grid gap-4 lg:grid-cols-2">
-        <TroubleshootingLinkGrid
-          title="Related problem guides"
-          description="Use these next when the symptom overlaps or the first repair does not explain the issue."
-          links={relatedLinks}
-        />
-        <TroubleshootingLinkGrid
-          title="Useful calculators"
-          description="Use calculators when the next step involves measuring, trim, waste, seams, or replacement material."
-          links={toolLinks}
-        />
       </div>
     </div>
   );

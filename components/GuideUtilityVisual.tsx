@@ -14,6 +14,7 @@ import {
 
 type GuideUtilityVisualProps = {
   guide: Guide;
+  hideDiagnosticTables?: boolean;
 };
 
 function VisualShell({ title, children }: { title: string; children: ReactNode }) {
@@ -174,7 +175,7 @@ function TileLayoutVisual() {
   );
 }
 
-export function GuideUtilityVisual({ guide }: GuideUtilityVisualProps) {
+export function GuideUtilityVisual({ guide, hideDiagnosticTables = false }: GuideUtilityVisualProps) {
   if (guide.slug === "can-engineered-hardwood-go-over-concrete") {
     return (
       <VisualShell title="Engineered hardwood over concrete planning view">
@@ -229,6 +230,14 @@ export function GuideUtilityVisual({ guide }: GuideUtilityVisualProps) {
   }
 
   if (guide.slug === "why-is-my-laminate-floor-separating") {
+    if (hideDiagnosticTables) {
+      return (
+        <VisualShell title="Floating floor movement visual">
+          <ExpansionGapDiagram />
+        </VisualShell>
+      );
+    }
+
     return (
       <VisualShell title="Laminate separation troubleshooting view">
         <ProblemCauseVisual
@@ -253,6 +262,14 @@ export function GuideUtilityVisual({ guide }: GuideUtilityVisualProps) {
   }
 
   if (guide.slug === "why-is-my-lvp-floor-separating") {
+    if (hideDiagnosticTables) {
+      return (
+        <VisualShell title="Floating floor movement visual">
+          <ExpansionGapDiagram />
+        </VisualShell>
+      );
+    }
+
     return (
       <VisualShell title="LVP separation troubleshooting view">
         <ProblemCauseVisual
@@ -269,6 +286,14 @@ export function GuideUtilityVisual({ guide }: GuideUtilityVisualProps) {
   }
 
   if (guide.slug === "why-is-my-lvp-floor-peaking") {
+    if (hideDiagnosticTables) {
+      return (
+        <VisualShell title="Floating floor movement visual">
+          <ExpansionGapDiagram />
+        </VisualShell>
+      );
+    }
+
     return (
       <VisualShell title="LVP peaking troubleshooting view">
         <ProblemCauseVisual
@@ -285,6 +310,14 @@ export function GuideUtilityVisual({ guide }: GuideUtilityVisualProps) {
   }
 
   if (guide.slug === "why-is-my-laminate-floor-buckling") {
+    if (hideDiagnosticTables) {
+      return (
+        <VisualShell title="Floating floor movement visual">
+          <ExpansionGapDiagram />
+        </VisualShell>
+      );
+    }
+
     return (
       <VisualShell title="Laminate buckling troubleshooting view">
         <ProblemCauseVisual
@@ -301,6 +334,10 @@ export function GuideUtilityVisual({ guide }: GuideUtilityVisualProps) {
   }
 
   if (guide.slug === "why-is-my-hardwood-floor-gapping") {
+    if (hideDiagnosticTables) {
+      return null;
+    }
+
     return (
       <VisualShell title="Hardwood gapping troubleshooting view">
         <ProblemCauseVisual
@@ -316,6 +353,14 @@ export function GuideUtilityVisual({ guide }: GuideUtilityVisualProps) {
   }
 
   if (guide.slug === "why-is-my-hardwood-floor-crowning") {
+    if (hideDiagnosticTables) {
+      return (
+        <VisualShell title="Hardwood crown and cup comparison">
+          <CrownCuppingDiagram />
+        </VisualShell>
+      );
+    }
+
     return (
       <VisualShell title="Hardwood crown and cup comparison">
         <div className="grid gap-3">
@@ -334,6 +379,10 @@ export function GuideUtilityVisual({ guide }: GuideUtilityVisualProps) {
   }
 
   if (guide.slug === "why-is-my-carpet-wrinkling-or-buckling") {
+    if (hideDiagnosticTables) {
+      return null;
+    }
+
     return (
       <VisualShell title="Carpet wrinkling troubleshooting view">
         <ProblemCauseVisual
@@ -349,6 +398,10 @@ export function GuideUtilityVisual({ guide }: GuideUtilityVisualProps) {
   }
 
   if (guide.slug === "why-is-my-tile-cracking") {
+    if (hideDiagnosticTables) {
+      return null;
+    }
+
     return (
       <VisualShell title="Tile cracking troubleshooting view">
         <ProblemCauseVisual
