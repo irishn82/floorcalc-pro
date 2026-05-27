@@ -5,12 +5,16 @@ const visualNote =
 
 function DiagramCard({ title, children }: { title: string; children: ReactNode }) {
   return (
-    <div className="rounded-md border border-line bg-white p-3">
+    <div className="min-w-0 overflow-hidden rounded-md border border-line bg-white p-3">
       <h3 className="text-sm font-black text-ink">{title}</h3>
-      <div className="mt-3">{children}</div>
+      <div className="mt-3 min-w-0 overflow-hidden">{children}</div>
       <p className="mt-3 text-xs leading-5 text-slate-500">{visualNote}</p>
     </div>
   );
+}
+
+function DiagramCaption({ children }: { children: ReactNode }) {
+  return <p className="mt-2 text-xs leading-5 text-slate-600">{children}</p>;
 }
 
 function TransitionProfileSketch({ profile }: { profile: string }) {
@@ -26,8 +30,6 @@ function TransitionProfileSketch({ profile }: { profile: string }) {
           <rect x="34" y="44" width="108" height="26" rx="3" fill="#ffffff" stroke="#bdd3f8" />
           <rect x="142" y="70" width="84" height="30" rx="3" fill="#ffffff" stroke="#bdd3f8" />
           <path d="M126 44 H156 Q174 44 174 62 V96" fill="none" stroke="#1f6feb" strokeWidth="9" strokeLinecap="round" strokeLinejoin="round" />
-          <text x="78" y="34" fill="#334155" fontSize="12" fontWeight="700">tread</text>
-          <text x="170" y="113" fill="#334155" fontSize="12" fontWeight="700">riser</text>
         </>
       ) : (
         <>
@@ -75,9 +77,8 @@ export function SubfloorFlatnessDiagram() {
         <line x1="54" y1="76" x2="472" y2="76" stroke="#1f6feb" strokeWidth="6" strokeLinecap="round" />
         <path d="M166 82 v46" stroke="#d97706" strokeWidth="3" strokeDasharray="6 6" />
         <path d="M312 82 v35" stroke="#d97706" strokeWidth="3" strokeDasharray="6 6" />
-        <text x="54" y="54" fill="#0d1624" fontSize="18" fontWeight="700">Straightedge</text>
-        <text x="138" y="150" fill="#334155" fontSize="15">low/high spots need field verification</text>
       </svg>
+      <DiagramCaption>Straightedge concept: low spots and high spots should be checked against the product tolerance.</DiagramCaption>
     </DiagramCard>
   );
 }
@@ -121,9 +122,8 @@ export function ConcreteSlabConditionDiagram() {
         <path d="M70 112 C126 92 154 132 214 112 S320 88 382 112 S444 134 466 110" fill="none" stroke="#64748b" strokeWidth="5" strokeLinecap="round" />
         <line x1="68" y1="82" x2="452" y2="82" stroke="#1f6feb" strokeWidth="5" strokeLinecap="round" />
         <path d="M150 148 v-42 M260 148 v-54 M370 148 v-38" stroke="#1f6feb" strokeWidth="3" strokeDasharray="5 6" />
-        <text x="64" y="54" fill="#0d1624" fontSize="16" fontWeight="700">flatness</text>
-        <text x="188" y="178" fill="#334155" fontSize="15">moisture and slab prep first</text>
       </svg>
+      <DiagramCaption>Check slab flatness, moisture, surface condition, and approved underlayment before covering concrete.</DiagramCaption>
     </DiagramCard>
   );
 }
@@ -164,9 +164,8 @@ export function SqueakMovementDiagram() {
         <rect x="242" y="116" width="36" height="50" rx="3" fill="#94a3b8" />
         <rect x="392" y="116" width="36" height="50" rx="3" fill="#94a3b8" />
         <path d="M252 58 v26 M252 58 l-11 12 M252 58 l11 12" stroke="#d97706" strokeWidth="4" strokeLinecap="round" />
-        <text x="80" y="56" fill="#0d1624" fontSize="16" fontWeight="700">panel flex or rubbing</text>
-        <text x="170" y="188" fill="#334155" fontSize="15">wood subfloors and floating floors need different checks</text>
       </svg>
+      <DiagramCaption>Movement, rubbing, or flex in the floor system can create noise. Wood subfloors and floating floors need different checks.</DiagramCaption>
     </DiagramCard>
   );
 }
@@ -197,10 +196,8 @@ export function CarpetSeamDiagram() {
       <div className="relative h-36 overflow-hidden rounded border border-accent-100 bg-accent-50" aria-label="Carpet drops with likely seam lines">
         <div className="absolute inset-y-0 left-0 w-1/3 border-r-2 border-dashed border-accent-700 bg-white/70" />
         <div className="absolute inset-y-0 left-1/3 w-1/3 border-r-2 border-dashed border-accent-700 bg-white/35" />
-        <div className="absolute left-3 top-3 rounded bg-white px-2 py-1 text-xs font-bold text-slate-700 shadow-sm">carpet drops</div>
-        <div className="absolute bottom-3 right-3 rounded bg-accent-700 px-2 py-1 text-xs font-bold text-white">planning visual</div>
       </div>
-      <p className="mt-2 text-xs leading-5 text-slate-600">Seams depend on roll width, light, traffic, pile direction, pattern match, and installer layout.</p>
+      <DiagramCaption>Dashed lines show possible seams between carpet drops. Final seams depend on roll width, light, traffic, pile direction, pattern match, and installer layout.</DiagramCaption>
     </DiagramCard>
   );
 }
@@ -217,9 +214,9 @@ export function ExpansionGapDiagram() {
         </div>
         <div className="bg-slate-200" />
       </div>
-      <div className="mt-2 flex justify-between text-xs font-bold uppercase tracking-wide text-slate-500">
+      <div className="mt-2 grid grid-cols-3 gap-2 text-center text-[0.65rem] font-bold uppercase tracking-wide text-slate-500">
         <span>Wall</span>
-        <span>Expansion space</span>
+        <span>Movement gap</span>
         <span>Wall</span>
       </div>
     </DiagramCard>

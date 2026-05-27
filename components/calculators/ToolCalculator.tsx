@@ -223,23 +223,6 @@ function CarpetSeamLayoutVisualizer({
           preserveAspectRatio="xMidYMid meet"
         >
           <rect width="420" height="270" fill="#f8fafc" />
-          <text x="20" y="24" fill="#154fa8" fontSize="12" fontWeight="700">
-            Planning visual only
-          </text>
-          <text x="210" y="246" fill="#475569" fontSize="11" fontWeight="700" textAnchor="middle">
-            Room length: {formatNumber(roomLength)} ft
-          </text>
-          <text
-            x="24"
-            y="135"
-            fill="#475569"
-            fontSize="11"
-            fontWeight="700"
-            textAnchor="middle"
-            transform="rotate(-90 24 135)"
-          >
-            Room width: {formatNumber(roomWidth)} ft
-          </text>
 
           <rect x={roomX} y={roomY} width={roomSvgWidth} height={roomSvgHeight} rx="6" fill="#ffffff" stroke="#1f6feb" strokeWidth="2" />
 
@@ -257,16 +240,6 @@ function CarpetSeamLayoutVisualizer({
                   fill={index % 2 === 0 ? "#dcecff" : "#eff7ff"}
                   opacity="0.85"
                 />
-                <text
-                  x={roomX + roomSvgWidth / 2}
-                  y={y + Math.max(18, height / 2)}
-                  fill="#0d1624"
-                  fontSize="11"
-                  fontWeight="700"
-                  textAnchor="middle"
-                >
-                  Drop {drop.index}
-                </text>
               </g>
             );
           })}
@@ -274,9 +247,6 @@ function CarpetSeamLayoutVisualizer({
           {seamPositions.map((y, index) => (
             <g key={`seam-${index + 1}`}>
               <line x1={roomX} y1={y} x2={roomX + roomSvgWidth} y2={y} stroke="#dc2626" strokeWidth="2" strokeDasharray="6 5" />
-              <text x={roomX + roomSvgWidth + 10} y={y + 4} fill="#991b1b" fontSize="10" fontWeight="700">
-                likely seam
-              </text>
             </g>
           ))}
 
@@ -287,16 +257,23 @@ function CarpetSeamLayoutVisualizer({
           <line x1={roomX - 16} y1={roomY} x2={roomX - 16} y2={roomY + roomSvgHeight} stroke="#64748b" strokeWidth="1.5" />
           <line x1={roomX - 21} y1={roomY} x2={roomX - 11} y2={roomY} stroke="#64748b" strokeWidth="1.5" />
           <line x1={roomX - 21} y1={roomY + roomSvgHeight} x2={roomX - 11} y2={roomY + roomSvgHeight} stroke="#64748b" strokeWidth="1.5" />
-
-          <text x="210" y="264" fill="#64748b" fontSize="10" textAnchor="middle">
-            Carpet roll width: {formatNumber(rollWidth)} ft | Estimated drops: {drops.length}
-          </text>
-          {seamCount === 0 ? (
-            <text x="210" y="44" fill="#166534" fontSize="11" fontWeight="700" textAnchor="middle">
-              One carpet drop covers the room width in this planning view.
-            </text>
-          ) : null}
         </svg>
+      </div>
+
+      <div className="mt-3 grid gap-2 text-xs leading-5 text-slate-600 sm:grid-cols-3">
+        <p>
+          <span className="mr-2 inline-block h-2.5 w-5 rounded-sm bg-[#dcecff]" aria-hidden="true" />
+          Alternating bands represent estimated carpet drops.
+        </p>
+        <p>
+          <span className="mr-2 inline-block h-0.5 w-5 border-t-2 border-dashed border-red-600 align-middle" aria-hidden="true" />
+          Dashed red lines mark likely seam locations.
+        </p>
+        <p>
+          {seamCount === 0
+            ? "One carpet drop covers the room width in this planning view."
+            : `${seamCount} seam line${seamCount === 1 ? "" : "s"} shown in this planning view.`}
+        </p>
       </div>
 
       <p className="mt-3 text-sm leading-6 text-slate-600">

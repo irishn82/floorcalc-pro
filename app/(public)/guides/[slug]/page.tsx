@@ -337,11 +337,11 @@ export default async function GuidePage({ params }: GuidePageProps) {
               { label: guide.title }
             ]}
           />
-          <div className="grid gap-7 lg:grid-cols-[240px_minmax(0,760px)] lg:items-start">
-            <aside className="lg:sticky lg:top-24">
+          <div className="grid min-w-0 gap-7 lg:grid-cols-[240px_minmax(0,760px)] lg:items-start">
+            <aside className="min-w-0 lg:sticky lg:top-24">
               <TableOfContents items={guide.sections.map((section) => ({ id: section.id, title: section.title }))} />
             </aside>
-            <div>
+            <div className="min-w-0">
               <p className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wide text-accent-600">
                 <span className="grid h-8 w-8 place-items-center rounded-lg border border-accent-100 bg-accent-50 text-accent-700">
                   <FlooringIcon name="guide" className="h-4 w-4" />

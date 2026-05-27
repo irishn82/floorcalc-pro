@@ -18,39 +18,58 @@ type GuideUtilityVisualProps = {
 
 function VisualShell({ title, children }: { title: string; children: ReactNode }) {
   return (
-    <div className="mt-5 rounded-lg border border-line bg-field p-3.5 shadow-sm">
+    <div className="mt-5 min-w-0 overflow-hidden rounded-lg border border-line bg-field p-3.5 shadow-sm">
       <h2 className="text-base font-black text-ink">{title}</h2>
-      <div className="mt-3">{children}</div>
+      <div className="mt-3 min-w-0">{children}</div>
     </div>
   );
 }
 
 function ComparisonTable({ columns, rows }: { columns: string[]; rows: string[][] }) {
   return (
-    <div className="overflow-x-auto rounded-md border border-line bg-white">
-      <table className="w-full min-w-[34rem] text-left text-sm">
-        <thead className="bg-accent-50 text-xs font-bold uppercase tracking-wide text-accent-800">
-          <tr>
-            {columns.map((column) => (
-              <th key={column} className="p-2">
-                {column}
-              </th>
-            ))}
-          </tr>
-        </thead>
-        <tbody className="divide-y divide-line">
-          {rows.map((row) => (
-            <tr key={row.join("-")} className="align-top">
-              {row.map((cell, index) => (
-                <td key={cell} className={index === 0 ? "p-2 font-bold text-ink" : "p-2 leading-5 text-slate-600"}>
-                  {cell}
-                </td>
+    <>
+      <div className="grid gap-3 sm:hidden">
+        {rows.map((row) => (
+          <article key={row.join("-")} className="rounded-md border border-line bg-white p-3">
+            <p className="text-sm font-black text-ink">{row[0]}</p>
+            <dl className="mt-3 space-y-2 text-sm leading-5">
+              {row.slice(1).map((cell, index) => (
+                <div key={`${row[0]}-${cell}`}>
+                  <dt className="text-[0.65rem] font-bold uppercase tracking-wide text-accent-700">
+                    {columns[index + 1]}
+                  </dt>
+                  <dd className="mt-0.5 text-slate-600">{cell}</dd>
+                </div>
+              ))}
+            </dl>
+          </article>
+        ))}
+      </div>
+      <div className="hidden overflow-hidden rounded-md border border-line bg-white sm:block">
+        <table className="w-full table-fixed text-left text-sm">
+          <thead className="bg-accent-50 text-xs font-bold uppercase tracking-wide text-accent-800">
+            <tr>
+              {columns.map((column) => (
+                <th key={column} className="p-2">
+                  {column}
+                </th>
               ))}
             </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
+          </thead>
+          <tbody className="divide-y divide-line">
+            {rows.map((row) => (
+              <tr key={row.join("-")} className="align-top">
+                {row.map((cell, index) => (
+                  <td key={cell} className={index === 0 ? "p-2 font-bold text-ink" : "p-2 leading-5 text-slate-600"}>
+                    {cell}
+                  </td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </>
   );
 }
 
