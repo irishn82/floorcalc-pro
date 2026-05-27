@@ -34,6 +34,24 @@ type GuidePageProps = {
 };
 
 type NextStepTarget = { type: "guide"; slug: GuideSlug } | { type: "tool"; slug: ToolSlug };
+type ResourceLink = {
+  href: string;
+  label: string;
+  description?: string;
+};
+
+function uniqueLinks(links: ResourceLink[]) {
+  const seen = new Set<string>();
+
+  return links.filter((link) => {
+    if (seen.has(link.href)) {
+      return false;
+    }
+
+    seen.add(link.href);
+    return true;
+  });
+}
 
 const targetedNextStepTargets: Partial<
   Record<
@@ -247,7 +265,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
       : null;
   };
   const targetedPrimaryLink = targetedNextSteps ? resolveNextStepTarget(targetedNextSteps.primary) : null;
-  const targetedSecondaryLinks = targetedNextSteps
+  const targetedSecondaryLinkCandidates = targetedNextSteps
     ? targetedNextSteps.secondary.flatMap((target) => {
         const resolvedLink = resolveNextStepTarget(target);
 
@@ -255,24 +273,6 @@ export default async function GuidePage({ params }: GuidePageProps) {
       })
     : null;
   const troubleshootingFlow = getTroubleshootingFlow(guide.slug);
-  const troubleshootingFlowGuideLinks = [
-    ...explicitRelatedGuides,
-    ...troubleshootingGuides.filter(
-      (troubleshootingGuide) => !explicitRelatedGuides.some((relatedGuide) => relatedGuide.slug === troubleshootingGuide.slug)
-    )
-  ]
-    .filter((relatedGuide) => relatedGuide.slug !== guide.slug)
-    .slice(0, 6)
-    .map((relatedGuide) => ({
-      href: `/guides/${relatedGuide.slug}`,
-      label: relatedGuide.title,
-      description: relatedGuide.description
-    }));
-  const troubleshootingFlowToolLinks = relatedTools.slice(0, 4).map((tool) => ({
-    href: `/tools/${tool.slug}`,
-    label: tool.title,
-    description: tool.description
-  }));
   const nextRecommendedDescription = troubleshootingFlow
     ? "Use the next guide or calculator to narrow the likely cause before opening the floor, replacing material, or scheduling a repair."
     : "Use these calculators and related guides to turn the article into a practical plan before ordering material or calling an installer.";
@@ -281,38 +281,80 @@ export default async function GuidePage({ params }: GuidePageProps) {
       href: nextStepTool ? `/tools/${nextStepTool.slug}` : "/tools",
       label: nextStepTool ? `Use ${nextStepTool.shortTitle}` : "Open flooring calculators"
     };
-  const nextRecommendedSecondaryLinks =
-    targetedSecondaryLinks ??
-    [
-      ...(nextStepGuide
-        ? [
-            {
-              href: `/guides/${nextStepGuide.slug}`,
-              label: nextStepGuide.title,
-              description: "Read the next guide connected to this topic."
-            }
-          ]
-        : []),
-      ...(relatedTools.slice(1, 3).map((tool) => ({
-        href: `/tools/${tool.slug}`,
-        label: `Use ${tool.shortTitle}`,
-        description: tool.description
-      })) ?? []),
-      ...(primaryEcosystem
-        ? [
-            {
-              href: `/guides/ecosystems/${primaryEcosystem.slug}`,
-              label: `Browse ${primaryEcosystem.shortTitle} guides`,
-              description: "See the full flooring type section."
-            }
-          ]
-        : []),
-      {
-        href: "/guides/troubleshooting",
-        label: "Troubleshooting hub",
-        description: "Compare common flooring problems and causes."
-      }
-    ].slice(0, 4);
+  const fallbackNextRecommendedSecondaryLinks: ResourceLink[] = [
+    ...(nextStepGuide
+      ? [
+          {
+            href: `/guides/${nextStepGuide.slug}`,
+            label: nextStepGuide.title,
+            description: "Read the next guide connected to this topic."
+          }
+        ]
+      : []),
+    ...relatedTools.slice(1, 3).map((tool) => ({
+      href: `/tools/${tool.slug}`,
+      label: `Use ${tool.shortTitle}`,
+      description: tool.description
+    })),
+    ...(primaryEcosystem
+      ? [
+          {
+            href: `/guides/ecosystems/${primaryEcosystem.slug}`,
+            label: `Browse ${primaryEcosystem.shortTitle} guides`,
+            description: "See the full flooring type section."
+          }
+        ]
+      : []),
+    {
+      href: "/guides/troubleshooting",
+      label: "Troubleshooting hub",
+      description: "Compare common flooring problems and causes."
+    }
+  ];
+  const nextRecommendedSecondaryLinks = uniqueLinks(
+    targetedSecondaryLinkCandidates ?? fallbackNextRecommendedSecondaryLinks
+  )
+    .filter((link) => link.href !== nextRecommendedPrimaryLink.href)
+    .slice(0, 3);
+  const nextStepHrefSet = new Set([
+    nextRecommendedPrimaryLink.href,
+    ...nextRecommendedSecondaryLinks.map((link) => link.href)
+  ]);
+  const guideToLink = (relatedGuide: (typeof guides)[number]): ResourceLink => ({
+    href: `/guides/${relatedGuide.slug}`,
+    label: relatedGuide.title,
+    description: relatedGuide.description
+  });
+  const toolToLink = (tool: (typeof relatedTools)[number]): ResourceLink => ({
+    href: `/tools/${tool.slug}`,
+    label: tool.title,
+    description: tool.description
+  });
+  const troubleshootingLinkCandidates = uniqueLinks(
+    troubleshootingGuides.filter((relatedGuide) => relatedGuide.slug !== guide.slug).map(guideToLink)
+  ).filter((link) => !nextStepHrefSet.has(link.href));
+  const troubleshootingHrefSet = new Set(troubleshootingLinkCandidates.map((link) => link.href));
+  const troubleshootingFlowGuideLinks = uniqueLinks(
+    [...explicitRelatedGuides, ...troubleshootingGuides]
+      .filter((relatedGuide) => relatedGuide.slug !== guide.slug)
+      .map(guideToLink)
+  )
+    .filter((link) => !nextStepHrefSet.has(link.href))
+    .slice(0, 5);
+  const troubleshootingFlowGuideHrefSet = new Set(troubleshootingFlowGuideLinks.map((link) => link.href));
+  const troubleshootingFlowToolLinks = uniqueLinks(relatedTools.slice(0, 4).map(toolToLink));
+  const relatedGuideLinks = uniqueLinks(
+    [...explicitRelatedGuides, ...ecosystemRelatedGuides].filter((relatedGuide) => relatedGuide.slug !== guide.slug).map(guideToLink)
+  )
+    .filter((link) => !nextStepHrefSet.has(link.href))
+    .filter((link) => !troubleshootingHrefSet.has(link.href))
+    .filter((link) => !troubleshootingFlowGuideHrefSet.has(link.href))
+    .slice(0, 4);
+  const relatedGuideHrefSet = new Set(relatedGuideLinks.map((link) => link.href));
+  const troubleshootingRelatedLinks = troubleshootingLinkCandidates
+    .filter((link) => !relatedGuideHrefSet.has(link.href))
+    .filter((link) => !troubleshootingFlowGuideHrefSet.has(link.href))
+    .slice(0, 4);
 
   return (
     <>
@@ -439,44 +481,12 @@ export default async function GuidePage({ params }: GuidePageProps) {
         </Container>
       </article>
       <RelatedLinks
-        title="Related Flooring Calculators"
-        links={relatedTools.map((tool) => ({
-          href: `/tools/${tool.slug}`,
-          label: tool.title,
-          description: tool.description
-        }))}
-      />
-      <RelatedLinks
         title="Related Flooring Guides"
-        links={explicitRelatedGuides.slice(0, 4).map((relatedGuide) => ({
-          href: `/guides/${relatedGuide.slug}`,
-          label: relatedGuide.title,
-          description: relatedGuide.description
-        }))}
-      />
-      <RelatedLinks
-        title={primaryEcosystem ? `More ${primaryEcosystem.shortTitle} Guides` : "More Flooring Guides"}
-        links={ecosystemRelatedGuides.slice(0, 4).map((relatedGuide) => ({
-          href: `/guides/${relatedGuide.slug}`,
-          label: relatedGuide.title,
-          description: relatedGuide.description
-        }))}
+        links={relatedGuideLinks}
       />
       <RelatedLinks
         title="Troubleshooting Guides"
-        links={troubleshootingGuides.map((troubleshootingGuide) => ({
-          href: `/guides/${troubleshootingGuide.slug}`,
-          label: troubleshootingGuide.title,
-          description: troubleshootingGuide.description
-        }))}
-      />
-      <RelatedLinks
-        title="Related Flooring Types"
-        links={ecosystemLinks.slice(0, 4).map((ecosystem) => ({
-          href: `/guides/ecosystems/${ecosystem.slug}`,
-          label: ecosystem.title,
-          description: ecosystem.description
-        }))}
+        links={troubleshootingFlow ? [] : troubleshootingRelatedLinks}
       />
       {troubleshootingFlow ? (
         <NextRecommendedSteps

@@ -16,12 +16,19 @@ export function Breadcrumbs({ items }: BreadcrumbsProps) {
 
   return (
     <nav aria-label="Breadcrumb" className="mb-5 text-xs font-semibold text-slate-500 sm:text-sm">
-      <ol className="flex min-w-0 flex-wrap items-center gap-x-1.5 gap-y-1">
+      <ol className="flex min-w-0 flex-wrap items-center gap-y-1">
         {items.map((item, index) => (
-          <li key={`${item.label}-${index}`} className="inline-flex min-w-0 items-center gap-1.5">
-            {index > 0 ? <span aria-hidden="true" className="text-slate-300">›</span> : null}
+          <li key={`${item.label}-${index}`} className="inline-flex min-w-0 items-center">
+            {index > 0 ? (
+              <span aria-hidden="true" className="shrink-0 text-slate-300">
+                {" \u203a "}
+              </span>
+            ) : null}
             {item.href ? (
-              <Link href={item.href} className="rounded-sm transition hover:text-accent-700 focus:outline-none focus:ring-2 focus:ring-accent-100">
+              <Link
+                href={item.href}
+                className="rounded-sm transition hover:text-accent-700 focus:outline-none focus:ring-2 focus:ring-accent-100"
+              >
                 {item.label}
               </Link>
             ) : (
