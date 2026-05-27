@@ -2,9 +2,12 @@ import type { ReactNode } from "react";
 import type { Guide } from "@/data/types";
 import {
   CarpetSeamDiagram,
+  ConcreteSlabConditionDiagram,
+  CrownCuppingDiagram,
   ExpansionGapDiagram,
   FlooringDirectionDiagram,
   MoistureBarrierLayerDiagram,
+  SqueakMovementDiagram,
   SubfloorFlatnessDiagram,
   TransitionTypeDiagram
 } from "@/components/visuals/FlooringDiagrams";
@@ -161,7 +164,22 @@ export function GuideUtilityVisual({ guide }: GuideUtilityVisualProps) {
     );
   }
 
-  if (["moisture-barrier-engineered-hardwood-over-concrete", "can-you-install-lvp-over-concrete"].includes(guide.slug)) {
+  if (guide.slug === "best-underlayment-for-concrete-floors") {
+    return (
+      <VisualShell title="Concrete underlayment planning view">
+        <div className="grid gap-3">
+          <ConcreteSlabConditionDiagram />
+          <MoistureBarrierLayerDiagram />
+        </div>
+      </VisualShell>
+    );
+  }
+
+  if (
+    ["moisture-barrier-engineered-hardwood-over-concrete", "can-you-install-lvp-over-concrete", "moisture-level-too-high-for-flooring"].includes(
+      guide.slug
+    )
+  ) {
     return (
       <VisualShell title="Moisture and substrate layer example">
         <MoistureBarrierLayerDiagram />
@@ -207,6 +225,14 @@ export function GuideUtilityVisual({ guide }: GuideUtilityVisualProps) {
     );
   }
 
+  if (guide.slug === "why-is-my-floor-squeaking") {
+    return (
+      <VisualShell title="Squeak movement troubleshooting view">
+        <SqueakMovementDiagram />
+      </VisualShell>
+    );
+  }
+
   if (guide.slug === "why-is-my-lvp-floor-separating") {
     return (
       <VisualShell title="LVP separation troubleshooting view">
@@ -217,6 +243,22 @@ export function GuideUtilityVisual({ guide }: GuideUtilityVisualProps) {
             ["Uneven subfloor", "Gap returns in one traffic path", "Check for low spots, humps, and hollow movement"],
             ["Pinned floating floor", "Gaps near cabinets or transitions", "Check expansion space and fixed objects"],
             ["Moisture", "Swollen edges or lifting", "Look for slab moisture, leaks, or wet cleaning"]
+          ]}
+        />
+      </VisualShell>
+    );
+  }
+
+  if (guide.slug === "why-is-my-lvp-floor-peaking") {
+    return (
+      <VisualShell title="LVP peaking troubleshooting view">
+        <ProblemCauseVisual
+          includeExpansion
+          rows={[
+            ["Blocked expansion", "Raised ridge near walls or transitions", "Check perimeter gaps, trim, and transition tracks"],
+            ["Fixed objects", "Pressure away from cabinets or islands", "Check whether the floating floor is pinned"],
+            ["Long run pressure", "Peaking through connected rooms", "Review product expansion break requirements"],
+            ["Moisture or heat", "Peaking near doors, slabs, or sunny areas", "Check moisture and room conditions"]
           ]}
         />
       </VisualShell>
@@ -250,6 +292,24 @@ export function GuideUtilityVisual({ guide }: GuideUtilityVisualProps) {
             ["Product behavior", "Wider gaps in solid wood", "Compare solid vs engineered expectations"]
           ]}
         />
+      </VisualShell>
+    );
+  }
+
+  if (guide.slug === "why-is-my-hardwood-floor-crowning") {
+    return (
+      <VisualShell title="Hardwood crown and cup comparison">
+        <div className="grid gap-3">
+          <CrownCuppingDiagram />
+          <ProblemCauseVisual
+            rows={[
+              ["Moisture imbalance", "Board centers sit high", "Check top-side moisture, slab, crawlspace, and HVAC"],
+              ["Sanded too early", "Crown appears after prior cupping", "Review whether the floor stabilized before sanding"],
+              ["High humidity", "Widespread shape change", "Measure room humidity and recent wet cleaning"],
+              ["Concrete or crawlspace moisture", "Crown with gaps, cupping, or stains", "Get moisture readings before repair"]
+            ]}
+          />
+        </div>
       </VisualShell>
     );
   }

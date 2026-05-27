@@ -1,4 +1,5 @@
 import { ecosystemGuideBatch } from "@/data/guides-ecosystem-batch";
+import { searchConsoleGuideBatch } from "@/data/guides-search-console-batch";
 import { troubleshootingGuides } from "@/data/guides-troubleshooting";
 import type { Guide } from "@/data/types";
 
@@ -1086,7 +1087,7 @@ export const guides: Guide[] = [
     metadataTitle: "Which Direction Should Flooring Run? Practical Layout Guide",
     metadataDescription:
       "Learn how to choose flooring direction using longest walls, natural light, hallways, open layouts, stairs, transitions, and waste planning.",
-    dateModified: "2026-05-22",
+    dateModified: "2026-05-27",
     readTime: "8 min read",
     primaryEcosystem: "planning-measuring-transitions",
     secondaryEcosystems: ["lvp", "laminate", "hardwood-engineered-hardwood"],
@@ -1098,6 +1099,8 @@ export const guides: Guide[] = [
       "flooring-transition-guide",
       "t-mold-vs-reducer-vs-end-cap",
       "why-is-my-transition-strip-moving",
+      "why-is-my-lvp-floor-peaking",
+      "why-is-my-floor-squeaking",
       "luxury-vinyl-over-tile"
     ],
     sections: [
@@ -1185,6 +1188,20 @@ export const guides: Guide[] = [
           "Mark every doorway where a transition may be needed.",
           "Compare waste before choosing a direction with many short cuts.",
           "Ask an installer to review long runs and product-required expansion breaks."
+        ]
+      },
+      {
+        id: "direction-and-flooring-problems",
+        title: "Direction choices can affect troubleshooting later",
+        paragraphs: [
+          "Direction is mostly a layout decision, but it can also affect how flooring problems show up later. Long connected runs, missing doorway breaks, tight transitions, and too many direction changes can contribute to pressure, peaking, squeaks, or movement in floating floors.",
+          "Before finalizing direction, think through the same conditions an installer will check later: expansion space, transition locations, subfloor flatness, moisture risk areas, stair landings, and whether the product has maximum run-length rules."
+        ],
+        bullets: [
+          "Long runs may need product-approved expansion breaks.",
+          "Direction changes should happen at logical transitions.",
+          "Hallways can highlight squeaks, hollow areas, or plank movement if support is poor.",
+          "Transition planning reduces the chance of loose trim or pressure points later."
         ]
       },
       {
@@ -1988,5 +2005,6 @@ export const guides: Guide[] = [
       "This guide provides general transition planning information. Transition profiles, expansion gaps, stair noses, fastening methods, height limits, and product requirements vary by flooring system. Verify with the manufacturer's written instructions and installer before ordering trim."
   },
   ...ecosystemGuideBatch,
+  ...searchConsoleGuideBatch,
   ...troubleshootingGuides
 ];

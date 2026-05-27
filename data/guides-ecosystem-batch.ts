@@ -181,6 +181,7 @@ const guideDrafts: GuideDraft[] = [
     metadataTitle: "Can You Install LVP Over Concrete? Slab Prep and Moisture Guide",
     metadataDescription:
       "Learn when LVP can go over concrete, what to check first, and how moisture, flatness, cracks, and vapor barriers affect the project.",
+    dateModified: "2026-05-27",
     readTime: "9 min read",
     primaryEcosystem: "lvp",
     secondaryEcosystems: ["lvt"],
@@ -189,7 +190,10 @@ const guideDrafts: GuideDraft[] = [
     relatedTools: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"],
     relatedGuides: [
       "best-underlayment-for-lvp",
+      "best-underlayment-for-concrete-floors",
+      "moisture-level-too-high-for-flooring",
       "subfloor-flatness-requirements-lvp",
+      "why-is-my-lvp-floor-peaking",
       "glue-down-vs-floating-floor",
       "flooring-over-radiant-heat"
     ],
@@ -218,6 +222,20 @@ const guideDrafts: GuideDraft[] = [
         paragraphs: [
           "Concrete moisture can affect LVP, adhesives, underlayment, and the room environment. Some projects need formal moisture testing, especially basements, newer slabs, and slabs with unknown history.",
           "A floating floor may still need a vapor barrier if the manufacturer requires one. A glue-down floor may require a specific adhesive, primer, or moisture mitigation system. Do not mix products unless the installation instructions allow it."
+        ]
+      },
+      {
+        id: "concrete-red-flags",
+        title: "Concrete red flags before LVP",
+        paragraphs: [
+          "Pause the project if the slab has active moisture, dusty or crumbling patch, old adhesive ridges, paint, sealers, wide cracks, or a floor drain area that changes the slab pitch. Those conditions can affect both floating and glue-down LVP.",
+          "If the floor later peaks, clicks, lifts, or separates, the cause often traces back to this planning stage: moisture, flatness, expansion space, or underlayment compatibility."
+        ],
+        bullets: [
+          "Check slab moisture before choosing a vapor layer or adhesive.",
+          "Use the concrete underlayment guide before adding any cushion layer.",
+          "Plan expansion and transitions before installing through connected rooms.",
+          "Do not rely on underlayment to hide humps, dips, or loose patching."
         ]
       },
       {
@@ -734,7 +752,7 @@ const guideDrafts: GuideDraft[] = [
     metadataTitle: "Why Is My Laminate Floor Separating? Gaps and Joint Problems",
     metadataDescription:
       "Learn common causes of laminate floor separation, including subfloor flatness, moisture, locking damage, expansion gaps, and acclimation.",
-    dateModified: "2026-05-25",
+    dateModified: "2026-05-27",
     readTime: "9 min read",
     primaryEcosystem: "laminate",
     materialTypes: ["laminate"],
@@ -743,8 +761,10 @@ const guideDrafts: GuideDraft[] = [
     relatedGuides: [
       "laminate-floor-separating-what-to-check-first",
       "why-is-my-laminate-floor-buckling",
+      "why-is-my-floor-squeaking",
       "how-flat-should-a-subfloor-be-for-laminate",
       "best-underlayment-for-laminate-flooring",
+      "moisture-level-too-high-for-flooring",
       "why-is-my-floor-clicking",
       "flooring-direction-mistakes",
       "can-laminate-flooring-be-waterproof",
@@ -790,6 +810,20 @@ const guideDrafts: GuideDraft[] = [
           "Gaps in a hallway can point to subfloor flatness, direction, or long-run movement.",
           "Gaps near kitchens, baths, or exterior doors should trigger a moisture check.",
           "Gaps that will not stay closed may mean the locking joint is damaged."
+        ]
+      },
+      {
+        id: "check-before-repair",
+        title: "What to check before trying a repair",
+        paragraphs: [
+          "Before tapping a laminate joint closed, check the reason it opened. If the floor is pinned by trim, moving over a low spot, swelling from moisture, or squeaking over an unsupported area, the gap can return quickly.",
+          "If separation shows up with buckling, peaking, squeaking, or hollow movement, treat it as a system clue rather than an isolated joint problem."
+        ],
+        bullets: [
+          "Check whether the same joint reopens after being closed.",
+          "Look for squeaks, hollow sound, or bounce near the gap.",
+          "Inspect nearby transitions and fixed objects for blocked expansion.",
+          "Check moisture before using glue, filler, or force."
         ]
       },
       {
@@ -1152,7 +1186,7 @@ const guideDrafts: GuideDraft[] = [
     metadataTitle: "How Long Should Hardwood Acclimate? Moisture and Jobsite Guide",
     metadataDescription:
       "Understand hardwood acclimation, moisture testing, HVAC conditions, solid versus engineered products, and when flooring is ready to install.",
-    dateModified: "2026-05-25",
+    dateModified: "2026-05-27",
     readTime: "9 min read",
     primaryEcosystem: "hardwood-engineered-hardwood",
     materialTypes: ["hardwood", "engineered-hardwood"],
@@ -1163,6 +1197,9 @@ const guideDrafts: GuideDraft[] = [
       "moisture-barrier-engineered-hardwood-over-concrete",
       "solid-hardwood-vs-engineered-hardwood",
       "why-is-my-hardwood-floor-cupping",
+      "why-is-my-hardwood-floor-crowning",
+      "moisture-level-too-high-for-flooring",
+      "why-is-my-floor-squeaking",
       "can-engineered-hardwood-go-over-concrete",
       "flooring-over-radiant-heat"
     ],
@@ -1203,7 +1240,9 @@ const guideDrafts: GuideDraft[] = [
         ],
         bullets: [
           "Cupping can happen when boards absorb moisture unevenly.",
+          "Crowning can happen when moisture imbalance reverses or a cupped floor is sanded too early.",
           "Seasonal gaps can be worse if flooring is installed too dry or too wet.",
+          "Squeaks can point to wood movement, subfloor movement, or fastening concerns.",
           "Glue-down engineered hardwood can fail if slab moisture or adhesive requirements are ignored.",
           "Wide planks and some species can be less forgiving of jobsite swings."
         ]
@@ -1297,7 +1336,7 @@ const guideDrafts: GuideDraft[] = [
     metadataTitle: "Can Engineered Hardwood Go Over Concrete? Slab Prep Guide",
     metadataDescription:
       "Find out when engineered hardwood can go over concrete and what to check for moisture, slab flatness, adhesives, and installation method.",
-    dateModified: "2026-05-25",
+    dateModified: "2026-05-27",
     readTime: "9 min read",
     primaryEcosystem: "hardwood-engineered-hardwood",
     materialTypes: ["engineered-hardwood"],
@@ -1305,12 +1344,15 @@ const guideDrafts: GuideDraft[] = [
     relatedTools: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"],
     relatedGuides: [
       "moisture-barrier-engineered-hardwood-over-concrete",
+      "moisture-level-too-high-for-flooring",
       "floating-vs-glue-down-engineered-hardwood-over-concrete",
+      "best-underlayment-for-concrete-floors",
       "glue-down-vs-floating-floor",
       "hardwood-acclimation-mistakes",
       "solid-hardwood-vs-engineered-hardwood",
       "how-long-should-hardwood-acclimate",
       "why-is-my-hardwood-floor-cupping",
+      "why-is-my-hardwood-floor-crowning",
       "why-does-my-floor-feel-hollow",
       "flooring-over-radiant-heat"
     ],
@@ -1354,6 +1396,20 @@ const guideDrafts: GuideDraft[] = [
           "Verify slab flatness before installation.",
           "Use approved adhesive or underlayment systems.",
           "Plan transition heights at adjacent floors."
+        ]
+      },
+      {
+        id: "concrete-warning-signs",
+        title: "Concrete warning signs before ordering",
+        paragraphs: [
+          "Be careful with slabs that are below grade, recently poured, visibly damp, dusty, cracked, coated, painted, or covered with old adhesive. Those details can change the installation method, underlayment, adhesive, or moisture system.",
+          "If the finished floor later cups, crowns, sounds hollow, or releases from adhesive, the issue often starts with slab moisture, flatness, contamination, or the wrong installation system."
+        ],
+        bullets: [
+          "Verify concrete moisture limits before choosing engineered hardwood.",
+          "Compare floating and glue-down requirements before buying material.",
+          "Review concrete underlayment and sound-control requirements when the building requires them.",
+          "Check acclimation and room conditions before installation day."
         ]
       },
       {

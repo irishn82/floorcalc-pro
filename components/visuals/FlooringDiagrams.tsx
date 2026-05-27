@@ -112,6 +112,22 @@ export function MoistureBarrierLayerDiagram() {
   );
 }
 
+export function ConcreteSlabConditionDiagram() {
+  return (
+    <DiagramCard title="Concrete slab planning concept">
+      <svg viewBox="0 0 520 210" role="img" aria-label="Concrete slab with moisture, flatness, and underlayment planning points" className="h-auto w-full">
+        <rect x="18" y="18" width="484" height="174" rx="12" fill="#eff6ff" stroke="#d5deea" />
+        <rect x="52" y="112" width="416" height="38" rx="5" fill="#cbd5e1" />
+        <path d="M70 112 C126 92 154 132 214 112 S320 88 382 112 S444 134 466 110" fill="none" stroke="#64748b" strokeWidth="5" strokeLinecap="round" />
+        <line x1="68" y1="82" x2="452" y2="82" stroke="#1f6feb" strokeWidth="5" strokeLinecap="round" />
+        <path d="M150 148 v-42 M260 148 v-54 M370 148 v-38" stroke="#1f6feb" strokeWidth="3" strokeDasharray="5 6" />
+        <text x="64" y="54" fill="#0d1624" fontSize="16" fontWeight="700">flatness</text>
+        <text x="188" y="178" fill="#334155" fontSize="15">moisture and slab prep first</text>
+      </svg>
+    </DiagramCard>
+  );
+}
+
 export function FlooringDirectionDiagram() {
   return (
     <div className="grid gap-3 sm:grid-cols-2">
@@ -131,6 +147,44 @@ export function FlooringDirectionDiagram() {
             ))}
           </div>
           <p className="mt-2 text-xs leading-5 text-slate-600">{caption}</p>
+        </DiagramCard>
+      ))}
+    </div>
+  );
+}
+
+export function SqueakMovementDiagram() {
+  return (
+    <DiagramCard title="Squeak movement concept">
+      <svg viewBox="0 0 520 210" role="img" aria-label="Subfloor movement concept showing panel flex over joists" className="h-auto w-full">
+        <rect x="18" y="18" width="484" height="174" rx="12" fill="#eff6ff" stroke="#d5deea" />
+        <rect x="62" y="84" width="396" height="26" rx="4" fill="#ffffff" stroke="#bdd3f8" />
+        <path d="M82 84 C150 118 220 58 288 92 S386 116 438 84" fill="none" stroke="#1f6feb" strokeWidth="5" strokeLinecap="round" />
+        <rect x="92" y="116" width="36" height="50" rx="3" fill="#94a3b8" />
+        <rect x="242" y="116" width="36" height="50" rx="3" fill="#94a3b8" />
+        <rect x="392" y="116" width="36" height="50" rx="3" fill="#94a3b8" />
+        <path d="M252 58 v26 M252 58 l-11 12 M252 58 l11 12" stroke="#d97706" strokeWidth="4" strokeLinecap="round" />
+        <text x="80" y="56" fill="#0d1624" fontSize="16" fontWeight="700">panel flex or rubbing</text>
+        <text x="170" y="188" fill="#334155" fontSize="15">wood subfloors and floating floors need different checks</text>
+      </svg>
+    </DiagramCard>
+  );
+}
+
+export function CrownCuppingDiagram() {
+  return (
+    <div className="grid gap-3 sm:grid-cols-2">
+      {[
+        ["Cupping", "edges higher than center", "M70 82 C126 116 188 116 244 82"],
+        ["Crowning", "center higher than edges", "M70 108 C126 72 188 72 244 108"]
+      ].map(([title, caption, path]) => (
+        <DiagramCard key={title} title={title}>
+          <svg viewBox="0 0 310 150" role="img" aria-label={`${title} board shape concept`} className="h-auto w-full">
+            <rect x="18" y="18" width="274" height="114" rx="10" fill="#eff6ff" stroke="#d5deea" />
+            <path d={path} fill="none" stroke="#1f6feb" strokeWidth="12" strokeLinecap="round" />
+            <line x1="70" y1="118" x2="244" y2="118" stroke="#94a3b8" strokeWidth="4" strokeDasharray="6 7" />
+          </svg>
+          <p className="mt-2 text-xs font-bold uppercase tracking-wide text-accent-700">{caption}</p>
         </DiagramCard>
       ))}
     </div>

@@ -122,7 +122,12 @@ export type GuideSlug =
   | "laminate-floor-separating-what-to-check-first"
   | "flooring-direction-mistakes"
   | "why-is-my-transition-strip-moving"
-  | "why-does-my-floor-feel-hollow";
+  | "why-does-my-floor-feel-hollow"
+  | "why-is-my-floor-squeaking"
+  | "moisture-level-too-high-for-flooring"
+  | "why-is-my-lvp-floor-peaking"
+  | "why-is-my-hardwood-floor-crowning"
+  | "best-underlayment-for-concrete-floors";
 
 export type GuideSection = {
   id: string;

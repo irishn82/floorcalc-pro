@@ -30,7 +30,10 @@ export const troubleshootingProblemGroups: TroubleshootingProblemGroup[] = [
       "why-is-my-lvp-floor-clicking",
       "why-is-my-lvp-lifting",
       "why-is-my-lvp-floor-separating",
+      "why-is-my-lvp-floor-peaking",
+      "moisture-level-too-high-for-flooring",
       "subfloor-flatness-requirements-lvp",
+      "can-you-install-lvp-over-concrete",
       "can-you-install-cabinets-over-floating-lvp",
       "glue-down-vs-floating-floor"
     ],
@@ -47,7 +50,9 @@ export const troubleshootingProblemGroups: TroubleshootingProblemGroup[] = [
       "why-is-my-laminate-floor-buckling",
       "laminate-floor-separating-what-to-check-first",
       "why-is-my-floor-clicking",
+      "why-is-my-floor-squeaking",
       "why-does-my-floor-feel-hollow",
+      "moisture-level-too-high-for-flooring",
       "how-flat-should-a-subfloor-be-for-laminate",
       "best-underlayment-for-laminate-flooring",
       "can-laminate-flooring-be-waterproof"
@@ -63,9 +68,12 @@ export const troubleshootingProblemGroups: TroubleshootingProblemGroup[] = [
     guideSlugs: [
       "why-is-my-hardwood-floor-cupping",
       "why-is-my-hardwood-floor-gapping",
+      "why-is-my-hardwood-floor-crowning",
+      "why-is-my-floor-squeaking",
       "how-long-should-hardwood-acclimate",
       "hardwood-acclimation-mistakes",
       "can-engineered-hardwood-go-over-concrete",
+      "moisture-level-too-high-for-flooring",
       "moisture-barrier-engineered-hardwood-over-concrete"
     ],
     toolSlugs: ["flooring-square-footage-calculator", "waste-calculator"]
@@ -137,6 +145,48 @@ const troubleshootingFlows: Partial<Record<GuideSlug, TroubleshootingFlow>> = {
       "Joints are separating, lifting, or visibly moving.",
       "Moisture, slab issues, or damaged locking tabs are suspected.",
       "The floor may need to be lifted to check the subfloor."
+    ]
+  },
+  "why-is-my-floor-squeaking": {
+    group: "laminate",
+    causeRows: [
+      { cause: "Subfloor movement", symptom: "Squeak repeats in one spot", check: "Check for panel movement, joist flex, or loose fasteners." },
+      { cause: "Floating floor movement", symptom: "Squeak with hollow or clicking feel", check: "Look for low spots, soft underlayment, or tight trim." },
+      { cause: "Seasonal wood movement", symptom: "Noise changes with humidity", check: "Track indoor humidity and hardwood movement." },
+      { cause: "Transition or trim rub", symptom: "Sound near doorway or wall", check: "Inspect trim, tracks, stair parts, and thresholds." }
+    ],
+    whatToCheckFirst: [
+      "Mark the exact spot where the squeak repeats.",
+      "Identify whether the subfloor is wood or concrete.",
+      "Check nearby transitions, trim, cabinets, stairs, and doorways.",
+      "Look for hollow movement, gaps, peaking, or separation before forcing a repair."
+    ],
+    whenToCallAPro: [
+      "The floor feels soft, unsafe, or is getting louder.",
+      "The squeak is paired with gaps, lifting, peaking, or hollow movement.",
+      "Stairs, joists, or subfloor panels may be involved.",
+      "Repair would require lifting finished flooring."
+    ]
+  },
+  "moisture-level-too-high-for-flooring": {
+    group: "hardwood",
+    causeRows: [
+      { cause: "Concrete moisture", symptom: "Adhesive release, cupping, or musty odor", check: "Use the test method required by the product." },
+      { cause: "Wood subfloor moisture", symptom: "Hardwood movement or swelling", check: "Compare subfloor and flooring readings to product limits." },
+      { cause: "Unstable room conditions", symptom: "Seasonal gaps or swelling", check: "Check HVAC, humidity, and recent wet work." },
+      { cause: "Active leak or water source", symptom: "Localized staining, lifting, or swollen edges", check: "Stop the source before covering the floor." }
+    ],
+    whatToCheckFirst: [
+      "Find the exact moisture test and limit in the flooring instructions.",
+      "Identify whether the substrate is concrete, wood, or an existing floor.",
+      "Check for active leaks, damp crawlspaces, exterior door issues, and recent wet work.",
+      "Confirm the room is conditioned before relying on readings."
+    ],
+    whenToCallAPro: [
+      "The project is over concrete, below grade, or over a crawlspace.",
+      "Glue-down flooring, hardwood, or moisture-sensitive products are planned.",
+      "There has been a leak, flood, or unknown slab history.",
+      "Documented moisture testing is required before installation."
     ]
   },
   "why-is-my-laminate-floor-separating": {
@@ -223,6 +273,27 @@ const troubleshootingFlows: Partial<Record<GuideSlug, TroubleshootingFlow>> = {
       "Damaged planks may need replacement."
     ]
   },
+  "why-is-my-lvp-floor-peaking": {
+    group: "lvp",
+    causeRows: [
+      { cause: "Blocked expansion", symptom: "Raised ridge near walls or transitions", check: "Inspect perimeter gaps, trim, and transition tracks." },
+      { cause: "Fixed cabinets or islands", symptom: "Pressure shows away from built-ins", check: "Verify whether the floating floor is pinned." },
+      { cause: "Long run pressure", symptom: "Peaking through connected rooms or hallways", check: "Review product limits for expansion breaks." },
+      { cause: "Moisture or heat", symptom: "Peaking near doors, slabs, or sunny areas", check: "Check moisture, direct sun, and room conditions." }
+    ],
+    whatToCheckFirst: [
+      "Identify whether the floor is floating or glue-down.",
+      "Check expansion space at walls, doorways, transitions, cabinets, and islands.",
+      "Look for moisture, heat, or direct sunlight patterns near the peak.",
+      "Review long-run and transition requirements before cutting or forcing the floor flat."
+    ],
+    whenToCallAPro: [
+      "The peak is spreading or the planks are separating.",
+      "Moisture or slab conditions are suspected.",
+      "Cabinets, islands, or built-ins may be pinning the floor.",
+      "Planks may need to be lifted or replaced."
+    ]
+  },
   "why-is-my-laminate-floor-buckling": {
     group: "laminate",
     causeRows: [
@@ -284,6 +355,27 @@ const troubleshootingFlows: Partial<Record<GuideSlug, TroubleshootingFlow>> = {
       "Gaps do not close seasonally.",
       "The floor also shows cupping, crowning, or moisture signs.",
       "You are considering filler or board replacement."
+    ]
+  },
+  "why-is-my-hardwood-floor-crowning": {
+    group: "hardwood",
+    causeRows: [
+      { cause: "Moisture imbalance", symptom: "Board centers higher than edges", check: "Find moisture sources above or below the boards." },
+      { cause: "Sanded too early", symptom: "Crowning after a cupping repair", check: "Review whether sanding happened before the floor dried." },
+      { cause: "High humidity or wet cleaning", symptom: "Widespread raised centers or finish changes", check: "Check indoor humidity and cleaning history." },
+      { cause: "Slab or crawlspace moisture", symptom: "Crowning with cupping, gaps, or stains", check: "Evaluate concrete, crawlspace, HVAC, and moisture readings." }
+    ],
+    whatToCheckFirst: [
+      "Confirm whether the board shape is crowning or cupping.",
+      "Look for leaks, wet cleaning, slab moisture, crawlspace moisture, or HVAC changes.",
+      "Check whether the floor was recently sanded or repaired after cupping.",
+      "Avoid sanding until moisture readings and stability are confirmed."
+    ],
+    whenToCallAPro: [
+      "Crowning is widespread, worsening, or appeared after a leak.",
+      "The floor was recently sanded after cupping.",
+      "Concrete, crawlspace, or HVAC conditions may be involved.",
+      "You need moisture readings before deciding on repair."
     ]
   },
   "why-are-my-carpet-seams-visible": {
