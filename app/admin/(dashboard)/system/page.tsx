@@ -11,12 +11,12 @@ const deploymentChecks = [
   "Public pages load without admin authentication.",
   "Sitemap and robots files use the production domain.",
   "Search Console and Bing Webmaster Tools are ready for sitemap submission.",
-  "Analytics remains off unless a provider is intentionally configured.",
+  "Analytics mode is intentional; Vercel Analytics is the default unless disabled.",
   "QA reports are reviewed before any manual guide promotion."
 ];
 
 export default function AdminSystemPage() {
-  const analyticsProvider = process.env.NEXT_PUBLIC_ANALYTICS_PROVIDER || "none";
+  const analyticsProvider = process.env.NEXT_PUBLIC_ANALYTICS_PROVIDER || "vercel";
 
   return (
     <>

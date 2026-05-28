@@ -356,9 +356,15 @@ Phase 7 adds lightweight production visibility without adding a database, AI cal
 
 ### Analytics
 
-Analytics is off by default. The root layout includes `components/analytics/AnalyticsProvider.tsx`, which only loads a script when explicitly configured with public environment variables.
+The root layout includes `components/analytics/AnalyticsProvider.tsx`. Vercel Analytics is the default provider and does not require a public environment variable. Set `NEXT_PUBLIC_ANALYTICS_PROVIDER=none` only when analytics should be explicitly disabled.
 
-Default:
+Default Vercel Analytics:
+
+```bash
+NEXT_PUBLIC_ANALYTICS_PROVIDER=vercel
+```
+
+Disable analytics:
 
 ```bash
 NEXT_PUBLIC_ANALYTICS_PROVIDER=none
@@ -378,7 +384,7 @@ NEXT_PUBLIC_ANALYTICS_PROVIDER=google-analytics
 NEXT_PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX
 ```
 
-Leave analytics disabled until the privacy and cookie implications are reviewed.
+If Vercel Analytics was enabled in the Vercel dashboard after the last deployment, redeploy the site so the analytics component is included in production.
 
 ### Health Check
 
@@ -413,7 +419,7 @@ After every deployment:
 - Check `/sitemap.xml` and `/robots.txt`.
 - Confirm `/admin` redirects to `/admin/login` in a private browser.
 - Confirm `/admin/system` loads only after login.
-- Confirm analytics is disabled unless intentionally configured.
+- Confirm analytics mode is intentional. Vercel Analytics is the default unless `NEXT_PUBLIC_ANALYTICS_PROVIDER=none` is set.
 
 ## Phase 8 Post-Deploy Smoke Test
 

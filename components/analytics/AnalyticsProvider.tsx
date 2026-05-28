@@ -1,15 +1,16 @@
+import { Analytics as VercelAnalytics } from "@vercel/analytics/next";
 import Script from "next/script";
 
-type AnalyticsProviderName = "none" | "plausible" | "google-analytics";
+type AnalyticsProviderName = "none" | "vercel" | "plausible" | "google-analytics";
 
 function getAnalyticsProvider(): AnalyticsProviderName {
   const provider = process.env.NEXT_PUBLIC_ANALYTICS_PROVIDER;
 
-  if (provider === "plausible" || provider === "google-analytics") {
+  if (provider === "none" || provider === "vercel" || provider === "plausible" || provider === "google-analytics") {
     return provider;
   }
 
-  return "none";
+  return "vercel";
 }
 
 export function AnalyticsProvider() {
@@ -17,6 +18,10 @@ export function AnalyticsProvider() {
 
   if (provider === "none") {
     return null;
+  }
+
+  if (provider === "vercel") {
+    return <VercelAnalytics />;
   }
 
   if (provider === "plausible") {
