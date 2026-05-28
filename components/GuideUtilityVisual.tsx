@@ -51,7 +51,7 @@ function ComparisonTable({ columns, rows }: { columns: string[]; rows: string[][
           <thead className="bg-accent-50 text-xs font-bold uppercase tracking-wide text-accent-800">
             <tr>
               {columns.map((column) => (
-                <th key={column} className="p-2">
+                <th key={column} className="break-words p-2">
                   {column}
                 </th>
               ))}
@@ -61,7 +61,7 @@ function ComparisonTable({ columns, rows }: { columns: string[]; rows: string[][
             {rows.map((row) => (
               <tr key={row.join("-")} className="align-top">
                 {row.map((cell, index) => (
-                  <td key={cell} className={index === 0 ? "p-2 font-bold text-ink" : "p-2 leading-5 text-slate-600"}>
+                  <td key={cell} className={index === 0 ? "break-words p-2 font-bold text-ink" : "break-words p-2 leading-5 text-slate-600"}>
                     {cell}
                   </td>
                 ))}

@@ -20,16 +20,14 @@ export function GuideTypeSelect({ options }: GuideTypeSelectProps) {
       return;
     }
 
-    const target = document.getElementById(slug);
-    target?.scrollIntoView({ behavior: "smooth", block: "start" });
-    window.history.replaceState(null, "", `#${slug}`);
+    window.location.href = `/guides/ecosystems/${slug}`;
     event.currentTarget.value = "";
   }
 
   return (
     <div className="w-full">
       <label htmlFor="guide-type-select" className="mb-2 block text-xs font-black uppercase tracking-wide text-slate-500">
-        Quick jump
+        Open flooring type
       </label>
       <div className="relative">
         <select

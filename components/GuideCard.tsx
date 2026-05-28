@@ -58,7 +58,7 @@ export function GuideCard({ guide, variant = "light" }: GuideCardProps) {
         </p>
 
         {/* footer */}
-        <div className="mt-auto flex items-center justify-between pt-2">
+        <div className="mt-auto flex flex-wrap items-center gap-2 pt-2">
           {ecosystem ? (
             <span
               className={[
@@ -71,7 +71,7 @@ export function GuideCard({ guide, variant = "light" }: GuideCardProps) {
           ) : <span />}
           <Link
             href={`/guides/${guide.slug}`}
-            className={`inline-flex items-center gap-1 text-sm font-bold transition-colors ${isDark ? "text-accent-400 hover:text-accent-300" : "text-accent-600 hover:text-accent-700"}`}
+            className={`ml-auto inline-flex items-center gap-1 text-sm font-bold transition-colors ${isDark ? "text-accent-400 hover:text-accent-300" : "text-accent-600 hover:text-accent-700"}`}
           >
             Read
             <svg className="h-3.5 w-3.5 transition-transform duration-150 group-hover:translate-x-0.5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">

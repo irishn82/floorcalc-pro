@@ -36,17 +36,17 @@ export function CauseSymptomCheckTable({ rows }: CauseSymptomCheckTableProps) {
         <table className="w-full table-fixed text-left text-sm">
           <thead className="bg-accent-50 text-xs font-bold uppercase tracking-wide text-accent-800">
             <tr>
-              <th className="p-3">Possible cause</th>
-              <th className="p-3">Likely symptom</th>
-              <th className="p-3">What to check</th>
+              <th className="break-words p-3">Possible cause</th>
+              <th className="break-words p-3">Likely symptom</th>
+              <th className="break-words p-3">What to check</th>
             </tr>
           </thead>
           <tbody className="divide-y divide-line">
             {rows.map((row) => (
               <tr key={`${row.cause}-${row.symptom}`} className="align-top">
-                <td className="p-3 font-bold text-ink">{row.cause}</td>
-                <td className="p-3 leading-6 text-slate-600">{row.symptom}</td>
-                <td className="p-3 leading-6 text-slate-600">{row.check}</td>
+                <td className="break-words p-3 font-bold text-ink">{row.cause}</td>
+                <td className="break-words p-3 leading-6 text-slate-600">{row.symptom}</td>
+                <td className="break-words p-3 leading-6 text-slate-600">{row.check}</td>
               </tr>
             ))}
           </tbody>

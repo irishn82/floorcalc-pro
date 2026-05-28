@@ -6,7 +6,7 @@ const visualNote =
 function DiagramCard({ title, children }: { title: string; children: ReactNode }) {
   return (
     <div className="min-w-0 overflow-hidden rounded-md border border-line bg-white p-3">
-      <h3 className="text-sm font-black text-ink">{title}</h3>
+      <h3 className="break-words text-sm font-black text-ink">{title}</h3>
       <div className="mt-3 min-w-0 overflow-hidden">{children}</div>
       <p className="mt-3 text-xs leading-5 text-slate-500">{visualNote}</p>
     </div>
@@ -14,7 +14,7 @@ function DiagramCard({ title, children }: { title: string; children: ReactNode }
 }
 
 function DiagramCaption({ children }: { children: ReactNode }) {
-  return <p className="mt-2 text-xs leading-5 text-slate-600">{children}</p>;
+  return <p className="mt-2 break-words text-xs leading-5 text-slate-600">{children}</p>;
 }
 
 function TransitionProfileSketch({ profile }: { profile: string }) {

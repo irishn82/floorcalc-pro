@@ -13,7 +13,9 @@ type RelatedLinksProps = {
 };
 
 export function RelatedLinks({ title = "Related Resources", links }: RelatedLinksProps) {
-  if (links.length === 0) {
+  const uniqueLinks = links.filter((link, index, allLinks) => allLinks.findIndex((item) => item.href === link.href) === index);
+
+  if (uniqueLinks.length === 0) {
     return null;
   }
 
@@ -27,7 +29,7 @@ export function RelatedLinks({ title = "Related Resources", links }: RelatedLink
           {title}
         </h2>
         <div className="mt-3 grid gap-3 md:grid-cols-3">
-          {links.map((link) => (
+          {uniqueLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
