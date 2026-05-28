@@ -1,6 +1,13 @@
 import type { Metadata } from "next";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import { AnalyticsProvider } from "@/components/analytics/AnalyticsProvider";
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap"
+});
 import { JsonLd } from "@/components/JsonLd";
 import { siteConfig } from "@/lib/seo/metadata";
 import { websiteJsonLd } from "@/lib/seo/schema";
@@ -38,7 +45,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={inter.variable}>
       <body className="min-h-screen antialiased">
         <JsonLd data={websiteJsonLd()} />
         {children}

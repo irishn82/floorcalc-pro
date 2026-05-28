@@ -18,47 +18,55 @@ const toolIcons: Record<Tool["calculatorType"], FlooringIconName> = {
 
 export function ToolCard({ tool, relatedGuides = [] }: ToolCardProps) {
   return (
-    <article className="flooring-card overflow-hidden rounded-lg border border-line bg-white p-3 pt-4 shadow-sm transition hover:-translate-y-0.5 hover:border-accent-100 hover:shadow-soft">
-      <div className="flex items-start gap-3">
-        <span className="grid h-9 w-9 shrink-0 place-items-center rounded-lg border border-accent-100 bg-accent-50 text-accent-700">
+    <article className="group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-200 hover:border-accent-200 hover:shadow-md">
+      <div className="flex flex-1 flex-col gap-3 p-6">
+        {/* icon */}
+        <span className="grid h-11 w-11 place-items-center rounded-xl border border-accent-100 bg-accent-50 text-accent-600">
           <FlooringIcon name={toolIcons[tool.calculatorType]} />
         </span>
-        <div className="min-w-0">
-          <div className="flex items-start justify-between gap-4">
-            <h3 className="text-base font-black text-ink">
-              <Link href={`/tools/${tool.slug}`} className="hover:text-accent-700">
-                {tool.title}
-              </Link>
-            </h3>
+
+        {/* title */}
+        <h3 className="text-[1rem] font-black leading-snug text-ink transition-colors group-hover:text-accent-700">
+          <Link href={`/tools/${tool.slug}`}>{tool.title}</Link>
+        </h3>
+
+        {/* description */}
+        <p className="text-sm leading-6 text-slate-500">{tool.description}</p>
+
+        {/* "best for" pill */}
+        <p className="self-start rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-[0.68rem] font-bold uppercase tracking-[0.08em] text-slate-500">
+          {tool.flooringSystem}
+        </p>
+
+        {/* related guides */}
+        {relatedGuides.length > 0 ? (
+          <div className="border-t border-slate-100 pt-3">
+            <p className="mb-2 text-[0.68rem] font-bold uppercase tracking-[0.08em] text-slate-400">Related guides</p>
+            <div className="flex flex-wrap gap-1.5">
+              {relatedGuides.slice(0, 2).map((guide) => (
+                <Link
+                  key={guide.slug}
+                  href={`/guides/${guide.slug}`}
+                  className="rounded-lg border border-slate-200 bg-slate-50 px-2.5 py-1 text-xs font-semibold text-slate-600 transition-all hover:border-accent-200 hover:bg-white hover:text-accent-700"
+                >
+                  {guide.title}
+                </Link>
+              ))}
+            </div>
           </div>
-          <p className="mt-2 text-sm leading-6 text-slate-600">{tool.description}</p>
+        ) : null}
+
+        {/* CTA */}
+        <div className="mt-auto pt-1">
+          <Link
+            href={`/tools/${tool.slug}`}
+            className="group/cta inline-flex items-center gap-1.5 rounded-xl bg-accent-600 px-4 py-2.5 text-sm font-bold text-white transition-colors hover:bg-accent-700"
+          >
+            <FlooringIcon name={toolIcons[tool.calculatorType]} className="h-4 w-4" />
+            Open calculator
+          </Link>
         </div>
       </div>
-      <p className="mt-2.5 break-words rounded-md border border-line bg-field px-3 py-2 text-xs font-bold uppercase leading-5 tracking-wide text-slate-600">
-        Best for: {tool.flooringSystem}
-      </p>
-      {relatedGuides.length > 0 ? (
-        <div className="mt-2.5 border-t border-line pt-2.5">
-          <p className="text-xs font-bold uppercase tracking-wide text-slate-500">Helpful guides</p>
-          <div className="mt-2 flex flex-wrap gap-2">
-            {relatedGuides.slice(0, 3).map((guide) => (
-              <Link
-                key={guide.slug}
-                href={`/guides/${guide.slug}`}
-                className="rounded-md border border-line bg-field px-2.5 py-1.5 text-xs font-bold leading-5 text-slate-700 transition hover:border-accent-100 hover:bg-white hover:text-accent-700"
-              >
-                {guide.title}
-              </Link>
-            ))}
-          </div>
-        </div>
-      ) : null}
-      <Link href={`/tools/${tool.slug}`} className="mt-2.5 inline-flex text-sm font-bold text-accent-700 hover:text-accent-600">
-        Open calculator
-        <span aria-hidden="true" className="ml-1">
-          -&gt;
-        </span>
-      </Link>
     </article>
   );
 }
