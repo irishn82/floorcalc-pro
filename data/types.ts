@@ -127,7 +127,16 @@ export type GuideSlug =
   | "moisture-level-too-high-for-flooring"
   | "why-is-my-lvp-floor-peaking"
   | "why-is-my-hardwood-floor-crowning"
-  | "best-underlayment-for-concrete-floors";
+  | "best-underlayment-for-concrete-floors"
+  | "how-to-test-concrete-moisture"
+  | "why-flooring-fails-over-concrete"
+  | "common-basement-flooring-problems"
+  | "why-is-my-floor-bouncing"
+  | "why-are-my-flooring-joints-opening"
+  | "hardwood-installation-humidity"
+  | "why-is-my-engineered-hardwood-separating"
+  | "why-is-my-lvp-floor-buckling"
+  | "why-are-my-lvp-seams-showing";
 
 export type GuideSection = {
   id: string;

@@ -100,9 +100,10 @@ const targetedNextStepTargets: Partial<
   "can-engineered-hardwood-go-over-concrete": {
     primary: { type: "tool", slug: "flooring-square-footage-calculator" },
     secondary: [
-      { type: "guide", slug: "moisture-level-too-high-for-flooring" },
+      { type: "guide", slug: "how-to-test-concrete-moisture" },
       { type: "guide", slug: "moisture-barrier-engineered-hardwood-over-concrete" },
       { type: "guide", slug: "floating-vs-glue-down-engineered-hardwood-over-concrete" },
+      { type: "guide", slug: "why-flooring-fails-over-concrete" },
       { type: "guide", slug: "best-underlayment-for-concrete-floors" },
       { type: "guide", slug: "how-long-should-hardwood-acclimate" },
       { type: "tool", slug: "waste-calculator" }
@@ -112,6 +113,8 @@ const targetedNextStepTargets: Partial<
     primary: { type: "guide", slug: "laminate-floor-separating-what-to-check-first" },
     secondary: [
       { type: "guide", slug: "why-is-my-laminate-floor-buckling" },
+      { type: "guide", slug: "why-are-my-flooring-joints-opening" },
+      { type: "guide", slug: "why-is-my-floor-bouncing" },
       { type: "guide", slug: "why-is-my-floor-squeaking" },
       { type: "guide", slug: "moisture-level-too-high-for-flooring" },
       { type: "guide", slug: "how-flat-should-a-subfloor-be-for-laminate" },
@@ -125,16 +128,19 @@ const targetedNextStepTargets: Partial<
     secondary: [
       { type: "tool", slug: "transition-estimator" },
       { type: "guide", slug: "flooring-direction-mistakes" },
+      { type: "guide", slug: "why-are-my-flooring-joints-opening" },
       { type: "guide", slug: "why-is-my-lvp-floor-peaking" },
       { type: "guide", slug: "flooring-transition-guide" },
       { type: "tool", slug: "flooring-square-footage-calculator" }
     ]
   },
   "how-long-should-hardwood-acclimate": {
-    primary: { type: "guide", slug: "hardwood-acclimation-mistakes" },
+    primary: { type: "guide", slug: "hardwood-installation-humidity" },
     secondary: [
+      { type: "guide", slug: "hardwood-acclimation-mistakes" },
       { type: "guide", slug: "moisture-level-too-high-for-flooring" },
       { type: "guide", slug: "can-engineered-hardwood-go-over-concrete" },
+      { type: "guide", slug: "why-is-my-engineered-hardwood-separating" },
       { type: "guide", slug: "why-is-my-hardwood-floor-crowning" },
       { type: "guide", slug: "why-is-my-hardwood-floor-gapping" },
       { type: "guide", slug: "why-is-my-hardwood-floor-cupping" },
@@ -142,10 +148,14 @@ const targetedNextStepTargets: Partial<
     ]
   },
   "can-you-install-lvp-over-concrete": {
-    primary: { type: "guide", slug: "best-underlayment-for-concrete-floors" },
+    primary: { type: "guide", slug: "how-to-test-concrete-moisture" },
     secondary: [
+      { type: "guide", slug: "best-underlayment-for-concrete-floors" },
+      { type: "guide", slug: "why-flooring-fails-over-concrete" },
       { type: "guide", slug: "moisture-level-too-high-for-flooring" },
       { type: "guide", slug: "subfloor-flatness-requirements-lvp" },
+      { type: "guide", slug: "why-is-my-lvp-floor-buckling" },
+      { type: "guide", slug: "why-are-my-lvp-seams-showing" },
       { type: "guide", slug: "why-is-my-lvp-floor-peaking" },
       { type: "tool", slug: "waste-calculator" }
     ]
@@ -187,8 +197,9 @@ const targetedNextStepTargets: Partial<
     ]
   },
   "best-underlayment-for-concrete-floors": {
-    primary: { type: "guide", slug: "moisture-level-too-high-for-flooring" },
+    primary: { type: "guide", slug: "how-to-test-concrete-moisture" },
     secondary: [
+      { type: "guide", slug: "why-flooring-fails-over-concrete" },
       { type: "guide", slug: "can-you-install-lvp-over-concrete" },
       { type: "guide", slug: "can-engineered-hardwood-go-over-concrete" },
       { type: "guide", slug: "best-underlayment-for-laminate-flooring" },
@@ -198,6 +209,8 @@ const targetedNextStepTargets: Partial<
   "why-is-my-lvp-floor-separating": {
     primary: { type: "guide", slug: "subfloor-flatness-requirements-lvp" },
     secondary: [
+      { type: "guide", slug: "why-is-my-lvp-floor-buckling" },
+      { type: "guide", slug: "why-are-my-lvp-seams-showing" },
       { type: "guide", slug: "why-is-my-lvp-floor-clicking" },
       { type: "guide", slug: "why-is-my-lvp-lifting" },
       { type: "guide", slug: "can-you-install-cabinets-over-floating-lvp" },
@@ -207,6 +220,8 @@ const targetedNextStepTargets: Partial<
   "why-is-my-laminate-floor-buckling": {
     primary: { type: "guide", slug: "why-is-my-laminate-floor-separating" },
     secondary: [
+      { type: "guide", slug: "why-are-my-flooring-joints-opening" },
+      { type: "guide", slug: "why-is-my-floor-bouncing" },
       { type: "guide", slug: "how-flat-should-a-subfloor-be-for-laminate" },
       { type: "guide", slug: "best-underlayment-for-laminate-flooring" },
       { type: "guide", slug: "can-laminate-flooring-be-waterproof" }
@@ -215,6 +230,8 @@ const targetedNextStepTargets: Partial<
   "why-is-my-hardwood-floor-gapping": {
     primary: { type: "guide", slug: "how-long-should-hardwood-acclimate" },
     secondary: [
+      { type: "guide", slug: "hardwood-installation-humidity" },
+      { type: "guide", slug: "why-is-my-engineered-hardwood-separating" },
       { type: "guide", slug: "hardwood-acclimation-mistakes" },
       { type: "guide", slug: "why-is-my-hardwood-floor-cupping" },
       { type: "guide", slug: "can-engineered-hardwood-go-over-concrete" }
@@ -231,9 +248,92 @@ const targetedNextStepTargets: Partial<
   "why-is-my-tile-cracking": {
     primary: { type: "guide", slug: "how-flat-should-a-floor-be-for-tile" },
     secondary: [
+      { type: "guide", slug: "why-flooring-fails-over-concrete" },
+      { type: "guide", slug: "common-basement-flooring-problems" },
       { type: "guide", slug: "tile-layout-planning-guide" },
       { type: "guide", slug: "can-you-install-tile-over-tile" },
       { type: "tool", slug: "transition-estimator" }
+    ]
+  },
+  "how-to-test-concrete-moisture": {
+    primary: { type: "guide", slug: "moisture-level-too-high-for-flooring" },
+    secondary: [
+      { type: "guide", slug: "why-flooring-fails-over-concrete" },
+      { type: "guide", slug: "can-engineered-hardwood-go-over-concrete" },
+      { type: "guide", slug: "can-you-install-lvp-over-concrete" },
+      { type: "guide", slug: "best-underlayment-for-concrete-floors" }
+    ]
+  },
+  "why-flooring-fails-over-concrete": {
+    primary: { type: "guide", slug: "how-to-test-concrete-moisture" },
+    secondary: [
+      { type: "guide", slug: "common-basement-flooring-problems" },
+      { type: "guide", slug: "can-you-install-lvp-over-concrete" },
+      { type: "guide", slug: "can-engineered-hardwood-go-over-concrete" },
+      { type: "guide", slug: "why-does-my-floor-feel-hollow" }
+    ]
+  },
+  "common-basement-flooring-problems": {
+    primary: { type: "guide", slug: "how-to-test-concrete-moisture" },
+    secondary: [
+      { type: "guide", slug: "can-carpet-be-installed-over-concrete" },
+      { type: "guide", slug: "can-you-install-lvp-over-concrete" },
+      { type: "guide", slug: "why-flooring-fails-over-concrete" },
+      { type: "guide", slug: "why-does-my-floor-feel-hollow" }
+    ]
+  },
+  "why-is-my-floor-bouncing": {
+    primary: { type: "guide", slug: "why-is-my-floor-squeaking" },
+    secondary: [
+      { type: "guide", slug: "why-does-my-floor-feel-hollow" },
+      { type: "guide", slug: "why-are-my-flooring-joints-opening" },
+      { type: "guide", slug: "subfloor-flatness-requirements-lvp" },
+      { type: "guide", slug: "how-flat-should-a-subfloor-be-for-laminate" }
+    ]
+  },
+  "why-are-my-flooring-joints-opening": {
+    primary: { type: "guide", slug: "why-is-my-laminate-floor-separating" },
+    secondary: [
+      { type: "guide", slug: "why-is-my-lvp-floor-separating" },
+      { type: "guide", slug: "why-is-my-hardwood-floor-gapping" },
+      { type: "guide", slug: "why-is-my-floor-bouncing" },
+      { type: "guide", slug: "flooring-direction-mistakes" }
+    ]
+  },
+  "hardwood-installation-humidity": {
+    primary: { type: "guide", slug: "how-long-should-hardwood-acclimate" },
+    secondary: [
+      { type: "guide", slug: "hardwood-acclimation-mistakes" },
+      { type: "guide", slug: "why-is-my-hardwood-floor-cupping" },
+      { type: "guide", slug: "why-is-my-hardwood-floor-gapping" },
+      { type: "guide", slug: "can-engineered-hardwood-go-over-concrete" }
+    ]
+  },
+  "why-is-my-engineered-hardwood-separating": {
+    primary: { type: "guide", slug: "can-engineered-hardwood-go-over-concrete" },
+    secondary: [
+      { type: "guide", slug: "hardwood-installation-humidity" },
+      { type: "guide", slug: "moisture-barrier-engineered-hardwood-over-concrete" },
+      { type: "guide", slug: "floating-vs-glue-down-engineered-hardwood-over-concrete" },
+      { type: "guide", slug: "why-is-my-hardwood-floor-gapping" }
+    ]
+  },
+  "why-is-my-lvp-floor-buckling": {
+    primary: { type: "guide", slug: "why-is-my-lvp-floor-peaking" },
+    secondary: [
+      { type: "guide", slug: "why-is-my-lvp-floor-separating" },
+      { type: "guide", slug: "why-is-my-lvp-lifting" },
+      { type: "guide", slug: "can-you-install-cabinets-over-floating-lvp" },
+      { type: "guide", slug: "can-you-install-lvp-over-concrete" }
+    ]
+  },
+  "why-are-my-lvp-seams-showing": {
+    primary: { type: "guide", slug: "why-is-my-lvp-floor-separating" },
+    secondary: [
+      { type: "guide", slug: "why-is-my-lvp-floor-clicking" },
+      { type: "guide", slug: "subfloor-flatness-requirements-lvp" },
+      { type: "guide", slug: "why-does-my-floor-feel-hollow" },
+      { type: "guide", slug: "why-is-my-lvp-floor-buckling" }
     ]
   }
 };

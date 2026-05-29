@@ -1099,6 +1099,7 @@ export const guides: Guide[] = [
       "flooring-transition-guide",
       "t-mold-vs-reducer-vs-end-cap",
       "why-is-my-transition-strip-moving",
+      "why-are-my-flooring-joints-opening",
       "why-is-my-lvp-floor-peaking",
       "why-is-my-floor-squeaking",
       "luxury-vinyl-over-tile"

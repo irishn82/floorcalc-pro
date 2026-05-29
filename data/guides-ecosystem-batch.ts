@@ -190,9 +190,13 @@ const guideDrafts: GuideDraft[] = [
     relatedTools: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"],
     relatedGuides: [
       "best-underlayment-for-lvp",
+      "how-to-test-concrete-moisture",
+      "why-flooring-fails-over-concrete",
       "best-underlayment-for-concrete-floors",
       "moisture-level-too-high-for-flooring",
       "subfloor-flatness-requirements-lvp",
+      "why-is-my-lvp-floor-buckling",
+      "why-are-my-lvp-seams-showing",
       "why-is-my-lvp-floor-peaking",
       "glue-down-vs-floating-floor",
       "flooring-over-radiant-heat"
@@ -394,6 +398,8 @@ const guideDrafts: GuideDraft[] = [
     topicCluster: "subfloor-prep",
     relatedTools: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"],
     relatedGuides: [
+      "why-is-my-lvp-floor-buckling",
+      "why-are-my-lvp-seams-showing",
       "why-is-my-lvp-floor-separating",
       "subfloor-flatness-requirements-lvp",
       "best-underlayment-for-lvp",
@@ -761,6 +767,8 @@ const guideDrafts: GuideDraft[] = [
     relatedGuides: [
       "laminate-floor-separating-what-to-check-first",
       "why-is-my-laminate-floor-buckling",
+      "why-are-my-flooring-joints-opening",
+      "why-is-my-floor-bouncing",
       "why-is-my-floor-squeaking",
       "how-flat-should-a-subfloor-be-for-laminate",
       "best-underlayment-for-laminate-flooring",
@@ -1193,7 +1201,9 @@ const guideDrafts: GuideDraft[] = [
     topicCluster: "installation-method",
     relatedTools: ["flooring-square-footage-calculator", "waste-calculator"],
     relatedGuides: [
+      "hardwood-installation-humidity",
       "hardwood-acclimation-mistakes",
+      "why-is-my-engineered-hardwood-separating",
       "moisture-barrier-engineered-hardwood-over-concrete",
       "solid-hardwood-vs-engineered-hardwood",
       "why-is-my-hardwood-floor-cupping",
@@ -1343,10 +1353,14 @@ const guideDrafts: GuideDraft[] = [
     topicCluster: "subfloor-prep",
     relatedTools: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"],
     relatedGuides: [
+      "how-to-test-concrete-moisture",
+      "why-flooring-fails-over-concrete",
       "moisture-barrier-engineered-hardwood-over-concrete",
       "moisture-level-too-high-for-flooring",
       "floating-vs-glue-down-engineered-hardwood-over-concrete",
       "best-underlayment-for-concrete-floors",
+      "hardwood-installation-humidity",
+      "why-is-my-engineered-hardwood-separating",
       "glue-down-vs-floating-floor",
       "hardwood-acclimation-mistakes",
       "solid-hardwood-vs-engineered-hardwood",

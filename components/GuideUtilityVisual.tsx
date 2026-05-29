@@ -184,7 +184,7 @@ export function GuideUtilityVisual({ guide, hideDiagnosticTables = false }: Guid
     );
   }
 
-  if (guide.slug === "best-underlayment-for-concrete-floors") {
+  if (["best-underlayment-for-concrete-floors", "why-flooring-fails-over-concrete", "common-basement-flooring-problems"].includes(guide.slug)) {
     return (
       <VisualShell title="Concrete underlayment planning view">
         <div className="grid gap-3">
@@ -196,9 +196,12 @@ export function GuideUtilityVisual({ guide, hideDiagnosticTables = false }: Guid
   }
 
   if (
-    ["moisture-barrier-engineered-hardwood-over-concrete", "can-you-install-lvp-over-concrete", "moisture-level-too-high-for-flooring"].includes(
-      guide.slug
-    )
+    [
+      "moisture-barrier-engineered-hardwood-over-concrete",
+      "can-you-install-lvp-over-concrete",
+      "moisture-level-too-high-for-flooring",
+      "how-to-test-concrete-moisture"
+    ].includes(guide.slug)
   ) {
     return (
       <VisualShell title="Moisture and substrate layer example">
@@ -207,7 +210,7 @@ export function GuideUtilityVisual({ guide, hideDiagnosticTables = false }: Guid
     );
   }
 
-  if (guide.slug === "how-long-should-hardwood-acclimate") {
+  if (["how-long-should-hardwood-acclimate", "hardwood-installation-humidity"].includes(guide.slug)) {
     return (
       <VisualShell title="Hardwood acclimation planning view">
         <HardwoodAcclimationVisual />
@@ -253,7 +256,7 @@ export function GuideUtilityVisual({ guide, hideDiagnosticTables = false }: Guid
     );
   }
 
-  if (guide.slug === "why-is-my-floor-squeaking") {
+  if (["why-is-my-floor-squeaking", "why-is-my-floor-bouncing"].includes(guide.slug)) {
     return (
       <VisualShell title="Squeak movement troubleshooting view">
         <SqueakMovementDiagram />
@@ -448,6 +451,10 @@ export function GuideUtilityVisual({ guide, hideDiagnosticTables = false }: Guid
       "why-is-my-floor-clicking",
       "why-is-my-lvp-floor-clicking",
       "why-is-my-lvp-lifting",
+      "why-is-my-lvp-floor-buckling",
+      "why-are-my-lvp-seams-showing",
+      "why-are-my-flooring-joints-opening",
+      "why-is-my-engineered-hardwood-separating",
       "laminate-floor-separating-what-to-check-first",
       "why-does-my-floor-feel-hollow",
       "glue-down-vs-floating-floor"

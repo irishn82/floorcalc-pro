@@ -63,9 +63,20 @@ export function getGuideIndustryReferences(guide: Guide) {
   const refs: IndustryReference[] = [];
   const materials = guide.materialTypes ?? [];
   const textKey = `${guide.slug} ${guide.title} ${guide.description}`.toLowerCase();
+  const needsConcretePrepReference =
+    textKey.includes("concrete") ||
+    textKey.includes("slab") ||
+    textKey.includes("subfloor") ||
+    textKey.includes("moisture") ||
+    textKey.includes("flat");
+  const hasResilientMaterial = materials.some((material) => ["lvp", "lvt", "sheet-vinyl"].includes(material));
 
   if (materials.includes("hardwood") || materials.includes("engineered-hardwood")) {
     refs.push(references.nwfaTechnicalGuidelines);
+  }
+
+  if (needsConcretePrepReference && hasResilientMaterial) {
+    refs.push(references.astmF710);
   }
 
   if (materials.includes("carpet") || materials.includes("carpet-padding")) {
@@ -76,7 +87,7 @@ export function getGuideIndustryReferences(guide: Guide) {
     refs.push(references.tcnaHandbook);
   }
 
-  if (materials.some((material) => ["lvp", "lvt", "sheet-vinyl"].includes(material))) {
+  if (hasResilientMaterial) {
     refs.push(references.rfciTechnicalInformation);
   }
 
@@ -84,17 +95,7 @@ export function getGuideIndustryReferences(guide: Guide) {
     refs.push(references.nalfaFaqs);
   }
 
-  if (
-    textKey.includes("concrete") ||
-    textKey.includes("slab") ||
-    textKey.includes("subfloor") ||
-    textKey.includes("moisture") ||
-    textKey.includes("flat")
-  ) {
-    if (materials.some((material) => ["lvp", "lvt", "sheet-vinyl"].includes(material))) {
-      refs.push(references.astmF710);
-    }
-
+  if (needsConcretePrepReference) {
     if (materials.includes("laminate")) {
       refs.push(references.nalfaFaqs);
     }

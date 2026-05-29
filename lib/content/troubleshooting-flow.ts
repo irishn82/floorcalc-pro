@@ -31,7 +31,11 @@ export const troubleshootingProblemGroups: TroubleshootingProblemGroup[] = [
       "why-is-my-lvp-lifting",
       "why-is-my-lvp-floor-separating",
       "why-is-my-lvp-floor-peaking",
+      "why-is-my-lvp-floor-buckling",
+      "why-are-my-lvp-seams-showing",
+      "why-are-my-flooring-joints-opening",
       "moisture-level-too-high-for-flooring",
+      "how-to-test-concrete-moisture",
       "subfloor-flatness-requirements-lvp",
       "can-you-install-lvp-over-concrete",
       "can-you-install-cabinets-over-floating-lvp",
@@ -51,6 +55,8 @@ export const troubleshootingProblemGroups: TroubleshootingProblemGroup[] = [
       "laminate-floor-separating-what-to-check-first",
       "why-is-my-floor-clicking",
       "why-is-my-floor-squeaking",
+      "why-is-my-floor-bouncing",
+      "why-are-my-flooring-joints-opening",
       "why-does-my-floor-feel-hollow",
       "moisture-level-too-high-for-flooring",
       "how-flat-should-a-subfloor-be-for-laminate",
@@ -69,10 +75,14 @@ export const troubleshootingProblemGroups: TroubleshootingProblemGroup[] = [
       "why-is-my-hardwood-floor-cupping",
       "why-is-my-hardwood-floor-gapping",
       "why-is-my-hardwood-floor-crowning",
+      "why-is-my-engineered-hardwood-separating",
+      "why-are-my-flooring-joints-opening",
       "why-is-my-floor-squeaking",
+      "hardwood-installation-humidity",
       "how-long-should-hardwood-acclimate",
       "hardwood-acclimation-mistakes",
       "can-engineered-hardwood-go-over-concrete",
+      "how-to-test-concrete-moisture",
       "moisture-level-too-high-for-flooring",
       "moisture-barrier-engineered-hardwood-over-concrete"
     ],
@@ -102,6 +112,8 @@ export const troubleshootingProblemGroups: TroubleshootingProblemGroup[] = [
     ecosystemSlug: "tile",
     guideSlugs: [
       "why-is-my-tile-cracking",
+      "why-flooring-fails-over-concrete",
+      "common-basement-flooring-problems",
       "how-flat-should-a-floor-be-for-tile",
       "can-you-install-tile-over-tile",
       "tile-layout-planning-guide",
@@ -168,6 +180,27 @@ const troubleshootingFlows: Partial<Record<GuideSlug, TroubleshootingFlow>> = {
       "Repair would require lifting finished flooring."
     ]
   },
+  "why-is-my-floor-bouncing": {
+    group: "laminate",
+    causeRows: [
+      { cause: "Joist or subfloor movement", symptom: "Springy feel across a wider area", check: "Check framing, subfloor panels, and whether movement changes under load." },
+      { cause: "Low spot under floating floor", symptom: "Bounce in one traffic path", check: "Look for hollow movement, clicking, or gaps near the soft area." },
+      { cause: "Soft or wrong underlayment", symptom: "Cushioned feel with joint stress", check: "Verify pad thickness, density, and product approval." },
+      { cause: "Loose subfloor panels", symptom: "Bounce with squeaks or rubbing", check: "Inspect from below if accessible and look for panel movement." }
+    ],
+    whatToCheckFirst: [
+      "Mark whether the bounce is localized, room-wide, or only in a traffic path.",
+      "Identify whether the substrate is wood framing or concrete.",
+      "Look for squeaks, hollow sounds, clicking, gaps, cracked grout, or lifted planks.",
+      "Review underlayment approval and subfloor flatness if the floor is floating."
+    ],
+    whenToCallAPro: [
+      "The floor feels unsafe, springy, or is getting worse.",
+      "Tile is cracking, laminate or LVP joints are opening, or hardwood is moving.",
+      "Joists, beams, stairs, or structural framing may be involved.",
+      "Repair would require lifting finished flooring or evaluating framing."
+    ]
+  },
   "moisture-level-too-high-for-flooring": {
     group: "hardwood",
     causeRows: [
@@ -208,6 +241,27 @@ const troubleshootingFlows: Partial<Record<GuideSlug, TroubleshootingFlow>> = {
       "The floor is lifting, buckling, or spreading across a large area.",
       "Moisture or broken locking joints are suspected.",
       "Repair may require lifting planks or replacing damaged boards."
+    ]
+  },
+  "why-are-my-flooring-joints-opening": {
+    group: "lvp",
+    causeRows: [
+      { cause: "Seasonal movement", symptom: "Gaps change with humidity", check: "Track indoor humidity and whether gaps open or close seasonally." },
+      { cause: "Unsupported floating floor joints", symptom: "Gaps near bounce or hollow movement", check: "Check subfloor flatness and support under the joints." },
+      { cause: "Pinned floating floor", symptom: "Gaps away from tight trim or fixed objects", check: "Inspect cabinets, islands, transitions, trim, and perimeter space." },
+      { cause: "Damaged locking edges", symptom: "Joint will not stay closed", check: "Inspect plank edges before forcing repair or filling." }
+    ],
+    whatToCheckFirst: [
+      "Identify the flooring type and whether it is floating, glue-down, nailed, or stapled.",
+      "Map where the joints are opening and whether they are widening.",
+      "Check humidity, moisture history, and recent seasonal changes.",
+      "Look for bounce, clicking, peaking, lifting, or hollow movement near the openings."
+    ],
+    whenToCallAPro: [
+      "Joints keep reopening after being closed.",
+      "Gaps are spreading, lifting, or paired with moisture signs.",
+      "Hardwood gaps are wide, uneven, or not seasonal.",
+      "Repair may require lifting planks, replacing damaged boards, or checking moisture."
     ]
   },
   "why-is-my-lvp-floor-clicking": {
@@ -294,6 +348,48 @@ const troubleshootingFlows: Partial<Record<GuideSlug, TroubleshootingFlow>> = {
       "Planks may need to be lifted or replaced."
     ]
   },
+  "why-is-my-lvp-floor-buckling": {
+    group: "lvp",
+    causeRows: [
+      { cause: "Blocked expansion", symptom: "Raised or tented area near walls or transitions", check: "Inspect perimeter gaps, trim, transition tracks, and door jambs." },
+      { cause: "Fixed objects pinning the floor", symptom: "Buckling near cabinets or islands", check: "Verify whether the floating floor is trapped by built-ins." },
+      { cause: "Moisture or heat movement", symptom: "Buckling near doors, slabs, appliances, or sunny areas", check: "Check moisture, temperature swings, and direct sunlight." },
+      { cause: "Long run pressure", symptom: "Buckling through connected rooms", check: "Review product limits for expansion breaks and transitions." }
+    ],
+    whatToCheckFirst: [
+      "Confirm whether the LVP is floating or glue-down.",
+      "Check walls, transitions, door jambs, cabinets, and islands for trapped movement.",
+      "Look for moisture, heat, or direct sunlight patterns near the buckled area.",
+      "Do not force planks flat until pressure or moisture is addressed."
+    ],
+    whenToCallAPro: [
+      "Buckling is spreading or damaging locking joints.",
+      "Moisture, slab conditions, or adhesive release may be involved.",
+      "Cabinets, islands, or built-ins may be pinning the floor.",
+      "The repair may require lifting rows or replacing damaged planks."
+    ]
+  },
+  "why-are-my-lvp-seams-showing": {
+    group: "lvp",
+    causeRows: [
+      { cause: "Normal bevel or lighting", symptom: "Even seams visible in low-angle light", check: "View from multiple angles and compare across the room." },
+      { cause: "Joint movement", symptom: "Seam opens, clicks, or collects dirt", check: "Check support, expansion pressure, and locking edges." },
+      { cause: "Uneven subfloor", symptom: "Seams show in one traffic path", check: "Look for bounce, hollow feel, or low spots." },
+      { cause: "Damaged or dirty locking joint", symptom: "One seam sits unevenly", check: "Inspect for debris, chipped corners, or damaged tabs." }
+    ],
+    whatToCheckFirst: [
+      "Decide whether the seam is only visible or actually open, lifted, or moving.",
+      "Look for clicking, hollow sound, dirt collection, or height differences.",
+      "Check whether sunlight or long sight lines are making normal bevels more obvious.",
+      "Review subfloor support and expansion space if multiple seams are changing."
+    ],
+    whenToCallAPro: [
+      "Seams are widening, lifting, clicking, or collecting dirt.",
+      "Visible seams follow low spots, moisture areas, or long connected runs.",
+      "Locking edges may be damaged.",
+      "Repair requires lifting planks to inspect the subfloor or joint."
+    ]
+  },
   "why-is-my-laminate-floor-buckling": {
     group: "laminate",
     causeRows: [
@@ -376,6 +472,27 @@ const troubleshootingFlows: Partial<Record<GuideSlug, TroubleshootingFlow>> = {
       "The floor was recently sanded after cupping.",
       "Concrete, crawlspace, or HVAC conditions may be involved.",
       "You need moisture readings before deciding on repair."
+    ]
+  },
+  "why-is-my-engineered-hardwood-separating": {
+    group: "hardwood",
+    causeRows: [
+      { cause: "Humidity or poor acclimation", symptom: "Gaps soon after install or seasonal movement", check: "Review HVAC stability, jobsite conditions, and moisture readings." },
+      { cause: "Concrete slab moisture", symptom: "Gaps with cupping, hollow areas, or adhesive issues", check: "Check slab moisture testing and moisture-control requirements." },
+      { cause: "Floating floor stress", symptom: "Joints reopen over low spots or near fixed objects", check: "Inspect flatness, expansion space, cabinets, and transitions." },
+      { cause: "Glue-down bond failure", symptom: "Loose or hollow boards", check: "Evaluate adhesive compatibility, slab prep, and contamination." }
+    ],
+    whatToCheckFirst: [
+      "Identify whether the engineered hardwood is floating, glue-down, nail-down, or staple-down.",
+      "Map where gaps appear and whether they are widening.",
+      "Check indoor humidity, acclimation records, and subfloor or slab moisture requirements.",
+      "Look for hollow sounds, cupping, crowning, loose boards, or fixed objects pinning the floor."
+    ],
+    whenToCallAPro: [
+      "Separation is spreading or boards are loose.",
+      "The floor is installed over concrete or moisture is suspected.",
+      "Hollow sounds, adhesive release, cupping, or crowning are present.",
+      "Repair may require lifting or replacing boards."
     ]
   },
   "why-are-my-carpet-seams-visible": {
