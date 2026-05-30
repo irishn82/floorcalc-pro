@@ -1087,7 +1087,7 @@ export const guides: Guide[] = [
     metadataTitle: "Which Direction Should Flooring Run? Practical Layout Guide",
     metadataDescription:
       "Learn how to choose flooring direction using longest walls, natural light, hallways, open layouts, stairs, transitions, and waste planning.",
-    dateModified: "2026-05-27",
+    dateModified: "2026-05-30",
     readTime: "8 min read",
     primaryEcosystem: "planning-measuring-transitions",
     secondaryEcosystems: ["lvp", "laminate", "hardwood-engineered-hardwood"],
@@ -1189,6 +1189,21 @@ export const guides: Guide[] = [
           "Mark every doorway where a transition may be needed.",
           "Compare waste before choosing a direction with many short cuts.",
           "Ask an installer to review long runs and product-required expansion breaks."
+        ]
+      },
+      {
+        id: "installer-layout-considerations",
+        title: "Installer layout considerations homeowners often miss",
+        paragraphs: [
+          "Installers are not only looking at which direction looks best from the front door. They also look at starting rows, final row width, plank staggering, transitions, stair noses, long-run limits, and where cuts will land at cabinets, fireplaces, closets, and hallway openings.",
+          "A direction that looks good in one room can create narrow pieces, awkward doorway cuts, or unnecessary transitions elsewhere. That is why the layout should be reviewed as a whole floor plan before material is ordered."
+        ],
+        bullets: [
+          "Check whether the final row will be too narrow.",
+          "Review how plank ends will stagger in hallways and small rooms.",
+          "Plan where transitions will hide direction changes or expansion breaks.",
+          "Compare waste before committing to diagonal or complex direction changes.",
+          "Confirm stairs and landings with the stair nose system."
         ]
       },
       {
@@ -1320,6 +1335,21 @@ export const guides: Guide[] = [
         question: "Should LVP, laminate, and hardwood follow the same direction rules?",
         answer:
           "The visual rules are similar, but each product can have different limits for expansion, long runs, underlayment, stair noses, and transitions. Check the specific installation instructions before assuming one layout works for every material."
+      },
+      {
+        question: "Can flooring direction cause buckling or peaking?",
+        answer:
+          "Direction by itself usually is not the only cause, but long runs, missing expansion breaks, tight transitions, and pinned floating floors can create pressure. Direction planning should include expansion and transition requirements."
+      },
+      {
+        question: "Should flooring direction change at a kitchen or island?",
+        answer:
+          "Usually the main floor direction should stay consistent through an open kitchen unless a doorway, transition, or product requirement creates a natural break. Islands and cabinets should be reviewed because they affect cuts, expansion, and sight lines."
+      },
+      {
+        question: "How do I choose flooring direction if rooms conflict?",
+        answer:
+          "Prioritize the main connected space, hallway flow, stair layout, and clean transitions. If two rooms truly conflict, a doorway transition often looks more intentional than a direction change in open space."
       }
     ],
     disclaimer:

@@ -99,6 +99,22 @@ function EngineeredConcreteVisual() {
   );
 }
 
+function LvpConcreteVisual() {
+  const rows = [
+    ["Moisture", "Vapor, slab history, and product limits", "Use the required concrete moisture test before choosing vapor layers"],
+    ["Flatness", "Low spots and humps under click joints", "Correct support issues before relying on underlayment"],
+    ["Surface prep", "Paint, sealers, old adhesive, dust, and patching", "Remove or prepare only as allowed by the flooring instructions"],
+    ["Movement", "Expansion space, long runs, cabinets, and transitions", "Plan breaks and trim before installing through connected rooms"]
+  ];
+
+  return (
+    <div className="grid gap-3">
+      <MoistureBarrierLayerDiagram />
+      <ComparisonTable columns={["Concrete check", "Why it matters", "Planning move"]} rows={rows} />
+    </div>
+  );
+}
+
 function DirectionDecisionVisual() {
   const rows = [
     ["Longest sight line", "Usually run with the main view", "Helps connected rooms feel intentional"],
@@ -180,6 +196,14 @@ export function GuideUtilityVisual({ guide, hideDiagnosticTables = false }: Guid
     return (
       <VisualShell title="Engineered hardwood over concrete planning view">
         <EngineeredConcreteVisual />
+      </VisualShell>
+    );
+  }
+
+  if (guide.slug === "can-you-install-lvp-over-concrete") {
+    return (
+      <VisualShell title="LVP over concrete planning view">
+        <LvpConcreteVisual />
       </VisualShell>
     );
   }

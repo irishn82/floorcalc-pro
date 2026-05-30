@@ -181,7 +181,7 @@ const guideDrafts: GuideDraft[] = [
     metadataTitle: "Can You Install LVP Over Concrete? Slab Prep and Moisture Guide",
     metadataDescription:
       "Learn when LVP can go over concrete, what to check first, and how moisture, flatness, cracks, and vapor barriers affect the project.",
-    dateModified: "2026-05-27",
+    dateModified: "2026-05-30",
     readTime: "9 min read",
     primaryEcosystem: "lvp",
     secondaryEcosystems: ["lvt"],
@@ -255,6 +255,21 @@ const guideDrafts: GuideDraft[] = [
           "Both methods need moisture and flatness checks.",
           "Doorways and adjoining floors may need transition planning."
         ]
+      },
+      {
+        id: "jobsite-edge-cases",
+        title: "Jobsite edge cases that deserve extra review",
+        paragraphs: [
+          "LVP over concrete gets more complicated when the slab is below grade, recently poured, heavily patched, sloped to a drain, exposed to direct sun, or connected through several rooms without transitions. Those conditions can affect moisture, expansion, finished height, and plank support.",
+          "Also review fixed objects early. A floating LVP floor may not be approved under cabinets, islands, built-ins, or heavy permanent fixtures. If those items are part of the plan, confirm the installation sequence before ordering flooring."
+        ],
+        bullets: [
+          "Basement slabs need extra moisture and humidity review.",
+          "Floor drains or sloped slabs may need a different flooring plan.",
+          "Long runs through hallways and connected rooms may need movement breaks.",
+          "Direct sunlight and exterior doors can increase temperature and moisture stress.",
+          "Cabinets and islands should be checked against floating-floor restrictions."
+        ]
       }
     ],
     example: [
@@ -288,6 +303,21 @@ const guideDrafts: GuideDraft[] = [
         question: "Can LVP go over concrete in a basement?",
         answer:
           "Often yes, but basements need careful moisture review. Check the flooring and underlayment instructions before ordering material."
+      },
+      {
+        question: "Should I level concrete before installing LVP?",
+        answer:
+          "The slab does not always need to be level, but it must be flat enough for the product. Low spots, humps, loose patching, and ridges can stress click joints and create movement."
+      },
+      {
+        question: "Can attached-pad LVP go over concrete without another underlayment?",
+        answer:
+          "Sometimes, but attached-pad products still have concrete moisture and vapor requirements. Do not add a second pad unless the manufacturer specifically allows it."
+      },
+      {
+        question: "What should I do if LVP over concrete starts buckling?",
+        answer:
+          "Check expansion space, transitions, fixed cabinets, direct sun, moisture, and slab flatness before forcing the floor flat. Buckling is usually a pressure or movement symptom."
       }
     ],
     disclaimer: manufacturerDisclaimer
@@ -758,7 +788,7 @@ const guideDrafts: GuideDraft[] = [
     metadataTitle: "Why Is My Laminate Floor Separating? Gaps and Joint Problems",
     metadataDescription:
       "Learn common causes of laminate floor separation, including subfloor flatness, moisture, locking damage, expansion gaps, and acclimation.",
-    dateModified: "2026-05-27",
+    dateModified: "2026-05-30",
     readTime: "9 min read",
     primaryEcosystem: "laminate",
     materialTypes: ["laminate"],
@@ -832,6 +862,20 @@ const guideDrafts: GuideDraft[] = [
           "Look for squeaks, hollow sound, or bounce near the gap.",
           "Inspect nearby transitions and fixed objects for blocked expansion.",
           "Check moisture before using glue, filler, or force."
+        ]
+      },
+      {
+        id: "homeowner-expectations",
+        title: "What homeowners should expect from a repair",
+        paragraphs: [
+          "A laminate separation repair should not start with a promise that every gap can be closed permanently. If the locking edge is cracked, the subfloor flexes, or the floor is pinned, the visible joint may return even after a careful tap-back.",
+          "Expect the installer to look for the reason the joint opened. That may mean removing base trim, checking transitions, lifting a few rows, replacing damaged planks, or correcting a low spot before the surface repair makes sense."
+        ],
+        bullets: [
+          "A one-time gap with intact edges may be repairable without major work.",
+          "Recurring gaps usually need a subfloor, expansion, moisture, or locking-joint diagnosis.",
+          "Swollen edges usually point to moisture exposure and may not close cleanly.",
+          "A hallway with repeated end gaps may need both layout and support review."
         ]
       },
       {
@@ -911,6 +955,21 @@ const guideDrafts: GuideDraft[] = [
         question: "When should I replace laminate planks instead of closing the gap?",
         answer:
           "Replacement may be needed when locking tabs are cracked, edges are swollen, the surface is chipped, or the joint will not hold after the subfloor and expansion issues are corrected. An installer can usually tell whether the joint is still usable once the floor is opened."
+      },
+      {
+        question: "Why is laminate separating mostly in a hallway?",
+        answer:
+          "Hallways concentrate foot traffic and often have long runs, doorway trim, transitions, and narrow layouts. If a hallway has low spots or blocked expansion, separation may appear there first."
+      },
+      {
+        question: "Can a transition strip cause laminate separation?",
+        answer:
+          "Yes. A transition track or trim piece that pins a floating floor can restrict movement. The pressure may show up as gaps, buckling, peaking, or noise away from the transition."
+      },
+      {
+        question: "Is laminate separation covered by warranty?",
+        answer:
+          "Warranty decisions depend on the product, documentation, installation requirements, moisture exposure, and site conditions. This guide cannot determine coverage; keep installation records and contact the retailer or manufacturer."
       }
     ],
     disclaimer: manufacturerDisclaimer
@@ -1194,7 +1253,7 @@ const guideDrafts: GuideDraft[] = [
     metadataTitle: "How Long Should Hardwood Acclimate? Moisture and Jobsite Guide",
     metadataDescription:
       "Understand hardwood acclimation, moisture testing, HVAC conditions, solid versus engineered products, and when flooring is ready to install.",
-    dateModified: "2026-05-27",
+    dateModified: "2026-05-30",
     readTime: "9 min read",
     primaryEcosystem: "hardwood-engineered-hardwood",
     materialTypes: ["hardwood", "engineered-hardwood"],
@@ -1272,6 +1331,20 @@ const guideDrafts: GuideDraft[] = [
         ]
       },
       {
+        id: "documentation-and-scheduling",
+        title: "Documentation and scheduling details installers look for",
+        paragraphs: [
+          "A careful hardwood installer is not only asking how long the flooring has been in the house. They are checking whether the home is stable, whether the material was stored correctly, whether wet trades are complete, and whether the flooring and subfloor readings are acceptable for the product.",
+          "Scheduling matters. Delivering hardwood before HVAC is stable, before concrete or drywall moisture has normalized, or before doors and windows are operating can make the material adjust to temporary conditions instead of normal living conditions."
+        ],
+        bullets: [
+          "Record room temperature and humidity when required.",
+          "Keep moisture readings for flooring and subfloor when available.",
+          "Confirm carton storage instructions before opening packages.",
+          "Avoid scheduling installation immediately after wet work or major HVAC changes."
+        ]
+      },
+      {
         id: "solid-vs-engineered",
         title: "Solid versus engineered acclimation",
         paragraphs: [
@@ -1334,6 +1407,21 @@ const guideDrafts: GuideDraft[] = [
         question: "Can hardwood be installed before HVAC is running?",
         answer:
           "That is risky for many projects unless the manufacturer gives specific approval. Hardwood should usually be installed in conditions close to normal living temperature and humidity so it is not acclimating to a temporary construction environment."
+      },
+      {
+        question: "What is the difference between acclimation and conditioning?",
+        answer:
+          "Acclimation is often used casually to mean letting flooring adjust, but the real goal is conditioning the flooring, subfloor, and home to the product's required environment. Stable jobsite conditions and moisture readings matter more than the label."
+      },
+      {
+        question: "Does hardwood acclimation matter over concrete?",
+        answer:
+          "Yes, but concrete adds slab moisture and installation-method requirements. Engineered hardwood over concrete may need slab testing, approved underlayment or adhesive systems, and stable indoor conditions."
+      },
+      {
+        question: "Can hardwood acclimate too long?",
+        answer:
+          "It can acclimate to the wrong conditions if the home is too humid, too dry, unconditioned, or still under construction. Longer is not automatically better unless the jobsite is within the required range."
       }
     ],
     disclaimer: manufacturerDisclaimer
@@ -1346,7 +1434,7 @@ const guideDrafts: GuideDraft[] = [
     metadataTitle: "Can Engineered Hardwood Go Over Concrete? Slab Prep Guide",
     metadataDescription:
       "Find out when engineered hardwood can go over concrete and what to check for moisture, slab flatness, adhesives, and installation method.",
-    dateModified: "2026-05-27",
+    dateModified: "2026-05-30",
     readTime: "9 min read",
     primaryEcosystem: "hardwood-engineered-hardwood",
     materialTypes: ["engineered-hardwood"],
@@ -1427,6 +1515,20 @@ const guideDrafts: GuideDraft[] = [
         ]
       },
       {
+        id: "above-grade-vs-basement-slabs",
+        title: "Above-grade slabs and basement slabs are not the same conversation",
+        paragraphs: [
+          "An engineered hardwood product may be approved over one concrete condition and not another. Above-grade slabs, on-grade slabs, and below-grade basement slabs can have different moisture risk, vapor behavior, and manufacturer restrictions.",
+          "Basements deserve extra caution because the room can look finished while the slab still has seasonal moisture or humidity swings. That does not mean engineered hardwood is impossible, but it does mean the installation method and moisture-control system need to be verified early."
+        ],
+        bullets: [
+          "Confirm whether the product allows the room grade level.",
+          "Check whether the slab is above grade, on grade, or below grade.",
+          "Review moisture testing before selecting adhesive or underlayment.",
+          "Plan for dehumidification or HVAC stability where needed."
+        ]
+      },
+      {
         id: "floating-vs-glue-down",
         title: "Floating versus glue-down engineered hardwood",
         paragraphs: [
@@ -1504,6 +1606,21 @@ const guideDrafts: GuideDraft[] = [
         question: "Is glue-down engineered hardwood better than floating over concrete?",
         answer:
           "Neither is automatically better. Glue-down can feel more solid when the slab and adhesive system are correct, while floating can work well with approved underlayment and expansion space. The best method depends on the product, slab, room, and installer."
+      },
+      {
+        question: "Do I need to test concrete moisture before engineered hardwood?",
+        answer:
+          "Often yes, especially for glue-down systems, basements, newer slabs, or unknown slab history. The product and adhesive instructions should state the required test method and acceptable limits."
+      },
+      {
+        question: "Can engineered hardwood over concrete sound hollow?",
+        answer:
+          "It can. A floating floor may sound different from a glued floor, but localized hollow sounds can also point to slab flatness, underlayment compression, adhesive transfer, or bond concerns."
+      },
+      {
+        question: "Can engineered hardwood separate after being installed over concrete?",
+        answer:
+          "Yes. Separation can be related to humidity changes, slab moisture, poor acclimation, subfloor flatness, locking stress, or glue-down bond failure. The installation method determines what to check first."
       }
     ],
     disclaimer: manufacturerDisclaimer

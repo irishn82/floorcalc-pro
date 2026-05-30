@@ -7,7 +7,15 @@ import { guides } from "@/data/guides";
 import { tools } from "@/data/tools";
 
 const featuredTools = tools.slice(0, 3);
-const featuredGuides = guides.slice(0, 4);
+const featuredGuideSlugs = [
+  "why-is-my-laminate-floor-separating",
+  "can-engineered-hardwood-go-over-concrete",
+  "can-you-install-lvp-over-concrete",
+  "which-direction-should-flooring-run"
+];
+const featuredGuides = featuredGuideSlugs
+  .map((slug) => guides.find((guide) => guide.slug === slug))
+  .filter((guide): guide is (typeof guides)[number] => Boolean(guide));
 
 export default function HomePage() {
   return (
