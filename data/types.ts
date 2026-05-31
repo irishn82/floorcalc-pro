@@ -136,7 +136,12 @@ export type GuideSlug =
   | "hardwood-installation-humidity"
   | "why-is-my-engineered-hardwood-separating"
   | "why-is-my-lvp-floor-buckling"
-  | "why-are-my-lvp-seams-showing";
+  | "why-are-my-lvp-seams-showing"
+  | "why-is-my-floor-swelling"
+  | "why-is-my-subfloor-wet"
+  | "can-moisture-come-through-concrete"
+  | "why-is-my-floor-expanding"
+  | "what-happens-if-flooring-is-installed-too-soon";
 
 export type GuideSection = {
   id: string;

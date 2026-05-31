@@ -224,7 +224,10 @@ export function GuideUtilityVisual({ guide, hideDiagnosticTables = false }: Guid
       "moisture-barrier-engineered-hardwood-over-concrete",
       "can-you-install-lvp-over-concrete",
       "moisture-level-too-high-for-flooring",
-      "how-to-test-concrete-moisture"
+      "how-to-test-concrete-moisture",
+      "can-moisture-come-through-concrete",
+      "why-is-my-subfloor-wet",
+      "what-happens-if-flooring-is-installed-too-soon"
     ].includes(guide.slug)
   ) {
     return (
@@ -477,6 +480,8 @@ export function GuideUtilityVisual({ guide, hideDiagnosticTables = false }: Guid
       "why-is-my-lvp-lifting",
       "why-is-my-lvp-floor-buckling",
       "why-are-my-lvp-seams-showing",
+      "why-is-my-floor-swelling",
+      "why-is-my-floor-expanding",
       "why-are-my-flooring-joints-opening",
       "why-is-my-engineered-hardwood-separating",
       "laminate-floor-separating-what-to-check-first",

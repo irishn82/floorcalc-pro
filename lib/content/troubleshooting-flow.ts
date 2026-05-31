@@ -33,11 +33,15 @@ export const troubleshootingProblemGroups: TroubleshootingProblemGroup[] = [
       "why-is-my-lvp-floor-peaking",
       "why-is-my-lvp-floor-buckling",
       "why-are-my-lvp-seams-showing",
+      "why-is-my-floor-swelling",
+      "why-is-my-floor-expanding",
       "why-are-my-flooring-joints-opening",
       "moisture-level-too-high-for-flooring",
       "how-to-test-concrete-moisture",
+      "can-moisture-come-through-concrete",
       "subfloor-flatness-requirements-lvp",
       "can-you-install-lvp-over-concrete",
+      "what-happens-if-flooring-is-installed-too-soon",
       "can-you-install-cabinets-over-floating-lvp",
       "glue-down-vs-floating-floor"
     ],
@@ -57,6 +61,9 @@ export const troubleshootingProblemGroups: TroubleshootingProblemGroup[] = [
       "why-is-my-floor-squeaking",
       "why-is-my-floor-bouncing",
       "why-are-my-flooring-joints-opening",
+      "why-is-my-floor-swelling",
+      "why-is-my-floor-expanding",
+      "why-is-my-subfloor-wet",
       "why-does-my-floor-feel-hollow",
       "moisture-level-too-high-for-flooring",
       "how-flat-should-a-subfloor-be-for-laminate",
@@ -77,12 +84,17 @@ export const troubleshootingProblemGroups: TroubleshootingProblemGroup[] = [
       "why-is-my-hardwood-floor-crowning",
       "why-is-my-engineered-hardwood-separating",
       "why-are-my-flooring-joints-opening",
+      "why-is-my-floor-swelling",
+      "why-is-my-subfloor-wet",
+      "why-is-my-floor-expanding",
       "why-is-my-floor-squeaking",
       "hardwood-installation-humidity",
       "how-long-should-hardwood-acclimate",
       "hardwood-acclimation-mistakes",
+      "what-happens-if-flooring-is-installed-too-soon",
       "can-engineered-hardwood-go-over-concrete",
       "how-to-test-concrete-moisture",
+      "can-moisture-come-through-concrete",
       "moisture-level-too-high-for-flooring",
       "moisture-barrier-engineered-hardwood-over-concrete"
     ],
@@ -114,6 +126,9 @@ export const troubleshootingProblemGroups: TroubleshootingProblemGroup[] = [
       "why-is-my-tile-cracking",
       "why-flooring-fails-over-concrete",
       "common-basement-flooring-problems",
+      "why-is-my-subfloor-wet",
+      "can-moisture-come-through-concrete",
+      "what-happens-if-flooring-is-installed-too-soon",
       "how-flat-should-a-floor-be-for-tile",
       "can-you-install-tile-over-tile",
       "tile-layout-planning-guide",
@@ -220,6 +235,111 @@ const troubleshootingFlows: Partial<Record<GuideSlug, TroubleshootingFlow>> = {
       "Glue-down flooring, hardwood, or moisture-sensitive products are planned.",
       "There has been a leak, flood, or unknown slab history.",
       "Documented moisture testing is required before installation."
+    ]
+  },
+  "why-is-my-floor-swelling": {
+    group: "laminate",
+    causeRows: [
+      { cause: "Moisture exposure", symptom: "Raised seams, swollen edges, or soft spots", check: "Look for leaks, wet cleaning, pet accidents, or exterior door water." },
+      { cause: "High humidity", symptom: "Widespread swelling or seasonal movement", check: "Measure indoor humidity and check HVAC operation." },
+      { cause: "Wet subfloor or slab", symptom: "Swelling with odor, hollow sound, or recurring gaps", check: "Check subfloor moisture and concrete testing requirements." },
+      { cause: "Blocked expansion", symptom: "Peaking, buckling, or tight trim", check: "Inspect walls, transitions, cabinets, and islands." }
+    ],
+    whatToCheckFirst: [
+      "Stop any active leak or water source first.",
+      "Identify whether the finished flooring is laminate, LVP, hardwood, engineered hardwood, or tile.",
+      "Check the subfloor, slab, crawlspace, and nearby exterior openings.",
+      "Look for related symptoms such as peaking, buckling, cupping, or separation."
+    ],
+    whenToCallAPro: [
+      "Swelling is spreading, soft, or paired with odor or stains.",
+      "The moisture source is unclear or below the finished floor.",
+      "The floor is over concrete, crawlspace, or a recent leak.",
+      "Boards, planks, adhesive, or subfloor panels may need replacement."
+    ]
+  },
+  "why-is-my-subfloor-wet": {
+    group: "hardwood",
+    causeRows: [
+      { cause: "Plumbing or appliance leak", symptom: "Localized wetness near kitchen, bath, laundry, or refrigerator", check: "Inspect supply lines, drains, toilets, and appliance connections." },
+      { cause: "Crawlspace or basement moisture", symptom: "Widespread dampness, odor, or hardwood movement", check: "Check ventilation, vapor control, drainage, and humidity." },
+      { cause: "Concrete vapor", symptom: "Moisture under floating floors or adhesive problems", check: "Use the slab test required by the flooring system." },
+      { cause: "Construction moisture", symptom: "Wet subfloor after remodel or new work", check: "Confirm wet trades, patching, and HVAC conditions are stable." }
+    ],
+    whatToCheckFirst: [
+      "Find and stop active water before planning flooring repairs.",
+      "Identify the substrate: plywood, OSB, concrete, or an existing floor.",
+      "Look for staining, softness, odor, swelling, or mold-like growth.",
+      "Take moisture readings when repair decisions depend on dryness."
+    ],
+    whenToCallAPro: [
+      "The wet area is large, hidden, recurring, or near structural components.",
+      "The floor feels soft or unsafe.",
+      "Concrete, crawlspace, or foundation moisture is suspected.",
+      "Flooring must be removed to inspect or dry the subfloor."
+    ]
+  },
+  "can-moisture-come-through-concrete": {
+    group: "hardwood",
+    causeRows: [
+      { cause: "Ground vapor below slab", symptom: "Musty odor, adhesive failure, or damp flooring", check: "Review slab grade, vapor retarder history, and moisture tests." },
+      { cause: "New or recently patched concrete", symptom: "Surface looks dry but readings are high", check: "Use the test method required by the product." },
+      { cause: "Basement conditions", symptom: "Seasonal dampness or repeated flooring issues", check: "Check drainage, humidity, walls, and slab moisture." },
+      { cause: "Wrong vapor system", symptom: "Trapped moisture or failed bond", check: "Verify vapor barrier, adhesive, primer, and underlayment compatibility." }
+    ],
+    whatToCheckFirst: [
+      "Check the exact flooring and adhesive instructions for required testing.",
+      "Identify whether the slab is above grade, on grade, or below grade.",
+      "Look for efflorescence, musty odor, old adhesive, sealers, stains, or prior failures.",
+      "Do not rely on appearance alone to approve a concrete slab."
+    ],
+    whenToCallAPro: [
+      "The project is below grade or the slab history is unknown.",
+      "Glue-down flooring or engineered hardwood is planned.",
+      "Previous flooring failed over the same slab.",
+      "Moisture mitigation may be required."
+    ]
+  },
+  "why-is-my-floor-expanding": {
+    group: "lvp",
+    causeRows: [
+      { cause: "Humidity or moisture", symptom: "Swelling, cupping, or seasonal tightness", check: "Measure room humidity and look for water sources." },
+      { cause: "Blocked expansion", symptom: "Peaking or buckling near walls and transitions", check: "Inspect trim, tracks, door jambs, cabinets, and islands." },
+      { cause: "Temperature movement", symptom: "Movement near sun, doors, or heat sources", check: "Check direct sunlight, room temperature, and product limits." },
+      { cause: "Long connected runs", symptom: "Pressure through hallways or open rooms", check: "Review expansion break and transition requirements." }
+    ],
+    whatToCheckFirst: [
+      "Identify the flooring type and whether it is floating, glue-down, nailed, or tile-set.",
+      "Check room humidity, temperature changes, sunlight, and moisture sources.",
+      "Inspect expansion space around all edges and fixed objects.",
+      "Look for related buckling, peaking, swelling, or joint openings."
+    ],
+    whenToCallAPro: [
+      "The floor is lifting, buckling, peaking, or pushing transitions loose.",
+      "Moisture or slab conditions are suspected.",
+      "A floating floor may be pinned by cabinets or islands.",
+      "The repair may require cutting relief, lifting flooring, or replacing damaged material."
+    ]
+  },
+  "what-happens-if-flooring-is-installed-too-soon": {
+    group: "hardwood",
+    causeRows: [
+      { cause: "Unstable HVAC or humidity", symptom: "Gaps, swelling, cupping, or crowning", check: "Review room conditions before and during installation." },
+      { cause: "Concrete not tested or dry enough", symptom: "Adhesive release, hollow sound, or moisture problems", check: "Check slab testing and product limits." },
+      { cause: "Poor acclimation or storage", symptom: "Hardwood movement or LVP joint stress", check: "Review delivery, storage, and acclimation instructions." },
+      { cause: "Subfloor not ready", symptom: "Clicking, bounce, cracks, or separation", check: "Check flatness, cleanliness, moisture, and loose panels." }
+    ],
+    whatToCheckFirst: [
+      "Review the installation timeline and jobsite conditions.",
+      "Look for moisture tests, acclimation records, HVAC status, and slab prep notes.",
+      "Match the symptom to the flooring type and installation method.",
+      "Document conditions before replacing or repairing material."
+    ],
+    whenToCallAPro: [
+      "Moisture, concrete, adhesive, hardwood movement, or tile cracks are involved.",
+      "The same problem returned after a repair.",
+      "The project lacks moisture testing or installation records.",
+      "Large areas may need removal before the cause is visible."
     ]
   },
   "why-is-my-laminate-floor-separating": {

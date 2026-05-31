@@ -92,6 +92,7 @@ const guideDrafts: GuideDraft[] = [
     relatedGuides: [
       "why-is-my-floor-clicking",
       "why-is-my-floor-bouncing",
+      "why-is-my-floor-expanding",
       "why-does-my-floor-feel-hollow",
       "subfloor-flatness-requirements-lvp",
       "how-flat-should-a-subfloor-be-for-laminate",
@@ -201,7 +202,10 @@ const guideDrafts: GuideDraft[] = [
     relatedTools: ["flooring-square-footage-calculator", "waste-calculator"],
     relatedGuides: [
       "how-to-test-concrete-moisture",
+      "can-moisture-come-through-concrete",
+      "why-is-my-subfloor-wet",
       "why-flooring-fails-over-concrete",
+      "what-happens-if-flooring-is-installed-too-soon",
       "moisture-barrier-engineered-hardwood-over-concrete",
       "can-engineered-hardwood-go-over-concrete",
       "can-you-install-lvp-over-concrete",
@@ -314,6 +318,8 @@ const guideDrafts: GuideDraft[] = [
     relatedGuides: [
       "why-is-my-lvp-floor-buckling",
       "why-are-my-lvp-seams-showing",
+      "why-is-my-floor-expanding",
+      "why-is-my-floor-swelling",
       "why-is-my-lvp-floor-separating",
       "why-is-my-lvp-lifting",
       "can-you-install-cabinets-over-floating-lvp",
@@ -426,6 +432,8 @@ const guideDrafts: GuideDraft[] = [
     relatedGuides: [
       "hardwood-installation-humidity",
       "why-is-my-engineered-hardwood-separating",
+      "what-happens-if-flooring-is-installed-too-soon",
+      "why-is-my-floor-swelling",
       "why-is-my-hardwood-floor-cupping",
       "why-is-my-hardwood-floor-gapping",
       "how-long-should-hardwood-acclimate",
@@ -537,7 +545,9 @@ const guideDrafts: GuideDraft[] = [
     relatedTools: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"],
     relatedGuides: [
       "how-to-test-concrete-moisture",
+      "can-moisture-come-through-concrete",
       "why-flooring-fails-over-concrete",
+      "what-happens-if-flooring-is-installed-too-soon",
       "can-you-install-lvp-over-concrete",
       "best-underlayment-for-lvp",
       "best-underlayment-for-laminate-flooring",
@@ -1615,6 +1625,558 @@ const guideDrafts: GuideDraft[] = [
         question: "Can visible LVP seams be fixed?",
         answer:
           "It depends on the cause. Lighting and bevels are appearance factors, while open or damaged joints may require plank removal, subfloor correction, or replacement."
+      }
+    ],
+    disclaimer: installConditionDisclaimer
+  },
+  {
+    slug: "why-is-my-floor-swelling",
+    title: "Why Is My Floor Swelling?",
+    description:
+      "Troubleshoot floor swelling caused by moisture, humidity, leaks, wet subfloors, slab moisture, product limits, and installation conditions.",
+    metadataTitle: "Why Is My Floor Swelling? Moisture, Humidity, and Subfloor Causes",
+    metadataDescription:
+      "Learn why floors swell, what to check first, and how moisture, humidity, concrete slabs, wet subfloors, and product limits affect flooring.",
+    readTime: "8 min read",
+    primaryEcosystem: "planning-measuring-transitions",
+    secondaryEcosystems: ["lvp", "laminate", "hardwood-engineered-hardwood"],
+    materialTypes: ["lvp", "lvt", "laminate", "hardwood", "engineered-hardwood"],
+    topicCluster: "subfloor-prep",
+    relatedTools: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"],
+    relatedGuides: [
+      "moisture-level-too-high-for-flooring",
+      "why-is-my-subfloor-wet",
+      "why-is-my-floor-expanding",
+      "why-is-my-laminate-floor-separating",
+      "why-is-my-lvp-floor-peaking",
+      "why-is-my-hardwood-floor-cupping",
+      "how-to-test-concrete-moisture",
+      "why-flooring-fails-over-concrete"
+    ],
+    quickAnswer: [
+      "A swelling floor usually means the flooring or subfloor has taken on moisture or is under expansion pressure. Common causes include leaks, high humidity, wet cleaning, concrete slab moisture, damp crawlspaces, blocked expansion space, or flooring installed before the jobsite was ready.",
+      "Treat swelling as a moisture and movement warning. Do not sand, force, glue, or cover the problem until the moisture source and product requirements are understood."
+    ],
+    keySections: [
+      {
+        id: "common-causes",
+        title: "Common causes",
+        paragraphs: [
+          "Swelling can happen in several flooring systems, but the cause is often moisture. Laminate may swell at edges, hardwood may cup or crown, and LVP may lift, peak, or show joint stress when moisture or movement conditions are wrong.",
+          "The visible surface is only part of the system. The subfloor, concrete slab, underlayment, adhesive, room humidity, and expansion space all matter."
+        ],
+        bullets: [
+          "Plumbing leaks, appliance leaks, exterior door leaks, or wet cleaning.",
+          "High indoor humidity or unstable HVAC conditions.",
+          "Concrete slab moisture or missing compatible vapor control.",
+          "Wet wood subfloor, crawlspace humidity, or construction moisture.",
+          "Blocked expansion space around walls, transitions, cabinets, or islands."
+        ]
+      },
+      {
+        id: "what-to-check-first",
+        title: "What to check first",
+        paragraphs: [
+          "Find where the swelling starts. Swelling near a dishwasher, exterior door, bathroom, basement wall, or slab crack points to different causes than swelling through an entire connected floor.",
+          "Check whether the floor is also separating, peaking, clicking, cupping, crowning, or sounding hollow. Those symptoms help identify whether the problem is moisture, expansion pressure, subfloor support, or product damage."
+        ],
+        bullets: [
+          "Look for active leaks and stop them first.",
+          "Check indoor humidity and recent weather or HVAC changes.",
+          "Inspect for swollen edges, raised joints, soft spots, odor, or stains.",
+          "Review concrete or subfloor moisture requirements.",
+          "Check expansion space at walls, trim, transitions, and fixed objects."
+        ]
+      },
+      {
+        id: "by-flooring-type",
+        title: "How swelling shows up by flooring type",
+        paragraphs: [
+          "Laminate often shows swelling at seams or edges because the core can absorb moisture. Hardwood and engineered hardwood may cup, crown, gap, or change shape as moisture changes. LVP is more tolerant of surface water in many products, but the floor system can still move, peak, lift, or trap moisture below it.",
+          "Tile does not swell like wood-based flooring, but moisture and movement below tile can still create hollow spots, cracked grout, or loose tiles."
+        ]
+      },
+      {
+        id: "when-to-call-a-professional",
+        title: "When to call a professional",
+        paragraphs: [
+          "Call a professional when swelling is spreading, the floor feels soft, moisture is suspected below the surface, the floor is over concrete, or the swelling follows a leak, flood, basement wall, or appliance.",
+          "A professional may need to take moisture readings, lift flooring, inspect the subfloor, or evaluate whether affected boards can dry, stabilize, or need replacement."
+        ]
+      }
+    ],
+    example: [
+      "A laminate floor swells near a sliding door after heavy rain. The surface dries, but the seams stay raised and begin separating.",
+      "The likely investigation starts with the door leak, subfloor moisture, and damaged laminate edges. Closing the joints or adding trim will not solve the problem if water is still entering."
+    ],
+    commonMistakes: [
+      "Assuming swelling is only a cosmetic surface issue.",
+      "Covering a swollen area before checking moisture below it.",
+      "Sanding wood swelling before the floor stabilizes.",
+      "Forcing floating floor joints together when expansion pressure remains.",
+      "Ignoring concrete or crawlspace moisture because the room looks finished."
+    ],
+    faq: [
+      {
+        question: "Will a swollen floor go back down?",
+        answer:
+          "Sometimes minor movement improves after the moisture source is corrected and the floor stabilizes. Swollen laminate edges, damaged locking joints, or warped boards may not return to normal."
+      },
+      {
+        question: "Can humidity make flooring swell?",
+        answer:
+          "Yes. Sustained high humidity can affect wood, engineered hardwood, laminate, and some floor systems. Product instructions usually define acceptable room conditions."
+      },
+      {
+        question: "Can LVP swell from water?",
+        answer:
+          "Many LVP products are more tolerant of surface water than wood-based products, but moisture can still affect the subfloor, adhesive, underlayment, trapped vapor, and floating floor movement."
+      },
+      {
+        question: "Should I replace swollen flooring immediately?",
+        answer:
+          "Not before the moisture source is found. Replacing flooring while the subfloor, slab, or room remains wet can lead to the same failure again."
+      }
+    ],
+    disclaimer: installConditionDisclaimer
+  },
+  {
+    slug: "why-is-my-subfloor-wet",
+    title: "Why Is My Subfloor Wet?",
+    description:
+      "Find common reasons a subfloor is wet, including leaks, crawlspace moisture, concrete vapor, wet cleaning, appliance issues, and construction moisture.",
+    metadataTitle: "Why Is My Subfloor Wet? Leaks, Concrete Moisture, and Crawlspaces",
+    metadataDescription:
+      "Learn why subfloors get wet, what to check first, and how leaks, slab moisture, crawlspaces, humidity, and flooring failures connect.",
+    readTime: "9 min read",
+    primaryEcosystem: "planning-measuring-transitions",
+    secondaryEcosystems: ["lvp", "laminate", "hardwood-engineered-hardwood", "tile"],
+    materialTypes: ["lvp", "laminate", "hardwood", "engineered-hardwood", "ceramic-tile", "porcelain-tile"],
+    topicCluster: "subfloor-prep",
+    relatedTools: ["flooring-square-footage-calculator", "waste-calculator"],
+    relatedGuides: [
+      "why-is-my-floor-swelling",
+      "moisture-level-too-high-for-flooring",
+      "how-to-test-concrete-moisture",
+      "can-moisture-come-through-concrete",
+      "why-flooring-fails-over-concrete",
+      "why-is-my-hardwood-floor-cupping",
+      "why-is-my-laminate-floor-buckling"
+    ],
+    quickAnswer: [
+      "A wet subfloor usually means water is coming from a leak, crawlspace, concrete slab, exterior opening, wet cleaning, appliance, plumbing line, construction moisture, or condensation. The finished floor may be the first place you notice the problem, but the source may be below or beside it.",
+      "The most important step is to stop the moisture source before replacing flooring. A wet subfloor can damage laminate, hardwood, engineered hardwood, adhesives, underlayment, tile assemblies, and even some resilient flooring systems."
+    ],
+    keySections: [
+      {
+        id: "common-causes",
+        title: "Common causes",
+        paragraphs: [
+          "Subfloors get wet from obvious water events and hidden sources. A slow dishwasher leak, damp crawlspace, exterior door leak, sweating pipe, basement slab vapor, or wet construction material can all show up as flooring movement.",
+          "The source matters because drying the surface is not the same as drying the subfloor or correcting slab moisture."
+        ],
+        bullets: [
+          "Plumbing leaks, appliance leaks, toilet leaks, or exterior door leaks.",
+          "Crawlspace humidity, poor ventilation, or missing vapor control.",
+          "Concrete slab vapor or moisture under floating floors.",
+          "Wet cleaning, pet accidents, or repeated standing water.",
+          "Construction moisture from drywall, paint, concrete, or patching."
+        ]
+      },
+      {
+        id: "what-to-check-first",
+        title: "What to check first",
+        paragraphs: [
+          "Start at the wettest or most damaged area, then look outward for the source. Check nearby plumbing, appliances, exterior walls, patio doors, bathrooms, basements, crawlspaces, and slab cracks.",
+          "If the floor is already swelling, buckling, cupping, or separating, avoid sealing it back up until the subfloor has been evaluated."
+        ],
+        bullets: [
+          "Stop active leaks before drying or replacing flooring.",
+          "Check the subfloor material: plywood, OSB, concrete, or existing floor.",
+          "Look for odor, staining, soft spots, mold-like growth, or swollen edges.",
+          "Measure moisture when repair decisions depend on dryness.",
+          "Confirm product requirements before reinstalling."
+        ]
+      },
+      {
+        id: "flooring-risks",
+        title: "Why a wet subfloor causes flooring problems",
+        paragraphs: [
+          "A wet wood subfloor can swell, lose fastener holding power, create squeaks, or transfer moisture into hardwood and laminate. A wet concrete slab can interfere with adhesives, vapor layers, and floating floor assemblies.",
+          "Even if the finished flooring is water-resistant, trapped moisture below it can still create odor, movement, adhesive problems, or subfloor damage."
+        ]
+      },
+      {
+        id: "when-to-call-a-professional",
+        title: "When to call a professional",
+        paragraphs: [
+          "Call a professional when the subfloor feels soft, the moisture source is unclear, the area is large, the floor is over concrete, the problem follows a leak or flood, or drying may require lifting flooring.",
+          "For structural damage, mold concerns, or repeated water entry, a flooring installer may need to coordinate with a plumber, remediation contractor, or building professional."
+        ]
+      }
+    ],
+    example: [
+      "A hardwood floor cups in front of a refrigerator. The boards are dry on top, but a slow water-line leak has soaked the wood subfloor below.",
+      "The correct path is to stop the leak, dry and evaluate the subfloor, take moisture readings, and then decide whether boards can recover or need replacement."
+    ],
+    commonMistakes: [
+      "Replacing flooring before finding the moisture source.",
+      "Assuming water-resistant flooring means the subfloor is safe.",
+      "Drying only the surface and ignoring trapped moisture below.",
+      "Installing over damp patching or fresh concrete too soon.",
+      "Ignoring crawlspace or basement humidity."
+    ],
+    faq: [
+      {
+        question: "Can a wet subfloor dry on its own?",
+        answer:
+          "Small, brief moisture events may dry, but trapped water under flooring can take much longer and may damage the floor or subfloor. The source should be identified first."
+      },
+      {
+        question: "How do I know if moisture is under my floor?",
+        answer:
+          "Warning signs include swelling, cupping, buckling, musty odor, hollow sounds, soft spots, staining, recurring gaps, or moisture readings above the product's limits."
+      },
+      {
+        question: "Can concrete be a wet subfloor?",
+        answer:
+          "Yes. Concrete can release moisture vapor or hold moisture internally even when the surface looks dry, which is why product-specific testing matters."
+      },
+      {
+        question: "Should flooring be removed to dry a wet subfloor?",
+        answer:
+          "Sometimes. If moisture is trapped, the flooring is damaged, or readings remain high, lifting flooring may be necessary for inspection and drying."
+      }
+    ],
+    disclaimer: installConditionDisclaimer
+  },
+  {
+    slug: "can-moisture-come-through-concrete",
+    title: "Can Moisture Come Through Concrete?",
+    description:
+      "Understand how concrete moisture vapor affects flooring, why slabs can look dry while releasing moisture, and what to check before installation.",
+    metadataTitle: "Can Moisture Come Through Concrete? Flooring Slab Moisture Guide",
+    metadataDescription:
+      "Learn how moisture can move through concrete slabs, why testing matters, and how vapor, basements, adhesives, and underlayment affect flooring.",
+    readTime: "8 min read",
+    primaryEcosystem: "planning-measuring-transitions",
+    secondaryEcosystems: ["lvp", "laminate", "hardwood-engineered-hardwood", "tile"],
+    materialTypes: ["lvp", "lvt", "laminate", "engineered-hardwood", "ceramic-tile", "porcelain-tile"],
+    topicCluster: "subfloor-prep",
+    relatedTools: ["flooring-square-footage-calculator", "waste-calculator"],
+    relatedGuides: [
+      "how-to-test-concrete-moisture",
+      "moisture-level-too-high-for-flooring",
+      "why-flooring-fails-over-concrete",
+      "can-engineered-hardwood-go-over-concrete",
+      "can-you-install-lvp-over-concrete",
+      "best-underlayment-for-concrete-floors",
+      "why-is-my-subfloor-wet"
+    ],
+    quickAnswer: [
+      "Yes. Moisture can move through concrete as vapor, and concrete can hold moisture internally even when the surface looks dry. That moisture can affect adhesives, vapor barriers, underlayment, resilient flooring, engineered hardwood, laminate, carpet cushion, and tile assemblies.",
+      "The important question is not whether moisture can exist in concrete. It is whether the slab moisture is within the limits of the flooring and installation system."
+    ],
+    keySections: [
+      {
+        id: "common-causes",
+        title: "Why concrete can release moisture",
+        paragraphs: [
+          "Concrete is porous. Moisture can come from new-slab curing, ground vapor below the slab, basement conditions, leaks, high humidity, drainage issues, or previous water events.",
+          "A slab surface can feel dry because surface moisture evaporates, while moisture deeper in the slab continues moving upward over time."
+        ],
+        bullets: [
+          "Below-grade or on-grade slabs with ground moisture below.",
+          "Newer concrete that has not dried to product requirements.",
+          "Missing or compromised vapor retarder below the slab.",
+          "Basement humidity, drainage, or foundation moisture.",
+          "Old sealers, coatings, or adhesives hiding slab conditions."
+        ]
+      },
+      {
+        id: "what-to-check-first",
+        title: "What to check first",
+        paragraphs: [
+          "Review the flooring and adhesive instructions before choosing a test, vapor barrier, adhesive, primer, or underlayment. Different products use different limits and test methods.",
+          "Then inspect the slab for signs of moisture or poor prep: efflorescence, musty odor, dark areas, old adhesive, paint, dusting concrete, cracks, or previous flooring failure."
+        ],
+        bullets: [
+          "Identify whether the slab is above grade, on grade, or below grade.",
+          "Use the test method required by the flooring or adhesive system.",
+          "Do not treat moisture meters as universal pass/fail tests.",
+          "Check pH, surface contamination, and flatness when required.",
+          "Plan mitigation before flooring is ordered."
+        ]
+      },
+      {
+        id: "flooring-system-impact",
+        title: "How concrete moisture affects flooring systems",
+        paragraphs: [
+          "Glue-down floors may release or fail to bond when slab moisture, pH, or surface conditions exceed the adhesive system. Floating floors may trap vapor below underlayment, create odor, or move if the system is not approved for the slab.",
+          "Engineered hardwood can cup, gap, or release from adhesive. Laminate can swell or buckle if moisture reaches the core. LVP can still have adhesive, underlayment, subfloor, or trapped-moisture issues even when the wear surface is water-resistant."
+        ]
+      },
+      {
+        id: "when-to-call-a-professional",
+        title: "When to call a professional",
+        paragraphs: [
+          "Call a professional when the project is below grade, the slab history is unknown, the product is glue-down, moisture readings are high, or a previous floor failed over the same concrete.",
+          "Professional testing can help determine whether the slab needs drying time, mitigation, a different adhesive system, a different underlayment, or a different flooring category."
+        ]
+      }
+    ],
+    example: [
+      "A basement slab looks dry after carpet is removed, but the room has a musty odor and old adhesive residue. The homeowner wants glue-down LVP.",
+      "Before installing, the slab should be cleaned, tested with the method required by the adhesive, and reviewed for moisture mitigation. The dry-looking surface is not enough information."
+    ],
+    commonMistakes: [
+      "Assuming dry-looking concrete is ready for flooring.",
+      "Skipping slab moisture tests in basements.",
+      "Using a vapor barrier or primer not approved by the flooring system.",
+      "Installing glue-down flooring over old residue or sealers.",
+      "Confusing water-resistant flooring with a moisture-proof installation system."
+    ],
+    faq: [
+      {
+        question: "Can moisture come through a basement concrete floor?",
+        answer:
+          "Yes. Basement slabs can release moisture vapor depending on ground conditions, drainage, vapor control, humidity, and slab history."
+      },
+      {
+        question: "How do I know if moisture is coming through concrete?",
+        answer:
+          "Look for musty odor, efflorescence, dark spots, failed adhesive, cupping, swelling, or prior flooring failure, then use the moisture test required by the product."
+      },
+      {
+        question: "Does a vapor barrier stop all concrete moisture problems?",
+        answer:
+          "Not always. Vapor barriers and mitigation products must be compatible with the flooring system and slab conditions. They are not a substitute for testing and preparation."
+      },
+      {
+        question: "Can LVP handle concrete moisture?",
+        answer:
+          "Only within the product and installation system limits. LVP may tolerate surface water, but concrete moisture can still affect adhesive, underlayment, odor, and trapped vapor."
+      }
+    ],
+    disclaimer: installConditionDisclaimer
+  },
+  {
+    slug: "why-is-my-floor-expanding",
+    title: "Why Is My Floor Expanding?",
+    description:
+      "Troubleshoot floor expansion caused by humidity, moisture, temperature changes, blocked expansion gaps, long runs, and product-specific movement.",
+    metadataTitle: "Why Is My Floor Expanding? Moisture, Humidity, and Expansion Gaps",
+    metadataDescription:
+      "Learn why flooring expands, what to check first, and how humidity, moisture, blocked expansion, cabinets, long runs, and temperature affect floors.",
+    readTime: "8 min read",
+    primaryEcosystem: "planning-measuring-transitions",
+    secondaryEcosystems: ["lvp", "laminate", "hardwood-engineered-hardwood"],
+    materialTypes: ["lvp", "lvt", "laminate", "hardwood", "engineered-hardwood"],
+    topicCluster: "installation-method",
+    relatedTools: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"],
+    relatedGuides: [
+      "why-is-my-floor-swelling",
+      "why-are-my-flooring-joints-opening",
+      "why-is-my-lvp-floor-peaking",
+      "why-is-my-lvp-floor-buckling",
+      "why-is-my-laminate-floor-buckling",
+      "hardwood-installation-humidity",
+      "flooring-direction-mistakes"
+    ],
+    quickAnswer: [
+      "Floors expand when flooring materials or floor systems respond to moisture, humidity, temperature, or blocked movement. Expansion may show up as peaking, buckling, lifting, tight seams, squeaks, transition movement, cupping, or swollen edges.",
+      "Expansion is normal within product limits, but problems happen when the floor has nowhere to move, the room conditions exceed requirements, or moisture is entering the system."
+    ],
+    keySections: [
+      {
+        id: "common-causes",
+        title: "Common causes",
+        paragraphs: [
+          "Different floors expand for different reasons. Wood and laminate react strongly to moisture and humidity. LVP can move with temperature and installation pressure. Floating floors need expansion space at walls, transitions, and fixed objects.",
+          "The same room can have more than one cause: high humidity plus tight trim, direct sunlight plus long runs, or slab moisture plus wrong underlayment."
+        ],
+        bullets: [
+          "High humidity or seasonal moisture changes.",
+          "Water leaks, wet subfloors, or slab moisture.",
+          "Missing or blocked expansion gaps.",
+          "Cabinets, islands, transition tracks, or trim pinning a floating floor.",
+          "Direct sunlight, temperature swings, or long connected runs."
+        ]
+      },
+      {
+        id: "what-to-check-first",
+        title: "What to check first",
+        paragraphs: [
+          "First identify the flooring type and installation method. A floating LVP floor that peaks at a doorway needs a different diagnosis than hardwood that swells after a humidity spike.",
+          "Then check room conditions, moisture sources, and all movement boundaries. The floor may be reacting correctly but trapped by trim, transitions, or fixed objects."
+        ],
+        bullets: [
+          "Measure indoor humidity if wood or laminate is involved.",
+          "Look for water sources near the expansion area.",
+          "Inspect perimeter gaps, transitions, cabinets, islands, and door jambs.",
+          "Check whether long runs need expansion breaks.",
+          "Review product instructions before cutting or forcing relief."
+        ]
+      },
+      {
+        id: "normal-vs-problem",
+        title: "Normal movement versus a problem",
+        paragraphs: [
+          "All flooring materials have some expected movement, but the finished floor should remain usable, flat enough, and within product expectations. Expansion becomes a problem when the floor lifts, buckles, peakes, swells, separates, or damages transitions.",
+          "If the floor changes with seasons but returns to normal, the issue may be room conditioning. If it keeps getting worse, look for trapped movement or moisture."
+        ]
+      },
+      {
+        id: "when-to-call-a-professional",
+        title: "When to call a professional",
+        paragraphs: [
+          "Call a professional when expansion is lifting the floor, pushing transitions loose, damaging joints, appearing after a leak, or affecting a large connected area.",
+          "Do not cut expansion relief blindly. The installer should identify whether the issue is moisture, product movement, blocked expansion, subfloor conditions, or a combination."
+        ]
+      }
+    ],
+    example: [
+      "A floating LVP floor expands through an open kitchen and peaks near a hallway transition. The homeowner also has a heavy island installed on top of the floor.",
+      "The issue may be trapped movement, long-run pressure, or both. The repair should start with product instructions, expansion space, transition layout, and fixed-object restrictions."
+    ],
+    commonMistakes: [
+      "Assuming expansion is always a product defect.",
+      "Cutting trim or planks before checking moisture and product rules.",
+      "Ignoring fixed cabinets and islands on floating floors.",
+      "Forgetting direct sun and temperature changes.",
+      "Treating seasonal hardwood movement the same as LVP peaking."
+    ],
+    faq: [
+      {
+        question: "Is flooring expansion normal?",
+        answer:
+          "Some movement is normal, but lifting, buckling, peaking, swelling, or repeated joint damage means the system needs diagnosis."
+      },
+      {
+        question: "Can humidity make floors expand?",
+        answer:
+          "Yes. Hardwood, engineered hardwood, and laminate can expand with humidity. Some resilient floors can also move with temperature and installation conditions."
+      },
+      {
+        question: "Can a floating floor expand under cabinets?",
+        answer:
+          "A floating floor can be restricted if fixed cabinets, islands, or built-ins pin it. Check the flooring instructions before installing fixed objects over floating products."
+      },
+      {
+        question: "Can expansion make transition strips move?",
+        answer:
+          "Yes. If the floor pushes against a transition or the track pins the floor, movement can loosen trim or create peaking nearby."
+      }
+    ],
+    disclaimer: installConditionDisclaimer
+  },
+  {
+    slug: "what-happens-if-flooring-is-installed-too-soon",
+    title: "What Happens If Flooring Is Installed Too Soon?",
+    description:
+      "Learn what can go wrong when flooring is installed before the jobsite is ready, including moisture, acclimation, slab prep, adhesive failure, swelling, gaps, and buckling.",
+    metadataTitle: "What Happens If Flooring Is Installed Too Soon?",
+    metadataDescription:
+      "Understand risks of installing flooring too soon, including moisture, acclimation mistakes, concrete slab issues, adhesive failure, gaps, swelling, and buckling.",
+    readTime: "9 min read",
+    primaryEcosystem: "planning-measuring-transitions",
+    secondaryEcosystems: ["lvp", "laminate", "hardwood-engineered-hardwood", "tile"],
+    materialTypes: ["lvp", "lvt", "laminate", "hardwood", "engineered-hardwood", "ceramic-tile", "porcelain-tile"],
+    topicCluster: "installation-method",
+    relatedTools: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"],
+    relatedGuides: [
+      "hardwood-acclimation-mistakes",
+      "how-long-should-hardwood-acclimate",
+      "hardwood-installation-humidity",
+      "why-is-my-floor-swelling",
+      "why-is-my-floor-expanding",
+      "how-to-test-concrete-moisture",
+      "can-engineered-hardwood-go-over-concrete",
+      "why-flooring-fails-over-concrete"
+    ],
+    quickAnswer: [
+      "Installing flooring too soon can lead to swelling, gaps, cupping, crowning, peaking, buckling, hollow sounds, adhesive failure, cracked tile, or recurring movement problems. The risk depends on the flooring type and what was not ready: moisture, HVAC, slab prep, acclimation, adhesive conditions, or subfloor flatness.",
+      "The safest sequence is to prepare the jobsite first, verify product requirements, then install. Flooring should not be used to hide wet, unstable, dirty, uneven, or unconditioned conditions."
+    ],
+    keySections: [
+      {
+        id: "common-causes",
+        title: "What 'too soon' usually means",
+        paragraphs: [
+          "Too soon can mean the concrete is not dry enough, the home is not conditioned, wet trades just finished, the subfloor is still damp, the adhesive system is outside range, or the flooring has not been stored as directed.",
+          "It can also mean the installer skipped layout and expansion planning before cabinets, transitions, stairs, or long runs were finalized."
+        ],
+        bullets: [
+          "Hardwood installed before HVAC and moisture readings are stable.",
+          "LVP or laminate installed before concrete moisture and flatness are checked.",
+          "Glue-down floors installed before slab prep or adhesive conditions are right.",
+          "Tile installed over a moving or unsuitable substrate.",
+          "Flooring delivered from extreme heat or cold and installed immediately."
+        ]
+      },
+      {
+        id: "what-to-check-first",
+        title: "What to check first",
+        paragraphs: [
+          "If you suspect a floor was installed too soon, start with the symptom and the jobsite condition that could have caused it. Gaps, swelling, buckling, cupping, hollow sounds, and adhesive release each point to different causes.",
+          "Review installation records when available: moisture tests, acclimation notes, HVAC status, slab prep, adhesive used, underlayment approval, and product instructions."
+        ],
+        bullets: [
+          "Check whether HVAC was running before and during installation.",
+          "Look for concrete moisture testing or wood subfloor readings.",
+          "Confirm the flooring was stored and acclimated as instructed.",
+          "Inspect slab or subfloor flatness and surface prep.",
+          "Document symptoms before repairs change the evidence."
+        ]
+      },
+      {
+        id: "by-flooring-type",
+        title: "What can go wrong by flooring type",
+        paragraphs: [
+          "Hardwood and engineered hardwood can cup, crown, gap, squeak, or release from adhesive when moisture and acclimation are wrong. Laminate can swell, buckle, or separate if installed over moisture or unsupported areas.",
+          "LVP can click, peak, buckle, show seams, or release from adhesive when slab conditions, temperature, underlayment, or expansion details are wrong. Tile can crack or sound hollow when the substrate moves or mortar support is inadequate."
+        ]
+      },
+      {
+        id: "when-to-call-a-professional",
+        title: "When to call a professional",
+        paragraphs: [
+          "Call a professional when the issue involves moisture, concrete, glue-down adhesive, hardwood movement, tile cracks, widespread buckling, or recurring separation after repair attempts.",
+          "A professional can help separate product failure, installation timing, jobsite conditions, and normal seasonal movement. That distinction matters before replacing material."
+        ]
+      }
+    ],
+    example: [
+      "Engineered hardwood is delivered to a remodel before HVAC is running consistently and before concrete slab moisture is tested. It is installed a few days later because the room looks dry.",
+      "Months later, the floor has gaps, hollow areas, and some cupping near an exterior wall. The diagnosis should review acclimation, slab testing, adhesive or underlayment requirements, and room conditions rather than assuming one simple cause."
+    ],
+    commonMistakes: [
+      "Installing by schedule pressure instead of jobsite readiness.",
+      "Assuming new concrete is ready because it looks dry.",
+      "Skipping hardwood moisture readings.",
+      "Ignoring HVAC stability and construction humidity.",
+      "Replacing failed flooring without correcting the original condition."
+    ],
+    faq: [
+      {
+        question: "How do I know if flooring was installed too soon?",
+        answer:
+          "Look for timing clues: no moisture tests, unstable HVAC, recent wet work, new concrete, unconditioned storage, or symptoms like swelling, gaps, buckling, cupping, hollow sounds, or adhesive release."
+      },
+      {
+        question: "Can flooring fail if installed before concrete is dry?",
+        answer:
+          "Yes. Concrete moisture can affect adhesives, underlayment, engineered hardwood, laminate, resilient flooring systems, and trapped vapor below floating floors."
+      },
+      {
+        question: "Can hardwood be installed before acclimation is complete?",
+        answer:
+          "That can be risky. Hardwood should be installed only when the home, flooring, and subfloor meet the product's moisture and room-condition requirements."
+      },
+      {
+        question: "Can problems show up months after flooring is installed too soon?",
+        answer:
+          "Yes. Moisture movement, seasonal humidity, adhesive issues, and subfloor movement may appear weeks or months after installation."
       }
     ],
     disclaimer: installConditionDisclaimer

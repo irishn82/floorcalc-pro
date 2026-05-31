@@ -101,9 +101,11 @@ const targetedNextStepTargets: Partial<
     primary: { type: "tool", slug: "flooring-square-footage-calculator" },
     secondary: [
       { type: "guide", slug: "how-to-test-concrete-moisture" },
+      { type: "guide", slug: "can-moisture-come-through-concrete" },
       { type: "guide", slug: "moisture-barrier-engineered-hardwood-over-concrete" },
       { type: "guide", slug: "floating-vs-glue-down-engineered-hardwood-over-concrete" },
       { type: "guide", slug: "why-flooring-fails-over-concrete" },
+      { type: "guide", slug: "what-happens-if-flooring-is-installed-too-soon" },
       { type: "guide", slug: "best-underlayment-for-concrete-floors" },
       { type: "guide", slug: "how-long-should-hardwood-acclimate" },
       { type: "tool", slug: "waste-calculator" }
@@ -114,6 +116,8 @@ const targetedNextStepTargets: Partial<
     secondary: [
       { type: "guide", slug: "why-is-my-laminate-floor-buckling" },
       { type: "guide", slug: "why-are-my-flooring-joints-opening" },
+      { type: "guide", slug: "why-is-my-floor-swelling" },
+      { type: "guide", slug: "why-is-my-floor-expanding" },
       { type: "guide", slug: "why-is-my-floor-bouncing" },
       { type: "guide", slug: "why-is-my-floor-squeaking" },
       { type: "guide", slug: "moisture-level-too-high-for-flooring" },
@@ -138,6 +142,7 @@ const targetedNextStepTargets: Partial<
     primary: { type: "guide", slug: "hardwood-installation-humidity" },
     secondary: [
       { type: "guide", slug: "hardwood-acclimation-mistakes" },
+      { type: "guide", slug: "what-happens-if-flooring-is-installed-too-soon" },
       { type: "guide", slug: "moisture-level-too-high-for-flooring" },
       { type: "guide", slug: "can-engineered-hardwood-go-over-concrete" },
       { type: "guide", slug: "why-is-my-engineered-hardwood-separating" },
@@ -151,11 +156,13 @@ const targetedNextStepTargets: Partial<
     primary: { type: "guide", slug: "how-to-test-concrete-moisture" },
     secondary: [
       { type: "guide", slug: "best-underlayment-for-concrete-floors" },
+      { type: "guide", slug: "can-moisture-come-through-concrete" },
       { type: "guide", slug: "why-flooring-fails-over-concrete" },
       { type: "guide", slug: "moisture-level-too-high-for-flooring" },
       { type: "guide", slug: "subfloor-flatness-requirements-lvp" },
       { type: "guide", slug: "why-is-my-lvp-floor-buckling" },
       { type: "guide", slug: "why-are-my-lvp-seams-showing" },
+      { type: "guide", slug: "why-is-my-floor-expanding" },
       { type: "guide", slug: "why-is-my-lvp-floor-peaking" },
       { type: "tool", slug: "waste-calculator" }
     ]
@@ -183,6 +190,7 @@ const targetedNextStepTargets: Partial<
     secondary: [
       { type: "guide", slug: "why-is-my-lvp-lifting" },
       { type: "guide", slug: "can-you-install-cabinets-over-floating-lvp" },
+      { type: "guide", slug: "why-is-my-floor-expanding" },
       { type: "guide", slug: "moisture-level-too-high-for-flooring" },
       { type: "tool", slug: "transition-estimator" }
     ]
@@ -259,6 +267,8 @@ const targetedNextStepTargets: Partial<
     primary: { type: "guide", slug: "moisture-level-too-high-for-flooring" },
     secondary: [
       { type: "guide", slug: "why-flooring-fails-over-concrete" },
+      { type: "guide", slug: "can-moisture-come-through-concrete" },
+      { type: "guide", slug: "why-is-my-subfloor-wet" },
       { type: "guide", slug: "can-engineered-hardwood-go-over-concrete" },
       { type: "guide", slug: "can-you-install-lvp-over-concrete" },
       { type: "guide", slug: "best-underlayment-for-concrete-floors" }
@@ -267,10 +277,57 @@ const targetedNextStepTargets: Partial<
   "why-flooring-fails-over-concrete": {
     primary: { type: "guide", slug: "how-to-test-concrete-moisture" },
     secondary: [
+      { type: "guide", slug: "can-moisture-come-through-concrete" },
+      { type: "guide", slug: "what-happens-if-flooring-is-installed-too-soon" },
       { type: "guide", slug: "common-basement-flooring-problems" },
       { type: "guide", slug: "can-you-install-lvp-over-concrete" },
       { type: "guide", slug: "can-engineered-hardwood-go-over-concrete" },
       { type: "guide", slug: "why-does-my-floor-feel-hollow" }
+    ]
+  },
+  "why-is-my-floor-swelling": {
+    primary: { type: "guide", slug: "why-is-my-subfloor-wet" },
+    secondary: [
+      { type: "guide", slug: "moisture-level-too-high-for-flooring" },
+      { type: "guide", slug: "why-is-my-floor-expanding" },
+      { type: "guide", slug: "why-is-my-laminate-floor-separating" },
+      { type: "guide", slug: "why-is-my-lvp-floor-peaking" }
+    ]
+  },
+  "why-is-my-subfloor-wet": {
+    primary: { type: "guide", slug: "moisture-level-too-high-for-flooring" },
+    secondary: [
+      { type: "guide", slug: "why-is-my-floor-swelling" },
+      { type: "guide", slug: "can-moisture-come-through-concrete" },
+      { type: "guide", slug: "how-to-test-concrete-moisture" },
+      { type: "guide", slug: "why-flooring-fails-over-concrete" }
+    ]
+  },
+  "can-moisture-come-through-concrete": {
+    primary: { type: "guide", slug: "how-to-test-concrete-moisture" },
+    secondary: [
+      { type: "guide", slug: "moisture-level-too-high-for-flooring" },
+      { type: "guide", slug: "why-flooring-fails-over-concrete" },
+      { type: "guide", slug: "can-engineered-hardwood-go-over-concrete" },
+      { type: "guide", slug: "can-you-install-lvp-over-concrete" }
+    ]
+  },
+  "why-is-my-floor-expanding": {
+    primary: { type: "guide", slug: "why-are-my-flooring-joints-opening" },
+    secondary: [
+      { type: "guide", slug: "why-is-my-floor-swelling" },
+      { type: "guide", slug: "why-is-my-lvp-floor-peaking" },
+      { type: "guide", slug: "why-is-my-laminate-floor-buckling" },
+      { type: "guide", slug: "hardwood-installation-humidity" }
+    ]
+  },
+  "what-happens-if-flooring-is-installed-too-soon": {
+    primary: { type: "guide", slug: "hardwood-acclimation-mistakes" },
+    secondary: [
+      { type: "guide", slug: "how-long-should-hardwood-acclimate" },
+      { type: "guide", slug: "how-to-test-concrete-moisture" },
+      { type: "guide", slug: "why-is-my-floor-swelling" },
+      { type: "guide", slug: "why-flooring-fails-over-concrete" }
     ]
   },
   "common-basement-flooring-problems": {
