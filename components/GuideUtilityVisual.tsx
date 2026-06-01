@@ -115,6 +115,22 @@ function LvpConcreteVisual() {
   );
 }
 
+function ConcreteSlabHubVisual() {
+  const rows = [
+    ["Moisture", "Test before choosing the floor system", "Start with slab moisture testing and vapor-control requirements"],
+    ["Flatness", "Support the finished floor correctly", "Correct low spots, humps, ridges, and weak patching before install"],
+    ["Cracks", "Separate stable cracks from active movement", "Review crack treatment, isolation, and height differences"],
+    ["Floor choice", "Match the product to the slab", "Compare LVP, laminate, engineered hardwood, carpet, and tile requirements"]
+  ];
+
+  return (
+    <div className="grid gap-3">
+      <ConcreteSlabConditionDiagram />
+      <ComparisonTable columns={["Slab topic", "Why it matters", "Where to go next"]} rows={rows} />
+    </div>
+  );
+}
+
 function DirectionDecisionVisual() {
   const rows = [
     ["Longest sight line", "Usually run with the main view", "Helps connected rooms feel intentional"],
@@ -192,6 +208,14 @@ function TileLayoutVisual() {
 }
 
 export function GuideUtilityVisual({ guide, hideDiagnosticTables = false }: GuideUtilityVisualProps) {
+  if (guide.slug === "concrete-slab-flooring-guide") {
+    return (
+      <VisualShell title="Concrete slab flooring resource map">
+        <ConcreteSlabHubVisual />
+      </VisualShell>
+    );
+  }
+
   if (guide.slug === "can-engineered-hardwood-go-over-concrete") {
     return (
       <VisualShell title="Engineered hardwood over concrete planning view">
@@ -208,7 +232,16 @@ export function GuideUtilityVisual({ guide, hideDiagnosticTables = false }: Guid
     );
   }
 
-  if (["best-underlayment-for-concrete-floors", "why-flooring-fails-over-concrete", "common-basement-flooring-problems"].includes(guide.slug)) {
+  if (
+    [
+      "best-underlayment-for-concrete-floors",
+      "why-flooring-fails-over-concrete",
+      "common-basement-flooring-problems",
+      "concrete-slab-cracks-under-flooring",
+      "best-flooring-for-concrete-slabs",
+      "can-concrete-be-too-dry-for-flooring"
+    ].includes(guide.slug)
+  ) {
     return (
       <VisualShell title="Concrete underlayment planning view">
         <div className="grid gap-3">
@@ -226,6 +259,7 @@ export function GuideUtilityVisual({ guide, hideDiagnosticTables = false }: Guid
       "moisture-level-too-high-for-flooring",
       "how-to-test-concrete-moisture",
       "can-moisture-come-through-concrete",
+      "why-is-moisture-coming-through-my-slab",
       "why-is-my-subfloor-wet",
       "what-happens-if-flooring-is-installed-too-soon"
     ].includes(guide.slug)

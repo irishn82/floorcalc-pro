@@ -1,7 +1,14 @@
 import type { CauseSymptomCheckRow } from "@/components/troubleshooting/CauseSymptomCheckTable";
 import type { GuideEcosystemSlug, GuideSlug, ToolSlug } from "@/data/types";
 
-export type TroubleshootingProblemGroupSlug = "lvp" | "laminate" | "hardwood" | "carpet" | "tile" | "transitions";
+export type TroubleshootingProblemGroupSlug =
+  | "lvp"
+  | "laminate"
+  | "hardwood"
+  | "concrete"
+  | "carpet"
+  | "tile"
+  | "transitions";
 
 export type TroubleshootingFlow = {
   group: TroubleshootingProblemGroupSlug;
@@ -99,6 +106,29 @@ export const troubleshootingProblemGroups: TroubleshootingProblemGroup[] = [
       "moisture-barrier-engineered-hardwood-over-concrete"
     ],
     toolSlugs: ["flooring-square-footage-calculator", "waste-calculator"]
+  },
+  {
+    slug: "concrete",
+    title: "Concrete Slab Problems",
+    description:
+      "Work through concrete slab moisture, cracks, flatness, vapor control, flooring failures, and product compatibility before covering the slab.",
+    ecosystemSlug: "planning-measuring-transitions",
+    guideSlugs: [
+      "concrete-slab-flooring-guide",
+      "how-to-test-concrete-moisture",
+      "moisture-level-too-high-for-flooring",
+      "can-moisture-come-through-concrete",
+      "why-is-moisture-coming-through-my-slab",
+      "can-concrete-be-too-dry-for-flooring",
+      "concrete-slab-cracks-under-flooring",
+      "why-flooring-fails-over-concrete",
+      "best-flooring-for-concrete-slabs",
+      "best-underlayment-for-concrete-floors",
+      "common-basement-flooring-problems",
+      "can-you-install-lvp-over-concrete",
+      "can-engineered-hardwood-go-over-concrete"
+    ],
+    toolSlugs: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"]
   },
   {
     slug: "carpet",
@@ -217,7 +247,7 @@ const troubleshootingFlows: Partial<Record<GuideSlug, TroubleshootingFlow>> = {
     ]
   },
   "moisture-level-too-high-for-flooring": {
-    group: "hardwood",
+    group: "concrete",
     causeRows: [
       { cause: "Concrete moisture", symptom: "Adhesive release, cupping, or musty odor", check: "Use the test method required by the product." },
       { cause: "Wood subfloor moisture", symptom: "Hardwood movement or swelling", check: "Compare subfloor and flooring readings to product limits." },
@@ -280,7 +310,7 @@ const troubleshootingFlows: Partial<Record<GuideSlug, TroubleshootingFlow>> = {
     ]
   },
   "can-moisture-come-through-concrete": {
-    group: "hardwood",
+    group: "concrete",
     causeRows: [
       { cause: "Ground vapor below slab", symptom: "Musty odor, adhesive failure, or damp flooring", check: "Review slab grade, vapor retarder history, and moisture tests." },
       { cause: "New or recently patched concrete", symptom: "Surface looks dry but readings are high", check: "Use the test method required by the product." },
@@ -298,6 +328,90 @@ const troubleshootingFlows: Partial<Record<GuideSlug, TroubleshootingFlow>> = {
       "Glue-down flooring or engineered hardwood is planned.",
       "Previous flooring failed over the same slab.",
       "Moisture mitigation may be required."
+    ]
+  },
+  "can-concrete-be-too-dry-for-flooring": {
+    group: "concrete",
+    causeRows: [
+      { cause: "Dusty or weak surface", symptom: "Adhesive will not bond or patch scrapes loose", check: "Sweep, scrape, and evaluate surface strength before flooring." },
+      { cause: "Highly porous slab", symptom: "Primer or adhesive flashes off too quickly", check: "Review adhesive porosity checks and approved primer requirements." },
+      { cause: "Old sealer or residue", symptom: "Adhesive beads up or releases", check: "Identify coatings, curing compounds, paint, and adhesive residue." },
+      { cause: "Wrong prep system", symptom: "Patch, primer, or adhesive failure", check: "Verify all prep products are approved together for the slab." }
+    ],
+    whatToCheckFirst: [
+      "Check whether the slab is dusty, powdery, weak, sealed, painted, or over-absorptive.",
+      "Read the adhesive, primer, patch, and flooring instructions for surface prep and porosity.",
+      "Confirm required moisture testing is complete even if the slab appears dry.",
+      "Do not wet the slab unless a product instruction specifically requires a surface condition."
+    ],
+    whenToCallAPro: [
+      "Glue-down flooring, engineered hardwood, or adhesive-sensitive products are planned.",
+      "The concrete surface is powdery, weak, contaminated, or heavily patched.",
+      "Old adhesive, sealer, curing compound, or paint may affect bond.",
+      "The correct primer, patch, or moisture system is unclear."
+    ]
+  },
+  "concrete-slab-cracks-under-flooring": {
+    group: "concrete",
+    causeRows: [
+      { cause: "Stable shrinkage crack", symptom: "Hairline crack with no height difference", check: "Confirm flatness and product crack-treatment requirements." },
+      { cause: "Control joint", symptom: "Straight saw cut or planned joint", check: "Review how the flooring system handles joints and movement." },
+      { cause: "Moving or displaced crack", symptom: "Widening crack or uneven slab edges", check: "Evaluate movement before covering the slab." },
+      { cause: "Moisture along crack", symptom: "Staining, odor, or white residue", check: "Test moisture and address the source before flooring." }
+    ],
+    whatToCheckFirst: [
+      "Map the crack length, width, height difference, and location.",
+      "Look for moisture, efflorescence, crumbling edges, or signs of movement.",
+      "Check flatness across the crack with a straightedge.",
+      "Compare the crack condition with the flooring, adhesive, tile, or underlayment instructions."
+    ],
+    whenToCallAPro: [
+      "The crack has height displacement, moisture, or recurring movement.",
+      "Tile, glue-down flooring, or engineered hardwood is planned.",
+      "The crack lines up with existing tile cracks or foundation movement.",
+      "A structural or concrete specialist may need to evaluate the slab."
+    ]
+  },
+  "why-is-moisture-coming-through-my-slab": {
+    group: "concrete",
+    causeRows: [
+      { cause: "Ground vapor", symptom: "Musty odor or dampness under flooring", check: "Review slab grade, vapor retarder history, and moisture tests." },
+      { cause: "Drainage or wall moisture", symptom: "Damp edges, basement odor, or recurring wet spots", check: "Check gutters, grading, walls, and exterior drainage." },
+      { cause: "Cracks or slab edges", symptom: "Moisture follows a line or perimeter", check: "Inspect cracks, joints, penetrations, and slab edges." },
+      { cause: "Trapped moisture", symptom: "Old flooring odor or adhesive release", check: "Remove failed layers and test before covering again." }
+    ],
+    whatToCheckFirst: [
+      "Find whether moisture is local, perimeter-based, seasonal, or widespread.",
+      "Look for efflorescence, dark spots, musty odor, failed adhesive, and damp underlayment.",
+      "Check room humidity, drainage, walls, cracks, and slab history.",
+      "Use the moisture test required by the flooring or adhesive system."
+    ],
+    whenToCallAPro: [
+      "The room is below grade or previous flooring failed.",
+      "Moisture returns after cleaning or drying.",
+      "Glue-down flooring, engineered hardwood, laminate, or carpet is planned.",
+      "Drainage, foundation, or moisture mitigation may be needed."
+    ]
+  },
+  "best-flooring-for-concrete-slabs": {
+    group: "concrete",
+    causeRows: [
+      { cause: "Moisture-prone slab", symptom: "Musty odor, prior adhesive failure, or basement humidity", check: "Compare products by concrete moisture and vapor requirements." },
+      { cause: "Uneven slab", symptom: "Low spots, humps, or hollow movement", check: "Prioritize products and prep methods that require proper support." },
+      { cause: "Cracked slab", symptom: "Visible cracks or control joints", check: "Review crack treatment and movement requirements before choosing material." },
+      { cause: "Comfort or height limits", symptom: "Cold feel, door clearance, or transition issues", check: "Plan underlayment, cushion, transitions, and finished height early." }
+    ],
+    whatToCheckFirst: [
+      "Identify whether the slab is below grade, on grade, or above grade.",
+      "Check moisture, flatness, cracks, old adhesive, sealers, and finished-height constraints.",
+      "Compare only products that are approved for the specific concrete conditions.",
+      "Plan transitions and waste after narrowing the flooring system."
+    ],
+    whenToCallAPro: [
+      "The slab has unknown moisture history, old flooring failure, or wide cracks.",
+      "Engineered hardwood, glue-down flooring, or tile is planned.",
+      "The room is a basement, laundry, utility room, or slab-on-grade space.",
+      "You need help choosing between mitigation, underlayment, adhesive, or product systems."
     ]
   },
   "why-is-my-floor-expanding": {

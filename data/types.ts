@@ -141,7 +141,12 @@ export type GuideSlug =
   | "why-is-my-subfloor-wet"
   | "can-moisture-come-through-concrete"
   | "why-is-my-floor-expanding"
-  | "what-happens-if-flooring-is-installed-too-soon";
+  | "what-happens-if-flooring-is-installed-too-soon"
+  | "concrete-slab-flooring-guide"
+  | "can-concrete-be-too-dry-for-flooring"
+  | "concrete-slab-cracks-under-flooring"
+  | "why-is-moisture-coming-through-my-slab"
+  | "best-flooring-for-concrete-slabs";
 
 export type GuideSection = {
   id: string;

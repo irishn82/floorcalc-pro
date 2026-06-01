@@ -15,6 +15,7 @@ type GuideDraft = {
   description: string;
   metadataTitle: string;
   metadataDescription: string;
+  dateModified?: string;
   readTime: string;
   primaryEcosystem: GuideEcosystemSlug;
   secondaryEcosystems?: GuideEcosystemSlug[];
@@ -40,7 +41,7 @@ function buildGuide(input: GuideDraft): Guide {
     description: input.description,
     metadataTitle: input.metadataTitle,
     metadataDescription: input.metadataDescription,
-    dateModified: "2026-05-29",
+    dateModified: input.dateModified ?? "2026-05-29",
     readTime: input.readTime,
     primaryEcosystem: input.primaryEcosystem,
     secondaryEcosystems: input.secondaryEcosystems,
@@ -201,9 +202,12 @@ const guideDrafts: GuideDraft[] = [
     topicCluster: "subfloor-prep",
     relatedTools: ["flooring-square-footage-calculator", "waste-calculator"],
     relatedGuides: [
+      "concrete-slab-flooring-guide",
       "how-to-test-concrete-moisture",
+      "why-is-moisture-coming-through-my-slab",
       "can-moisture-come-through-concrete",
       "why-is-my-subfloor-wet",
+      "concrete-slab-cracks-under-flooring",
       "why-flooring-fails-over-concrete",
       "what-happens-if-flooring-is-installed-too-soon",
       "moisture-barrier-engineered-hardwood-over-concrete",
@@ -544,10 +548,14 @@ const guideDrafts: GuideDraft[] = [
     topicCluster: "subfloor-prep",
     relatedTools: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"],
     relatedGuides: [
+      "concrete-slab-flooring-guide",
       "how-to-test-concrete-moisture",
       "can-moisture-come-through-concrete",
+      "why-is-moisture-coming-through-my-slab",
       "why-flooring-fails-over-concrete",
       "what-happens-if-flooring-is-installed-too-soon",
+      "can-concrete-be-too-dry-for-flooring",
+      "best-flooring-for-concrete-slabs",
       "can-you-install-lvp-over-concrete",
       "best-underlayment-for-lvp",
       "best-underlayment-for-laminate-flooring",
@@ -659,11 +667,15 @@ const guideDrafts: GuideDraft[] = [
     topicCluster: "subfloor-prep",
     relatedTools: ["flooring-square-footage-calculator", "waste-calculator"],
     relatedGuides: [
+      "concrete-slab-flooring-guide",
       "moisture-level-too-high-for-flooring",
+      "why-is-moisture-coming-through-my-slab",
+      "concrete-slab-cracks-under-flooring",
       "can-engineered-hardwood-go-over-concrete",
       "can-you-install-lvp-over-concrete",
       "moisture-barrier-engineered-hardwood-over-concrete",
       "best-underlayment-for-concrete-floors",
+      "best-flooring-for-concrete-slabs",
       "why-flooring-fails-over-concrete"
     ],
     quickAnswer: [
@@ -773,10 +785,14 @@ const guideDrafts: GuideDraft[] = [
     topicCluster: "subfloor-prep",
     relatedTools: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"],
     relatedGuides: [
+      "concrete-slab-flooring-guide",
       "how-to-test-concrete-moisture",
+      "why-is-moisture-coming-through-my-slab",
+      "concrete-slab-cracks-under-flooring",
       "can-engineered-hardwood-go-over-concrete",
       "can-you-install-lvp-over-concrete",
       "best-underlayment-for-concrete-floors",
+      "best-flooring-for-concrete-slabs",
       "common-basement-flooring-problems",
       "why-does-my-floor-feel-hollow"
     ],
@@ -882,12 +898,15 @@ const guideDrafts: GuideDraft[] = [
     topicCluster: "subfloor-prep",
     relatedTools: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"],
     relatedGuides: [
+      "concrete-slab-flooring-guide",
       "how-to-test-concrete-moisture",
+      "why-is-moisture-coming-through-my-slab",
       "can-carpet-be-installed-over-concrete",
       "can-you-install-lvp-over-concrete",
       "why-does-my-floor-feel-hollow",
       "why-flooring-fails-over-concrete",
-      "best-underlayment-for-concrete-floors"
+      "best-underlayment-for-concrete-floors",
+      "best-flooring-for-concrete-slabs"
     ],
     quickAnswer: [
       "Basement flooring problems usually start with slab moisture, humidity swings, uneven concrete, movement, or choosing a flooring system that is not suited to below-grade conditions.",
@@ -1865,9 +1884,12 @@ const guideDrafts: GuideDraft[] = [
     topicCluster: "subfloor-prep",
     relatedTools: ["flooring-square-footage-calculator", "waste-calculator"],
     relatedGuides: [
+      "concrete-slab-flooring-guide",
       "how-to-test-concrete-moisture",
+      "why-is-moisture-coming-through-my-slab",
       "moisture-level-too-high-for-flooring",
       "why-flooring-fails-over-concrete",
+      "concrete-slab-cracks-under-flooring",
       "can-engineered-hardwood-go-over-concrete",
       "can-you-install-lvp-over-concrete",
       "best-underlayment-for-concrete-floors",
@@ -2177,6 +2199,630 @@ const guideDrafts: GuideDraft[] = [
         question: "Can problems show up months after flooring is installed too soon?",
         answer:
           "Yes. Moisture movement, seasonal humidity, adhesive issues, and subfloor movement may appear weeks or months after installation."
+      }
+    ],
+    disclaimer: installConditionDisclaimer
+  },
+  {
+    slug: "concrete-slab-flooring-guide",
+    title: "Concrete Slab Flooring Guide",
+    description:
+      "A practical concrete slab flooring hub covering moisture, flatness, cracks, vapor barriers, acclimation, and flooring choices for LVP, laminate, engineered hardwood, carpet, and tile.",
+    metadataTitle: "Concrete Slab Flooring Guide: Moisture, Cracks, and Floor Choices",
+    metadataDescription:
+      "Plan flooring over concrete slabs with practical guidance on moisture testing, flatness, cracks, vapor barriers, LVP, laminate, engineered hardwood, carpet, and tile.",
+    dateModified: "2026-06-01",
+    readTime: "12 min read",
+    primaryEcosystem: "planning-measuring-transitions",
+    secondaryEcosystems: ["lvp", "laminate", "hardwood-engineered-hardwood", "tile", "carpet-padding"],
+    materialTypes: [
+      "lvp",
+      "lvt",
+      "laminate",
+      "engineered-hardwood",
+      "carpet",
+      "ceramic-tile",
+      "porcelain-tile"
+    ],
+    topicCluster: "subfloor-prep",
+    relatedTools: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"],
+    relatedGuides: [
+      "how-to-test-concrete-moisture",
+      "why-flooring-fails-over-concrete",
+      "can-moisture-come-through-concrete",
+      "why-is-moisture-coming-through-my-slab",
+      "can-concrete-be-too-dry-for-flooring",
+      "concrete-slab-cracks-under-flooring",
+      "best-flooring-for-concrete-slabs",
+      "can-you-install-lvp-over-concrete",
+      "can-engineered-hardwood-go-over-concrete",
+      "best-underlayment-for-concrete-floors",
+      "common-basement-flooring-problems"
+    ],
+    quickAnswer: [
+      "Concrete slab flooring projects usually succeed or fail before the finished flooring is installed. The slab needs to be clean, sound, flat enough for the product, dry enough for the flooring system, and compatible with the selected underlayment, adhesive, vapor control, and transition plan.",
+      "The best floor over concrete depends on the room, slab moisture, cracks, height limits, comfort needs, and manufacturer instructions. Use this hub as a planning map, then verify the exact product requirements before ordering material."
+    ],
+    keySections: [
+      {
+        id: "slab-navigation",
+        title: "Start with the slab conditions",
+        paragraphs: [
+          "A concrete slab can look simple, but flooring over concrete has several separate decisions. Moisture, flatness, cracks, surface contamination, vapor barriers, acclimation, and flooring type all affect the final plan.",
+          "Use the links below to narrow the project before choosing material. A basement slab with unknown moisture history needs a different review than an above-grade slab in a conditioned room."
+        ],
+        bullets: [
+          "Moisture questions: start with concrete moisture testing and vapor-control requirements.",
+          "Surface questions: check flatness, cracks, sealers, old adhesive, dust, and patching.",
+          "Product questions: compare LVP, laminate, engineered hardwood, carpet, and tile over concrete.",
+          "Movement questions: review expansion space, transitions, acclimation, humidity, and temperature.",
+          "Failure questions: troubleshoot hollow sounds, buckling, adhesive release, swelling, and slab moisture."
+        ]
+      },
+      {
+        id: "common-causes",
+        title: "Concrete slab conditions that affect flooring",
+        paragraphs: [
+          "Most concrete flooring problems come from one of a few jobsite conditions. The issue may not be the finished flooring itself. It may be the slab below it, the moisture path through it, or the system chosen to cover it.",
+          "The table in the visual section gives a quick planning map, but the practical rule is simple: do not cover a slab until the product-specific moisture, flatness, cleanliness, and compatibility questions are answered."
+        ],
+        bullets: [
+          "Moisture vapor, wet slabs, basement humidity, or missing vapor control.",
+          "Low spots, humps, surface texture, old adhesive, sealers, paint, or dust.",
+          "Cracks, moving joints, control joints, or slab settlement.",
+          "Wrong underlayment, adhesive, primer, patch, or vapor barrier for the product.",
+          "Flooring installed before the jobsite, slab, or material is ready."
+        ]
+      },
+      {
+        id: "flooring-options",
+        title: "Flooring options over concrete",
+        paragraphs: [
+          "LVP is common over concrete because many products are designed for floating or glue-down use, but slab moisture, flatness, expansion, and underlayment approval still matter. Laminate may also work when the product allows concrete installation and required vapor protection is used.",
+          "Engineered hardwood can be a candidate when the product is approved for concrete and moisture requirements are met. Carpet can be installed over concrete in some rooms, but cushion, moisture, tack strip, and basement conditions need review. Tile can work well over concrete when the slab is stable, properly prepared, and movement is handled correctly."
+        ],
+        subsections: [
+          {
+            title: "Best first calculators",
+            paragraphs: [
+              "Start with square footage before comparing flooring systems, then add waste and transition planning after the material category is chosen."
+            ],
+            bullets: [
+              "Use the square footage calculator for room area and material planning.",
+              "Use the waste calculator once the floor type and layout are selected.",
+              "Use the transition estimator for doorways, height changes, and expansion breaks."
+            ]
+          }
+        ]
+      },
+      {
+        id: "what-to-check-first",
+        title: "What to check first",
+        paragraphs: [
+          "Before choosing a floor, identify whether the slab is above grade, on grade, or below grade. Look for prior flooring failures, musty odor, efflorescence, old adhesive, sealers, cracks, floor drains, and patched areas.",
+          "Then compare the slab to the exact product requirements. The requirements for floating LVP, glue-down LVP, laminate, engineered hardwood, carpet, and tile are not interchangeable."
+        ],
+        bullets: [
+          "Confirm the slab is clean, sound, and free of loose material.",
+          "Check moisture with the test method required by the flooring or adhesive.",
+          "Measure flatness with a long straightedge before relying on underlayment.",
+          "Review cracks, control joints, and movement before covering the slab.",
+          "Plan finished height, door clearance, transitions, and expansion space."
+        ]
+      },
+      {
+        id: "troubleshooting-section",
+        title: "Concrete slab troubleshooting paths",
+        paragraphs: [
+          "If a floor over concrete is already showing problems, diagnose by symptom. Swelling, buckling, peaking, hollow sounds, adhesive failure, and musty odors can point to different causes.",
+          "Start with the visible symptom, but expect the real cause to involve moisture, slab prep, flatness, product compatibility, movement, or installation timing."
+        ],
+        bullets: [
+          "Moisture or odor: read the concrete moisture and slab moisture guides.",
+          "Buckling or peaking: check expansion gaps, fixed objects, temperature, and slab moisture.",
+          "Hollow sounds: check flatness, underlayment, adhesive bond, or tile mortar support.",
+          "Cracks: review whether the slab crack is stable, moving, or needs isolation.",
+          "Recent installation failure: review whether the floor was installed before the slab or jobsite was ready."
+        ]
+      }
+    ],
+    example: [
+      "A homeowner wants one flooring product through a basement family room, hallway, and laundry area. The slab looks dry, but there is a musty smell near one wall, an old adhesive ridge, and a crack that crosses the hallway.",
+      "Instead of choosing flooring first, the better sequence is to test moisture, remove or evaluate residue, check flatness, review the crack, then choose a floor system and transitions that match those conditions."
+    ],
+    commonMistakes: [
+      "Choosing flooring before checking slab moisture and flatness.",
+      "Assuming all concrete cracks can simply be covered.",
+      "Using underlayment to hide slab problems it cannot correct.",
+      "Treating water-resistant flooring as a complete moisture solution.",
+      "Skipping transition and finished-height planning until after installation."
+    ],
+    faq: [
+      {
+        question: "What is the best flooring over a concrete slab?",
+        answer:
+          "There is no single best product for every slab. LVP, laminate, engineered hardwood, carpet, and tile can all work in the right conditions, but the slab moisture, flatness, cracks, room use, and product requirements decide what is realistic."
+      },
+      {
+        question: "Does concrete need a vapor barrier under flooring?",
+        answer:
+          "It depends on the flooring system, slab conditions, and manufacturer instructions. Some products require a vapor retarder or moisture-control system; others restrict extra layers."
+      },
+      {
+        question: "Can I install flooring over cracked concrete?",
+        answer:
+          "Sometimes, but the crack needs evaluation. Hairline shrinkage cracks are different from active movement, height displacement, settlement, or cracks that continue to open."
+      },
+      {
+        question: "Can concrete look dry but still be too wet for flooring?",
+        answer:
+          "Yes. Concrete appearance is not a reliable moisture test. Use the test method required by the flooring, adhesive, or underlayment system."
+      },
+      {
+        question: "Should I level concrete before installing flooring?",
+        answer:
+          "The slab does not always need to be level, but it must be flat enough for the product. Low spots, humps, ridges, and weak patching can cause movement and joint stress."
+      }
+    ],
+    disclaimer: installConditionDisclaimer
+  },
+  {
+    slug: "can-concrete-be-too-dry-for-flooring",
+    title: "Can Concrete Be Too Dry For Flooring?",
+    description:
+      "Learn when very dry, dusty, porous, or over-absorptive concrete can create flooring problems, especially for adhesives, primers, patching, and glue-down flooring systems.",
+    metadataTitle: "Can Concrete Be Too Dry For Flooring? Adhesive and Slab Prep Guide",
+    metadataDescription:
+      "Concrete moisture is not the only slab concern. Learn how dusty, porous, over-absorptive, or weak concrete can affect adhesive bond, primers, patching, and flooring prep.",
+    dateModified: "2026-06-01",
+    readTime: "8 min read",
+    primaryEcosystem: "planning-measuring-transitions",
+    secondaryEcosystems: ["lvp", "laminate", "hardwood-engineered-hardwood"],
+    materialTypes: ["lvp", "lvt", "laminate", "engineered-hardwood"],
+    topicCluster: "subfloor-prep",
+    relatedTools: ["flooring-square-footage-calculator", "waste-calculator"],
+    relatedGuides: [
+      "concrete-slab-flooring-guide",
+      "how-to-test-concrete-moisture",
+      "why-flooring-fails-over-concrete",
+      "best-underlayment-for-concrete-floors",
+      "can-engineered-hardwood-go-over-concrete",
+      "can-you-install-lvp-over-concrete"
+    ],
+    quickAnswer: [
+      "Concrete is usually discussed as being too wet, but very dry, dusty, porous, weak, or over-absorptive concrete can also cause flooring problems. The concern is usually adhesive bond, primer performance, patching strength, or surface dusting rather than the slab being dry in a moisture-test sense.",
+      "Do not try to make concrete damp before flooring. Instead, verify the flooring and adhesive instructions for slab porosity, surface strength, primer, pH, cleanliness, and moisture requirements."
+    ],
+    keySections: [
+      {
+        id: "common-causes",
+        title: "When dry concrete becomes a problem",
+        paragraphs: [
+          "A slab can test low for moisture and still be poorly prepared for flooring. Dust, weak surface paste, excessive porosity, old sealers, and aggressive grinding can all affect how primers, patch, adhesives, and underlayments perform.",
+          "Glue-down floors are especially sensitive because the bond depends on the adhesive, slab surface, porosity, moisture, pH, and cleanliness working together."
+        ],
+        bullets: [
+          "Dusty or powdery concrete that prevents adhesive bond.",
+          "Highly porous concrete that pulls moisture from primer or adhesive too quickly.",
+          "Weak surface paste, crumbling patch, or laitance.",
+          "Old sealers, curing compounds, paint, or adhesive residue blocking bond.",
+          "Incorrect primer, patch, or adhesive for the slab condition."
+        ]
+      },
+      {
+        id: "what-to-check-first",
+        title: "What to check first",
+        paragraphs: [
+          "Start with the flooring or adhesive instructions. Many systems explain surface preparation, porosity checks, acceptable substrates, required primers, moisture limits, pH limits, and cleaning steps.",
+          "Then check the slab surface. If dust returns after sweeping, patch scrapes loose, adhesive beads up, or water absorbs instantly, the installer may need to evaluate surface preparation before flooring starts."
+        ],
+        bullets: [
+          "Sweep and vacuum, then check whether dust returns from the slab.",
+          "Look for powdery concrete, loose patching, sealers, paint, or residue.",
+          "Check whether the adhesive or primer has specific porosity requirements.",
+          "Confirm moisture testing is still complete even if the slab seems dry.",
+          "Use only patch, primer, and adhesive systems approved together."
+        ]
+      },
+      {
+        id: "comparison",
+        title: "Too wet versus too dry problems",
+        paragraphs: [
+          "Too-wet concrete can create vapor, adhesive failure, cupping, odor, and trapped moisture. Too-dry or over-absorptive concrete is usually a surface-prep issue that can weaken bond or change adhesive working time.",
+          "Both conditions matter, but they are solved differently. Moisture mitigation is not the same as correcting dusty, weak, or over-porous concrete."
+        ]
+      },
+      {
+        id: "when-to-call-a-professional",
+        title: "When to call a professional",
+        paragraphs: [
+          "Call a flooring professional when glue-down flooring is planned, adhesive bond is critical, the slab is dusty or weak, or old coating and adhesive residue are present.",
+          "A professional can help determine whether the slab needs mechanical prep, patching, primer, moisture mitigation, or a different flooring system."
+        ]
+      }
+    ],
+    example: [
+      "A homeowner removes old carpet from a concrete slab and sees a pale, dusty surface. Moisture testing looks acceptable, so they plan glue-down vinyl plank.",
+      "The risk is not just moisture. If the slab surface is weak or dusty, adhesive may not bond correctly. The installer should evaluate surface prep, porosity, primer, and adhesive compatibility before installation."
+    ],
+    commonMistakes: [
+      "Assuming a low moisture reading means the slab is fully ready.",
+      "Adding water to a dry slab before adhesive work.",
+      "Ignoring dust, weak patch, old sealers, or curing compounds.",
+      "Mixing primer, patch, and adhesive products that are not approved together.",
+      "Skipping adhesive instructions because the floor is floating in another room."
+    ],
+    faq: [
+      {
+        question: "Can concrete be too dry for vinyl flooring?",
+        answer:
+          "Concrete is not usually rejected simply for being dry, but dusty, weak, porous, or improperly prepared concrete can affect glue-down vinyl, patching, primer, and adhesive bond."
+      },
+      {
+        question: "Should I wet concrete before installing flooring?",
+        answer:
+          "No. Do not wet the slab unless a specific product instruction calls for a surface-dampening step. Follow the adhesive, patch, primer, and flooring instructions."
+      },
+      {
+        question: "What does porous concrete do to adhesive?",
+        answer:
+          "Highly porous concrete can pull moisture from some adhesives or primers too quickly, affecting working time and bond. The adhesive manufacturer may require a primer or specific prep."
+      },
+      {
+        question: "Is dusty concrete a problem under floating floors?",
+        answer:
+          "It can be. Floating floors do not rely on adhesive bond, but dust, loose material, grit, or weak patch can create noise, uneven support, odor, or underlayment problems."
+      }
+    ],
+    disclaimer: installConditionDisclaimer
+  },
+  {
+    slug: "concrete-slab-cracks-under-flooring",
+    title: "Concrete Slab Cracks Under Flooring",
+    description:
+      "Understand concrete slab cracks before flooring, including shrinkage cracks, moving cracks, control joints, tile cracking, LVP and laminate concerns, and when to get help.",
+    metadataTitle: "Concrete Slab Cracks Under Flooring: What to Check First",
+    metadataDescription:
+      "Learn when concrete slab cracks matter before flooring, how cracks affect LVP, laminate, engineered hardwood, carpet, and tile, and what to check first.",
+    dateModified: "2026-06-01",
+    readTime: "9 min read",
+    primaryEcosystem: "planning-measuring-transitions",
+    secondaryEcosystems: ["lvp", "laminate", "hardwood-engineered-hardwood", "tile"],
+    materialTypes: ["lvp", "lvt", "laminate", "engineered-hardwood", "ceramic-tile", "porcelain-tile"],
+    topicCluster: "subfloor-prep",
+    relatedTools: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"],
+    relatedGuides: [
+      "concrete-slab-flooring-guide",
+      "why-flooring-fails-over-concrete",
+      "how-to-test-concrete-moisture",
+      "can-you-install-lvp-over-concrete",
+      "can-engineered-hardwood-go-over-concrete",
+      "why-is-my-tile-cracking",
+      "how-flat-should-a-floor-be-for-tile"
+    ],
+    quickAnswer: [
+      "Concrete slab cracks matter when they are moving, wide, uneven in height, moisture-related, or likely to transfer through the flooring system. Small stable shrinkage cracks may be manageable for some products, but active cracks, control joints, and displaced cracks need closer review.",
+      "Do not assume flooring will hide a crack forever. The right approach depends on the crack type, flooring type, substrate prep requirements, and whether movement isolation or professional evaluation is needed."
+    ],
+    keySections: [
+      {
+        id: "common-causes",
+        title: "Common crack situations",
+        paragraphs: [
+          "Not all slab cracks are the same. Some are small shrinkage cracks from curing. Others are control joints intentionally cut into the slab. More concerning cracks may show movement, vertical displacement, moisture, settlement, or recurring widening.",
+          "The finished flooring matters too. Tile is sensitive to movement transfer. Floating floors can bridge minor cracks only when the slab remains flat and stable. Glue-down floors depend on surface prep and adhesive compatibility."
+        ],
+        bullets: [
+          "Hairline shrinkage cracks with no height difference.",
+          "Control joints or saw cuts that may need special treatment.",
+          "Cracks with vertical displacement or uneven edges.",
+          "Moisture stains, efflorescence, or dampness along the crack.",
+          "Cracks that keep widening or run through multiple rooms."
+        ]
+      },
+      {
+        id: "what-to-check-first",
+        title: "What to check first",
+        paragraphs: [
+          "Map the crack before selecting flooring. Note the width, length, height difference, location, moisture signs, and whether the crack lines up with doorways, control joints, tile cracks, or foundation movement.",
+          "Then review the flooring instructions. Some systems specify crack treatment, patching, isolation membranes, control joint rules, or restrictions over active cracks."
+        ],
+        bullets: [
+          "Check whether both sides of the crack are at the same height.",
+          "Look for dampness, white mineral residue, musty odor, or old adhesive failure.",
+          "Check whether the crack is stable or appears to be moving.",
+          "Confirm flatness across the crack, not just in open areas.",
+          "Ask how the selected flooring handles cracks and joints."
+        ]
+      },
+      {
+        id: "by-flooring-type",
+        title: "How cracks affect different flooring types",
+        paragraphs: [
+          "LVP and laminate may tolerate some stable, properly prepared cracks when the slab remains flat and the product allows the installation. Glue-down products need a surface that supports bond and does not telegraph or break the adhesive system.",
+          "Engineered hardwood over concrete requires attention to moisture, adhesive or underlayment compatibility, and slab soundness. Tile needs special care because slab movement can transfer into tile or grout if the assembly is not designed for it."
+        ]
+      },
+      {
+        id: "when-to-call-a-professional",
+        title: "When to call a professional",
+        paragraphs: [
+          "Call a professional when a crack has height displacement, moisture, repeated movement, widening, structural concern, or tile cracking along the same line.",
+          "A flooring professional may also recommend a concrete specialist or structural evaluation if the crack suggests settlement, foundation movement, or active water intrusion."
+        ]
+      }
+    ],
+    example: [
+      "A basement slab has one hairline crack in the storage room and a wider crack with a slight height difference across the hallway. The homeowner wants the same LVP throughout.",
+      "The hairline crack may be manageable after preparation, but the displaced crack needs evaluation. If the floor bridges it without correction, the finished floor may move, click, separate, or fail at the transition."
+    ],
+    commonMistakes: [
+      "Treating every crack as harmless because it is under flooring.",
+      "Patching a moving crack without identifying why it moved.",
+      "Installing tile over slab cracks without movement planning.",
+      "Ignoring moisture along cracks.",
+      "Forgetting that cracks can affect flatness and transition height."
+    ],
+    faq: [
+      {
+        question: "Can LVP go over cracked concrete?",
+        answer:
+          "Sometimes, if the crack is stable, the slab is flat, and the product instructions allow the installation. Active cracks, height differences, moisture, or crumbling edges need correction or professional review."
+      },
+      {
+        question: "Will carpet hide concrete cracks?",
+        answer:
+          "Carpet may hide the appearance of some cracks, but it does not solve moisture, movement, tack strip, cushion, or slab condition problems."
+      },
+      {
+        question: "Can tile crack because of a slab crack?",
+        answer:
+          "Yes. Slab movement can transfer through tile if the assembly is not designed to manage that movement."
+      },
+      {
+        question: "Should concrete cracks be filled before flooring?",
+        answer:
+          "Often cracks or low areas need treatment, but the repair method depends on the crack type, flooring product, moisture conditions, and whether the crack is active."
+      }
+    ],
+    disclaimer: installConditionDisclaimer
+  },
+  {
+    slug: "why-is-moisture-coming-through-my-slab",
+    title: "Why Is Moisture Coming Through My Slab?",
+    description:
+      "Troubleshoot moisture coming through a concrete slab, including vapor drive, basement conditions, missing vapor barriers, drainage, cracks, humidity, and flooring failure clues.",
+    metadataTitle: "Why Is Moisture Coming Through My Slab? Flooring Troubleshooting",
+    metadataDescription:
+      "Learn why concrete slab moisture happens, what to check first, and how vapor drive, basements, cracks, drainage, humidity, and flooring systems affect repairs.",
+    dateModified: "2026-06-01",
+    readTime: "9 min read",
+    primaryEcosystem: "planning-measuring-transitions",
+    secondaryEcosystems: ["lvp", "laminate", "hardwood-engineered-hardwood", "tile", "carpet-padding"],
+    materialTypes: ["lvp", "lvt", "laminate", "engineered-hardwood", "carpet", "ceramic-tile", "porcelain-tile"],
+    topicCluster: "subfloor-prep",
+    relatedTools: ["flooring-square-footage-calculator", "waste-calculator"],
+    relatedGuides: [
+      "concrete-slab-flooring-guide",
+      "can-moisture-come-through-concrete",
+      "how-to-test-concrete-moisture",
+      "moisture-level-too-high-for-flooring",
+      "why-flooring-fails-over-concrete",
+      "common-basement-flooring-problems",
+      "why-is-my-subfloor-wet",
+      "best-underlayment-for-concrete-floors"
+    ],
+    quickAnswer: [
+      "Moisture can come through a slab as vapor from below, moisture from a damp basement environment, water entering through cracks or edges, trapped moisture under old flooring, or moisture released from new or patched concrete.",
+      "The first step is not choosing a new floor. It is identifying the moisture source, testing the slab as required by the flooring system, and deciding whether drainage, humidity control, vapor control, or slab preparation is needed."
+    ],
+    keySections: [
+      {
+        id: "common-causes",
+        title: "Common causes",
+        paragraphs: [
+          "Concrete is porous, so moisture behavior depends on the slab, soil, drainage, vapor retarder, room humidity, temperature, and flooring system. A slab can look dry on the surface but still create moisture problems under flooring.",
+          "Basements and slab-on-grade rooms deserve extra attention because exterior drainage, seasonal humidity, and missing or unknown vapor control can all affect the floor."
+        ],
+        bullets: [
+          "Moisture vapor moving from soil through the slab.",
+          "Missing, damaged, or unknown vapor retarder below the slab.",
+          "Exterior drainage, gutters, grading, or wall moisture contributing to dampness.",
+          "Cracks, control joints, slab edges, or penetrations allowing moisture paths.",
+          "New concrete, patching, or old flooring that trapped moisture."
+        ]
+      },
+      {
+        id: "what-to-check-first",
+        title: "What to check first",
+        paragraphs: [
+          "Look for clues before covering the slab again. Musty odor, dark areas, white mineral residue, old adhesive release, carpet odor, cupped wood, swollen laminate, or damp underlayment can all point to moisture history.",
+          "Then use the moisture test required by the floor system. Surface appearance, plastic-sheet shortcuts, and handheld meters may provide clues, but they do not replace required documentation for many products."
+        ],
+        bullets: [
+          "Check gutters, grading, foundation walls, floor drains, and exterior doors.",
+          "Look for efflorescence, stains, old adhesive failure, and musty odor.",
+          "Identify whether the room is below grade, on grade, or above grade.",
+          "Test concrete moisture with the method required by the selected system.",
+          "Review vapor barrier, adhesive, primer, and underlayment compatibility."
+        ]
+      },
+      {
+        id: "flooring-symptoms",
+        title: "Flooring symptoms that point to slab moisture",
+        paragraphs: [
+          "Moisture can show up differently depending on the flooring. Glue-down floors may release or sound hollow. Engineered hardwood may cup, gap, or separate. Laminate may swell or buckle. Carpet may smell musty or hold dampness. Tile may show moisture-related bond or grout problems when other conditions are also present.",
+          "The symptom does not prove the exact source, but it tells you where to start looking."
+        ]
+      },
+      {
+        id: "when-to-call-a-professional",
+        title: "When to call a professional",
+        paragraphs: [
+          "Call a professional if moisture returns after cleaning, if the room is below grade, if previous flooring failed, if glue-down flooring or engineered hardwood is planned, or if moisture mitigation may be needed.",
+          "A flooring professional may also recommend drainage, waterproofing, HVAC, or concrete specialists when the moisture source is outside the flooring layer."
+        ]
+      }
+    ],
+    example: [
+      "A homeowner removes old carpet from a basement. The slab has a musty smell, white residue along one wall, and dark spots near a crack. They want to install laminate.",
+      "That project should pause for moisture investigation. Laminate selection, vapor protection, underlayment, and room humidity should be decided only after slab conditions and product requirements are understood."
+    ],
+    commonMistakes: [
+      "Replacing flooring without finding the moisture source.",
+      "Assuming waterproof flooring solves slab moisture.",
+      "Ignoring drainage, humidity, or foundation wall clues.",
+      "Using an unapproved vapor barrier under a product that restricts extra layers.",
+      "Skipping testing because the surface feels dry."
+    ],
+    faq: [
+      {
+        question: "Can moisture come through concrete after flooring is installed?",
+        answer:
+          "Yes. Moisture vapor or damp slab conditions can affect adhesive, underlayment, odor, wood movement, laminate swelling, and trapped moisture below floating floors."
+      },
+      {
+        question: "Does a vapor barrier fix slab moisture?",
+        answer:
+          "It may be part of the system, but it is not a universal fix. Vapor control must be compatible with the flooring, underlayment, adhesive, and slab conditions."
+      },
+      {
+        question: "Why does my basement slab smell musty?",
+        answer:
+          "Musty odor can come from moisture, trapped organic material, old adhesive, carpet cushion, wall moisture, or poor humidity control. Identify the source before installing new flooring."
+      },
+      {
+        question: "Can I install tile if moisture comes through concrete?",
+        answer:
+          "Tile may tolerate some conditions better than moisture-sensitive flooring, but the slab, mortar, movement, efflorescence, and room conditions still need evaluation."
+      }
+    ],
+    disclaimer: installConditionDisclaimer
+  },
+  {
+    slug: "best-flooring-for-concrete-slabs",
+    title: "What Flooring Works Best Over Concrete?",
+    description:
+      "Compare LVP, laminate, engineered hardwood, carpet, and tile over concrete slabs with practical guidance for moisture, flatness, comfort, cracks, and installation method.",
+    metadataTitle: "Best Flooring for Concrete Slabs: LVP, Laminate, Hardwood, Carpet, Tile",
+    metadataDescription:
+      "Compare flooring options for concrete slabs, including LVP, laminate, engineered hardwood, carpet, and tile, with moisture, flatness, cracks, comfort, and prep tips.",
+    dateModified: "2026-06-01",
+    readTime: "10 min read",
+    primaryEcosystem: "planning-measuring-transitions",
+    secondaryEcosystems: ["lvp", "laminate", "hardwood-engineered-hardwood", "tile", "carpet-padding"],
+    materialTypes: ["lvp", "lvt", "laminate", "engineered-hardwood", "carpet", "ceramic-tile", "porcelain-tile"],
+    topicCluster: "installation-method",
+    relatedTools: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"],
+    relatedGuides: [
+      "concrete-slab-flooring-guide",
+      "how-to-test-concrete-moisture",
+      "why-flooring-fails-over-concrete",
+      "best-underlayment-for-concrete-floors",
+      "can-you-install-lvp-over-concrete",
+      "can-engineered-hardwood-go-over-concrete",
+      "can-carpet-be-installed-over-concrete",
+      "common-basement-flooring-problems",
+      "concrete-slab-cracks-under-flooring"
+    ],
+    quickAnswer: [
+      "The best flooring over concrete is the product system that matches the slab conditions. LVP and tile are common choices, laminate and engineered hardwood may work when approved, and carpet can be comfortable when moisture and cushion requirements are handled correctly.",
+      "Start with moisture, flatness, cracks, room use, comfort, height, and maintenance needs. Then choose a product that is specifically approved for concrete installation."
+    ],
+    keySections: [
+      {
+        id: "common-causes",
+        title: "Why concrete changes the flooring decision",
+        paragraphs: [
+          "Concrete is hard and stable in some ways, but it can also hold moisture, release vapor, contain cracks, have uneven areas, and create comfort or sound concerns. Flooring that works well over plywood is not automatically right for concrete.",
+          "The best choice also depends on whether the slab is below grade, on grade, heated, cracked, damp, or in a room with heavy traffic."
+        ],
+        bullets: [
+          "Moisture and vapor control affect adhesives, wood products, laminate, carpet, and underlayment.",
+          "Flatness affects floating floors, tile support, and glue-down bond.",
+          "Cracks and control joints may need treatment or movement planning.",
+          "Finished height affects doors, stairs, cabinets, and transitions.",
+          "Basements need extra attention to humidity, odor, and slab history."
+        ]
+      },
+      {
+        id: "flooring-comparison",
+        title: "Concrete slab flooring comparison",
+        paragraphs: [
+          "LVP is popular because many products are designed for concrete, but it still needs moisture and flatness review. Tile can be durable over concrete when the slab is stable and properly prepared.",
+          "Laminate and engineered hardwood are more sensitive to moisture and product approval. Carpet adds comfort, but cushion and moisture conditions matter. The right choice is rarely just the product with the best marketing label."
+        ],
+        subsections: [
+          {
+            title: "Practical material notes",
+            paragraphs: [
+              "Use the comparison as a starting point, not a universal approval. Always check the exact product instructions for concrete, moisture, underlayment, adhesive, and grade-level limits."
+            ],
+            bullets: [
+              "LVP: often practical over concrete when flatness, vapor, and expansion rules are handled.",
+              "Laminate: can work when concrete installation and vapor protection are approved.",
+              "Engineered hardwood: can work for approved products with documented moisture control.",
+              "Carpet: comfortable over concrete, but cushion, tack strip, odor, and moisture matter.",
+              "Tile: durable when slab movement, cracks, mortar coverage, and movement joints are addressed."
+            ]
+          }
+        ]
+      },
+      {
+        id: "what-to-check-first",
+        title: "What to check first",
+        paragraphs: [
+          "Before comparing colors or price, check the slab and the room. A finished basement with unknown moisture history may point toward different products than a dry above-grade concrete room.",
+          "If the floor has cracks, old adhesive, paint, sealers, floor drains, or height limitations, those details should be part of the material decision from the beginning."
+        ],
+        bullets: [
+          "Test moisture as required by the product or adhesive system.",
+          "Measure flatness and correct support issues before installation.",
+          "Evaluate cracks, control joints, old adhesive, paint, and sealers.",
+          "Plan underlayment, vapor control, transitions, and door clearance.",
+          "Choose a flooring system approved for the slab and room conditions."
+        ]
+      },
+      {
+        id: "when-to-call-a-professional",
+        title: "When to call a professional",
+        paragraphs: [
+          "Call a professional when the slab is below grade, has unknown moisture history, has wide or displaced cracks, or when glue-down flooring, engineered hardwood, or tile is planned.",
+          "A professional can help narrow product options based on real slab conditions instead of generic flooring categories."
+        ]
+      }
+    ],
+    example: [
+      "A family wants warm flooring for a basement playroom. The slab has one control joint, no visible water, and a history of musty carpet.",
+      "Instead of choosing carpet again immediately, they should review moisture, humidity, cushion, odor risk, and LVP or tile alternatives. The best product is the one that fits the slab and how the room will be used."
+    ],
+    commonMistakes: [
+      "Choosing flooring based only on style.",
+      "Assuming waterproof means approved over any concrete slab.",
+      "Ignoring finished height and transitions.",
+      "Skipping crack and flatness checks.",
+      "Comparing flooring types without reading concrete installation requirements."
+    ],
+    faq: [
+      {
+        question: "Is LVP the best flooring over concrete?",
+        answer:
+          "LVP is often a strong candidate, but only when the slab meets the product's moisture, flatness, vapor, expansion, and underlayment requirements."
+      },
+      {
+        question: "Is carpet good over concrete?",
+        answer:
+          "Carpet can be comfortable over concrete, but moisture, cushion selection, tack strip installation, odor history, and basement humidity need review."
+      },
+      {
+        question: "Can engineered hardwood go over concrete?",
+        answer:
+          "Some engineered hardwood products are approved over concrete with specific installation methods and moisture requirements. Solid hardwood is usually more limited."
+      },
+      {
+        question: "Is tile better than vinyl over concrete?",
+        answer:
+          "Tile can be very durable over concrete when the slab is stable and properly prepared. Vinyl may be easier to install in some spaces. Moisture, cracks, comfort, and room use should guide the choice."
       }
     ],
     disclaimer: installConditionDisclaimer

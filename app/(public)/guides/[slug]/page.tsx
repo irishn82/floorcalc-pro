@@ -100,8 +100,10 @@ const targetedNextStepTargets: Partial<
   "can-engineered-hardwood-go-over-concrete": {
     primary: { type: "tool", slug: "flooring-square-footage-calculator" },
     secondary: [
+      { type: "guide", slug: "concrete-slab-flooring-guide" },
       { type: "guide", slug: "how-to-test-concrete-moisture" },
       { type: "guide", slug: "can-moisture-come-through-concrete" },
+      { type: "guide", slug: "why-is-moisture-coming-through-my-slab" },
       { type: "guide", slug: "moisture-barrier-engineered-hardwood-over-concrete" },
       { type: "guide", slug: "floating-vs-glue-down-engineered-hardwood-over-concrete" },
       { type: "guide", slug: "why-flooring-fails-over-concrete" },
@@ -155,8 +157,10 @@ const targetedNextStepTargets: Partial<
   "can-you-install-lvp-over-concrete": {
     primary: { type: "guide", slug: "how-to-test-concrete-moisture" },
     secondary: [
+      { type: "guide", slug: "concrete-slab-flooring-guide" },
       { type: "guide", slug: "best-underlayment-for-concrete-floors" },
       { type: "guide", slug: "can-moisture-come-through-concrete" },
+      { type: "guide", slug: "why-is-moisture-coming-through-my-slab" },
       { type: "guide", slug: "why-flooring-fails-over-concrete" },
       { type: "guide", slug: "moisture-level-too-high-for-flooring" },
       { type: "guide", slug: "subfloor-flatness-requirements-lvp" },
@@ -266,8 +270,11 @@ const targetedNextStepTargets: Partial<
   "how-to-test-concrete-moisture": {
     primary: { type: "guide", slug: "moisture-level-too-high-for-flooring" },
     secondary: [
+      { type: "guide", slug: "concrete-slab-flooring-guide" },
       { type: "guide", slug: "why-flooring-fails-over-concrete" },
       { type: "guide", slug: "can-moisture-come-through-concrete" },
+      { type: "guide", slug: "why-is-moisture-coming-through-my-slab" },
+      { type: "guide", slug: "concrete-slab-cracks-under-flooring" },
       { type: "guide", slug: "why-is-my-subfloor-wet" },
       { type: "guide", slug: "can-engineered-hardwood-go-over-concrete" },
       { type: "guide", slug: "can-you-install-lvp-over-concrete" },
@@ -277,7 +284,10 @@ const targetedNextStepTargets: Partial<
   "why-flooring-fails-over-concrete": {
     primary: { type: "guide", slug: "how-to-test-concrete-moisture" },
     secondary: [
+      { type: "guide", slug: "concrete-slab-flooring-guide" },
       { type: "guide", slug: "can-moisture-come-through-concrete" },
+      { type: "guide", slug: "why-is-moisture-coming-through-my-slab" },
+      { type: "guide", slug: "concrete-slab-cracks-under-flooring" },
       { type: "guide", slug: "what-happens-if-flooring-is-installed-too-soon" },
       { type: "guide", slug: "common-basement-flooring-problems" },
       { type: "guide", slug: "can-you-install-lvp-over-concrete" },
@@ -306,6 +316,8 @@ const targetedNextStepTargets: Partial<
   "can-moisture-come-through-concrete": {
     primary: { type: "guide", slug: "how-to-test-concrete-moisture" },
     secondary: [
+      { type: "guide", slug: "concrete-slab-flooring-guide" },
+      { type: "guide", slug: "why-is-moisture-coming-through-my-slab" },
       { type: "guide", slug: "moisture-level-too-high-for-flooring" },
       { type: "guide", slug: "why-flooring-fails-over-concrete" },
       { type: "guide", slug: "can-engineered-hardwood-go-over-concrete" },
@@ -324,10 +336,64 @@ const targetedNextStepTargets: Partial<
   "what-happens-if-flooring-is-installed-too-soon": {
     primary: { type: "guide", slug: "hardwood-acclimation-mistakes" },
     secondary: [
+      { type: "guide", slug: "concrete-slab-flooring-guide" },
       { type: "guide", slug: "how-long-should-hardwood-acclimate" },
       { type: "guide", slug: "how-to-test-concrete-moisture" },
       { type: "guide", slug: "why-is-my-floor-swelling" },
       { type: "guide", slug: "why-flooring-fails-over-concrete" }
+    ]
+  },
+  "concrete-slab-flooring-guide": {
+    primary: { type: "guide", slug: "how-to-test-concrete-moisture" },
+    secondary: [
+      { type: "guide", slug: "why-flooring-fails-over-concrete" },
+      { type: "guide", slug: "best-flooring-for-concrete-slabs" },
+      { type: "guide", slug: "can-you-install-lvp-over-concrete" },
+      { type: "guide", slug: "can-engineered-hardwood-go-over-concrete" },
+      { type: "guide", slug: "concrete-slab-cracks-under-flooring" },
+      { type: "tool", slug: "flooring-square-footage-calculator" },
+      { type: "tool", slug: "waste-calculator" }
+    ]
+  },
+  "can-concrete-be-too-dry-for-flooring": {
+    primary: { type: "guide", slug: "concrete-slab-flooring-guide" },
+    secondary: [
+      { type: "guide", slug: "how-to-test-concrete-moisture" },
+      { type: "guide", slug: "why-flooring-fails-over-concrete" },
+      { type: "guide", slug: "best-underlayment-for-concrete-floors" },
+      { type: "guide", slug: "can-you-install-lvp-over-concrete" },
+      { type: "tool", slug: "waste-calculator" }
+    ]
+  },
+  "concrete-slab-cracks-under-flooring": {
+    primary: { type: "guide", slug: "concrete-slab-flooring-guide" },
+    secondary: [
+      { type: "guide", slug: "why-flooring-fails-over-concrete" },
+      { type: "guide", slug: "why-is-my-tile-cracking" },
+      { type: "guide", slug: "how-flat-should-a-floor-be-for-tile" },
+      { type: "guide", slug: "can-you-install-lvp-over-concrete" },
+      { type: "tool", slug: "transition-estimator" }
+    ]
+  },
+  "why-is-moisture-coming-through-my-slab": {
+    primary: { type: "guide", slug: "how-to-test-concrete-moisture" },
+    secondary: [
+      { type: "guide", slug: "concrete-slab-flooring-guide" },
+      { type: "guide", slug: "can-moisture-come-through-concrete" },
+      { type: "guide", slug: "why-flooring-fails-over-concrete" },
+      { type: "guide", slug: "common-basement-flooring-problems" },
+      { type: "guide", slug: "best-underlayment-for-concrete-floors" }
+    ]
+  },
+  "best-flooring-for-concrete-slabs": {
+    primary: { type: "guide", slug: "concrete-slab-flooring-guide" },
+    secondary: [
+      { type: "guide", slug: "how-to-test-concrete-moisture" },
+      { type: "guide", slug: "can-you-install-lvp-over-concrete" },
+      { type: "guide", slug: "can-engineered-hardwood-go-over-concrete" },
+      { type: "guide", slug: "can-carpet-be-installed-over-concrete" },
+      { type: "tool", slug: "flooring-square-footage-calculator" },
+      { type: "tool", slug: "transition-estimator" }
     ]
   },
   "common-basement-flooring-problems": {
