@@ -91,6 +91,7 @@ const guideDrafts: GuideDraft[] = [
     topicCluster: "subfloor-prep",
     relatedTools: ["flooring-square-footage-calculator", "waste-calculator"],
     relatedGuides: [
+      "flooring-movement-problems",
       "why-is-my-floor-clicking",
       "why-is-my-floor-bouncing",
       "why-is-my-floor-expanding",
@@ -320,6 +321,7 @@ const guideDrafts: GuideDraft[] = [
     topicCluster: "installation-method",
     relatedTools: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"],
     relatedGuides: [
+      "flooring-movement-problems",
       "why-is-my-lvp-floor-buckling",
       "why-are-my-lvp-seams-showing",
       "why-is-my-floor-expanding",
@@ -434,6 +436,7 @@ const guideDrafts: GuideDraft[] = [
     topicCluster: "installation-method",
     relatedTools: ["flooring-square-footage-calculator", "waste-calculator"],
     relatedGuides: [
+      "flooring-movement-problems",
       "hardwood-installation-humidity",
       "why-is-my-engineered-hardwood-separating",
       "what-happens-if-flooring-is-installed-too-soon",
@@ -2823,6 +2826,551 @@ const guideDrafts: GuideDraft[] = [
         question: "Is tile better than vinyl over concrete?",
         answer:
           "Tile can be very durable over concrete when the slab is stable and properly prepared. Vinyl may be easier to install in some spaces. Moisture, cracks, comfort, and room use should guide the choice."
+      }
+    ],
+    disclaimer: installConditionDisclaimer
+  },
+  {
+    slug: "flooring-movement-problems",
+    title: "Flooring Movement Problems",
+    description:
+      "A practical hub for diagnosing flooring movement problems such as clicking, lifting, separating, buckling, peaking, gapping, crowning, cupping, hollow sounds, and squeaks.",
+    metadataTitle: "Flooring Movement Problems: Clicking, Buckling, Gaps, Cupping",
+    metadataDescription:
+      "Diagnose flooring movement problems including clicking, lifting, separating, buckling, peaking, gapping, cupping, crowning, hollow sounds, and squeaks.",
+    dateModified: "2026-06-01",
+    readTime: "12 min read",
+    primaryEcosystem: "planning-measuring-transitions",
+    secondaryEcosystems: ["lvp", "laminate", "hardwood-engineered-hardwood", "tile"],
+    materialTypes: ["lvp", "lvt", "laminate", "hardwood", "engineered-hardwood", "ceramic-tile", "porcelain-tile"],
+    topicCluster: "installation-method",
+    relatedTools: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"],
+    relatedGuides: [
+      "why-is-my-floor-moving",
+      "why-do-floors-expand-and-contract",
+      "seasonal-flooring-movement",
+      "what-flooring-movement-is-normal",
+      "why-is-my-lvp-floor-clicking",
+      "why-is-my-lvp-lifting",
+      "why-is-my-lvp-floor-separating",
+      "why-is-my-lvp-floor-peaking",
+      "why-is-my-laminate-floor-separating",
+      "why-is-my-hardwood-floor-gapping",
+      "why-is-my-hardwood-floor-cupping",
+      "why-is-my-hardwood-floor-crowning",
+      "why-does-my-floor-feel-hollow",
+      "why-is-my-floor-squeaking"
+    ],
+    quickAnswer: [
+      "Flooring movement problems usually come from moisture, humidity, temperature change, subfloor movement, poor support, blocked expansion space, damaged locking joints, adhesive failure, or installing a product outside its requirements.",
+      "Use the symptom first: clicking, lifting, separating, buckling, peaking, gapping, crowning, cupping, hollow sounds, and squeaks each point to a different starting path. The final answer depends on the floor type, installation method, substrate, and room conditions."
+    ],
+    keySections: [
+      {
+        id: "symptom-lookup",
+        title: "Movement symptom lookup",
+        paragraphs: [
+          "Start by naming the symptom before deciding on a repair. A floor that clicks in one spot is not the same problem as a hardwood floor cupping across a room or an LVP floor peaking at a doorway.",
+          "The hub links below are organized by what the homeowner sees or hears first, then by the likely flooring system involved."
+        ],
+        bullets: [
+          "Clicking or squeaking: look for subfloor movement, hollow spots, underlayment, or joint stress.",
+          "Separating or gapping: check humidity, acclimation, locking joints, subfloor flatness, and expansion restrictions.",
+          "Buckling or peaking: check expansion space, fixed objects, long runs, heat, and moisture.",
+          "Cupping or crowning: start with moisture imbalance, humidity, slab or crawlspace conditions, and sanding history.",
+          "Hollow sounds or bouncing: check support, underlayment, adhesive bond, mortar coverage, or slab flatness."
+        ]
+      },
+      {
+        id: "common-causes",
+        title: "Common causes",
+        paragraphs: [
+          "Most movement problems are not random. Flooring systems move because materials respond to moisture and temperature, because floating floors need room to expand, or because the substrate below the floor is not supporting the product correctly.",
+          "Some movement is normal, especially with wood and seasonal humidity. Movement becomes a problem when it damages joints, lifts the floor, creates unsafe areas, or keeps getting worse."
+        ],
+        bullets: [
+          "Moisture, humidity, leaks, slab vapor, or wet subfloors.",
+          "Missing or blocked expansion gaps at walls, transitions, cabinets, or islands.",
+          "Uneven subfloors, low spots, humps, or weak patching.",
+          "Wrong underlayment, doubled padding, or adhesive incompatibility.",
+          "Product installed before acclimation, jobsite conditioning, or substrate prep was complete."
+        ]
+      },
+      {
+        id: "what-to-check-first",
+        title: "What to check first",
+        paragraphs: [
+          "Identify the floor type and installation method first. Floating LVP, floating laminate, glue-down vinyl, nail-down hardwood, engineered hardwood, and tile react differently to the same room condition.",
+          "Then map where the movement happens. Movement near exterior doors, slabs, bathrooms, appliances, or sunny windows often points to different causes than movement in one traffic path or one long hallway."
+        ],
+        bullets: [
+          "Mark the exact locations of noise, gaps, lifting, peaking, or hollow sounds.",
+          "Check moisture sources, humidity, HVAC, direct sun, and recent weather changes.",
+          "Inspect transitions, baseboards, door jambs, cabinets, and islands for pinning.",
+          "Look for subfloor flatness or support problems near the symptom.",
+          "Review the product instructions before cutting, fastening, filling, or forcing repairs."
+        ]
+      },
+      {
+        id: "when-to-call-a-professional",
+        title: "When to call a professional",
+        paragraphs: [
+          "Call a professional if movement is spreading, paired with moisture, lifting large areas, damaging locking joints, affecting stairs, or returning after a repair.",
+          "Professional evaluation is especially important for concrete slabs, hardwood moisture problems, tile cracks, glue-down failures, and suspected structural movement."
+        ]
+      }
+    ],
+    example: [
+      "A homeowner has LVP clicking in one hallway, a small peak near a transition, and a hollow sound in a nearby room. Those symptoms may share a cause, such as uneven subfloor support or restricted expansion, but each area should still be mapped separately.",
+      "The better next step is to check slab or subfloor flatness, transition fit, expansion gaps, and moisture conditions before replacing planks."
+    ],
+    commonMistakes: [
+      "Trying to repair the visible symptom without finding the movement source.",
+      "Fastening through a floating floor to stop noise.",
+      "Filling gaps before checking humidity or damaged joints.",
+      "Cutting expansion relief without checking moisture and product rules.",
+      "Assuming all movement is normal seasonal behavior."
+    ],
+    faq: [
+      {
+        question: "What causes most flooring movement problems?",
+        answer:
+          "The most common causes are moisture, humidity, temperature movement, subfloor support problems, blocked expansion gaps, wrong underlayment, adhesive issues, and product-specific installation mistakes."
+      },
+      {
+        question: "Is flooring movement always a defect?",
+        answer:
+          "No. Some movement is expected, especially with wood and floating floors. It becomes a concern when the floor lifts, separates, squeaks, feels unsafe, or changes beyond product expectations."
+      },
+      {
+        question: "Why does my floor move when I walk on it?",
+        answer:
+          "Movement under foot can point to a floating floor over a low spot, soft underlayment, loose subfloor panels, hollow tile, adhesive release, or framing movement."
+      },
+      {
+        question: "Can moisture cause floors to move?",
+        answer:
+          "Yes. Moisture and humidity can make wood, laminate, and some floor systems expand, cup, gap, swell, buckle, or release from adhesive."
+      }
+    ],
+    disclaimer: installConditionDisclaimer
+  },
+  {
+    slug: "why-is-my-floor-moving",
+    title: "Why Is My Floor Moving?",
+    description:
+      "Troubleshoot floors that move underfoot, including floating floor movement, subfloor support, moisture, underlayment, hollow spots, loose panels, and adhesive failure.",
+    metadataTitle: "Why Is My Floor Moving? What to Check First",
+    metadataDescription:
+      "Learn why floors move underfoot, including floating floors, uneven subfloors, moisture, underlayment, hollow spots, loose panels, and adhesive failure.",
+    dateModified: "2026-06-01",
+    readTime: "9 min read",
+    primaryEcosystem: "planning-measuring-transitions",
+    secondaryEcosystems: ["lvp", "laminate", "hardwood-engineered-hardwood", "tile"],
+    materialTypes: ["lvp", "lvt", "laminate", "hardwood", "engineered-hardwood", "ceramic-tile", "porcelain-tile"],
+    topicCluster: "subfloor-prep",
+    relatedTools: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"],
+    relatedGuides: [
+      "flooring-movement-problems",
+      "why-does-my-floor-feel-hollow",
+      "why-is-my-floor-squeaking",
+      "why-is-my-floor-bouncing",
+      "why-is-my-lvp-floor-clicking",
+      "why-is-my-laminate-floor-separating",
+      "why-are-my-flooring-joints-opening",
+      "subfloor-flatness-requirements-lvp",
+      "how-flat-should-a-subfloor-be-for-laminate"
+    ],
+    quickAnswer: [
+      "A floor that moves underfoot usually has a support, installation, moisture, or product-movement issue. Common causes include floating floors over low spots, soft or wrong underlayment, loose subfloor panels, hollow tile, adhesive release, blocked expansion, or seasonal material movement.",
+      "Start by identifying whether the finished floor is supposed to float, be glued, nailed, stapled, or set in mortar. The expected movement and repair options depend on that system."
+    ],
+    keySections: [
+      {
+        id: "common-causes",
+        title: "Common causes",
+        paragraphs: [
+          "Some floors are designed to move slightly as a system. Floating LVP and laminate are not fastened to the subfloor, but they still need a flat, supportive substrate and approved underlayment.",
+          "Movement becomes more concerning when it is localized, noisy, spreading, paired with gaps, or connected to moisture. A small hollow sound can be normal for some floating assemblies, while a soft spot that grows may need repair."
+        ],
+        bullets: [
+          "Floating floor moving over a low spot or hump.",
+          "Wrong, soft, doubled, or compressed underlayment.",
+          "Loose wood subfloor panels or joist movement.",
+          "Glue-down adhesive release or hollow tile areas.",
+          "Moisture, swelling, expansion pressure, or damaged joints."
+        ]
+      },
+      {
+        id: "what-to-check-first",
+        title: "What to check first",
+        paragraphs: [
+          "Mark the moving area and walk the surrounding floor slowly. A single repeatable spot often points to support below that spot. Movement near a wall, doorway, cabinet, or transition may point to pinning or expansion pressure.",
+          "Then look for companion symptoms: clicking, squeaking, hollow sound, gaps, peaking, lifting, swollen edges, cracked grout, or cupping."
+        ],
+        bullets: [
+          "Identify the floor type and installation method.",
+          "Mark whether movement is local, along a traffic path, or room-wide.",
+          "Check nearby transitions, trim, cabinets, islands, and doorways.",
+          "Look for moisture clues and recent humidity changes.",
+          "Review subfloor flatness and underlayment approval if details are available."
+        ]
+      },
+      {
+        id: "when-to-call-a-professional",
+        title: "When to call a professional",
+        paragraphs: [
+          "Call a professional if the floor feels unsafe, moves more over time, has visible joint damage, is over concrete with possible moisture, or would require lifting flooring to inspect.",
+          "Also call for tile cracks, glue-down release, hardwood movement, or movement near stairs and structural areas."
+        ]
+      }
+    ],
+    example: [
+      "A floating laminate floor moves slightly in one hallway and clicks when stepped on. The same hallway has a long run with no transition and a small gap reopening near the center.",
+      "That pattern points toward subfloor support, expansion pressure, or joint stress. The repair should start with flatness, expansion space, and locking joint inspection."
+    ],
+    commonMistakes: [
+      "Assuming all movement means the floor was installed wrong.",
+      "Nailing or screwing through a floating floor.",
+      "Ignoring a low spot because the surface looks flat.",
+      "Replacing planks without fixing support or moisture issues.",
+      "Treating tile, hardwood, LVP, and laminate movement the same way."
+    ],
+    faq: [
+      {
+        question: "Is it normal for floating floors to move?",
+        answer:
+          "Floating floors can have slight system movement, but they should not feel unstable, repeatedly click, separate, peak, or bounce over unsupported areas."
+      },
+      {
+        question: "Why does my floor move in one spot?",
+        answer:
+          "One moving spot often points to a low spot, loose subfloor panel, hollow tile, adhesive release, or localized damage below the finished floor."
+      },
+      {
+        question: "Can underlayment make a floor move?",
+        answer:
+          "Yes. Underlayment that is too soft, too thick, doubled up, compressed, or not approved for the product can allow movement and joint stress."
+      },
+      {
+        question: "Can moisture make a floor move?",
+        answer:
+          "Yes. Moisture can cause swelling, cupping, adhesive release, subfloor movement, or expansion pressure depending on the flooring type."
+      }
+    ],
+    disclaimer: installConditionDisclaimer
+  },
+  {
+    slug: "why-do-floors-expand-and-contract",
+    title: "Why Do Floors Expand And Contract?",
+    description:
+      "Understand why floors expand and contract with moisture, humidity, temperature, sunlight, product type, installation method, and room conditions.",
+    metadataTitle: "Why Do Floors Expand and Contract? Flooring Movement Guide",
+    metadataDescription:
+      "Learn why flooring expands and contracts, including humidity, moisture, temperature, sunlight, floating floors, hardwood movement, laminate, and LVP.",
+    dateModified: "2026-06-01",
+    readTime: "9 min read",
+    primaryEcosystem: "planning-measuring-transitions",
+    secondaryEcosystems: ["lvp", "laminate", "hardwood-engineered-hardwood"],
+    materialTypes: ["lvp", "lvt", "laminate", "hardwood", "engineered-hardwood"],
+    topicCluster: "installation-method",
+    relatedTools: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"],
+    relatedGuides: [
+      "flooring-movement-problems",
+      "seasonal-flooring-movement",
+      "what-flooring-movement-is-normal",
+      "why-is-my-floor-expanding",
+      "why-is-my-floor-swelling",
+      "why-is-my-lvp-floor-peaking",
+      "why-is-my-laminate-floor-buckling",
+      "why-is-my-hardwood-floor-gapping",
+      "hardwood-installation-humidity"
+    ],
+    quickAnswer: [
+      "Floors expand and contract because flooring materials respond to moisture, humidity, temperature, sunlight, and installation pressure. Wood and laminate are strongly affected by humidity and moisture. Floating LVP and laminate also need expansion space so the floor can move as a system.",
+      "Expansion and contraction are expected within limits. Problems happen when movement is blocked, moisture is excessive, the subfloor is not supportive, or the product is installed outside its requirements."
+    ],
+    keySections: [
+      {
+        id: "common-causes",
+        title: "Common causes",
+        paragraphs: [
+          "Every flooring material has a movement profile. Solid hardwood and engineered hardwood react to moisture content and room humidity. Laminate can swell or shrink with moisture and room conditions. LVP is more dimensionally stable in many situations, but temperature, sunlight, locking stress, and floating-floor restrictions still matter.",
+          "The goal is not to eliminate all movement. The goal is to keep movement within what the flooring system is designed to handle."
+        ],
+        bullets: [
+          "Seasonal humidity changes.",
+          "Wet subfloors, slab moisture, leaks, or high indoor humidity.",
+          "Temperature swings, direct sunlight, and unconditioned rooms.",
+          "Blocked expansion space at walls, trim, transitions, cabinets, or islands.",
+          "Long runs without required breaks or product-specific movement planning."
+        ]
+      },
+      {
+        id: "what-to-check-first",
+        title: "What to check first",
+        paragraphs: [
+          "When expansion or contraction becomes visible, compare the symptom to the season, room conditions, and floor type. Winter hardwood gaps can be normal in some homes, while swollen laminate edges near an exterior door point toward moisture.",
+          "Check whether the floor has room to move. Floating floors need the expansion space described by the product, and hardwood needs stable site conditions and proper moisture evaluation."
+        ],
+        bullets: [
+          "Measure indoor humidity and note seasonal changes.",
+          "Look for moisture sources near the symptom.",
+          "Inspect expansion space around walls, doorways, transitions, and fixed objects.",
+          "Check whether the floor is floating, glued, nailed, stapled, or tile-set.",
+          "Review product instructions for temperature, humidity, run length, and transition rules."
+        ]
+      },
+      {
+        id: "when-to-call-a-professional",
+        title: "When to call a professional",
+        paragraphs: [
+          "Call a professional if expansion causes buckling, peaking, lifting, cupping, crowning, recurring gaps, damaged joints, or transition movement.",
+          "A professional should also evaluate movement tied to concrete moisture, crawlspaces, leaks, radiant heat, or rooms with unstable HVAC."
+        ]
+      }
+    ],
+    example: [
+      "A home has small hardwood gaps in winter that mostly close in summer. In the same house, a laminate floor near a patio door has swollen edges and buckling that does not improve.",
+      "Those are different movement stories. The hardwood may be reacting seasonally, while the laminate area needs a moisture and expansion-space review."
+    ],
+    commonMistakes: [
+      "Calling all seasonal movement a defect.",
+      "Ignoring humidity because there is no visible leak.",
+      "Pinning floating floors under cabinets or tight transitions.",
+      "Assuming LVP never expands or contracts.",
+      "Filling wood gaps before the room conditions are understood."
+    ],
+    faq: [
+      {
+        question: "Do all floors expand and contract?",
+        answer:
+          "Most flooring materials move in some way, but the amount and cause vary by product. Wood and laminate are more moisture-sensitive; resilient floors may also move with temperature and installation conditions."
+      },
+      {
+        question: "Can expansion gaps stop buckling?",
+        answer:
+          "Proper expansion space helps floating floors move as designed, but it does not fix moisture, heat, subfloor, or product compatibility problems by itself."
+      },
+      {
+        question: "Why do hardwood gaps appear in winter?",
+        answer:
+          "Indoor air is often drier in winter, which can cause wood flooring to shrink. Large, uneven, or growing gaps need closer review."
+      },
+      {
+        question: "Can sunlight make flooring move?",
+        answer:
+          "Direct sunlight can heat flooring and contribute to expansion or movement, especially when product instructions have temperature or exposure limits."
+      }
+    ],
+    disclaimer: installConditionDisclaimer
+  },
+  {
+    slug: "seasonal-flooring-movement",
+    title: "Seasonal Flooring Movement Explained",
+    description:
+      "Learn how seasonal humidity, heating, cooling, moisture, and temperature changes affect hardwood, engineered hardwood, laminate, LVP, and floating floors.",
+    metadataTitle: "Seasonal Flooring Movement Explained",
+    metadataDescription:
+      "Understand seasonal flooring movement, including winter gaps, summer swelling, humidity, HVAC, hardwood, laminate, LVP, and when movement is concerning.",
+    dateModified: "2026-06-01",
+    readTime: "8 min read",
+    primaryEcosystem: "planning-measuring-transitions",
+    secondaryEcosystems: ["lvp", "laminate", "hardwood-engineered-hardwood"],
+    materialTypes: ["lvp", "lvt", "laminate", "hardwood", "engineered-hardwood"],
+    topicCluster: "installation-method",
+    relatedTools: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"],
+    relatedGuides: [
+      "flooring-movement-problems",
+      "why-do-floors-expand-and-contract",
+      "what-flooring-movement-is-normal",
+      "hardwood-installation-humidity",
+      "how-long-should-hardwood-acclimate",
+      "why-is-my-hardwood-floor-gapping",
+      "why-is-my-hardwood-floor-cupping",
+      "why-is-my-laminate-floor-separating",
+      "why-is-my-floor-expanding"
+    ],
+    quickAnswer: [
+      "Seasonal flooring movement happens when indoor humidity and temperature change through the year. Wood flooring may gap in dry seasons and tighten in humid seasons. Laminate and floating floors can also react when humidity, moisture, temperature, or expansion space is outside product expectations.",
+      "Some seasonal movement is normal. Movement that causes lifting, swelling, cupping, crowning, buckling, or repeated joint damage should be investigated."
+    ],
+    keySections: [
+      {
+        id: "common-causes",
+        title: "Common seasonal movement patterns",
+        paragraphs: [
+          "Winter heating often lowers indoor humidity, which can make wood products shrink. Summer humidity can make some products expand. Basements and slab-on-grade rooms can also change with seasonal ground moisture and humidity.",
+          "The same floor can behave differently room by room depending on sunlight, HVAC airflow, exterior doors, crawlspaces, and concrete slabs."
+        ],
+        bullets: [
+          "Winter dryness leading to hardwood gaps or squeaks.",
+          "Summer humidity causing swelling, tight seams, or cupping.",
+          "Basement humidity changing floating floor feel or odor.",
+          "Direct sunlight and temperature swings affecting resilient floors.",
+          "Seasonal ground moisture affecting slabs or crawlspaces."
+        ]
+      },
+      {
+        id: "what-to-check-first",
+        title: "What to check first",
+        paragraphs: [
+          "Track the timing. If gaps open during heating season and mostly close later, seasonal humidity may be involved. If swelling appears near one door or appliance, look for local moisture instead.",
+          "Measure indoor humidity where the floor is installed. A small humidity log can be more useful than guessing based on how the room feels."
+        ],
+        bullets: [
+          "Note whether the symptom changes by season.",
+          "Measure indoor humidity in the affected room.",
+          "Look for local moisture sources, exterior doors, and sunlight.",
+          "Check whether the movement is widespread or concentrated.",
+          "Compare the symptom to product room-condition requirements."
+        ]
+      },
+      {
+        id: "when-to-call-a-professional",
+        title: "When to call a professional",
+        paragraphs: [
+          "Call a professional if seasonal movement is severe, uneven, paired with moisture stains, causing buckling or cupping, or not reversing when conditions stabilize.",
+          "Also call if the floor is over concrete, near a crawlspace, recently installed, or showing several symptoms at once."
+        ]
+      }
+    ],
+    example: [
+      "A hardwood floor develops narrow gaps every winter and the homeowner notices indoor humidity dropping during heating season. The gaps mostly close in late spring.",
+      "That may be seasonal movement. If some boards also cup near an exterior wall, the homeowner should check for a local moisture or airflow problem instead of assuming the whole floor is behaving normally."
+    ],
+    commonMistakes: [
+      "Ignoring humidity history when diagnosing gaps.",
+      "Assuming seasonal movement explains every flooring problem.",
+      "Filling wood gaps before conditions stabilize.",
+      "Overlooking crawlspace or slab moisture.",
+      "Treating one wet area as normal seasonal expansion."
+    ],
+    faq: [
+      {
+        question: "Is seasonal flooring movement normal?",
+        answer:
+          "Some seasonal movement can be normal, especially with wood flooring. The movement should stay within product expectations and should not cause damage, unsafe areas, or repeated failures."
+      },
+      {
+        question: "Why does my hardwood floor gap in winter?",
+        answer:
+          "Indoor humidity often drops during heating season, which can make wood lose moisture and shrink slightly. Large or uneven gaps deserve inspection."
+      },
+      {
+        question: "Can laminate move seasonally?",
+        answer:
+          "Yes. Laminate can respond to humidity, moisture, and temperature. Buckling, swollen edges, or repeated separation should be checked."
+      },
+      {
+        question: "Can LVP move seasonally?",
+        answer:
+          "LVP may move with temperature, sunlight, expansion pressure, and room conditions. Follow the product's temperature and installation requirements."
+      }
+    ],
+    disclaimer: installConditionDisclaimer
+  },
+  {
+    slug: "what-flooring-movement-is-normal",
+    title: "What Flooring Movement Is Normal?",
+    description:
+      "Learn what flooring movement may be normal and what is concerning for LVP, laminate, hardwood, engineered hardwood, tile, floating floors, and seasonal changes.",
+    metadataTitle: "What Flooring Movement Is Normal? When to Worry",
+    metadataDescription:
+      "Understand normal vs concerning flooring movement, including small seasonal gaps, floating floor feel, clicking, buckling, cupping, hollow sounds, and when to call a pro.",
+    dateModified: "2026-06-01",
+    readTime: "9 min read",
+    primaryEcosystem: "planning-measuring-transitions",
+    secondaryEcosystems: ["lvp", "laminate", "hardwood-engineered-hardwood", "tile"],
+    materialTypes: ["lvp", "lvt", "laminate", "hardwood", "engineered-hardwood", "ceramic-tile", "porcelain-tile"],
+    topicCluster: "installation-method",
+    relatedTools: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"],
+    relatedGuides: [
+      "flooring-movement-problems",
+      "why-is-my-floor-moving",
+      "why-do-floors-expand-and-contract",
+      "seasonal-flooring-movement",
+      "why-does-my-floor-feel-hollow",
+      "why-is-my-lvp-floor-clicking",
+      "why-is-my-laminate-floor-separating",
+      "why-is-my-hardwood-floor-gapping",
+      "why-is-my-hardwood-floor-cupping"
+    ],
+    quickAnswer: [
+      "Normal flooring movement is small, predictable, and within the product's expected behavior. Examples can include slight seasonal wood gaps, minor sound differences in a floating floor, or small changes as humidity shifts.",
+      "Movement is more concerning when it gets worse, creates lifting or buckling, opens joints repeatedly, damages locking systems, causes cupping or crowning, feels soft or unsafe, or appears after moisture exposure."
+    ],
+    keySections: [
+      {
+        id: "common-causes",
+        title: "Normal movement versus warning signs",
+        paragraphs: [
+          "The line between normal and concerning movement depends on the floor type. Hardwood can show seasonal movement. Floating floors can sound different than glued or nailed floors. Tile should not flex underfoot.",
+          "A movement symptom should be judged by location, severity, trend, and whether other symptoms are present."
+        ],
+        bullets: [
+          "Usually normal: small seasonal wood gaps that close when humidity returns.",
+          "Usually normal: slight sound differences from some floating floor assemblies.",
+          "Concerning: buckling, peaking, lifting, swelling, or repeated joint separation.",
+          "Concerning: cupping, crowning, moisture stains, odor, or soft areas.",
+          "Concerning: tile cracks, hollow loose areas, or movement near stairs."
+        ]
+      },
+      {
+        id: "what-to-check-first",
+        title: "What to check first",
+        paragraphs: [
+          "Ask whether the movement is new, worsening, seasonal, localized, or widespread. Then compare the symptom to the floor type and installation method.",
+          "If the floor is new, review installation conditions. If the floor is older, look for moisture changes, HVAC changes, renovations, furniture changes, or subfloor movement."
+        ],
+        bullets: [
+          "Document where the movement happens and whether it is spreading.",
+          "Look for moisture, swelling, odor, stains, or cupping.",
+          "Check whether gaps open and close seasonally.",
+          "Inspect transitions, baseboards, cabinets, and long runs.",
+          "Compare the issue to product instructions and installer recommendations."
+        ]
+      },
+      {
+        id: "when-to-call-a-professional",
+        title: "When to call a professional",
+        paragraphs: [
+          "Call a professional when movement creates a trip hazard, damages flooring, affects stairs, involves moisture, or returns after repair.",
+          "Professional help is also wise when the floor is over concrete, over a crawlspace, recently installed, or when warranty documentation may require moisture or installation records."
+        ]
+      }
+    ],
+    example: [
+      "A hardwood living room has tiny gaps during winter that close in spring. A nearby laminate hallway has a joint that opens every time it is tapped closed.",
+      "The hardwood may be showing normal seasonal movement. The laminate joint is a warning sign because the same joint keeps failing, which suggests support, locking damage, expansion restriction, or moisture."
+    ],
+    commonMistakes: [
+      "Calling every sound or gap normal.",
+      "Calling every seasonal change a failure.",
+      "Filling gaps before checking humidity and moisture.",
+      "Ignoring a moving spot that is getting worse.",
+      "Comparing floating floor sound to nailed hardwood sound."
+    ],
+    faq: [
+      {
+        question: "Is a hollow sound normal with floating floors?",
+        answer:
+          "Some floating floors can sound different than glued or nailed floors, but hollow sound paired with movement, gaps, or soft spots should be checked."
+      },
+      {
+        question: "Are hardwood gaps normal?",
+        answer:
+          "Small seasonal gaps can be normal in some homes. Large, uneven, growing, or localized gaps may point to moisture, acclimation, or installation issues."
+      },
+      {
+        question: "Is clicking normal in LVP?",
+        answer:
+          "Occasional minor sound may happen in some floors, but repeated clicking in one spot can point to subfloor flatness, underlayment, locking joint, or expansion problems."
+      },
+      {
+        question: "When is flooring movement unsafe?",
+        answer:
+          "Movement is unsafe when it creates trip hazards, soft areas, loose tile, lifted planks, stair movement, or structural concern."
       }
     ],
     disclaimer: installConditionDisclaimer

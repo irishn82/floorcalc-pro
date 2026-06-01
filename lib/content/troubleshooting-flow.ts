@@ -2,6 +2,7 @@ import type { CauseSymptomCheckRow } from "@/components/troubleshooting/CauseSym
 import type { GuideEcosystemSlug, GuideSlug, ToolSlug } from "@/data/types";
 
 export type TroubleshootingProblemGroupSlug =
+  | "movement"
   | "lvp"
   | "laminate"
   | "hardwood"
@@ -27,6 +28,31 @@ export type TroubleshootingProblemGroup = {
 };
 
 export const troubleshootingProblemGroups: TroubleshootingProblemGroup[] = [
+  {
+    slug: "movement",
+    title: "Movement Problems",
+    description:
+      "Diagnose floors that click, lift, separate, buckle, peak, gap, cup, crown, sound hollow, squeak, or move underfoot.",
+    ecosystemSlug: "planning-measuring-transitions",
+    guideSlugs: [
+      "flooring-movement-problems",
+      "why-is-my-floor-moving",
+      "why-do-floors-expand-and-contract",
+      "seasonal-flooring-movement",
+      "what-flooring-movement-is-normal",
+      "why-is-my-lvp-floor-clicking",
+      "why-is-my-lvp-lifting",
+      "why-is-my-lvp-floor-separating",
+      "why-is-my-lvp-floor-peaking",
+      "why-is-my-laminate-floor-separating",
+      "why-is-my-hardwood-floor-gapping",
+      "why-is-my-hardwood-floor-cupping",
+      "why-is-my-hardwood-floor-crowning",
+      "why-does-my-floor-feel-hollow",
+      "why-is-my-floor-squeaking"
+    ],
+    toolSlugs: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"]
+  },
   {
     slug: "lvp",
     title: "LVP Problems",
@@ -183,6 +209,111 @@ export const troubleshootingProblemGroups: TroubleshootingProblemGroup[] = [
 ];
 
 const troubleshootingFlows: Partial<Record<GuideSlug, TroubleshootingFlow>> = {
+  "flooring-movement-problems": {
+    group: "movement",
+    causeRows: [
+      { cause: "Moisture or humidity", symptom: "Swelling, cupping, gapping, or buckling", check: "Check room humidity, leaks, slab moisture, and wet subfloors." },
+      { cause: "Blocked expansion", symptom: "Peaking, lifting, or transition pressure", check: "Inspect perimeter gaps, trim, cabinets, islands, and tracks." },
+      { cause: "Unsupported floor", symptom: "Clicking, hollow sound, bounce, or repeated gaps", check: "Check subfloor flatness, low spots, underlayment, and support." },
+      { cause: "Installation timing", symptom: "Movement soon after install", check: "Review acclimation, HVAC, substrate prep, and product requirements." }
+    ],
+    whatToCheckFirst: [
+      "Name the main symptom: clicking, lifting, separating, buckling, peaking, gapping, cupping, crowning, hollow sound, or squeak.",
+      "Identify the floor type and installation method.",
+      "Map where the movement occurs and whether it is spreading.",
+      "Check moisture, humidity, expansion space, transitions, underlayment, and subfloor support."
+    ],
+    whenToCallAPro: [
+      "Movement is spreading, lifting the floor, or damaging joints.",
+      "Moisture, concrete, crawlspace, hardwood cupping, tile cracks, or adhesive release is involved.",
+      "The floor feels soft, unsafe, or moves near stairs.",
+      "The repair may require lifting flooring or documenting field conditions."
+    ]
+  },
+  "why-is-my-floor-moving": {
+    group: "movement",
+    causeRows: [
+      { cause: "Floating floor over low spot", symptom: "Movement repeats in one area", check: "Look for hollow sound, bounce, or gaps nearby." },
+      { cause: "Loose subfloor or framing", symptom: "Movement with squeak or springy feel", check: "Check wood panels, joists, and access from below if available." },
+      { cause: "Wrong underlayment", symptom: "Soft feel or joint stress", check: "Verify thickness, density, and product approval." },
+      { cause: "Adhesive or mortar release", symptom: "Hollow sound or loose finished flooring", check: "Evaluate bond, slab prep, mortar coverage, or contamination." }
+    ],
+    whatToCheckFirst: [
+      "Mark whether movement is local, room-wide, or along a traffic path.",
+      "Identify whether the floor floats, glues, nails, staples, or is set in mortar.",
+      "Look for clicking, squeaking, gaps, lifting, cracked grout, or soft spots.",
+      "Check nearby walls, transitions, cabinets, doors, and moisture sources."
+    ],
+    whenToCallAPro: [
+      "The floor feels unsafe, soft, or increasingly loose.",
+      "Tile cracks, adhesive release, hardwood movement, or concrete moisture is suspected.",
+      "The floor may need to be lifted to inspect the substrate.",
+      "Movement appears near stairs or structural areas."
+    ]
+  },
+  "why-do-floors-expand-and-contract": {
+    group: "movement",
+    causeRows: [
+      { cause: "Humidity change", symptom: "Seasonal gaps, swelling, or cupping", check: "Measure indoor humidity and compare to product requirements." },
+      { cause: "Temperature or sunlight", symptom: "Movement near windows, doors, or heat sources", check: "Check direct sun, room temperature, and product limits." },
+      { cause: "Blocked movement", symptom: "Peaking, buckling, or tight seams", check: "Inspect expansion gaps, transitions, cabinets, and long runs." },
+      { cause: "Moisture exposure", symptom: "Swollen edges, stains, odor, or lifting", check: "Look for leaks, slab vapor, wet cleaning, or subfloor moisture." }
+    ],
+    whatToCheckFirst: [
+      "Identify the material: hardwood, engineered hardwood, laminate, LVP, or tile.",
+      "Check whether movement follows seasonal humidity or a local moisture source.",
+      "Inspect expansion space around fixed objects and transitions.",
+      "Review the product requirements for temperature, humidity, run length, and installation method."
+    ],
+    whenToCallAPro: [
+      "Expansion causes buckling, peaking, lifting, cupping, crowning, or recurring gaps.",
+      "Movement is localized near a slab, leak, crawlspace, or exterior door.",
+      "The floor is pinned by cabinets or transitions and needs correction.",
+      "Moisture testing or product documentation may be needed."
+    ]
+  },
+  "seasonal-flooring-movement": {
+    group: "movement",
+    causeRows: [
+      { cause: "Winter dryness", symptom: "Hardwood gaps or squeaks", check: "Track indoor humidity during heating season." },
+      { cause: "Summer humidity", symptom: "Tight seams, swelling, or cupping", check: "Check humidity, HVAC, and moisture sources." },
+      { cause: "Basement or slab seasonality", symptom: "Musty odor or changing floating-floor feel", check: "Review slab moisture, humidity, and ventilation." },
+      { cause: "Sun and temperature swings", symptom: "Movement near windows or exterior doors", check: "Check heat exposure and product temperature limits." }
+    ],
+    whatToCheckFirst: [
+      "Document when the symptom appears and whether it reverses later.",
+      "Measure humidity in the affected room.",
+      "Look for local moisture sources before calling a symptom seasonal.",
+      "Compare behavior to the floor type and product requirements."
+    ],
+    whenToCallAPro: [
+      "Movement is severe, uneven, or causing damage.",
+      "Gaps, cupping, swelling, or buckling do not improve after conditions stabilize.",
+      "The floor is over concrete, a crawlspace, or a recently wet area.",
+      "The floor was recently installed and jobsite conditions are uncertain."
+    ]
+  },
+  "what-flooring-movement-is-normal": {
+    group: "movement",
+    causeRows: [
+      { cause: "Expected seasonal wood movement", symptom: "Small gaps that change with seasons", check: "Track humidity and whether gaps close later." },
+      { cause: "Floating floor sound", symptom: "Slight hollow tone without damage", check: "Check for repeated movement, gaps, or soft spots." },
+      { cause: "Concerning movement", symptom: "Buckling, peaking, cupping, lifting, or spreading gaps", check: "Inspect moisture, expansion space, and support." },
+      { cause: "Unsafe movement", symptom: "Loose tile, trip hazard, stair movement, or soft floor", check: "Stop using unsafe areas and get professional evaluation." }
+    ],
+    whatToCheckFirst: [
+      "Decide whether the symptom is small and stable or worsening.",
+      "Check whether movement follows normal seasonal changes.",
+      "Look for moisture, soft areas, joint damage, or transition pressure.",
+      "Compare the symptom to the exact floor type and installation method."
+    ],
+    whenToCallAPro: [
+      "Movement creates a trip hazard or unsafe area.",
+      "The issue involves moisture, cupping, crowning, buckling, or loose tile.",
+      "The same gap or joint keeps reopening after repair.",
+      "The floor is over concrete, a crawlspace, or recent construction moisture."
+    ]
+  },
   "why-is-my-floor-clicking": {
     group: "laminate",
     causeRows: [

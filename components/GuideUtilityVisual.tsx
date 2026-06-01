@@ -131,6 +131,55 @@ function ConcreteSlabHubVisual() {
   );
 }
 
+function MovementProblemsVisual() {
+  const rows = [
+    ["Clicking or squeaking", "Low spots, underlayment, subfloor movement", "Check support and nearby transitions"],
+    ["Separating or gapping", "Humidity, joint damage, or blocked movement", "Check moisture, expansion, and locking edges"],
+    ["Buckling or peaking", "Expansion pressure or fixed objects", "Check walls, cabinets, islands, and long runs"],
+    ["Cupping or crowning", "Moisture imbalance or unstable conditions", "Check humidity, slab, crawlspace, and leaks"]
+  ];
+
+  return (
+    <div className="grid gap-3">
+      <ExpansionGapDiagram />
+      <ComparisonTable columns={["Symptom", "Likely direction", "First check"]} rows={rows} />
+    </div>
+  );
+}
+
+function SeasonalMovementVisual() {
+  const rows = [
+    ["Dry season", "Wood can shrink and show narrow gaps", "Track indoor humidity and whether gaps close later"],
+    ["Humid season", "Floors can tighten, swell, cup, or feel stressed", "Check HVAC, moisture sources, and room conditions"],
+    ["Local moisture", "One area moves differently than the rest", "Look near doors, appliances, slabs, baths, and crawlspaces"],
+    ["Temperature swing", "Movement near sun or heat exposure", "Review product temperature and expansion requirements"]
+  ];
+
+  return (
+    <div className="grid gap-3">
+      <div className="rounded-md border border-line bg-white p-3" aria-label="Seasonal flooring movement concept">
+        <div className="grid gap-2 sm:grid-cols-3">
+          {[
+            ["Winter", "Drier indoor air", "Small wood gaps may appear"],
+            ["Spring/Fall", "Conditions shift", "Movement should be monitored"],
+            ["Summer", "Higher humidity", "Floors may tighten or swell"]
+          ].map(([season, condition, symptom]) => (
+            <div key={season} className="rounded border border-accent-100 bg-accent-50 p-3">
+              <p className="text-sm font-black text-ink">{season}</p>
+              <p className="mt-1 text-xs font-bold uppercase tracking-wide text-accent-700">{condition}</p>
+              <p className="mt-2 text-xs leading-5 text-slate-600">{symptom}</p>
+            </div>
+          ))}
+        </div>
+        <p className="mt-3 text-xs leading-5 text-slate-500">
+          Visual example only. Final layout depends on product requirements, field conditions, and installer judgment.
+        </p>
+      </div>
+      <ComparisonTable columns={["Condition", "Common movement", "What to check"]} rows={rows} />
+    </div>
+  );
+}
+
 function DirectionDecisionVisual() {
   const rows = [
     ["Longest sight line", "Usually run with the main view", "Helps connected rooms feel intentional"],
@@ -208,6 +257,30 @@ function TileLayoutVisual() {
 }
 
 export function GuideUtilityVisual({ guide, hideDiagnosticTables = false }: GuideUtilityVisualProps) {
+  if (guide.slug === "flooring-movement-problems") {
+    return (
+      <VisualShell title="Flooring movement symptom map">
+        <MovementProblemsVisual />
+      </VisualShell>
+    );
+  }
+
+  if (["seasonal-flooring-movement", "why-do-floors-expand-and-contract"].includes(guide.slug)) {
+    return (
+      <VisualShell title="Seasonal movement planning view">
+        <SeasonalMovementVisual />
+      </VisualShell>
+    );
+  }
+
+  if (["why-is-my-floor-moving", "what-flooring-movement-is-normal"].includes(guide.slug)) {
+    return (
+      <VisualShell title="Movement pressure example">
+        <MovementProblemsVisual />
+      </VisualShell>
+    );
+  }
+
   if (guide.slug === "concrete-slab-flooring-guide") {
     return (
       <VisualShell title="Concrete slab flooring resource map">

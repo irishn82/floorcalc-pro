@@ -435,6 +435,7 @@ const guideDrafts: GuideDraft[] = [
     topicCluster: "subfloor-prep",
     relatedTools: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"],
     relatedGuides: [
+      "flooring-movement-problems",
       "why-is-my-lvp-floor-buckling",
       "why-are-my-lvp-seams-showing",
       "why-is-my-floor-expanding",
@@ -804,6 +805,7 @@ const guideDrafts: GuideDraft[] = [
     topicCluster: "installation-method",
     relatedTools: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"],
     relatedGuides: [
+      "flooring-movement-problems",
       "laminate-floor-separating-what-to-check-first",
       "why-is-my-laminate-floor-buckling",
       "why-are-my-flooring-joints-opening",
@@ -1658,6 +1660,7 @@ const guideDrafts: GuideDraft[] = [
     topicCluster: "subfloor-prep",
     relatedTools: ["flooring-square-footage-calculator", "waste-calculator"],
     relatedGuides: [
+      "flooring-movement-problems",
       "why-is-my-hardwood-floor-gapping",
       "hardwood-acclimation-mistakes",
       "how-long-should-hardwood-acclimate",

@@ -116,6 +116,7 @@ const targetedNextStepTargets: Partial<
   "why-is-my-laminate-floor-separating": {
     primary: { type: "guide", slug: "laminate-floor-separating-what-to-check-first" },
     secondary: [
+      { type: "guide", slug: "flooring-movement-problems" },
       { type: "guide", slug: "why-is-my-laminate-floor-buckling" },
       { type: "guide", slug: "why-are-my-flooring-joints-opening" },
       { type: "guide", slug: "why-is-my-floor-swelling" },
@@ -174,6 +175,7 @@ const targetedNextStepTargets: Partial<
   "why-is-my-floor-squeaking": {
     primary: { type: "guide", slug: "why-does-my-floor-feel-hollow" },
     secondary: [
+      { type: "guide", slug: "flooring-movement-problems" },
       { type: "guide", slug: "why-is-my-floor-clicking" },
       { type: "guide", slug: "why-is-my-laminate-floor-separating" },
       { type: "guide", slug: "subfloor-flatness-requirements-lvp" },
@@ -192,6 +194,7 @@ const targetedNextStepTargets: Partial<
   "why-is-my-lvp-floor-peaking": {
     primary: { type: "guide", slug: "why-is-my-lvp-floor-separating" },
     secondary: [
+      { type: "guide", slug: "flooring-movement-problems" },
       { type: "guide", slug: "why-is-my-lvp-lifting" },
       { type: "guide", slug: "can-you-install-cabinets-over-floating-lvp" },
       { type: "guide", slug: "why-is-my-floor-expanding" },
@@ -202,6 +205,7 @@ const targetedNextStepTargets: Partial<
   "why-is-my-hardwood-floor-crowning": {
     primary: { type: "guide", slug: "why-is-my-hardwood-floor-cupping" },
     secondary: [
+      { type: "guide", slug: "flooring-movement-problems" },
       { type: "guide", slug: "moisture-level-too-high-for-flooring" },
       { type: "guide", slug: "how-long-should-hardwood-acclimate" },
       { type: "guide", slug: "hardwood-acclimation-mistakes" },
@@ -221,6 +225,7 @@ const targetedNextStepTargets: Partial<
   "why-is-my-lvp-floor-separating": {
     primary: { type: "guide", slug: "subfloor-flatness-requirements-lvp" },
     secondary: [
+      { type: "guide", slug: "flooring-movement-problems" },
       { type: "guide", slug: "why-is-my-lvp-floor-buckling" },
       { type: "guide", slug: "why-are-my-lvp-seams-showing" },
       { type: "guide", slug: "why-is-my-lvp-floor-clicking" },
@@ -242,6 +247,7 @@ const targetedNextStepTargets: Partial<
   "why-is-my-hardwood-floor-gapping": {
     primary: { type: "guide", slug: "how-long-should-hardwood-acclimate" },
     secondary: [
+      { type: "guide", slug: "flooring-movement-problems" },
       { type: "guide", slug: "hardwood-installation-humidity" },
       { type: "guide", slug: "why-is-my-engineered-hardwood-separating" },
       { type: "guide", slug: "hardwood-acclimation-mistakes" },
@@ -396,6 +402,62 @@ const targetedNextStepTargets: Partial<
       { type: "tool", slug: "transition-estimator" }
     ]
   },
+  "flooring-movement-problems": {
+    primary: { type: "guide", slug: "why-is-my-floor-moving" },
+    secondary: [
+      { type: "guide", slug: "what-flooring-movement-is-normal" },
+      { type: "guide", slug: "why-do-floors-expand-and-contract" },
+      { type: "guide", slug: "seasonal-flooring-movement" },
+      { type: "guide", slug: "why-is-my-lvp-floor-clicking" },
+      { type: "guide", slug: "why-is-my-laminate-floor-separating" },
+      { type: "guide", slug: "why-is-my-hardwood-floor-cupping" },
+      { type: "tool", slug: "transition-estimator" }
+    ]
+  },
+  "why-is-my-floor-moving": {
+    primary: { type: "guide", slug: "flooring-movement-problems" },
+    secondary: [
+      { type: "guide", slug: "why-does-my-floor-feel-hollow" },
+      { type: "guide", slug: "why-is-my-floor-squeaking" },
+      { type: "guide", slug: "why-is-my-lvp-floor-clicking" },
+      { type: "guide", slug: "why-is-my-laminate-floor-separating" },
+      { type: "guide", slug: "why-are-my-flooring-joints-opening" },
+      { type: "tool", slug: "flooring-square-footage-calculator" }
+    ]
+  },
+  "why-do-floors-expand-and-contract": {
+    primary: { type: "guide", slug: "flooring-movement-problems" },
+    secondary: [
+      { type: "guide", slug: "seasonal-flooring-movement" },
+      { type: "guide", slug: "what-flooring-movement-is-normal" },
+      { type: "guide", slug: "why-is-my-floor-expanding" },
+      { type: "guide", slug: "why-is-my-lvp-floor-peaking" },
+      { type: "guide", slug: "why-is-my-hardwood-floor-gapping" },
+      { type: "tool", slug: "waste-calculator" }
+    ]
+  },
+  "seasonal-flooring-movement": {
+    primary: { type: "guide", slug: "what-flooring-movement-is-normal" },
+    secondary: [
+      { type: "guide", slug: "flooring-movement-problems" },
+      { type: "guide", slug: "why-do-floors-expand-and-contract" },
+      { type: "guide", slug: "hardwood-installation-humidity" },
+      { type: "guide", slug: "why-is-my-hardwood-floor-gapping" },
+      { type: "guide", slug: "why-is-my-laminate-floor-separating" },
+      { type: "tool", slug: "waste-calculator" }
+    ]
+  },
+  "what-flooring-movement-is-normal": {
+    primary: { type: "guide", slug: "flooring-movement-problems" },
+    secondary: [
+      { type: "guide", slug: "why-is-my-floor-moving" },
+      { type: "guide", slug: "seasonal-flooring-movement" },
+      { type: "guide", slug: "why-do-floors-expand-and-contract" },
+      { type: "guide", slug: "why-is-my-lvp-floor-clicking" },
+      { type: "guide", slug: "why-is-my-hardwood-floor-gapping" },
+      { type: "tool", slug: "flooring-square-footage-calculator" }
+    ]
+  },
   "common-basement-flooring-problems": {
     primary: { type: "guide", slug: "how-to-test-concrete-moisture" },
     secondary: [
@@ -408,6 +470,7 @@ const targetedNextStepTargets: Partial<
   "why-is-my-floor-bouncing": {
     primary: { type: "guide", slug: "why-is-my-floor-squeaking" },
     secondary: [
+      { type: "guide", slug: "flooring-movement-problems" },
       { type: "guide", slug: "why-does-my-floor-feel-hollow" },
       { type: "guide", slug: "why-are-my-flooring-joints-opening" },
       { type: "guide", slug: "subfloor-flatness-requirements-lvp" },
@@ -417,6 +480,7 @@ const targetedNextStepTargets: Partial<
   "why-are-my-flooring-joints-opening": {
     primary: { type: "guide", slug: "why-is-my-laminate-floor-separating" },
     secondary: [
+      { type: "guide", slug: "flooring-movement-problems" },
       { type: "guide", slug: "why-is-my-lvp-floor-separating" },
       { type: "guide", slug: "why-is-my-hardwood-floor-gapping" },
       { type: "guide", slug: "why-is-my-floor-bouncing" },
@@ -444,6 +508,7 @@ const targetedNextStepTargets: Partial<
   "why-is-my-lvp-floor-buckling": {
     primary: { type: "guide", slug: "why-is-my-lvp-floor-peaking" },
     secondary: [
+      { type: "guide", slug: "flooring-movement-problems" },
       { type: "guide", slug: "why-is-my-lvp-floor-separating" },
       { type: "guide", slug: "why-is-my-lvp-lifting" },
       { type: "guide", slug: "can-you-install-cabinets-over-floating-lvp" },

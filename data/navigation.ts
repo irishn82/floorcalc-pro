@@ -1,6 +1,11 @@
 import type { GuideSlug, ToolSlug } from "@/data/types";
 
 export const troubleshootingGuideSlugs: GuideSlug[] = [
+  "flooring-movement-problems",
+  "why-is-my-floor-moving",
+  "why-do-floors-expand-and-contract",
+  "seasonal-flooring-movement",
+  "what-flooring-movement-is-normal",
   "why-is-my-floor-clicking",
   "why-is-my-lvp-floor-clicking",
   "why-is-my-lvp-lifting",
@@ -45,6 +50,8 @@ export const toolGuideLinks: Record<ToolSlug, GuideSlug[]> = {
     "how-much-flooring-do-i-need",
     "which-direction-should-flooring-run",
     "flooring-direction-mistakes",
+    "flooring-movement-problems",
+    "why-is-my-floor-moving",
     "can-engineered-hardwood-go-over-concrete",
     "concrete-slab-flooring-guide",
     "how-to-test-concrete-moisture",
@@ -61,6 +68,9 @@ export const toolGuideLinks: Record<ToolSlug, GuideSlug[]> = {
     "flooring-direction-mistakes",
     "how-much-extra-flooring-should-i-keep",
     "how-much-extra-carpet-should-i-order",
+    "flooring-movement-problems",
+    "why-do-floors-expand-and-contract",
+    "seasonal-flooring-movement",
     "moisture-level-too-high-for-flooring",
     "concrete-slab-flooring-guide",
     "why-is-my-floor-swelling",
@@ -94,6 +104,8 @@ export const toolGuideLinks: Record<ToolSlug, GuideSlug[]> = {
     "flooring-direction-mistakes",
     "why-is-my-transition-strip-moving",
     "why-are-my-flooring-joints-opening",
+    "flooring-movement-problems",
+    "what-flooring-movement-is-normal",
     "why-is-my-tile-cracking",
     "why-is-my-lvp-floor-peaking",
     "luxury-vinyl-over-tile"

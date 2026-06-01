@@ -224,6 +224,7 @@ export const troubleshootingGuides: Guide[] = [
     topicCluster: "subfloor-prep",
     relatedTools: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"],
     relatedGuides: [
+      "flooring-movement-problems",
       "why-is-my-lvp-floor-separating",
       "can-you-install-cabinets-over-floating-lvp",
       "how-long-should-lvp-acclimate",
@@ -427,6 +428,7 @@ export const troubleshootingGuides: Guide[] = [
     topicCluster: "subfloor-prep",
     relatedTools: ["flooring-square-footage-calculator", "waste-calculator"],
     relatedGuides: [
+      "flooring-movement-problems",
       "subfloor-flatness-requirements-lvp",
       "glue-down-vs-floating-floor",
       "why-is-my-tile-cracking",
@@ -529,6 +531,7 @@ export const troubleshootingGuides: Guide[] = [
     topicCluster: "subfloor-prep",
     relatedTools: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"],
     relatedGuides: [
+      "flooring-movement-problems",
       "why-is-my-lvp-floor-clicking",
       "why-is-my-lvp-lifting",
       "subfloor-flatness-requirements-lvp",
@@ -741,6 +744,7 @@ export const troubleshootingGuides: Guide[] = [
     topicCluster: "installation-method",
     relatedTools: ["flooring-square-footage-calculator", "waste-calculator"],
     relatedGuides: [
+      "flooring-movement-problems",
       "how-long-should-hardwood-acclimate",
       "hardwood-acclimation-mistakes",
       "why-is-my-hardwood-floor-cupping",

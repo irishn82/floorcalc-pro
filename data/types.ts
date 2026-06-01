@@ -146,7 +146,12 @@ export type GuideSlug =
   | "can-concrete-be-too-dry-for-flooring"
   | "concrete-slab-cracks-under-flooring"
   | "why-is-moisture-coming-through-my-slab"
-  | "best-flooring-for-concrete-slabs";
+  | "best-flooring-for-concrete-slabs"
+  | "flooring-movement-problems"
+  | "why-is-my-floor-moving"
+  | "why-do-floors-expand-and-contract"
+  | "seasonal-flooring-movement"
+  | "what-flooring-movement-is-normal";
 
 export type GuideSection = {
   id: string;
