@@ -5,7 +5,7 @@ import { tools } from "@/data/tools";
 import { siteConfig } from "@/lib/seo/metadata";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticRoutes = ["", "/tools", "/guides", "/guides/troubleshooting"].map((path) => ({
+  const staticRoutes = ["", "/tools", "/guides", "/guides/troubleshooting", "/guides/browse-problems"].map((path) => ({
     url: `${siteConfig.url}${path}`,
     lastModified: new Date("2026-05-22")
   }));

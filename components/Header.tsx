@@ -2,17 +2,13 @@ import Link from "next/link";
 import { BrandMark } from "@/components/BrandMark";
 import { Container } from "@/components/Container";
 
-const navItems = [
+const navItems: { href: string; label: string; shortLabel?: string }[] = [
   { href: "/", label: "Home" },
   { href: "/tools", label: "Tools" },
-  { href: "/guides", label: "Guides" }
+  { href: "/guides", label: "Guides" },
+  { href: "/guides/troubleshooting", label: "Troubleshooting", shortLabel: "Fixes" },
+  { href: "/guides/browse-problems", label: "Browse Problems", shortLabel: "Problems" }
 ];
-
-const troubleshootingNavItem = {
-  href: "/guides/troubleshooting",
-  label: "Troubleshooting",
-  shortLabel: "Fixes"
-};
 
 export function Header() {
   return (
@@ -30,19 +26,12 @@ export function Header() {
             <Link
               key={item.href}
               href={item.href}
-              className="inline-flex items-center rounded-lg px-2.5 py-2 transition-colors hover:bg-slate-100 hover:text-ink sm:px-3"
+              className="inline-flex items-center rounded-lg px-1.5 py-2 transition-colors hover:bg-slate-100 hover:text-ink sm:px-3"
             >
-              {item.label}
+              <span className={item.shortLabel ? "hidden sm:inline" : ""}>{item.label}</span>
+              {item.shortLabel ? <span className="sm:hidden">{item.shortLabel}</span> : null}
             </Link>
           ))}
-
-          <Link
-            href={troubleshootingNavItem.href}
-            className="inline-flex items-center rounded-lg px-2.5 py-2 transition-colors hover:bg-slate-100 hover:text-ink sm:px-3"
-          >
-            <span className="hidden sm:inline">{troubleshootingNavItem.label}</span>
-            <span className="sm:hidden">{troubleshootingNavItem.shortLabel}</span>
-          </Link>
         </nav>
       </Container>
     </header>

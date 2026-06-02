@@ -55,7 +55,20 @@ export default function GuidesIndexPage() {
               description="Practical flooring articles for measuring rooms, estimating waste, planning carpet seams, choosing transitions, and checking installation details before you buy."
               headingLevel="h1"
             />
-            <GuideTypeSelect options={guideEcosystems} />
+            <div className="rounded-lg border border-line bg-field p-3.5 shadow-sm">
+              <GuideTypeSelect options={guideEcosystems} />
+              <div className="mt-3 border-t border-line pt-3">
+                <p className="text-sm leading-6 text-slate-600">
+                  Not sure what material category fits your issue? Browse flooring problems by symptom.
+                </p>
+                <Link
+                  href="/guides/browse-problems"
+                  className="mt-2 inline-flex rounded-md bg-accent-700 px-3 py-2 text-sm font-bold text-white transition hover:bg-accent-800"
+                >
+                  Browse Problems
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -124,9 +137,14 @@ export default function GuidesIndexPage() {
                 Problem-based guides for clicking, squeaking, lifting, buckling, visible seams, moving transitions, hollow sounds, gaps, and cupping.
               </p>
             </div>
-            <Link href="/guides/troubleshooting" className="inline-flex text-sm font-bold text-accent-700 hover:text-accent-600">
-              View all troubleshooting
-            </Link>
+            <div className="flex flex-wrap gap-3">
+              <Link href="/guides/browse-problems" className="inline-flex text-sm font-bold text-accent-700 hover:text-accent-600">
+                Browse by problem
+              </Link>
+              <Link href="/guides/troubleshooting" className="inline-flex text-sm font-bold text-accent-700 hover:text-accent-600">
+                View troubleshooting
+              </Link>
+            </div>
           </div>
           <div className="mt-4 grid gap-3 md:grid-cols-2 lg:grid-cols-4">
             {troubleshootingGuides.slice(0, 4).map((guide) => (

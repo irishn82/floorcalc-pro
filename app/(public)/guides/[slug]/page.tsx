@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { BrowseRelatedProblems } from "@/components/BrowseRelatedProblems";
 import { Container } from "@/components/Container";
 import { DisclaimerBox } from "@/components/DisclaimerBox";
 import { FAQSection } from "@/components/FAQSection";
@@ -10,6 +11,7 @@ import { GuideUtilityVisual } from "@/components/GuideUtilityVisual";
 import { IndustryReferences } from "@/components/IndustryReferences";
 import { JsonLd } from "@/components/JsonLd";
 import { NextStepPanel } from "@/components/NextStepPanel";
+import { ProblemSymptomSelector } from "@/components/ProblemSymptomSelector";
 import { RelatedLinks } from "@/components/RelatedLinks";
 import { TableOfContents } from "@/components/TableOfContents";
 import { NextRecommendedSteps } from "@/components/troubleshooting/NextRecommendedSteps";
@@ -25,6 +27,7 @@ import {
   getTroubleshootingGuidesForGuide
 } from "@/lib/content/paths";
 import { getGuideIndustryReferences } from "@/lib/content/industry-references";
+import { getRelatedProblemLinksForGuide } from "@/lib/content/problem-navigation";
 import { getTroubleshootingFlow } from "@/lib/content/troubleshooting-flow";
 import { createSeoMetadata } from "@/lib/seo/metadata";
 import { articleJsonLd, faqJsonLd } from "@/lib/seo/schema";
@@ -719,6 +722,8 @@ export default async function GuidePage({ params }: GuidePageProps) {
       })
     : null;
   const troubleshootingFlow = getTroubleshootingFlow(guide.slug);
+  const relatedProblemLinks = getRelatedProblemLinksForGuide(guide.slug).slice(0, 4);
+  const relatedProblemHrefSet = new Set(relatedProblemLinks.map((link) => link.href));
   const nextRecommendedDescription = troubleshootingFlow
     ? "Use the next guide or calculator to narrow the likely cause before opening the floor, replacing material, or scheduling a repair."
     : "Use these calculators and related guides to turn the article into a practical plan before ordering material or calling an installer.";
@@ -760,8 +765,17 @@ export default async function GuidePage({ params }: GuidePageProps) {
   const nextRecommendedLinkCandidates = uniqueLinks([
     nextRecommendedPrimaryCandidate,
     ...(targetedSecondaryLinkCandidates ?? fallbackNextRecommendedSecondaryLinks)
-  ]).filter((link) => !topUtilityHrefSet.has(link.href));
-  const nextRecommendedPrimaryLink = nextRecommendedLinkCandidates[0] ?? nextRecommendedPrimaryCandidate;
+  ])
+    .filter((link) => !topUtilityHrefSet.has(link.href))
+    .filter((link) => !relatedProblemHrefSet.has(link.href));
+  const problemHubNextStepLink = {
+    href: "/guides/browse-problems",
+    label: "Browse all flooring problems",
+    description: "Compare nearby symptoms across flooring materials."
+  };
+  const nextRecommendedPrimaryLink =
+    nextRecommendedLinkCandidates[0] ??
+    (relatedProblemHrefSet.has(nextRecommendedPrimaryCandidate.href) ? problemHubNextStepLink : nextRecommendedPrimaryCandidate);
   const nextRecommendedSecondaryLinks = nextRecommendedLinkCandidates
     .filter((link) => link.href !== nextRecommendedPrimaryLink.href)
     .slice(0, 3);
@@ -776,12 +790,15 @@ export default async function GuidePage({ params }: GuidePageProps) {
   });
   const troubleshootingLinkCandidates = uniqueLinks(
     troubleshootingGuides.filter((relatedGuide) => relatedGuide.slug !== guide.slug).map(guideToLink)
-  ).filter((link) => !nextStepHrefSet.has(link.href));
+  )
+    .filter((link) => !nextStepHrefSet.has(link.href))
+    .filter((link) => !relatedProblemHrefSet.has(link.href));
   const troubleshootingHrefSet = new Set(troubleshootingLinkCandidates.map((link) => link.href));
   const relatedGuideLinks = uniqueLinks(
     [...explicitRelatedGuides, ...ecosystemRelatedGuides].filter((relatedGuide) => relatedGuide.slug !== guide.slug).map(guideToLink)
   )
     .filter((link) => !nextStepHrefSet.has(link.href))
+    .filter((link) => !relatedProblemHrefSet.has(link.href))
     .filter((link) => !troubleshootingHrefSet.has(link.href))
     .slice(0, 4);
   const relatedGuideHrefSet = new Set(relatedGuideLinks.map((link) => link.href));
@@ -868,6 +885,11 @@ export default async function GuidePage({ params }: GuidePageProps) {
                   ))}
                 </div>
               </div>
+              {troubleshootingFlow ? (
+                <div className="mt-5">
+                  <ProblemSymptomSelector compact />
+                </div>
+              ) : null}
               {quickAnswerSection ? (
                 <div className="prose-flooring mt-5">
                   <GuideSectionContent section={quickAnswerSection} />
@@ -896,6 +918,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
                 </div>
               ) : null}
               <IndustryReferences references={industryReferences} />
+              <BrowseRelatedProblems links={relatedProblemLinks} />
             </div>
           </div>
         </Container>
