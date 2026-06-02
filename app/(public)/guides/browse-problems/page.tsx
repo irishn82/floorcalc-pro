@@ -29,14 +29,16 @@ export default function BrowseProblemsPage() {
               { label: "Browse Problems" }
             ]}
           />
-          <div className="grid gap-6 border-b border-line pb-7 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
+          <div className="border-b border-line pb-7">
             <SectionHeading
               eyebrow="Problem Finder"
               title="Browse flooring problems by symptom"
-              description="Not sure which flooring type or guide category fits? Start with what you are seeing: movement, moisture, concrete slab issues, visible seams, tile cracks, transitions, or installation-condition problems."
+              description="Not sure which flooring type or guide category fits? Start with what you are seeing, then move into the closest troubleshooting guide."
               headingLevel="h1"
             />
-            <ProblemSymptomSelector compact />
+            <div className="mt-5 max-w-5xl">
+              <ProblemSymptomSelector showHubLink={false} />
+            </div>
           </div>
         </Container>
       </section>

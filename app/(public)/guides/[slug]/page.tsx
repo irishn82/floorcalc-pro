@@ -887,7 +887,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
               </div>
               {troubleshootingFlow ? (
                 <div className="mt-5">
-                  <ProblemSymptomSelector compact />
+                  <ProblemSymptomSelector compact hubLinkLabel="Back to problem menu" />
                 </div>
               ) : null}
               {quickAnswerSection ? (
