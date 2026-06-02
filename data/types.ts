@@ -151,7 +151,12 @@ export type GuideSlug =
   | "why-is-my-floor-moving"
   | "why-do-floors-expand-and-contract"
   | "seasonal-flooring-movement"
-  | "what-flooring-movement-is-normal";
+  | "what-flooring-movement-is-normal"
+  | "lvp-installation-checklist"
+  | "laminate-installation-checklist"
+  | "engineered-hardwood-installation-checklist"
+  | "tile-installation-checklist"
+  | "carpet-installation-checklist";
 
 export type GuideSection = {
   id: string;

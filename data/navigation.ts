@@ -48,6 +48,11 @@ export const troubleshootingGuideSlugs: GuideSlug[] = [
 export const toolGuideLinks: Record<ToolSlug, GuideSlug[]> = {
   "flooring-square-footage-calculator": [
     "how-much-flooring-do-i-need",
+    "lvp-installation-checklist",
+    "laminate-installation-checklist",
+    "engineered-hardwood-installation-checklist",
+    "tile-installation-checklist",
+    "carpet-installation-checklist",
     "which-direction-should-flooring-run",
     "flooring-direction-mistakes",
     "flooring-movement-problems",
@@ -65,6 +70,10 @@ export const toolGuideLinks: Record<ToolSlug, GuideSlug[]> = {
   ],
   "waste-calculator": [
     "lvp-waste-percentage-guide",
+    "lvp-installation-checklist",
+    "laminate-installation-checklist",
+    "engineered-hardwood-installation-checklist",
+    "tile-installation-checklist",
     "flooring-direction-mistakes",
     "how-much-extra-flooring-should-i-keep",
     "how-much-extra-carpet-should-i-order",
@@ -83,11 +92,13 @@ export const toolGuideLinks: Record<ToolSlug, GuideSlug[]> = {
   ],
   "stair-flooring-calculator": [
     "how-much-flooring-do-i-need",
+    "carpet-installation-checklist",
     "carpet-padding-thickness-guide",
     "t-mold-vs-reducer-vs-end-cap"
   ],
   "carpet-seam-planner": [
     "carpet-seam-direction-guide",
+    "carpet-installation-checklist",
     "why-are-my-carpet-seams-visible",
     "why-is-my-carpet-wrinkling-or-buckling",
     "what-is-pattern-match-in-carpet",
@@ -95,11 +106,17 @@ export const toolGuideLinks: Record<ToolSlug, GuideSlug[]> = {
   ],
   "pattern-repeat-calculator": [
     "what-is-pattern-match-in-carpet",
+    "carpet-installation-checklist",
     "carpet-seam-direction-guide",
-    "tile-layout-planning-guide"
+    "tile-layout-planning-guide",
+    "tile-installation-checklist"
   ],
   "transition-estimator": [
     "flooring-transition-guide",
+    "lvp-installation-checklist",
+    "laminate-installation-checklist",
+    "engineered-hardwood-installation-checklist",
+    "tile-installation-checklist",
     "t-mold-vs-reducer-vs-end-cap",
     "flooring-direction-mistakes",
     "why-is-my-transition-strip-moving",

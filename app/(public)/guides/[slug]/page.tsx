@@ -100,6 +100,7 @@ const targetedNextStepTargets: Partial<
   "can-engineered-hardwood-go-over-concrete": {
     primary: { type: "tool", slug: "flooring-square-footage-calculator" },
     secondary: [
+      { type: "guide", slug: "engineered-hardwood-installation-checklist" },
       { type: "guide", slug: "concrete-slab-flooring-guide" },
       { type: "guide", slug: "how-to-test-concrete-moisture" },
       { type: "guide", slug: "can-moisture-come-through-concrete" },
@@ -116,6 +117,7 @@ const targetedNextStepTargets: Partial<
   "why-is-my-laminate-floor-separating": {
     primary: { type: "guide", slug: "laminate-floor-separating-what-to-check-first" },
     secondary: [
+      { type: "guide", slug: "laminate-installation-checklist" },
       { type: "guide", slug: "flooring-movement-problems" },
       { type: "guide", slug: "why-is-my-laminate-floor-buckling" },
       { type: "guide", slug: "why-are-my-flooring-joints-opening" },
@@ -144,6 +146,7 @@ const targetedNextStepTargets: Partial<
   "how-long-should-hardwood-acclimate": {
     primary: { type: "guide", slug: "hardwood-installation-humidity" },
     secondary: [
+      { type: "guide", slug: "engineered-hardwood-installation-checklist" },
       { type: "guide", slug: "hardwood-acclimation-mistakes" },
       { type: "guide", slug: "what-happens-if-flooring-is-installed-too-soon" },
       { type: "guide", slug: "moisture-level-too-high-for-flooring" },
@@ -158,6 +161,7 @@ const targetedNextStepTargets: Partial<
   "can-you-install-lvp-over-concrete": {
     primary: { type: "guide", slug: "how-to-test-concrete-moisture" },
     secondary: [
+      { type: "guide", slug: "lvp-installation-checklist" },
       { type: "guide", slug: "concrete-slab-flooring-guide" },
       { type: "guide", slug: "best-underlayment-for-concrete-floors" },
       { type: "guide", slug: "can-moisture-come-through-concrete" },
@@ -266,6 +270,7 @@ const targetedNextStepTargets: Partial<
   "why-is-my-tile-cracking": {
     primary: { type: "guide", slug: "how-flat-should-a-floor-be-for-tile" },
     secondary: [
+      { type: "guide", slug: "tile-installation-checklist" },
       { type: "guide", slug: "why-flooring-fails-over-concrete" },
       { type: "guide", slug: "common-basement-flooring-problems" },
       { type: "guide", slug: "tile-layout-planning-guide" },
@@ -456,6 +461,61 @@ const targetedNextStepTargets: Partial<
       { type: "guide", slug: "why-is-my-lvp-floor-clicking" },
       { type: "guide", slug: "why-is-my-hardwood-floor-gapping" },
       { type: "tool", slug: "flooring-square-footage-calculator" }
+    ]
+  },
+  "lvp-installation-checklist": {
+    primary: { type: "tool", slug: "flooring-square-footage-calculator" },
+    secondary: [
+      { type: "tool", slug: "waste-calculator" },
+      { type: "tool", slug: "transition-estimator" },
+      { type: "guide", slug: "can-you-install-lvp-over-concrete" },
+      { type: "guide", slug: "subfloor-flatness-requirements-lvp" },
+      { type: "guide", slug: "why-is-my-lvp-floor-clicking" },
+      { type: "guide", slug: "flooring-movement-problems" }
+    ]
+  },
+  "laminate-installation-checklist": {
+    primary: { type: "tool", slug: "flooring-square-footage-calculator" },
+    secondary: [
+      { type: "tool", slug: "waste-calculator" },
+      { type: "tool", slug: "transition-estimator" },
+      { type: "guide", slug: "best-underlayment-for-laminate-flooring" },
+      { type: "guide", slug: "how-flat-should-a-subfloor-be-for-laminate" },
+      { type: "guide", slug: "why-is-my-laminate-floor-separating" },
+      { type: "guide", slug: "flooring-movement-problems" }
+    ]
+  },
+  "engineered-hardwood-installation-checklist": {
+    primary: { type: "guide", slug: "how-long-should-hardwood-acclimate" },
+    secondary: [
+      { type: "tool", slug: "flooring-square-footage-calculator" },
+      { type: "tool", slug: "waste-calculator" },
+      { type: "guide", slug: "can-engineered-hardwood-go-over-concrete" },
+      { type: "guide", slug: "moisture-barrier-engineered-hardwood-over-concrete" },
+      { type: "guide", slug: "why-is-my-hardwood-floor-cupping" },
+      { type: "guide", slug: "flooring-movement-problems" }
+    ]
+  },
+  "tile-installation-checklist": {
+    primary: { type: "tool", slug: "flooring-square-footage-calculator" },
+    secondary: [
+      { type: "tool", slug: "waste-calculator" },
+      { type: "tool", slug: "transition-estimator" },
+      { type: "guide", slug: "how-flat-should-a-floor-be-for-tile" },
+      { type: "guide", slug: "tile-layout-planning-guide" },
+      { type: "guide", slug: "why-is-my-tile-cracking" },
+      { type: "guide", slug: "concrete-slab-cracks-under-flooring" }
+    ]
+  },
+  "carpet-installation-checklist": {
+    primary: { type: "tool", slug: "carpet-seam-planner" },
+    secondary: [
+      { type: "tool", slug: "flooring-square-footage-calculator" },
+      { type: "tool", slug: "pattern-repeat-calculator" },
+      { type: "tool", slug: "stair-flooring-calculator" },
+      { type: "guide", slug: "carpet-seam-direction-guide" },
+      { type: "guide", slug: "why-are-my-carpet-seams-visible" },
+      { type: "guide", slug: "carpet-padding-thickness-guide" }
     ]
   },
   "common-basement-flooring-problems": {

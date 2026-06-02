@@ -3374,6 +3374,630 @@ const guideDrafts: GuideDraft[] = [
       }
     ],
     disclaimer: installConditionDisclaimer
+  },
+  {
+    slug: "lvp-installation-checklist",
+    title: "LVP Installation Checklist",
+    description:
+      "A step-by-step LVP installation checklist for measuring, ordering, moisture checks, concrete slabs, subfloor flatness, layout direction, transitions, and post-install review.",
+    metadataTitle: "LVP Installation Checklist: Before Ordering to After Install",
+    metadataDescription:
+      "Use this LVP installation checklist to plan measuring, waste, moisture checks, slab prep, subfloor flatness, layout direction, transitions, and installation day.",
+    dateModified: "2026-06-02",
+    readTime: "10 min read",
+    primaryEcosystem: "lvp",
+    secondaryEcosystems: ["lvt", "planning-measuring-transitions"],
+    materialTypes: ["lvp", "lvt"],
+    topicCluster: "installation-method",
+    relatedTools: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"],
+    relatedGuides: [
+      "can-you-install-lvp-over-concrete",
+      "subfloor-flatness-requirements-lvp",
+      "best-underlayment-for-lvp",
+      "how-long-should-lvp-acclimate",
+      "which-direction-should-flooring-run",
+      "flooring-transition-guide",
+      "why-is-my-lvp-floor-clicking",
+      "why-is-my-lvp-floor-peaking",
+      "why-is-my-lvp-floor-separating",
+      "flooring-movement-problems",
+      "how-to-test-concrete-moisture",
+      "concrete-slab-flooring-guide"
+    ],
+    quickAnswer: [
+      "A good LVP installation checklist starts before the boxes are ordered: measure rooms, plan waste, confirm the product is approved for the room, check subfloor flatness, review moisture requirements, and plan transitions.",
+      "Installation day should be the last step, not the first decision. LVP problems such as clicking, lifting, peaking, buckling, and seam visibility often start with skipped prep or product requirements."
+    ],
+    keySections: [
+      {
+        id: "before-ordering",
+        title: "Before ordering",
+        paragraphs: [
+          "Before buying LVP, confirm the product is suitable for the room, substrate, temperature conditions, and installation method. Concrete, basements, radiant heat, attached pad, and existing flooring all need product-specific review."
+        ],
+        bullets: [
+          "Measure every room and closet, then calculate total square footage.",
+          "Add waste based on layout complexity, plank direction, closets, hallways, and cuts.",
+          "Confirm the product is approved for concrete, wood subfloor, existing tile, or the actual substrate.",
+          "Check moisture testing, vapor barrier, underlayment, and attached-pad rules.",
+          "Plan transitions, door clearance, stair noses, and expansion breaks before ordering trim."
+        ]
+      },
+      {
+        id: "before-installation",
+        title: "Before installation",
+        paragraphs: [
+          "The subfloor should be clean, sound, flat enough for the product, and dry enough for the installation system. LVP underlayment should not be used to hide slab humps, low spots, old adhesive ridges, or weak patching."
+        ],
+        bullets: [
+          "Check subfloor flatness with a long straightedge.",
+          "Scrape high spots, remove debris, and correct low spots as allowed by the product.",
+          "Complete required concrete moisture testing before installing over a slab.",
+          "Store product according to the written instructions and room conditions.",
+          "Dry-lay or plan plank direction so narrow starter rows and awkward transitions are avoided."
+        ]
+      },
+      {
+        id: "installation-day",
+        title: "Installation day",
+        paragraphs: [
+          "On installation day, keep the jobsite clean and controlled. Floating LVP needs movement space and should not be pinned by fixed cabinets, islands, tight trim, or transition tracks."
+        ],
+        bullets: [
+          "Confirm room temperature and site conditions meet the product instructions.",
+          "Open cartons as directed and mix planks if the product has color variation.",
+          "Maintain required expansion space at walls, door jambs, cabinets, and transitions.",
+          "Check locking joints as rows are installed instead of forcing damaged edges later.",
+          "Install transitions and trim without trapping a floating floor."
+        ]
+      },
+      {
+        id: "after-installation",
+        title: "After installation",
+        paragraphs: [
+          "After installation, inspect movement points before moving the room back in. Heavy fixed objects, rolling loads, direct sunlight, and moisture exposure can all affect LVP performance."
+        ],
+        bullets: [
+          "Walk the floor and listen for repeated clicking or hollow movement.",
+          "Check transitions, doorways, and perimeter trim for pinching.",
+          "Follow the product's cleaning and furniture protection instructions.",
+          "Save extra planks from the same purchase for future repairs.",
+          "Document any moisture tests, product labels, and installation notes."
+        ]
+      }
+    ],
+    example: [
+      "A homeowner wants floating LVP through a kitchen, hallway, and living room over a concrete slab. The checklist flags three decisions before ordering: slab moisture testing, long-run expansion planning, and transition height at the existing tile bathroom.",
+      "Those checks prevent the project from becoming a box-counting exercise only. The material order, trim, and installation plan all depend on the substrate and movement rules."
+    ],
+    commonMistakes: [
+      "Ordering from square footage alone without waste or attic stock.",
+      "Skipping concrete moisture and flatness checks.",
+      "Adding extra underlayment under attached-pad LVP without approval.",
+      "Pinning a floating floor under fixed cabinets or tight trim.",
+      "Ignoring transition height until the last day."
+    ],
+    faq: [
+      {
+        question: "What should I check before buying LVP?",
+        answer:
+          "Check room square footage, waste, subfloor type, flatness, moisture requirements, underlayment approval, plank direction, transitions, and whether the product is approved for the room."
+      },
+      {
+        question: "Does LVP need acclimation?",
+        answer:
+          "Some LVP products require acclimation or jobsite conditioning, while others have different storage rules. Follow the written product instructions."
+      },
+      {
+        question: "Should I test concrete moisture before LVP?",
+        answer:
+          "Often yes, especially for basements, newer slabs, glue-down products, or slabs with unknown history. Follow the test method required by the flooring or adhesive."
+      },
+      {
+        question: "What LVP problems should I watch for after installation?",
+        answer:
+          "Watch for repeated clicking, peaking, buckling, lifting, seam separation, moisture issues, or transitions that move."
+      }
+    ],
+    disclaimer: installConditionDisclaimer
+  },
+  {
+    slug: "laminate-installation-checklist",
+    title: "Laminate Installation Checklist",
+    description:
+      "A practical laminate installation checklist for measuring, underlayment, vapor protection, flatness, expansion gaps, layout direction, transitions, and post-install checks.",
+    metadataTitle: "Laminate Installation Checklist: Prep, Underlayment, Gaps",
+    metadataDescription:
+      "Use this laminate installation checklist for measuring, underlayment, vapor protection, subfloor flatness, expansion gaps, layout direction, and transitions.",
+    dateModified: "2026-06-02",
+    readTime: "10 min read",
+    primaryEcosystem: "laminate",
+    secondaryEcosystems: ["planning-measuring-transitions"],
+    materialTypes: ["laminate"],
+    topicCluster: "installation-method",
+    relatedTools: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"],
+    relatedGuides: [
+      "best-underlayment-for-laminate-flooring",
+      "how-flat-should-a-subfloor-be-for-laminate",
+      "can-laminate-flooring-be-waterproof",
+      "which-direction-should-flooring-run",
+      "flooring-transition-guide",
+      "why-is-my-laminate-floor-separating",
+      "why-is-my-laminate-floor-buckling",
+      "laminate-floor-separating-what-to-check-first",
+      "flooring-movement-problems",
+      "moisture-level-too-high-for-flooring",
+      "concrete-slab-flooring-guide"
+    ],
+    quickAnswer: [
+      "A laminate installation checklist should focus on moisture control, approved underlayment, subfloor flatness, expansion space, and layout planning. Laminate is often installed as a floating floor, so support and movement space matter.",
+      "Many laminate problems show up as separation, buckling, swelling, hollow sound, or repeated clicking. Most of those issues are easier to prevent than repair."
+    ],
+    keySections: [
+      {
+        id: "before-ordering",
+        title: "Before ordering",
+        paragraphs: [
+          "Before buying laminate, verify that the product is suitable for the room and substrate. Do not rely on a waterproof label alone; room use, moisture exposure, and manufacturer requirements still matter."
+        ],
+        bullets: [
+          "Measure total square footage and add waste for cuts and layout.",
+          "Confirm the laminate is approved for the room and substrate.",
+          "Check concrete vapor barrier or underlayment requirements.",
+          "Plan plank direction, expansion breaks, and transitions.",
+          "Order matching trim, reducers, T-molds, and extra repair material."
+        ]
+      },
+      {
+        id: "before-installation",
+        title: "Before installation",
+        paragraphs: [
+          "Laminate needs a flat, clean, stable substrate and an approved underlayment. Extra cushion or doubled underlayment can stress locking joints."
+        ],
+        bullets: [
+          "Check subfloor flatness and correct low spots or humps.",
+          "Remove debris, old tack strip, loose patch, and underlayment remnants.",
+          "Confirm underlayment thickness, vapor protection, and attached-pad rules.",
+          "Condition the room and store flooring as directed.",
+          "Undercut door jambs only after confirming finished height."
+        ]
+      },
+      {
+        id: "installation-day",
+        title: "Installation day",
+        paragraphs: [
+          "Keep layout and expansion space visible throughout the installation. Laminate joints should lock cleanly without force that damages the profile."
+        ],
+        bullets: [
+          "Maintain required expansion space at walls, doorways, columns, and transitions.",
+          "Stagger end joints according to the product instructions.",
+          "Inspect each row for damaged locking edges before moving on.",
+          "Avoid pinning the floor with cabinets, islands, or tightly fastened trim.",
+          "Install transition profiles without trapping the floating floor."
+        ]
+      },
+      {
+        id: "after-installation",
+        title: "After installation",
+        paragraphs: [
+          "After installation, monitor the floor during normal room use. Laminate movement problems often reveal themselves near doorways, transitions, exterior doors, kitchens, and long runs."
+        ],
+        bullets: [
+          "Check for repeated clicking, buckling, separation, or swollen edges.",
+          "Use furniture pads and avoid wet cleaning methods not allowed by the product.",
+          "Keep indoor humidity within the product's recommended range.",
+          "Save extra planks and trim pieces for future repairs.",
+          "Document underlayment, moisture checks, and product information."
+        ]
+      }
+    ],
+    example: [
+      "A homeowner plans laminate over a basement slab. The checklist points them to moisture testing, vapor protection, approved underlayment, flatness, and expansion breaks before they order.",
+      "That is better than buying boxes first and discovering on installation day that the slab and underlayment system do not match the product requirements."
+    ],
+    commonMistakes: [
+      "Assuming waterproof laminate can handle any moisture condition.",
+      "Using the wrong underlayment or doubling underlayment.",
+      "Skipping expansion gaps at doorways and transitions.",
+      "Installing over low spots that stress locking joints.",
+      "Wet-mopping or cleaning against product instructions."
+    ],
+    faq: [
+      {
+        question: "What is the most important laminate prep step?",
+        answer:
+          "Subfloor flatness, moisture control, and approved underlayment are the big three. All should match the written laminate instructions."
+      },
+      {
+        question: "Does laminate need a vapor barrier on concrete?",
+        answer:
+          "Many laminate products require vapor protection over concrete, but the exact requirement varies by product and underlayment system."
+      },
+      {
+        question: "Why does laminate separate after installation?",
+        answer:
+          "Common causes include uneven subfloor support, damaged locking joints, moisture, humidity movement, blocked expansion space, or wrong underlayment."
+      },
+      {
+        question: "Can cabinets go on top of laminate?",
+        answer:
+          "Fixed cabinets and islands can restrict floating floors. Check the laminate instructions before installing fixed objects on top."
+      }
+    ],
+    disclaimer: installConditionDisclaimer
+  },
+  {
+    slug: "engineered-hardwood-installation-checklist",
+    title: "Engineered Hardwood Installation Checklist",
+    description:
+      "A homeowner-friendly engineered hardwood checklist for moisture testing, acclimation, concrete slabs, glue-down vs floating decisions, layout, transitions, and post-install review.",
+    metadataTitle: "Engineered Hardwood Installation Checklist",
+    metadataDescription:
+      "Plan engineered hardwood installation with a checklist for measuring, moisture testing, acclimation, concrete slabs, glue-down vs floating, transitions, and aftercare.",
+    dateModified: "2026-06-02",
+    readTime: "11 min read",
+    primaryEcosystem: "hardwood-engineered-hardwood",
+    secondaryEcosystems: ["planning-measuring-transitions"],
+    materialTypes: ["engineered-hardwood", "hardwood"],
+    topicCluster: "installation-method",
+    relatedTools: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"],
+    relatedGuides: [
+      "can-engineered-hardwood-go-over-concrete",
+      "moisture-barrier-engineered-hardwood-over-concrete",
+      "floating-vs-glue-down-engineered-hardwood-over-concrete",
+      "how-long-should-hardwood-acclimate",
+      "hardwood-acclimation-mistakes",
+      "hardwood-installation-humidity",
+      "which-direction-should-flooring-run",
+      "flooring-transition-guide",
+      "why-is-my-hardwood-floor-cupping",
+      "why-is-my-hardwood-floor-gapping",
+      "why-is-my-hardwood-floor-crowning",
+      "concrete-slab-flooring-guide"
+    ],
+    quickAnswer: [
+      "An engineered hardwood installation checklist should start with product approval, moisture testing, jobsite conditioning, acclimation instructions, substrate requirements, and installation method. Concrete slabs and glue-down systems need especially careful review.",
+      "Engineered hardwood can be more dimensionally stable than solid hardwood, but it is still a wood product. Moisture, humidity, acclimation, adhesive compatibility, and subfloor preparation matter."
+    ],
+    keySections: [
+      {
+        id: "before-ordering",
+        title: "Before ordering",
+        paragraphs: [
+          "Before ordering engineered hardwood, confirm the product is approved for the substrate, grade level, installation method, plank width, room conditions, and any radiant heat or concrete slab conditions."
+        ],
+        bullets: [
+          "Measure rooms and add waste for layout, board selection, and cuts.",
+          "Confirm concrete, wood subfloor, or existing floor approval.",
+          "Choose floating, glue-down, nail-down, or staple-down only if the product allows it.",
+          "Review moisture testing requirements for the flooring and substrate.",
+          "Plan direction, transitions, reducers, stair noses, and extra attic stock."
+        ]
+      },
+      {
+        id: "before-installation",
+        title: "Before installation",
+        paragraphs: [
+          "Hardwood installation readiness is about the jobsite, not just the boxes. HVAC, humidity, wet trades, slab moisture, wood subfloor moisture, and product storage should all be reviewed before installation."
+        ],
+        bullets: [
+          "Confirm HVAC is operating and normal living conditions are stable.",
+          "Follow the exact acclimation or conditioning instructions for the product.",
+          "Document required moisture readings for flooring and subfloor.",
+          "Check concrete slab moisture and adhesive requirements when applicable.",
+          "Verify subfloor flatness, cleanliness, soundness, and fastener requirements."
+        ]
+      },
+      {
+        id: "installation-day",
+        title: "Installation day",
+        paragraphs: [
+          "Installation day should follow the method approved for the product. Glue-down, floating, and nail-down engineered hardwood each have different risks."
+        ],
+        bullets: [
+          "Confirm room conditions before starting.",
+          "Rack boards from multiple cartons to balance color and length variation.",
+          "Maintain required expansion space and transition planning.",
+          "Use approved adhesive, trowel, underlayment, fasteners, or vapor system.",
+          "Avoid installing over wet, dusty, contaminated, or unprepared substrates."
+        ]
+      },
+      {
+        id: "after-installation",
+        title: "After installation",
+        paragraphs: [
+          "After installation, protect the floor from moisture swings, construction dust, wet cleaning, and furniture damage. Wood movement can show up after the room returns to normal use."
+        ],
+        bullets: [
+          "Keep indoor humidity within the product's recommended range.",
+          "Use approved cleaning methods and furniture protection.",
+          "Watch for cupping, crowning, gapping, hollow sounds, or adhesive release.",
+          "Save extra boards from the same purchase for repairs.",
+          "Keep moisture test records and product instructions."
+        ]
+      }
+    ],
+    example: [
+      "A homeowner wants engineered hardwood over a slab-on-grade living room. The checklist flags product concrete approval, slab moisture testing, adhesive or underlayment compatibility, acclimation, and transition height before ordering.",
+      "Those checks help prevent a beautiful floor from becoming a moisture, bond, or movement problem after installation."
+    ],
+    commonMistakes: [
+      "Assuming engineered hardwood can go over any concrete slab.",
+      "Skipping moisture documentation.",
+      "Installing before HVAC and humidity are stable.",
+      "Confusing acclimation with simply leaving boxes in the house.",
+      "Sanding or repairing movement before the moisture source is corrected."
+    ],
+    faq: [
+      {
+        question: "Can engineered hardwood be installed over concrete?",
+        answer:
+          "Some engineered hardwood products can be installed over concrete when the product, slab, moisture results, and installation method meet the written requirements."
+      },
+      {
+        question: "Does engineered hardwood need acclimation?",
+        answer:
+          "Often yes, but the exact process varies. Follow the product instructions for storage, carton handling, room conditions, and moisture checks."
+      },
+      {
+        question: "What causes engineered hardwood to separate?",
+        answer:
+          "Common causes include humidity changes, slab moisture, poor acclimation, subfloor flatness, locking issues, or glue-down bond failure."
+      },
+      {
+        question: "Should I keep extra engineered hardwood?",
+        answer:
+          "Yes. Keeping extra boards from the same purchase can help with future repairs, color matching, and discontinued products."
+      }
+    ],
+    disclaimer: installConditionDisclaimer
+  },
+  {
+    slug: "tile-installation-checklist",
+    title: "Tile Installation Checklist",
+    description:
+      "A practical tile installation checklist for measuring, substrate prep, flatness, cracks, layout, grout joints, transitions, installation day, and after-installation checks.",
+    metadataTitle: "Tile Installation Checklist: Subfloor, Layout, Grout, Transitions",
+    metadataDescription:
+      "Use this tile installation checklist to plan measuring, substrate prep, flatness, cracks, layout, grout joints, transitions, installation day, and aftercare.",
+    dateModified: "2026-06-02",
+    readTime: "10 min read",
+    primaryEcosystem: "tile",
+    secondaryEcosystems: ["planning-measuring-transitions"],
+    materialTypes: ["ceramic-tile", "porcelain-tile", "stone-tile"],
+    topicCluster: "installation-method",
+    relatedTools: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator", "pattern-repeat-calculator"],
+    relatedGuides: [
+      "porcelain-vs-ceramic-tile",
+      "how-flat-should-a-floor-be-for-tile",
+      "can-you-install-tile-over-tile",
+      "what-size-grout-line-should-i-use",
+      "tile-layout-planning-guide",
+      "concrete-slab-cracks-under-flooring",
+      "flooring-transition-guide",
+      "why-is-my-tile-cracking",
+      "why-flooring-fails-over-concrete",
+      "concrete-slab-flooring-guide"
+    ],
+    quickAnswer: [
+      "A tile installation checklist should focus on substrate stability, flatness, crack or movement concerns, tile layout, grout joint planning, movement accommodation, transitions, and product compatibility.",
+      "Tile is durable, but it is not forgiving of movement below it. Cracked tile, hollow spots, grout cracking, and lippage often start with substrate, layout, mortar coverage, or movement issues."
+    ],
+    keySections: [
+      {
+        id: "before-ordering",
+        title: "Before ordering",
+        paragraphs: [
+          "Before buying tile, plan the layout, waste, tile size, grout joint, transitions, and substrate requirements. Large-format tile and natural stone can have stricter substrate expectations."
+        ],
+        bullets: [
+          "Measure the room and add waste for cuts, breakage, layout, and attic stock.",
+          "Confirm tile type, size, shade variation, and intended room use.",
+          "Plan layout lines, focal points, cut sizes, and doorway transitions.",
+          "Check substrate type: concrete, wood subfloor, existing tile, or underlayment.",
+          "Select compatible mortar, grout, membrane, trim, and movement-joint approach."
+        ]
+      },
+      {
+        id: "before-installation",
+        title: "Before installation",
+        paragraphs: [
+          "The substrate should be sound, flat enough, clean, and appropriate for tile. Cracks, deflection, loose panels, old adhesives, paint, dusty concrete, and moisture all deserve review before tile is installed."
+        ],
+        bullets: [
+          "Check flatness for the selected tile size.",
+          "Evaluate concrete cracks, control joints, and movement risks.",
+          "Confirm wood subfloor stiffness and underlayment requirements.",
+          "Dry-layout tile to avoid slivers and awkward cuts.",
+          "Verify mortar, grout, membrane, and trim are compatible."
+        ]
+      },
+      {
+        id: "installation-day",
+        title: "Installation day",
+        paragraphs: [
+          "Installation day should prioritize layout accuracy, mortar coverage, clean joints, and movement details. The goal is not only square tile; it is a supported tile assembly."
+        ],
+        bullets: [
+          "Confirm layout lines and starting point before spreading mortar.",
+          "Use the trowel and mortar required for the tile and substrate.",
+          "Check coverage and support as work progresses.",
+          "Maintain planned grout joint size and movement accommodation.",
+          "Protect transitions, thresholds, and adjacent flooring."
+        ]
+      },
+      {
+        id: "after-installation",
+        title: "After installation",
+        paragraphs: [
+          "After tile installation, protect the area until mortar and grout have cured according to product instructions. Early traffic can damage the assembly."
+        ],
+        bullets: [
+          "Avoid traffic, cleaning, or heavy loads until allowed by product instructions.",
+          "Inspect for cracked tile, loose tile, hollow sounds, or grout issues.",
+          "Use approved cleaning products and sealers where required.",
+          "Save extra tile from the same lot for future repairs.",
+          "Document tile, grout, mortar, and underlayment products."
+        ]
+      }
+    ],
+    example: [
+      "A homeowner chooses large porcelain tile for a basement bathroom over concrete. The checklist flags slab cracks, flatness, tile layout, transition height, mortar coverage, and movement planning before ordering.",
+      "That prevents the project from becoming only a tile-size choice and helps reduce crack, lippage, and transition problems."
+    ],
+    commonMistakes: [
+      "Installing tile over movement without addressing the substrate.",
+      "Skipping layout planning and ending with narrow cuts.",
+      "Ignoring flatness for large-format tile.",
+      "Using mortar or grout without checking compatibility.",
+      "Walking on the tile before the installation products allow it."
+    ],
+    faq: [
+      {
+        question: "What should I check before installing tile?",
+        answer:
+          "Check substrate stability, flatness, cracks, moisture, layout, grout joint size, mortar requirements, transition height, and movement details."
+      },
+      {
+        question: "Can tile go over cracked concrete?",
+        answer:
+          "Sometimes, but cracks need evaluation. Active movement, height displacement, and moisture can require treatment or a different installation approach."
+      },
+      {
+        question: "Why does tile crack after installation?",
+        answer:
+          "Common causes include substrate movement, deflection, poor mortar coverage, slab cracks, missing movement accommodation, or impact."
+      },
+      {
+        question: "How much extra tile should I order?",
+        answer:
+          "Waste depends on layout, tile size, pattern, room shape, and attic stock needs. Use the waste calculator, then verify with the installer."
+      }
+    ],
+    disclaimer: installConditionDisclaimer
+  },
+  {
+    slug: "carpet-installation-checklist",
+    title: "Carpet Installation Checklist",
+    description:
+      "A step-by-step carpet installation checklist for measuring, roll width, seams, pattern match, padding, stairs, concrete, installation day, and after-install checks.",
+    metadataTitle: "Carpet Installation Checklist: Measuring, Seams, Padding",
+    metadataDescription:
+      "Use this carpet installation checklist to plan measuring, roll width, seams, pattern match, padding, stairs, concrete, installation day, and aftercare.",
+    dateModified: "2026-06-02",
+    readTime: "10 min read",
+    primaryEcosystem: "carpet-padding",
+    secondaryEcosystems: ["planning-measuring-transitions"],
+    materialTypes: ["carpet", "carpet-padding"],
+    topicCluster: "installation-method",
+    relatedTools: ["flooring-square-footage-calculator", "carpet-seam-planner", "pattern-repeat-calculator", "stair-flooring-calculator"],
+    relatedGuides: [
+      "carpet-seam-direction-guide",
+      "why-are-my-carpet-seams-visible",
+      "what-direction-should-carpet-run",
+      "what-is-pattern-match-in-carpet",
+      "carpet-padding-thickness-guide",
+      "can-carpet-be-installed-over-concrete",
+      "how-much-extra-carpet-should-i-order",
+      "why-is-my-carpet-wrinkling-or-buckling",
+      "common-basement-flooring-problems"
+    ],
+    quickAnswer: [
+      "A carpet installation checklist should start with room measurements, roll width, seam planning, pattern match, padding, stairs, doorways, subfloor condition, and furniture logistics.",
+      "Carpet problems such as visible seams, wrinkles, buckling, poor stretch, and pattern mismatch are often tied to layout, cushion, installation method, or room conditions."
+    ],
+    keySections: [
+      {
+        id: "before-ordering",
+        title: "Before ordering",
+        paragraphs: [
+          "Before ordering carpet, measure the rooms but do not assume square footage alone determines the order. Roll width, seam placement, pattern repeat, stairs, closets, and waste all affect material planning."
+        ],
+        bullets: [
+          "Measure room length and width, including closets and offsets.",
+          "Confirm carpet roll width and likely drop direction.",
+          "Plan seam locations with lighting, traffic, pattern, and room layout in mind.",
+          "Check pattern repeat and match requirements for patterned carpet.",
+          "Choose padding thickness and density that match the carpet and room use."
+        ]
+      },
+      {
+        id: "before-installation",
+        title: "Before installation",
+        paragraphs: [
+          "Carpet needs a clean, dry, suitable surface and enough room for stretching, seam work, and trim. Concrete, stairs, tack strip, cushion, and transitions should be reviewed before installation day."
+        ],
+        bullets: [
+          "Remove old flooring and inspect the subfloor or concrete slab.",
+          "Check concrete moisture concerns where carpet is installed over a slab.",
+          "Confirm tack strip, cushion, stairs, door clearance, and transitions.",
+          "Clear furniture and plan access for large carpet rolls.",
+          "Review seam layout and pattern direction with the installer."
+        ]
+      },
+      {
+        id: "installation-day",
+        title: "Installation day",
+        paragraphs: [
+          "On installation day, the installer controls final seam placement and stretching details. The homeowner should verify layout expectations before cutting starts."
+        ],
+        bullets: [
+          "Confirm carpet direction, seam plan, and pattern alignment.",
+          "Verify padding and tack strip placement.",
+          "Ask about seam visibility expectations in strong light or high-traffic areas.",
+          "Keep HVAC and room access suitable for installation work.",
+          "Inspect stairs, thresholds, and transitions before furniture returns."
+        ]
+      },
+      {
+        id: "after-installation",
+        title: "After installation",
+        paragraphs: [
+          "After carpet installation, some seam visibility can be normal depending on carpet style, lighting, traffic direction, and pattern. Wrinkles, loose areas, or obvious pattern mismatch deserve follow-up."
+        ],
+        bullets: [
+          "Walk the room and check seams, transitions, stairs, and edges.",
+          "Look for wrinkles, bubbles, loose areas, or pad issues.",
+          "Use manufacturer-approved cleaning and vacuum guidance.",
+          "Save usable carpet remnants for future repairs when practical.",
+          "Document carpet style, lot, padding, and installation notes."
+        ]
+      }
+    ],
+    example: [
+      "A bedroom seems simple by square footage, but the selected carpet has a pattern repeat and the room is wider than the roll. The checklist pushes seam direction, pattern match, roll width, and light direction into the plan before ordering.",
+      "That helps avoid treating carpet like a basic area calculation when seams and pattern alignment drive the real material order."
+    ],
+    commonMistakes: [
+      "Ordering carpet from room square footage without roll-width planning.",
+      "Ignoring seam direction, light, traffic, and pattern match.",
+      "Choosing padding without checking carpet requirements.",
+      "Skipping concrete moisture review in basement rooms.",
+      "Expecting every seam to be completely invisible."
+    ],
+    faq: [
+      {
+        question: "What should I check before ordering carpet?",
+        answer:
+          "Check room measurements, roll width, seam layout, pattern repeat, padding, stairs, transitions, door clearance, and whether the subfloor or concrete is ready."
+      },
+      {
+        question: "Are carpet seams always visible?",
+        answer:
+          "Not always, but some seam visibility can occur depending on carpet construction, lighting, traffic direction, pattern, and installer layout."
+      },
+      {
+        question: "Does carpet padding matter?",
+        answer:
+          "Yes. Padding thickness, density, and product compatibility affect comfort, wear, stretch, and warranty-related requirements."
+      },
+      {
+        question: "Can carpet be installed over concrete?",
+        answer:
+          "Carpet can be installed over some concrete slabs, but moisture, cushion, tack strip, adhesive if used, and room conditions must be reviewed."
+      }
+    ],
+    disclaimer: installConditionDisclaimer
   }
 ];
 
