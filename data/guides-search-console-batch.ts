@@ -203,6 +203,10 @@ const guideDrafts: GuideDraft[] = [
     topicCluster: "subfloor-prep",
     relatedTools: ["flooring-square-footage-calculator", "waste-calculator"],
     relatedGuides: [
+      "flooring-moisture-problems",
+      "can-high-humidity-damage-flooring",
+      "ideal-humidity-for-flooring",
+      "signs-of-moisture-damage-under-flooring",
       "concrete-slab-flooring-guide",
       "how-to-test-concrete-moisture",
       "why-is-moisture-coming-through-my-slab",
@@ -670,6 +674,7 @@ const guideDrafts: GuideDraft[] = [
     topicCluster: "subfloor-prep",
     relatedTools: ["flooring-square-footage-calculator", "waste-calculator"],
     relatedGuides: [
+      "flooring-moisture-problems",
       "concrete-slab-flooring-guide",
       "moisture-level-too-high-for-flooring",
       "why-is-moisture-coming-through-my-slab",
@@ -1666,6 +1671,10 @@ const guideDrafts: GuideDraft[] = [
     topicCluster: "subfloor-prep",
     relatedTools: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"],
     relatedGuides: [
+      "flooring-moisture-problems",
+      "can-high-humidity-damage-flooring",
+      "ideal-humidity-for-flooring",
+      "signs-of-moisture-damage-under-flooring",
       "moisture-level-too-high-for-flooring",
       "why-is-my-subfloor-wet",
       "why-is-my-floor-expanding",
@@ -3995,6 +4004,449 @@ const guideDrafts: GuideDraft[] = [
         question: "Can carpet be installed over concrete?",
         answer:
           "Carpet can be installed over some concrete slabs, but moisture, cushion, tack strip, adhesive if used, and room conditions must be reviewed."
+      }
+    ],
+    disclaimer: installConditionDisclaimer
+  },
+  {
+    slug: "flooring-moisture-problems",
+    title: "Flooring Moisture Problems",
+    description:
+      "A practical hub for flooring moisture problems, including swelling, cupping, crowning, gapping, separation, buckling, mold concerns, concrete moisture, humidity changes, and acclimation.",
+    metadataTitle: "Flooring Moisture Problems: Swelling, Cupping, Gaps, Buckling",
+    metadataDescription:
+      "Diagnose flooring moisture problems including swelling, cupping, crowning, gapping, separation, buckling, concrete moisture, humidity changes, and acclimation.",
+    dateModified: "2026-06-02",
+    readTime: "12 min read",
+    primaryEcosystem: "planning-measuring-transitions",
+    secondaryEcosystems: ["lvp", "laminate", "hardwood-engineered-hardwood", "tile", "carpet-padding"],
+    materialTypes: ["lvp", "lvt", "laminate", "hardwood", "engineered-hardwood", "carpet", "ceramic-tile", "porcelain-tile"],
+    topicCluster: "subfloor-prep",
+    relatedTools: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"],
+    relatedGuides: [
+      "why-is-my-floor-swelling",
+      "can-high-humidity-damage-flooring",
+      "ideal-humidity-for-flooring",
+      "signs-of-moisture-damage-under-flooring",
+      "how-to-test-concrete-moisture",
+      "moisture-level-too-high-for-flooring",
+      "can-engineered-hardwood-go-over-concrete",
+      "how-long-should-hardwood-acclimate",
+      "why-is-my-laminate-floor-separating",
+      "why-is-my-lvp-lifting",
+      "why-is-my-lvp-floor-clicking",
+      "why-is-my-hardwood-floor-cupping",
+      "why-is-my-hardwood-floor-crowning",
+      "concrete-slab-flooring-guide"
+    ],
+    quickAnswer: [
+      "Flooring moisture problems show up as swelling, cupping, crowning, gapping, separation, buckling, lifting, odor, staining, soft areas, adhesive release, or recurring movement. The source may be a leak, high humidity, concrete slab moisture, a wet subfloor, crawlspace moisture, wet cleaning, or flooring installed before the jobsite was ready.",
+      "Start by identifying the moisture path before repairing the visible floor. Replacing boards, closing gaps, sanding hardwood, or adding new flooring over a damp condition can make the problem return."
+    ],
+    keySections: [
+      {
+        id: "symptom-lookup",
+        title: "Moisture symptom lookup",
+        paragraphs: [
+          "Moisture problems often look like movement problems at first. Swelling, buckling, and separating can happen when flooring expands or loses support because of moisture.",
+          "Use the symptom to choose a starting path, then verify the substrate and product requirements."
+        ],
+        bullets: [
+          "Swelling or raised seams: check leaks, wet cleaning, humidity, and subfloor moisture.",
+          "Cupping or crowning: check hardwood moisture imbalance, slab, crawlspace, HVAC, and repair timing.",
+          "Gapping or separation: check seasonal humidity, acclimation, subfloor moisture, and damaged joints.",
+          "Buckling or peaking: check moisture, expansion pressure, fixed objects, and long runs.",
+          "Odor, staining, or soft areas: stop and inspect for moisture damage under the floor."
+        ]
+      },
+      {
+        id: "common-causes",
+        title: "Common moisture sources",
+        paragraphs: [
+          "Moisture can come from above, below, or inside the building conditions. A spill or appliance leak is obvious, but high humidity, crawlspace moisture, slab vapor, wet construction materials, and trapped moisture under old flooring can be harder to see.",
+          "Mold-like growth, musty odor, or soft subfloor areas should be treated as a building-condition concern, not just a flooring appearance issue."
+        ],
+        bullets: [
+          "Concrete moisture vapor, basement humidity, or slab history.",
+          "Plumbing leaks, appliance leaks, exterior doors, showers, tubs, and wet cleaning.",
+          "High indoor humidity or unstable HVAC conditions.",
+          "Wet wood subfloor, crawlspace moisture, or construction moisture.",
+          "Flooring installed before acclimation, moisture testing, or jobsite conditioning was complete."
+        ]
+      },
+      {
+        id: "what-to-check-first",
+        title: "What to check first",
+        paragraphs: [
+          "Find the wettest or most changed area first. A localized swollen seam near a dishwasher points to a different cause than cupping across a hardwood room or buckling near a concrete basement wall.",
+          "Document conditions before repairs. Photos, moisture readings, humidity readings, product labels, and installation records can help separate product behavior from jobsite conditions."
+        ],
+        bullets: [
+          "Stop active water first if there is a leak.",
+          "Measure indoor humidity and note recent HVAC or weather changes.",
+          "Check concrete or wood subfloor moisture where accessible.",
+          "Look for odor, staining, soft areas, cupping, crowning, buckling, gaps, or adhesive release.",
+          "Review manufacturer requirements for moisture limits, acclimation, cleaning, and repair."
+        ]
+      },
+      {
+        id: "when-to-call-a-professional",
+        title: "When to call a professional",
+        paragraphs: [
+          "Call a flooring professional when moisture is hidden below flooring, concrete or crawlspace conditions are involved, hardwood has cupping or crowning, or the same issue returns after a repair.",
+          "Call an appropriate building, plumbing, or remediation professional when water intrusion, mold-like growth, soft subflooring, structural concern, or persistent odor is present."
+        ]
+      }
+    ],
+    example: [
+      "A homeowner sees swollen laminate edges in one hallway and a musty smell near a basement wall. The visible problem is the laminate seam, but the cause may be humidity or slab moisture below the floor.",
+      "The repair should start with moisture source checks, humidity readings, and product requirements, not simply tapping the joint closed or replacing one plank."
+    ],
+    commonMistakes: [
+      "Replacing flooring before stopping the moisture source.",
+      "Sanding cupped hardwood before moisture has stabilized.",
+      "Assuming waterproof flooring solves slab moisture or humidity.",
+      "Ignoring musty odor because the surface looks dry.",
+      "Skipping manufacturer moisture limits and acclimation requirements."
+    ],
+    faq: [
+      {
+        question: "What are common signs of flooring moisture problems?",
+        answer:
+          "Common signs include swelling, raised seams, cupping, crowning, gaps, buckling, lifting, musty odor, stains, soft spots, hollow sounds, adhesive release, and recurring movement."
+      },
+      {
+        question: "Can high humidity damage flooring?",
+        answer:
+          "Yes. High humidity can contribute to swelling, cupping, tight seams, buckling, and mold-friendly conditions depending on the flooring type and room conditions."
+      },
+      {
+        question: "Can concrete moisture damage flooring?",
+        answer:
+          "Yes. Concrete moisture can affect adhesives, underlayment, wood products, laminate, resilient floors, carpet cushion, odor, and trapped vapor below floating floors."
+      },
+      {
+        question: "Should I replace wet flooring right away?",
+        answer:
+          "Stop the moisture source and evaluate the subfloor first. Replacement can fail again if the slab, subfloor, humidity, or leak problem remains."
+      }
+    ],
+    disclaimer: installConditionDisclaimer
+  },
+  {
+    slug: "can-high-humidity-damage-flooring",
+    title: "Can High Humidity Damage Flooring?",
+    description:
+      "Learn how high humidity can affect hardwood, engineered hardwood, laminate, LVP, carpet, and tile installations, including swelling, cupping, buckling, odor, and mold concerns.",
+    metadataTitle: "Can High Humidity Damage Flooring? Moisture and HVAC Guide",
+    metadataDescription:
+      "High humidity can affect flooring through swelling, cupping, buckling, gaps, odor, and moisture problems. Learn what to check and when to call a pro.",
+    dateModified: "2026-06-02",
+    readTime: "9 min read",
+    primaryEcosystem: "planning-measuring-transitions",
+    secondaryEcosystems: ["lvp", "laminate", "hardwood-engineered-hardwood", "carpet-padding"],
+    materialTypes: ["lvp", "lvt", "laminate", "hardwood", "engineered-hardwood", "carpet"],
+    topicCluster: "installation-method",
+    relatedTools: ["flooring-square-footage-calculator", "waste-calculator"],
+    relatedGuides: [
+      "flooring-moisture-problems",
+      "ideal-humidity-for-flooring",
+      "seasonal-flooring-movement",
+      "why-is-my-floor-swelling",
+      "why-is-my-hardwood-floor-cupping",
+      "why-is-my-hardwood-floor-crowning",
+      "why-is-my-laminate-floor-buckling",
+      "why-is-my-lvp-floor-peaking",
+      "hardwood-installation-humidity",
+      "how-long-should-hardwood-acclimate"
+    ],
+    quickAnswer: [
+      "Yes, high humidity can damage or stress flooring when it exceeds the flooring product's room-condition requirements. It can contribute to swelling, cupping, crowning, buckling, tight seams, odor, adhesive issues, and mold-friendly conditions.",
+      "The risk depends on flooring type, subfloor, ventilation, HVAC stability, moisture history, and product instructions. Use humidity readings and product requirements rather than guessing by comfort alone."
+    ],
+    keySections: [
+      {
+        id: "common-causes",
+        title: "How high humidity affects floors",
+        paragraphs: [
+          "High humidity adds moisture to the indoor environment. Wood and wood-based flooring can absorb moisture and change shape. Carpet and cushion can hold humidity and odor in damp spaces. LVP is less moisture-sensitive than wood, but humidity often appears with slab moisture, temperature swings, or trapped moisture.",
+          "Humidity problems are common in basements, crawlspace homes, closed-up rooms, new construction, and homes where HVAC is not running consistently."
+        ],
+        bullets: [
+          "Hardwood and engineered hardwood may cup, crown, or gap as conditions change.",
+          "Laminate may swell, buckle, or show raised seams.",
+          "LVP may peak or move if humidity is paired with temperature swings or expansion pressure.",
+          "Carpet can develop odor or damp cushion concerns in humid rooms.",
+          "High humidity can hide a slab, crawlspace, leak, or ventilation problem."
+        ]
+      },
+      {
+        id: "what-to-check-first",
+        title: "What to check first",
+        paragraphs: [
+          "Measure the humidity in the room where the flooring problem appears. Then compare that number with the flooring manufacturer's recommended range.",
+          "If humidity is high, look for the reason. HVAC settings, closed vents, crawlspace moisture, slab moisture, bathroom ventilation, laundry areas, and exterior drainage can all contribute."
+        ],
+        bullets: [
+          "Use a hygrometer in the affected room.",
+          "Look for musty odor, condensation, stains, cupping, swelling, or soft spots.",
+          "Check HVAC operation, dehumidification, and room ventilation.",
+          "Review crawlspace, basement, or concrete slab moisture concerns.",
+          "Do not install new flooring until room conditions meet product requirements."
+        ]
+      },
+      {
+        id: "when-to-call-a-professional",
+        title: "When to call a professional",
+        paragraphs: [
+          "Call a professional when high humidity is persistent, when flooring is already cupping, swelling, buckling, or smelling musty, or when the moisture source is unclear.",
+          "A flooring professional may need help from HVAC, crawlspace, waterproofing, or remediation specialists if the cause is not limited to the flooring layer."
+        ]
+      }
+    ],
+    example: [
+      "A summer installation looks fine for two months, then engineered hardwood starts to cup near a room over a damp crawlspace. Indoor humidity readings are much higher than the product's recommended range.",
+      "The flooring symptom should not be repaired until the humidity and crawlspace conditions are understood."
+    ],
+    commonMistakes: [
+      "Assuming humidity is fine because the room feels comfortable.",
+      "Installing flooring before HVAC is stable.",
+      "Treating cupping or swelling without checking humidity.",
+      "Using waterproof flooring as a substitute for moisture control.",
+      "Ignoring musty odor in carpet or underlayment."
+    ],
+    faq: [
+      {
+        question: "Can humidity make hardwood floors cup?",
+        answer:
+          "Yes. High humidity or moisture imbalance can contribute to cupping, especially when moisture affects one side of the board more than the other."
+      },
+      {
+        question: "Can laminate buckle from humidity?",
+        answer:
+          "Laminate can buckle or swell when humidity or moisture exceeds product limits, especially if expansion space is restricted."
+      },
+      {
+        question: "Does LVP care about humidity?",
+        answer:
+          "LVP is generally less moisture-sensitive than wood products, but humidity can still be part of a room condition, slab moisture, temperature, or expansion problem."
+      },
+      {
+        question: "Should I use a dehumidifier before installing flooring?",
+        answer:
+          "A dehumidifier may help in some rooms, but the goal is to meet the flooring product's written jobsite conditions consistently before installation."
+      }
+    ],
+    disclaimer: installConditionDisclaimer
+  },
+  {
+    slug: "ideal-humidity-for-flooring",
+    title: "What Humidity Should My House Be For Flooring?",
+    description:
+      "Learn how to think about indoor humidity for flooring, why product ranges vary, and how humidity affects hardwood, laminate, LVP, carpet, acclimation, and seasonal movement.",
+    metadataTitle: "What Humidity Should My House Be for Flooring?",
+    metadataDescription:
+      "Understand ideal house humidity for flooring, why manufacturer ranges vary, and how humidity affects hardwood, laminate, LVP, carpet, acclimation, and seasonal movement.",
+    dateModified: "2026-06-02",
+    readTime: "9 min read",
+    primaryEcosystem: "planning-measuring-transitions",
+    secondaryEcosystems: ["lvp", "laminate", "hardwood-engineered-hardwood", "carpet-padding"],
+    materialTypes: ["lvp", "lvt", "laminate", "hardwood", "engineered-hardwood", "carpet"],
+    topicCluster: "installation-method",
+    relatedTools: ["flooring-square-footage-calculator", "waste-calculator"],
+    relatedGuides: [
+      "flooring-moisture-problems",
+      "can-high-humidity-damage-flooring",
+      "hardwood-installation-humidity",
+      "how-long-should-hardwood-acclimate",
+      "seasonal-flooring-movement",
+      "what-flooring-movement-is-normal",
+      "why-is-my-hardwood-floor-gapping",
+      "why-is-my-hardwood-floor-cupping",
+      "laminate-installation-checklist",
+      "engineered-hardwood-installation-checklist"
+    ],
+    quickAnswer: [
+      "The right indoor humidity for flooring is the range required by the specific product. Many flooring products expect normal, stable living conditions, but exact humidity and temperature ranges vary by manufacturer, material, and installation method.",
+      "Use the written product instructions as the source of truth. If humidity swings widely, flooring can gap, swell, cup, crown, buckle, squeak, or separate."
+    ],
+    keySections: [
+      {
+        id: "common-causes",
+        title: "Why humidity ranges vary",
+        paragraphs: [
+          "Different floors respond differently to humidity. Solid hardwood usually reacts more than engineered hardwood. Laminate has wood-based core concerns. LVP is less moisture-sensitive but still has temperature and room-condition limits. Carpet and cushion can hold moisture and odor in damp rooms.",
+          "Because products vary, a generic humidity number is less reliable than the flooring manufacturer's published range."
+        ],
+        bullets: [
+          "Wood flooring reacts to moisture content and indoor humidity.",
+          "Laminate can swell or separate when humidity and moisture are outside product limits.",
+          "LVP may have temperature, sunlight, and jobsite-condition requirements.",
+          "Carpet can be affected by damp basements, cushion moisture, and odor.",
+          "Concrete slabs and crawlspaces can influence room humidity."
+        ]
+      },
+      {
+        id: "what-to-check-first",
+        title: "What to check first",
+        paragraphs: [
+          "Start by reading the flooring instructions for required temperature and humidity ranges. Then measure the actual room conditions where the flooring will be installed.",
+          "If the home has seasonal swings, track humidity over time instead of relying on one reading taken on installation day."
+        ],
+        bullets: [
+          "Use a hygrometer in the room, not just a thermostat elsewhere.",
+          "Check HVAC operation and whether the room is conditioned consistently.",
+          "Look for crawlspace, basement, slab, bathroom, laundry, or exterior-door moisture sources.",
+          "Compare readings to product acclimation and installation requirements.",
+          "Keep records if the installation depends on documented jobsite conditions."
+        ]
+      },
+      {
+        id: "when-to-call-a-professional",
+        title: "When to call a professional",
+        paragraphs: [
+          "Call a professional if humidity is outside product limits, if the home cannot maintain stable conditions, or if the floor already shows cupping, crowning, swelling, gaps, or buckling.",
+          "A flooring installer can identify product requirements, while HVAC, crawlspace, or waterproofing professionals may need to address the underlying moisture condition."
+        ]
+      }
+    ],
+    example: [
+      "A homeowner stores engineered hardwood in a house where HVAC is not running because the remodel is still underway. The rooms feel dry in the morning and humid by evening.",
+      "The checklist answer is not a universal number. The homeowner should stabilize the jobsite, measure humidity, and follow the product's acclimation and installation requirements before installation."
+    ],
+    commonMistakes: [
+      "Using one generic humidity target for every flooring product.",
+      "Measuring humidity in a different room from the installation area.",
+      "Installing before HVAC is operating normally.",
+      "Ignoring seasonal humidity changes.",
+      "Assuming acclimation fixes an unstable house."
+    ],
+    faq: [
+      {
+        question: "What humidity is best for hardwood floors?",
+        answer:
+          "Use the hardwood manufacturer's recommended range. Hardwood is sensitive to humidity, so stable living conditions and documented moisture checks matter."
+      },
+      {
+        question: "Can low humidity damage flooring?",
+        answer:
+          "Low humidity can contribute to shrinkage, gaps, squeaks, or seasonal movement in some products, especially wood flooring."
+      },
+      {
+        question: "Can high humidity damage flooring?",
+        answer:
+          "Yes. High humidity can contribute to swelling, cupping, buckling, odor, and moisture-related movement depending on the flooring type."
+      },
+      {
+        question: "Should humidity be checked before acclimation?",
+        answer:
+          "Yes. Acclimation should happen in jobsite conditions that meet the product requirements. Otherwise the flooring may adjust to temporary conditions."
+      }
+    ],
+    disclaimer: installConditionDisclaimer
+  },
+  {
+    slug: "signs-of-moisture-damage-under-flooring",
+    title: "Signs Of Moisture Damage Under Flooring",
+    description:
+      "Learn warning signs of moisture damage under flooring, including odor, soft spots, staining, swelling, cupping, buckling, mold concerns, adhesive failure, and slab moisture clues.",
+    metadataTitle: "Signs of Moisture Damage Under Flooring",
+    metadataDescription:
+      "Look for signs of moisture damage under flooring, including musty odor, soft spots, swelling, cupping, buckling, stains, adhesive failure, and slab moisture clues.",
+    dateModified: "2026-06-02",
+    readTime: "10 min read",
+    primaryEcosystem: "planning-measuring-transitions",
+    secondaryEcosystems: ["lvp", "laminate", "hardwood-engineered-hardwood", "tile", "carpet-padding"],
+    materialTypes: ["lvp", "lvt", "laminate", "hardwood", "engineered-hardwood", "carpet", "ceramic-tile", "porcelain-tile"],
+    topicCluster: "subfloor-prep",
+    relatedTools: ["flooring-square-footage-calculator", "waste-calculator"],
+    relatedGuides: [
+      "flooring-moisture-problems",
+      "why-is-my-subfloor-wet",
+      "why-is-my-floor-swelling",
+      "can-high-humidity-damage-flooring",
+      "how-to-test-concrete-moisture",
+      "moisture-level-too-high-for-flooring",
+      "why-is-moisture-coming-through-my-slab",
+      "why-flooring-fails-over-concrete",
+      "why-does-my-floor-feel-hollow",
+      "why-is-my-carpet-wrinkling-or-buckling"
+    ],
+    quickAnswer: [
+      "Signs of moisture damage under flooring can include musty odor, soft or spongy spots, staining, swollen edges, cupping, crowning, buckling, lifting, hollow sounds, loose tile, adhesive release, mold-like growth, or recurring gaps and movement.",
+      "If moisture damage is suspected below the finished floor, do not cover it with new flooring. Find the moisture source, evaluate the substrate, and verify product requirements before repair."
+    ],
+    keySections: [
+      {
+        id: "common-causes",
+        title: "Common signs by flooring type",
+        paragraphs: [
+          "Moisture damage can look different depending on the floor. Laminate may swell at seams. Hardwood may cup or crown. LVP can lift, peak, or show adhesive problems. Carpet may smell musty or feel damp. Tile may sound hollow or show grout problems when moisture and movement are involved.",
+          "Mold-like growth or persistent musty odor should be treated as a building-condition issue that may require a qualified professional."
+        ],
+        bullets: [
+          "Musty odor, stains, dark edges, or damp cushion.",
+          "Soft, spongy, hollow, or uneven areas under foot.",
+          "Swollen laminate seams, raised LVP joints, or buckled floating floors.",
+          "Hardwood cupping, crowning, gapping, or finish discoloration.",
+          "Loose tile, adhesive release, or old flooring failure over concrete."
+        ]
+      },
+      {
+        id: "what-to-check-first",
+        title: "What to check first",
+        paragraphs: [
+          "Start by looking for the likely source: plumbing, appliances, exterior doors, bathrooms, wet cleaning, crawlspaces, concrete slabs, basement walls, or recent construction moisture.",
+          "Then decide whether the finished flooring needs to be lifted for inspection. Moisture below the surface can remain hidden until flooring is removed."
+        ],
+        bullets: [
+          "Stop active leaks before flooring repair.",
+          "Check humidity, slab moisture, crawlspace conditions, and nearby plumbing.",
+          "Look for recurring odor, soft areas, stains, or spreading movement.",
+          "Take moisture readings when repair decisions depend on dryness.",
+          "Document the condition before demolition or replacement."
+        ]
+      },
+      {
+        id: "when-to-call-a-professional",
+        title: "When to call a professional",
+        paragraphs: [
+          "Call a professional if the moisture source is hidden, the subfloor feels soft, the smell is persistent, mold-like growth is visible, concrete moisture is suspected, or the area is large.",
+          "A flooring installer can evaluate flooring damage, but plumbing, remediation, waterproofing, HVAC, or structural professionals may be needed depending on the source."
+        ]
+      }
+    ],
+    example: [
+      "A homeowner notices a musty odor and a soft spot near a basement exterior wall. The LVP surface looks mostly fine, but one transition has started to lift.",
+      "That should be treated as a moisture investigation, not just a trim repair. The floor may need to be opened to inspect the underlayment, slab, wall edge, and moisture source."
+    ],
+    commonMistakes: [
+      "Covering odor or soft spots with new flooring.",
+      "Assuming a dry surface means the subfloor is dry.",
+      "Ignoring mold-like growth or persistent musty smell.",
+      "Replacing planks without checking the source.",
+      "Skipping concrete moisture checks after a prior flooring failure."
+    ],
+    faq: [
+      {
+        question: "How do I know if moisture is under my flooring?",
+        answer:
+          "Look for musty odor, soft spots, staining, swelling, cupping, buckling, hollow sound, adhesive release, or recurring movement, then inspect or test the substrate as needed."
+      },
+      {
+        question: "Can moisture damage be hidden under LVP?",
+        answer:
+          "Yes. LVP may hide moisture below the surface while underlayment, adhesive, concrete, or subfloor materials are affected."
+      },
+      {
+        question: "Does musty smell mean mold under flooring?",
+        answer:
+          "Not always, but it is a warning sign. Musty odor can come from moisture, old adhesive, damp cushion, organic debris, or mold-like growth and should be investigated."
+      },
+      {
+        question: "Should wet subfloor be replaced?",
+        answer:
+          "It depends on the material, damage, drying results, and structural condition. A qualified professional should evaluate soft, swollen, contaminated, or weakened subfloor areas."
       }
     ],
     disclaimer: installConditionDisclaimer

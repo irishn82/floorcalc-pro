@@ -156,7 +156,11 @@ export type GuideSlug =
   | "laminate-installation-checklist"
   | "engineered-hardwood-installation-checklist"
   | "tile-installation-checklist"
-  | "carpet-installation-checklist";
+  | "carpet-installation-checklist"
+  | "flooring-moisture-problems"
+  | "can-high-humidity-damage-flooring"
+  | "ideal-humidity-for-flooring"
+  | "signs-of-moisture-damage-under-flooring";
 
 export type GuideSection = {
   id: string;

@@ -3,6 +3,7 @@ import type { GuideEcosystemSlug, GuideSlug, ToolSlug } from "@/data/types";
 
 export type TroubleshootingProblemGroupSlug =
   | "movement"
+  | "moisture"
   | "lvp"
   | "laminate"
   | "hardwood"
@@ -50,6 +51,31 @@ export const troubleshootingProblemGroups: TroubleshootingProblemGroup[] = [
       "why-is-my-hardwood-floor-crowning",
       "why-does-my-floor-feel-hollow",
       "why-is-my-floor-squeaking"
+    ],
+    toolSlugs: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"]
+  },
+  {
+    slug: "moisture",
+    title: "Moisture Problems",
+    description:
+      "Diagnose swelling, cupping, crowning, gapping, buckling, mold concerns, concrete moisture, humidity swings, and acclimation-related flooring problems.",
+    ecosystemSlug: "planning-measuring-transitions",
+    guideSlugs: [
+      "flooring-moisture-problems",
+      "why-is-my-floor-swelling",
+      "can-high-humidity-damage-flooring",
+      "ideal-humidity-for-flooring",
+      "signs-of-moisture-damage-under-flooring",
+      "moisture-level-too-high-for-flooring",
+      "how-to-test-concrete-moisture",
+      "why-is-my-subfloor-wet",
+      "can-moisture-come-through-concrete",
+      "why-is-moisture-coming-through-my-slab",
+      "why-is-my-hardwood-floor-cupping",
+      "why-is-my-hardwood-floor-crowning",
+      "why-is-my-laminate-floor-separating",
+      "why-is-my-lvp-lifting",
+      "why-is-my-lvp-floor-clicking"
     ],
     toolSlugs: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"]
   },
@@ -314,6 +340,90 @@ const troubleshootingFlows: Partial<Record<GuideSlug, TroubleshootingFlow>> = {
       "The floor is over concrete, a crawlspace, or recent construction moisture."
     ]
   },
+  "flooring-moisture-problems": {
+    group: "moisture",
+    causeRows: [
+      { cause: "High humidity", symptom: "Swelling, cupping, tight seams, or odor", check: "Measure room humidity and compare with product requirements." },
+      { cause: "Concrete moisture", symptom: "Musty odor, adhesive failure, or recurring buckling", check: "Use the slab test required by the flooring system." },
+      { cause: "Leak or wet subfloor", symptom: "Localized swelling, stains, or soft spots", check: "Find and stop the water source before repair." },
+      { cause: "Poor acclimation or jobsite conditions", symptom: "Gaps, cupping, crowning, or separation after install", check: "Review HVAC, storage, acclimation, and moisture records." }
+    ],
+    whatToCheckFirst: [
+      "Stop active water and identify whether the issue is local or room-wide.",
+      "Measure indoor humidity and look for recent HVAC or weather changes.",
+      "Check slab, crawlspace, wood subfloor, appliance, exterior door, and bathroom moisture sources.",
+      "Document swelling, cupping, crowning, gaps, odor, stains, buckling, or soft spots before repair."
+    ],
+    whenToCallAPro: [
+      "Moisture is hidden below the floor or the source is unclear.",
+      "There is musty odor, mold-like growth, soft subfloor, or recurring damage.",
+      "Hardwood cupping or crowning, concrete moisture, or adhesive failure is involved.",
+      "The same symptom returned after a prior repair."
+    ]
+  },
+  "can-high-humidity-damage-flooring": {
+    group: "moisture",
+    causeRows: [
+      { cause: "High indoor humidity", symptom: "Swelling, cupping, or tight seams", check: "Measure humidity in the affected room." },
+      { cause: "Unstable HVAC", symptom: "Seasonal movement or recurring gaps", check: "Check heating, cooling, dehumidification, and room conditioning." },
+      { cause: "Basement or crawlspace moisture", symptom: "Musty odor or widespread dampness", check: "Inspect slab, crawlspace, walls, and ventilation." },
+      { cause: "Product limits exceeded", symptom: "Flooring changes shape or releases", check: "Compare humidity to the written product range." }
+    ],
+    whatToCheckFirst: [
+      "Use a hygrometer where the flooring problem appears.",
+      "Look for cupping, swelling, buckling, odor, condensation, or stains.",
+      "Check HVAC operation, crawlspace, basement, slab, laundry, and bathroom ventilation.",
+      "Do not install new flooring until conditions meet product requirements."
+    ],
+    whenToCallAPro: [
+      "Humidity remains high after normal HVAC operation.",
+      "Flooring is already cupping, swelling, buckling, or smelling musty.",
+      "A crawlspace, slab, leak, or drainage issue may be involved.",
+      "You need documentation before installation or repair."
+    ]
+  },
+  "ideal-humidity-for-flooring": {
+    group: "moisture",
+    causeRows: [
+      { cause: "Wrong humidity assumption", symptom: "Floor installed in unstable conditions", check: "Use the product's published range, not a generic number." },
+      { cause: "Seasonal swings", symptom: "Winter gaps or summer swelling", check: "Track humidity over time in the installation room." },
+      { cause: "Unconditioned jobsite", symptom: "Movement soon after installation", check: "Confirm HVAC and normal living conditions are stable." },
+      { cause: "Hidden moisture source", symptom: "Humidity stays high or localized symptoms appear", check: "Inspect slab, crawlspace, leaks, and ventilation." }
+    ],
+    whatToCheckFirst: [
+      "Find the flooring manufacturer's required humidity and temperature range.",
+      "Measure humidity in the actual room where flooring will be installed.",
+      "Track readings over time if seasonal swings are likely.",
+      "Confirm HVAC, crawlspace, slab, and wet-work conditions before installation."
+    ],
+    whenToCallAPro: [
+      "The home cannot stay within the product's required range.",
+      "Hardwood, engineered hardwood, or laminate is planned in a changing environment.",
+      "Cupping, crowning, gapping, swelling, or buckling is already visible.",
+      "Humidity problems may involve HVAC, crawlspace, basement, or drainage conditions."
+    ]
+  },
+  "signs-of-moisture-damage-under-flooring": {
+    group: "moisture",
+    causeRows: [
+      { cause: "Hidden leak", symptom: "Localized soft spot, stain, or swelling", check: "Inspect plumbing, appliances, exterior doors, baths, and laundry areas." },
+      { cause: "Concrete or crawlspace moisture", symptom: "Musty odor, hollow sound, or recurring movement", check: "Evaluate slab, crawlspace, vapor, and humidity conditions." },
+      { cause: "Trapped moisture", symptom: "Odor under LVP, carpet, or old flooring", check: "Lift or inspect layers when safe and appropriate." },
+      { cause: "Mold-like growth concern", symptom: "Persistent odor, discoloration, or damp materials", check: "Stop moisture and involve qualified help." }
+    ],
+    whatToCheckFirst: [
+      "Stop active water and avoid covering the area with new flooring.",
+      "Look for odor, stains, soft spots, swelling, cupping, buckling, loose tile, or adhesive release.",
+      "Identify nearby moisture sources and substrate type.",
+      "Use moisture readings or professional inspection when repair decisions depend on hidden conditions."
+    ],
+    whenToCallAPro: [
+      "Subflooring feels soft, swollen, or unsafe.",
+      "Musty odor, visible mold-like growth, or recurring moisture is present.",
+      "Concrete, crawlspace, plumbing, or foundation moisture may be involved.",
+      "Flooring needs removal to inspect the substrate."
+    ]
+  },
   "why-is-my-floor-clicking": {
     group: "laminate",
     causeRows: [
@@ -399,7 +509,7 @@ const troubleshootingFlows: Partial<Record<GuideSlug, TroubleshootingFlow>> = {
     ]
   },
   "why-is-my-floor-swelling": {
-    group: "laminate",
+    group: "moisture",
     causeRows: [
       { cause: "Moisture exposure", symptom: "Raised seams, swollen edges, or soft spots", check: "Look for leaks, wet cleaning, pet accidents, or exterior door water." },
       { cause: "High humidity", symptom: "Widespread swelling or seasonal movement", check: "Measure indoor humidity and check HVAC operation." },

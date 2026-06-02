@@ -225,6 +225,7 @@ export const troubleshootingGuides: Guide[] = [
     relatedTools: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"],
     relatedGuides: [
       "flooring-movement-problems",
+      "flooring-moisture-problems",
       "why-is-my-lvp-floor-separating",
       "can-you-install-cabinets-over-floating-lvp",
       "how-long-should-lvp-acclimate",

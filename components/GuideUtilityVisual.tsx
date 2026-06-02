@@ -265,7 +265,14 @@ export function GuideUtilityVisual({ guide, hideDiagnosticTables = false }: Guid
     );
   }
 
-  if (["seasonal-flooring-movement", "why-do-floors-expand-and-contract"].includes(guide.slug)) {
+  if (
+    [
+      "seasonal-flooring-movement",
+      "why-do-floors-expand-and-contract",
+      "can-high-humidity-damage-flooring",
+      "ideal-humidity-for-flooring"
+    ].includes(guide.slug)
+  ) {
     return (
       <VisualShell title="Seasonal movement planning view">
         <SeasonalMovementVisual />
@@ -330,10 +337,12 @@ export function GuideUtilityVisual({ guide, hideDiagnosticTables = false }: Guid
       "moisture-barrier-engineered-hardwood-over-concrete",
       "can-you-install-lvp-over-concrete",
       "moisture-level-too-high-for-flooring",
+      "flooring-moisture-problems",
       "how-to-test-concrete-moisture",
       "can-moisture-come-through-concrete",
       "why-is-moisture-coming-through-my-slab",
       "why-is-my-subfloor-wet",
+      "signs-of-moisture-damage-under-flooring",
       "what-happens-if-flooring-is-installed-too-soon"
     ].includes(guide.slug)
   ) {

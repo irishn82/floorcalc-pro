@@ -436,6 +436,7 @@ const guideDrafts: GuideDraft[] = [
     relatedTools: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"],
     relatedGuides: [
       "flooring-movement-problems",
+      "flooring-moisture-problems",
       "why-is-my-lvp-floor-buckling",
       "why-are-my-lvp-seams-showing",
       "why-is-my-floor-expanding",
@@ -806,6 +807,7 @@ const guideDrafts: GuideDraft[] = [
     relatedTools: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"],
     relatedGuides: [
       "flooring-movement-problems",
+      "flooring-moisture-problems",
       "laminate-floor-separating-what-to-check-first",
       "why-is-my-laminate-floor-buckling",
       "why-are-my-flooring-joints-opening",
@@ -1274,6 +1276,7 @@ const guideDrafts: GuideDraft[] = [
     relatedTools: ["flooring-square-footage-calculator", "waste-calculator"],
     relatedGuides: [
       "hardwood-installation-humidity",
+      "flooring-moisture-problems",
       "hardwood-acclimation-mistakes",
       "what-happens-if-flooring-is-installed-too-soon",
       "why-is-my-engineered-hardwood-separating",
@@ -1455,6 +1458,7 @@ const guideDrafts: GuideDraft[] = [
     topicCluster: "subfloor-prep",
     relatedTools: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"],
     relatedGuides: [
+      "flooring-moisture-problems",
       "concrete-slab-flooring-guide",
       "how-to-test-concrete-moisture",
       "can-moisture-come-through-concrete",

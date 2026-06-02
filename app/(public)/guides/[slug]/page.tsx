@@ -117,6 +117,7 @@ const targetedNextStepTargets: Partial<
   "why-is-my-laminate-floor-separating": {
     primary: { type: "guide", slug: "laminate-floor-separating-what-to-check-first" },
     secondary: [
+      { type: "guide", slug: "flooring-moisture-problems" },
       { type: "guide", slug: "laminate-installation-checklist" },
       { type: "guide", slug: "flooring-movement-problems" },
       { type: "guide", slug: "why-is-my-laminate-floor-buckling" },
@@ -189,6 +190,10 @@ const targetedNextStepTargets: Partial<
   "moisture-level-too-high-for-flooring": {
     primary: { type: "guide", slug: "moisture-barrier-engineered-hardwood-over-concrete" },
     secondary: [
+      { type: "guide", slug: "flooring-moisture-problems" },
+      { type: "guide", slug: "can-high-humidity-damage-flooring" },
+      { type: "guide", slug: "ideal-humidity-for-flooring" },
+      { type: "guide", slug: "signs-of-moisture-damage-under-flooring" },
       { type: "guide", slug: "can-engineered-hardwood-go-over-concrete" },
       { type: "guide", slug: "can-you-install-lvp-over-concrete" },
       { type: "guide", slug: "how-long-should-hardwood-acclimate" },
@@ -198,6 +203,7 @@ const targetedNextStepTargets: Partial<
   "why-is-my-lvp-floor-peaking": {
     primary: { type: "guide", slug: "why-is-my-lvp-floor-separating" },
     secondary: [
+      { type: "guide", slug: "flooring-moisture-problems" },
       { type: "guide", slug: "flooring-movement-problems" },
       { type: "guide", slug: "why-is-my-lvp-lifting" },
       { type: "guide", slug: "can-you-install-cabinets-over-floating-lvp" },
@@ -209,6 +215,7 @@ const targetedNextStepTargets: Partial<
   "why-is-my-hardwood-floor-crowning": {
     primary: { type: "guide", slug: "why-is-my-hardwood-floor-cupping" },
     secondary: [
+      { type: "guide", slug: "flooring-moisture-problems" },
       { type: "guide", slug: "flooring-movement-problems" },
       { type: "guide", slug: "moisture-level-too-high-for-flooring" },
       { type: "guide", slug: "how-long-should-hardwood-acclimate" },
@@ -229,6 +236,7 @@ const targetedNextStepTargets: Partial<
   "why-is-my-lvp-floor-separating": {
     primary: { type: "guide", slug: "subfloor-flatness-requirements-lvp" },
     secondary: [
+      { type: "guide", slug: "flooring-moisture-problems" },
       { type: "guide", slug: "flooring-movement-problems" },
       { type: "guide", slug: "why-is-my-lvp-floor-buckling" },
       { type: "guide", slug: "why-are-my-lvp-seams-showing" },
@@ -281,6 +289,7 @@ const targetedNextStepTargets: Partial<
   "how-to-test-concrete-moisture": {
     primary: { type: "guide", slug: "moisture-level-too-high-for-flooring" },
     secondary: [
+      { type: "guide", slug: "flooring-moisture-problems" },
       { type: "guide", slug: "concrete-slab-flooring-guide" },
       { type: "guide", slug: "why-flooring-fails-over-concrete" },
       { type: "guide", slug: "can-moisture-come-through-concrete" },
@@ -309,6 +318,9 @@ const targetedNextStepTargets: Partial<
   "why-is-my-floor-swelling": {
     primary: { type: "guide", slug: "why-is-my-subfloor-wet" },
     secondary: [
+      { type: "guide", slug: "flooring-moisture-problems" },
+      { type: "guide", slug: "can-high-humidity-damage-flooring" },
+      { type: "guide", slug: "signs-of-moisture-damage-under-flooring" },
       { type: "guide", slug: "moisture-level-too-high-for-flooring" },
       { type: "guide", slug: "why-is-my-floor-expanding" },
       { type: "guide", slug: "why-is-my-laminate-floor-separating" },
@@ -318,6 +330,8 @@ const targetedNextStepTargets: Partial<
   "why-is-my-subfloor-wet": {
     primary: { type: "guide", slug: "moisture-level-too-high-for-flooring" },
     secondary: [
+      { type: "guide", slug: "flooring-moisture-problems" },
+      { type: "guide", slug: "signs-of-moisture-damage-under-flooring" },
       { type: "guide", slug: "why-is-my-floor-swelling" },
       { type: "guide", slug: "can-moisture-come-through-concrete" },
       { type: "guide", slug: "how-to-test-concrete-moisture" },
@@ -460,6 +474,50 @@ const targetedNextStepTargets: Partial<
       { type: "guide", slug: "why-do-floors-expand-and-contract" },
       { type: "guide", slug: "why-is-my-lvp-floor-clicking" },
       { type: "guide", slug: "why-is-my-hardwood-floor-gapping" },
+      { type: "tool", slug: "flooring-square-footage-calculator" }
+    ]
+  },
+  "flooring-moisture-problems": {
+    primary: { type: "guide", slug: "how-to-test-concrete-moisture" },
+    secondary: [
+      { type: "guide", slug: "moisture-level-too-high-for-flooring" },
+      { type: "guide", slug: "can-high-humidity-damage-flooring" },
+      { type: "guide", slug: "ideal-humidity-for-flooring" },
+      { type: "guide", slug: "signs-of-moisture-damage-under-flooring" },
+      { type: "guide", slug: "why-is-my-floor-swelling" },
+      { type: "tool", slug: "waste-calculator" }
+    ]
+  },
+  "can-high-humidity-damage-flooring": {
+    primary: { type: "guide", slug: "ideal-humidity-for-flooring" },
+    secondary: [
+      { type: "guide", slug: "flooring-moisture-problems" },
+      { type: "guide", slug: "seasonal-flooring-movement" },
+      { type: "guide", slug: "why-is-my-floor-swelling" },
+      { type: "guide", slug: "why-is-my-hardwood-floor-cupping" },
+      { type: "guide", slug: "why-is-my-laminate-floor-buckling" },
+      { type: "tool", slug: "flooring-square-footage-calculator" }
+    ]
+  },
+  "ideal-humidity-for-flooring": {
+    primary: { type: "guide", slug: "hardwood-installation-humidity" },
+    secondary: [
+      { type: "guide", slug: "flooring-moisture-problems" },
+      { type: "guide", slug: "can-high-humidity-damage-flooring" },
+      { type: "guide", slug: "how-long-should-hardwood-acclimate" },
+      { type: "guide", slug: "seasonal-flooring-movement" },
+      { type: "guide", slug: "what-flooring-movement-is-normal" },
+      { type: "tool", slug: "waste-calculator" }
+    ]
+  },
+  "signs-of-moisture-damage-under-flooring": {
+    primary: { type: "guide", slug: "why-is-my-subfloor-wet" },
+    secondary: [
+      { type: "guide", slug: "flooring-moisture-problems" },
+      { type: "guide", slug: "why-is-my-floor-swelling" },
+      { type: "guide", slug: "how-to-test-concrete-moisture" },
+      { type: "guide", slug: "why-is-moisture-coming-through-my-slab" },
+      { type: "guide", slug: "why-does-my-floor-feel-hollow" },
       { type: "tool", slug: "flooring-square-footage-calculator" }
     ]
   },
