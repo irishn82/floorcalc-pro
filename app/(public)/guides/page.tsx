@@ -28,12 +28,22 @@ const startHereGuideSlugs = [
   "why-are-my-carpet-seams-visible"
 ];
 
+const authorityHubSlugs = [
+  "flooring-separation-problems",
+  "flooring-movement-problems",
+  "concrete-floor-problems",
+  "flooring-moisture-problems"
+];
+
 const planningTools = tools.filter((tool) =>
   ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"].includes(tool.slug)
 );
 
 export default function GuidesIndexPage() {
   const startHereGuides = startHereGuideSlugs
+    .map((slug) => guides.find((guide) => guide.slug === slug))
+    .filter((guide): guide is (typeof guides)[number] => Boolean(guide));
+  const authorityHubs = authorityHubSlugs
     .map((slug) => guides.find((guide) => guide.slug === slug))
     .filter((guide): guide is (typeof guides)[number] => Boolean(guide));
   const troubleshootingGuides = getTroubleshootingGuides();
@@ -108,6 +118,26 @@ export default function GuidesIndexPage() {
                 </Link>
               );
             })}
+          </div>
+        </div>
+
+        <div className="mt-8 border-t border-line pt-7">
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <p className="text-sm font-bold uppercase tracking-wide text-accent-600">Authority hubs</p>
+              <h2 className="mt-2 text-xl font-black tracking-normal text-ink sm:text-2xl">Start with the main problem cluster</h2>
+              <p className="mt-2 max-w-2xl text-sm leading-6 text-slate-600">
+                Use these hubs when the symptom overlaps several flooring types, such as gaps, movement, moisture, or concrete slab conditions.
+              </p>
+            </div>
+            <Link href="/guides/browse-problems" className="inline-flex text-sm font-bold text-accent-700 hover:text-accent-600">
+              Browse by symptom
+            </Link>
+          </div>
+          <div className="mt-4 grid gap-3 md:grid-cols-2 xl:grid-cols-4">
+            {authorityHubs.map((guide) => (
+              <GuideCard key={guide.slug} guide={guide} />
+            ))}
           </div>
         </div>
 

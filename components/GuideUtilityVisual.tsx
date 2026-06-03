@@ -147,6 +147,54 @@ function MovementProblemsVisual() {
   );
 }
 
+function SeparationProblemsVisual() {
+  const rows = [
+    ["Open end joints", "Locking stress, low spots, or damaged tabs", "Check support, expansion pressure, and plank edges"],
+    ["Seasonal gaps", "Humidity change or acclimation issues", "Track room humidity and review product requirements"],
+    ["Separation with lifting", "Blocked expansion, moisture, or long runs", "Inspect walls, transitions, cabinets, and slab conditions"],
+    ["Engineered hardwood gaps", "Moisture, concrete, acclimation, or bond issues", "Check jobsite readings, slab moisture, and installation method"]
+  ];
+
+  return (
+    <div className="grid gap-3">
+      <ExpansionGapDiagram />
+      <ComparisonTable columns={["Separation pattern", "Likely direction", "First check"]} rows={rows} />
+    </div>
+  );
+}
+
+function ConcreteFloorProblemsVisual() {
+  const rows = [
+    ["Moisture or odor", "Slab vapor, basement humidity, or trapped moisture", "Use the required concrete moisture test"],
+    ["Cracks", "Stable shrinkage crack, active movement, or settlement", "Review crack pattern, movement, and height displacement"],
+    ["Hollow sound", "Low spots, adhesive release, underlayment, or mortar coverage", "Compare sound with movement, cracks, and bond"],
+    ["Adhesive failure", "Moisture, pH, contaminants, porosity, or weak surface", "Check surface prep and adhesive requirements"]
+  ];
+
+  return (
+    <div className="grid gap-3">
+      <ConcreteSlabConditionDiagram />
+      <ComparisonTable columns={["Concrete symptom", "Likely direction", "What to check"]} rows={rows} />
+    </div>
+  );
+}
+
+function MoistureProblemsVisual() {
+  const rows = [
+    ["Swelling or buckling", "Leak, high humidity, slab moisture, or blocked expansion", "Stop active water and check moisture path"],
+    ["Cupping or crowning", "Wood moisture imbalance or repair timing", "Check humidity, subfloor, slab, crawlspace, and drying history"],
+    ["Gaps or separation", "Seasonal humidity, poor acclimation, moisture, or joint stress", "Track room conditions and inspect support"],
+    ["Odor or soft areas", "Hidden moisture below flooring", "Investigate before covering or replacing material"]
+  ];
+
+  return (
+    <div className="grid gap-3">
+      <MoistureBarrierLayerDiagram />
+      <ComparisonTable columns={["Moisture symptom", "Likely direction", "First check"]} rows={rows} />
+    </div>
+  );
+}
+
 function SeasonalMovementVisual() {
   const rows = [
     ["Dry season", "Wood can shrink and show narrow gaps", "Track indoor humidity and whether gaps close later"],
@@ -257,6 +305,14 @@ function TileLayoutVisual() {
 }
 
 export function GuideUtilityVisual({ guide, hideDiagnosticTables = false }: GuideUtilityVisualProps) {
+  if (guide.slug === "flooring-separation-problems") {
+    return (
+      <VisualShell title="Separation causes overview">
+        <SeparationProblemsVisual />
+      </VisualShell>
+    );
+  }
+
   if (guide.slug === "flooring-movement-problems") {
     return (
       <VisualShell title="Flooring movement symptom map">
@@ -284,6 +340,14 @@ export function GuideUtilityVisual({ guide, hideDiagnosticTables = false }: Guid
     return (
       <VisualShell title="Movement pressure example">
         <MovementProblemsVisual />
+      </VisualShell>
+    );
+  }
+
+  if (guide.slug === "concrete-floor-problems") {
+    return (
+      <VisualShell title="Concrete slab issue map">
+        <ConcreteFloorProblemsVisual />
       </VisualShell>
     );
   }
@@ -332,12 +396,19 @@ export function GuideUtilityVisual({ guide, hideDiagnosticTables = false }: Guid
     );
   }
 
+  if (guide.slug === "flooring-moisture-problems") {
+    return (
+      <VisualShell title="Moisture problem map">
+        <MoistureProblemsVisual />
+      </VisualShell>
+    );
+  }
+
   if (
     [
       "moisture-barrier-engineered-hardwood-over-concrete",
       "can-you-install-lvp-over-concrete",
       "moisture-level-too-high-for-flooring",
-      "flooring-moisture-problems",
       "how-to-test-concrete-moisture",
       "can-moisture-come-through-concrete",
       "why-is-moisture-coming-through-my-slab",

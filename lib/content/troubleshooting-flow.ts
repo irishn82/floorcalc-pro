@@ -37,6 +37,7 @@ export const troubleshootingProblemGroups: TroubleshootingProblemGroup[] = [
     ecosystemSlug: "planning-measuring-transitions",
     guideSlugs: [
       "flooring-movement-problems",
+      "flooring-separation-problems",
       "why-is-my-floor-moving",
       "why-do-floors-expand-and-contract",
       "seasonal-flooring-movement",
@@ -62,6 +63,8 @@ export const troubleshootingProblemGroups: TroubleshootingProblemGroup[] = [
     ecosystemSlug: "planning-measuring-transitions",
     guideSlugs: [
       "flooring-moisture-problems",
+      "flooring-separation-problems",
+      "concrete-floor-problems",
       "why-is-my-floor-swelling",
       "can-high-humidity-damage-flooring",
       "ideal-humidity-for-flooring",
@@ -166,6 +169,7 @@ export const troubleshootingProblemGroups: TroubleshootingProblemGroup[] = [
       "Work through concrete slab moisture, cracks, flatness, vapor control, flooring failures, and product compatibility before covering the slab.",
     ecosystemSlug: "planning-measuring-transitions",
     guideSlugs: [
+      "concrete-floor-problems",
       "concrete-slab-flooring-guide",
       "how-to-test-concrete-moisture",
       "moisture-level-too-high-for-flooring",
@@ -254,6 +258,27 @@ const troubleshootingFlows: Partial<Record<GuideSlug, TroubleshootingFlow>> = {
       "Moisture, concrete, crawlspace, hardwood cupping, tile cracks, or adhesive release is involved.",
       "The floor feels soft, unsafe, or moves near stairs.",
       "The repair may require lifting flooring or documenting field conditions."
+    ]
+  },
+  "flooring-separation-problems": {
+    group: "movement",
+    causeRows: [
+      { cause: "Humidity or moisture movement", symptom: "Seasonal gaps, swelling, cupping, or separation", check: "Measure room humidity and look for leaks, slab moisture, crawlspace moisture, or wet cleaning." },
+      { cause: "Unsupported or uneven substrate", symptom: "A gap returns in the same traffic path", check: "Check for low spots, humps, bounce, hollow sounds, or damaged joints." },
+      { cause: "Blocked expansion", symptom: "Open joints with peaking, buckling, or pressure near trim", check: "Inspect walls, transitions, cabinets, islands, doorways, and long connected runs." },
+      { cause: "Damaged locking or bond system", symptom: "Joint will not stay closed or glue-down boards sound loose", check: "Inspect locking tabs, adhesive bond, slab prep, and product-specific repair instructions." }
+    ],
+    whatToCheckFirst: [
+      "Identify the material and installation method before choosing a repair.",
+      "Map where gaps appear, whether they are spreading, and whether they change seasonally.",
+      "Check humidity, moisture, expansion space, subfloor support, and nearby transitions.",
+      "Review the manufacturer's acclimation, flatness, moisture, underlayment, and repair requirements."
+    ],
+    whenToCallAPro: [
+      "Gaps keep reopening or separation is spreading.",
+      "Moisture, concrete, hardwood cupping, adhesive release, or damaged locking joints are suspected.",
+      "The floor is buckling, peaking, lifting, or creating a trip hazard.",
+      "A repair may require lifting flooring or documenting field conditions."
     ]
   },
   "why-is-my-floor-moving": {
@@ -359,6 +384,27 @@ const troubleshootingFlows: Partial<Record<GuideSlug, TroubleshootingFlow>> = {
       "There is musty odor, mold-like growth, soft subfloor, or recurring damage.",
       "Hardwood cupping or crowning, concrete moisture, or adhesive failure is involved.",
       "The same symptom returned after a prior repair."
+    ]
+  },
+  "concrete-floor-problems": {
+    group: "concrete",
+    causeRows: [
+      { cause: "Slab moisture", symptom: "Musty odor, adhesive release, swelling, or recurring buckling", check: "Use the concrete moisture test required by the flooring or adhesive system." },
+      { cause: "Cracks or slab movement", symptom: "Tile cracks, gaps, or failure along a line", check: "Inspect crack width, height displacement, control joints, and whether movement is active." },
+      { cause: "Poor surface prep", symptom: "Adhesive release, hollow areas, or loose patch", check: "Check dust, sealers, old adhesive, paint, porosity, pH, and surface strength." },
+      { cause: "Wrong system for the slab", symptom: "Failure despite normal use", check: "Compare flooring, underlayment, vapor control, adhesive, and room conditions to product instructions." }
+    ],
+    whatToCheckFirst: [
+      "Identify whether the slab is above grade, on grade, below grade, basement, or older concrete with unknown history.",
+      "Look for moisture signs, odor, efflorescence, cracks, old adhesive, sealers, dust, and patched areas.",
+      "Check the required moisture, pH, flatness, and surface preparation requirements for the selected flooring system.",
+      "Review whether the failure is local, along a crack, near a wall, near a transition, or spread across the room."
+    ],
+    whenToCallAPro: [
+      "The floor has musty odor, adhesive release, recurring buckling, or moisture-related failure.",
+      "Cracks, control joints, settlement, tile cracking, or hollow areas are involved.",
+      "Moisture mitigation, crack isolation, patching, grinding, or adhesive compatibility is unclear.",
+      "A previous flooring installation failed over the same slab."
     ]
   },
   "can-high-humidity-damage-flooring": {

@@ -79,6 +79,8 @@ export const problemBrowseSections: ProblemBrowseSection[] = [
     description:
       "Use these guides when a floor clicks, squeaks, bounces, lifts, buckles, peaks, separates, gaps, or sounds hollow.",
     guideSlugs: [
+      "flooring-movement-problems",
+      "flooring-separation-problems",
       "why-is-my-floor-clicking",
       "why-is-my-floor-squeaking",
       "why-is-my-floor-bouncing",
@@ -98,6 +100,8 @@ export const problemBrowseSections: ProblemBrowseSection[] = [
       "Start here for swelling, concrete moisture, moisture under flooring, cupping, crowning, moisture testing, and high humidity.",
     guideSlugs: [
       "flooring-moisture-problems",
+      "concrete-floor-problems",
+      "flooring-separation-problems",
       "why-is-my-floor-swelling",
       "why-is-my-subfloor-wet",
       "can-moisture-come-through-concrete",
@@ -115,6 +119,7 @@ export const problemBrowseSections: ProblemBrowseSection[] = [
     description:
       "Review flooring over concrete, moisture through slabs, cracks, underlayment, vapor barriers, and flooring failures over concrete.",
     guideSlugs: [
+      "concrete-floor-problems",
       "concrete-slab-flooring-guide",
       "can-engineered-hardwood-go-over-concrete",
       "can-you-install-lvp-over-concrete",
@@ -132,6 +137,7 @@ export const problemBrowseSections: ProblemBrowseSection[] = [
     description:
       "Troubleshoot LVP clicking, lifting, peaking, buckling, separating, visible seams, subfloor support, and floating-floor movement.",
     guideSlugs: [
+      "flooring-separation-problems",
       "why-is-my-lvp-floor-clicking",
       "why-is-my-lvp-lifting",
       "why-is-my-lvp-floor-peaking",
@@ -149,6 +155,7 @@ export const problemBrowseSections: ProblemBrowseSection[] = [
     description:
       "Use these guides for laminate separating, buckling, clicking, underlayment questions, flatness issues, and moisture or humidity concerns.",
     guideSlugs: [
+      "flooring-separation-problems",
       "why-is-my-laminate-floor-separating",
       "why-is-my-laminate-floor-buckling",
       "laminate-floor-separating-what-to-check-first",
@@ -166,6 +173,8 @@ export const problemBrowseSections: ProblemBrowseSection[] = [
     description:
       "Browse acclimation, gapping, cupping, crowning, engineered hardwood separation, concrete installs, and moisture-related hardwood movement.",
     guideSlugs: [
+      "flooring-separation-problems",
+      "flooring-moisture-problems",
       "how-long-should-hardwood-acclimate",
       "hardwood-acclimation-mistakes",
       "why-is-my-hardwood-floor-gapping",
@@ -233,19 +242,41 @@ export const problemBrowseSections: ProblemBrowseSection[] = [
 ];
 
 export const relatedProblemGuideSlugs: Partial<Record<GuideSlug, GuideSlug[]>> = {
+  "flooring-separation-problems": [
+    "why-is-my-laminate-floor-separating",
+    "why-is-my-lvp-floor-separating",
+    "why-is-my-engineered-hardwood-separating",
+    "why-are-my-flooring-joints-opening"
+  ],
+  "concrete-floor-problems": [
+    "how-to-test-concrete-moisture",
+    "why-flooring-fails-over-concrete",
+    "concrete-slab-cracks-under-flooring",
+    "why-is-moisture-coming-through-my-slab"
+  ],
+  "flooring-moisture-problems": [
+    "moisture-level-too-high-for-flooring",
+    "how-to-test-concrete-moisture",
+    "why-is-my-hardwood-floor-cupping",
+    "why-is-my-floor-swelling"
+  ],
   "why-is-my-lvp-floor-clicking": [
+    "flooring-separation-problems",
     "why-is-my-lvp-lifting",
     "why-is-my-lvp-floor-peaking",
     "why-is-my-lvp-floor-buckling",
     "why-is-my-lvp-floor-separating"
   ],
   "why-is-my-laminate-floor-separating": [
+    "flooring-separation-problems",
     "why-is-my-laminate-floor-buckling",
     "why-are-my-flooring-joints-opening",
     "flooring-moisture-problems",
     "how-flat-should-a-subfloor-be-for-laminate"
   ],
   "can-engineered-hardwood-go-over-concrete": [
+    "concrete-floor-problems",
+    "flooring-separation-problems",
     "how-to-test-concrete-moisture",
     "moisture-barrier-engineered-hardwood-over-concrete",
     "how-long-should-hardwood-acclimate",

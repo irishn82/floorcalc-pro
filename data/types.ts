@@ -152,6 +152,8 @@ export type GuideSlug =
   | "why-do-floors-expand-and-contract"
   | "seasonal-flooring-movement"
   | "what-flooring-movement-is-normal"
+  | "flooring-separation-problems"
+  | "concrete-floor-problems"
   | "lvp-installation-checklist"
   | "laminate-installation-checklist"
   | "engineered-hardwood-installation-checklist"

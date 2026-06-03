@@ -105,6 +105,7 @@ const targetedNextStepTargets: Partial<
     secondary: [
       { type: "guide", slug: "engineered-hardwood-installation-checklist" },
       { type: "guide", slug: "concrete-slab-flooring-guide" },
+      { type: "guide", slug: "concrete-floor-problems" },
       { type: "guide", slug: "how-to-test-concrete-moisture" },
       { type: "guide", slug: "can-moisture-come-through-concrete" },
       { type: "guide", slug: "why-is-moisture-coming-through-my-slab" },
@@ -120,6 +121,7 @@ const targetedNextStepTargets: Partial<
   "why-is-my-laminate-floor-separating": {
     primary: { type: "guide", slug: "laminate-floor-separating-what-to-check-first" },
     secondary: [
+      { type: "guide", slug: "flooring-separation-problems" },
       { type: "guide", slug: "flooring-moisture-problems" },
       { type: "guide", slug: "laminate-installation-checklist" },
       { type: "guide", slug: "flooring-movement-problems" },
@@ -167,6 +169,7 @@ const targetedNextStepTargets: Partial<
     secondary: [
       { type: "guide", slug: "lvp-installation-checklist" },
       { type: "guide", slug: "concrete-slab-flooring-guide" },
+      { type: "guide", slug: "concrete-floor-problems" },
       { type: "guide", slug: "best-underlayment-for-concrete-floors" },
       { type: "guide", slug: "can-moisture-come-through-concrete" },
       { type: "guide", slug: "why-is-moisture-coming-through-my-slab" },
@@ -294,6 +297,7 @@ const targetedNextStepTargets: Partial<
     secondary: [
       { type: "guide", slug: "flooring-moisture-problems" },
       { type: "guide", slug: "concrete-slab-flooring-guide" },
+      { type: "guide", slug: "concrete-floor-problems" },
       { type: "guide", slug: "why-flooring-fails-over-concrete" },
       { type: "guide", slug: "can-moisture-come-through-concrete" },
       { type: "guide", slug: "why-is-moisture-coming-through-my-slab" },
@@ -308,6 +312,7 @@ const targetedNextStepTargets: Partial<
     primary: { type: "guide", slug: "how-to-test-concrete-moisture" },
     secondary: [
       { type: "guide", slug: "concrete-slab-flooring-guide" },
+      { type: "guide", slug: "concrete-floor-problems" },
       { type: "guide", slug: "can-moisture-come-through-concrete" },
       { type: "guide", slug: "why-is-moisture-coming-through-my-slab" },
       { type: "guide", slug: "concrete-slab-cracks-under-flooring" },
@@ -483,6 +488,9 @@ const targetedNextStepTargets: Partial<
   "flooring-moisture-problems": {
     primary: { type: "guide", slug: "how-to-test-concrete-moisture" },
     secondary: [
+      { type: "guide", slug: "concrete-floor-problems" },
+      { type: "guide", slug: "flooring-separation-problems" },
+      { type: "guide", slug: "flooring-movement-problems" },
       { type: "guide", slug: "moisture-level-too-high-for-flooring" },
       { type: "guide", slug: "can-high-humidity-damage-flooring" },
       { type: "guide", slug: "ideal-humidity-for-flooring" },

@@ -555,6 +555,7 @@ const guideDrafts: GuideDraft[] = [
     topicCluster: "subfloor-prep",
     relatedTools: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"],
     relatedGuides: [
+      "concrete-floor-problems",
       "concrete-slab-flooring-guide",
       "how-to-test-concrete-moisture",
       "can-moisture-come-through-concrete",
@@ -793,6 +794,7 @@ const guideDrafts: GuideDraft[] = [
     topicCluster: "subfloor-prep",
     relatedTools: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"],
     relatedGuides: [
+      "concrete-floor-problems",
       "concrete-slab-flooring-guide",
       "how-to-test-concrete-moisture",
       "why-is-moisture-coming-through-my-slab",
@@ -2239,6 +2241,7 @@ const guideDrafts: GuideDraft[] = [
     topicCluster: "subfloor-prep",
     relatedTools: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"],
     relatedGuides: [
+      "concrete-floor-problems",
       "how-to-test-concrete-moisture",
       "why-flooring-fails-over-concrete",
       "can-moisture-come-through-concrete",
@@ -4009,6 +4012,308 @@ const guideDrafts: GuideDraft[] = [
     disclaimer: installConditionDisclaimer
   },
   {
+    slug: "flooring-separation-problems",
+    title: "Flooring Separation Problems",
+    description:
+      "A practical hub for diagnosing laminate separation, LVP separation, engineered hardwood gaps, open flooring joints, humidity movement, moisture effects, expansion gaps, and locking system damage.",
+    metadataTitle: "Flooring Separation Problems: Gaps, Open Joints, and Movement",
+    metadataDescription:
+      "Diagnose flooring separation problems, including laminate gaps, LVP separation, hardwood gaps, moisture movement, expansion issues, and damaged locking joints.",
+    dateModified: "2026-06-03",
+    readTime: "13 min read",
+    primaryEcosystem: "planning-measuring-transitions",
+    secondaryEcosystems: ["lvp", "laminate", "hardwood-engineered-hardwood"],
+    materialTypes: ["lvp", "lvt", "laminate", "hardwood", "engineered-hardwood"],
+    topicCluster: "subfloor-prep",
+    relatedTools: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"],
+    relatedGuides: [
+      "why-is-my-laminate-floor-separating",
+      "why-is-my-lvp-floor-separating",
+      "why-is-my-engineered-hardwood-separating",
+      "why-are-my-flooring-joints-opening",
+      "why-is-my-hardwood-floor-gapping",
+      "hardwood-acclimation-mistakes",
+      "moisture-level-too-high-for-flooring",
+      "flooring-movement-problems",
+      "flooring-moisture-problems",
+      "laminate-installation-checklist",
+      "lvp-installation-checklist",
+      "engineered-hardwood-installation-checklist"
+    ],
+    quickAnswer: [
+      "Flooring separation usually means joints are opening because the floor is moving, shrinking, losing support, or being stressed. Common causes include seasonal humidity, moisture imbalance, poor acclimation, subfloor flatness problems, damaged locking systems, blocked expansion space, long floating-floor runs, heavy fixed objects, or installation before conditions were ready.",
+      "Do not treat every gap the same way. Laminate separation, LVP separation, hardwood gapping, and engineered hardwood separation can look similar, but the repair path depends on the material, installation method, moisture conditions, subfloor support, and manufacturer requirements."
+    ],
+    keySections: [
+      {
+        id: "symptom-lookup",
+        title: "Separation symptom lookup",
+        paragraphs: [
+          "Start by naming the separation pattern. A single end gap, a row of open joints, seasonal hardwood gaps, and gaps paired with lifting or buckling all point in different directions.",
+          "Use the symptom first, then compare it with the floor type and installation method."
+        ],
+        bullets: [
+          "Laminate joints opening: check expansion gaps, humidity, underlayment, damaged click edges, and subfloor flatness.",
+          "LVP end gaps or seams showing: check locking stress, low spots, expansion pressure, debris, and plank movement.",
+          "Engineered hardwood separating: check jobsite humidity, concrete moisture, acclimation, glue-down bond, or floating-floor stress.",
+          "Hardwood gaps: check seasonal humidity, acclimation history, moisture readings, and whether gaps are stable or growing.",
+          "Open joints with buckling or peaking: check blocked expansion, fixed objects, moisture, and long runs before forcing joints closed."
+        ]
+      },
+      {
+        id: "common-causes",
+        title: "Common causes",
+        paragraphs: [
+          "Separation is rarely just a cosmetic issue. A joint opens because something changed: the flooring moved, the subfloor did not support the joint, the locking system was damaged, moisture changed the material, or the floor was pinned where it needed room to move.",
+          "Industry guidance for wood, resilient, laminate, and concrete substrates all starts with field conditions. Moisture, flatness, cleanliness, acclimation, and manufacturer instructions matter more than a generic repair trick."
+        ],
+        bullets: [
+          "Humidity changes causing wood or wood-based flooring to shrink or swell.",
+          "Concrete or subfloor moisture affecting material movement or adhesive bond.",
+          "Low spots, humps, or hollow areas stressing floating-floor joints.",
+          "Missing expansion gaps, tight transitions, cabinets, islands, or trim pinning the floor.",
+          "Damaged locking tabs from installation force, debris, repeated movement, or plank replacement attempts.",
+          "Product installed before HVAC, acclimation, slab moisture, or subfloor conditions were ready."
+        ]
+      },
+      {
+        id: "what-to-check-first",
+        title: "What to check first",
+        paragraphs: [
+          "Map the gaps before touching the floor. Mark where they appear, whether they repeat in one traffic path, whether they grow seasonally, and whether they come with clicking, lifting, swelling, cupping, or hollow sounds.",
+          "Then identify the installation method. A floating LVP joint opening over a low spot is a different investigation than a glue-down engineered hardwood board releasing over a slab."
+        ],
+        bullets: [
+          "Identify floor type and installation method: floating, glue-down, nail-down, staple-down, or tile.",
+          "Check humidity, recent weather, HVAC changes, leaks, wet cleaning, and concrete moisture concerns.",
+          "Inspect expansion space at walls, doorways, transitions, cabinets, islands, and long connected runs.",
+          "Look for low spots, hollow sounds, bounce, or repeated movement near the open joints.",
+          "Review product instructions for acclimation, underlayment, moisture limits, flatness, and repair methods."
+        ]
+      },
+      {
+        id: "when-to-call-a-professional",
+        title: "When to call a professional",
+        paragraphs: [
+          "Call a professional when separation is spreading, joints keep reopening, locking edges look damaged, hardwood gaps are uneven or paired with cupping, or moisture or concrete is involved.",
+          "A qualified installer can document field conditions, check moisture and flatness, lift a limited area when needed, and avoid repairs that hide the cause."
+        ]
+      },
+      {
+        id: "next-paths",
+        title: "Best next paths",
+        paragraphs: [
+          "Use the material-specific guide after this hub. Laminate, LVP, engineered hardwood, and solid hardwood do not share one universal separation repair.",
+          "If you are still planning a project, use the calculators first, then review the installation checklist for the flooring type before ordering."
+        ],
+        bullets: [
+          "Laminate: start with the laminate separation guide and laminate installation checklist.",
+          "LVP: start with LVP separation, LVP clicking, and the LVP installation checklist.",
+          "Engineered hardwood: review concrete, moisture barrier, acclimation, and engineered hardwood separation guides.",
+          "Hardwood: review gapping, cupping, humidity, and acclimation guidance.",
+          "Any material over concrete: review concrete moisture testing and slab failure guides."
+        ]
+      }
+    ],
+    example: [
+      "A homeowner sees open laminate joints in a hallway every winter. The gaps close slightly in spring but one area also clicks when walked on.",
+      "That pattern points to more than one possible cause: seasonal humidity may be part of it, but the repeated click may indicate a support or subfloor issue. The homeowner should check humidity, expansion space, and subfloor support before replacing planks."
+    ],
+    commonMistakes: [
+      "Forcing open joints closed without finding why they opened.",
+      "Filling hardwood gaps before checking seasonal humidity and moisture conditions.",
+      "Replacing LVP or laminate planks over the same low spot.",
+      "Ignoring concrete moisture because the finished floor surface looks dry.",
+      "Assuming all separation is normal seasonal movement."
+    ],
+    faq: [
+      {
+        question: "Why are my flooring joints separating?",
+        answer:
+          "Flooring joints can separate from humidity changes, moisture, subfloor movement, damaged locking systems, missing expansion space, long runs, fixed objects, poor acclimation, or installation before conditions were ready."
+      },
+      {
+        question: "Can I just tap flooring joints back together?",
+        answer:
+          "Sometimes a floating floor joint can be closed temporarily, but if the cause is subfloor support, damaged locking edges, moisture, or expansion pressure, the joint can reopen or get worse."
+      },
+      {
+        question: "Are hardwood gaps normal?",
+        answer:
+          "Small seasonal gaps can be normal in some hardwood floors, especially during dry seasons. Wide, uneven, growing, or moisture-related gaps should be evaluated."
+      },
+      {
+        question: "Does moisture cause separation?",
+        answer:
+          "Yes. Moisture and humidity changes can cause swelling, shrinking, adhesive problems, cupping, crowning, or movement that opens joints depending on the flooring type."
+      },
+      {
+        question: "When is separation a repair issue?",
+        answer:
+          "Separation should be reviewed when gaps are spreading, joints will not stay closed, the floor clicks or lifts nearby, moisture is suspected, or the floor is over concrete with unknown moisture history."
+      }
+    ],
+    disclaimer: installConditionDisclaimer
+  },
+  {
+    slug: "concrete-floor-problems",
+    title: "Concrete Floor Problems Under Flooring",
+    description:
+      "A master troubleshooting hub for flooring over concrete, including slab moisture, cracks, vapor barriers, moisture testing, hollow sounds, adhesive failure, and flooring compatibility.",
+    metadataTitle: "Concrete Floor Problems Under Flooring: Moisture, Cracks, Failures",
+    metadataDescription:
+      "Troubleshoot concrete floor problems under flooring, including slab moisture, cracks, vapor barriers, moisture testing, hollow sounds, adhesive failure, and floor compatibility.",
+    dateModified: "2026-06-03",
+    readTime: "14 min read",
+    primaryEcosystem: "planning-measuring-transitions",
+    secondaryEcosystems: ["lvp", "laminate", "hardwood-engineered-hardwood", "tile", "carpet-padding"],
+    materialTypes: ["lvp", "lvt", "laminate", "engineered-hardwood", "carpet", "ceramic-tile", "porcelain-tile"],
+    topicCluster: "subfloor-prep",
+    relatedTools: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"],
+    relatedGuides: [
+      "concrete-slab-flooring-guide",
+      "can-engineered-hardwood-go-over-concrete",
+      "can-you-install-lvp-over-concrete",
+      "how-to-test-concrete-moisture",
+      "moisture-level-too-high-for-flooring",
+      "why-flooring-fails-over-concrete",
+      "concrete-slab-cracks-under-flooring",
+      "why-is-moisture-coming-through-my-slab",
+      "can-moisture-come-through-concrete",
+      "best-underlayment-for-concrete-floors",
+      "best-flooring-for-concrete-slabs",
+      "common-basement-flooring-problems"
+    ],
+    quickAnswer: [
+      "Concrete floor problems under flooring usually come from moisture, flatness, cracks, surface contamination, wrong underlayment, adhesive incompatibility, hollow spots, or flooring installed before the slab and jobsite were ready.",
+      "Concrete is not automatically ready because it looks dry or feels hard. Flooring over concrete should be planned around the exact product requirements for moisture testing, surface preparation, vapor control, flatness, adhesive or underlayment compatibility, and movement."
+    ],
+    keySections: [
+      {
+        id: "symptom-lookup",
+        title: "Concrete problem symptom lookup",
+        paragraphs: [
+          "Start with what the floor is doing. A musty odor, hollow sound, cracked tile, lifting plank, or failed adhesive can all trace back to different slab conditions.",
+          "Concrete-related symptoms often overlap with product symptoms, so the slab should be part of the diagnosis."
+        ],
+        bullets: [
+          "Musty odor or damp feeling: check slab moisture, basement humidity, wall edges, and vapor control.",
+          "Glue-down flooring releasing: check moisture testing, pH, adhesive compatibility, contamination, and surface prep.",
+          "Floating floor hollow sound: check slab flatness, underlayment, low spots, and product expectations.",
+          "Tile cracks or hollow tile: check slab cracks, movement, mortar coverage, and movement accommodation.",
+          "Buckling, peaking, or lifting: check moisture, expansion space, fixed objects, heat, and long runs."
+        ]
+      },
+      {
+        id: "moisture-testing-overview",
+        title: "Moisture testing overview",
+        paragraphs: [
+          "Concrete moisture testing should follow the flooring, adhesive, or underlayment manufacturer's instructions. Calcium chloride testing, in-situ relative humidity testing, and meter screening are not interchangeable.",
+          "A moisture meter can help find suspicious areas, but many flooring systems require documented slab testing. Do not rely on appearance, age, or a taped plastic shortcut when the product requires a specific test."
+        ],
+        bullets: [
+          "Use the test method required by the flooring or adhesive system.",
+          "Compare results to the written product limits, not a generic number.",
+          "Check basement slabs, older slabs, newer slabs, prior flooring failures, and slabs with unknown history.",
+          "Review pH, porosity, sealers, old adhesive, dust, and surface strength where required.",
+          "Bring in a flooring professional when testing, mitigation, or adhesive compatibility is unclear."
+        ]
+      },
+      {
+        id: "common-causes",
+        title: "Common concrete-related causes",
+        paragraphs: [
+          "Most concrete flooring failures are system problems. The slab, flooring, adhesive, underlayment, patch, vapor retarder, room conditions, and installer preparation all have to work together.",
+          "RFCI and ASTM F710-style substrate principles emphasize clean, dry, smooth, sound concrete for resilient flooring. Tile, wood, carpet, and laminate each add their own product-specific requirements."
+        ],
+        bullets: [
+          "Moisture vapor, damp basements, missing vapor control, or slab history.",
+          "Cracks, control joints, moving cracks, settlement, or height displacement.",
+          "Low spots, humps, ridges, weak patch, laitance, or dusty concrete.",
+          "Paint, sealers, curing compounds, old adhesive, oil, or contaminants.",
+          "Wrong underlayment, vapor barrier, adhesive, primer, patch, or floor choice for the slab."
+        ]
+      },
+      {
+        id: "flooring-type-comparison",
+        title: "Flooring type comparison over concrete",
+        paragraphs: [
+          "LVP, laminate, engineered hardwood, carpet, and tile can all be options over concrete in the right conditions, but they do not have the same moisture, flatness, underlayment, adhesive, or comfort requirements.",
+          "Choose the product after the slab conditions are understood, not before."
+        ],
+        bullets: [
+          "LVP: review moisture, flatness, expansion, underlayment, and direct sunlight or temperature limits.",
+          "Laminate: review vapor protection, underlayment approval, flatness, expansion, and room suitability.",
+          "Engineered hardwood: review concrete approval, moisture testing, acclimation, adhesive or floating system requirements.",
+          "Carpet: review slab moisture, cushion, tack strip, room humidity, and basement suitability.",
+          "Tile: review slab cracks, movement, surface prep, mortar coverage, and movement accommodation."
+        ]
+      },
+      {
+        id: "what-to-check-first",
+        title: "What to check first",
+        paragraphs: [
+          "Before covering or repairing a concrete slab, check visible and hidden conditions. Look at walls, cracks, prior adhesive, slab height, exterior drainage clues, basement humidity, and prior flooring failure patterns.",
+          "Then compare the slab to the exact flooring system. A floating LVP floor, glue-down engineered hardwood, carpet, and tile floor may require different preparation."
+        ],
+        bullets: [
+          "Identify the slab location: above grade, on grade, below grade, basement, garage conversion, or older slab.",
+          "Look for moisture signs, odor, efflorescence, stains, old adhesive, sealers, cracks, and patching.",
+          "Test moisture using the method required by the flooring or adhesive.",
+          "Check flatness and surface soundness before relying on underlayment.",
+          "Plan transitions, door clearance, expansion breaks, and finished height."
+        ]
+      },
+      {
+        id: "when-to-call-a-professional",
+        title: "When to call a professional",
+        paragraphs: [
+          "Call a professional when concrete moisture, adhesive failure, slab cracks, tile cracking, hollow sounds, musty odor, or recurring flooring failure is involved.",
+          "A professional can document slab conditions, select the right test method, identify incompatible surface conditions, and decide whether mitigation, crack isolation, patching, or product changes are needed."
+        ]
+      }
+    ],
+    example: [
+      "A basement LVP floor starts peaking near a long exterior wall, and one transition strip keeps moving. The slab looks dry, but the room smells musty after rain.",
+      "The correct path is not just replacing the transition. The homeowner should review slab moisture, expansion space, wall moisture, underlayment, and product requirements before repairing the finish floor."
+    ],
+    commonMistakes: [
+      "Assuming old concrete is automatically dry enough for new flooring.",
+      "Covering slab cracks without checking whether they are active or displaced.",
+      "Using underlayment to hide flatness or moisture problems it cannot solve.",
+      "Skipping adhesive, pH, porosity, or surface prep requirements for glue-down floors.",
+      "Choosing flooring before the slab conditions are understood."
+    ],
+    faq: [
+      {
+        question: "What are common concrete floor problems under flooring?",
+        answer:
+          "Common problems include moisture vapor, cracks, uneven areas, hollow spots, adhesive failure, surface contamination, dust, old sealers, wrong underlayment, and flooring installed before the slab was ready."
+      },
+      {
+        question: "Can concrete moisture make flooring fail?",
+        answer:
+          "Yes. Concrete moisture can affect adhesives, underlayment, wood products, laminate, resilient flooring, carpet cushion, odor, and trapped vapor depending on the flooring system."
+      },
+      {
+        question: "Can flooring be installed over cracked concrete?",
+        answer:
+          "Sometimes, but the crack needs evaluation. Stable hairline cracks are different from moving cracks, control joints, settlement, or cracks with height displacement."
+      },
+      {
+        question: "Why does flooring over concrete sound hollow?",
+        answer:
+          "Hollow sound may come from floating floor behavior, low spots, wrong underlayment, adhesive release, poor tile mortar coverage, or slab movement."
+      },
+      {
+        question: "Should concrete be sealed before flooring?",
+        answer:
+          "Only if the flooring or adhesive system calls for an approved primer, sealer, vapor-control, or moisture-mitigation product. Random sealers can create bond or compatibility problems."
+      }
+    ],
+    disclaimer: installConditionDisclaimer
+  },
+  {
     slug: "flooring-moisture-problems",
     title: "Flooring Moisture Problems",
     description:
@@ -4024,6 +4329,9 @@ const guideDrafts: GuideDraft[] = [
     topicCluster: "subfloor-prep",
     relatedTools: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"],
     relatedGuides: [
+      "concrete-floor-problems",
+      "flooring-separation-problems",
+      "flooring-movement-problems",
       "why-is-my-floor-swelling",
       "can-high-humidity-damage-flooring",
       "ideal-humidity-for-flooring",
@@ -4037,7 +4345,10 @@ const guideDrafts: GuideDraft[] = [
       "why-is-my-lvp-floor-clicking",
       "why-is-my-hardwood-floor-cupping",
       "why-is-my-hardwood-floor-crowning",
-      "concrete-slab-flooring-guide"
+      "concrete-slab-flooring-guide",
+      "lvp-installation-checklist",
+      "laminate-installation-checklist",
+      "engineered-hardwood-installation-checklist"
     ],
     quickAnswer: [
       "Flooring moisture problems show up as swelling, cupping, crowning, gapping, separation, buckling, lifting, odor, staining, soft areas, adhesive release, or recurring movement. The source may be a leak, high humidity, concrete slab moisture, a wet subfloor, crawlspace moisture, wet cleaning, or flooring installed before the jobsite was ready.",
@@ -4072,6 +4383,66 @@ const guideDrafts: GuideDraft[] = [
           "High indoor humidity or unstable HVAC conditions.",
           "Wet wood subfloor, crawlspace moisture, or construction moisture.",
           "Flooring installed before acclimation, moisture testing, or jobsite conditioning was complete."
+        ]
+      },
+      {
+        id: "flooring-type-comparison",
+        title: "How moisture problems show up by flooring type",
+        paragraphs: [
+          "Moisture problems do not look identical across flooring materials. Hardwood may cup, laminate may swell at seams, LVP may move or trap moisture below it, carpet may hold odor, and tile may show problems through cracks, hollow sounds, or grout movement.",
+          "The safest approach is to identify the material, then check the moisture path and product requirements for that material."
+        ],
+        bullets: [
+          "Hardwood and engineered hardwood: watch for cupping, crowning, gapping, finish changes, and movement after humidity swings.",
+          "Laminate: watch for swollen edges, raised seams, buckling, separation, and moisture-sensitive room conditions.",
+          "LVP and LVT: watch for peaking, lifting, trapped moisture, adhesive release, or movement over slabs and low spots.",
+          "Carpet and cushion: watch for odor, damp cushion, wrinkles, seam concerns, and basement humidity.",
+          "Tile: watch for hollow sounds, cracked grout, cracked tile, slab cracks, and movement in the substrate."
+        ]
+      },
+      {
+        id: "humidity-guidance",
+        title: "Humidity guidance without guessing",
+        paragraphs: [
+          "There is no universal humidity number that approves every floor. Product instructions and manufacturer requirements control the acceptable jobsite range. That is especially important for hardwood, engineered hardwood, laminate, and installations over concrete or crawlspaces.",
+          "Use a hygrometer to monitor the room, but treat the reading as one clue. Seasonal changes, HVAC stability, slab moisture, crawlspace conditions, wet construction materials, and cleaning habits can all affect the floor."
+        ],
+        bullets: [
+          "Find the product's written temperature and humidity requirements.",
+          "Measure the actual room, not just another area of the house.",
+          "Stabilize HVAC and room conditions before installation when the product requires it.",
+          "Watch for seasonal gaps, swelling, cupping, or buckling that repeats with humidity changes.",
+          "Do not install new flooring to hide a room-condition problem."
+        ]
+      },
+      {
+        id: "moisture-testing-overview",
+        title: "Moisture testing overview",
+        paragraphs: [
+          "Moisture testing should match the flooring system. Concrete slabs, wood subfloors, glue-down products, hardwood, laminate, resilient flooring, carpet, and tile assemblies may require different checks.",
+          "Concrete appearance is not a moisture test. Moisture meters, calcium chloride tests, in-situ relative humidity tests, and wood moisture readings answer different questions and should be used according to product instructions."
+        ],
+        bullets: [
+          "Concrete slabs: use the slab test method required by the flooring or adhesive.",
+          "Wood subfloors: compare subfloor and flooring moisture where the product requires it.",
+          "Hardwood and engineered hardwood: review NWFA-style jobsite, moisture, and acclimation principles along with product instructions.",
+          "Resilient flooring: review RFCI and ASTM F710-style substrate preparation principles plus manufacturer requirements.",
+          "Tile and carpet: review substrate moisture, surface preparation, cushion, mortar, and movement requirements for the selected system."
+        ]
+      },
+      {
+        id: "warning-signs-checklist",
+        title: "Warning signs checklist",
+        paragraphs: [
+          "Some moisture symptoms are cosmetic at first, but others signal hidden conditions below the floor. Stop and investigate before covering, sanding, gluing, or forcing material back into place."
+        ],
+        bullets: [
+          "Musty odor, visible staining, mold-like growth, or soft subfloor areas.",
+          "Hardwood cupping, crowning, or gaps paired with humidity swings.",
+          "Laminate swelling, raised seams, buckling, or recurring separation.",
+          "LVP lifting, peaking, adhesive release, or moisture trapped under floating flooring.",
+          "Tile cracks, hollow sounds, grout cracking, or slab cracks beneath the finish floor.",
+          "A problem that returns after a previous repair."
         ]
       },
       {
@@ -4201,6 +4572,21 @@ const guideDrafts: GuideDraft[] = [
         paragraphs: [
           "Call a professional when high humidity is persistent, when flooring is already cupping, swelling, buckling, or smelling musty, or when the moisture source is unclear.",
           "A flooring professional may need help from HVAC, crawlspace, waterproofing, or remediation specialists if the cause is not limited to the flooring layer."
+        ]
+      },
+      {
+        id: "related-next-steps",
+        title: "Related calculators, checklists, and problem hubs",
+        paragraphs: [
+          "If the floor is already installed, start with the matching troubleshooting guide. If the project is still being planned, use calculators and checklists before ordering material.",
+          "Moisture problems often overlap with separation, movement, concrete slab, acclimation, and installation timing problems, so use the related hubs when symptoms cross categories."
+        ],
+        bullets: [
+          "Use the square footage and waste calculators before replacing damaged material.",
+          "Use the transition estimator when moisture or movement is affecting doorways and trim.",
+          "Review the LVP, laminate, engineered hardwood, tile, or carpet installation checklist before ordering.",
+          "Use the separation hub when gaps or open joints are the main symptom.",
+          "Use the concrete floor problems hub when the floor is over a slab."
         ]
       }
     ],

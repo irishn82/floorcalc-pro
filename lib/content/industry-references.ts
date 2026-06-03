@@ -101,7 +101,11 @@ export function getGuideIndustryReferences(guide: Guide) {
     }
   }
 
-  return uniqueReferences(refs).slice(0, 4);
+  const referenceLimit = ["flooring-separation-problems", "concrete-floor-problems", "flooring-moisture-problems"].includes(guide.slug)
+    ? 5
+    : 4;
+
+  return uniqueReferences(refs).slice(0, referenceLimit);
 }
 
 export function getToolIndustryReferences(tool: Tool) {
