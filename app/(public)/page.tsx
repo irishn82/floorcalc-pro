@@ -51,7 +51,7 @@ const startHereCards: StartHereCard[] = [
     primaryLink: { href: "/diagnose", label: "Open Problem Finder" },
     links: [
       { href: "/guides/browse-problems", label: "Browse Problems" },
-      { href: "/guides/troubleshooting", label: "Troubleshooting Hub" },
+      { href: "/guides/troubleshooting", label: "Troubleshooting" },
       { href: "/guides/flooring-movement-problems", label: "Flooring Movement Problems" },
       { href: "/guides/flooring-moisture-problems", label: "Flooring Moisture Problems" },
       { href: "/guides/concrete-floor-problems", label: "Concrete Floor Problems" }
