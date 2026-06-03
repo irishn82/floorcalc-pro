@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { AuthorityHubPathways } from "@/components/AuthorityHubPathways";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { BrowseRelatedProblems } from "@/components/BrowseRelatedProblems";
 import { Container } from "@/components/Container";
@@ -16,6 +17,7 @@ import { RelatedLinks } from "@/components/RelatedLinks";
 import { TableOfContents } from "@/components/TableOfContents";
 import { NextRecommendedSteps } from "@/components/troubleshooting/NextRecommendedSteps";
 import { TroubleshootingGuideFlow } from "@/components/troubleshooting/TroubleshootingGuideFlow";
+import { getAuthorityHubPathway } from "@/data/authority-hubs";
 import { guides } from "@/data/guides";
 import type { GuideSection, GuideSlug, ToolSlug } from "@/data/types";
 import {
@@ -695,6 +697,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
     ...relatedTools.map((tool) => `/tools/${tool.slug}`)
   ]);
   const industryReferences = getGuideIndustryReferences(guide);
+  const authorityHubPathway = getAuthorityHubPathway(guide.slug);
   const nextStepTool = relatedTools[0];
   const nextStepGuide = explicitRelatedGuides.find((relatedGuide) => relatedGuide.slug !== guide.slug) ?? ecosystemRelatedGuides[0];
   const targetedNextSteps = targetedNextStepTargets[guide.slug];
@@ -876,23 +879,25 @@ export default async function GuidePage({ params }: GuidePageProps) {
                   ))}
                 </div>
               ) : null}
-              <div className="mt-6 rounded-lg border border-line bg-field p-4 shadow-sm">
-                <h2 className="inline-flex items-center gap-2 text-lg font-bold text-ink">
-                  <FlooringIcon name="calculator" className="h-5 w-5 text-accent-700" />
-                  Useful calculators for this guide
-                </h2>
-                <div className="mt-3 flex flex-wrap gap-2">
-                  {relatedTools.map((tool) => (
-                    <Link
-                      key={tool.slug}
-                      href={`/tools/${tool.slug}`}
-                      className="rounded-md border border-line bg-white px-3 py-2 text-sm font-bold text-slate-700 transition hover:border-accent-100 hover:text-accent-700"
-                    >
-                      {tool.shortTitle}
-                    </Link>
-                  ))}
+              {!authorityHubPathway ? (
+                <div className="mt-6 rounded-lg border border-line bg-field p-4 shadow-sm">
+                  <h2 className="inline-flex items-center gap-2 text-lg font-bold text-ink">
+                    <FlooringIcon name="calculator" className="h-5 w-5 text-accent-700" />
+                    Useful calculators for this guide
+                  </h2>
+                  <div className="mt-3 flex flex-wrap gap-2">
+                    {relatedTools.map((tool) => (
+                      <Link
+                        key={tool.slug}
+                        href={`/tools/${tool.slug}`}
+                        className="rounded-md border border-line bg-white px-3 py-2 text-sm font-bold text-slate-700 transition hover:border-accent-100 hover:text-accent-700"
+                      >
+                        {tool.shortTitle}
+                      </Link>
+                    ))}
+                  </div>
                 </div>
-              </div>
+              ) : null}
               {troubleshootingFlow ? (
                 <div className="mt-5">
                   <ProblemSymptomSelector compact hubLinkLabel="Back to symptom menu" />
@@ -903,6 +908,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
                   <GuideSectionContent section={quickAnswerSection} />
                 </div>
               ) : null}
+              {authorityHubPathway ? <AuthorityHubPathways guide={guide} /> : null}
               {troubleshootingFlow ? (
                 <>
                   <TroubleshootingGuideFlow

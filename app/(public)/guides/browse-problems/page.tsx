@@ -36,6 +36,12 @@ export default function BrowseProblemsPage() {
               description="Not sure which flooring type or guide category fits? Start with what you are seeing, then move into the closest troubleshooting guide."
               headingLevel="h1"
             />
+            <div className="mt-4 inline-flex flex-wrap items-center gap-3 rounded-lg border border-accent-100 bg-accent-50 px-3 py-2 text-sm text-slate-700">
+              <span className="font-bold text-ink">Want a guided path?</span>
+              <Link href="/diagnose" className="font-bold text-accent-700 hover:text-accent-600">
+                Open the Flooring Problem Finder
+              </Link>
+            </div>
             <div className="mt-5 max-w-5xl">
               <ProblemSymptomSelector showHubLink={false} />
             </div>

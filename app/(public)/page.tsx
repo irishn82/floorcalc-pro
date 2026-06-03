@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Container } from "@/components/Container";
-import { FlooringIcon } from "@/components/FlooringIcon";
+import { FlooringIcon, type FlooringIconName } from "@/components/FlooringIcon";
 import { GuideCard } from "@/components/GuideCard";
 import { ToolCard } from "@/components/ToolCard";
 import { guides } from "@/data/guides";
@@ -16,6 +16,61 @@ const featuredGuideSlugs = [
 const featuredGuides = featuredGuideSlugs
   .map((slug) => guides.find((guide) => guide.slug === slug))
   .filter((guide): guide is (typeof guides)[number] => Boolean(guide));
+
+type StartHereCard = {
+  title: string;
+  description: string;
+  icon: FlooringIconName;
+  primaryLink?: {
+    href: string;
+    label: string;
+  };
+  links: {
+    href: string;
+    label: string;
+  }[];
+};
+
+const startHereCards: StartHereCard[] = [
+  {
+    title: "Estimate Materials",
+    description: "Calculate square footage, waste, stairs, seams, and transitions.",
+    icon: "calculator",
+    primaryLink: { href: "/tools", label: "Open calculators" },
+    links: [
+      { href: "/tools/flooring-square-footage-calculator", label: "Flooring Square Footage Calculator" },
+      { href: "/tools/waste-calculator", label: "Waste Calculator" },
+      { href: "/tools/stair-flooring-calculator", label: "Stair Flooring Calculator" },
+      { href: "/tools/transition-estimator", label: "Transition Estimator" }
+    ]
+  },
+  {
+    title: "Diagnose a Flooring Problem",
+    description: "Troubleshoot clicking, lifting, separation, moisture, concrete, and flooring failures.",
+    icon: "shield",
+    primaryLink: { href: "/diagnose", label: "Open Problem Finder" },
+    links: [
+      { href: "/guides/browse-problems", label: "Browse Problems" },
+      { href: "/guides/troubleshooting", label: "Troubleshooting Hub" },
+      { href: "/guides/flooring-movement-problems", label: "Flooring Movement Problems" },
+      { href: "/guides/flooring-moisture-problems", label: "Flooring Moisture Problems" },
+      { href: "/guides/concrete-floor-problems", label: "Concrete Floor Problems" }
+    ]
+  },
+  {
+    title: "Plan an Installation",
+    description: "Review installation checklists, moisture concerns, acclimation, and jobsite conditions.",
+    icon: "layers",
+    primaryLink: { href: "/guides/lvp-installation-checklist", label: "Start with a checklist" },
+    links: [
+      { href: "/guides/lvp-installation-checklist", label: "LVP Installation Checklist" },
+      { href: "/guides/laminate-installation-checklist", label: "Laminate Installation Checklist" },
+      { href: "/guides/engineered-hardwood-installation-checklist", label: "Engineered Hardwood Installation Checklist" },
+      { href: "/guides/tile-installation-checklist", label: "Tile Installation Checklist" },
+      { href: "/guides/carpet-installation-checklist", label: "Carpet Installation Checklist" }
+    ]
+  }
+];
 
 export default function HomePage() {
   return (
@@ -49,6 +104,54 @@ export default function HomePage() {
                 Browse guides
               </Link>
             </div>
+          </div>
+        </Container>
+      </section>
+
+      <section className="bg-white py-10 sm:py-12">
+        <Container>
+          <div className="mb-5 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <p className="text-xs font-extrabold uppercase tracking-[0.14em] text-accent-600">Start Here</p>
+              <h2 className="mt-2 text-2xl font-black tracking-tight text-ink sm:text-3xl">Choose the path that best matches your flooring project.</h2>
+            </div>
+            <Link href="/diagnose" className="inline-flex text-sm font-bold text-accent-700 hover:text-accent-600">
+              Use the problem finder
+            </Link>
+          </div>
+          <div className="grid gap-4 lg:grid-cols-3">
+            {startHereCards.map((card) => (
+              <article key={card.title} className="rounded-2xl border border-slate-200 bg-field p-4 shadow-sm">
+                <div className="flex items-start gap-3">
+                  <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl border border-accent-100 bg-white text-accent-700">
+                    <FlooringIcon name={card.icon} />
+                  </span>
+                  <div>
+                    <h3 className="text-lg font-black text-ink">{card.title}</h3>
+                    <p className="mt-1.5 text-sm leading-6 text-slate-600">{card.description}</p>
+                  </div>
+                </div>
+                {card.primaryLink ? (
+                  <Link
+                    href={card.primaryLink.href}
+                    className="mt-4 inline-flex rounded-lg bg-accent-700 px-4 py-2 text-sm font-bold text-white transition hover:bg-accent-800"
+                  >
+                    {card.primaryLink.label}
+                  </Link>
+                ) : null}
+                <div className="mt-4 grid gap-2">
+                  {card.links.map((link) => (
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      className="rounded-md border border-line bg-white px-3 py-2 text-sm font-bold text-slate-700 transition hover:border-accent-100 hover:text-accent-700"
+                    >
+                      {link.label}
+                    </Link>
+                  ))}
+                </div>
+              </article>
+            ))}
           </div>
         </Container>
       </section>

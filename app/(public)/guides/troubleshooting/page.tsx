@@ -59,6 +59,9 @@ export default function TroubleshootingGuidesPage() {
               <Link href="/guides/browse-problems" className="mt-3 inline-flex text-sm font-bold text-accent-700 hover:text-accent-600">
                 Browse problems by symptom
               </Link>
+              <Link href="/diagnose" className="ml-4 mt-3 inline-flex text-sm font-bold text-accent-700 hover:text-accent-600">
+                Use problem finder
+              </Link>
             </div>
           </div>
 
