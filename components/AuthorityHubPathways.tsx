@@ -88,7 +88,7 @@ export function AuthorityHubPathways({ guide }: AuthorityHubPathwaysProps) {
           href="/diagnose"
           className="inline-flex shrink-0 rounded-md bg-accent-700 px-3 py-2 text-sm font-bold text-white transition hover:bg-accent-800"
         >
-          Open problem finder
+          Open Problem Finder
         </Link>
       </div>
 

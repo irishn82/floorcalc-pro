@@ -116,7 +116,7 @@ export default function HomePage() {
               <h2 className="mt-2 text-2xl font-black tracking-tight text-ink sm:text-3xl">Choose the path that best matches your flooring project.</h2>
             </div>
             <Link href="/diagnose" className="inline-flex text-sm font-bold text-accent-700 hover:text-accent-600">
-              Use the problem finder
+              Open Problem Finder
             </Link>
           </div>
           <div className="grid gap-4 lg:grid-cols-3">

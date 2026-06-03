@@ -11,7 +11,7 @@ type ProblemSymptomSelectorProps = {
 export function ProblemSymptomSelector({
   compact = false,
   showHubLink = true,
-  hubLinkLabel = "Browse problem menu"
+  hubLinkLabel = "Browse Problems"
 }: ProblemSymptomSelectorProps) {
   const sectionClassName = compact
     ? "rounded-lg border border-line bg-white p-3.5 shadow-sm"

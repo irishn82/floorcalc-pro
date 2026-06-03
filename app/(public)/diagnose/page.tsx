@@ -61,7 +61,7 @@ export default function DiagnosePage() {
           <Breadcrumbs
             items={[
               { href: "/", label: "Home" },
-              { label: "Diagnose" }
+              { label: "Problem Finder" }
             ]}
           />
           <div className="grid gap-6 border-b border-line pb-7 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">

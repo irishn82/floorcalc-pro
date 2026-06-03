@@ -56,12 +56,14 @@ export default function TroubleshootingGuidesPage() {
                 Start with the jobsite conditions: identify the flooring type, mark where the problem repeats, check for moisture
                 or movement, and avoid forcing repairs before the cause is clear.
               </p>
-              <Link href="/guides/browse-problems" className="mt-3 inline-flex text-sm font-bold text-accent-700 hover:text-accent-600">
-                Browse problems by symptom
-              </Link>
-              <Link href="/diagnose" className="ml-4 mt-3 inline-flex text-sm font-bold text-accent-700 hover:text-accent-600">
-                Use problem finder
-              </Link>
+              <div className="mt-3 flex flex-wrap gap-4">
+                <Link href="/guides/browse-problems" className="inline-flex text-sm font-bold text-accent-700 hover:text-accent-600">
+                  Browse problems by symptom
+                </Link>
+                <Link href="/diagnose" className="inline-flex text-sm font-bold text-accent-700 hover:text-accent-600">
+                  Open Problem Finder
+                </Link>
+              </div>
             </div>
           </div>
 

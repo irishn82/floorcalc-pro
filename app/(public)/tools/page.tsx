@@ -19,7 +19,7 @@ export const metadata: Metadata = createSeoMetadata({
 const problemHubLinks = [
   {
     href: "/diagnose",
-    label: "Use the problem finder",
+    label: "Open Problem Finder",
     description: "Start here if you know what the floor is doing but not which material category fits."
   },
   {
