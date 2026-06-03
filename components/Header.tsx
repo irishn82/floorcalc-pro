@@ -6,8 +6,7 @@ const navItems: { href: string; label: string; shortLabel?: string }[] = [
   { href: "/", label: "Home" },
   { href: "/tools", label: "Tools" },
   { href: "/guides", label: "Guides" },
-  { href: "/guides/troubleshooting", label: "Troubleshooting", shortLabel: "Fixes" },
-  { href: "/guides/browse-problems", label: "Browse Problems", shortLabel: "Problems" }
+  { href: "/guides/troubleshooting", label: "Troubleshooting", shortLabel: "Fixes" }
 ];
 
 export function Header() {

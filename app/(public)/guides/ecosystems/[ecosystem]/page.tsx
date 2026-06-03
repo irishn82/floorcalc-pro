@@ -34,11 +34,25 @@ export async function generateMetadata({ params }: EcosystemPageProps): Promise<
     return {};
   }
 
-  return createSeoMetadata({
+  const metadata = createSeoMetadata({
     title: ecosystem.metadataTitle,
     description: ecosystem.metadataDescription,
     path: `/guides/ecosystems/${ecosystem.slug}`
   });
+  const guideCount =
+    getPrimaryGuidesByEcosystem(ecosystem.slug).length + getSecondaryGuidesByEcosystem(ecosystem.slug).length;
+
+  if (guideCount === 0) {
+    return {
+      ...metadata,
+      robots: {
+        index: false,
+        follow: true
+      }
+    };
+  }
+
+  return metadata;
 }
 
 export default async function GuideEcosystemPage({ params }: EcosystemPageProps) {
@@ -84,8 +98,11 @@ export default async function GuideEcosystemPage({ params }: EcosystemPageProps)
               Use this page to keep material-specific articles, measuring tools, and transition planning in the same place before ordering flooring.
             </p>
             <div className="mt-4">
-              <Link className="text-sm font-bold text-accent-700 hover:text-accent-600" href="/guides">
+              <Link className="mr-4 text-sm font-bold text-accent-700 hover:text-accent-600" href="/guides">
                 Back to all flooring guides
+              </Link>
+              <Link className="text-sm font-bold text-accent-700 hover:text-accent-600" href="/guides/browse-problems">
+                Browse by symptom
               </Link>
             </div>
           </div>

@@ -20,10 +20,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date(guide.dateModified)
   }));
 
-  const ecosystemRoutes = guideEcosystems.map((ecosystem) => ({
-    url: `${siteConfig.url}/guides/ecosystems/${ecosystem.slug}`,
-    lastModified: new Date("2026-05-23")
-  }));
+  const ecosystemRoutes = guideEcosystems
+    .filter((ecosystem) =>
+      guides.some(
+        (guide) =>
+          guide.primaryEcosystem === ecosystem.slug || Boolean(guide.secondaryEcosystems?.includes(ecosystem.slug))
+      )
+    )
+    .map((ecosystem) => ({
+      url: `${siteConfig.url}/guides/ecosystems/${ecosystem.slug}`,
+      lastModified: new Date("2026-05-23")
+    }));
 
   return [...staticRoutes, ...toolRoutes, ...guideRoutes, ...ecosystemRoutes];
 }

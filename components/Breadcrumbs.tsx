@@ -20,8 +20,8 @@ export function Breadcrumbs({ items }: BreadcrumbsProps) {
         {items.map((item, index) => (
           <li key={`${item.label}-${index}`} className="inline-flex min-w-0 items-center">
             {index > 0 ? (
-              <span aria-hidden="true" className="mx-1 shrink-0 text-slate-300">
-                {" \u203a "}
+              <span aria-hidden="true" className="mx-1.5 shrink-0 text-slate-300">
+                {"\u203a"}
               </span>
             ) : null}
             {item.href ? (

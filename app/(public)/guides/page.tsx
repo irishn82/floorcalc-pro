@@ -40,6 +40,19 @@ const planningTools = tools.filter((tool) =>
 );
 
 export default function GuidesIndexPage() {
+  const ecosystemSummaries = guideEcosystems
+    .map((ecosystem) => {
+      const coreGuides = getPrimaryGuidesByEcosystem(ecosystem.slug);
+      const relatedGuides = getSecondaryGuidesByEcosystem(ecosystem.slug);
+
+      return {
+        ecosystem,
+        coreGuides,
+        relatedGuides,
+        totalGuideCount: coreGuides.length + relatedGuides.length
+      };
+    })
+    .filter((summary) => summary.totalGuideCount > 0);
   const startHereGuides = startHereGuideSlugs
     .map((slug) => guides.find((guide) => guide.slug === slug))
     .filter((guide): guide is (typeof guides)[number] => Boolean(guide));
@@ -66,7 +79,7 @@ export default function GuidesIndexPage() {
               headingLevel="h1"
             />
             <div className="rounded-lg border border-line bg-field p-3.5 shadow-sm">
-              <GuideTypeSelect options={guideEcosystems} />
+              <GuideTypeSelect options={ecosystemSummaries.map((summary) => summary.ecosystem)} />
               <div className="mt-3 border-t border-line pt-3">
                 <p className="text-sm leading-6 text-slate-600">
                   Not sure what material category fits your issue? Browse flooring problems by symptom.
@@ -95,11 +108,7 @@ export default function GuidesIndexPage() {
             </Link>
           </div>
           <div className="mt-4 grid gap-3 md:grid-cols-2 xl:grid-cols-4">
-            {guideEcosystems.map((ecosystem) => {
-              const coreGuides = getPrimaryGuidesByEcosystem(ecosystem.slug);
-              const relatedGuides = getSecondaryGuidesByEcosystem(ecosystem.slug);
-              const totalGuideCount = coreGuides.length + relatedGuides.length;
-
+            {ecosystemSummaries.map(({ ecosystem, totalGuideCount }) => {
               return (
                 <Link
                   key={ecosystem.slug}
