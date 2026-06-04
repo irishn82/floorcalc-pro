@@ -16,7 +16,7 @@ import { createSeoMetadata } from "@/lib/seo/metadata";
 export const metadata: Metadata = createSeoMetadata({
   title: "Flooring Guides",
   description:
-    "Browse practical flooring guides for measuring, waste, carpet seams, transitions, pets, tile overlays, and radiant heat.",
+    "Browse flooring planning, troubleshooting, installation, moisture, concrete, carpet seam, transition, and material estimating guides.",
   path: "/guides"
 });
 
@@ -74,8 +74,8 @@ export default function GuidesIndexPage() {
           <div className="grid gap-5 lg:grid-cols-[minmax(0,1fr)_20rem] lg:items-end">
             <SectionHeading
               eyebrow="Guides"
-              title="Flooring planning guides"
-              description="Practical flooring articles for measuring rooms, estimating waste, planning carpet seams, choosing transitions, and checking installation details before you buy."
+              title="Flooring planning and troubleshooting guides"
+              description="Practical flooring articles for measuring rooms, diagnosing common problems, checking moisture and concrete conditions, planning transitions, and reviewing installation details."
               headingLevel="h1"
             />
             <div className="rounded-lg border border-line bg-field p-3.5 shadow-sm">

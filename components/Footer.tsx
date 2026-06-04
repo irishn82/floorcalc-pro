@@ -15,7 +15,7 @@ export function Footer() {
             <span className="text-lg font-black tracking-tight text-white">FloorCalc Pro</span>
           </Link>
           <p className="mt-4 max-w-sm text-sm leading-6 text-slate-400">
-            Free flooring calculators and practical planning guides for homeowners, remodelers, and flooring shoppers.
+            Free flooring calculators, troubleshooting guides, and installation planning resources for homeowners and remodelers.
           </p>
           <div className="mt-5 flex flex-wrap gap-2">
             {[

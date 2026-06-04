@@ -8,10 +8,10 @@ import { tools } from "@/data/tools";
 
 const featuredTools = tools.slice(0, 3);
 const featuredGuideSlugs = [
+  "why-is-my-lvp-floor-clicking",
   "why-is-my-laminate-floor-separating",
   "can-engineered-hardwood-go-over-concrete",
-  "can-you-install-lvp-over-concrete",
-  "which-direction-should-flooring-run"
+  "how-to-test-concrete-moisture"
 ];
 const featuredGuides = featuredGuideSlugs
   .map((slug) => guides.find((guide) => guide.slug === slug))
@@ -34,7 +34,7 @@ type StartHereCard = {
 const startHereCards: StartHereCard[] = [
   {
     title: "Estimate Materials",
-    description: "Calculate square footage, waste, stairs, seams, and transitions.",
+    description: "Measure rooms, add waste, estimate stairs, plan seams, and check transition lengths.",
     icon: "calculator",
     primaryLink: { href: "/tools", label: "Open calculators" },
     links: [
@@ -46,7 +46,7 @@ const startHereCards: StartHereCard[] = [
   },
   {
     title: "Diagnose a Flooring Problem",
-    description: "Troubleshoot clicking, lifting, separation, moisture, concrete, and flooring failures.",
+    description: "Start with symptoms like clicking, separating, buckling, moisture, concrete issues, or carpet seams.",
     icon: "shield",
     primaryLink: { href: "/diagnose", label: "Open Problem Finder" },
     links: [
@@ -59,7 +59,7 @@ const startHereCards: StartHereCard[] = [
   },
   {
     title: "Plan an Installation",
-    description: "Review installation checklists, moisture concerns, acclimation, and jobsite conditions.",
+    description: "Review checklists, moisture concerns, acclimation, concrete slabs, and jobsite conditions.",
     icon: "layers",
     primaryLink: { href: "/guides/lvp-installation-checklist", label: "Start with a checklist" },
     links: [
@@ -80,13 +80,14 @@ export default function HomePage() {
           <div className="mx-auto max-w-4xl text-center">
             <p className="mb-4 inline-flex items-center gap-2 rounded-full bg-white/15 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.14em] text-white/90">
               <FlooringIcon name="ruler" className="h-3.5 w-3.5" />
-              Free, no sign-up, built for real projects
+              Free flooring planning and troubleshooting
             </p>
             <h1 className="text-4xl font-black leading-[1.05] tracking-tight text-white sm:text-5xl lg:text-6xl">
-              Measure smarter, order right.
+              Measure, troubleshoot, and plan flooring projects.
             </h1>
             <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-accent-100 sm:text-lg">
-              Free calculators for square footage, waste, stairs, carpet seams, pattern repeats, and transitions before you buy.
+              Use FloorCalc Pro to estimate materials, understand flooring problems, review installation conditions,
+              and prepare questions before ordering or repairing a floor.
             </p>
             <div className="mt-7 flex flex-col items-center justify-center gap-3 sm:flex-row">
               <Link
@@ -94,14 +95,21 @@ export default function HomePage() {
                 className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-white px-6 py-3 text-sm font-bold text-accent-700 shadow-lg transition-all hover:bg-accent-50 sm:w-auto"
               >
                 <FlooringIcon name="calculator" className="h-5 w-5" />
-                Open calculators
+                Calculate materials
+              </Link>
+              <Link
+                href="/diagnose"
+                className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-white/10 px-6 py-3 text-sm font-bold text-white ring-1 ring-white/25 transition-all hover:bg-white/15 sm:w-auto"
+              >
+                <FlooringIcon name="shield" className="h-5 w-5" />
+                Diagnose a problem
               </Link>
               <Link
                 href="/guides"
                 className="inline-flex w-full items-center justify-center gap-2 rounded-xl border-2 border-white/30 px-6 py-3 text-sm font-bold text-white transition-all hover:border-white/60 hover:bg-white/10 sm:w-auto"
               >
                 <FlooringIcon name="guide" className="h-5 w-5" />
-                Browse guides
+                Read guidance
               </Link>
             </div>
           </div>
@@ -113,7 +121,7 @@ export default function HomePage() {
           <div className="mb-5 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
             <div>
               <p className="text-xs font-extrabold uppercase tracking-[0.14em] text-accent-600">Start Here</p>
-              <h2 className="mt-2 text-2xl font-black tracking-tight text-ink sm:text-3xl">Choose the path that best matches your flooring project.</h2>
+              <h2 className="mt-2 text-2xl font-black tracking-tight text-ink sm:text-3xl">Choose the path that matches what you need today.</h2>
             </div>
             <Link href="/diagnose" className="inline-flex text-sm font-bold text-accent-700 hover:text-accent-600">
               Open Problem Finder
@@ -161,9 +169,10 @@ export default function HomePage() {
           <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
             <div>
               <p className="text-xs font-extrabold uppercase tracking-[0.14em] text-accent-600">Calculators</p>
-              <h2 className="mt-2 text-3xl font-black tracking-tight text-ink sm:text-4xl">Pick a tool, start planning.</h2>
+              <h2 className="mt-2 text-3xl font-black tracking-tight text-ink sm:text-4xl">Calculate the parts of the project you can measure.</h2>
               <p className="mt-3 max-w-xl text-base text-slate-500">
-                Use these before converting measurements into cartons, rolls, trim pieces, or installer quotes.
+                Use the calculators for square footage, waste, stairs, carpet seams, pattern repeats, and transitions,
+                then verify final quantities with product details and installer review.
               </p>
             </div>
             <Link href="/tools" className="group shrink-0 inline-flex items-center gap-1 text-sm font-bold text-accent-600 hover:text-accent-700">
@@ -185,14 +194,15 @@ export default function HomePage() {
         <Container>
           <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
             <div>
-              <p className="text-xs font-extrabold uppercase tracking-[0.14em] text-accent-400">Guides</p>
-              <h2 className="mt-2 text-3xl font-black tracking-tight text-white sm:text-4xl">Know before you buy.</h2>
+              <p className="text-xs font-extrabold uppercase tracking-[0.14em] text-accent-400">Troubleshooting and guidance</p>
+              <h2 className="mt-2 text-3xl font-black tracking-tight text-white sm:text-4xl">Understand the issue before choosing a fix.</h2>
               <p className="mt-3 max-w-xl text-base text-slate-400">
-                Practical articles on measuring, waste, seams, transitions, moisture, movement, and installation conditions.
+                Read practical guides on clicking floors, separation, concrete slabs, moisture testing, LVP over concrete,
+                carpet seams, movement, and installation conditions.
               </p>
             </div>
             <Link href="/guides" className="group shrink-0 inline-flex items-center gap-1 text-sm font-bold text-accent-400 hover:text-accent-300">
-              Browse guide library
+              Browse guidance
               <svg className="h-4 w-4 transition-transform group-hover:translate-x-0.5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                 <path fillRule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clipRule="evenodd" />
               </svg>
@@ -204,7 +214,7 @@ export default function HomePage() {
             ))}
           </div>
           <div className="mt-5 rounded-xl border border-white/10 bg-white/[0.05] p-4 text-sm leading-6 text-slate-300">
-            Need to diagnose a flooring problem?{" "}
+            Not sure which symptom matches your floor?{" "}
             <Link href="/guides/troubleshooting" className="font-bold text-accent-300 hover:text-accent-200">
               Open troubleshooting guides
             </Link>
@@ -217,24 +227,24 @@ export default function HomePage() {
         <Container>
           <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
             <div>
-              <p className="text-xs font-extrabold uppercase tracking-[0.14em] text-accent-600">Built honestly</p>
-              <h2 className="mt-3 text-3xl font-black tracking-tight text-ink sm:text-4xl">Estimates you can trust and verify.</h2>
+              <p className="text-xs font-extrabold uppercase tracking-[0.14em] text-accent-600">Use it as a planning check</p>
+              <h2 className="mt-3 text-3xl font-black tracking-tight text-ink sm:text-4xl">Start with the numbers, then check the conditions.</h2>
               <p className="mt-5 text-base leading-7 text-slate-500">
-                Real orders can change based on product coverage, layout direction, installer practices, waste requirements,
-                stair parts, transitions, and jobsite conditions. Use these numbers as a planning foundation, then verify with
-                your installer or retailer before purchasing.
+                Flooring decisions depend on measurements, product coverage, layout direction, moisture, subfloor support,
+                transitions, and the written installation instructions. Use FloorCalc Pro to prepare, then verify final
+                requirements with the product manufacturer, retailer, or installer.
               </p>
               <Link href="/tools" className="mt-6 inline-flex items-center gap-2 rounded-xl bg-accent-600 px-5 py-3 text-sm font-bold text-white transition-colors hover:bg-accent-700">
                 <FlooringIcon name="ruler" className="h-4 w-4" />
-                Start calculating
+                Start with measurements
               </Link>
             </div>
             <div className="grid grid-cols-2 gap-4">
               {[
-                { icon: "calculator" as const, title: "Measure first", body: "Square footage, rooms, and hallways in one pass." },
-                { icon: "waste" as const, title: "Add waste right", body: "Diagonal cuts, patterns, and staggered rows all change yield." },
-                { icon: "stairs" as const, title: "Do not forget stairs", body: "Treads, risers, landings, and nosing add up quickly." },
-                { icon: "shield" as const, title: "Verify, then order", body: "Always confirm final quantities with your installer or retailer." }
+                { icon: "calculator" as const, title: "Measure first", body: "Square footage, rooms, hallways, stairs, and transitions." },
+                { icon: "shield" as const, title: "Check symptoms", body: "Clicking, separating, swelling, bounce, seams, and concrete issues." },
+                { icon: "layers" as const, title: "Review conditions", body: "Moisture, flatness, acclimation, underlayment, and jobsite prep." },
+                { icon: "guide" as const, title: "Verify before work", body: "Confirm product instructions and field conditions before ordering or repair." }
               ].map(({ icon, title, body }) => (
                 <div key={title} className="rounded-2xl border border-slate-200 bg-white p-5">
                   <span className="inline-grid h-10 w-10 place-items-center rounded-xl border border-accent-100 bg-accent-50 text-accent-600">
