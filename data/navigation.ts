@@ -25,6 +25,7 @@ export const troubleshootingGuideSlugs: GuideSlug[] = [
   "laminate-floor-separating-what-to-check-first",
   "why-is-my-floor-squeaking",
   "why-is-my-floor-bouncing",
+  "are-bouncy-floors-dangerous",
   "why-are-my-flooring-joints-opening",
   "why-is-my-subfloor-wet",
   "why-does-my-floor-feel-hollow",

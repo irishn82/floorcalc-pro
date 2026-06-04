@@ -14,9 +14,17 @@ export type ProblemFinderOption = {
   id: string;
   label: string;
   summary: string;
+  whatItUsuallyMeans: string;
+  seriousness: {
+    level: string;
+    note: string;
+  };
   likelyCauses: string[];
+  checkFirst: string[];
+  whenSerious: string[];
   recommendedGuides: ProblemFinderLink[];
   relatedCalculators: ProblemFinderLink[];
+  relatedChecklists: ProblemFinderLink[];
   relatedHubs: ProblemFinderLink[];
 };
 
@@ -25,6 +33,10 @@ type FlooringProblemFinderProps = {
 };
 
 function LinkList({ title, links }: { title: string; links: ProblemFinderLink[] }) {
+  if (links.length === 0) {
+    return null;
+  }
+
   return (
     <div className="rounded-lg border border-line bg-white p-3">
       <h3 className="text-sm font-black text-ink">{title}</h3>
@@ -40,6 +52,21 @@ function LinkList({ title, links }: { title: string; links: ProblemFinderLink[] 
           </Link>
         ))}
       </div>
+    </div>
+  );
+}
+
+function BulletPanel({ title, items }: { title: string; items: string[] }) {
+  return (
+    <div className="rounded-lg border border-line bg-white p-3">
+      <h3 className="text-sm font-black text-ink">{title}</h3>
+      <ul className="mt-3 grid gap-2">
+        {items.map((item) => (
+          <li key={item} className="rounded-md border border-line bg-field px-3 py-2 text-sm leading-6 text-slate-700">
+            {item}
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
@@ -105,20 +132,28 @@ export function FlooringProblemFinder({ options }: FlooringProblemFinderProps) {
           </Link>
         </div>
 
-        <div className="mt-4 rounded-lg border border-line bg-white p-3">
-          <h3 className="text-sm font-black text-ink">Likely areas to check</h3>
-          <ul className="mt-3 grid gap-2 sm:grid-cols-2">
-            {selectedOption.likelyCauses.map((cause) => (
-              <li key={cause} className="rounded-md border border-line bg-field px-3 py-2 text-sm leading-6 text-slate-700">
-                {cause}
-              </li>
-            ))}
-          </ul>
+        <div className="mt-4 grid gap-3 lg:grid-cols-[1.25fr_0.75fr]">
+          <div className="rounded-lg border border-line bg-white p-3">
+            <h3 className="text-sm font-black text-ink">What this usually means</h3>
+            <p className="mt-2 text-sm leading-6 text-slate-700">{selectedOption.whatItUsuallyMeans}</p>
+          </div>
+          <div className="rounded-lg border border-amber-200 bg-amber-50 p-3">
+            <p className="text-xs font-bold uppercase tracking-wide text-amber-800">Seriousness</p>
+            <h3 className="mt-1 text-sm font-black text-amber-950">{selectedOption.seriousness.level}</h3>
+            <p className="mt-2 text-sm leading-6 text-amber-950">{selectedOption.seriousness.note}</p>
+          </div>
         </div>
 
         <div className="mt-4 grid gap-3 lg:grid-cols-3">
+          <BulletPanel title="Most likely causes" items={selectedOption.likelyCauses} />
+          <BulletPanel title="What to check first" items={selectedOption.checkFirst} />
+          <BulletPanel title="When to get help" items={selectedOption.whenSerious} />
+        </div>
+
+        <div className="mt-4 grid gap-3 lg:grid-cols-4">
           <LinkList title="Recommended guides" links={selectedOption.recommendedGuides} />
           <LinkList title="Related calculators" links={selectedOption.relatedCalculators} />
+          <LinkList title="Related checklists" links={selectedOption.relatedChecklists} />
           <LinkList title="Related hubs" links={selectedOption.relatedHubs} />
         </div>
       </section>

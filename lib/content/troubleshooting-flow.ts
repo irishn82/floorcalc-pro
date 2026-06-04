@@ -42,6 +42,7 @@ export const troubleshootingProblemGroups: TroubleshootingProblemGroup[] = [
       "why-do-floors-expand-and-contract",
       "seasonal-flooring-movement",
       "what-flooring-movement-is-normal",
+      "are-bouncy-floors-dangerous",
       "why-is-my-lvp-floor-clicking",
       "why-is-my-lvp-lifting",
       "why-is-my-lvp-floor-separating",
@@ -122,6 +123,7 @@ export const troubleshootingProblemGroups: TroubleshootingProblemGroup[] = [
       "why-is-my-floor-clicking",
       "why-is-my-floor-squeaking",
       "why-is-my-floor-bouncing",
+      "are-bouncy-floors-dangerous",
       "why-are-my-flooring-joints-opening",
       "why-is-my-floor-swelling",
       "why-is-my-floor-expanding",
@@ -531,6 +533,27 @@ const troubleshootingFlows: Partial<Record<GuideSlug, TroubleshootingFlow>> = {
       "Tile is cracking, laminate or LVP joints are opening, or hardwood is moving.",
       "Joists, beams, stairs, or structural framing may be involved.",
       "Repair would require lifting finished flooring or evaluating framing."
+    ]
+  },
+  "are-bouncy-floors-dangerous": {
+    group: "movement",
+    causeRows: [
+      { cause: "Normal floating floor feel", symptom: "Light cushioned movement without damage", check: "Compare the feel across the room and check for gaps, cracks, or soft spots." },
+      { cause: "Underlayment compression", symptom: "Soft feel in a traffic path", check: "Review underlayment approval, thickness, and whether layers were doubled." },
+      { cause: "Loose subfloor or framing movement", symptom: "Springy, sagging, or squeaking area", check: "Inspect from below if accessible and involve a qualified professional when framing is suspected." },
+      { cause: "Unsupported finished floor", symptom: "Bounce with clicking, hollow sound, or separating joints", check: "Check low spots, flatness, and whether the floor is bridging uneven support." }
+    ],
+    whatToCheckFirst: [
+      "Mark the area and compare it with nearby rooms.",
+      "Look for related symptoms: squeaks, hollow sounds, cracks, gaps, swelling, or loose transitions.",
+      "Identify whether the floor is over wood framing, concrete, a basement, or a crawlspace.",
+      "Avoid adding fasteners through floating floors or loading a suspicious area until it is reviewed."
+    ],
+    whenToCallAPro: [
+      "The floor feels unsafe, sagging, springy, or soft.",
+      "Tile is cracking, joints are opening, or movement is worsening.",
+      "The symptom appears near stairs, beams, joists, or a large area.",
+      "You need to distinguish a flooring repair from a structural or framing concern."
     ]
   },
   "moisture-level-too-high-for-flooring": {

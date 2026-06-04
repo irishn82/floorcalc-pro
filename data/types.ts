@@ -124,6 +124,7 @@ export type GuideSlug =
   | "why-is-my-transition-strip-moving"
   | "why-does-my-floor-feel-hollow"
   | "why-is-my-floor-squeaking"
+  | "are-bouncy-floors-dangerous"
   | "moisture-level-too-high-for-flooring"
   | "why-is-my-lvp-floor-peaking"
   | "why-is-my-hardwood-floor-crowning"

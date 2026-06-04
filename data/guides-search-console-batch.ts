@@ -1115,6 +1115,120 @@ const guideDrafts: GuideDraft[] = [
     disclaimer: installConditionDisclaimer
   },
   {
+    slug: "are-bouncy-floors-dangerous",
+    title: "Are Bouncy Floors Dangerous?",
+    description:
+      "Learn when a bouncy floor may be normal, when it may point to subfloor or framing movement, and when to call a flooring or structural professional.",
+    metadataTitle: "Are Bouncy Floors Dangerous? When to Inspect Floor Bounce",
+    metadataDescription:
+      "Find out when bouncy floors may be normal, when bounce points to subfloor, joist, underlayment, or structural concerns, and what to check first.",
+    dateModified: "2026-06-04",
+    readTime: "8 min read",
+    primaryEcosystem: "planning-measuring-transitions",
+    secondaryEcosystems: ["laminate", "lvp", "hardwood-engineered-hardwood", "tile"],
+    materialTypes: ["lvp", "laminate", "hardwood", "engineered-hardwood", "ceramic-tile", "porcelain-tile"],
+    topicCluster: "subfloor-prep",
+    relatedTools: ["flooring-square-footage-calculator", "waste-calculator"],
+    relatedGuides: [
+      "why-is-my-floor-bouncing",
+      "why-is-my-floor-squeaking",
+      "why-does-my-floor-feel-hollow",
+      "flooring-movement-problems",
+      "why-is-my-laminate-floor-separating",
+      "why-is-my-lvp-floor-clicking",
+      "subfloor-flatness-requirements-lvp",
+      "how-flat-should-a-subfloor-be-for-laminate"
+    ],
+    quickAnswer: [
+      "A bouncy floor is not automatically dangerous, but it is worth checking. Some movement can come from floating floor feel, underlayment compression, or normal wood framing flex. Strong, worsening, localized, soft, or sagging bounce is more concerning.",
+      "Treat bounce as a clue. A flooring installer can help evaluate finished-floor movement, underlayment, and subfloor support. If the floor feels unsafe, sagging, or tied to joists, beams, stairs, or a large soft area, involve a qualified contractor or structural professional."
+    ],
+    keySections: [
+      {
+        id: "normal-vs-concerning",
+        title: "When bounce may be normal vs concerning",
+        paragraphs: [
+          "A floating floor can feel different from a glue-down, nail-down, or tile floor. A slight cushioned feel may come from the product system and underlayment. That does not automatically mean the floor is unsafe.",
+          "Concerning bounce usually feels springy, soft, sagging, localized, or worse over time. It may appear with squeaks, hollow sounds, opening joints, cracked tile, loose transitions, or visible subfloor movement."
+        ],
+        bullets: [
+          "Often minor: light overall movement in a floating floor with no gaps, cracks, swelling, or soft spots.",
+          "Needs review: bounce in one repeated spot, especially with clicking, squeaking, or joint stress.",
+          "More concerning: sagging, soft subfloor, cracked tile, stair movement, or a large area that feels unstable."
+        ]
+      },
+      {
+        id: "flooring-vs-structural",
+        title: "Flooring causes vs structural causes",
+        paragraphs: [
+          "Flooring causes include soft underlayment, low spots under floating floors, loose transition areas, or a finished floor that is bridging an uneven substrate. These are still important because repeated flex can damage locking joints, tile, or adhesive systems.",
+          "Structural or framing causes are different. Joist movement, loose subfloor panels, damaged framing, poor support, or a large sagging area should not be diagnosed from the surface alone. Those conditions may need a contractor or structural professional."
+        ]
+      },
+      {
+        id: "what-to-check-first",
+        title: "What homeowners can check first",
+        paragraphs: [
+          "Start safely and visually. You do not need to remove flooring to gather useful clues. Mark the area, compare it with nearby rooms, and note whether the bounce happens in one spot, along a hallway, near a doorway, near stairs, or across the whole room.",
+          "Look for related symptoms. Bounce with squeaking may point to subfloor or fastening movement. Bounce with clicking or separation may point to floating floor support. Bounce with cracked tile can point to substrate movement or deflection concerns."
+        ],
+        bullets: [
+          "Mark where the bounce repeats and whether it is spreading.",
+          "Check for squeaking, hollow sounds, cracks, gaps, swelling, or loose trim.",
+          "Identify whether the floor is over wood framing, concrete, a basement, or a crawlspace.",
+          "Avoid adding fasteners through floating floors or forcing joints closed before the cause is known."
+        ]
+      },
+      {
+        id: "when-to-call-a-professional",
+        title: "When to call a flooring or structural professional",
+        paragraphs: [
+          "Call a flooring professional when the bounce appears tied to the finished floor, underlayment, transitions, damaged planks, or a local low spot. They can help determine whether the finished floor needs to be lifted or repaired.",
+          "Call a qualified contractor or structural professional when the bounce feels unsafe, involves sagging, stairs, beams, joists, a large soft area, or movement that seems to come from below the subfloor. This guide cannot diagnose structural failure."
+        ]
+      }
+    ],
+    example: [
+      "A homeowner notices one bouncy spot in a hallway laminate floor. The area also clicks and one end joint has started opening.",
+      "That does not automatically mean the home is unsafe. It does mean the area should be checked for low spots, soft underlayment, loose subfloor, or framing movement before the joint is tapped closed."
+    ],
+    commonMistakes: [
+      "Assuming every bouncy floor is dangerous.",
+      "Assuming every bouncy floor is normal.",
+      "Ignoring bounce when tile is cracking or flooring joints are opening.",
+      "Adding thicker underlayment to hide movement.",
+      "Trying to repair the finished floor before checking the support below."
+    ],
+    faq: [
+      {
+        question: "Are bouncy floors always dangerous?",
+        answer:
+          "No. Some bounce can come from floating floor feel or normal framing flex. Strong, worsening, sagging, soft, or localized bounce should be inspected."
+      },
+      {
+        question: "Can a floating floor feel bouncy?",
+        answer:
+          "Yes. Floating floors can feel more cushioned than glued, nailed, or tiled floors, especially over underlayment. Excess movement still needs review if it causes clicks, gaps, or damage."
+      },
+      {
+        question: "When should I call a structural professional for floor bounce?",
+        answer:
+          "Call a qualified contractor or structural professional if the floor feels unsafe, sagging, connected to joists or beams, near stairs, or part of a large soft or unstable area."
+      },
+      {
+        question: "Can bouncy floors cause laminate or LVP separation?",
+        answer:
+          "Yes. Repeated flexing can stress locking joints and contribute to clicking, separation, peaking, or damaged plank edges."
+      },
+      {
+        question: "Should I keep walking on a bouncy area?",
+        answer:
+          "Avoid heavy loads or repeated stress on a suspicious area until it is inspected, especially if the floor is soft, sagging, cracked, or worsening."
+      }
+    ],
+    disclaimer: installConditionDisclaimer
+  },
+  {
     slug: "why-are-my-flooring-joints-opening",
     title: "Why Are My Flooring Joints Opening?",
     description:

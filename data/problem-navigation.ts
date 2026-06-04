@@ -46,6 +46,11 @@ export const problemSymptomLinks: ProblemSymptomLink[] = [
     description: "Narrow down subfloor movement, fasteners, and wood movement."
   },
   {
+    label: "Bouncing",
+    href: "/guides/are-bouncy-floors-dangerous",
+    description: "Decide when floor bounce is minor, installation-related, or worth professional review."
+  },
+  {
     label: "Gapping",
     href: "/guides/why-is-my-hardwood-floor-gapping",
     description: "Understand seasonal gaps and moisture-related movement."
@@ -66,9 +71,24 @@ export const problemSymptomLinks: ProblemSymptomLink[] = [
     description: "Start with slab moisture, cracks, flatness, and compatibility."
   },
   {
+    label: "Cracks",
+    href: "/guides/why-is-my-tile-cracking",
+    description: "Check tile cracks, slab cracks, hollow spots, and substrate movement."
+  },
+  {
     label: "Carpet seams",
     href: "/guides/why-are-my-carpet-seams-visible",
     description: "Review seam visibility, roll width, pattern match, and lighting."
+  },
+  {
+    label: "Carpet buckling",
+    href: "/guides/why-is-my-carpet-wrinkling-or-buckling",
+    description: "Review wrinkles, loose stretch, padding, humidity, and trip concerns."
+  },
+  {
+    label: "Pattern match",
+    href: "/guides/what-is-pattern-match-in-carpet",
+    description: "Plan repeat size, seam visibility, and extra patterned material."
   }
 ];
 
@@ -84,6 +104,7 @@ export const problemBrowseSections: ProblemBrowseSection[] = [
       "why-is-my-floor-clicking",
       "why-is-my-floor-squeaking",
       "why-is-my-floor-bouncing",
+      "are-bouncy-floors-dangerous",
       "why-is-my-lvp-lifting",
       "why-is-my-lvp-floor-buckling",
       "why-is-my-lvp-floor-peaking",
@@ -262,9 +283,9 @@ export const relatedProblemGuideSlugs: Partial<Record<GuideSlug, GuideSlug[]>> =
   ],
   "why-is-my-lvp-floor-clicking": [
     "flooring-separation-problems",
+    "flooring-movement-problems",
     "why-is-my-lvp-lifting",
     "why-is-my-lvp-floor-peaking",
-    "why-is-my-lvp-floor-buckling",
     "why-is-my-lvp-floor-separating"
   ],
   "why-is-my-laminate-floor-separating": [
@@ -274,6 +295,18 @@ export const relatedProblemGuideSlugs: Partial<Record<GuideSlug, GuideSlug[]>> =
     "flooring-moisture-problems",
     "how-flat-should-a-subfloor-be-for-laminate"
   ],
+  "why-is-my-floor-bouncing": [
+    "are-bouncy-floors-dangerous",
+    "why-is-my-floor-squeaking",
+    "why-does-my-floor-feel-hollow",
+    "flooring-movement-problems"
+  ],
+  "are-bouncy-floors-dangerous": [
+    "why-is-my-floor-bouncing",
+    "why-is-my-floor-squeaking",
+    "why-does-my-floor-feel-hollow",
+    "flooring-movement-problems"
+  ],
   "can-engineered-hardwood-go-over-concrete": [
     "concrete-floor-problems",
     "flooring-separation-problems",
@@ -281,6 +314,33 @@ export const relatedProblemGuideSlugs: Partial<Record<GuideSlug, GuideSlug[]>> =
     "moisture-barrier-engineered-hardwood-over-concrete",
     "how-long-should-hardwood-acclimate",
     "why-is-my-engineered-hardwood-separating"
+  ],
+  "can-you-install-lvp-over-concrete": [
+    "concrete-floor-problems",
+    "flooring-moisture-problems",
+    "how-to-test-concrete-moisture",
+    "why-flooring-fails-over-concrete",
+    "best-underlayment-for-concrete-floors"
+  ],
+  "how-to-test-concrete-moisture": [
+    "concrete-floor-problems",
+    "flooring-moisture-problems",
+    "why-flooring-fails-over-concrete",
+    "can-you-install-lvp-over-concrete",
+    "moisture-barrier-engineered-hardwood-over-concrete"
+  ],
+  "which-direction-should-flooring-run": [
+    "flooring-direction-mistakes",
+    "flooring-transition-guide",
+    "why-is-my-transition-strip-moving",
+    "flooring-separation-problems"
+  ],
+  "why-is-my-lvp-lifting": [
+    "flooring-movement-problems",
+    "flooring-moisture-problems",
+    "why-is-my-lvp-floor-peaking",
+    "why-is-my-lvp-floor-buckling",
+    "can-you-install-lvp-over-concrete"
   ],
   "carpet-seam-direction-guide": [
     "why-are-my-carpet-seams-visible",

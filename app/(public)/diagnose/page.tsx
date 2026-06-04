@@ -44,9 +44,14 @@ function resolveFinderOptions(): ProblemFinderOption[] {
     id: option.id,
     label: option.label,
     summary: option.summary,
+    whatItUsuallyMeans: option.whatItUsuallyMeans,
+    seriousness: option.seriousness,
     likelyCauses: option.likelyCauses,
+    checkFirst: option.checkFirst,
+    whenSerious: option.whenSerious,
     recommendedGuides: resolveGuideLinks(option.recommendedGuides),
     relatedCalculators: resolveToolLinks(option.relatedCalculators),
+    relatedChecklists: resolveGuideLinks(option.relatedChecklists),
     relatedHubs: resolveGuideLinks(option.relatedHubs)
   }));
 }
@@ -100,6 +105,49 @@ export default function DiagnosePage() {
       <section className="bg-field py-8 sm:py-10">
         <Container>
           <FlooringProblemFinder options={finderOptions} />
+        </Container>
+      </section>
+
+      <section className="bg-white py-8">
+        <Container>
+          <div className="rounded-lg border border-line bg-field p-4 shadow-sm">
+            <p className="text-xs font-bold uppercase tracking-wide text-accent-700">Safety and inspection path</p>
+            <h2 className="mt-2 text-2xl font-black tracking-normal text-ink">Is this something to worry about?</h2>
+            <p className="mt-3 max-w-3xl text-sm leading-6 text-slate-600">
+              Flooring symptoms range from cosmetic to serious. Use the symptom finder to pick the closest starting point, then
+              decide whether the issue looks visual, installation-related, moisture-related, or possibly structural.
+            </p>
+            <div className="mt-4 grid gap-3 md:grid-cols-2 lg:grid-cols-4">
+              {[
+                {
+                  title: "Cosmetic or minor",
+                  body: "Small seam visibility, light seasonal gaps, or a normal floating-floor sound may only need monitoring or better planning."
+                },
+                {
+                  title: "Installation issue",
+                  body: "Clicking, lifting, peaking, or buckling can point to expansion space, underlayment, subfloor support, or product-specific installation requirements."
+                },
+                {
+                  title: "Moisture warning signs",
+                  body: "Swelling, odor, soft spots, cupping, adhesive release, or recurring slab issues should be treated as moisture clues until ruled out."
+                },
+                {
+                  title: "Possible structural concern",
+                  body: "Strong bounce, sagging, cracked tile, spreading movement, stair concerns, or joist/subfloor movement may need a contractor or structural professional."
+                }
+              ].map((item) => (
+                <div key={item.title} className="rounded-md border border-line bg-white p-3">
+                  <h3 className="text-sm font-black text-ink">{item.title}</h3>
+                  <p className="mt-2 text-sm leading-6 text-slate-600">{item.body}</p>
+                </div>
+              ))}
+            </div>
+            <p className="mt-4 text-sm leading-6 text-slate-600">
+              Call a flooring professional when the repair requires lifting flooring, checking moisture, replacing damaged material,
+              or evaluating installation conditions. Call a qualified contractor or structural professional when the floor feels unsafe,
+              sagging, strongly bouncy, or connected to framing, beams, stairs, or a large soft area.
+            </p>
+          </div>
         </Container>
       </section>
 

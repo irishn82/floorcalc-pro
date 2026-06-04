@@ -46,6 +46,12 @@ type ResourceLink = {
 };
 
 const troubleshootingFlowDuplicateSectionIds = new Set(["common-causes", "what-to-check-first", "when-to-call-a-professional"]);
+const problemFinderCalloutSlugs = new Set<GuideSlug>([
+  "which-direction-should-flooring-run",
+  "what-is-pattern-match-in-carpet",
+  "can-you-install-lvp-over-concrete",
+  "how-to-test-concrete-moisture"
+]);
 
 function uniqueLinks(links: ResourceLink[]) {
   const seen = new Set<string>();
@@ -599,13 +605,24 @@ const targetedNextStepTargets: Partial<
     ]
   },
   "why-is-my-floor-bouncing": {
-    primary: { type: "guide", slug: "why-is-my-floor-squeaking" },
+    primary: { type: "guide", slug: "are-bouncy-floors-dangerous" },
     secondary: [
+      { type: "guide", slug: "why-is-my-floor-squeaking" },
       { type: "guide", slug: "flooring-movement-problems" },
       { type: "guide", slug: "why-does-my-floor-feel-hollow" },
       { type: "guide", slug: "why-are-my-flooring-joints-opening" },
       { type: "guide", slug: "subfloor-flatness-requirements-lvp" },
       { type: "guide", slug: "how-flat-should-a-subfloor-be-for-laminate" }
+    ]
+  },
+  "are-bouncy-floors-dangerous": {
+    primary: { type: "guide", slug: "why-is-my-floor-bouncing" },
+    secondary: [
+      { type: "guide", slug: "why-is-my-floor-squeaking" },
+      { type: "guide", slug: "why-does-my-floor-feel-hollow" },
+      { type: "guide", slug: "flooring-movement-problems" },
+      { type: "guide", slug: "why-is-my-laminate-floor-separating" },
+      { type: "guide", slug: "subfloor-flatness-requirements-lvp" }
     ]
   },
   "why-are-my-flooring-joints-opening": {
@@ -819,6 +836,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
   const visibleGuideSections = troubleshootingFlow
     ? guide.sections.filter((section) => !troubleshootingFlowDuplicateSectionIds.has(section.id))
     : guide.sections;
+  const showProblemFinderCallout = problemFinderCalloutSlugs.has(guide.slug) && !troubleshootingFlow && !authorityHubPathway;
   const quickAnswerSection = troubleshootingFlow
     ? visibleGuideSections.find((section) => section.id === "quick-answer")
     : null;
@@ -896,6 +914,17 @@ export default async function GuidePage({ params }: GuidePageProps) {
                       </Link>
                     ))}
                   </div>
+                </div>
+              ) : null}
+              {showProblemFinderCallout ? (
+                <div className="mt-5 rounded-lg border border-accent-100 bg-accent-50 p-4 shadow-sm">
+                  <h2 className="text-lg font-black text-ink">Not sure what you are seeing?</h2>
+                  <p className="mt-2 text-sm leading-6 text-slate-700">
+                    Start with the visible symptom and compare nearby problems before choosing the next guide.
+                  </p>
+                  <Link href="/diagnose" className="mt-3 inline-flex rounded-md bg-accent-700 px-3 py-2 text-sm font-bold text-white hover:bg-accent-800">
+                    Open Problem Finder
+                  </Link>
                 </div>
               ) : null}
               {troubleshootingFlow ? (

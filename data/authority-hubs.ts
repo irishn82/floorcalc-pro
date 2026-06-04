@@ -30,7 +30,8 @@ export const authorityHubPathways: AuthorityHubPathway[] = [
       { label: "Laminate gaps", guideSlug: "why-is-my-laminate-floor-separating", note: "Use this when laminate seams or end joints keep opening." },
       { label: "LVP gaps", guideSlug: "why-is-my-lvp-floor-separating", note: "Use this when vinyl plank joints reopen or show locking stress." },
       { label: "Engineered hardwood gaps", guideSlug: "why-is-my-engineered-hardwood-separating", note: "Use this when wood movement, slab moisture, or bond issues may be involved." },
-      { label: "Buckling or peaking", guideSlug: "why-is-my-lvp-floor-peaking", note: "Raised ridges often point to pressure, fixed objects, or moisture." }
+      { label: "Buckling or peaking", guideSlug: "why-is-my-lvp-floor-peaking", note: "Raised ridges often point to pressure, fixed objects, or moisture." },
+      { label: "Bouncy or springy floor", guideSlug: "are-bouncy-floors-dangerous", note: "Use this when movement feels concerning or may involve subfloor support." }
     ],
     calculators: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"],
     checklists: ["lvp-installation-checklist", "laminate-installation-checklist", "engineered-hardwood-installation-checklist"],
@@ -85,6 +86,7 @@ export const authorityHubPathways: AuthorityHubPathway[] = [
       { label: "Moisture", guideSlug: "how-to-test-concrete-moisture", note: "Use this before moisture-sensitive flooring goes over a slab." },
       { label: "Flooring failure", guideSlug: "why-flooring-fails-over-concrete", note: "Use this when a finished floor has already failed over concrete." },
       { label: "Cracking", guideSlug: "concrete-slab-cracks-under-flooring", note: "Use this when cracks may transfer through tile, plank, or adhesive systems." },
+      { label: "Tile cracks", guideSlug: "why-is-my-tile-cracking", note: "Use this when the finished tile or grout is cracking over a slab or subfloor." },
       { label: "Hollow Sound", guideSlug: "why-does-my-floor-feel-hollow", note: "Localized hollow sounds can point to support, bond, or slab prep problems." },
       { label: "Moisture through slab", guideSlug: "why-is-moisture-coming-through-my-slab", note: "Use this when moisture or odor appears to come from below." },
       { label: "LVP over concrete", guideSlug: "can-you-install-lvp-over-concrete", note: "Use this when planning vinyl plank over a slab." },
