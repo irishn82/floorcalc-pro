@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { BrandMark } from "@/components/BrandMark";
 import { Container } from "@/components/Container";
+import { MobileNavigation } from "@/components/MobileNavigation";
 
 const navItems: { href: string; label: string }[] = [
   { href: "/", label: "Home" },
@@ -9,6 +10,8 @@ const navItems: { href: string; label: string }[] = [
   { href: "/guides/troubleshooting", label: "Troubleshooting" },
   { href: "/guides/browse-problems", label: "Browse Problems" }
 ];
+
+const mobileNavItems: { href: string; label: string }[] = [...navItems, { href: "/diagnose", label: "Diagnose" }];
 
 export function Header() {
   return (
@@ -22,7 +25,7 @@ export function Header() {
         </Link>
 
         <nav
-          className="flex min-w-0 items-center gap-0.5 overflow-x-auto whitespace-nowrap text-xs font-semibold text-slate-600 sm:gap-1 sm:text-sm"
+          className="hidden min-w-0 items-center gap-0.5 overflow-x-auto whitespace-nowrap text-xs font-semibold text-slate-600 sm:gap-1 sm:text-sm md:flex"
           aria-label="Primary navigation"
         >
           {navItems.map((item) => (
@@ -35,6 +38,8 @@ export function Header() {
             </Link>
           ))}
         </nav>
+
+        <MobileNavigation items={mobileNavItems} />
       </Container>
     </header>
   );
