@@ -102,12 +102,16 @@ export const problemBrowseSections: ProblemBrowseSection[] = [
       "flooring-movement-problems",
       "flooring-separation-problems",
       "why-is-my-floor-clicking",
+      "why-is-my-lvp-floor-clicking",
       "why-is-my-floor-squeaking",
       "why-is-my-floor-bouncing",
       "are-bouncy-floors-dangerous",
       "why-is-my-lvp-lifting",
       "why-is-my-lvp-floor-buckling",
       "why-is-my-lvp-floor-peaking",
+      "why-is-my-lvp-floor-separating",
+      "why-is-my-laminate-floor-separating",
+      "why-is-my-engineered-hardwood-separating",
       "why-are-my-flooring-joints-opening",
       "why-is-my-hardwood-floor-gapping",
       "why-does-my-floor-feel-hollow"
@@ -263,6 +267,17 @@ export const problemBrowseSections: ProblemBrowseSection[] = [
 ];
 
 export const relatedProblemGuideSlugs: Partial<Record<GuideSlug, GuideSlug[]>> = {
+  "flooring-movement-problems": [
+    "why-is-my-lvp-floor-clicking",
+    "why-is-my-lvp-lifting",
+    "why-is-my-lvp-floor-peaking",
+    "why-is-my-lvp-floor-buckling",
+    "why-is-my-laminate-floor-separating",
+    "why-is-my-engineered-hardwood-separating",
+    "why-is-my-floor-bouncing",
+    "why-is-my-floor-squeaking",
+    "why-does-my-floor-feel-hollow"
+  ],
   "flooring-separation-problems": [
     "why-is-my-laminate-floor-separating",
     "why-is-my-lvp-floor-separating",
@@ -289,6 +304,7 @@ export const relatedProblemGuideSlugs: Partial<Record<GuideSlug, GuideSlug[]>> =
     "why-is-my-lvp-floor-separating"
   ],
   "why-is-my-laminate-floor-separating": [
+    "flooring-movement-problems",
     "flooring-separation-problems",
     "why-is-my-laminate-floor-buckling",
     "why-are-my-flooring-joints-opening",
@@ -341,6 +357,39 @@ export const relatedProblemGuideSlugs: Partial<Record<GuideSlug, GuideSlug[]>> =
     "why-is-my-lvp-floor-peaking",
     "why-is-my-lvp-floor-buckling",
     "can-you-install-lvp-over-concrete"
+  ],
+  "why-is-my-lvp-floor-peaking": [
+    "flooring-movement-problems",
+    "why-is-my-lvp-floor-buckling",
+    "why-is-my-lvp-lifting",
+    "why-is-my-lvp-floor-separating",
+    "can-you-install-cabinets-over-floating-lvp"
+  ],
+  "why-is-my-lvp-floor-buckling": [
+    "flooring-movement-problems",
+    "flooring-moisture-problems",
+    "why-is-my-lvp-floor-peaking",
+    "why-is-my-lvp-lifting",
+    "why-is-my-lvp-floor-separating"
+  ],
+  "why-is-my-engineered-hardwood-separating": [
+    "flooring-movement-problems",
+    "flooring-separation-problems",
+    "flooring-moisture-problems",
+    "can-engineered-hardwood-go-over-concrete",
+    "how-long-should-hardwood-acclimate"
+  ],
+  "why-is-my-floor-squeaking": [
+    "flooring-movement-problems",
+    "why-is-my-floor-bouncing",
+    "why-does-my-floor-feel-hollow",
+    "why-is-my-floor-clicking"
+  ],
+  "why-does-my-floor-feel-hollow": [
+    "flooring-movement-problems",
+    "why-is-my-floor-bouncing",
+    "why-is-my-floor-squeaking",
+    "why-flooring-fails-over-concrete"
   ],
   "carpet-seam-direction-guide": [
     "why-are-my-carpet-seams-visible",

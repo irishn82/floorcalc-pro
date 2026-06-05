@@ -47,12 +47,15 @@ export const troubleshootingProblemGroups: TroubleshootingProblemGroup[] = [
       "why-is-my-lvp-lifting",
       "why-is-my-lvp-floor-separating",
       "why-is-my-lvp-floor-peaking",
+      "why-is-my-lvp-floor-buckling",
       "why-is-my-laminate-floor-separating",
+      "why-is-my-engineered-hardwood-separating",
       "why-is-my-hardwood-floor-gapping",
       "why-is-my-hardwood-floor-cupping",
       "why-is-my-hardwood-floor-crowning",
       "why-does-my-floor-feel-hollow",
-      "why-is-my-floor-squeaking"
+      "why-is-my-floor-squeaking",
+      "why-is-my-floor-bouncing"
     ],
     toolSlugs: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"]
   },

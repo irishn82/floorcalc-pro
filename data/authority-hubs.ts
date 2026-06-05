@@ -18,6 +18,39 @@ export type AuthorityHubPathway = {
 
 export const authorityHubPathways: AuthorityHubPathway[] = [
   {
+    slug: "flooring-movement-problems",
+    startHere: [
+      "Name the main symptom first: clicking, lifting, peaking, buckling, separating, gapping, squeaking, bouncing, or hollow sound.",
+      "Identify the flooring type and installation method before choosing a repair. Floating floors, glue-down floors, nailed wood, and tile assemblies move for different reasons.",
+      "Sort the likely cause into moisture, expansion pressure, subfloor flatness/support, or structure/framing before forcing joints closed or fastening anything down."
+    ],
+    symptomLookup: [
+      { label: "Clicking", guideSlug: "why-is-my-lvp-floor-clicking", note: "Use this when click-lock planks or floating floors make repeated clicks in a traffic path." },
+      { label: "Lifting", guideSlug: "why-is-my-lvp-lifting", note: "Use this when plank edges, glue-down areas, or transitions are no longer staying seated." },
+      { label: "Peaking", guideSlug: "why-is-my-lvp-floor-peaking", note: "Use this when raised seams suggest expansion pressure, fixed objects, or moisture." },
+      { label: "Buckling", guideSlug: "why-is-my-lvp-floor-buckling", note: "Use this when floating flooring is pushed upward or trapped under pressure." },
+      { label: "Laminate separating", guideSlug: "why-is-my-laminate-floor-separating", note: "Use this when laminate joints keep opening or returning after repair." },
+      { label: "Engineered hardwood separating", guideSlug: "why-is-my-engineered-hardwood-separating", note: "Use this when engineered wood gaps may involve humidity, concrete, adhesive, or acclimation." },
+      { label: "Squeaking", guideSlug: "why-is-my-floor-squeaking", note: "Use this when movement may be coming from subfloor panels, fasteners, framing, or seasonal wood behavior." },
+      { label: "Bouncing", guideSlug: "why-is-my-floor-bouncing", note: "Use this when the floor feels springy, soft, or unsupported under foot." },
+      { label: "Hollow sound", guideSlug: "why-does-my-floor-feel-hollow", note: "Use this when a floor sounds unsupported, loose, hollow, or different in one area." }
+    ],
+    calculators: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"],
+    checklists: ["lvp-installation-checklist", "laminate-installation-checklist", "engineered-hardwood-installation-checklist", "tile-installation-checklist"],
+    troubleshooting: [
+      "why-is-my-lvp-floor-clicking",
+      "why-is-my-lvp-lifting",
+      "why-is-my-lvp-floor-peaking",
+      "why-is-my-lvp-floor-buckling",
+      "why-is-my-laminate-floor-separating",
+      "why-is-my-engineered-hardwood-separating",
+      "why-is-my-floor-bouncing",
+      "why-is-my-floor-squeaking",
+      "why-does-my-floor-feel-hollow"
+    ],
+    relatedHubs: ["flooring-separation-problems", "flooring-moisture-problems", "concrete-floor-problems"]
+  },
+  {
     slug: "flooring-separation-problems",
     startHere: [
       "Identify the flooring type and whether it is floating, glue-down, nail-down, staple-down, or tile.",

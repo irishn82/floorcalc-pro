@@ -27,6 +27,32 @@ export type DiagnosisOption = {
 
 export const diagnosisOptions: DiagnosisOption[] = [
   {
+    id: "movement-problems",
+    label: "Movement Problems",
+    summary: "Start here when the floor clicks, lifts, separates, buckles, peaks, gaps, squeaks, bounces, or sounds hollow.",
+    whatItUsuallyMeans:
+      "Movement problems usually point toward moisture, expansion pressure, subfloor flatness/support, or structure/framing movement. The visible symptom helps you choose the next guide.",
+    seriousness: {
+      level: "Needs inspection",
+      note: "Some movement can be normal, but spreading movement, moisture clues, lifted areas, cracked tile, strong bounce, or trip hazards should be checked."
+    },
+    likelyCauses: ["Moisture or humidity movement", "Blocked expansion space", "Uneven or unsupported substrate", "Subfloor or framing movement"],
+    checkFirst: [
+      "Name the main symptom and identify the flooring type.",
+      "Map whether the movement is local, spreading, seasonal, or tied to a doorway, slab, cabinet, or transition.",
+      "Check moisture, expansion space, subfloor support, underlayment, and nearby fixed objects before forcing a repair."
+    ],
+    whenSerious: [
+      "The floor is lifting, buckling, peaking, or creating a trip hazard.",
+      "There are moisture signs, odor, swelling, cupping, or adhesive release.",
+      "The floor feels soft, strongly bouncy, sagging, or unsafe."
+    ],
+    recommendedGuides: ["flooring-movement-problems", "why-is-my-lvp-floor-clicking", "why-is-my-laminate-floor-separating"],
+    relatedCalculators: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"],
+    relatedChecklists: ["lvp-installation-checklist", "laminate-installation-checklist", "engineered-hardwood-installation-checklist"],
+    relatedHubs: ["flooring-movement-problems", "flooring-separation-problems", "flooring-moisture-problems"]
+  },
+  {
     id: "clicking",
     label: "Clicking",
     summary: "Repeated clicks often point to movement, low spots, underlayment issues, damaged locking joints, or a pinned floating floor.",

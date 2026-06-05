@@ -2960,12 +2960,12 @@ const guideDrafts: GuideDraft[] = [
     slug: "flooring-movement-problems",
     title: "Flooring Movement Problems",
     description:
-      "A practical hub for diagnosing flooring movement problems such as clicking, lifting, separating, buckling, peaking, gapping, crowning, cupping, hollow sounds, and squeaks.",
-    metadataTitle: "Flooring Movement Problems: Clicking, Buckling, Gaps, Cupping",
+      "A master guide for sorting flooring movement problems, including clicking, lifting, peaking, buckling, separating, gapping, squeaking, bouncing, and hollow sounds.",
+    metadataTitle: "Flooring Movement Problems: Clicking, Lifting, Buckling, Gaps",
     metadataDescription:
-      "Diagnose flooring movement problems including clicking, lifting, separating, buckling, peaking, gapping, cupping, crowning, hollow sounds, and squeaks.",
-    dateModified: "2026-06-01",
-    readTime: "12 min read",
+      "Use this flooring movement hub to diagnose clicking, lifting, peaking, buckling, separating, gapping, squeaking, bouncing, and hollow sounds.",
+    dateModified: "2026-06-05",
+    readTime: "14 min read",
     primaryEcosystem: "planning-measuring-transitions",
     secondaryEcosystems: ["lvp", "laminate", "hardwood-engineered-hardwood", "tile"],
     materialTypes: ["lvp", "lvt", "laminate", "hardwood", "engineered-hardwood", "ceramic-tile", "porcelain-tile"],
@@ -2980,46 +2980,67 @@ const guideDrafts: GuideDraft[] = [
       "why-is-my-lvp-lifting",
       "why-is-my-lvp-floor-separating",
       "why-is-my-lvp-floor-peaking",
+      "why-is-my-lvp-floor-buckling",
       "why-is-my-laminate-floor-separating",
+      "why-is-my-engineered-hardwood-separating",
       "why-is-my-hardwood-floor-gapping",
       "why-is-my-hardwood-floor-cupping",
       "why-is-my-hardwood-floor-crowning",
       "why-does-my-floor-feel-hollow",
-      "why-is-my-floor-squeaking"
+      "why-is-my-floor-squeaking",
+      "why-is-my-floor-bouncing",
+      "are-bouncy-floors-dangerous"
     ],
     quickAnswer: [
-      "Flooring movement problems usually come from moisture, humidity, temperature change, subfloor movement, poor support, blocked expansion space, damaged locking joints, adhesive failure, or installing a product outside its requirements.",
-      "Use the symptom first: clicking, lifting, separating, buckling, peaking, gapping, crowning, cupping, hollow sounds, and squeaks each point to a different starting path. The final answer depends on the floor type, installation method, substrate, and room conditions."
+      "Flooring movement problems usually start with one of four buckets: moisture, expansion pressure, subfloor flatness/support, or structural/framing movement. The visible symptom tells you where to begin.",
+      "Use this hub when a floor is clicking, lifting, peaking, buckling, separating, gapping, squeaking, bouncing, or sounding hollow. Then open the detailed guide that matches the symptom and floor type."
     ],
     keySections: [
       {
-        id: "symptom-lookup",
-        title: "Movement symptom lookup",
+        id: "movement-symptom-matrix",
+        title: "Movement symptom matrix",
         paragraphs: [
-          "Start by naming the symptom before deciding on a repair. A floor that clicks in one spot is not the same problem as a hardwood floor cupping across a room or an LVP floor peaking at a doorway.",
-          "The hub links below are organized by what the homeowner sees or hears first, then by the likely flooring system involved."
+          "Start with the symptom, not the flooring material. The same floor can show clicking, lifting, and separation at the same time, but one symptom usually gives the clearest first path.",
+          "The matrix below summarizes the likely cause, common flooring types, urgency level, and the detailed guide to read next."
         ],
         bullets: [
-          "Clicking or squeaking: look for subfloor movement, hollow spots, underlayment, or joint stress.",
-          "Separating or gapping: check humidity, acclimation, locking joints, subfloor flatness, and expansion restrictions.",
-          "Buckling or peaking: check expansion space, fixed objects, long runs, heat, and moisture.",
-          "Cupping or crowning: start with moisture imbalance, humidity, slab or crawlspace conditions, and sanding history.",
-          "Hollow sounds or bouncing: check support, underlayment, adhesive bond, mortar coverage, or slab flatness."
+          "Clicking - likely cause: low spots, locking stress, soft underlayment, or pinned floating floor; flooring types: LVP, laminate, floating floors; urgency: needs inspection; related guide: Why Is My LVP Floor Clicking.",
+          "Lifting - likely cause: expansion pressure, moisture, adhesive release, or uneven substrate; flooring types: LVP, glue-down vinyl, transitions; urgency: needs inspection; related guide: Why Is My LVP Lifting.",
+          "Peaking - likely cause: blocked expansion, fixed cabinets, long runs, heat, or moisture; flooring types: LVP and laminate; urgency: needs inspection; related guide: Why Is My LVP Floor Peaking.",
+          "Buckling - likely cause: moisture, missing expansion space, heavy fixed objects, or wrong underlayment; flooring types: LVP and laminate; urgency: possible moisture issue; related guide: Why Is My LVP Floor Buckling.",
+          "Separating - likely cause: joint stress, humidity movement, low spots, damaged locking edges, or bond failure; flooring types: LVP, laminate, engineered hardwood; urgency: needs inspection; related guide: Why Is My Laminate Floor Separating.",
+          "Gapping - likely cause: seasonal humidity, acclimation, moisture imbalance, or product movement; flooring types: hardwood and engineered hardwood; urgency: monitor or inspect; related guide: Why Is My Hardwood Floor Gapping.",
+          "Squeaking - likely cause: subfloor panel movement, fasteners, framing movement, or seasonal wood movement; flooring types: hardwood, laminate, LVP over wood subfloor; urgency: needs inspection if spreading; related guide: Why Is My Floor Squeaking.",
+          "Bouncing - likely cause: underlayment compression, low spots, loose subfloor panels, joist movement, or framing concerns; flooring types: floating floors, wood subfloors, tile over framing; urgency: possible structural concern; related guide: Why Is My Floor Bouncing.",
+          "Hollow sounds - likely cause: floating floor sound, low spots, adhesive release, mortar coverage, or slab support; flooring types: floating floors, tile, glue-down flooring; urgency: needs inspection if localized; related guide: Why Does My Floor Feel Hollow."
         ]
       },
       {
-        id: "common-causes",
-        title: "Common causes",
+        id: "movement-cause-map",
+        title: "Movement visual map: moisture, expansion, flatness, structure",
         paragraphs: [
-          "Most movement problems are not random. Flooring systems move because materials respond to moisture and temperature, because floating floors need room to expand, or because the substrate below the floor is not supporting the product correctly.",
-          "Some movement is normal, especially with wood and seasonal humidity. Movement becomes a problem when it damages joints, lifts the floor, creates unsafe areas, or keeps getting worse."
+          "Most movement problems lead back to one of four directions: moisture, expansion, flatness, or structure. A simple way to sort the issue is: Movement Problem -> Moisture -> Expansion -> Flatness -> Structure.",
+          "Moisture includes slab vapor, leaks, humidity, wet subfloors, and acclimation problems. Expansion includes missing gaps, long runs, fixed cabinets, tight transitions, and heat. Flatness includes low spots, humps, soft patching, wrong underlayment, or poor support. Structure includes loose panels, joist movement, sagging, bounce, stairs, or framing concerns."
         ],
         bullets: [
-          "Moisture, humidity, leaks, slab vapor, or wet subfloors.",
-          "Missing or blocked expansion gaps at walls, transitions, cabinets, or islands.",
-          "Uneven subfloors, low spots, humps, or weak patching.",
-          "Wrong underlayment, doubled padding, or adhesive incompatibility.",
-          "Product installed before acclimation, jobsite conditioning, or substrate prep was complete."
+          "Moisture path: swelling, cupping, buckling, adhesive release, musty odor, or recurring movement.",
+          "Expansion path: peaking, buckling, lifting, transition pressure, or movement near cabinets and islands.",
+          "Flatness path: clicking, hollow sound, bouncing in one area, gaps that reopen, or floating-floor joint stress.",
+          "Structure path: strong bounce, sagging, squeaking, cracked tile over framing, stair movement, or large soft areas."
+        ]
+      },
+      {
+        id: "is-this-serious",
+        title: "Is this serious?",
+        paragraphs: [
+          "Movement is not automatically an emergency, and it is not always a defect. Some floating floors sound different from glued or nailed floors, and small seasonal wood movement can be normal.",
+          "The concern level rises when movement is spreading, damaging joints, paired with moisture, causing trip hazards, cracking tile, affecting stairs, or making the floor feel unsafe."
+        ],
+        bullets: [
+          "Cosmetic: light seam visibility, small seasonal gaps, or general floating-floor sound with no damage.",
+          "Installation: clicking, lifting, peaking, or gaps near low spots, transitions, underlayment, long runs, or fixed objects.",
+          "Moisture: swelling, cupping, buckling, odor, adhesive release, wet subfloor, slab moisture, or recurring movement.",
+          "Structural concern: strong bounce, sagging, stair movement, cracked tile over framing, large soft areas, or movement that seems to come from joists or beams."
         ]
       },
       {
@@ -3027,35 +3048,42 @@ const guideDrafts: GuideDraft[] = [
         title: "What to check first",
         paragraphs: [
           "Identify the floor type and installation method first. Floating LVP, floating laminate, glue-down vinyl, nail-down hardwood, engineered hardwood, and tile react differently to the same room condition.",
-          "Then map where the movement happens. Movement near exterior doors, slabs, bathrooms, appliances, or sunny windows often points to different causes than movement in one traffic path or one long hallway."
+          "Then map where the movement happens. Movement near exterior doors, slabs, bathrooms, appliances, sunny windows, cabinets, or long hallways often points to different causes than movement in one traffic path."
         ],
         bullets: [
-          "Mark the exact locations of noise, gaps, lifting, peaking, or hollow sounds.",
-          "Check moisture sources, humidity, HVAC, direct sun, and recent weather changes.",
-          "Inspect transitions, baseboards, door jambs, cabinets, and islands for pinning.",
+          "Mark the exact locations of clicking, lifting, peaking, gaps, bounce, squeaks, or hollow sounds.",
+          "Check moisture sources, humidity, HVAC, direct sun, leaks, slab history, and recent weather changes.",
+          "Inspect transitions, baseboards, door jambs, cabinets, islands, and heavy fixed objects for pinning.",
           "Look for subfloor flatness or support problems near the symptom.",
-          "Review the product instructions before cutting, fastening, filling, or forcing repairs."
+          "Review the written product instructions before cutting, fastening, filling, or forcing repairs."
         ]
       },
       {
         id: "when-to-call-a-professional",
         title: "When to call a professional",
         paragraphs: [
-          "Call a professional if movement is spreading, paired with moisture, lifting large areas, damaging locking joints, affecting stairs, or returning after a repair.",
-          "Professional evaluation is especially important for concrete slabs, hardwood moisture problems, tile cracks, glue-down failures, and suspected structural movement."
+          "Call a flooring professional if movement is spreading, paired with moisture, lifting large areas, damaging locking joints, affecting transitions, or returning after a repair.",
+          "Call a qualified contractor or structural professional if the floor feels unsafe, sagging, strongly bouncy, connected to stairs or framing, or appears to involve joists, beams, or a large soft area."
+        ],
+        bullets: [
+          "Concrete slab movement, adhesive failure, slab moisture, and tile cracks need field evaluation.",
+          "Hardwood cupping, crowning, gapping, and engineered hardwood separation should be checked against moisture and jobsite conditions.",
+          "Floating floor repairs should not pin the floor unless the product system specifically allows it.",
+          "Manufacturer instructions and installer judgment should guide repair methods and material replacement."
         ]
       }
     ],
     example: [
       "A homeowner has LVP clicking in one hallway, a small peak near a transition, and a hollow sound in a nearby room. Those symptoms may share a cause, such as uneven subfloor support or restricted expansion, but each area should still be mapped separately.",
-      "The better next step is to check slab or subfloor flatness, transition fit, expansion gaps, and moisture conditions before replacing planks."
+      "The better next step is to check slab or subfloor flatness, transition fit, expansion gaps, and moisture conditions before replacing planks. If the floor also feels strongly bouncy or soft, the support below the finished floor should be evaluated."
     ],
     commonMistakes: [
       "Trying to repair the visible symptom without finding the movement source.",
       "Fastening through a floating floor to stop noise.",
       "Filling gaps before checking humidity or damaged joints.",
       "Cutting expansion relief without checking moisture and product rules.",
-      "Assuming all movement is normal seasonal behavior."
+      "Assuming all movement is normal seasonal behavior.",
+      "Treating a possible framing or soft-subfloor concern as a plank replacement problem."
     ],
     faq: [
       {
@@ -3072,6 +3100,21 @@ const guideDrafts: GuideDraft[] = [
         question: "Why does my floor move when I walk on it?",
         answer:
           "Movement under foot can point to a floating floor over a low spot, soft underlayment, loose subfloor panels, hollow tile, adhesive release, or framing movement."
+      },
+      {
+        question: "What flooring movement should I check first?",
+        answer:
+          "Check movement that is spreading, paired with moisture, opening joints, lifting planks, cracking tile, creating trip hazards, or making the floor feel soft, bouncy, or unsafe."
+      },
+      {
+        question: "Can expansion problems make floors move?",
+        answer:
+          "Yes. Floating floors need the expansion space and movement breaks required by the product. Blocked expansion can contribute to peaking, buckling, lifting, or transition pressure."
+      },
+      {
+        question: "Can subfloor flatness cause clicking or separation?",
+        answer:
+          "Yes. Low spots, humps, weak patching, or soft underlayment can let floating floor joints flex, click, separate, or become damaged."
       },
       {
         question: "Can moisture cause floors to move?",

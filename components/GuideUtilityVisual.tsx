@@ -132,17 +132,43 @@ function ConcreteSlabHubVisual() {
 }
 
 function MovementProblemsVisual() {
+  const mapSteps = [
+    ["Movement Problem", "Start with what you see or hear."],
+    ["Moisture", "Swelling, cupping, odor, adhesive release."],
+    ["Expansion", "Peaking, buckling, lifting, transition pressure."],
+    ["Flatness", "Clicking, hollow sound, repeated joint stress."],
+    ["Structure", "Strong bounce, sagging, stair or framing concerns."]
+  ];
   const rows = [
-    ["Clicking or squeaking", "Low spots, underlayment, subfloor movement", "Check support and nearby transitions"],
-    ["Separating or gapping", "Humidity, joint damage, or blocked movement", "Check moisture, expansion, and locking edges"],
-    ["Buckling or peaking", "Expansion pressure or fixed objects", "Check walls, cabinets, islands, and long runs"],
-    ["Cupping or crowning", "Moisture imbalance or unstable conditions", "Check humidity, slab, crawlspace, and leaks"]
+    ["Clicking", "Low spots, locking stress, or soft underlayment", "LVP, laminate, floating floors", "Needs inspection", "LVP clicking"],
+    ["Lifting", "Expansion pressure, moisture, bond release, or uneven substrate", "LVP, glue-down vinyl, transitions", "Needs inspection", "LVP lifting"],
+    ["Peaking", "Blocked expansion, fixed objects, long runs, heat, or moisture", "LVP, laminate", "Needs inspection", "LVP peaking"],
+    ["Buckling", "Moisture, missing expansion space, heavy fixed objects, or wrong underlayment", "LVP, laminate", "Possible moisture issue", "LVP buckling"],
+    ["Separating", "Joint stress, humidity movement, low spots, or damaged edges", "LVP, laminate, engineered hardwood", "Needs inspection", "Laminate separation"],
+    ["Gapping", "Seasonal humidity, acclimation, or moisture imbalance", "Hardwood, engineered hardwood", "Monitor or inspect", "Hardwood gapping"],
+    ["Squeaking", "Subfloor panel movement, fasteners, framing, or seasonal wood movement", "Wood subfloors, hardwood, laminate", "Inspect if spreading", "Floor squeaking"],
+    ["Bouncing", "Underlayment compression, loose panels, joist movement, or framing concerns", "Floating floors, wood subfloors, tile over framing", "Possible structural concern", "Floor bouncing"],
+    ["Hollow sounds", "Floating floor sound, low spots, adhesive release, or mortar coverage", "Floating floors, tile, glue-down flooring", "Inspect if localized", "Hollow sound"]
   ];
 
   return (
     <div className="grid gap-3">
-      <ExpansionGapDiagram />
-      <ComparisonTable columns={["Symptom", "Likely direction", "First check"]} rows={rows} />
+      <div className="rounded-md border border-line bg-white p-3" aria-label="Movement problem cause map">
+        <p className="text-xs font-bold uppercase tracking-wide text-accent-700">Movement cause map</p>
+        <div className="mt-3 grid gap-2 sm:grid-cols-5">
+          {mapSteps.map(([label, note], index) => (
+            <div key={label} className="min-w-0 rounded-md border border-line bg-field p-2.5">
+              <p className="text-[0.68rem] font-bold uppercase tracking-wide text-accent-700">Step {index + 1}</p>
+              <p className="mt-1 text-sm font-black leading-5 text-ink">{label}</p>
+              <p className="mt-1 text-xs leading-4 text-slate-600">{note}</p>
+            </div>
+          ))}
+        </div>
+        <p className="mt-3 text-xs leading-5 text-slate-600">
+          Visual example only. Final layout depends on product requirements, field conditions, and installer judgment.
+        </p>
+      </div>
+      <ComparisonTable columns={["Symptom", "Likely cause", "Flooring types", "Urgency", "Related guide"]} rows={rows} />
     </div>
   );
 }

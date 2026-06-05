@@ -444,8 +444,15 @@ const targetedNextStepTargets: Partial<
       { type: "guide", slug: "why-do-floors-expand-and-contract" },
       { type: "guide", slug: "seasonal-flooring-movement" },
       { type: "guide", slug: "why-is-my-lvp-floor-clicking" },
+      { type: "guide", slug: "why-is-my-lvp-lifting" },
+      { type: "guide", slug: "why-is-my-lvp-floor-peaking" },
+      { type: "guide", slug: "why-is-my-lvp-floor-buckling" },
       { type: "guide", slug: "why-is-my-laminate-floor-separating" },
-      { type: "guide", slug: "why-is-my-hardwood-floor-cupping" },
+      { type: "guide", slug: "why-is-my-engineered-hardwood-separating" },
+      { type: "guide", slug: "why-is-my-floor-bouncing" },
+      { type: "guide", slug: "why-is-my-floor-squeaking" },
+      { type: "guide", slug: "why-does-my-floor-feel-hollow" },
+      { type: "guide", slug: "flooring-moisture-problems" },
       { type: "tool", slug: "transition-estimator" }
     ]
   },
