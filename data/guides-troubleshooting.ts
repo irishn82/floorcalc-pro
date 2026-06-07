@@ -213,9 +213,9 @@ export const troubleshootingGuides: Guide[] = [
     title: "Why Is My LVP Lifting?",
     description:
       "Troubleshoot LVP lifting by checking subfloor flatness, moisture, glue-down adhesive, floating floor movement, cabinets, expansion gaps, and acclimation.",
-    metadataTitle: "Why Is My LVP Lifting? Floating and Glue-Down Causes",
+    metadataTitle: "Why Is My LVP Lifting? Causes, Checks, and Repair Clues",
     metadataDescription:
-      "Learn why LVP lifts, curls, pops, or releases and what to check first with moisture, subfloors, adhesive, expansion gaps, cabinets, and acclimation.",
+      "Learn why LVP lifts, curls, pops, or releases and what to check first for floating floors, glue-down floors, moisture, subfloors, and expansion pressure.",
     dateModified: "2026-05-24",
     readTime: "9 min read",
     primaryEcosystem: "lvp",
@@ -225,8 +225,11 @@ export const troubleshootingGuides: Guide[] = [
     relatedTools: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"],
     relatedGuides: [
       "flooring-movement-problems",
+      "flooring-separation-problems",
       "flooring-moisture-problems",
       "why-is-my-lvp-floor-separating",
+      "why-is-my-lvp-floor-peaking",
+      "why-is-my-lvp-floor-buckling",
       "can-you-install-cabinets-over-floating-lvp",
       "how-long-should-lvp-acclimate",
       "subfloor-flatness-requirements-lvp",
@@ -257,6 +260,20 @@ export const troubleshootingGuides: Guide[] = [
         ]
       },
       {
+        id: "what-this-usually-means",
+        title: "What LVP lifting usually means",
+        paragraphs: [
+          "Lifting means the flooring is no longer staying seated where it should. On floating LVP, that usually points to pressure, damaged locking joints, subfloor movement, or the floor being pinned. On glue-down LVP, it often points to bond, slab prep, adhesive, moisture, or contamination.",
+          "The visible lifted plank is only the starting clue. If the same area also clicks, peaks, separates, or feels hollow, treat it as a movement-system problem rather than a single loose plank."
+        ],
+        bullets: [
+          "Lifting near a wall or cabinet: check expansion and fixed objects.",
+          "Lifting near a slab crack or exterior door: check moisture and substrate prep.",
+          "Lifting in the middle of a room: check flatness, locking joints, adhesive, or underlayment.",
+          "Lifting with visible seams: compare with the LVP separation and movement hubs."
+        ]
+      },
+      {
         id: "what-to-check-first",
         title: "What to check first",
         paragraphs: [
@@ -269,6 +286,19 @@ export const troubleshootingGuides: Guide[] = [
           "Inspect transitions, walls, cabinets, islands, and door jambs for tight spots.",
           "Look for subfloor humps or dips near the lifted area.",
           "Review acclimation and room temperature requirements for the product."
+        ]
+      },
+      {
+        id: "when-to-worry",
+        title: "When to worry about LVP lifting",
+        paragraphs: [
+          "Worry more when lifting is spreading, showing up in multiple rooms, paired with swelling or musty odor, or appearing soon after installation. Those patterns can point to moisture, pressure, adhesive release, or product-system problems.",
+          "If the floor is over concrete, review slab moisture and surface prep before repair. If it is a floating floor under cabinets or an island, confirm whether the product allows that detail before adding weight or adhesive."
+        ],
+        bullets: [
+          "Use the moisture hub if lifting follows water exposure, slab concerns, or odor.",
+          "Use the movement hub if lifting appears with clicking, peaking, or buckling.",
+          "Use the transition estimator if lifting is concentrated near doorways or trim breaks."
         ]
       },
       {
@@ -308,6 +338,21 @@ export const troubleshootingGuides: Guide[] = [
         question: "Does acclimation affect LVP lifting?",
         answer:
           "It can. Installing material before room and product conditions are stable can contribute to movement."
+      },
+      {
+        question: "Why is my floating LVP lifting near cabinets?",
+        answer:
+          "A floating floor may lift when cabinets, islands, tight trim, or fixed objects trap it and restrict movement. Check the product instructions before fastening or gluing the area."
+      },
+      {
+        question: "Why is glue-down LVP lifting from concrete?",
+        answer:
+          "Glue-down LVP can lift when slab moisture, surface contamination, adhesive compatibility, open time, pH, or slab preparation does not meet the adhesive and flooring requirements."
+      },
+      {
+        question: "Can LVP lifting be a moisture problem?",
+        answer:
+          "Yes. Moisture can affect adhesive, subfloor conditions, underlayment, and the room environment. Rule out moisture before making a cosmetic repair."
       }
     ],
     disclaimer: troubleshootingDisclaimer

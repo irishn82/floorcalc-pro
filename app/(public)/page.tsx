@@ -214,11 +214,29 @@ export default function HomePage() {
             ))}
           </div>
           <div className="mt-5 rounded-xl border border-white/10 bg-white/[0.05] p-4 text-sm leading-6 text-slate-300">
-            Not sure which symptom matches your floor?{" "}
-            <Link href="/guides/troubleshooting" className="font-bold text-accent-300 hover:text-accent-200">
-              Open troubleshooting guides
-            </Link>
-            .
+            <p>
+              Not sure which symptom matches your floor? Start with the{" "}
+              <Link href="/diagnose" className="font-bold text-accent-300 hover:text-accent-200">
+                Problem Finder
+              </Link>
+              {" "}or browse the main problem hubs.
+            </p>
+            <div className="mt-3 flex flex-wrap gap-2">
+              {[
+                { href: "/guides/flooring-movement-problems", label: "Movement" },
+                { href: "/guides/flooring-moisture-problems", label: "Moisture" },
+                { href: "/guides/concrete-floor-problems", label: "Concrete" },
+                { href: "/guides/troubleshooting", label: "All troubleshooting" }
+              ].map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="rounded-lg border border-white/10 bg-white/[0.04] px-3 py-1.5 text-xs font-bold text-slate-200 transition hover:border-accent-300/40 hover:text-accent-200"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
           </div>
         </Container>
       </section>

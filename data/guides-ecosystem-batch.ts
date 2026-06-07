@@ -178,9 +178,9 @@ const guideDrafts: GuideDraft[] = [
     title: "Can You Install LVP Over Concrete?",
     description:
       "A practical guide to installing luxury vinyl plank over concrete slabs, including moisture, flatness, cracks, and vapor barrier planning.",
-    metadataTitle: "Can You Install LVP Over Concrete? Slab Prep and Moisture Guide",
+    metadataTitle: "Can You Install LVP Over Concrete? Moisture and Slab Prep",
     metadataDescription:
-      "Learn when LVP can go over concrete, what to check first, and how moisture, flatness, cracks, and vapor barriers affect the project.",
+      "Learn when LVP can go over concrete, what slab moisture, flatness, cracks, vapor barriers, and expansion details to check first.",
     dateModified: "2026-05-30",
     readTime: "9 min read",
     primaryEcosystem: "lvp",
@@ -190,6 +190,8 @@ const guideDrafts: GuideDraft[] = [
     relatedTools: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"],
     relatedGuides: [
       "best-underlayment-for-lvp",
+      "concrete-floor-problems",
+      "flooring-moisture-problems",
       "concrete-slab-flooring-guide",
       "how-to-test-concrete-moisture",
       "can-moisture-come-through-concrete",
@@ -225,6 +227,20 @@ const guideDrafts: GuideDraft[] = [
           "Use a straightedge to look for humps and low spots.",
           "Repair unstable cracks or loose patching before flooring.",
           "Confirm the slab meets the product's flatness tolerance."
+        ]
+      },
+      {
+        id: "what-this-usually-means",
+        title: "What this usually means for the project",
+        paragraphs: [
+          "A concrete slab can be a good base for LVP, but it shifts the project from simple square footage to jobsite-condition planning. The main question is not only whether vinyl plank can sit on concrete. It is whether this slab meets the exact flooring, underlayment, adhesive, and vapor-control requirements.",
+          "If the slab has moisture history, cracks, coatings, drain slopes, or old adhesive, build time into the project for testing and prep. Those issues are easier to address before material is ordered than after a floating floor starts clicking or a glue-down floor releases."
+        ],
+        bullets: [
+          "Concrete approval depends on the exact LVP product, not only the material category.",
+          "Moisture testing may be needed even when the slab looks dry.",
+          "Flatness problems can create movement, visible seams, clicking, or separation.",
+          "Transitions and finished height should be planned before the first row is installed."
         ]
       },
       {
@@ -277,6 +293,19 @@ const guideDrafts: GuideDraft[] = [
           "Direct sunlight and exterior doors can increase temperature and moisture stress.",
           "Cabinets and islands should be checked against floating-floor restrictions."
         ]
+      },
+      {
+        id: "when-to-worry",
+        title: "When to worry before installing LVP on concrete",
+        paragraphs: [
+          "Slow down when concrete has musty odor, visible dampness, efflorescence, old adhesive residue, dusty patching, wide cracks, height displacement, or a history of previous floor failure. These are not automatic deal-breakers, but they are signs the slab should be evaluated before flooring goes down.",
+          "Also be cautious when installing through long connected rooms, over direct-sun areas, under fixed cabinets, or in basements. Those details can combine with slab conditions and make movement problems more likely."
+        ],
+        bullets: [
+          "Use the concrete moisture testing guide before relying on appearance.",
+          "Use the concrete floor problems hub if a previous floor failed over the slab.",
+          "Use the movement hub if the existing or planned floor has clicking, lifting, peaking, or separation risk."
+        ]
       }
     ],
     example: [
@@ -325,6 +354,16 @@ const guideDrafts: GuideDraft[] = [
         question: "What should I do if LVP over concrete starts buckling?",
         answer:
           "Check expansion space, transitions, fixed cabinets, direct sun, moisture, and slab flatness before forcing the floor flat. Buckling is usually a pressure or movement symptom."
+      },
+      {
+        question: "Can LVP over concrete fail even if the slab looks dry?",
+        answer:
+          "Yes. A slab can look dry while still having moisture vapor, old coatings, contaminants, or flatness issues that affect the flooring system. Use the test method and preparation requirements listed by the product."
+      },
+      {
+        question: "What is the first thing to check before buying LVP for a slab?",
+        answer:
+          "Check the product instructions for concrete approval, moisture testing, vapor barrier or underlayment requirements, flatness tolerance, and whether the product is floating, glue-down, or both."
       }
     ],
     disclaimer: manufacturerDisclaimer
@@ -425,9 +464,9 @@ const guideDrafts: GuideDraft[] = [
     title: "Why Is My LVP Floor Clicking?",
     description:
       "Troubleshoot common causes of LVP clicking, including uneven subfloors, locking joint stress, underlayment problems, and expansion issues.",
-    metadataTitle: "Why Is My LVP Floor Clicking? Common Causes and Fixes",
+    metadataTitle: "Why Is My LVP Floor Clicking? Causes, Checks, and When to Worry",
     metadataDescription:
-      "Learn why LVP floors click, pop, or move underfoot and what subfloor, underlayment, locking joint, and expansion issues to check.",
+      "LVP floor clicking often points to movement, low spots, locking stress, or underlayment issues. Learn what to check next and when to call an installer.",
     readTime: "9 min read",
     primaryEcosystem: "lvp",
     secondaryEcosystems: ["lvt"],
@@ -436,6 +475,7 @@ const guideDrafts: GuideDraft[] = [
     relatedTools: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"],
     relatedGuides: [
       "flooring-movement-problems",
+      "flooring-separation-problems",
       "flooring-moisture-problems",
       "why-is-my-lvp-floor-buckling",
       "why-are-my-lvp-seams-showing",
@@ -453,6 +493,20 @@ const guideDrafts: GuideDraft[] = [
       "The sound is a symptom, not the actual diagnosis. The fix depends on whether the floor is moving because of the subfloor, the installation, the product assembly, or the room conditions."
     ],
     keySections: [
+      {
+        id: "what-this-usually-means",
+        title: "What LVP clicking usually means",
+        paragraphs: [
+          "A click is usually a movement clue. The floor may be flexing over a low spot, a locking joint may be stressed, trim may be pinning the floor, or the underlayment may be allowing too much compression.",
+          "A single light sound may be minor, but a repeatable click in the same step path deserves attention because it can turn into separation, visible seams, lifting, or damaged locking edges."
+        ],
+        bullets: [
+          "Clicking with a hollow feel: check support and subfloor flatness first.",
+          "Clicking with a visible gap: compare with the LVP separation guide.",
+          "Clicking near cabinets, islands, or transitions: check whether the floating floor is pinned.",
+          "Clicking after water exposure: check moisture and slab or subfloor conditions before repair."
+        ]
+      },
       {
         id: "subfloor-movement",
         title: "Uneven subfloors are a common cause",
@@ -481,6 +535,33 @@ const guideDrafts: GuideDraft[] = [
         paragraphs: [
           "Floating floors need room to move. If trim, door jambs, heavy built-ins, cabinets, or islands trap the floor, pressure can show up as noise, peaking, separation, or movement elsewhere.",
           "The same idea applies at transitions. A trim piece should cover the expansion space without pinning the floating floor unless the product system specifically allows that installation."
+        ]
+      },
+      {
+        id: "what-to-check-next",
+        title: "What to check next",
+        paragraphs: [
+          "After you identify the sound location, look for the next clue. A clicking floor with no visible gap is usually a movement or support check. A clicking floor with a visible seam, raised edge, or lifted plank should be treated as a separation or pressure problem.",
+          "If the clicking appeared after a leak, basement humidity change, direct sunlight exposure, or a new island/cabinet installation, check moisture and expansion restrictions before replacing planks."
+        ],
+        bullets: [
+          "Clicking plus a gap: open the flooring separation hub.",
+          "Clicking plus swelling or odor: open the flooring moisture hub.",
+          "Clicking over concrete: review the LVP-over-concrete and concrete moisture guides.",
+          "Clicking near a doorway: check transitions, trim, and expansion space."
+        ]
+      },
+      {
+        id: "when-to-worry",
+        title: "When to worry about LVP clicking",
+        paragraphs: [
+          "Worry more when the clicking is getting louder, spreading across a room, paired with gaps, peaking, lifting, swelling, or a soft/bouncy feel. Those symptoms suggest the issue is not only sound.",
+          "If the floor is over concrete, check the concrete and moisture pathway too. Slab flatness, moisture, old adhesive ridges, or incompatible underlayment can all show up as clicking in a floating LVP floor."
+        ],
+        bullets: [
+          "Open the movement hub when the floor has more than one movement symptom.",
+          "Open the moisture hub when clicking appears with swelling, odor, or slab concerns.",
+          "Use the transition estimator if the clicking is near doorway trim or expansion breaks."
         ]
       }
     ],
@@ -515,6 +596,26 @@ const guideDrafts: GuideDraft[] = [
         question: "Should I keep walking on a clicking LVP floor?",
         answer:
           "If the sound is localized or getting worse, investigate it. Continued movement can make a small installation issue harder to repair."
+      },
+      {
+        question: "Why does my LVP click only in one spot?",
+        answer:
+          "A one-spot click often points to a local low spot, hump, debris, damaged locking joint, or transition pressure. Mark the spot and check whether the joint also moves, gaps, or sounds hollow."
+      },
+      {
+        question: "Can concrete under LVP cause clicking?",
+        answer:
+          "Yes. Concrete low spots, old adhesive ridges, loose patching, or moisture-related underlayment problems can let a floating LVP floor flex and click."
+      },
+      {
+        question: "Can LVP clicking turn into separation?",
+        answer:
+          "It can if the clicking comes from repeated joint flexing, damaged locks, or a subfloor low spot. A sound by itself may not mean failure, but clicking paired with gaps or seam movement should be checked."
+      },
+      {
+        question: "When should I worry about an LVP click?",
+        answer:
+          "Worry more when the click is repeatable, spreading, paired with lifting, peaking, swelling, visible seams, or a soft feel. Those signs suggest movement or moisture may be stressing the floor."
       }
     ],
     disclaimer: manufacturerDisclaimer
@@ -796,9 +897,9 @@ const guideDrafts: GuideDraft[] = [
     title: "Why Is My Laminate Floor Separating?",
     description:
       "Troubleshoot laminate flooring gaps and separation caused by subfloor movement, humidity, damaged locking joints, and installation details.",
-    metadataTitle: "Why Is My Laminate Floor Separating? Gaps and Joint Problems",
+    metadataTitle: "Why Is My Laminate Floor Separating? Causes and Checks",
     metadataDescription:
-      "Learn common causes of laminate floor separation, including subfloor flatness, moisture, locking damage, expansion gaps, and acclimation.",
+      "Learn why laminate floor gaps keep opening, what to check first, and how subfloor flatness, moisture, locking damage, and expansion issues matter.",
     dateModified: "2026-05-30",
     readTime: "9 min read",
     primaryEcosystem: "laminate",
@@ -807,6 +908,7 @@ const guideDrafts: GuideDraft[] = [
     relatedTools: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"],
     relatedGuides: [
       "flooring-movement-problems",
+      "flooring-separation-problems",
       "flooring-moisture-problems",
       "laminate-floor-separating-what-to-check-first",
       "why-is-my-laminate-floor-buckling",
@@ -866,6 +968,21 @@ const guideDrafts: GuideDraft[] = [
         ]
       },
       {
+        id: "symptom-comparisons",
+        title: "Symptom comparisons: gap, buckle, click, or swell",
+        paragraphs: [
+          "A laminate gap by itself can be a joint or movement issue. A gap with another symptom gives a better clue. Clicking often points to support or locking stress. Buckling points toward pressure or moisture. Swollen edges point toward water exposure or humidity beyond the product limits.",
+          "Compare the visible symptom with where it appears. Doorways, hallways, kitchens, exterior doors, and long connected rooms often reveal expansion, moisture, and support problems before the rest of the floor."
+        ],
+        bullets: [
+          "Gap plus clicking: check subfloor support and locking stress.",
+          "Gap plus buckling: check expansion space, fixed objects, and moisture.",
+          "Gap plus swollen edges: check water exposure and room humidity.",
+          "Gap plus hollow sound: check underlayment, low spots, or loose support.",
+          "Gap that changes seasonally: monitor humidity and acclimation conditions."
+        ]
+      },
+      {
         id: "check-before-repair",
         title: "What to check before trying a repair",
         paragraphs: [
@@ -921,6 +1038,20 @@ const guideDrafts: GuideDraft[] = [
         paragraphs: [
           "Call an installer if gaps keep returning, the floor is lifting, joints look broken, moisture is suspected, or the separation runs through a large connected area.",
           "A professional can check whether repair means closing a gap, replacing damaged planks, correcting a low spot, changing a transition, or lifting part of the floor."
+        ]
+      },
+      {
+        id: "what-to-check-next",
+        title: "What to check next after finding the gap",
+        paragraphs: [
+          "After the gap is mapped, choose the next guide based on the strongest clue. If the floor also moves or clicks, use the movement hub. If the edges look swollen or the room had a leak, use the moisture hub. If multiple materials or doorways are involved, use the transition guidance before forcing joints closed.",
+          "A simple tap-back can make sense only when the locking edges are intact and the cause has been addressed. Otherwise the gap often returns."
+        ],
+        bullets: [
+          "Movement clue: review flooring movement problems.",
+          "Moisture clue: review flooring moisture problems.",
+          "Transition clue: review transition strip movement and expansion space.",
+          "Planning clue: use the installation checklist before reinstalling rows."
         ]
       }
     ],
@@ -985,6 +1116,21 @@ const guideDrafts: GuideDraft[] = [
         question: "Is laminate separation covered by warranty?",
         answer:
           "Warranty decisions depend on the product, documentation, installation requirements, moisture exposure, and site conditions. This guide cannot determine coverage; keep installation records and contact the retailer or manufacturer."
+      },
+      {
+        question: "What does laminate separation usually mean?",
+        answer:
+          "It usually means the floor is moving, unsupported, restricted, wet, or damaged at the joint. The exact cause depends on the gap pattern, flooring age, room conditions, and installation details."
+      },
+      {
+        question: "When should I worry about laminate gaps?",
+        answer:
+          "Worry more when gaps spread, reopen after repair, appear with swelling, buckling, clicking, hollow sound, or moisture history, or affect a large connected area."
+      },
+      {
+        question: "What should I check next after finding a laminate gap?",
+        answer:
+          "Check expansion space, nearby transitions, fixed objects, subfloor support, moisture clues, and whether the locking edge is intact. Then choose the related troubleshooting guide that matches the strongest clue."
       }
     ],
     disclaimer: manufacturerDisclaimer
@@ -1459,6 +1605,7 @@ const guideDrafts: GuideDraft[] = [
     relatedTools: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"],
     relatedGuides: [
       "flooring-moisture-problems",
+      "concrete-floor-problems",
       "concrete-slab-flooring-guide",
       "how-to-test-concrete-moisture",
       "can-moisture-come-through-concrete",
@@ -2018,15 +2165,16 @@ const guideDrafts: GuideDraft[] = [
     title: "What Is Pattern Match in Carpet?",
     description:
       "Understand carpet pattern match, repeat length and width, seam planning, bow and skew, extra material, and installer layout decisions.",
-    metadataTitle: "What Is Pattern Match in Carpet? Repeat and Seam Planning Guide",
+    metadataTitle: "What Is Pattern Match in Carpet? Repeat, Waste, and Seams",
     metadataDescription:
-      "Learn how carpet pattern match works, why repeat size matters, and how patterned carpet can affect waste, seams, and layout planning.",
+      "Learn how carpet pattern match works, why repeat size matters, and how patterned carpet affects waste, seams, roll drops, and layout planning.",
     readTime: "9 min read",
     primaryEcosystem: "carpet-padding",
     materialTypes: ["carpet"],
     topicCluster: "layout",
     relatedTools: ["pattern-repeat-calculator", "carpet-seam-planner", "flooring-square-footage-calculator"],
     relatedGuides: [
+      "why-are-my-carpet-seams-visible",
       "carpet-seam-direction-guide",
       "what-direction-should-carpet-run",
       "how-much-extra-carpet-should-i-order",
@@ -2043,6 +2191,20 @@ const guideDrafts: GuideDraft[] = [
         paragraphs: [
           "A carpet pattern repeats at set intervals along the roll and sometimes across the width. A larger repeat usually creates more waste because pieces must be aligned to the pattern instead of cut only to room size.",
           "Pattern repeat should be considered before ordering. Square footage alone can underestimate material for patterned carpet."
+        ]
+      },
+      {
+        id: "what-this-usually-means",
+        title: "What pattern match usually means for ordering",
+        paragraphs: [
+          "Pattern match means the material estimate is no longer only room square footage. The installer may need extra length or width to align repeats at seams, doorways, stairs, and connected rooms.",
+          "A small repeat may add only modest waste in a simple room. A large repeat, strong directional design, hallway, stair run, or multiple drops can require more planning and more material."
+        ],
+        bullets: [
+          "Large repeat: expect more waste than a plain carpet.",
+          "Multiple drops: seam layout and pattern alignment matter together.",
+          "Stairs or hallways: direction and match can affect both appearance and material.",
+          "Visible seams: compare with the seam visibility and seam direction guides."
         ]
       },
       {
@@ -2065,6 +2227,19 @@ const guideDrafts: GuideDraft[] = [
         paragraphs: [
           "Patterned carpet on stairs can be beautiful but requires careful alignment. Hallways and connected rooms may need extra material to keep pattern direction consistent.",
           "If exact pattern alignment is critical, discuss expectations before ordering and installation."
+        ]
+      },
+      {
+        id: "what-to-check-next",
+        title: "What to check next",
+        paragraphs: [
+          "Before ordering patterned carpet, collect the pattern repeat length, repeat width if listed, roll width, room dimensions, and any stair or hallway details. Then use the calculator only as a planning check before the installer finalizes the layout.",
+          "If the concern is an existing carpet seam, look at light direction, pile direction, roll width, pattern match, and traffic path before assuming the seam was placed incorrectly."
+        ],
+        bullets: [
+          "Use the Pattern Repeat Calculator for a first material estimate.",
+          "Use the Carpet Seam Planner to understand roll drops and seam likelihood.",
+          "Read the visible carpet seams guide if the issue is appearance after installation."
         ]
       }
     ],
@@ -2099,6 +2274,21 @@ const guideDrafts: GuideDraft[] = [
         question: "Should I use a pattern repeat calculator for carpet?",
         answer:
           "Yes for planning, especially before comparing material amounts. Final ordering should be verified by the installer."
+      },
+      {
+        question: "Why does patterned carpet need extra material?",
+        answer:
+          "Extra material may be needed so separate drops can be shifted and trimmed until the pattern lines up. The amount depends on repeat size, roll width, room layout, and installer layout."
+      },
+      {
+        question: "Can pattern match make carpet seams more visible?",
+        answer:
+          "It can if the pattern, pile direction, lighting, or product tolerances make alignment difficult. Some seams can still be visible even with careful planning."
+      },
+      {
+        question: "What should I check before buying patterned carpet?",
+        answer:
+          "Ask for the repeat size, roll width, installation requirements, pattern-match expectations, and whether stairs or connected rooms require additional material."
       }
     ],
     disclaimer: manufacturerDisclaimer

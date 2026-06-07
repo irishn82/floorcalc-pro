@@ -25,15 +25,15 @@ export const authorityHubPathways: AuthorityHubPathway[] = [
       "Sort the likely cause into moisture, expansion pressure, subfloor flatness/support, or structure/framing before forcing joints closed or fastening anything down."
     ],
     symptomLookup: [
-      { label: "Clicking", guideSlug: "why-is-my-lvp-floor-clicking", note: "Use this when click-lock planks or floating floors make repeated clicks in a traffic path." },
-      { label: "Lifting", guideSlug: "why-is-my-lvp-lifting", note: "Use this when plank edges, glue-down areas, or transitions are no longer staying seated." },
-      { label: "Peaking", guideSlug: "why-is-my-lvp-floor-peaking", note: "Use this when raised seams suggest expansion pressure, fixed objects, or moisture." },
-      { label: "Buckling", guideSlug: "why-is-my-lvp-floor-buckling", note: "Use this when floating flooring is pushed upward or trapped under pressure." },
-      { label: "Laminate separating", guideSlug: "why-is-my-laminate-floor-separating", note: "Use this when laminate joints keep opening or returning after repair." },
-      { label: "Engineered hardwood separating", guideSlug: "why-is-my-engineered-hardwood-separating", note: "Use this when engineered wood gaps may involve humidity, concrete, adhesive, or acclimation." },
-      { label: "Squeaking", guideSlug: "why-is-my-floor-squeaking", note: "Use this when movement may be coming from subfloor panels, fasteners, framing, or seasonal wood behavior." },
-      { label: "Bouncing", guideSlug: "why-is-my-floor-bouncing", note: "Use this when the floor feels springy, soft, or unsupported under foot." },
-      { label: "Hollow sound", guideSlug: "why-does-my-floor-feel-hollow", note: "Use this when a floor sounds unsupported, loose, hollow, or different in one area." }
+      { label: "Clicking", guideSlug: "why-is-my-lvp-floor-clicking", note: "Likely cause: low spots, locking stress, soft underlayment, or pinned floating floor. Urgency: inspect if repeated. Next step: check support and movement." },
+      { label: "Lifting", guideSlug: "why-is-my-lvp-lifting", note: "Likely cause: pressure, moisture, adhesive release, or unsupported edges. Urgency: inspect before forcing flat. Next step: identify floating vs glue-down." },
+      { label: "Peaking", guideSlug: "why-is-my-lvp-floor-peaking", note: "Likely cause: expansion pressure, fixed objects, heat, or moisture. Urgency: medium to high if spreading. Next step: check gaps and pinning." },
+      { label: "Buckling", guideSlug: "why-is-my-lvp-floor-buckling", note: "Likely cause: blocked movement, moisture, long runs, or heavy fixed objects. Urgency: high if raised or tripping. Next step: relieve the cause, not just the ridge." },
+      { label: "Laminate separating", guideSlug: "why-is-my-laminate-floor-separating", note: "Likely cause: unsupported joints, humidity swings, damaged locks, or expansion problems. Urgency: inspect if recurring. Next step: map the gap pattern." },
+      { label: "Engineered hardwood separating", guideSlug: "why-is-my-engineered-hardwood-separating", note: "Likely cause: humidity, concrete moisture, adhesive bond, flatness, or acclimation. Urgency: inspect if widening. Next step: check installation method and moisture." },
+      { label: "Squeaking", guideSlug: "why-is-my-floor-squeaking", note: "Likely cause: subfloor movement, fasteners, framing, or seasonal wood movement. Urgency: inspect if spreading. Next step: locate the movement layer." },
+      { label: "Bouncing", guideSlug: "why-is-my-floor-bouncing", note: "Likely cause: underlayment compression, loose panels, joist movement, or weak support. Urgency: higher if soft or unsafe. Next step: check structure/support." },
+      { label: "Hollow sound", guideSlug: "why-does-my-floor-feel-hollow", note: "Likely cause: floating floor sound, low spots, adhesive release, mortar coverage, or slab prep. Urgency: inspect if localized. Next step: compare sound with movement." }
     ],
     calculators: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"],
     checklists: ["lvp-installation-checklist", "laminate-installation-checklist", "engineered-hardwood-installation-checklist", "tile-installation-checklist"],
@@ -58,13 +58,13 @@ export const authorityHubPathways: AuthorityHubPathway[] = [
       "Check expansion space, subfloor support, humidity, transitions, and fixed objects before forcing joints closed."
     ],
     symptomLookup: [
-      { label: "Clicking", guideSlug: "why-is-my-floor-clicking", note: "Clicks often overlap with low spots, joint stress, and separation." },
-      { label: "Separating", guideSlug: "why-are-my-flooring-joints-opening", note: "Start here for open joints across several floor types." },
-      { label: "Laminate gaps", guideSlug: "why-is-my-laminate-floor-separating", note: "Use this when laminate seams or end joints keep opening." },
-      { label: "LVP gaps", guideSlug: "why-is-my-lvp-floor-separating", note: "Use this when vinyl plank joints reopen or show locking stress." },
-      { label: "Engineered hardwood gaps", guideSlug: "why-is-my-engineered-hardwood-separating", note: "Use this when wood movement, slab moisture, or bond issues may be involved." },
-      { label: "Buckling or peaking", guideSlug: "why-is-my-lvp-floor-peaking", note: "Raised ridges often point to pressure, fixed objects, or moisture." },
-      { label: "Bouncy or springy floor", guideSlug: "are-bouncy-floors-dangerous", note: "Use this when movement feels concerning or may involve subfloor support." }
+      { label: "Clicking", guideSlug: "why-is-my-floor-clicking", note: "Likely cause: joint stress, low spots, or movement before gaps appear. Urgency: inspect if repeated. Next step: check support near the sound." },
+      { label: "Separating", guideSlug: "why-are-my-flooring-joints-opening", note: "Likely cause: material movement, damaged joints, humidity, or blocked expansion. Urgency: inspect if recurring. Next step: identify floor type." },
+      { label: "Laminate gaps", guideSlug: "why-is-my-laminate-floor-separating", note: "Likely cause: humidity swings, low spots, damaged locks, or pinned floating floor. Urgency: inspect if gaps return. Next step: map hallway and doorway gaps." },
+      { label: "LVP gaps", guideSlug: "why-is-my-lvp-floor-separating", note: "Likely cause: locking stress, expansion pressure, debris, or uneven substrate. Urgency: inspect before tapping. Next step: check flatness and movement." },
+      { label: "Engineered hardwood gaps", guideSlug: "why-is-my-engineered-hardwood-separating", note: "Likely cause: humidity, concrete moisture, poor acclimation, or adhesive issues. Urgency: inspect if widening. Next step: review moisture records." },
+      { label: "Buckling or peaking", guideSlug: "why-is-my-lvp-floor-peaking", note: "Likely cause: blocked expansion, fixed objects, long runs, or moisture. Urgency: high if raised. Next step: check pressure points first." },
+      { label: "Bouncy or springy floor", guideSlug: "are-bouncy-floors-dangerous", note: "Likely cause: support movement, loose panels, or framing. Urgency: higher if soft or spreading. Next step: rule out structural concerns." }
     ],
     calculators: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"],
     checklists: ["lvp-installation-checklist", "laminate-installation-checklist", "engineered-hardwood-installation-checklist"],
@@ -84,13 +84,13 @@ export const authorityHubPathways: AuthorityHubPathway[] = [
       "Compare moisture readings and room conditions to the exact flooring, adhesive, and underlayment requirements."
     ],
     symptomLookup: [
-      { label: "Swelling", guideSlug: "why-is-my-floor-swelling", note: "Raised or swollen flooring usually means moisture needs to be ruled out." },
-      { label: "Buckling", guideSlug: "why-is-my-laminate-floor-buckling", note: "Buckling can come from moisture, blocked expansion, or both." },
-      { label: "Wet subfloor", guideSlug: "why-is-my-subfloor-wet", note: "Start here when the substrate or layers below the floor may be damp." },
-      { label: "High humidity", guideSlug: "can-high-humidity-damage-flooring", note: "Use this when room conditions may be stressing the floor." },
-      { label: "Concrete moisture", guideSlug: "how-to-test-concrete-moisture", note: "Use this when flooring is over a slab or basement." },
-      { label: "Hardwood cupping", guideSlug: "why-is-my-hardwood-floor-cupping", note: "Cupping often points to a moisture imbalance." },
-      { label: "Moisture damage signs", guideSlug: "signs-of-moisture-damage-under-flooring", note: "Use this when odor, stains, or soft areas suggest hidden damage." }
+      { label: "Swelling", guideSlug: "why-is-my-floor-swelling", note: "Likely cause: moisture from above, below, or room humidity. Urgency: high if spreading. Next step: find the moisture source before repair." },
+      { label: "Buckling", guideSlug: "why-is-my-laminate-floor-buckling", note: "Likely cause: moisture, blocked expansion, or both. Urgency: high if raised or growing. Next step: check water, humidity, and gaps." },
+      { label: "Wet subfloor", guideSlug: "why-is-my-subfloor-wet", note: "Likely cause: leak, crawlspace, slab, condensation, or trapped moisture. Urgency: high. Next step: stop water and inspect below." },
+      { label: "High humidity", guideSlug: "can-high-humidity-damage-flooring", note: "Likely cause: unstable indoor conditions or HVAC issues. Urgency: monitor to medium. Next step: measure room humidity." },
+      { label: "Concrete moisture", guideSlug: "how-to-test-concrete-moisture", note: "Likely cause: slab vapor, basement conditions, or missing vapor control. Urgency: test before flooring. Next step: follow required slab test method." },
+      { label: "Hardwood cupping", guideSlug: "why-is-my-hardwood-floor-cupping", note: "Likely cause: moisture imbalance through the board. Urgency: inspect before sanding. Next step: identify and stabilize moisture." },
+      { label: "Moisture damage signs", guideSlug: "signs-of-moisture-damage-under-flooring", note: "Likely cause: hidden dampness, leak history, or trapped moisture. Urgency: high with odor or soft spots. Next step: investigate layers below." }
     ],
     calculators: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"],
     checklists: [
@@ -116,14 +116,14 @@ export const authorityHubPathways: AuthorityHubPathway[] = [
       "If a prior floor failed over concrete, diagnose moisture, bond, surface prep, and slab movement before reinstalling."
     ],
     symptomLookup: [
-      { label: "Moisture", guideSlug: "how-to-test-concrete-moisture", note: "Use this before moisture-sensitive flooring goes over a slab." },
-      { label: "Flooring failure", guideSlug: "why-flooring-fails-over-concrete", note: "Use this when a finished floor has already failed over concrete." },
-      { label: "Cracking", guideSlug: "concrete-slab-cracks-under-flooring", note: "Use this when cracks may transfer through tile, plank, or adhesive systems." },
-      { label: "Tile cracks", guideSlug: "why-is-my-tile-cracking", note: "Use this when the finished tile or grout is cracking over a slab or subfloor." },
-      { label: "Hollow Sound", guideSlug: "why-does-my-floor-feel-hollow", note: "Localized hollow sounds can point to support, bond, or slab prep problems." },
-      { label: "Moisture through slab", guideSlug: "why-is-moisture-coming-through-my-slab", note: "Use this when moisture or odor appears to come from below." },
-      { label: "LVP over concrete", guideSlug: "can-you-install-lvp-over-concrete", note: "Use this when planning vinyl plank over a slab." },
-      { label: "Engineered hardwood over concrete", guideSlug: "can-engineered-hardwood-go-over-concrete", note: "Use this before choosing wood over concrete." }
+      { label: "Moisture", guideSlug: "how-to-test-concrete-moisture", note: "Likely cause: slab vapor, basement humidity, or construction moisture. Urgency: test before installation. Next step: confirm required method." },
+      { label: "Flooring failure", guideSlug: "why-flooring-fails-over-concrete", note: "Likely cause: moisture, flatness, contaminants, adhesive, or compatibility. Urgency: diagnose before reinstall. Next step: inspect slab conditions." },
+      { label: "Cracking", guideSlug: "concrete-slab-cracks-under-flooring", note: "Likely cause: slab movement, settlement, control joints, or crack transfer. Urgency: inspect if wide or displaced. Next step: evaluate crack type." },
+      { label: "Tile cracks", guideSlug: "why-is-my-tile-cracking", note: "Likely cause: movement, deflection, mortar coverage, or crack transfer. Urgency: inspect if spreading. Next step: check substrate movement." },
+      { label: "Hollow Sound", guideSlug: "why-does-my-floor-feel-hollow", note: "Likely cause: low spots, adhesive release, mortar coverage, or floating floor behavior. Urgency: inspect if localized. Next step: compare sound and movement." },
+      { label: "Moisture through slab", guideSlug: "why-is-moisture-coming-through-my-slab", note: "Likely cause: vapor drive, drainage, cracks, or basement humidity. Urgency: high with odor or dampness. Next step: identify source." },
+      { label: "LVP over concrete", guideSlug: "can-you-install-lvp-over-concrete", note: "Likely concern: moisture, flatness, vapor layer, cracks, and expansion. Urgency: verify before ordering. Next step: match slab to product instructions." },
+      { label: "Engineered hardwood over concrete", guideSlug: "can-engineered-hardwood-go-over-concrete", note: "Likely concern: slab moisture, adhesive/floating system, acclimation, and humidity. Urgency: verify before choosing wood. Next step: review moisture controls." }
     ],
     calculators: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"],
     checklists: ["lvp-installation-checklist", "laminate-installation-checklist", "engineered-hardwood-installation-checklist", "tile-installation-checklist"],

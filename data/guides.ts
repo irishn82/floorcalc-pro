@@ -1084,9 +1084,9 @@ export const guides: Guide[] = [
     title: "Which Direction Should Flooring Run?",
     description:
       "A practical guide to choosing flooring direction for plank floors, hallways, open layouts, stairs, transitions, natural light, and waste planning.",
-    metadataTitle: "Which Direction Should Flooring Run? Practical Layout Guide",
+    metadataTitle: "Which Direction Should Flooring Run? Hallways, Light, and Layout",
     metadataDescription:
-      "Learn how to choose flooring direction using longest walls, natural light, hallways, open layouts, stairs, transitions, and waste planning.",
+      "Learn how to choose flooring direction for hallways, open rooms, natural light, stairs, transitions, waste, plank layout, and movement planning.",
     dateModified: "2026-05-30",
     readTime: "8 min read",
     primaryEcosystem: "planning-measuring-transitions",
@@ -1095,6 +1095,8 @@ export const guides: Guide[] = [
     topicCluster: "layout",
     relatedTools: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"],
     relatedGuides: [
+      "flooring-movement-problems",
+      "flooring-separation-problems",
       "flooring-direction-mistakes",
       "flooring-transition-guide",
       "t-mold-vs-reducer-vs-end-cap",
@@ -1132,6 +1134,20 @@ export const guides: Guide[] = [
           "Mark doorways where direction changes may need transitions.",
           "Compare waste if one direction creates many short cuts.",
           "Review stairs, landings, and open concept areas before ordering."
+        ]
+      },
+      {
+        id: "what-this-usually-means",
+        title: "What flooring direction usually means for the whole project",
+        paragraphs: [
+          "Flooring direction is not just a style choice. It affects cuts, waste, transitions, long connected runs, final row width, stair landings, and where movement breaks may be needed.",
+          "If the home has an open concept layout, a long hallway, stairs, or several connected rooms, choose the direction after looking at the full path. A direction that works beautifully in one room can create awkward cuts or pressure points in another."
+        ],
+        bullets: [
+          "Good visual flow usually follows the main sight line or hallway path.",
+          "Good installation flow also checks transitions, expansion breaks, and final row width.",
+          "Long runs and direction changes should be compared against product instructions.",
+          "Movement-related issues later can trace back to tight transitions or missing breaks."
         ]
       },
       {
@@ -1218,6 +1234,20 @@ export const guides: Guide[] = [
           "Direction changes should happen at logical transitions.",
           "Hallways can highlight squeaks, hollow areas, or plank movement if support is poor.",
           "Transition planning reduces the chance of loose trim or pressure points later."
+        ]
+      },
+      {
+        id: "what-to-check-next",
+        title: "What to check next before ordering",
+        paragraphs: [
+          "After you choose a direction, check the parts of the project that direction affects: waste, transition lengths, stair noses, long-run limits, doorway breaks, and where the first and final rows will land.",
+          "If the layout includes a long floating-floor run, tight doorways, or a direction change, review movement and transition guidance before ordering. That helps avoid a layout that looks good on paper but creates pressure or trim problems later."
+        ],
+        bullets: [
+          "Use the square footage calculator to confirm measured area.",
+          "Use the waste calculator to compare simple and complex layouts.",
+          "Use the transition estimator for direction changes and doorway breaks.",
+          "Review the movement hub when direction affects long runs, expansion breaks, or floating floors."
         ]
       },
       {
@@ -1350,6 +1380,21 @@ export const guides: Guide[] = [
         question: "How do I choose flooring direction if rooms conflict?",
         answer:
           "Prioritize the main connected space, hallway flow, stair layout, and clean transitions. If two rooms truly conflict, a doorway transition often looks more intentional than a direction change in open space."
+      },
+      {
+        question: "Can flooring direction affect floor movement problems?",
+        answer:
+          "Direction alone is rarely the only cause, but long floating-floor runs, missing movement breaks, tight transitions, and pinned edges can contribute to peaking, buckling, squeaks, or separation."
+      },
+      {
+        question: "What should I check after choosing plank direction?",
+        answer:
+          "Check final row width, stair noses, transition locations, expansion requirements, waste, and whether the chosen direction creates a long run that the product limits."
+      },
+      {
+        question: "Should the hallway or the main room decide flooring direction?",
+        answer:
+          "Usually the main connected view leads the decision, but a long narrow hallway may deserve extra weight. If both cannot work cleanly, a planned doorway transition may be better than an awkward continuous layout."
       }
     ],
     disclaimer:

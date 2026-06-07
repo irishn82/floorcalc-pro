@@ -667,7 +667,7 @@ const guideDrafts: GuideDraft[] = [
       "Learn why concrete moisture testing matters before LVP, laminate, engineered hardwood, carpet, or tile, and how common test methods fit into flooring planning.",
     metadataTitle: "How to Test Concrete Moisture Before Flooring",
     metadataDescription:
-      "Understand calcium chloride tests, in-situ RH tests, moisture meters, product limits, adhesives, and when to involve a flooring professional.",
+      "Compare concrete moisture tests before flooring, including calcium chloride, in-situ RH, meters, product limits, adhesive requirements, and next steps.",
     readTime: "9 min read",
     primaryEcosystem: "planning-measuring-transitions",
     secondaryEcosystems: ["lvp", "laminate", "hardwood-engineered-hardwood", "tile"],
@@ -676,6 +676,7 @@ const guideDrafts: GuideDraft[] = [
     relatedTools: ["flooring-square-footage-calculator", "waste-calculator"],
     relatedGuides: [
       "flooring-moisture-problems",
+      "concrete-floor-problems",
       "concrete-slab-flooring-guide",
       "moisture-level-too-high-for-flooring",
       "why-is-moisture-coming-through-my-slab",
@@ -736,6 +737,33 @@ const guideDrafts: GuideDraft[] = [
         ]
       },
       {
+        id: "test-comparison",
+        title: "What each test can tell you",
+        paragraphs: [
+          "Concrete moisture tests are not all measuring the same thing. A surface emission test, an in-situ relative humidity test, and a handheld meter can all be useful, but they answer different questions and may not satisfy the same product requirement.",
+          "That matters because a flooring failure can come from slab moisture, surface contamination, adhesive incompatibility, or poor preparation. Moisture testing is one part of the concrete diagnosis, not the only check."
+        ],
+        bullets: [
+          "Calcium chloride: helps evaluate moisture vapor emission from the slab surface during the test period.",
+          "In-situ RH: helps evaluate internal relative humidity in the slab.",
+          "Moisture meter: useful for screening suspicious areas and comparing one slab area to another.",
+          "Product limit: the flooring, adhesive, or mitigation system decides which result matters for approval."
+        ]
+      },
+      {
+        id: "what-to-check-next",
+        title: "What to check next after moisture testing",
+        paragraphs: [
+          "If the readings are within the product limits, still check flatness, cracks, old adhesive, sealers, pH, porosity, dusty concrete, and surface soundness. A dry-enough slab can still cause flooring problems if the surface is not prepared.",
+          "If readings are above the product limits, do not assume a generic sealer will solve it. The next step may be drying time, a manufacturer-approved mitigation system, a different adhesive, a different underlayment, or a different flooring choice."
+        ],
+        bullets: [
+          "Use the concrete floor problems hub when a slab has multiple warning signs.",
+          "Use the LVP-over-concrete or engineered-hardwood-over-concrete guide for material-specific planning.",
+          "Use the moisture hub when the floor also shows swelling, buckling, odor, cupping, or separation."
+        ]
+      },
+      {
         id: "when-to-call-a-professional",
         title: "When to call a professional",
         paragraphs: [
@@ -775,6 +803,21 @@ const guideDrafts: GuideDraft[] = [
         question: "What happens if concrete moisture is too high?",
         answer:
           "Options vary by product. The project may need drying time, a compatible mitigation system, a different adhesive, a vapor barrier, or a different flooring choice."
+      },
+      {
+        question: "Can concrete pass one moisture test and fail another?",
+        answer:
+          "It can, because different tests measure different moisture conditions. Follow the flooring or adhesive instructions for the required method and acceptance limit."
+      },
+      {
+        question: "Should I test concrete moisture before installing LVP?",
+        answer:
+          "Often yes, especially for basements, newer slabs, older slabs with unknown history, or products that require a vapor barrier or documented moisture limits."
+      },
+      {
+        question: "What should I do after a high moisture reading?",
+        answer:
+          "Stop and compare the reading with the exact flooring, adhesive, and underlayment instructions. A professional may need to evaluate drying, mitigation, or a different flooring system."
       }
     ],
     disclaimer: installConditionDisclaimer
@@ -1452,7 +1495,7 @@ const guideDrafts: GuideDraft[] = [
       "Troubleshoot engineered hardwood separation caused by humidity changes, concrete slab moisture, poor acclimation, locking issues, glue-down bond failure, or subfloor flatness.",
     metadataTitle: "Why Is My Engineered Hardwood Separating? Causes and Checks",
     metadataDescription:
-      "Learn why engineered hardwood separates and what to check first, including humidity, acclimation, concrete moisture, locking systems, glue-down bond, and flatness.",
+      "Learn why engineered hardwood separates, what it usually means, and what to check first for humidity, acclimation, concrete moisture, glue-down bond, and flatness.",
     readTime: "8 min read",
     primaryEcosystem: "hardwood-engineered-hardwood",
     secondaryEcosystems: ["planning-measuring-transitions"],
@@ -1460,6 +1503,9 @@ const guideDrafts: GuideDraft[] = [
     topicCluster: "installation-method",
     relatedTools: ["flooring-square-footage-calculator", "waste-calculator"],
     relatedGuides: [
+      "flooring-separation-problems",
+      "flooring-movement-problems",
+      "flooring-moisture-problems",
       "can-engineered-hardwood-go-over-concrete",
       "how-long-should-hardwood-acclimate",
       "moisture-barrier-engineered-hardwood-over-concrete",
@@ -1488,6 +1534,20 @@ const guideDrafts: GuideDraft[] = [
         ]
       },
       {
+        id: "what-this-usually-means",
+        title: "What engineered hardwood separation usually means",
+        paragraphs: [
+          "Separation usually means the wood flooring system is reacting to movement, moisture, support, or bond conditions. In a floating floor, the issue may be locking stress, expansion, low spots, or pinning. In a glue-down floor, it may be adhesive release, slab moisture, contamination, or installation conditions.",
+          "Engineered hardwood is more dimensionally stable than many solid wood floors, but it is still wood. Humidity, concrete moisture, acclimation, and jobsite conditions can still affect it."
+        ],
+        bullets: [
+          "Seasonal gaps: check indoor humidity and whether gaps close later.",
+          "Gaps with cupping or crowning: check moisture imbalance before filling.",
+          "Gaps over concrete: review slab moisture testing and moisture barrier requirements.",
+          "Hollow sounds with gaps: check adhesive bond, flatness, and installation method."
+        ]
+      },
+      {
         id: "what-to-check-first",
         title: "What to check first",
         paragraphs: [
@@ -1508,6 +1568,20 @@ const guideDrafts: GuideDraft[] = [
         paragraphs: [
           "A floating engineered hardwood floor needs expansion space and flat support. If it bridges low spots or is pinned by heavy fixed objects, joints can stress and open.",
           "A glue-down engineered hardwood floor depends on slab preparation, moisture conditions, adhesive compatibility, and correct trowel and open-time practices. Separation or hollow areas may involve bond failure rather than plank locking."
+        ]
+      },
+      {
+        id: "what-to-check-next",
+        title: "What to check next",
+        paragraphs: [
+          "Choose the next step by installation method. Floating engineered hardwood should be checked for expansion space, transitions, fixed objects, and flatness. Glue-down engineered hardwood should be checked for bond, moisture, adhesive compatibility, surface prep, and hollow areas.",
+          "If the floor is over concrete, treat slab moisture and jobsite humidity as core checks, not optional details. If separation follows seasonal dry air, compare the issue with hardwood gapping and acclimation guidance."
+        ],
+        bullets: [
+          "Over concrete: review the concrete slab and moisture barrier guides.",
+          "With cupping or crowning: review hardwood moisture troubleshooting.",
+          "With hollow sound: check adhesive bond or unsupported movement.",
+          "With recurring gaps: review the flooring separation hub."
         ]
       },
       {
@@ -1550,6 +1624,21 @@ const guideDrafts: GuideDraft[] = [
         question: "Does floating engineered hardwood need expansion gaps?",
         answer:
           "Yes, if the product is a floating system, it needs the expansion space and transitions required by the manufacturer."
+      },
+      {
+        question: "Why is engineered hardwood separating over concrete?",
+        answer:
+          "Possible causes include slab moisture, missing or incompatible moisture control, adhesive bond issues, subfloor flatness, humidity changes, or installation before jobsite conditions were ready."
+      },
+      {
+        question: "Can low humidity make engineered hardwood separate?",
+        answer:
+          "Yes. Dry indoor air can contribute to seasonal gaps. Product instructions and normal living-condition humidity ranges should guide what is expected and what needs correction."
+      },
+      {
+        question: "When should engineered hardwood gaps be inspected?",
+        answer:
+          "Have gaps inspected when they widen quickly, appear with cupping, crowning, hollow sounds, loose boards, slab moisture concerns, or do not improve when indoor conditions stabilize."
       }
     ],
     disclaimer: installConditionDisclaimer
@@ -3004,15 +3093,15 @@ const guideDrafts: GuideDraft[] = [
           "The matrix below summarizes the likely cause, common flooring types, urgency level, and the detailed guide to read next."
         ],
         bullets: [
-          "Clicking - likely cause: low spots, locking stress, soft underlayment, or pinned floating floor; flooring types: LVP, laminate, floating floors; urgency: needs inspection; related guide: Why Is My LVP Floor Clicking.",
-          "Lifting - likely cause: expansion pressure, moisture, adhesive release, or uneven substrate; flooring types: LVP, glue-down vinyl, transitions; urgency: needs inspection; related guide: Why Is My LVP Lifting.",
-          "Peaking - likely cause: blocked expansion, fixed cabinets, long runs, heat, or moisture; flooring types: LVP and laminate; urgency: needs inspection; related guide: Why Is My LVP Floor Peaking.",
-          "Buckling - likely cause: moisture, missing expansion space, heavy fixed objects, or wrong underlayment; flooring types: LVP and laminate; urgency: possible moisture issue; related guide: Why Is My LVP Floor Buckling.",
-          "Separating - likely cause: joint stress, humidity movement, low spots, damaged locking edges, or bond failure; flooring types: LVP, laminate, engineered hardwood; urgency: needs inspection; related guide: Why Is My Laminate Floor Separating.",
-          "Gapping - likely cause: seasonal humidity, acclimation, moisture imbalance, or product movement; flooring types: hardwood and engineered hardwood; urgency: monitor or inspect; related guide: Why Is My Hardwood Floor Gapping.",
-          "Squeaking - likely cause: subfloor panel movement, fasteners, framing movement, or seasonal wood movement; flooring types: hardwood, laminate, LVP over wood subfloor; urgency: needs inspection if spreading; related guide: Why Is My Floor Squeaking.",
-          "Bouncing - likely cause: underlayment compression, low spots, loose subfloor panels, joist movement, or framing concerns; flooring types: floating floors, wood subfloors, tile over framing; urgency: possible structural concern; related guide: Why Is My Floor Bouncing.",
-          "Hollow sounds - likely cause: floating floor sound, low spots, adhesive release, mortar coverage, or slab support; flooring types: floating floors, tile, glue-down flooring; urgency: needs inspection if localized; related guide: Why Does My Floor Feel Hollow."
+          "Clicking - likely cause: low spots, locking stress, soft underlayment, or pinned floating floor; flooring types: LVP, laminate, floating floors; urgency: needs inspection; next step: check support near the sound; related guide: Why Is My LVP Floor Clicking.",
+          "Lifting - likely cause: expansion pressure, moisture, adhesive release, or uneven substrate; flooring types: LVP, glue-down vinyl, transitions; urgency: needs inspection; next step: identify floating versus glue-down; related guide: Why Is My LVP Lifting.",
+          "Peaking - likely cause: blocked expansion, fixed cabinets, long runs, heat, or moisture; flooring types: LVP and laminate; urgency: needs inspection; next step: check pressure points and expansion space; related guide: Why Is My LVP Floor Peaking.",
+          "Buckling - likely cause: moisture, missing expansion space, heavy fixed objects, or wrong underlayment; flooring types: LVP and laminate; urgency: possible moisture issue; next step: rule out water and pinning; related guide: Why Is My LVP Floor Buckling.",
+          "Separating - likely cause: joint stress, humidity movement, low spots, damaged locking edges, or bond failure; flooring types: LVP, laminate, engineered hardwood; urgency: needs inspection; next step: map gap pattern; related guide: Why Is My Laminate Floor Separating.",
+          "Gapping - likely cause: seasonal humidity, acclimation, moisture imbalance, or product movement; flooring types: hardwood and engineered hardwood; urgency: monitor or inspect; next step: check humidity stability; related guide: Why Is My Hardwood Floor Gapping.",
+          "Squeaking - likely cause: subfloor panel movement, fasteners, framing movement, or seasonal wood movement; flooring types: hardwood, laminate, LVP over wood subfloor; urgency: needs inspection if spreading; next step: locate the moving layer; related guide: Why Is My Floor Squeaking.",
+          "Bouncing - likely cause: underlayment compression, low spots, loose subfloor panels, joist movement, or framing concerns; flooring types: floating floors, wood subfloors, tile over framing; urgency: possible structural concern; next step: check subfloor/support; related guide: Why Is My Floor Bouncing.",
+          "Hollow sounds - likely cause: floating floor sound, low spots, adhesive release, mortar coverage, or slab support; flooring types: floating floors, tile, glue-down flooring; urgency: needs inspection if localized; next step: compare sound with movement; related guide: Why Does My Floor Feel Hollow."
         ]
       },
       {
@@ -4210,11 +4299,11 @@ const guideDrafts: GuideDraft[] = [
           "Use the symptom first, then compare it with the floor type and installation method."
         ],
         bullets: [
-          "Laminate joints opening: check expansion gaps, humidity, underlayment, damaged click edges, and subfloor flatness.",
-          "LVP end gaps or seams showing: check locking stress, low spots, expansion pressure, debris, and plank movement.",
-          "Engineered hardwood separating: check jobsite humidity, concrete moisture, acclimation, glue-down bond, or floating-floor stress.",
-          "Hardwood gaps: check seasonal humidity, acclimation history, moisture readings, and whether gaps are stable or growing.",
-          "Open joints with buckling or peaking: check blocked expansion, fixed objects, moisture, and long runs before forcing joints closed."
+          "Laminate joints opening - likely cause: humidity, underlayment, damaged click edges, or subfloor flatness; urgency: inspect if recurring; next step: map hallways and doorways.",
+          "LVP end gaps or seams showing - likely cause: locking stress, low spots, expansion pressure, debris, or plank movement; urgency: inspect before tapping; next step: check flatness and expansion.",
+          "Engineered hardwood separating - likely cause: jobsite humidity, concrete moisture, acclimation, glue-down bond, or floating-floor stress; urgency: inspect if widening; next step: review moisture records.",
+          "Hardwood gaps - likely cause: seasonal humidity, acclimation history, or moisture imbalance; urgency: monitor unless growing or uneven; next step: check indoor humidity.",
+          "Open joints with buckling or peaking - likely cause: blocked expansion, fixed objects, moisture, or long runs; urgency: high if raised; next step: relieve the cause before forcing joints closed."
         ]
       },
       {
@@ -4354,11 +4443,11 @@ const guideDrafts: GuideDraft[] = [
           "Concrete-related symptoms often overlap with product symptoms, so the slab should be part of the diagnosis."
         ],
         bullets: [
-          "Musty odor or damp feeling: check slab moisture, basement humidity, wall edges, and vapor control.",
-          "Glue-down flooring releasing: check moisture testing, pH, adhesive compatibility, contamination, and surface prep.",
-          "Floating floor hollow sound: check slab flatness, underlayment, low spots, and product expectations.",
-          "Tile cracks or hollow tile: check slab cracks, movement, mortar coverage, and movement accommodation.",
-          "Buckling, peaking, or lifting: check moisture, expansion space, fixed objects, heat, and long runs."
+          "Musty odor or damp feeling - likely cause: slab moisture, basement humidity, wall edges, or vapor-control issue; urgency: high with odor or dampness; next step: test and inspect moisture sources.",
+          "Glue-down flooring releasing - likely cause: moisture, pH, adhesive incompatibility, contamination, or poor surface prep; urgency: high before reinstall; next step: review slab and adhesive requirements.",
+          "Floating floor hollow sound - likely cause: slab flatness, low spots, underlayment, or product expectations; urgency: inspect if localized; next step: compare sound with movement.",
+          "Tile cracks or hollow tile - likely cause: slab cracks, movement, mortar coverage, or missing movement accommodation; urgency: inspect if spreading; next step: evaluate substrate movement.",
+          "Buckling, peaking, or lifting - likely cause: moisture, expansion space, fixed objects, heat, or long runs; urgency: medium to high; next step: check pressure and moisture before repair."
         ]
       },
       {
@@ -4520,11 +4609,11 @@ const guideDrafts: GuideDraft[] = [
           "Use the symptom to choose a starting path, then verify the substrate and product requirements."
         ],
         bullets: [
-          "Swelling or raised seams: check leaks, wet cleaning, humidity, and subfloor moisture.",
-          "Cupping or crowning: check hardwood moisture imbalance, slab, crawlspace, HVAC, and repair timing.",
-          "Gapping or separation: check seasonal humidity, acclimation, subfloor moisture, and damaged joints.",
-          "Buckling or peaking: check moisture, expansion pressure, fixed objects, and long runs.",
-          "Odor, staining, or soft areas: stop and inspect for moisture damage under the floor."
+          "Swelling or raised seams - likely cause: leak, wet cleaning, humidity, or subfloor moisture; urgency: high if spreading; next step: find and stop moisture first.",
+          "Cupping or crowning - likely cause: hardwood moisture imbalance, slab, crawlspace, HVAC, or repair timing; urgency: inspect before sanding; next step: stabilize conditions.",
+          "Gapping or separation - likely cause: seasonal humidity, acclimation, subfloor moisture, or damaged joints; urgency: inspect if recurring; next step: compare moisture and movement symptoms.",
+          "Buckling or peaking - likely cause: moisture, expansion pressure, fixed objects, or long runs; urgency: medium to high; next step: check water and expansion restrictions.",
+          "Odor, staining, or soft areas - likely cause: hidden moisture damage; urgency: high; next step: stop and inspect layers below the floor."
         ]
       },
       {
