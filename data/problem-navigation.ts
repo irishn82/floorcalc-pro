@@ -16,6 +16,11 @@ export type ProblemBrowseSection = {
 
 export const problemSymptomLinks: ProblemSymptomLink[] = [
   {
+    label: "Compare symptoms",
+    href: "/guides/flooring-problem-comparison-guide",
+    description: "Use side-by-side comparisons when two flooring symptoms look similar."
+  },
+  {
     label: "Clicking",
     href: "/guides/why-is-my-floor-clicking",
     description: "Start here for repeated clicks, snaps, or joint noise."
@@ -100,6 +105,9 @@ export const problemBrowseSections: ProblemBrowseSection[] = [
       "Use these guides when a floor clicks, squeaks, bounces, lifts, buckles, peaks, separates, gaps, or sounds hollow.",
     guideSlugs: [
       "flooring-movement-problems",
+      "flooring-problem-comparison-guide",
+      "clicking-vs-lifting-flooring",
+      "buckling-vs-peaking-flooring",
       "flooring-separation-problems",
       "why-is-my-floor-clicking",
       "why-is-my-lvp-floor-clicking",
@@ -112,6 +120,7 @@ export const problemBrowseSections: ProblemBrowseSection[] = [
       "why-is-my-lvp-floor-separating",
       "why-is-my-laminate-floor-separating",
       "why-is-my-engineered-hardwood-separating",
+      "cupping-vs-crowning-hardwood",
       "why-are-my-flooring-joints-opening",
       "why-is-my-hardwood-floor-gapping",
       "why-does-my-floor-feel-hollow"
@@ -125,6 +134,8 @@ export const problemBrowseSections: ProblemBrowseSection[] = [
       "Start here for swelling, concrete moisture, moisture under flooring, cupping, crowning, moisture testing, and high humidity.",
     guideSlugs: [
       "flooring-moisture-problems",
+      "moisture-vs-acclimation-problems",
+      "cupping-vs-crowning-hardwood",
       "concrete-floor-problems",
       "flooring-separation-problems",
       "why-is-my-floor-swelling",
@@ -145,6 +156,7 @@ export const problemBrowseSections: ProblemBrowseSection[] = [
       "Review flooring over concrete, moisture through slabs, cracks, underlayment, vapor barriers, and flooring failures over concrete.",
     guideSlugs: [
       "concrete-floor-problems",
+      "moisture-vs-acclimation-problems",
       "concrete-slab-flooring-guide",
       "can-engineered-hardwood-go-over-concrete",
       "can-you-install-lvp-over-concrete",
@@ -163,6 +175,8 @@ export const problemBrowseSections: ProblemBrowseSection[] = [
       "Troubleshoot LVP clicking, lifting, peaking, buckling, separating, visible seams, subfloor support, and floating-floor movement.",
     guideSlugs: [
       "flooring-separation-problems",
+      "clicking-vs-lifting-flooring",
+      "buckling-vs-peaking-flooring",
       "why-is-my-lvp-floor-clicking",
       "why-is-my-lvp-lifting",
       "why-is-my-lvp-floor-peaking",
@@ -181,6 +195,7 @@ export const problemBrowseSections: ProblemBrowseSection[] = [
       "Use these guides for laminate separating, buckling, clicking, underlayment questions, flatness issues, and moisture or humidity concerns.",
     guideSlugs: [
       "flooring-separation-problems",
+      "buckling-vs-peaking-flooring",
       "why-is-my-laminate-floor-separating",
       "why-is-my-laminate-floor-buckling",
       "laminate-floor-separating-what-to-check-first",
@@ -200,6 +215,8 @@ export const problemBrowseSections: ProblemBrowseSection[] = [
     guideSlugs: [
       "flooring-separation-problems",
       "flooring-moisture-problems",
+      "cupping-vs-crowning-hardwood",
+      "moisture-vs-acclimation-problems",
       "how-long-should-hardwood-acclimate",
       "hardwood-acclimation-mistakes",
       "why-is-my-hardwood-floor-gapping",

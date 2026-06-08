@@ -47,7 +47,7 @@ export const diagnosisOptions: DiagnosisOption[] = [
       "There are moisture signs, odor, swelling, cupping, or adhesive release.",
       "The floor feels soft, strongly bouncy, sagging, or unsafe."
     ],
-    recommendedGuides: ["flooring-movement-problems", "why-is-my-lvp-floor-clicking", "why-is-my-laminate-floor-separating"],
+    recommendedGuides: ["flooring-movement-problems", "flooring-problem-comparison-guide", "why-is-my-lvp-floor-clicking"],
     relatedCalculators: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"],
     relatedChecklists: ["lvp-installation-checklist", "laminate-installation-checklist", "engineered-hardwood-installation-checklist"],
     relatedHubs: ["flooring-movement-problems", "flooring-separation-problems", "flooring-moisture-problems"]
@@ -73,7 +73,7 @@ export const diagnosisOptions: DiagnosisOption[] = [
       "Joints are separating or planks are lifting.",
       "The floor feels soft, bouncy, or unsupported."
     ],
-    recommendedGuides: ["why-is-my-floor-clicking", "why-is-my-lvp-floor-clicking", "why-does-my-floor-feel-hollow"],
+    recommendedGuides: ["clicking-vs-lifting-flooring", "why-is-my-floor-clicking", "why-is-my-lvp-floor-clicking"],
     relatedCalculators: ["flooring-square-footage-calculator", "transition-estimator"],
     relatedChecklists: ["lvp-installation-checklist", "laminate-installation-checklist"],
     relatedHubs: ["flooring-movement-problems", "flooring-separation-problems"]
@@ -125,7 +125,7 @@ export const diagnosisOptions: DiagnosisOption[] = [
       "The floor feels soft or the subfloor may be wet.",
       "Buckling continues after trim or transition pressure is relieved."
     ],
-    recommendedGuides: ["why-is-my-laminate-floor-buckling", "why-is-my-lvp-floor-buckling", "why-is-my-floor-expanding"],
+    recommendedGuides: ["buckling-vs-peaking-flooring", "why-is-my-laminate-floor-buckling", "why-is-my-lvp-floor-buckling"],
     relatedCalculators: ["waste-calculator", "transition-estimator"],
     relatedChecklists: ["lvp-installation-checklist", "laminate-installation-checklist"],
     relatedHubs: ["flooring-movement-problems", "flooring-moisture-problems"]
@@ -151,7 +151,7 @@ export const diagnosisOptions: DiagnosisOption[] = [
       "Adhesive is soft, wet, dusty, or releasing over concrete.",
       "The lifted area is near water, slab moisture, or a soft subfloor."
     ],
-    recommendedGuides: ["why-is-my-lvp-lifting", "why-is-my-transition-strip-moving", "why-flooring-fails-over-concrete"],
+    recommendedGuides: ["clicking-vs-lifting-flooring", "why-is-my-lvp-lifting", "why-is-my-transition-strip-moving"],
     relatedCalculators: ["transition-estimator", "flooring-square-footage-calculator"],
     relatedChecklists: ["lvp-installation-checklist", "tile-installation-checklist"],
     relatedHubs: ["flooring-movement-problems", "concrete-floor-problems"]
@@ -177,7 +177,7 @@ export const diagnosisOptions: DiagnosisOption[] = [
       "There are moisture signs or swollen edges.",
       "The floor is trapped under fixed cabinets, islands, or trim."
     ],
-    recommendedGuides: ["why-is-my-lvp-floor-peaking", "why-is-my-lvp-floor-buckling", "can-you-install-cabinets-over-floating-lvp"],
+    recommendedGuides: ["buckling-vs-peaking-flooring", "why-is-my-lvp-floor-peaking", "why-is-my-lvp-floor-buckling"],
     relatedCalculators: ["transition-estimator", "waste-calculator"],
     relatedChecklists: ["lvp-installation-checklist", "laminate-installation-checklist"],
     relatedHubs: ["flooring-movement-problems", "flooring-separation-problems"]
@@ -307,7 +307,7 @@ export const diagnosisOptions: DiagnosisOption[] = [
       "A concrete slab or basement is involved.",
       "Flooring has already failed once in the same area."
     ],
-    recommendedGuides: ["flooring-moisture-problems", "moisture-level-too-high-for-flooring", "how-to-test-concrete-moisture"],
+    recommendedGuides: ["flooring-moisture-problems", "moisture-vs-acclimation-problems", "how-to-test-concrete-moisture"],
     relatedCalculators: ["waste-calculator", "flooring-square-footage-calculator"],
     relatedChecklists: ["lvp-installation-checklist", "engineered-hardwood-installation-checklist", "carpet-installation-checklist"],
     relatedHubs: ["flooring-moisture-problems", "concrete-floor-problems"]

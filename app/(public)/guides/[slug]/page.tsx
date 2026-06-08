@@ -50,7 +50,12 @@ const problemFinderCalloutSlugs = new Set<GuideSlug>([
   "which-direction-should-flooring-run",
   "what-is-pattern-match-in-carpet",
   "can-you-install-lvp-over-concrete",
-  "how-to-test-concrete-moisture"
+  "how-to-test-concrete-moisture",
+  "clicking-vs-lifting-flooring",
+  "buckling-vs-peaking-flooring",
+  "cupping-vs-crowning-hardwood",
+  "moisture-vs-acclimation-problems",
+  "flooring-problem-comparison-guide"
 ]);
 
 function uniqueLinks(links: ResourceLink[]) {
@@ -79,6 +84,34 @@ function GuideSectionContent({ section }: { section: GuideSection }) {
             <li key={bullet}>{bullet}</li>
           ))}
         </ul>
+      ) : null}
+      {section.comparisonTable ? (
+        <div className="not-prose my-6 overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm">
+          <div className="overflow-x-auto">
+            <table className="min-w-full divide-y divide-slate-200 text-left text-sm">
+              <thead className="bg-slate-50 text-xs font-extrabold uppercase tracking-[0.08em] text-slate-600">
+                <tr>
+                  {section.comparisonTable.columns.map((column) => (
+                    <th key={column} scope="col" className="whitespace-nowrap px-4 py-3">
+                      {column}
+                    </th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-slate-100 text-slate-700">
+                {section.comparisonTable.rows.map((row) => (
+                  <tr key={row.join("|")}>
+                    {row.map((cell, index) => (
+                      <td key={`${row.join("|")}-${index}`} className="min-w-40 px-4 py-3 align-top leading-6">
+                        {cell}
+                      </td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
       ) : null}
       {section.subsections?.map((subsection) => (
         <div key={subsection.title}>
@@ -189,6 +222,61 @@ const targetedNextStepTargets: Partial<
       { type: "guide", slug: "why-is-my-floor-expanding" },
       { type: "guide", slug: "why-is-my-lvp-floor-peaking" },
       { type: "tool", slug: "waste-calculator" }
+    ]
+  },
+  "clicking-vs-lifting-flooring": {
+    primary: { type: "guide", slug: "flooring-movement-problems" },
+    secondary: [
+      { type: "guide", slug: "why-is-my-lvp-floor-clicking" },
+      { type: "guide", slug: "why-is-my-lvp-lifting" },
+      { type: "guide", slug: "flooring-separation-problems" },
+      { type: "guide", slug: "flooring-moisture-problems" },
+      { type: "guide", slug: "can-you-install-lvp-over-concrete" },
+      { type: "tool", slug: "transition-estimator" }
+    ]
+  },
+  "buckling-vs-peaking-flooring": {
+    primary: { type: "guide", slug: "flooring-movement-problems" },
+    secondary: [
+      { type: "guide", slug: "why-is-my-lvp-floor-peaking" },
+      { type: "guide", slug: "why-is-my-lvp-floor-buckling" },
+      { type: "guide", slug: "why-is-my-laminate-floor-buckling" },
+      { type: "guide", slug: "flooring-moisture-problems" },
+      { type: "guide", slug: "flooring-separation-problems" },
+      { type: "tool", slug: "transition-estimator" }
+    ]
+  },
+  "cupping-vs-crowning-hardwood": {
+    primary: { type: "guide", slug: "flooring-moisture-problems" },
+    secondary: [
+      { type: "guide", slug: "why-is-my-hardwood-floor-cupping" },
+      { type: "guide", slug: "why-is-my-hardwood-floor-crowning" },
+      { type: "guide", slug: "how-long-should-hardwood-acclimate" },
+      { type: "guide", slug: "hardwood-installation-humidity" },
+      { type: "guide", slug: "can-engineered-hardwood-go-over-concrete" },
+      { type: "guide", slug: "moisture-vs-acclimation-problems" }
+    ]
+  },
+  "moisture-vs-acclimation-problems": {
+    primary: { type: "guide", slug: "flooring-moisture-problems" },
+    secondary: [
+      { type: "guide", slug: "how-to-test-concrete-moisture" },
+      { type: "guide", slug: "moisture-level-too-high-for-flooring" },
+      { type: "guide", slug: "how-long-should-hardwood-acclimate" },
+      { type: "guide", slug: "hardwood-acclimation-mistakes" },
+      { type: "guide", slug: "can-engineered-hardwood-go-over-concrete" },
+      { type: "guide", slug: "can-you-install-lvp-over-concrete" }
+    ]
+  },
+  "flooring-problem-comparison-guide": {
+    primary: { type: "guide", slug: "flooring-movement-problems" },
+    secondary: [
+      { type: "guide", slug: "clicking-vs-lifting-flooring" },
+      { type: "guide", slug: "buckling-vs-peaking-flooring" },
+      { type: "guide", slug: "cupping-vs-crowning-hardwood" },
+      { type: "guide", slug: "moisture-vs-acclimation-problems" },
+      { type: "guide", slug: "flooring-separation-problems" },
+      { type: "guide", slug: "concrete-floor-problems" }
     ]
   },
   "why-is-my-floor-squeaking": {

@@ -474,6 +474,8 @@ const guideDrafts: GuideDraft[] = [
     topicCluster: "subfloor-prep",
     relatedTools: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"],
     relatedGuides: [
+      "clicking-vs-lifting-flooring",
+      "flooring-problem-comparison-guide",
       "flooring-movement-problems",
       "flooring-separation-problems",
       "flooring-moisture-problems",
@@ -907,6 +909,8 @@ const guideDrafts: GuideDraft[] = [
     topicCluster: "installation-method",
     relatedTools: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"],
     relatedGuides: [
+      "flooring-problem-comparison-guide",
+      "buckling-vs-peaking-flooring",
       "flooring-movement-problems",
       "flooring-separation-problems",
       "flooring-moisture-problems",
@@ -1811,6 +1815,8 @@ const guideDrafts: GuideDraft[] = [
     topicCluster: "subfloor-prep",
     relatedTools: ["flooring-square-footage-calculator", "waste-calculator"],
     relatedGuides: [
+      "cupping-vs-crowning-hardwood",
+      "moisture-vs-acclimation-problems",
       "flooring-movement-problems",
       "why-is-my-hardwood-floor-gapping",
       "hardwood-acclimation-mistakes",

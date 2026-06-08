@@ -163,12 +163,21 @@ export type GuideSlug =
   | "flooring-moisture-problems"
   | "can-high-humidity-damage-flooring"
   | "ideal-humidity-for-flooring"
-  | "signs-of-moisture-damage-under-flooring";
+  | "signs-of-moisture-damage-under-flooring"
+  | "clicking-vs-lifting-flooring"
+  | "buckling-vs-peaking-flooring"
+  | "cupping-vs-crowning-hardwood"
+  | "moisture-vs-acclimation-problems"
+  | "flooring-problem-comparison-guide";
 
 export type GuideSection = {
   id: string;
   title: string;
   paragraphs: string[];
+  comparisonTable?: {
+    columns: string[];
+    rows: string[][];
+  };
   bullets?: string[];
   subsections?: {
     title: string;

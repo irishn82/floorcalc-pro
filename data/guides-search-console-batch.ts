@@ -91,6 +91,7 @@ const guideDrafts: GuideDraft[] = [
     topicCluster: "subfloor-prep",
     relatedTools: ["flooring-square-footage-calculator", "waste-calculator"],
     relatedGuides: [
+      "flooring-problem-comparison-guide",
       "flooring-movement-problems",
       "why-is-my-floor-clicking",
       "why-is-my-floor-bouncing",
@@ -325,6 +326,8 @@ const guideDrafts: GuideDraft[] = [
     topicCluster: "installation-method",
     relatedTools: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"],
     relatedGuides: [
+      "buckling-vs-peaking-flooring",
+      "flooring-problem-comparison-guide",
       "flooring-movement-problems",
       "why-is-my-lvp-floor-buckling",
       "why-are-my-lvp-seams-showing",
@@ -440,6 +443,8 @@ const guideDrafts: GuideDraft[] = [
     topicCluster: "installation-method",
     relatedTools: ["flooring-square-footage-calculator", "waste-calculator"],
     relatedGuides: [
+      "cupping-vs-crowning-hardwood",
+      "moisture-vs-acclimation-problems",
       "flooring-movement-problems",
       "hardwood-installation-humidity",
       "why-is-my-engineered-hardwood-separating",
@@ -1503,6 +1508,8 @@ const guideDrafts: GuideDraft[] = [
     topicCluster: "installation-method",
     relatedTools: ["flooring-square-footage-calculator", "waste-calculator"],
     relatedGuides: [
+      "moisture-vs-acclimation-problems",
+      "flooring-problem-comparison-guide",
       "flooring-separation-problems",
       "flooring-movement-problems",
       "flooring-moisture-problems",
@@ -1658,6 +1665,8 @@ const guideDrafts: GuideDraft[] = [
     topicCluster: "installation-method",
     relatedTools: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"],
     relatedGuides: [
+      "buckling-vs-peaking-flooring",
+      "flooring-problem-comparison-guide",
       "why-is-my-lvp-floor-peaking",
       "why-is-my-lvp-floor-separating",
       "why-is-my-lvp-lifting",
@@ -3061,6 +3070,10 @@ const guideDrafts: GuideDraft[] = [
     topicCluster: "installation-method",
     relatedTools: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"],
     relatedGuides: [
+      "flooring-problem-comparison-guide",
+      "clicking-vs-lifting-flooring",
+      "buckling-vs-peaking-flooring",
+      "moisture-vs-acclimation-problems",
       "why-is-my-floor-moving",
       "why-do-floors-expand-and-contract",
       "seasonal-flooring-movement",
@@ -4273,6 +4286,10 @@ const guideDrafts: GuideDraft[] = [
     topicCluster: "subfloor-prep",
     relatedTools: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"],
     relatedGuides: [
+      "flooring-problem-comparison-guide",
+      "clicking-vs-lifting-flooring",
+      "buckling-vs-peaking-flooring",
+      "moisture-vs-acclimation-problems",
       "why-is-my-laminate-floor-separating",
       "why-is-my-lvp-floor-separating",
       "why-is-my-engineered-hardwood-separating",
@@ -4417,6 +4434,8 @@ const guideDrafts: GuideDraft[] = [
     topicCluster: "subfloor-prep",
     relatedTools: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"],
     relatedGuides: [
+      "flooring-problem-comparison-guide",
+      "moisture-vs-acclimation-problems",
       "concrete-slab-flooring-guide",
       "can-engineered-hardwood-go-over-concrete",
       "can-you-install-lvp-over-concrete",
@@ -4575,6 +4594,9 @@ const guideDrafts: GuideDraft[] = [
     topicCluster: "subfloor-prep",
     relatedTools: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"],
     relatedGuides: [
+      "flooring-problem-comparison-guide",
+      "moisture-vs-acclimation-problems",
+      "cupping-vs-crowning-hardwood",
       "concrete-floor-problems",
       "flooring-separation-problems",
       "flooring-movement-problems",
@@ -5079,6 +5101,617 @@ const guideDrafts: GuideDraft[] = [
         question: "Should wet subfloor be replaced?",
         answer:
           "It depends on the material, damage, drying results, and structural condition. A qualified professional should evaluate soft, swollen, contaminated, or weakened subfloor areas."
+      }
+    ],
+    disclaimer: installConditionDisclaimer
+  },
+  {
+    slug: "clicking-vs-lifting-flooring",
+    title: "Clicking vs Lifting Flooring",
+    description:
+      "Compare flooring that clicks with flooring that lifts so you can decide whether the issue is movement, pressure, moisture, adhesive release, or subfloor support.",
+    metadataTitle: "Clicking vs Lifting Flooring: What the Symptoms Mean",
+    metadataDescription:
+      "Compare clicking and lifting flooring symptoms, likely causes, urgency, what to check first, and when to review LVP, movement, moisture, or concrete guides.",
+    dateModified: "2026-06-08",
+    readTime: "8 min read",
+    primaryEcosystem: "planning-measuring-transitions",
+    secondaryEcosystems: ["lvp", "laminate"],
+    materialTypes: ["lvp", "lvt", "laminate", "engineered-hardwood"],
+    topicCluster: "installation-method",
+    relatedTools: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"],
+    relatedGuides: [
+      "flooring-problem-comparison-guide",
+      "flooring-movement-problems",
+      "flooring-separation-problems",
+      "flooring-moisture-problems",
+      "concrete-floor-problems",
+      "why-is-my-lvp-floor-clicking",
+      "why-is-my-lvp-lifting",
+      "why-is-my-lvp-floor-separating",
+      "why-is-my-lvp-floor-peaking",
+      "why-is-my-laminate-floor-separating",
+      "can-you-install-lvp-over-concrete",
+      "how-to-test-concrete-moisture"
+    ],
+    quickAnswer: [
+      "Clicking usually means the floor is moving under foot. Lifting means the flooring is no longer staying seated. They can share causes, but lifting is usually more urgent because the surface is already raised or releasing.",
+      "Start by identifying the floor type and installation method. A floating LVP floor that clicks over a low spot is different from glue-down LVP lifting because adhesive released from concrete."
+    ],
+    keySections: [
+      {
+        id: "side-by-side-comparison",
+        title: "Clicking vs lifting: side-by-side comparison",
+        paragraphs: [
+          "Use this comparison to choose the first troubleshooting path. If the floor has both symptoms, start with the more severe one: lifting, peaking, buckling, swelling, or visible joint damage."
+        ],
+        comparisonTable: {
+          columns: ["Symptom", "What it usually means", "Likely causes", "Urgency", "What to check first"],
+          rows: [
+            ["Clicking", "Movement under foot without the floor necessarily being raised.", "Low spots, locking stress, soft underlayment, debris, tight trim, or subfloor movement.", "Inspect if repeated, spreading, or paired with gaps.", "Mark the sound location and check support, flatness, transitions, and expansion space."],
+            ["Lifting", "Planks, edges, seams, or glue-down areas are no longer staying seated.", "Expansion pressure, moisture, adhesive release, damaged locks, pinned floating floor, or uneven substrate.", "More urgent, especially if raised or spreading.", "Identify floating vs glue-down, then check moisture, pressure points, adhesive, and subfloor conditions."]
+          ]
+        }
+      },
+      {
+        id: "visual-symptom-differences",
+        title: "Visual symptom differences",
+        paragraphs: [
+          "Clicking may have no obvious visual clue. The floor may look normal but make a repeatable sound in one traffic path. Lifting is usually visible or touchable: an edge is raised, a plank curls, a seam releases, or a transition area will not stay down.",
+          "If clicking appears with a visible gap, seam ridge, or raised plank, treat it as a movement or separation problem instead of a simple noise complaint."
+        ],
+        bullets: [
+          "Clicking with a hollow feel points toward subfloor support, underlayment, or slab flatness.",
+          "Clicking near a doorway can point toward transition pressure or blocked expansion.",
+          "Lifting near a wall or cabinet can point toward a pinned floating floor.",
+          "Lifting near concrete, exterior doors, or moisture areas should trigger slab and moisture checks."
+        ]
+      },
+      {
+        id: "what-to-check-first",
+        title: "What to check first",
+        paragraphs: [
+          "For clicking, walk the area slowly and mark where the sound repeats. For lifting, avoid forcing the floor flat until the cause is known. Adding weight, nails, or glue can create a worse movement problem if the floor is supposed to float.",
+          "Use the Problem Finder if the symptom does not fit neatly. Clicking, lifting, peaking, separating, and moisture clues often overlap."
+        ],
+        bullets: [
+          "Confirm the flooring type and whether it is floating, glue-down, nail-down, or tile-set.",
+          "Check for moisture, swelling, odor, or concrete slab warning signs.",
+          "Look for low spots, humps, loose patch, or soft underlayment.",
+          "Inspect transitions, cabinets, islands, baseboards, and door jambs for pinning."
+        ]
+      },
+      {
+        id: "industry-alignment",
+        title: "Industry alignment and verification",
+        paragraphs: [
+          "This comparison follows the same practical logic used across flooring trades: diagnose substrate support, moisture, movement, and product-specific installation requirements before repairing the visible symptom.",
+          "NWFA-style hardwood guidance emphasizes moisture and jobsite conditions. RFCI and ASTM F710-style resilient flooring guidance emphasizes clean, dry, smooth, sound substrates. Tile and carpet systems have their own substrate and installation requirements, so the manufacturer's written instructions should control the final repair."
+        ]
+      }
+    ],
+    example: [
+      "A floating LVP hallway clicks in one spot but has no visible raised edge. That points first to support, underlayment, transition pressure, or a locking joint under stress.",
+      "A kitchen LVP plank lifts near an island. That points first to pressure, pinning, moisture, or adhesive/locking release and should be checked before adding glue or weight."
+    ],
+    commonMistakes: [
+      "Treating a repeatable click as harmless without checking support.",
+      "Gluing or fastening a floating floor to stop lifting.",
+      "Ignoring concrete or moisture clues when lifting appears near a slab edge.",
+      "Replacing planks before checking expansion gaps, cabinets, and transitions.",
+      "Assuming clicking and lifting always have the same cause."
+    ],
+    faq: [
+      {
+        question: "Is lifting more serious than clicking?",
+        answer:
+          "Usually yes, because lifting means the floor is raised or releasing. Clicking still deserves inspection when it repeats, spreads, or appears with gaps, peaking, or moisture clues."
+      },
+      {
+        question: "Can clicking turn into lifting?",
+        answer:
+          "It can if repeated movement stresses locking joints, leaves planks unsupported, or allows separation to develop. Check the cause before the joint is damaged."
+      },
+      {
+        question: "Can moisture cause both clicking and lifting?",
+        answer:
+          "Yes. Moisture can affect subfloors, underlayment, adhesives, slab conditions, and flooring movement. Rule out moisture when symptoms appear after leaks, humidity changes, or basement/slab conditions."
+      },
+      {
+        question: "Should I use the LVP clicking guide or the LVP lifting guide?",
+        answer:
+          "Use the clicking guide when the floor mostly makes sound under foot. Use the lifting guide when an edge, plank, glue-down area, or transition will not stay seated."
+      }
+    ],
+    disclaimer: installConditionDisclaimer
+  },
+  {
+    slug: "buckling-vs-peaking-flooring",
+    title: "Buckling vs Peaking Flooring",
+    description:
+      "Compare buckling and peaking flooring symptoms, including expansion pressure, moisture, fixed objects, long runs, and floating floor movement.",
+    metadataTitle: "Buckling vs Peaking Flooring: Pressure, Moisture, Movement",
+    metadataDescription:
+      "Learn the difference between buckling and peaking floors, what usually causes each symptom, urgency level, first checks, and related troubleshooting guides.",
+    dateModified: "2026-06-08",
+    readTime: "8 min read",
+    primaryEcosystem: "planning-measuring-transitions",
+    secondaryEcosystems: ["lvp", "laminate"],
+    materialTypes: ["lvp", "lvt", "laminate", "engineered-hardwood"],
+    topicCluster: "installation-method",
+    relatedTools: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"],
+    relatedGuides: [
+      "flooring-problem-comparison-guide",
+      "flooring-movement-problems",
+      "flooring-separation-problems",
+      "flooring-moisture-problems",
+      "why-is-my-lvp-floor-peaking",
+      "why-is-my-lvp-floor-buckling",
+      "why-is-my-laminate-floor-buckling",
+      "why-is-my-lvp-floor-separating",
+      "why-is-my-laminate-floor-separating",
+      "can-you-install-cabinets-over-floating-lvp",
+      "why-is-my-floor-expanding",
+      "moisture-level-too-high-for-flooring"
+    ],
+    quickAnswer: [
+      "Peaking usually looks like a raised ridge at a seam or joint. Buckling is broader upward movement where the floor lifts, bows, or tents under pressure. Both often point to expansion pressure, moisture, fixed objects, or long connected runs.",
+      "Do not force buckled or peaked flooring flat until you check what is trapping the floor. Pressure left in place can damage locking joints or move the problem somewhere else."
+    ],
+    keySections: [
+      {
+        id: "side-by-side-comparison",
+        title: "Buckling vs peaking: side-by-side comparison",
+        paragraphs: [
+          "The difference is mostly shape and severity. Peaking is commonly a ridge at a joint. Buckling usually means a larger area is pushed upward or distorted."
+        ],
+        comparisonTable: {
+          columns: ["Symptom", "What it looks like", "Likely causes", "Urgency", "What to check first"],
+          rows: [
+            ["Peaking", "A raised seam, ridge, or tented joint.", "Blocked expansion, fixed cabinets, long runs, heat, moisture, or tight transitions.", "Inspect soon, especially if spreading.", "Check perimeter gaps, transition tracks, cabinets, islands, and direct sunlight."],
+            ["Buckling", "A broader raised or bowed area that may create a trip hazard.", "Moisture, major expansion pressure, trapped floating floor, wrong underlayment, or subfloor issues.", "Higher urgency, especially if raised or wet.", "Check moisture, expansion restrictions, fixed objects, and whether the flooring is floating."]
+          ]
+        }
+      },
+      {
+        id: "visual-symptom-differences",
+        title: "Visual symptom differences",
+        paragraphs: [
+          "Peaking often appears right where two planks meet. Buckling can lift several planks or a larger section of floor. Laminate and LVP can show both symptoms when a floating floor cannot move as designed.",
+          "If raised areas appear after a leak, basement humidity change, appliance issue, or wet cleaning, moisture should be checked before assuming it is only expansion."
+        ],
+        bullets: [
+          "A ridge at one seam usually points toward peaking.",
+          "A raised area across multiple rows usually points toward buckling.",
+          "Raised flooring near cabinets or islands can mean the floating floor is pinned.",
+          "Raised flooring near exterior doors, slabs, or wet rooms should be treated as possible moisture-related."
+        ]
+      },
+      {
+        id: "what-to-check-first",
+        title: "What to check first",
+        paragraphs: [
+          "Start at the edges of the room. Look for tight baseboards, transition tracks, door jambs, stair noses, cabinets, islands, fireplaces, and long runs without required movement breaks.",
+          "Then check moisture. Buckling and peaking are often described as expansion problems, but moisture is one of the common reasons flooring expands."
+        ],
+        bullets: [
+          "Check whether the floor is floating or fastened/glued.",
+          "Look for blocked perimeter expansion space.",
+          "Check direct sun, heat sources, exterior doors, and slab conditions.",
+          "Review underlayment approval and product maximum run-length requirements."
+        ]
+      },
+      {
+        id: "industry-alignment",
+        title: "Industry alignment and verification",
+        paragraphs: [
+          "Resilient, laminate, wood, tile, and carpet systems all rely on the right substrate and jobsite conditions. RFCI/ASTM F710-style resilient guidance emphasizes clean, dry, smooth, sound substrates, while NWFA-style wood guidance emphasizes moisture, acclimation, and expected movement.",
+          "Final repair should follow the written instructions for the exact flooring product. Do not cut, glue, fasten, or remove material until the cause is understood."
+        ]
+      }
+    ],
+    example: [
+      "A floating LVP floor peaks at a doorway after a new transition is installed tightly. That points toward transition pressure and blocked movement.",
+      "A laminate floor buckles across several rows near a sliding door after water exposure. That points toward moisture and expansion pressure and should be checked before tapping the floor down."
+    ],
+    commonMistakes: [
+      "Forcing a raised floor flat without checking pressure.",
+      "Ignoring moisture because the symptom looks like expansion.",
+      "Installing fixed cabinets or islands over floating flooring without product approval.",
+      "Using trim or transition tracks that pin the floor.",
+      "Assuming peaking and buckling are only cosmetic."
+    ],
+    faq: [
+      {
+        question: "Is peaking the same as buckling?",
+        answer:
+          "No. Peaking usually describes a raised seam or ridge. Buckling usually describes a larger raised or bowed area. Both can come from pressure, moisture, or blocked movement."
+      },
+      {
+        question: "Can missing expansion gaps cause buckling?",
+        answer:
+          "Yes. Floating floors need the expansion space and movement breaks required by the product. Missing or blocked gaps can contribute to buckling or peaking."
+      },
+      {
+        question: "Can moisture cause peaking?",
+        answer:
+          "Yes. Moisture can make flooring expand or stress the installation system, which can show up as peaking, buckling, lifting, or separation."
+      },
+      {
+        question: "When should I call a professional for buckling?",
+        answer:
+          "Call a professional when buckling is raised, spreading, creating a trip hazard, paired with moisture, or affecting a large connected area."
+      }
+    ],
+    disclaimer: installConditionDisclaimer
+  },
+  {
+    slug: "cupping-vs-crowning-hardwood",
+    title: "Cupping vs Crowning Hardwood",
+    description:
+      "Compare hardwood cupping and crowning so you can understand moisture imbalance, sanding timing, humidity, concrete concerns, and when to call a professional.",
+    metadataTitle: "Cupping vs Crowning Hardwood: Moisture Symptoms Compared",
+    metadataDescription:
+      "Understand the difference between hardwood cupping and crowning, likely moisture causes, urgency, first checks, and related hardwood troubleshooting guides.",
+    dateModified: "2026-06-08",
+    readTime: "8 min read",
+    primaryEcosystem: "hardwood-engineered-hardwood",
+    secondaryEcosystems: ["planning-measuring-transitions"],
+    materialTypes: ["hardwood", "engineered-hardwood"],
+    topicCluster: "subfloor-prep",
+    relatedTools: ["flooring-square-footage-calculator", "waste-calculator"],
+    relatedGuides: [
+      "flooring-problem-comparison-guide",
+      "flooring-moisture-problems",
+      "flooring-movement-problems",
+      "why-is-my-hardwood-floor-cupping",
+      "why-is-my-hardwood-floor-crowning",
+      "why-is-my-hardwood-floor-gapping",
+      "how-long-should-hardwood-acclimate",
+      "hardwood-installation-humidity",
+      "hardwood-acclimation-mistakes",
+      "can-engineered-hardwood-go-over-concrete",
+      "moisture-barrier-engineered-hardwood-over-concrete"
+    ],
+    quickAnswer: [
+      "Cupping means the board edges are higher than the center. Crowning means the center is higher than the edges. Both are moisture-related warning signs, but they can point to different moisture paths or repair timing issues.",
+      "Do not sand a cupped or crowned hardwood floor until moisture conditions are identified and stabilized. Sanding too early can create a bigger problem after the wood changes shape again."
+    ],
+    keySections: [
+      {
+        id: "side-by-side-comparison",
+        title: "Cupping vs crowning: side-by-side comparison",
+        paragraphs: [
+          "Use the shape of the board to choose the first moisture investigation path. Both conditions should be checked against room humidity, subfloor moisture, slab conditions, and recent water exposure."
+        ],
+        comparisonTable: {
+          columns: ["Symptom", "Visual difference", "Likely causes", "Urgency", "What to check first"],
+          rows: [
+            ["Cupping", "Edges of each board are higher than the center.", "Moisture from below, wet subfloor, slab/crawlspace moisture, leaks, humidity imbalance.", "Inspect before sanding or repair.", "Check moisture below the flooring and room humidity."],
+            ["Crowning", "Center of each board is higher than the edges.", "Moisture from above, prior cupping sanded too early, humidity imbalance, unresolved moisture.", "Inspect promptly if new or spreading.", "Check surface moisture history, prior sanding, and moisture readings."]
+          ]
+        }
+      },
+      {
+        id: "visual-symptom-differences",
+        title: "Visual symptom differences",
+        paragraphs: [
+          "Cupping often looks like each board is slightly dished, with raised edges. Crowning looks like each board arches upward through the center. Lighting across the floor can make these shapes easier to see.",
+          "Solid hardwood and engineered hardwood can both react to moisture, though the acceptable conditions and repair options vary by product and installation method."
+        ],
+        bullets: [
+          "Cupping across a room often points to moisture imbalance from below or room conditions.",
+          "Crowning after sanding can happen when a cupped floor was sanded before it stabilized.",
+          "Cupping near a leak or exterior wall should be investigated quickly.",
+          "Crowning over concrete should trigger slab and humidity review."
+        ]
+      },
+      {
+        id: "what-to-check-first",
+        title: "What to check first",
+        paragraphs: [
+          "Start with moisture readings where appropriate. Compare the room, the flooring, and the subfloor or slab conditions. Also review HVAC stability, recent leaks, wet cleaning, crawlspace conditions, and whether the flooring was acclimated as required.",
+          "For engineered hardwood over concrete, include the concrete moisture and moisture barrier pathway in the review."
+        ],
+        bullets: [
+          "Document the shape and where it appears.",
+          "Measure room humidity and review recent HVAC changes.",
+          "Check for plumbing, appliance, crawlspace, or slab moisture.",
+          "Review acclimation and installation records before repair."
+        ]
+      },
+      {
+        id: "industry-alignment",
+        title: "Industry alignment and verification",
+        paragraphs: [
+          "NWFA-style hardwood guidance treats moisture content, jobsite conditions, acclimation, and moisture imbalance as central to hardwood diagnosis. The exact acceptable ranges and repair methods still depend on the product, subfloor, and installation instructions.",
+          "Avoid warranty assumptions. Keep moisture records, installation records, product labels, and photos if the issue may require retailer, manufacturer, or installer review."
+        ]
+      }
+    ],
+    example: [
+      "A hardwood floor cups across a room after a crawlspace humidity problem. The first step is not sanding. The first step is moisture diagnosis and stabilization.",
+      "Another floor crowns after it was sanded while still cupped. Once the boards dried and changed shape, the center became high. That repair path is different from a new moisture event."
+    ],
+    commonMistakes: [
+      "Sanding cupped hardwood before moisture stabilizes.",
+      "Assuming engineered hardwood cannot cup or crown.",
+      "Ignoring crawlspace, slab, or HVAC conditions.",
+      "Filling gaps or refinishing before checking moisture.",
+      "Treating all hardwood shape changes as normal seasonal movement."
+    ],
+    faq: [
+      {
+        question: "Which is worse, cupping or crowning?",
+        answer:
+          "Neither is automatically worse. Crowning can be more concerning when it follows sanding or active moisture, while cupping often points to moisture imbalance that must be stabilized before repair."
+      },
+      {
+        question: "Can engineered hardwood cup or crown?",
+        answer:
+          "Yes. Engineered hardwood can still react to moisture and humidity. Product construction may improve stability, but it does not remove moisture requirements."
+      },
+      {
+        question: "Can cupping go away on its own?",
+        answer:
+          "Sometimes minor cupping improves after moisture conditions stabilize, but the source should still be identified. Do not assume the floor is ready for sanding or repair."
+      },
+      {
+        question: "Should I sand a crowned floor?",
+        answer:
+          "Only after a professional evaluates moisture, prior repair history, and remaining wear layer. Sanding at the wrong time can make the issue worse."
+      }
+    ],
+    disclaimer: installConditionDisclaimer
+  },
+  {
+    slug: "moisture-vs-acclimation-problems",
+    title: "Moisture vs Acclimation Problems",
+    description:
+      "Compare flooring moisture problems with acclimation problems so you can decide whether the issue is active moisture, unstable jobsite conditions, or installation timing.",
+    metadataTitle: "Moisture vs Acclimation Problems in Flooring",
+    metadataDescription:
+      "Compare moisture and acclimation flooring problems, including symptoms, likely causes, urgency, first checks, concrete slabs, hardwood, LVP, and laminate.",
+    dateModified: "2026-06-08",
+    readTime: "9 min read",
+    primaryEcosystem: "planning-measuring-transitions",
+    secondaryEcosystems: ["lvp", "laminate", "hardwood-engineered-hardwood"],
+    materialTypes: ["lvp", "lvt", "laminate", "hardwood", "engineered-hardwood"],
+    topicCluster: "subfloor-prep",
+    relatedTools: ["flooring-square-footage-calculator", "waste-calculator"],
+    relatedGuides: [
+      "flooring-problem-comparison-guide",
+      "flooring-moisture-problems",
+      "concrete-floor-problems",
+      "flooring-movement-problems",
+      "how-to-test-concrete-moisture",
+      "moisture-level-too-high-for-flooring",
+      "can-you-install-lvp-over-concrete",
+      "can-engineered-hardwood-go-over-concrete",
+      "how-long-should-hardwood-acclimate",
+      "hardwood-acclimation-mistakes",
+      "what-happens-if-flooring-is-installed-too-soon",
+      "why-is-my-engineered-hardwood-separating",
+      "why-is-my-laminate-floor-separating"
+    ],
+    quickAnswer: [
+      "Moisture problems usually mean water, vapor, or humidity is actively affecting the flooring or substrate. Acclimation problems usually mean the flooring was installed before the material and room conditions were stable enough for that product.",
+      "They overlap. Poor acclimation can make a floor more vulnerable to movement, while active moisture can look like an acclimation problem. Start with moisture and jobsite conditions before assuming the product is defective."
+    ],
+    keySections: [
+      {
+        id: "side-by-side-comparison",
+        title: "Moisture vs acclimation: side-by-side comparison",
+        paragraphs: [
+          "Use this table to choose the first checks. If there are odor, stains, wet areas, slab concerns, or swelling, treat moisture as the higher priority."
+        ],
+        comparisonTable: {
+          columns: ["Issue", "What it usually means", "Likely symptoms", "Urgency", "What to check first"],
+          rows: [
+            ["Moisture problem", "Water, vapor, humidity, wet substrate, or trapped moisture is affecting the floor.", "Swelling, cupping, crowning, buckling, lifting, odor, stains, adhesive release, wet subfloor.", "High when active or hidden.", "Find the moisture source and test the substrate as required."],
+            ["Acclimation problem", "Material or jobsite conditions were not stable before installation.", "Gaps, movement, joint stress, cupping, crowning, expansion, or shrinkage after install.", "Inspect, especially if soon after install.", "Review delivery, storage, HVAC, humidity, temperature, and installation instructions."]
+          ]
+        }
+      },
+      {
+        id: "visual-symptom-differences",
+        title: "Visual symptom differences",
+        paragraphs: [
+          "Moisture problems often have physical clues: swelling, raised seams, odor, staining, soft areas, cupping, crowning, or adhesive release. Acclimation problems can look more like movement or dimensional change after the floor enters normal living conditions.",
+          "If the floor is over concrete, the distinction is especially important. A slab that was not tested or prepared correctly can create moisture problems that look like movement or acclimation problems."
+        ],
+        bullets: [
+          "Swelling or odor points more strongly toward moisture.",
+          "Movement soon after installation can point toward acclimation, room conditioning, or installation timing.",
+          "Concrete slab issues may require formal moisture testing before repair.",
+          "Hardwood and engineered hardwood need jobsite and material moisture review."
+        ]
+      },
+      {
+        id: "what-to-check-first",
+        title: "What to check first",
+        paragraphs: [
+          "Start with current conditions: indoor humidity, temperature, visible moisture, slab history, leaks, crawlspace conditions, and HVAC stability. Then compare those conditions with how the flooring was stored and installed.",
+          "Do not rely on a universal acclimation time or moisture number. Product instructions, NWFA-style wood guidance, RFCI/ASTM F710-style substrate preparation, and adhesive requirements all point back to written product limits and field verification."
+        ],
+        bullets: [
+          "Check whether the space was conditioned before, during, and after installation.",
+          "Check concrete moisture testing records for slab installations.",
+          "Review product acclimation, storage, carton, and temperature requirements.",
+          "Look for evidence of active water before closing gaps or replacing planks."
+        ]
+      },
+      {
+        id: "industry-alignment",
+        title: "Industry alignment and verification",
+        paragraphs: [
+          "NWFA principles emphasize wood moisture content, jobsite conditions, acclimation, and environmental stability. RFCI and ASTM F710-style resilient principles emphasize clean, dry, smooth, sound substrates. Tile and carpet systems also require substrate and environmental checks through TCNA/ANSI and CRI-style installation principles.",
+          "Because product limits vary, this guide cannot approve an installation or repair method. Use it to decide what to ask the installer or manufacturer to verify."
+        ]
+      }
+    ],
+    example: [
+      "Engineered hardwood separates over concrete two months after installation. The homeowner assumes it was not acclimated long enough, but the slab was never moisture tested. Concrete moisture should be checked before blaming acclimation alone.",
+      "A hardwood floor delivered from a cold truck and installed before HVAC was stable develops movement. That points more toward jobsite conditioning and acclimation review, while still checking moisture readings."
+    ],
+    commonMistakes: [
+      "Blaming acclimation when active moisture is still present.",
+      "Using a universal acclimation time instead of product instructions.",
+      "Ignoring concrete moisture records.",
+      "Repairing gaps before checking humidity and substrate moisture.",
+      "Installing new flooring over a wet or unstable jobsite."
+    ],
+    faq: [
+      {
+        question: "How do I know if it is moisture or acclimation?",
+        answer:
+          "Look for active moisture clues first: odor, stains, swelling, wet substrate, slab issues, leaks, or cupping. Then review storage, HVAC, humidity, temperature, and product acclimation instructions."
+      },
+      {
+        question: "Can poor acclimation cause gaps?",
+        answer:
+          "Yes. Installing material before it and the room are stable can contribute to movement or gaps, especially with wood and some floating floors."
+      },
+      {
+        question: "Can moisture look like an acclimation problem?",
+        answer:
+          "Yes. Concrete vapor, leaks, high humidity, or wet subfloors can create movement that looks like poor acclimation. Moisture should be ruled out before repair."
+      },
+      {
+        question: "Does LVP need acclimation or moisture testing?",
+        answer:
+          "It depends on the product and substrate. Some LVP products require room conditioning or acclimation, and many concrete installations have vapor or moisture requirements."
+      }
+    ],
+    disclaimer: installConditionDisclaimer
+  },
+  {
+    slug: "flooring-problem-comparison-guide",
+    title: "Flooring Problem Comparison Guide",
+    description:
+      "A practical guide for comparing common flooring symptoms like clicking, lifting, peaking, buckling, separation, moisture, concrete problems, cupping, and crowning.",
+    metadataTitle: "Flooring Problem Comparison Guide: Symptoms and Next Steps",
+    metadataDescription:
+      "Compare flooring symptoms side by side, including clicking, lifting, peaking, buckling, separation, moisture, concrete, cupping, crowning, and next steps.",
+    dateModified: "2026-06-08",
+    readTime: "10 min read",
+    primaryEcosystem: "planning-measuring-transitions",
+    secondaryEcosystems: ["lvp", "laminate", "hardwood-engineered-hardwood", "tile", "carpet-padding"],
+    materialTypes: ["lvp", "lvt", "laminate", "hardwood", "engineered-hardwood", "ceramic-tile", "porcelain-tile", "carpet"],
+    topicCluster: "installation-method",
+    relatedTools: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"],
+    relatedGuides: [
+      "clicking-vs-lifting-flooring",
+      "buckling-vs-peaking-flooring",
+      "cupping-vs-crowning-hardwood",
+      "moisture-vs-acclimation-problems",
+      "flooring-movement-problems",
+      "flooring-separation-problems",
+      "flooring-moisture-problems",
+      "concrete-floor-problems",
+      "why-is-my-lvp-floor-clicking",
+      "why-is-my-lvp-lifting",
+      "why-is-my-lvp-floor-peaking",
+      "why-is-my-laminate-floor-separating",
+      "why-is-my-engineered-hardwood-separating",
+      "can-you-install-lvp-over-concrete",
+      "how-to-test-concrete-moisture",
+      "what-is-pattern-match-in-carpet"
+    ],
+    quickAnswer: [
+      "Start with the visible symptom. Clicking usually points to movement. Lifting, peaking, and buckling point to pressure, moisture, or release. Separation points to joint stress, humidity, or support. Cupping and crowning point to moisture imbalance. Concrete problems often start below the finished floor.",
+      "This guide helps you choose the next detailed troubleshooting guide. If the symptom still does not fit, use the Problem Finder and compare the closest symptoms."
+    ],
+    keySections: [
+      {
+        id: "symptom-comparison-matrix",
+        title: "Flooring symptom comparison matrix",
+        paragraphs: [
+          "Use this matrix to choose the next path. Symptoms can overlap, so choose the most severe or most visible symptom first."
+        ],
+        comparisonTable: {
+          columns: ["Symptom", "What it usually means", "Urgency", "Best next step"],
+          rows: [
+            ["Clicking", "Movement under foot, low spot, joint stress, underlayment, or subfloor movement.", "Inspect if repeated.", "Read clicking vs lifting or the LVP clicking guide."],
+            ["Lifting", "Flooring is releasing, curling, or no longer seated.", "Medium to high.", "Read clicking vs lifting and the LVP lifting guide."],
+            ["Peaking", "Raised seam or ridge from pressure, heat, moisture, or blocked expansion.", "Inspect soon.", "Read buckling vs peaking and LVP peaking."],
+            ["Buckling", "Broader raised area, often pressure or moisture related.", "High if raised or wet.", "Read buckling vs peaking, laminate buckling, or LVP buckling."],
+            ["Separation", "Joints opening from movement, humidity, support, locking damage, or bond failure.", "Inspect if recurring.", "Read the separation hub and material-specific gap guide."],
+            ["Moisture", "Water, vapor, humidity, wet substrate, or slab conditions affecting the floor.", "High when active.", "Read moisture vs acclimation and the moisture hub."],
+            ["Concrete issues", "Slab moisture, cracks, flatness, contaminants, or adhesive failure below the floor.", "High before reinstall.", "Read the concrete hub and concrete moisture testing guide."],
+            ["Cupping/crowning", "Hardwood moisture imbalance or repair timing issue.", "Inspect before sanding.", "Read cupping vs crowning and hardwood moisture guides."]
+          ]
+        }
+      },
+      {
+        id: "visual-symptom-differences",
+        title: "Visual symptom differences",
+        paragraphs: [
+          "A sound is different from a raised surface. A raised seam is different from a wide buckled area. A gap is different from a swollen edge. A hardwood board with raised edges is different from one with a raised center.",
+          "When in doubt, take photos, mark locations, and note whether the symptom changes with weather, HVAC, foot traffic, rain, cleaning, or time of day."
+        ],
+        bullets: [
+          "Sound-only symptom: start with clicking, squeaking, hollow sound, or bounce.",
+          "Raised flooring: compare lifting, peaking, buckling, and swelling.",
+          "Open joints: compare separation, gapping, humidity, and locking damage.",
+          "Hardwood shape change: compare cupping, crowning, gapping, and acclimation.",
+          "Concrete or basement concerns: start with moisture testing and slab failure guidance."
+        ]
+      },
+      {
+        id: "what-to-check-first",
+        title: "What to check first",
+        paragraphs: [
+          "The first check is not a repair product. It is the flooring system: material, installation method, substrate, moisture, expansion space, and jobsite conditions.",
+          "Use calculators when the next step may involve replacement material, extra waste, transitions, or a partial reinstall. Use symptom guides and hubs when the next step is diagnosis."
+        ],
+        bullets: [
+          "Identify floor type: LVP, laminate, hardwood, engineered hardwood, tile, carpet, or transition area.",
+          "Identify installation method: floating, glue-down, nail-down, staple-down, mortar-set, or stretch-in carpet.",
+          "Check moisture, humidity, concrete slab, subfloor support, and expansion restrictions.",
+          "Choose the closest symptom guide, then follow the related hub."
+        ]
+      },
+      {
+        id: "industry-alignment",
+        title: "Industry alignment and verification",
+        paragraphs: [
+          "The comparison approach aligns with common flooring diagnostic logic across NWFA-style hardwood guidance, CRI carpet principles, TCNA/ANSI tile principles, and RFCI/ASTM F710-style resilient flooring substrate guidance: field conditions and product instructions come before surface fixes.",
+          "This site does not determine warranties, approve products, or replace installer judgment. It helps you ask better questions and choose the next guide before ordering materials or attempting repair."
+        ]
+      }
+    ],
+    example: [
+      "A homeowner sees a raised seam in floating LVP and hears clicking nearby. Instead of choosing one random repair, they compare peaking, clicking, and separation. The likely path is expansion pressure, flatness, or movement, with moisture ruled out if there was a recent leak or slab concern.",
+      "Another homeowner sees hardwood boards with raised edges after a humid basement season. They compare cupping and crowning, then check moisture conditions before sanding."
+    ],
+    commonMistakes: [
+      "Picking a repair before naming the symptom.",
+      "Ignoring moisture when movement appears after rain, leaks, or humidity changes.",
+      "Treating all raised flooring as the same problem.",
+      "Sanding hardwood shape changes before moisture stabilizes.",
+      "Skipping the product instructions and installer review."
+    ],
+    faq: [
+      {
+        question: "What flooring problem should I check first?",
+        answer:
+          "Check the most severe symptom first: moisture, buckling, lifting, soft areas, or trip hazards usually come before minor sound or cosmetic concerns."
+      },
+      {
+        question: "Can one floor have more than one problem?",
+        answer:
+          "Yes. A floor can click because of a low spot, then separate because the same joint keeps flexing. Moisture can also cause movement, swelling, and gaps."
+      },
+      {
+        question: "When should I use the Problem Finder?",
+        answer:
+          "Use the Problem Finder when you are not sure whether the symptom is clicking, lifting, peaking, buckling, separation, moisture, concrete, carpet seams, or another issue."
+      },
+      {
+        question: "Do industry standards give one universal repair?",
+        answer:
+          "No. NWFA, CRI, TCNA/ANSI, RFCI, ASTM-style substrate guidance, and manufacturer instructions point to field verification. Repair depends on product, installation method, substrate, and jobsite conditions."
       }
     ],
     disclaimer: installConditionDisclaimer

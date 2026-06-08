@@ -224,6 +224,8 @@ export const troubleshootingGuides: Guide[] = [
     topicCluster: "subfloor-prep",
     relatedTools: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"],
     relatedGuides: [
+      "clicking-vs-lifting-flooring",
+      "flooring-problem-comparison-guide",
       "flooring-movement-problems",
       "flooring-separation-problems",
       "flooring-moisture-problems",
@@ -684,6 +686,8 @@ export const troubleshootingGuides: Guide[] = [
     topicCluster: "subfloor-prep",
     relatedTools: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"],
     relatedGuides: [
+      "buckling-vs-peaking-flooring",
+      "flooring-problem-comparison-guide",
       "why-is-my-laminate-floor-separating",
       "laminate-floor-separating-what-to-check-first",
       "best-underlayment-for-laminate-flooring",
