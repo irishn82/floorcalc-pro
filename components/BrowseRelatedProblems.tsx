@@ -15,8 +15,8 @@ type BrowseRelatedProblemsProps = {
 
 export function BrowseRelatedProblems({
   links,
-  title = "Browse related problems",
-  description = "Compare nearby symptoms before deciding whether the issue is material, moisture, movement, subfloor, or layout related."
+  title = "People with this problem also investigate",
+  description = "Compare nearby symptoms and jobsite conditions before deciding whether the issue is material, moisture, movement, subfloor, or layout related."
 }: BrowseRelatedProblemsProps) {
   const uniqueLinks = links.filter((link, index, allLinks) => allLinks.findIndex((item) => item.href === link.href) === index);
 
@@ -33,7 +33,7 @@ export function BrowseRelatedProblems({
         {title}
       </h2>
       <p className="mt-2 text-sm leading-6 text-slate-600">{description}</p>
-      <div className="mt-3 grid gap-2 sm:grid-cols-2">
+      <div className="mt-3 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
         {uniqueLinks.map((link) => (
           <Link
             key={link.href}

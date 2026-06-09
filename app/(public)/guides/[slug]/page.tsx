@@ -845,7 +845,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
       })
     : null;
   const troubleshootingFlow = getTroubleshootingFlow(guide.slug);
-  const relatedProblemLinks = getRelatedProblemLinksForGuide(guide.slug).slice(0, 4);
+  const relatedProblemLinks = getRelatedProblemLinksForGuide(guide.slug);
   const relatedProblemHrefSet = new Set(relatedProblemLinks.map((link) => link.href));
   const nextRecommendedDescription = troubleshootingFlow
     ? "Use the next guide or calculator to narrow the likely cause before opening the floor, replacing material, or scheduling a repair."
