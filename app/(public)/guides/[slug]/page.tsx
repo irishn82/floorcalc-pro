@@ -55,6 +55,7 @@ const problemFinderCalloutSlugs = new Set<GuideSlug>([
   "buckling-vs-peaking-flooring",
   "cupping-vs-crowning-hardwood",
   "moisture-vs-acclimation-problems",
+  "flooring-symptom-comparison-guide",
   "flooring-problem-comparison-guide"
 ]);
 
@@ -271,11 +272,25 @@ const targetedNextStepTargets: Partial<
   "flooring-problem-comparison-guide": {
     primary: { type: "guide", slug: "flooring-movement-problems" },
     secondary: [
+      { type: "guide", slug: "flooring-symptom-comparison-guide" },
       { type: "guide", slug: "clicking-vs-lifting-flooring" },
       { type: "guide", slug: "buckling-vs-peaking-flooring" },
       { type: "guide", slug: "cupping-vs-crowning-hardwood" },
       { type: "guide", slug: "moisture-vs-acclimation-problems" },
       { type: "guide", slug: "flooring-separation-problems" },
+      { type: "guide", slug: "concrete-floor-problems" }
+    ]
+  },
+  "flooring-symptom-comparison-guide": {
+    primary: { type: "guide", slug: "flooring-problem-comparison-guide" },
+    secondary: [
+      { type: "guide", slug: "clicking-vs-lifting-flooring" },
+      { type: "guide", slug: "buckling-vs-peaking-flooring" },
+      { type: "guide", slug: "cupping-vs-crowning-hardwood" },
+      { type: "guide", slug: "moisture-vs-acclimation-problems" },
+      { type: "guide", slug: "flooring-movement-problems" },
+      { type: "guide", slug: "flooring-separation-problems" },
+      { type: "guide", slug: "flooring-moisture-problems" },
       { type: "guide", slug: "concrete-floor-problems" }
     ]
   },

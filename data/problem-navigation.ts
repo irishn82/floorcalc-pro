@@ -17,7 +17,7 @@ export type ProblemBrowseSection = {
 export const problemSymptomLinks: ProblemSymptomLink[] = [
   {
     label: "Compare symptoms",
-    href: "/guides/flooring-problem-comparison-guide",
+    href: "/guides/flooring-symptom-comparison-guide",
     description: "Use side-by-side comparisons when two flooring symptoms look similar."
   },
   {
@@ -106,6 +106,7 @@ export const problemBrowseSections: ProblemBrowseSection[] = [
     guideSlugs: [
       "flooring-movement-problems",
       "flooring-problem-comparison-guide",
+      "flooring-symptom-comparison-guide",
       "clicking-vs-lifting-flooring",
       "buckling-vs-peaking-flooring",
       "flooring-separation-problems",
@@ -299,6 +300,9 @@ export const problemBrowseSections: ProblemBrowseSection[] = [
 
 export const relatedProblemGuideSlugs: Partial<Record<GuideSlug, GuideSlug[]>> = {
   "flooring-movement-problems": [
+    "flooring-symptom-comparison-guide",
+    "clicking-vs-lifting-flooring",
+    "buckling-vs-peaking-flooring",
     "why-is-my-lvp-floor-clicking",
     "why-is-my-lvp-lifting",
     "why-is-my-lvp-floor-peaking",
@@ -310,6 +314,7 @@ export const relatedProblemGuideSlugs: Partial<Record<GuideSlug, GuideSlug[]>> =
     "why-does-my-floor-feel-hollow"
   ],
   "flooring-separation-problems": [
+    "flooring-symptom-comparison-guide",
     "why-is-my-laminate-floor-separating",
     "why-is-my-lvp-floor-separating",
     "why-is-my-engineered-hardwood-separating",
@@ -318,6 +323,7 @@ export const relatedProblemGuideSlugs: Partial<Record<GuideSlug, GuideSlug[]>> =
     "why-is-my-lvp-floor-buckling"
   ],
   "concrete-floor-problems": [
+    "flooring-symptom-comparison-guide",
     "how-to-test-concrete-moisture",
     "why-flooring-fails-over-concrete",
     "concrete-slab-cracks-under-flooring",
@@ -326,6 +332,9 @@ export const relatedProblemGuideSlugs: Partial<Record<GuideSlug, GuideSlug[]>> =
     "best-underlayment-for-concrete-floors"
   ],
   "flooring-moisture-problems": [
+    "flooring-symptom-comparison-guide",
+    "moisture-vs-acclimation-problems",
+    "cupping-vs-crowning-hardwood",
     "moisture-level-too-high-for-flooring",
     "how-to-test-concrete-moisture",
     "why-is-my-hardwood-floor-cupping",
@@ -334,6 +343,7 @@ export const relatedProblemGuideSlugs: Partial<Record<GuideSlug, GuideSlug[]>> =
     "signs-of-moisture-damage-under-flooring"
   ],
   "why-is-my-lvp-floor-clicking": [
+    "clicking-vs-lifting-flooring",
     "why-is-my-lvp-lifting",
     "why-is-my-lvp-floor-peaking",
     "why-is-my-lvp-floor-separating",
@@ -342,6 +352,7 @@ export const relatedProblemGuideSlugs: Partial<Record<GuideSlug, GuideSlug[]>> =
     "flooring-movement-problems"
   ],
   "why-is-my-laminate-floor-separating": [
+    "flooring-symptom-comparison-guide",
     "why-is-my-laminate-floor-buckling",
     "why-is-my-engineered-hardwood-separating",
     "flooring-movement-problems",
@@ -377,6 +388,7 @@ export const relatedProblemGuideSlugs: Partial<Record<GuideSlug, GuideSlug[]>> =
     "best-underlayment-for-concrete-floors"
   ],
   "how-to-test-concrete-moisture": [
+    "moisture-vs-acclimation-problems",
     "why-flooring-fails-over-concrete",
     "why-is-moisture-coming-through-my-slab",
     "common-basement-flooring-problems",
@@ -393,6 +405,7 @@ export const relatedProblemGuideSlugs: Partial<Record<GuideSlug, GuideSlug[]>> =
     "flooring-separation-problems"
   ],
   "why-is-my-lvp-lifting": [
+    "clicking-vs-lifting-flooring",
     "flooring-movement-problems",
     "flooring-moisture-problems",
     "why-is-my-lvp-floor-peaking",
@@ -400,6 +413,7 @@ export const relatedProblemGuideSlugs: Partial<Record<GuideSlug, GuideSlug[]>> =
     "can-you-install-lvp-over-concrete"
   ],
   "why-is-my-lvp-floor-peaking": [
+    "buckling-vs-peaking-flooring",
     "flooring-movement-problems",
     "why-is-my-lvp-floor-buckling",
     "why-is-my-lvp-lifting",
@@ -407,6 +421,7 @@ export const relatedProblemGuideSlugs: Partial<Record<GuideSlug, GuideSlug[]>> =
     "can-you-install-cabinets-over-floating-lvp"
   ],
   "why-is-my-lvp-floor-buckling": [
+    "buckling-vs-peaking-flooring",
     "flooring-movement-problems",
     "flooring-moisture-problems",
     "why-is-my-lvp-floor-peaking",
@@ -414,6 +429,8 @@ export const relatedProblemGuideSlugs: Partial<Record<GuideSlug, GuideSlug[]>> =
     "why-is-my-lvp-floor-separating"
   ],
   "why-is-my-engineered-hardwood-separating": [
+    "flooring-symptom-comparison-guide",
+    "moisture-vs-acclimation-problems",
     "flooring-movement-problems",
     "flooring-separation-problems",
     "flooring-moisture-problems",
@@ -452,5 +469,15 @@ export const relatedProblemGuideSlugs: Partial<Record<GuideSlug, GuideSlug[]>> =
     "why-does-my-floor-feel-hollow",
     "concrete-slab-cracks-under-flooring",
     "can-you-install-tile-over-tile"
+  ],
+  "flooring-symptom-comparison-guide": [
+    "clicking-vs-lifting-flooring",
+    "buckling-vs-peaking-flooring",
+    "cupping-vs-crowning-hardwood",
+    "moisture-vs-acclimation-problems",
+    "flooring-movement-problems",
+    "flooring-separation-problems",
+    "flooring-moisture-problems",
+    "concrete-floor-problems"
   ]
 };

@@ -101,7 +101,13 @@ export function getGuideIndustryReferences(guide: Guide) {
     }
   }
 
-  const referenceLimit = ["flooring-separation-problems", "concrete-floor-problems", "flooring-moisture-problems"].includes(guide.slug)
+  const referenceLimit = ["flooring-symptom-comparison-guide", "flooring-problem-comparison-guide"].includes(guide.slug)
+    ? 6
+    : [
+        "flooring-separation-problems",
+        "concrete-floor-problems",
+        "flooring-moisture-problems"
+      ].includes(guide.slug)
     ? 5
     : 4;
 

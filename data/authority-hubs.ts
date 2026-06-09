@@ -48,7 +48,7 @@ export const authorityHubPathways: AuthorityHubPathway[] = [
       "why-is-my-floor-squeaking",
       "why-does-my-floor-feel-hollow"
     ],
-    relatedHubs: ["flooring-separation-problems", "flooring-moisture-problems", "concrete-floor-problems"]
+    relatedHubs: ["flooring-symptom-comparison-guide", "flooring-separation-problems", "flooring-moisture-problems", "concrete-floor-problems"]
   },
   {
     slug: "flooring-separation-problems",
@@ -74,7 +74,7 @@ export const authorityHubPathways: AuthorityHubPathway[] = [
       "why-is-my-laminate-floor-buckling",
       "why-are-my-flooring-joints-opening"
     ],
-    relatedHubs: ["flooring-movement-problems", "flooring-moisture-problems", "concrete-floor-problems"]
+    relatedHubs: ["flooring-symptom-comparison-guide", "flooring-movement-problems", "flooring-moisture-problems", "concrete-floor-problems"]
   },
   {
     slug: "flooring-moisture-problems",
@@ -106,7 +106,7 @@ export const authorityHubPathways: AuthorityHubPathway[] = [
       "why-is-my-laminate-floor-buckling",
       "why-is-my-hardwood-floor-cupping"
     ],
-    relatedHubs: ["concrete-floor-problems", "flooring-separation-problems", "flooring-movement-problems"]
+    relatedHubs: ["flooring-symptom-comparison-guide", "concrete-floor-problems", "flooring-separation-problems", "flooring-movement-problems"]
   },
   {
     slug: "concrete-floor-problems",
@@ -133,7 +133,7 @@ export const authorityHubPathways: AuthorityHubPathway[] = [
       "common-basement-flooring-problems",
       "why-does-my-floor-feel-hollow"
     ],
-    relatedHubs: ["concrete-slab-flooring-guide", "flooring-moisture-problems", "flooring-separation-problems"]
+    relatedHubs: ["flooring-symptom-comparison-guide", "concrete-slab-flooring-guide", "flooring-moisture-problems", "flooring-separation-problems"]
   }
 ];
 

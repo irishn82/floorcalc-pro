@@ -3,6 +3,7 @@ import type { GuideSlug, ToolSlug } from "@/data/types";
 export const troubleshootingGuideSlugs: GuideSlug[] = [
   "flooring-movement-problems",
   "flooring-problem-comparison-guide",
+  "flooring-symptom-comparison-guide",
   "clicking-vs-lifting-flooring",
   "buckling-vs-peaking-flooring",
   "cupping-vs-crowning-hardwood",

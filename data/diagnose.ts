@@ -47,7 +47,7 @@ export const diagnosisOptions: DiagnosisOption[] = [
       "There are moisture signs, odor, swelling, cupping, or adhesive release.",
       "The floor feels soft, strongly bouncy, sagging, or unsafe."
     ],
-    recommendedGuides: ["flooring-movement-problems", "flooring-problem-comparison-guide", "why-is-my-lvp-floor-clicking"],
+    recommendedGuides: ["flooring-movement-problems", "flooring-symptom-comparison-guide", "why-is-my-lvp-floor-clicking"],
     relatedCalculators: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"],
     relatedChecklists: ["lvp-installation-checklist", "laminate-installation-checklist", "engineered-hardwood-installation-checklist"],
     relatedHubs: ["flooring-movement-problems", "flooring-separation-problems", "flooring-moisture-problems"]

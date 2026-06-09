@@ -4,6 +4,7 @@ import type { GuideSlug } from "@/data/types";
 import { getGuideBySlug, getRelatedGuides, getRelatedTools } from "@/lib/content/paths";
 
 const generalProblemHubSlugs: GuideSlug[] = [
+  "flooring-symptom-comparison-guide",
   "flooring-problem-comparison-guide",
   "flooring-movement-problems",
   "flooring-separation-problems",

@@ -168,6 +168,7 @@ export type GuideSlug =
   | "buckling-vs-peaking-flooring"
   | "cupping-vs-crowning-hardwood"
   | "moisture-vs-acclimation-problems"
+  | "flooring-symptom-comparison-guide"
   | "flooring-problem-comparison-guide";
 
 export type GuideSection = {
