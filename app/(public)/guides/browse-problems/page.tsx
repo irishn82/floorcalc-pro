@@ -41,6 +41,10 @@ export default function BrowseProblemsPage() {
               <Link href="/diagnose" className="font-bold text-accent-700 hover:text-accent-600">
                 Open the Flooring Problem Finder
               </Link>
+              <span className="text-slate-400">or</span>
+              <Link href="/decision-trees" className="font-bold text-accent-700 hover:text-accent-600">
+                use Decision Trees
+              </Link>
             </div>
             <div className="mt-5 max-w-5xl">
               <ProblemSymptomSelector showHubLink={false} />

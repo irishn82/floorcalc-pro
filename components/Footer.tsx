@@ -58,6 +58,7 @@ export function Footer() {
             <li><Link className="text-slate-400 transition-colors hover:text-white" href="/guides/how-much-flooring-do-i-need">How much flooring do I need?</Link></li>
             <li><Link className="text-slate-400 transition-colors hover:text-white" href="/guides/lvp-waste-percentage-guide">LVP waste guide</Link></li>
             <li><Link className="text-slate-400 transition-colors hover:text-white" href="/guides/flooring-transition-guide">Transition guide</Link></li>
+            <li><Link className="text-slate-400 transition-colors hover:text-white" href="/decision-trees">Guided decision trees</Link></li>
             <li><Link className="text-slate-400 transition-colors hover:text-white" href="/guides/browse-problems">Browse by symptom</Link></li>
             <li><Link className="text-slate-400 transition-colors hover:text-white" href="/guides/troubleshooting">Troubleshooting</Link></li>
           </ul>

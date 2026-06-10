@@ -90,6 +90,9 @@ export default function DiagnosePage() {
                 carpet seams, or tile cracking. Then follow the recommended guide path.
               </p>
               <div className="mt-3 flex flex-wrap gap-2">
+                <Link href="/decision-trees" className="rounded-md border border-line bg-white px-3 py-2 text-sm font-bold text-slate-700 hover:text-accent-700">
+                  Guided decision trees
+                </Link>
                 <Link href="/guides/troubleshooting" className="rounded-md border border-line bg-white px-3 py-2 text-sm font-bold text-slate-700 hover:text-accent-700">
                   Troubleshooting hub
                 </Link>

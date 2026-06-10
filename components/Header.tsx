@@ -11,7 +11,11 @@ const navItems: { href: string; label: string }[] = [
   { href: "/guides/browse-problems", label: "Browse Problems" }
 ];
 
-const mobileNavItems: { href: string; label: string }[] = [...navItems, { href: "/diagnose", label: "Diagnose" }];
+const mobileNavItems: { href: string; label: string }[] = [
+  ...navItems,
+  { href: "/diagnose", label: "Diagnose" },
+  { href: "/decision-trees", label: "Guided Help" }
+];
 
 export function Header() {
   return (

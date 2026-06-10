@@ -77,7 +77,7 @@ export function MobileNavigation({ items }: MobileNavigationProps) {
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.label}
-                  {item.href === "/guides/browse-problems" || item.href === "/diagnose" ? (
+                  {item.href === "/guides/browse-problems" || item.href === "/diagnose" || item.href === "/decision-trees" ? (
                     <span className="rounded-full border border-accent-100 bg-accent-50 px-2 py-0.5 text-[0.65rem] font-black uppercase tracking-wide text-accent-700">
                       Start here
                     </span>

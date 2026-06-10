@@ -50,6 +50,7 @@ const startHereCards: StartHereCard[] = [
     icon: "shield",
     primaryLink: { href: "/diagnose", label: "Open Problem Finder" },
     links: [
+      { href: "/decision-trees", label: "Guided Decision Trees" },
       { href: "/guides/browse-problems", label: "Browse Problems" },
       { href: "/guides/troubleshooting", label: "Troubleshooting" },
       { href: "/guides/flooring-movement-problems", label: "Flooring Movement Problems" },

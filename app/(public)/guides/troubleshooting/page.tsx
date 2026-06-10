@@ -57,6 +57,9 @@ export default function TroubleshootingGuidesPage() {
                 or movement, and avoid forcing repairs before the cause is clear.
               </p>
               <div className="mt-3 flex flex-wrap gap-4">
+                <Link href="/decision-trees" className="inline-flex text-sm font-bold text-accent-700 hover:text-accent-600">
+                  Use decision trees
+                </Link>
                 <Link href="/guides/browse-problems" className="inline-flex text-sm font-bold text-accent-700 hover:text-accent-600">
                   Browse problems by symptom
                 </Link>
