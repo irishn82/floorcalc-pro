@@ -15,7 +15,7 @@ import { websiteJsonLd } from "@/lib/seo/schema";
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: `${siteConfig.name} | Free Flooring Calculators and Guides`,
+    default: `${siteConfig.name} | Free Flooring Calculators, Guides & Troubleshooting`,
     template: `%s | ${siteConfig.name}`
   },
   description: siteConfig.description,
@@ -32,13 +32,13 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: siteConfig.url,
-    title: `${siteConfig.name} | Free Flooring Calculators and Guides`,
+    title: `${siteConfig.name} | Free Flooring Calculators, Guides & Troubleshooting`,
     description: siteConfig.description,
     siteName: siteConfig.name
   },
   twitter: {
     card: "summary_large_image",
-    title: `${siteConfig.name} | Free Flooring Calculators and Guides`,
+    title: `${siteConfig.name} | Free Flooring Calculators, Guides & Troubleshooting`,
     description: siteConfig.description
   }
 };

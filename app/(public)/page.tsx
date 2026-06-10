@@ -84,11 +84,10 @@ export default function HomePage() {
               Free flooring planning and troubleshooting
             </p>
             <h1 className="text-4xl font-black leading-[1.05] tracking-tight text-white sm:text-5xl lg:text-6xl">
-              Measure, troubleshoot, and plan flooring projects.
+              Free flooring calculators, troubleshooting guides, and installation help.
             </h1>
             <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-accent-100 sm:text-lg">
-              Use FloorCalc Pro to estimate materials, understand flooring problems, review installation conditions,
-              and prepare questions before ordering or repairing a floor.
+              Estimate LVP, laminate, hardwood, tile, and carpet materials. Diagnose clicking, separating, buckling, and moisture problems. Review installation conditions before ordering or repairing a floor.
             </p>
             <div className="mt-7 flex flex-col items-center justify-center gap-3 sm:flex-row">
               <Link

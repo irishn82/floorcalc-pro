@@ -464,9 +464,9 @@ const guideDrafts: GuideDraft[] = [
     title: "Why Is My LVP Floor Clicking?",
     description:
       "Troubleshoot common causes of LVP clicking, including uneven subfloors, locking joint stress, underlayment problems, and expansion issues.",
-    metadataTitle: "Why Is My LVP Floor Clicking? Causes, Checks, and When to Worry",
+    metadataTitle: "Why Is My LVP Floor Clicking? 6 Causes and What to Check",
     metadataDescription:
-      "LVP floor clicking often points to movement, low spots, locking stress, or underlayment issues. Learn what to check next and when to call an installer.",
+      "LVP clicking usually means a locking joint is under stress — and it gets worse if ignored. Learn the 6 most common causes and what to check before calling a pro.",
     readTime: "9 min read",
     primaryEcosystem: "lvp",
     secondaryEcosystems: ["lvt"],
@@ -488,7 +488,8 @@ const guideDrafts: GuideDraft[] = [
       "best-underlayment-for-lvp",
       "why-is-my-lvp-lifting",
       "can-you-install-cabinets-over-floating-lvp",
-      "can-you-install-lvp-over-concrete"
+      "can-you-install-lvp-over-concrete",
+      "why-is-my-laminate-floor-separating"
     ],
     quickAnswer: [
       "LVP clicking is usually caused by movement. Common causes include subfloor low spots, humps, debris under planks, damaged locking tabs, too-soft underlayment, tight expansion gaps, or heavy fixed objects trapping a floating floor.",
@@ -899,9 +900,9 @@ const guideDrafts: GuideDraft[] = [
     title: "Why Is My Laminate Floor Separating?",
     description:
       "Troubleshoot laminate flooring gaps and separation caused by subfloor movement, humidity, damaged locking joints, and installation details.",
-    metadataTitle: "Why Is My Laminate Floor Separating? Causes and Checks",
+    metadataTitle: "Why Is My Laminate Floor Separating? How to Find the Real Cause",
     metadataDescription:
-      "Learn why laminate floor gaps keep opening, what to check first, and how subfloor flatness, moisture, locking damage, and expansion issues matter.",
+      "Laminate gaps that keep coming back usually mean moisture, an uneven subfloor, or a pinched expansion gap. Learn how to find and fix the real cause.",
     dateModified: "2026-05-30",
     readTime: "9 min read",
     primaryEcosystem: "laminate",
@@ -1415,9 +1416,9 @@ const guideDrafts: GuideDraft[] = [
     title: "How Long Should Hardwood Acclimate?",
     description:
       "Learn why hardwood acclimation depends on moisture, indoor conditions, wood species, product type, and installer measurements.",
-    metadataTitle: "How Long Should Hardwood Acclimate? Moisture and Jobsite Guide",
+    metadataTitle: "How Long Should Hardwood Acclimate Before Installation?",
     metadataDescription:
-      "Understand hardwood acclimation, moisture testing, HVAC conditions, solid versus engineered products, and when flooring is ready to install.",
+      "Most hardwood needs 3–5 days to acclimate, but the real question is moisture content — not time. Learn when your floor is actually ready to install.",
     dateModified: "2026-05-30",
     readTime: "9 min read",
     primaryEcosystem: "hardwood-engineered-hardwood",
@@ -1598,9 +1599,9 @@ const guideDrafts: GuideDraft[] = [
     title: "Can Engineered Hardwood Go Over Concrete?",
     description:
       "Learn when engineered hardwood can be installed over concrete, including moisture testing, adhesives, floating systems, and slab prep.",
-    metadataTitle: "Can Engineered Hardwood Go Over Concrete? Slab Prep Guide",
+    metadataTitle: "Can Engineered Hardwood Go Over Concrete? Yes — With These Checks",
     metadataDescription:
-      "Find out when engineered hardwood can go over concrete and what to check for moisture, slab flatness, adhesives, and installation method.",
+      "Engineered hardwood can go over concrete, but moisture, slab flatness, and the right installation method all have to line up first. Here's the full checklist.",
     dateModified: "2026-05-30",
     readTime: "9 min read",
     primaryEcosystem: "hardwood-engineered-hardwood",
@@ -2171,9 +2172,9 @@ const guideDrafts: GuideDraft[] = [
     title: "What Is Pattern Match in Carpet?",
     description:
       "Understand carpet pattern match, repeat length and width, seam planning, bow and skew, extra material, and installer layout decisions.",
-    metadataTitle: "What Is Pattern Match in Carpet? Repeat, Waste, and Seams",
+    metadataTitle: "What Is Pattern Match in Carpet? Set Match vs. Drop Match",
     metadataDescription:
-      "Learn how carpet pattern match works, why repeat size matters, and how patterned carpet affects waste, seams, roll drops, and layout planning.",
+      "Pattern match determines how much extra carpet you need and where seams land. Learn the difference between set match and drop match before you order.",
     readTime: "9 min read",
     primaryEcosystem: "carpet-padding",
     materialTypes: ["carpet"],

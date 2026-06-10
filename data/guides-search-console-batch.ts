@@ -1767,9 +1767,9 @@ const guideDrafts: GuideDraft[] = [
     title: "Why Are My LVP Seams Showing?",
     description:
       "Troubleshoot visible LVP seams caused by locking system damage, uneven subfloors, expansion movement, lighting, debris, plank end joints, or product tolerance.",
-    metadataTitle: "Why Are My LVP Seams Showing? Visible Vinyl Plank Joint Causes",
+    metadataTitle: "Why Are My LVP Seams Showing? What's Normal vs. a Problem",
     metadataDescription:
-      "Learn why LVP seams or joints show, what is normal, and what to check first for locking damage, subfloor movement, expansion, debris, and lighting.",
+      "Some LVP seam visibility is normal, but raised edges or widening gaps usually point to subfloor issues, expansion pressure, or locking damage. Here's how to tell.",
     readTime: "8 min read",
     primaryEcosystem: "lvp",
     secondaryEcosystems: ["lvt"],

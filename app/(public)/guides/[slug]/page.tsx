@@ -32,7 +32,8 @@ import { getGuideIndustryReferences } from "@/lib/content/industry-references";
 import { getRelatedProblemLinksForGuide } from "@/lib/content/problem-navigation";
 import { getTroubleshootingFlow } from "@/lib/content/troubleshooting-flow";
 import { createSeoMetadata } from "@/lib/seo/metadata";
-import { articleJsonLd, faqJsonLd } from "@/lib/seo/schema";
+import { articleJsonLd, breadcrumbListJsonLd, faqJsonLd, howToJsonLd } from "@/lib/seo/schema";
+import { guideHowToSteps } from "@/lib/seo/howto-steps";
 
 type GuidePageProps = {
   params: Promise<{ slug: string }>;
@@ -292,6 +293,17 @@ const targetedNextStepTargets: Partial<
       { type: "guide", slug: "flooring-separation-problems" },
       { type: "guide", slug: "flooring-moisture-problems" },
       { type: "guide", slug: "concrete-floor-problems" }
+    ]
+  },
+  "why-is-my-lvp-floor-clicking": {
+    primary: { type: "guide", slug: "why-is-my-lvp-floor-separating" },
+    secondary: [
+      { type: "guide", slug: "why-is-my-lvp-lifting" },
+      { type: "guide", slug: "subfloor-flatness-requirements-lvp" },
+      { type: "guide", slug: "best-underlayment-for-lvp" },
+      { type: "guide", slug: "flooring-movement-problems" },
+      { type: "guide", slug: "why-is-my-laminate-floor-separating" },
+      { type: "tool", slug: "flooring-square-footage-calculator" }
     ]
   },
   "why-is-my-floor-squeaking": {
@@ -812,6 +824,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
     notFound();
   }
 
+  const howToSteps = guideHowToSteps[guide.slug as keyof typeof guideHowToSteps];
   const relatedTools = getRelatedTools(guide.relatedTools);
   const explicitRelatedGuides = getRelatedGuides(guide.relatedGuides ?? []);
   const ecosystemRelatedGuides = getEcosystemRelatedGuides(guide);
@@ -965,6 +978,26 @@ export default async function GuidePage({ params }: GuidePageProps) {
         })}
       />
       <JsonLd data={faqJsonLd(guide.faq)} />
+      {howToSteps ? (
+        <JsonLd
+          data={howToJsonLd({
+            name: guide.title,
+            description: guide.description,
+            path: `/guides/${guide.slug}`,
+            steps: howToSteps
+          })}
+        />
+      ) : null}
+      <JsonLd
+        data={breadcrumbListJsonLd([
+          { label: "Home", href: "/" },
+          { label: "Guides", href: "/guides" },
+          ...(primaryEcosystem
+            ? [{ label: primaryEcosystem.shortTitle, href: `/guides/ecosystems/${primaryEcosystem.slug}` }]
+            : []),
+          { label: guide.title }
+        ])}
+      />
       <article className="bg-white py-8 sm:py-10">
         <Container>
           <Breadcrumbs

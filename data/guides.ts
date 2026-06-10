@@ -1084,9 +1084,9 @@ export const guides: Guide[] = [
     title: "Which Direction Should Flooring Run?",
     description:
       "A practical guide to choosing flooring direction for plank floors, hallways, open layouts, stairs, transitions, natural light, and waste planning.",
-    metadataTitle: "Which Direction Should Flooring Run? Hallways, Light, and Layout",
+    metadataTitle: "Which Direction Should Flooring Run? Hallways, Open Layouts & Stairs",
     metadataDescription:
-      "Learn how to choose flooring direction for hallways, open rooms, natural light, stairs, transitions, waste, plank layout, and movement planning.",
+      "Running planks the wrong direction creates awkward cuts and bad transitions. Learn how to pick the right direction for hallways, open layouts, and stairs.",
     dateModified: "2026-05-30",
     readTime: "8 min read",
     primaryEcosystem: "planning-measuring-transitions",

@@ -213,9 +213,9 @@ export const troubleshootingGuides: Guide[] = [
     title: "Why Is My LVP Lifting?",
     description:
       "Troubleshoot LVP lifting by checking subfloor flatness, moisture, glue-down adhesive, floating floor movement, cabinets, expansion gaps, and acclimation.",
-    metadataTitle: "Why Is My LVP Lifting? Causes, Checks, and Repair Clues",
+    metadataTitle: "Why Is My LVP Lifting? Causes of Curling or Popping Vinyl Planks",
     metadataDescription:
-      "Learn why LVP lifts, curls, pops, or releases and what to check first for floating floors, glue-down floors, moisture, subfloors, and expansion pressure.",
+      "LVP lifting at the edges usually means moisture, a missed expansion gap, or subfloor movement. Learn what to check first before pulling up any planks.",
     dateModified: "2026-05-24",
     readTime: "9 min read",
     primaryEcosystem: "lvp",
@@ -232,6 +232,8 @@ export const troubleshootingGuides: Guide[] = [
       "why-is-my-lvp-floor-separating",
       "why-is-my-lvp-floor-peaking",
       "why-is-my-lvp-floor-buckling",
+      "why-is-my-lvp-floor-clicking",
+      "why-is-my-laminate-floor-separating",
       "can-you-install-cabinets-over-floating-lvp",
       "how-long-should-lvp-acclimate",
       "subfloor-flatness-requirements-lvp",
@@ -568,9 +570,9 @@ export const troubleshootingGuides: Guide[] = [
     title: "Why Is My LVP Floor Separating?",
     description:
       "Troubleshoot LVP plank gaps and separation by checking locking system stress, subfloor flatness, moisture, expansion space, cabinets, and long runs.",
-    metadataTitle: "Why Is My LVP Floor Separating? Gaps and Locking Joint Causes",
+    metadataTitle: "Why Is My LVP Floor Separating? Gaps Between Planks Explained",
     metadataDescription:
-      "Learn why LVP floors separate, including locking system stress, uneven subfloors, expansion gaps, moisture, cabinets, long runs, and poor installation.",
+      "LVP planks separating usually means the locking system is under stress. Check subfloor flatness, expansion gaps, and moisture before replacing boards.",
     dateModified: "2026-05-26",
     readTime: "9 min read",
     primaryEcosystem: "lvp",
