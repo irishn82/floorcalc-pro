@@ -14,9 +14,9 @@ import { getPrimaryGuidesByEcosystem, getSecondaryGuidesByEcosystem, getTroubles
 import { createSeoMetadata } from "@/lib/seo/metadata";
 
 export const metadata: Metadata = createSeoMetadata({
-  title: "Flooring Guides",
+  title: "Flooring Guides — Installation, Troubleshooting, and Measurement",
   description:
-    "Browse flooring planning, troubleshooting, installation, moisture, concrete, carpet seam, transition, and material estimating guides.",
+    "Browse flooring guides for measuring rooms, planning LVP, laminate, hardwood, tile, and carpet installs, and diagnosing clicking, separating, and moisture problems.",
   path: "/guides"
 });
 

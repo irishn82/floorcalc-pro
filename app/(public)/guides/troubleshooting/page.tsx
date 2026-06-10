@@ -15,9 +15,9 @@ import { troubleshootingProblemGroups } from "@/lib/content/troubleshooting-flow
 import { createSeoMetadata } from "@/lib/seo/metadata";
 
 export const metadata: Metadata = createSeoMetadata({
-  title: "Flooring Troubleshooting Guides",
+  title: "Flooring Troubleshooting Guides — Clicking, Gaps, Lifting, and Moisture",
   description:
-    "Find practical flooring troubleshooting guides for clicking floors, visible carpet seams, LVP lifting, loose transitions, hollow floors, laminate gaps, and hardwood cupping.",
+    "Find practical guides for clicking LVP, laminate gaps, vinyl lifting, hollow floors, visible carpet seams, loose transitions, and hardwood cupping.",
   path: "/guides/troubleshooting"
 });
 

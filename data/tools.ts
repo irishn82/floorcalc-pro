@@ -8,9 +8,9 @@ export const tools: Tool[] = [
     description:
       "Add multiple rooms, calculate each room's area, and estimate base square footage for hard surface flooring or carpet planning.",
     flooringSystem: "General flooring planning: hard surface and carpet base square footage",
-    metadataTitle: "Flooring Square Footage Calculator",
+    metadataTitle: "Free Flooring Square Footage Calculator — Multi-Room Estimates",
     metadataDescription:
-      "Use this free flooring square footage calculator to measure rooms, estimate total square footage, and optionally convert to cartons.",
+      "Measure multiple rooms, add closets and hallways, and get total square footage in seconds. Free calculator for LVP, hardwood, laminate, tile, and carpet.",
     calculatorType: "square-footage",
     formula: "Length x width = square feet for each room. Add each room together for the total project square footage.",
     notes: [
@@ -45,9 +45,9 @@ export const tools: Tool[] = [
     description:
       "Estimate extra hard surface flooring material for cuts, layout choices, damage, and future repairs.",
     flooringSystem: "Hard surface material planning: LVP, laminate, hardwood, tile, and similar products",
-    metadataTitle: "Flooring Waste Calculator",
+    metadataTitle: "Flooring Waste Calculator — How Much Extra to Order",
     metadataDescription:
-      "Calculate 5%, 10%, 15%, or 20% flooring waste, total material needed, and optional carton or box count.",
+      "Calculate how much extra flooring to buy. Choose 5%, 10%, 15%, or 20% waste and get a total order quantity with optional carton count.",
     calculatorType: "waste",
     formula: "Base square footage x waste percentage = extra square footage. Base square footage + extra = total material needed.",
     notes: [
@@ -82,9 +82,9 @@ export const tools: Tool[] = [
     description:
       "Estimate square footage for stair treads and risers using stair count, tread depth, riser height, and stair width.",
     flooringSystem: "Stairs: carpet, runners, hard surface treads, risers, and stair material planning",
-    metadataTitle: "Stair Flooring Calculator",
+    metadataTitle: "Stair Flooring Calculator — Treads, Risers, and Square Footage",
     metadataDescription:
-      "Estimate flooring square footage for stairs, including treads and risers, with a simple free calculator.",
+      "Estimate stair flooring material by entering stair count, tread depth, riser height, and stair width. Covers carpet, hard surface treads, and risers.",
     calculatorType: "stairs",
     formula:
       "Number of stairs x (tread depth + riser height) x stair width = square inches. Divide by 144 for square feet.",
@@ -120,9 +120,9 @@ export const tools: Tool[] = [
     description:
       "Estimate carpet drops, seam likelihood, and approximate carpet roll area based on room size and carpet roll width.",
     flooringSystem: "Carpet only: broadloom carpet roll layout and seam planning",
-    metadataTitle: "Carpet Seam Planner",
+    metadataTitle: "Carpet Seam Planner — Estimate Seams for 12 ft or 15 ft Rolls",
     metadataDescription:
-      "Plan carpet seam likelihood with room dimensions and 12 ft or 15 ft carpet roll widths for broadloom carpet.",
+      "Enter room dimensions and roll width to estimate carpet drops, seam count, and likely seam placement. Free tool for broadloom carpet planning.",
     calculatorType: "carpet-seam",
     formula:
       "Room width divided by carpet roll width = number of drops, rounded up. Drops minus one estimates seam count.",
@@ -158,9 +158,9 @@ export const tools: Tool[] = [
     description:
       "Estimate extra material for patterned flooring or carpet when repeat size can increase layout waste.",
     flooringSystem: "Patterned carpet and patterned hard surface products",
-    metadataTitle: "Pattern Repeat Calculator",
+    metadataTitle: "Pattern Repeat Calculator — Extra Material for Patterned Flooring",
     metadataDescription:
-      "Estimate adjusted flooring material for patterned carpet or hard surface products, with optional carton or box conversion.",
+      "Estimate extra material for patterned carpet or hard surface products. Enter repeat size to get an adjusted waste percentage and total order quantity.",
     calculatorType: "pattern-repeat",
     formula:
       "Base waste percentage plus a repeat-size adjustment estimates total waste. Room square footage x adjusted waste = extra material.",
@@ -196,9 +196,9 @@ export const tools: Tool[] = [
     description:
       "Estimate total linear feet of transitions for doorways, openings, reducers, end caps, and related trim.",
     flooringSystem: "Hard surface transitions: T-molds, reducers, end caps, thresholds, and stair noses",
-    metadataTitle: "Flooring Transition Estimator",
+    metadataTitle: "Flooring Transition Estimator — T-Molds, Reducers, and End Caps",
     metadataDescription:
-      "Estimate linear feet of flooring transition strips based on opening count and average opening width.",
+      "Estimate linear feet of flooring transitions for doorways and openings. Works for T-molds, reducers, end caps, and thresholds.",
     calculatorType: "transition",
     formula:
       "Number of openings x average opening width = estimated linear feet of transition material.",

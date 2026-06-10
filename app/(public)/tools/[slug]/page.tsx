@@ -14,7 +14,7 @@ import { tools } from "@/data/tools";
 import { getToolIndustryReferences } from "@/lib/content/industry-references";
 import { getRelatedTools, getToolBySlug, getToolRelatedGuides } from "@/lib/content/paths";
 import { createSeoMetadata } from "@/lib/seo/metadata";
-import { faqJsonLd, toolJsonLd } from "@/lib/seo/schema";
+import { breadcrumbListJsonLd, faqJsonLd, toolJsonLd } from "@/lib/seo/schema";
 
 type ToolPageProps = {
   params: Promise<{ slug: string }>;
@@ -56,6 +56,11 @@ export default async function ToolPage({ params }: ToolPageProps) {
 
   return (
     <>
+      <JsonLd data={breadcrumbListJsonLd([
+        { label: "Home", href: "/" },
+        { label: "Tools", href: "/tools" },
+        { label: tool.shortTitle }
+      ])} />
       <JsonLd data={toolJsonLd({ name: tool.title, description: tool.description, path: `/tools/${tool.slug}` })} />
       <JsonLd data={faqJsonLd(tool.faq)} />
       <section className="bg-white py-8 sm:py-10">
