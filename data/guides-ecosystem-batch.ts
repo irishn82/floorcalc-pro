@@ -467,6 +467,7 @@ const guideDrafts: GuideDraft[] = [
     metadataTitle: "Why Is My LVP Floor Clicking? 6 Causes and What to Check",
     metadataDescription:
       "LVP clicking usually means a locking joint is under stress — and it gets worse if ignored. Learn the 6 most common causes and what to check before calling a pro.",
+    dateModified: "2026-06-10",
     readTime: "9 min read",
     primaryEcosystem: "lvp",
     secondaryEcosystems: ["lvt"],
@@ -628,7 +629,7 @@ const guideDrafts: GuideDraft[] = [
     title: "Can You Install Cabinets Over Floating LVP?",
     description:
       "Learn why floating LVP usually should not be trapped under fixed cabinets and how to plan kitchens, islands, and built-ins.",
-    metadataTitle: "Can You Install Cabinets Over Floating LVP? Kitchen Planning Guide",
+    metadataTitle: "Can You Install Cabinets Over Floating LVP?",
     metadataDescription:
       "Understand cabinets over floating LVP, expansion gaps, islands, built-ins, toe kicks, transitions, and manufacturer requirements.",
     readTime: "8 min read",
@@ -809,7 +810,7 @@ const guideDrafts: GuideDraft[] = [
     title: "Can Laminate Flooring Be Waterproof?",
     description:
       "Understand waterproof laminate claims, water-resistant seams, wet rooms, spills, pet accidents, and when LVP or tile may be safer.",
-    metadataTitle: "Can Laminate Flooring Be Waterproof? What Homeowners Should Know",
+    metadataTitle: "Can Laminate Flooring Be Waterproof? What to Know",
     metadataDescription:
       "Learn the difference between waterproof and water-resistant laminate, where it works best, and what to check before wet-area installation.",
     readTime: "8 min read",
@@ -903,7 +904,7 @@ const guideDrafts: GuideDraft[] = [
     metadataTitle: "Why Is My Laminate Floor Separating? How to Find the Real Cause",
     metadataDescription:
       "Laminate gaps that keep coming back usually mean moisture, an uneven subfloor, or a pinched expansion gap. Learn how to find and fix the real cause.",
-    dateModified: "2026-05-30",
+    dateModified: "2026-06-10",
     readTime: "9 min read",
     primaryEcosystem: "laminate",
     materialTypes: ["laminate"],
@@ -1419,7 +1420,7 @@ const guideDrafts: GuideDraft[] = [
     metadataTitle: "How Long Should Hardwood Acclimate Before Installation?",
     metadataDescription:
       "Most hardwood needs 3–5 days to acclimate, but the real question is moisture content — not time. Learn when your floor is actually ready to install.",
-    dateModified: "2026-05-30",
+    dateModified: "2026-06-10",
     readTime: "9 min read",
     primaryEcosystem: "hardwood-engineered-hardwood",
     materialTypes: ["hardwood", "engineered-hardwood"],
@@ -1599,10 +1600,10 @@ const guideDrafts: GuideDraft[] = [
     title: "Can Engineered Hardwood Go Over Concrete?",
     description:
       "Learn when engineered hardwood can be installed over concrete, including moisture testing, adhesives, floating systems, and slab prep.",
-    metadataTitle: "Can Engineered Hardwood Go Over Concrete? Yes — With These Checks",
+    metadataTitle: "Can Engineered Hardwood Go Over Concrete? Yes, With Checks",
     metadataDescription:
       "Engineered hardwood can go over concrete, but moisture, slab flatness, and the right installation method all have to line up first. Here's the full checklist.",
-    dateModified: "2026-05-30",
+    dateModified: "2026-06-10",
     readTime: "9 min read",
     primaryEcosystem: "hardwood-engineered-hardwood",
     materialTypes: ["engineered-hardwood"],
@@ -1807,10 +1808,11 @@ const guideDrafts: GuideDraft[] = [
     title: "Why Is My Hardwood Floor Cupping?",
     description:
       "Understand hardwood floor cupping, moisture imbalance, leaks, humidity, crawlspaces, and why the source should be fixed before sanding.",
-    metadataTitle: "Why Is My Hardwood Floor Cupping? Moisture Causes and Next Steps",
+    metadataTitle: "Why Is My Hardwood Floor Cupping? Moisture and Next Steps",
     metadataDescription:
       "Learn why hardwood floors cup, how moisture imbalance causes board edges to rise, and what to check before repair or sanding.",
-    readTime: "9 min read",
+    dateModified: "2026-06-10",
+    readTime: "11 min read",
     primaryEcosystem: "hardwood-engineered-hardwood",
     materialTypes: ["hardwood", "engineered-hardwood"],
     topicCluster: "subfloor-prep",
@@ -1835,43 +1837,63 @@ const guideDrafts: GuideDraft[] = [
         id: "what-cupping-means",
         title: "What cupping means",
         paragraphs: [
-          "Wood changes shape as it gains or loses moisture. When the underside of a board is wetter than the top, the edges can lift. That visible shape is cupping.",
-          "Cupping can happen after leaks, high humidity, crawlspace moisture, wet mopping, slab moisture, or installation before the flooring and home were ready."
+          "Wood is hygroscopic: it constantly absorbs and releases moisture until it reaches equilibrium with the air around it. When the underside of a board carries more moisture than the top, the bottom face expands more than the top face and the board's edges lift. That visible dish shape across each board is cupping.",
+          "Cupping is a moisture gradient made visible — the floor is reporting that conditions above and below the boards are different. It can follow leaks, high indoor humidity, crawlspace or basement moisture, wet mopping, slab moisture migrating upward, or installation before the flooring and the building were at equilibrium.",
+          "The direction of the deformation is diagnostic. Edges up (cupping) means the bottom is wetter. Center up (crowning) means the top is wetter — or that a previously cupped floor was sanded flat before it finished drying. That distinction is why the cause must be found before any repair."
+        ]
+      },
+      {
+        id: "moisture-numbers",
+        title: "The numbers professionals check",
+        paragraphs: [
+          "Wood flooring professionals work against published guidance from the National Wood Flooring Association (NWFA). Two of its benchmarks explain most cupping cases:",
+          "First, moisture content difference at installation. NWFA guidelines call for solid strip flooring (boards under about 3 inches wide) to be within roughly 4 percentage points of the subfloor's moisture content, and wider plank to be within about 2 points. A floor installed outside those tolerances starts its life with a built-in gradient and can cup as it equalizes.",
+          "Second, living conditions. Most wood flooring is manufactured to perform in roughly 30 to 50 percent relative humidity and normal room temperatures — the range NWFA guidance and most manufacturer instructions describe. A home that swings far outside that range seasonally, or a room over an unconditioned crawlspace, keeps the wood cycling.",
+          "Over concrete, slab moisture is measured before installation with a calcium chloride test (ASTM F1869) or in-situ relative humidity probes (ASTM F2170). A slab that was never tested is a common root cause when a floor over concrete cups months after installation."
+        ],
+        bullets: [
+          "Compare board and subfloor moisture content with a pin or pinless meter — multiple boards, multiple rooms.",
+          "Solid strip: flooring within ~4 points of subfloor MC; wide plank: within ~2 points (NWFA guidance).",
+          "Keep indoor RH in the 30–50% band most products are built for.",
+          "Over slabs, ask whether ASTM F1869 or F2170 testing was done before installation."
         ]
       },
       {
         id: "moisture-sources",
         title: "Common moisture sources",
         paragraphs: [
-          "Look beyond the surface. A dishwasher leak, humid crawlspace, basement moisture, plumbing issue, wet subfloor, or seasonal humidity swing can all affect hardwood.",
-          "Engineered hardwood can also cup or distort under the wrong conditions. It is more stable than solid wood in many situations, but it is not immune to moisture."
+          "Look beyond the surface. A dishwasher or supply-line leak, a humid crawlspace, basement moisture, a plumbing issue inside a wall, a wet subfloor that never dried after construction, or a large seasonal humidity swing can all feed the underside of a hardwood floor.",
+          "Crawlspaces deserve special attention: bare earth releases water vapor continuously, and standard building practice is a ground vapor retarder (commonly 6-mil polyethylene) plus appropriate ventilation or conditioning. A floor that cups every summer over a crawlspace is usually a crawlspace problem, not a flooring problem.",
+          "Engineered hardwood is more dimensionally stable than solid wood because of its cross-ply construction, but it is not immune. Sustained moisture from below can cup, peel, or delaminate engineered boards too — stability buys time and tolerance, not invincibility."
         ],
         bullets: [
-          "Check nearby appliances and plumbing.",
-          "Inspect crawlspaces and basements for moisture.",
-          "Review indoor humidity and HVAC operation.",
-          "Consider whether wet cleaning methods are contributing."
+          "Check appliances, plumbing penetrations, and exterior doors near the affected area.",
+          "Inspect crawlspaces for missing or damaged ground cover and standing water.",
+          "Review indoor humidity across seasons — a $20 hygrometer answers this.",
+          "Consider whether wet mopping or steam cleaning is adding water to the floor."
         ]
       },
       {
         id: "repair-timing",
         title: "Why repair timing matters",
         paragraphs: [
-          "Sanding a cupped floor too early can create a crowned floor later if the boards flatten after the moisture source is corrected. The floor needs to stabilize before permanent repair decisions.",
-          "A flooring professional may use moisture meters to compare boards, subfloor, and room conditions before recommending sanding, replacement, or waiting."
+          "Sanding a cupped floor flat while the moisture gradient still exists is the classic mistake. The sander removes the raised edges; then the boards finish drying, the cupping relaxes, and the floor crowns — now the centers are high because material was removed from the edges. NWFA guidance is explicit that a cupped floor must stabilize before resanding.",
+          "Stabilizing means the moisture source is fixed and meter readings across boards, subfloor, and reference areas have stopped changing — typically checked over weeks, not days. Mild cupping often improves substantially on its own once the gradient is gone.",
+          "A flooring professional will compare moisture readings between affected and unaffected areas, top and bottom of the assembly where accessible, and the room's humidity history before recommending waiting, refinishing, or board replacement."
         ]
       }
     ],
     example: [
-      "A hardwood kitchen floor cups near the sink. The surface looks dry, but a slow supply-line leak has been wetting the subfloor. Sanding the floor before fixing the leak would hide the symptom temporarily while the real problem continues.",
-      "The better sequence is to stop the leak, dry the assembly, verify moisture levels, and then decide whether repair or refinishing is needed."
+      "A hardwood kitchen floor cups near the sink. The surface looks dry, but a slow supply-line leak has been wetting the subfloor. A moisture meter shows the affected boards reading several points higher than boards across the room — the gradient NWFA tolerances are designed to prevent. Sanding now would flatten the symptom and set up a crowned floor later.",
+      "The better sequence: stop the leak, dry the assembly (which may take weeks), confirm readings have stabilized and match unaffected areas, and then decide whether the remaining deformation justifies refinishing or replacement."
     ],
     commonMistakes: [
-      "Sanding cupped boards before the moisture source is corrected.",
-      "Assuming cupping is only a finish problem.",
-      "Ignoring crawlspace or slab moisture.",
-      "Using wet cleaning methods on hardwood.",
-      "Installing replacement boards before the site is stable."
+      "Sanding cupped boards before the moisture source is corrected and readings stabilize — the direct path to a crowned floor.",
+      "Assuming cupping is a finish problem rather than a moisture gradient.",
+      "Ignoring crawlspace ground cover, ventilation, or slab moisture below the floor.",
+      "Wet mopping or steam cleaning hardwood, which feeds moisture into the wood.",
+      "Installing replacement boards before board and subfloor moisture content are back within tolerance of each other.",
+      "Letting indoor humidity swing far outside the 30–50% range the product was built for."
     ],
     faq: [
       {
@@ -1995,7 +2017,8 @@ const guideDrafts: GuideDraft[] = [
     metadataTitle: "Carpet Padding Thickness Guide: What Pad Should You Use?",
     metadataDescription:
       "Learn how carpet padding thickness, density, room use, stairs, and carpet type affect comfort, wear, and installation planning.",
-    readTime: "8 min read",
+    dateModified: "2026-06-10",
+    readTime: "10 min read",
     primaryEcosystem: "carpet-padding",
     materialTypes: ["carpet", "carpet-padding"],
     topicCluster: "installation-method",
@@ -2007,72 +2030,88 @@ const guideDrafts: GuideDraft[] = [
       "what-is-pattern-match-in-carpet"
     ],
     quickAnswer: [
-      "Carpet padding should be chosen by carpet type, room use, and manufacturer requirements. Thicker pad is not always better. A pad that is too soft or too thick can shorten carpet life, create wrinkles, or feel unstable.",
-      "Bedrooms may prioritize comfort, while stairs, hallways, and dense carpet styles often need firmer support."
+      "The most widely used residential benchmark — published in HUD's UM 72a cushion standard and echoed by Carpet and Rug Institute (CRI) guidance and most carpet manufacturers — is a pad no thicker than 7/16 inch with a minimum density around 6 pounds per cubic foot for typical cut-pile carpet. Berber and other low-profile loop carpets usually need a thinner, firmer pad, commonly 3/8 inch or less at around 8 pounds density.",
+      "Thicker is not better. A pad that is too thick or too soft lets the carpet flex excessively, which breaks down the backing, opens seams, and causes wrinkles that require restretching."
     ],
     keySections: [
       {
         id: "thickness-density",
-        title: "Thickness and density work together",
+        title: "The numbers: thickness and density work together",
         paragraphs: [
-          "Padding thickness affects feel underfoot, but density affects support. A thick, low-density pad can feel plush at first and still allow too much movement under the carpet.",
-          "The carpet manufacturer's pad requirements should be the starting point. Some carpet styles require specific pad thickness, density, or cushion type."
+          "Padding thickness controls feel underfoot; density controls support and longevity. The figures used across the industry come from HUD's UM 72a standard for carpet cushion and from carpet manufacturer warranty requirements, and they cluster tightly: for residential cut pile, a maximum thickness of 7/16 inch and a minimum density of 6 pounds per cubic foot. Many manufacturers' warranties are written around exactly those numbers.",
+          "For low-profile carpets — berber, level loop, and many patterned styles — the typical requirement drops to 3/8 inch or thinner at a higher density, often 8 pounds. Loop carpet flexes less, so a thick pad underneath lets the backing hinge at every step and the loops fatigue.",
+          "Density is the spec that separates pads that feel identical in the store. A 7/16-inch rebond pad at 5 pounds and one at 8 pounds feel similar underfoot on day one; after five years in a hallway they perform very differently. When in doubt, choose density over thickness.",
+          "The carpet manufacturer's written pad requirement overrides all generic numbers — some styles void their texture-retention warranty over the wrong cushion."
+        ],
+        bullets: [
+          "Residential cut pile: max 7/16 in thick, min ~6 lb/ft³ density (HUD UM 72a benchmark).",
+          "Berber/loop styles: commonly 3/8 in or thinner at ~8 lb density.",
+          "Rebond (bonded urethane) is the most common pad type and is fine for most carpets when it meets the density spec.",
+          "Check the carpet's warranty page — pad requirements are usually printed there."
         ]
       },
       {
         id: "room-use",
         title: "Match pad to the room",
         paragraphs: [
-          "Bedrooms can often use a more comfort-focused pad. Family rooms, stairs, hallways, and rental properties usually benefit from firmer support because they see more traffic.",
-          "Stairs should be handled carefully. Too much cushion on stairs can affect footing and carpet stability."
+          "Bedrooms can run toward the comfort end of the allowed range — thicker within the 7/16 inch cap, softer feel. Family rooms, hallways, and rental units benefit from firmer, denser pad (8 lb is a common upgrade) because traffic, not comfort, is what wears those rooms out.",
+          "Stairs are the strictest case. CRI installation guidance and most installers call for a thinner, denser cushion on stairs because thick soft pad rounds the tread edge, affects footing, and lets the carpet shift under repeated pivoting loads. Many stair installations also wrap the nose differently (waterfall versus cap-and-band), which changes how the pad is cut and secured.",
+          "If the same carpet runs through bedrooms and stairs, it is normal — and correct — to use two different pads on the same job."
         ],
         bullets: [
-          "Use firmer pad in high-traffic rooms.",
-          "Check stair pad requirements before installation.",
-          "Consider moisture-resistant pad in basements where appropriate.",
-          "Do not reuse old pad unless it is clean, sound, and approved for the new carpet."
+          "High-traffic rooms: prioritize density (8 lb common) over plushness.",
+          "Stairs: thinner and denser, per CRI installation guidance and the carpet's requirements.",
+          "Consider moisture-resistant or barrier pads in basements and pet households.",
+          "Do not reuse old pad: compressed cushion has already lost the support the new carpet needs, and old pad may not meet the new warranty's spec."
         ]
       },
       {
         id: "concrete-and-basements",
         title: "Padding over concrete",
         paragraphs: [
-          "Concrete basement floors can introduce moisture concerns. Carpet and pad over concrete should be planned around dryness, ventilation, and the product system.",
-          "If the slab has recurring moisture, carpet may not be the best choice until the issue is addressed."
+          "Concrete introduces moisture questions before comfort questions. A below-grade slab should be checked for dampness history, and recurring slab moisture needs to be resolved before carpet goes down — cushion and carpet over a damp slab grow odor and mildew problems no pad can prevent.",
+          "Where the slab is sound and dry, synthetic-fiber or moisture-resistant pads are commonly chosen for basements, and CRI's installation standard (CRI 104/105) is the reference installers use for stretch-in installation over any subfloor, including power-stretching requirements that prevent later wrinkling.",
+          "Wrinkles that appear within months of installation usually trace to one of two causes: pad outside the carpet's spec, or carpet that was knee-kicked instead of power-stretched. Both are preventable at planning time."
         ]
       }
     ],
     example: [
-      "A homeowner wants soft carpet in a bedroom and the same carpet on stairs. The bedroom may allow a more cushioned pad, but the stairs need a firmer pad that meets the carpet requirements and supports safe footing.",
-      "The best pad is not one number for the whole house. It is a match between carpet, room, and use."
+      "A homeowner wants soft carpet in a bedroom and the same carpet on the stairs. The bedroom gets a 7/16-inch, 8-pound rebond pad — full thickness for comfort, with density for longevity. The stairs get a 3/8-inch, 8-pound pad so the tread edges stay defined and the carpet stays tight.",
+      "Same carpet, two pads, both inside the manufacturer's spec. That is normal practice, not an upsell."
     ],
     commonMistakes: [
-      "Choosing the thickest pad without checking density.",
-      "Using soft pad under carpet that needs firm support.",
-      "Installing bedroom-style cushion on stairs without approval.",
-      "Reusing old stained or compressed padding.",
-      "Ignoring concrete moisture in basements."
+      "Choosing the thickest pad on the rack without checking density — thickness is comfort, density is lifespan.",
+      "Exceeding 7/16 inch under cut pile, or using soft thick pad under berber and loop styles that need 3/8 inch or less.",
+      "Installing bedroom-style cushion on stairs, where footing and edge wear demand firmer support.",
+      "Reusing old, compressed padding under new carpet — it has already lost its support and can void the new warranty.",
+      "Ignoring slab moisture in basements; no pad fixes a damp floor.",
+      "Skipping the power stretcher: knee-kicked installs are a leading cause of early wrinkling under any pad."
     ],
     faq: [
       {
+        question: "What thickness of carpet pad is best?",
+        answer:
+          "For typical residential cut pile: no thicker than 7/16 inch with at least 6 lb/ft³ density, per the HUD UM 72a benchmark most warranties reference. Berber and loop styles usually need 3/8 inch or thinner at around 8 lb density."
+      },
+      {
         question: "Is thicker carpet padding better?",
         answer:
-          "Not always. Carpet needs support, and too much cushion can create movement, wrinkles, or premature wear."
+          "No. Past the 7/16 inch benchmark, extra thickness lets the carpet flex too much, which fatigues the backing, stresses seams, and causes wrinkles. Density is the spec that buys longevity."
       },
       {
         question: "Should stair carpet use thick padding?",
         answer:
-          "Stairs usually need firm, supportive padding. Follow the carpet and installer requirements."
+          "No — stairs need thinner, denser cushion so tread edges stay defined and footing stays safe. Using a different pad on stairs than in bedrooms is normal practice."
       },
       {
         question: "Can I reuse old carpet pad?",
         answer:
-          "Usually it is better to replace it, especially if it is compressed, stained, damaged, or not approved for the new carpet."
+          "Usually not. Compressed pad has already lost the support the new carpet needs, and pad outside the manufacturer's spec can void the new carpet's warranty."
       },
       {
         question: "Does carpet padding affect seams?",
         answer:
-          "It can affect how carpet feels and lays, but seam layout also depends on roll width, room shape, pattern, and installer planning."
+          "Yes — pad that is too soft or thick lets seams flex and peak. Seam layout itself depends on roll width, room shape, and installer planning, which the CRI installation standards cover."
       }
     ],
     disclaimer: manufacturerDisclaimer
@@ -2082,7 +2121,7 @@ const guideDrafts: GuideDraft[] = [
     title: "What Direction Should Carpet Run?",
     description:
       "Plan carpet direction by pile lay, light, traffic flow, roll width, seams, stairs, hallways, and connected rooms.",
-    metadataTitle: "What Direction Should Carpet Run? Pile, Light, and Seam Planning",
+    metadataTitle: "What Direction Should Carpet Run? Pile, Light, and Seams",
     metadataDescription:
       "Learn how carpet direction affects appearance, seams, traffic flow, stairs, hallways, pattern matching, and room layout.",
     readTime: "8 min read",
@@ -2175,6 +2214,7 @@ const guideDrafts: GuideDraft[] = [
     metadataTitle: "What Is Pattern Match in Carpet? Set Match vs. Drop Match",
     metadataDescription:
       "Pattern match determines how much extra carpet you need and where seams land. Learn the difference between set match and drop match before you order.",
+    dateModified: "2026-06-10",
     readTime: "9 min read",
     primaryEcosystem: "carpet-padding",
     materialTypes: ["carpet"],
@@ -2584,7 +2624,8 @@ const guideDrafts: GuideDraft[] = [
     metadataTitle: "How Flat Should a Floor Be for Tile? Substrate Prep Guide",
     metadataDescription:
       "Understand tile floor flatness, lippage risk, large-format tile prep, substrate movement, and why installer requirements matter.",
-    readTime: "9 min read",
+    dateModified: "2026-06-10",
+    readTime: "10 min read",
     primaryEcosystem: "tile",
     materialTypes: ["ceramic-tile", "porcelain-tile", "stone-tile"],
     topicCluster: "subfloor-prep",
@@ -2597,72 +2638,87 @@ const guideDrafts: GuideDraft[] = [
       "what-size-grout-line-should-i-use"
     ],
     quickAnswer: [
-      "Tile floors need a flat, stable substrate so tiles are supported and edges line up cleanly. Large-format tile usually needs a flatter surface than small tile because dips and humps can create lippage and poor mortar coverage.",
-      "The exact flatness tolerance depends on tile size, substrate, installation method, and industry or product requirements. Verify with the installer and setting material instructions."
+      "The tile industry's ANSI A108.02 specification sets the flatness benchmarks installers work to: for tile with all edges shorter than 15 inches, the substrate should vary no more than 1/4 inch in 10 feet. For any tile with an edge 15 inches or longer — most of today's popular large-format sizes — the requirement tightens to 1/8 inch in 10 feet.",
+      "Those are industry installation standards, not suggestions. A floor outside tolerance should be flattened with patching compound or self-leveling underlayment before tile is set, because mortar buildup during setting is not an approved substitute."
     ],
     keySections: [
       {
         id: "flatness",
-        title: "Why flatness matters for tile",
+        title: "The actual numbers: 1/4 inch vs 1/8 inch in 10 feet",
         paragraphs: [
-          "Tile is rigid. If it is installed over dips, humps, or movement, the finished floor can show lippage, hollow spots, cracked grout, cracked tile, or loose pieces.",
-          "Flatness is especially important with large-format tile because a long tile cannot bend to follow a wavy floor."
+          "Tile is rigid. If it is installed over dips, humps, or movement, the finished floor shows it as lippage (adjacent edges at different heights), hollow-sounding spots, cracked grout, cracked tile, or loose pieces.",
+          "The ANSI A108.02 installation specification — the workmanship standard referenced throughout the TCNA Handbook — defines how flat is flat enough. Tile with all edges under 15 inches: maximum variation of 1/4 inch in 10 feet (and no more than 1/16 inch in 1 foot). Tile with any edge 15 inches or longer: 1/8 inch in 10 feet (and 1/16 inch in 2 feet). A 12 x 24 plank tile, an 8 x 48 wood-look plank, and a 24 x 48 slab tile all fall under the tighter rule.",
+          "The same specification also addresses lippage directly: for common grout joint widths, allowable lippage is 1/32 inch plus the tile's inherent warpage. That tiny budget is why the substrate tolerance for large tile is so strict — a long, slightly warped plank tile over a wavy floor has nowhere to hide."
+        ],
+        bullets: [
+          "Small/medium tile (all edges < 15 in): flat within 1/4 in over 10 ft.",
+          "Large-format tile (any edge ≥ 15 in): flat within 1/8 in over 10 ft.",
+          "Check with a 10-ft straightedge laid in several directions; measure gaps with a feeler or tape.",
+          "Allowable lippage is roughly 1/32 in plus tile warpage — flatness is what protects it."
         ]
       },
       {
         id: "substrate",
         title: "Stable substrate comes first",
         paragraphs: [
-          "Tile needs a suitable surface below it. Wood framing, concrete, backer board, uncoupling membranes, mortar beds, and existing tile all have different preparation requirements.",
-          "Movement is a major concern. A floor can be flat but still not strong or stable enough for tile."
+          "Flatness is necessary but not sufficient — the substrate also has to be stiff and sound. The TCNA Handbook's floor methods are built around limiting deflection: the commonly cited benchmarks are L/360 maximum deflection for ceramic tile and L/720 for natural stone, because stone tolerates even less flex before cracking.",
+          "Wood framing, concrete, backer board, uncoupling membranes, mortar beds, and existing tile each have their own preparation requirements in the Handbook's methods. A floor can be perfectly flat and still bounce enough to crack grout within a year.",
+          "Movement accommodation also has to be planned, not improvised. TCNA's movement joint guidance (commonly referenced as detail EJ171) calls for soft joints at the perimeter, at restraining surfaces, and at intervals across larger floors."
         ],
         bullets: [
-          "Check for loose panels or cracked concrete.",
-          "Correct humps and low spots before setting tile.",
-          "Use the substrate system recommended for the project.",
-          "Plan movement joints where required."
+          "Check for loose subfloor panels, bouncy spans, and cracked concrete before anything else.",
+          "Ceramic tile floors are designed around L/360 deflection; natural stone around L/720.",
+          "Correct humps and dips with patching or self-leveling compounds made for tile assemblies.",
+          "Plan movement joints per the TCNA Handbook rather than grouting everything rigid."
         ]
       },
       {
         id: "large-format",
         title: "Large-format tile raises the stakes",
         paragraphs: [
-          "Large-format tile makes layout look clean, but it shows substrate problems quickly. Mortar selection, trowel size, back-buttering, and leveling systems may be part of the installer plan.",
-          "Trying to flatten a bad floor with extra mortar during setting is not the same as proper prep."
+          "Large-format tile looks clean precisely because the joints are few and the planes are long — which is also why it exposes substrate problems immediately. Meeting the 1/8-inch-in-10-feet tolerance usually means flattening work: skim coating, patching, or pouring self-leveling underlayment before layout begins.",
+          "Setting technique matters too. Large and heavy tile installations commonly use a large-and-heavy-tile (LHT) mortar, deliberate trowel direction, and back-buttering to achieve the mortar coverage the standards expect — commonly cited as at least 80% coverage in dry areas and 95% in wet areas, with full support under corners and edges.",
+          "Tile leveling clip systems can help hold edges flush while mortar cures, but they manage lippage within the tolerance — they cannot rescue a floor that was never flattened. Extra mortar buildup during setting is explicitly not a substitute for substrate prep."
         ]
       }
     ],
     example: [
-      "A homeowner chooses 24 x 48 porcelain tile for a kitchen. The old floor has a shallow dip near the patio door. With large tile, that dip can create lippage and poor support.",
-      "The installer addresses the flatness before layout instead of trying to force the tile into plane during installation."
+      "A homeowner chooses 24 x 48 porcelain for a kitchen. A 10-foot straightedge laid across the floor shows a 3/8-inch dip near the patio door — three times the 1/8-inch tolerance ANSI A108.02 allows for tile that size.",
+      "The installer pours self-leveling underlayment to bring the area into tolerance before layout. It adds a day and a few hundred dollars, and it is the difference between a flat floor and a row of rocking, lipped tiles at the room's focal point."
     ],
     commonMistakes: [
-      "Confusing flat with level.",
-      "Installing large-format tile over a wavy floor.",
-      "Ignoring substrate movement.",
-      "Using mortar buildup as a substitute for prep.",
-      "Skipping expansion and movement joint planning."
+      "Confusing flat with level — tile needs flat; level is a separate question.",
+      "Installing large-format tile over a floor checked against the small-tile tolerance (1/4 in) instead of the large-format one (1/8 in).",
+      "Ignoring deflection — a flat but bouncy floor still cracks grout and tile.",
+      "Using mortar buildup during setting as a substitute for flattening beforehand.",
+      "Skipping movement joints at the perimeter and across large floors.",
+      "Relying on leveling clips to fix a substrate that was never brought into tolerance."
     ],
     faq: [
       {
+        question: "How flat does a floor need to be for tile?",
+        answer:
+          "Per ANSI A108.02: within 1/4 inch over 10 feet for tile with all edges under 15 inches, and within 1/8 inch over 10 feet for tile with any edge 15 inches or longer."
+      },
+      {
         question: "Does tile need a level floor?",
         answer:
-          "Tile needs a flat and stable floor. Level may matter in some rooms, but flatness and support are critical."
+          "Tile needs a flat and stable floor — that is what the standards regulate. Level (no slope) is a separate question that matters mainly for drains and appliances."
       },
       {
         question: "Why does large tile need a flatter floor?",
         answer:
-          "Large tiles bridge more surface area, so humps and dips can create lippage and weak support."
+          "Large tiles bridge more surface, so a dip becomes lippage or a hollow spot, and the lippage allowance is only about 1/32 inch plus tile warpage. That is why the tolerance tightens to 1/8 inch in 10 feet."
       },
       {
         question: "Can thinset fix an uneven floor?",
         answer:
-          "Thinset is not a general floor-leveling shortcut. Prep should be done before tile is set."
+          "No. Building up mortar during setting is not an approved substitute for prep. Out-of-tolerance floors should be flattened first with patching or self-leveling compounds made for tile assemblies."
       },
       {
         question: "Can cracked concrete be tiled?",
         answer:
-          "It depends on whether the crack is stable, moving, or needs an isolation system. Have it evaluated before installation."
+          "It depends on whether the crack is dormant or moving. Stable shrinkage cracks are often treated with crack isolation membranes; structural or moving cracks need evaluation before any tile goes down."
       }
     ],
     disclaimer: manufacturerDisclaimer

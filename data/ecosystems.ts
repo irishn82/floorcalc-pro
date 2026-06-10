@@ -94,7 +94,7 @@ export const guideEcosystems: GuideEcosystem[] = [
     shortTitle: "Planning",
     description:
       "Guides for square footage, attic stock, reducers, T-molds, stair noses, cartons, and general project planning.",
-    metadataTitle: "Flooring Planning Guides: Square Footage, Waste, and Transitions",
+    metadataTitle: "Flooring Planning Guides: Measuring, Waste, Transitions",
     metadataDescription:
       "Practical guides for measuring rooms, estimating waste, ordering attic stock, and planning transitions, T-molds, reducers, and stair noses.",
     relatedTools: [

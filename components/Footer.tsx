@@ -65,8 +65,14 @@ export function Footer() {
         </div>
       </Container>
 
-      <Container className="flex flex-col gap-2 border-t border-white/[0.07] py-5 text-xs text-slate-600 sm:flex-row sm:items-center sm:justify-between">
+      <Container className="flex flex-col gap-3 border-t border-white/[0.07] py-5 text-xs text-slate-600 sm:flex-row sm:items-center sm:justify-between">
         <p>Copyright {new Date().getFullYear()} FloorCalc Pro. All rights reserved.</p>
+        <nav aria-label="Legal" className="flex flex-wrap gap-x-4 gap-y-1">
+          <Link className="transition-colors hover:text-slate-400" href="/about">About</Link>
+          <Link className="transition-colors hover:text-slate-400" href="/contact">Contact</Link>
+          <Link className="transition-colors hover:text-slate-400" href="/privacy-policy">Privacy Policy</Link>
+          <Link className="transition-colors hover:text-slate-400" href="/terms">Terms of Use</Link>
+        </nav>
         <p>Estimates are for planning only - verify quantities before ordering.</p>
       </Container>
     </footer>

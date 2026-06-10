@@ -158,7 +158,7 @@ export const tools: Tool[] = [
     description:
       "Estimate extra material for patterned flooring or carpet when repeat size can increase layout waste.",
     flooringSystem: "Patterned carpet and patterned hard surface products",
-    metadataTitle: "Pattern Repeat Calculator — Extra Material for Patterned Flooring",
+    metadataTitle: "Pattern Repeat Calculator — Patterned Flooring Waste",
     metadataDescription:
       "Estimate extra material for patterned carpet or hard surface products. Enter repeat size to get an adjusted waste percentage and total order quantity.",
     calculatorType: "pattern-repeat",
@@ -196,7 +196,7 @@ export const tools: Tool[] = [
     description:
       "Estimate total linear feet of transitions for doorways, openings, reducers, end caps, and related trim.",
     flooringSystem: "Hard surface transitions: T-molds, reducers, end caps, thresholds, and stair noses",
-    metadataTitle: "Flooring Transition Estimator — T-Molds, Reducers, and End Caps",
+    metadataTitle: "Flooring Transition Estimator — T-Molds and Reducers",
     metadataDescription:
       "Estimate linear feet of flooring transitions for doorways and openings. Works for T-molds, reducers, end caps, and thresholds.",
     calculatorType: "transition",

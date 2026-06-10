@@ -578,53 +578,105 @@ export const guides: Guide[] = [
     slug: "flooring-transition-guide",
     title: "Flooring Transition Guide",
     description:
-      "A clear overview of common flooring transitions, when they are used, and what to measure before ordering.",
+      "How to choose between T-molds, reducers, end caps, thresholds, and stair noses — and where floating floors require transitions by rule, not preference.",
     metadataTitle: "Flooring Transition Guide: T-Molds, Reducers, End Caps",
     metadataDescription:
-      "Learn the difference between T-molds, reducers, end caps, thresholds, and stair noses for flooring projects.",
-    dateModified: "2026-05-22",
-    readTime: "5 min read",
+      "Learn which transition profile fits each situation — T-molds, reducers, end caps, thresholds, and stair noses — plus expansion rules for floating floors.",
+    dateModified: "2026-06-10",
+    readTime: "9 min read",
     primaryEcosystem: "planning-measuring-transitions",
     materialTypes: ["transitions", "lvp", "lvt", "laminate", "engineered-hardwood", "ceramic-tile", "sheet-vinyl", "carpet"],
     topicCluster: "transitions",
     relatedTools: ["transition-estimator", "flooring-square-footage-calculator", "stair-flooring-calculator"],
+    relatedGuides: [
+      "t-mold-vs-reducer-vs-end-cap",
+      "why-is-my-transition-strip-moving",
+      "which-direction-should-flooring-run",
+      "flooring-direction-mistakes",
+      "why-are-my-flooring-joints-opening",
+      "how-much-flooring-do-i-need"
+    ],
     sections: [
       {
         id: "why-transitions-matter",
         title: "Why transitions matter",
         paragraphs: [
-          "Transitions cover gaps, finish edges, handle height changes, and help separate flooring areas where required. They also affect how finished and durable a project feels.",
-          "For floating floors, transitions can be part of the installation system because the floor needs space to expand and contract."
+          "Transitions cover gaps, finish exposed edges, handle height changes between materials, and separate flooring areas where the installation method requires it. They affect how finished a project looks, but for floating floors they are also functional: the transition conceals the expansion space the floor needs to move.",
+          "Floating LVP and laminate floors expand and contract with temperature and humidity. Manufacturers typically require an expansion gap of roughly 1/4 to 1/2 inch at every wall and fixed object — the exact figure is printed in the installation instructions for your specific product. Transitions are how that gap stays covered at doorways and openings without pinning the floor down.",
+          "Skipping a required transition is not a style choice. It is one of the most common causes of buckling, peaking, and joint separation in floating floors, and it can void the product warranty."
         ]
       },
       {
         id: "common-types",
-        title: "Common transition types",
+        title: "The five common transition profiles",
         paragraphs: [
-          "A T-mold is commonly used between floors of similar height. A reducer is used when one floor is higher than the other. An end cap can finish an edge at carpet, a sliding door, or another termination point.",
-          "Stair noses are separate stair trim pieces and should be checked carefully against the flooring product."
+          "Most residential projects use some combination of five profiles. Choosing between them comes down to two questions: are the two surfaces the same height, and does the edge terminate or continue?"
+        ],
+        subsections: [
+          {
+            title: "T-mold",
+            paragraphs: [
+              "A T-shaped profile used between two hard surfaces of similar height — for example, LVP in a hallway meeting LVP in a bedroom. The stem of the T sits in the gap between the two floors, and neither floor is pinned, which preserves the expansion space on both sides."
+            ]
+          },
+          {
+            title: "Reducer",
+            paragraphs: [
+              "A sloped profile used where one floor is higher than the other, such as laminate meeting sheet vinyl or a slab. Reducers come in overlap versions (for floating floors, so the flooring stays free to move) and flush versions (for glue-down or nail-down floors)."
+            ]
+          },
+          {
+            title: "End cap (square nose)",
+            paragraphs: [
+              "Finishes an edge where the flooring stops — at a sliding door track, a fireplace hearth, exterior doorways, or where flooring meets carpet. Where hard surface meets carpet, installers may instead use a Z-bar or carpet trim depending on how the carpet edge is secured."
+            ]
+          },
+          {
+            title: "Threshold",
+            paragraphs: [
+              "A wider, flatter profile used at exterior doors and some interior doorways. If accessibility matters, the ADA Standards (Section 303) allow vertical level changes up to 1/4 inch as-is, and changes between 1/4 and 1/2 inch only when beveled at a slope no steeper than 1:2. Anything taller requires a ramped transition. Those rules technically govern public and commercial spaces, but they are a useful benchmark for aging-in-place residential planning too."
+            ]
+          },
+          {
+            title: "Stair nose",
+            paragraphs: [
+              "Finishes the front edge of stair treads and landings. Stair noses are product-specific: a floating floor that is free to move in a room must still be fully fastened on stairs — flooring manufacturers consistently prohibit floating installations on stair treads. Verify that a matching stair nose exists for your exact product line before committing to it for a staircase."
+            ]
+          }
         ],
         bullets: [
-          "T-mold: similar-height floors.",
-          "Reducer: height change between surfaces.",
-          "End cap: finished edge or termination.",
-          "Stair nose: stair edge or landing edge."
+          "T-mold: hard surface to hard surface, similar height, both sides keep expansion space.",
+          "Reducer: height difference between surfaces; overlap style for floating floors.",
+          "End cap: finished termination at doors, hearths, and carpet edges.",
+          "Threshold: exterior doors and accessibility-sensitive openings.",
+          "Stair nose: stair and landing edges, always fastened, never floated."
+        ]
+      },
+      {
+        id: "when-required",
+        title: "Where floating floors require transitions",
+        paragraphs: [
+          "Beyond doorways, most floating floor manufacturers set a maximum continuous run length — commonly somewhere in the 30 to 50 foot range depending on the product — beyond which the floor must be broken with a transition so expansion stress does not accumulate. Many also require breaks at doorways between rooms, in L-shaped runs, and where the floor changes direction.",
+          "Tile has its own version of this rule: the TCNA Handbook and ANSI specifications (movement joint guidance commonly referenced as EJ171) call for movement accommodation joints where tile meets restraining surfaces like walls, columns, and dissimilar floors, and at regular intervals in larger installations. That is why a tile-to-wood junction should not be hard-grouted shut.",
+          "These run-length and placement rules are printed in the installation instructions of the specific product you buy. Read them before planning a large open-concept layout — a continuous floor through several rooms may simply not be allowed for your product."
         ]
       },
       {
         id: "what-to-measure",
-        title: "What to measure",
+        title: "What to measure before ordering",
         paragraphs: [
-          "Count each doorway, opening, stair edge, and termination point. Measure the width of each opening in feet or inches, then convert to the purchasing unit used by the trim supplier.",
-          "When openings vary, measure each one separately instead of relying on an average."
+          "Count every doorway, opening, stair edge, and termination point in the project, then measure the width of each one. Standard transition moldings are commonly sold in lengths around 72 to 94 inches, so most single doorways consume one piece, and wide openings may need two with a seam.",
+          "When openings vary, measure each one separately instead of averaging. A 6-foot opening and two 3-foot doorways all consume whole pieces — averaging undercounts the order.",
+          "Also note the height of each adjoining surface. The profile you need (T-mold versus reducer versus end cap) depends on the height relationship, and the same doorway can need different profiles depending on which floors end up meeting there."
         ]
       },
       {
         id: "product-requirements",
-        title: "Check product requirements",
+        title: "Match the transition system to the product",
         paragraphs: [
-          "Some products require transitions at certain room lengths, doorway widths, or changes in direction. Skipping required transitions can create movement issues and may conflict with the written installation requirements.",
-          "Read the installation guide before committing to a continuous floor layout."
+          "Use the transition system made for, or approved by, your flooring manufacturer whenever possible. Color-matched moldings from the same product line install with the intended track systems and meet the product's expansion requirements by design.",
+          "Generic metal and vinyl profiles can work, but the installer has to verify that the fastening method does not pin a floating floor and that the profile's height range actually fits the two surfaces. A transition screwed through a floating floor defeats the entire expansion system.",
+          "If a transition keeps loosening or the floor near it keeps gapping, that is usually a symptom of floor movement or a missing expansion gap — not a defective molding. The transition is the visible part of a system working or failing underneath."
         ]
       }
     ],
@@ -632,95 +684,169 @@ export const guides: Guide[] = [
       {
         question: "What is a flooring transition strip?",
         answer:
-          "It is a trim piece used to bridge, cover, reduce, or finish the edge between flooring surfaces or openings."
+          "It is a trim piece used to bridge, cover, reduce, or finish the edge between flooring surfaces or openings, while preserving any expansion space the flooring needs underneath."
       },
       {
         question: "Do floating floors need transitions?",
         answer:
-          "Many floating floors need transitions in certain locations or room sizes. Requirements vary by manufacturer and product."
+          "Yes, in specific places. Most floating floor manufacturers require transitions at doorways and whenever a continuous run exceeds a stated maximum length, often in the 30 to 50 foot range. The exact rule is in the product installation instructions."
       },
       {
         question: "How do I estimate transition length?",
         answer:
-          "Measure each opening width and add the widths together. Round up based on the length of available transition pieces."
+          "Measure each opening width separately and round each one up to whole molding pieces, which are commonly sold in 72 to 94 inch lengths. Two 36-inch doorways need two pieces, not one 72-inch total."
+      },
+      {
+        question: "How tall can a threshold be?",
+        answer:
+          "For accessibility, the ADA Standards allow a 1/4 inch vertical change as-is and up to 1/2 inch if beveled at 1:2 or flatter. Residential projects are not bound by ADA, but those numbers are a sensible benchmark, especially for aging-in-place plans."
+      },
+      {
+        question: "Can I float flooring down the stairs without stair noses?",
+        answer:
+          "No. Flooring on stairs must be fully fastened, and tread edges need a stair nose rated for the product. Floating installations on stairs are consistently prohibited by manufacturers."
       }
     ],
     disclaimer:
-      "Transition profiles and placement should follow the product installation guide and site conditions."
+      "Transition profiles and placement should follow the product installation guide and site conditions. Expansion gap sizes, maximum run lengths, and approved transition systems vary by manufacturer and product."
   },
   {
     slug: "best-flooring-for-dogs",
     title: "Best Flooring for Dogs",
     description:
-      "Practical flooring considerations for homes with dogs, including traction, scratch resistance, water resistance, comfort, and maintenance.",
+      "Compare flooring for homes with dogs using the ratings that actually predict performance: wear layer thickness, AC ratings, Janka hardness, and slip resistance.",
     metadataTitle: "Best Flooring for Dogs: Practical Homeowner Guide",
     metadataDescription:
-      "Compare flooring options for homes with dogs, including LVP, tile, laminate, carpet, and engineered wood considerations.",
-    dateModified: "2026-05-22",
-    readTime: "6 min read",
+      "Compare LVP, tile, laminate, hardwood, and carpet for dogs using wear layer mils, AC ratings, Janka hardness, and traction — not marketing claims.",
+    dateModified: "2026-06-10",
+    readTime: "10 min read",
     primaryEcosystem: "planning-measuring-transitions",
     materialTypes: ["lvp", "laminate", "engineered-hardwood", "ceramic-tile", "porcelain-tile", "sheet-vinyl", "carpet"],
     topicCluster: "pets",
     relatedTools: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"],
+    relatedGuides: [
+      "best-hardwood-flooring-for-dogs",
+      "laminate-vs-lvp-for-pets",
+      "can-laminate-flooring-be-waterproof",
+      "best-underlayment-for-lvp",
+      "how-much-extra-flooring-should-i-keep"
+    ],
     sections: [
       {
         id: "what-matters",
         title: "What matters most for dogs",
         paragraphs: [
-          "Dog-friendly flooring is not just about scratch resistance. Traction, water resistance, comfort, cleanability, and noise all matter in day-to-day use.",
-          "Large dogs, older dogs, puppies, and active households can have very different flooring priorities."
+          "Dog-friendly flooring is not just about scratch resistance. Traction, water resistance, comfort, cleanability, and noise all matter in day-to-day use — and they often pull in different directions. The hardest, most scratch-proof surfaces tend to be the most slippery and least comfortable for the dog.",
+          "Large dogs, older dogs, puppies, and active households also have different priorities. A senior dog with weak hips needs traction far more than scratch resistance. A teething puppy household needs waterproof far more than dent resistance.",
+          "The good news is that most of these properties have published, comparable ratings. Instead of trusting a 'pet-proof' label, you can compare the actual numbers below."
         ],
         bullets: [
-          "Traction helps dogs move confidently.",
-          "Water resistance helps with spills, bowls, accidents, and wet paws.",
-          "Surface texture can hide minor scratches better than glossy finishes.",
-          "Comfort matters in rooms where dogs spend a lot of time."
+          "Traction helps dogs move confidently — especially seniors and large breeds.",
+          "Water resistance handles bowls, accidents, and wet paws.",
+          "Texture and low-sheen finishes hide minor scratches better than gloss.",
+          "Comfort and warmth matter in rooms where dogs sleep and rest."
+        ]
+      },
+      {
+        id: "ratings-that-matter",
+        title: "The ratings that actually predict performance",
+        paragraphs: [
+          "Four published measurements do most of the work when comparing floors for dogs:"
+        ],
+        subsections: [
+          {
+            title: "Wear layer thickness (LVP and vinyl)",
+            paragraphs: [
+              "Luxury vinyl wear layers are measured in mils (thousandths of an inch). Products around 12 mil are typical entry-level residential; 20 mil and up is where manufacturers commonly position products for heavy residential and light commercial traffic. For large or active dogs, a 20 mil wear layer is a reasonable target — it is the single best spec to compare across LVP products."
+            ]
+          },
+          {
+            title: "AC rating (laminate)",
+            paragraphs: [
+              "Laminate abrasion resistance is graded on the AC scale used across the industry, based on standardized abrasion testing (the kind of testing NALFA certification covers in North America). AC3 is rated for heavy residential traffic; AC4 steps up to light commercial. For dogs, AC4 buys extra surface durability — though it protects against abrasion, not against water from accidents, so check the product's water resistance claims separately."
+            ]
+          },
+          {
+            title: "Janka hardness (wood)",
+            paragraphs: [
+              "The Janka test measures the force needed to embed a steel ball halfway into a wood sample — it is the industry's standard dent-resistance comparison. Red oak, the traditional benchmark, rates about 1,290. White oak (~1,360), hard maple (~1,450), and hickory (~1,820) are harder; American walnut (~1,010) and pine (roughly 690–870) are softer. Janka predicts denting, not scratching — scratch visibility depends more on the finish and color than the species."
+            ]
+          },
+          {
+            title: "Slip resistance (tile)",
+            paragraphs: [
+              "Tile traction is measured as DCOF (dynamic coefficient of friction). The ANSI A326.3 standard sets a minimum DCOF of 0.42 for level interior spaces that may get wet. Tiles meeting or exceeding that number — typically matte and textured finishes — give dogs noticeably better footing than polished tile."
+            ]
+          }
         ]
       },
       {
         id: "lvp-and-laminate",
         title: "LVP and laminate",
         paragraphs: [
-          "Luxury vinyl plank is a popular dog-friendly choice because many products are water resistant, easy to clean, and available with textured finishes.",
-          "Laminate can be durable against surface wear, but water resistance varies widely. Check the product rating, edge sealing requirements, and cleaning instructions."
+          "Luxury vinyl plank is the most commonly recommended dog floor for a reason: rigid-core products (often labeled SPC or WPC) are waterproof through the core, textured finishes hide claw marks, and the surface is warmer and grippier than tile. Prioritize wear layer thickness over plank thickness — a thick plank with a 6 mil wear layer will scratch faster than a thinner plank with a 20 mil layer.",
+          "Laminate's hard melamine surface actually resists scratching better than most vinyl, which is why laminate with an AC4 rating is a strong pick for households where scratching is the main concern. Its historical weakness is moisture — standard laminate swells if water sits in the joints. Water-resistant laminate lines have improved this with tighter joints and sealed edges, but the protection is time-limited and conditional; read the actual warranty language on pet accidents rather than the front-of-box claim."
         ]
       },
       {
         id: "tile-and-wood",
         title: "Tile, engineered wood, and hardwood",
         paragraphs: [
-          "Tile is hard, water resistant, and easy to clean, but it can be slick and uncomfortable for some dogs. Rugs and runners may help with traction.",
-          "Engineered wood and hardwood can be beautiful but are more vulnerable to scratches, dents, and moisture. Matte, textured, or wire-brushed finishes can help hide wear."
+          "Porcelain tile is essentially dog-proof as a material: it does not scratch under claws, does not stain, and handles any amount of water. The trade-offs are comfort and traction — hard, cold, and slippery when polished. If you go tile, choose a matte or textured finish meeting the ANSI A326.3 DCOF threshold of 0.42 or higher, and give the dog rugs or a bed for resting areas.",
+          "Hardwood and engineered hardwood are the most vulnerable common choices. Claws scratch finishes, accidents that sit can stain or cup boards, and softer species dent under big dogs. If wood is non-negotiable, stack the odds: a harder species (hickory at ~1,820 Janka outperforms oak), a factory-applied aluminum oxide finish (more abrasion-resistant than typical site-applied finishes), a matte sheen, wire-brushed texture, and a mid-tone color that hides both scratches and hair. Keep spare boards for repairs.",
+          "For a deeper species-by-species and finish-by-finish breakdown, see the dedicated hardwood-for-dogs guide linked below."
         ]
       },
       {
         id: "carpet",
         title: "Carpet considerations",
         paragraphs: [
-          "Carpet adds comfort and traction but can hold odor, stains, and pet hair. If carpet is the right fit, look for products with pet-focused stain warranties and compatible pads.",
-          "Carpet tiles can be worth considering in utility spaces because individual tiles may be replaced."
+          "Carpet gives dogs the best traction and comfort of any option and protects aging joints — and it is also the hardest to keep clean with pets. If carpet fits the household, choose solution-dyed fibers (the color runs through the fiber rather than coating it), which resist pet-stain treatments and repeated cleaning far better than surface-dyed alternatives. Many manufacturers back these products with specific pet-urine stain warranties — read what the warranty actually covers, since odor and subfloor damage are commonly excluded.",
+          "Use a moisture-barrier pad under carpet in pet households; it keeps accidents from soaking into the cushion and subfloor where odor becomes permanent. Carpet tiles are worth considering in mudrooms and utility areas because single tiles can be lifted, washed, or replaced."
         ]
+      },
+      {
+        id: "comparison",
+        title: "How the options compare",
+        paragraphs: [
+          "No floor wins every column — pick the trade-off that matches your dog and household."
+        ],
+        comparisonTable: {
+          columns: ["Floor", "Scratch resistance", "Water/accidents", "Dog traction & comfort", "Key spec to check"],
+          rows: [
+            ["Rigid-core LVP", "Good (texture hides marks)", "Waterproof core", "Good", "Wear layer: 20 mil for big dogs"],
+            ["Laminate (AC4)", "Very good", "Limited — time/condition bound", "Moderate", "AC rating + water warranty terms"],
+            ["Porcelain tile", "Excellent", "Excellent", "Poor unless textured", "DCOF ≥ 0.42 (ANSI A326.3)"],
+            ["Hardwood/engineered", "Poor to fair", "Poor", "Moderate", "Janka rating + finish type"],
+            ["Carpet", "N/A (snags possible)", "Poor without barrier pad", "Excellent", "Solution-dyed fiber + pet warranty"]
+          ]
+        }
       }
     ],
     faq: [
       {
         question: "Is LVP good for dogs?",
         answer:
-          "Many LVP products work well for dogs because they are easy to clean and often water resistant, but traction and scratch performance vary by product."
+          "Generally yes. Rigid-core LVP with a 20 mil wear layer handles claws and accidents well. Wear layer thickness matters more than plank thickness for scratch performance."
       },
       {
         question: "What floor is best for older dogs?",
         answer:
-          "Older dogs often need better traction and comfort. Textured surfaces, rugs, runners, and softer areas can matter as much as the flooring material."
+          "Traction and comfort beat scratch resistance for seniors. Textured LVP, carpet, or textured tile meeting the ANSI A326.3 slip threshold (DCOF 0.42+) help weak hips; polished tile and glossy hardwood are the worst footing."
       },
       {
         question: "Will dogs scratch hardwood floors?",
         answer:
-          "Dogs can scratch hardwood, especially with long nails or active play. Finish type, wood hardness, color, and surface texture affect how visible scratches become."
+          "Eventually, yes. Harder species (hickory ~1,820 Janka vs red oak ~1,290) dent less, and matte aluminum oxide finishes with wire-brushed texture hide claw marks best, but no wood floor is scratch-proof under dogs."
+      },
+      {
+        question: "Is laminate or LVP better for dogs?",
+        answer:
+          "Laminate (AC4) resists scratches better; LVP handles water better. For accident-prone dogs choose rigid-core LVP. For a fully housetrained heavy scratcher, AC4 laminate is a strong alternative."
       }
     ],
     disclaimer:
-      "Flooring performance depends on the exact product, installation, maintenance, and household conditions. Review product warranties for pet-related exclusions."
+      "Flooring performance depends on the exact product, installation, maintenance, and household conditions. Ratings such as wear layer thickness, AC class, Janka hardness, and DCOF are comparison tools, not guarantees. Review product warranties for pet-related exclusions."
   },
   {
     slug: "luxury-vinyl-over-tile",
@@ -1084,10 +1210,10 @@ export const guides: Guide[] = [
     title: "Which Direction Should Flooring Run?",
     description:
       "A practical guide to choosing flooring direction for plank floors, hallways, open layouts, stairs, transitions, natural light, and waste planning.",
-    metadataTitle: "Which Direction Should Flooring Run? Hallways, Open Layouts & Stairs",
+    metadataTitle: "Which Direction Should Flooring Run? Hallways & Stairs",
     metadataDescription:
       "Running planks the wrong direction creates awkward cuts and bad transitions. Learn how to pick the right direction for hallways, open layouts, and stairs.",
-    dateModified: "2026-05-30",
+    dateModified: "2026-06-10",
     readTime: "8 min read",
     primaryEcosystem: "planning-measuring-transitions",
     secondaryEcosystems: ["lvp", "laminate", "hardwood-engineered-hardwood"],

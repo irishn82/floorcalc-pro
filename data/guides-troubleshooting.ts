@@ -112,7 +112,7 @@ export const troubleshootingGuides: Guide[] = [
     title: "Why Are My Carpet Seams Visible?",
     description:
       "Learn why carpet seams show, including seam direction, lighting, pile direction, roll width, traffic, carpet construction, pattern match, and installation layout.",
-    metadataTitle: "Why Are My Carpet Seams Visible? Seam Direction and Lighting Guide",
+    metadataTitle: "Why Are My Carpet Seams Visible? Direction and Lighting",
     metadataDescription:
       "Understand visible carpet seams, including lighting, pile direction, roll width, pattern match, traffic direction, construction, and seam placement.",
     dateModified: "2026-05-24",
@@ -213,10 +213,10 @@ export const troubleshootingGuides: Guide[] = [
     title: "Why Is My LVP Lifting?",
     description:
       "Troubleshoot LVP lifting by checking subfloor flatness, moisture, glue-down adhesive, floating floor movement, cabinets, expansion gaps, and acclimation.",
-    metadataTitle: "Why Is My LVP Lifting? Causes of Curling or Popping Vinyl Planks",
+    metadataTitle: "Why Is My LVP Lifting? Curling and Popping Vinyl Planks",
     metadataDescription:
       "LVP lifting at the edges usually means moisture, a missed expansion gap, or subfloor movement. Learn what to check first before pulling up any planks.",
-    dateModified: "2026-05-24",
+    dateModified: "2026-06-10",
     readTime: "9 min read",
     primaryEcosystem: "lvp",
     secondaryEcosystems: ["lvt"],
@@ -467,7 +467,7 @@ export const troubleshootingGuides: Guide[] = [
     title: "Why Does My Floor Feel Hollow?",
     description:
       "Learn why floors feel hollow, including floating floor sound, low spots, underlayment, hollow tile, glue-down failure, concrete slab issues, and when to worry.",
-    metadataTitle: "Why Does My Floor Feel Hollow? Floating, Tile, and Glue-Down Causes",
+    metadataTitle: "Why Does My Floor Feel Hollow? Tile and Floating Causes",
     metadataDescription:
       "Troubleshoot hollow-feeling floors by checking floating floor movement, low spots, underlayment, hollow tile, glue-down failure, and concrete issues.",
     dateModified: "2026-05-24",
@@ -573,7 +573,7 @@ export const troubleshootingGuides: Guide[] = [
     metadataTitle: "Why Is My LVP Floor Separating? Gaps Between Planks Explained",
     metadataDescription:
       "LVP planks separating usually means the locking system is under stress. Check subfloor flatness, expansion gaps, and moisture before replacing boards.",
-    dateModified: "2026-05-26",
+    dateModified: "2026-06-10",
     readTime: "9 min read",
     primaryEcosystem: "lvp",
     secondaryEcosystems: ["lvt"],
@@ -678,7 +678,7 @@ export const troubleshootingGuides: Guide[] = [
     title: "Why Is My Laminate Floor Buckling?",
     description:
       "Troubleshoot laminate floor buckling by checking moisture, expansion gaps, fixed objects, acclimation, subfloor flatness, and underlayment.",
-    metadataTitle: "Why Is My Laminate Floor Buckling? Moisture and Expansion Causes",
+    metadataTitle: "Why Is My Laminate Floor Buckling? Moisture and Expansion",
     metadataDescription:
       "Learn why laminate floors buckle or peak and what to check first with moisture, expansion gaps, fixed objects, acclimation, subfloors, and underlayment.",
     dateModified: "2026-05-26",

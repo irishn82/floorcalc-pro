@@ -833,7 +833,7 @@ const guideDrafts: GuideDraft[] = [
     title: "Why Flooring Fails Over Concrete",
     description:
       "A practical look at why flooring fails over concrete slabs, including moisture, flatness, adhesive release, contaminants, cracks, hollow spots, and wrong underlayment choices.",
-    metadataTitle: "Why Flooring Fails Over Concrete: Moisture, Slab Prep, and Movement",
+    metadataTitle: "Why Flooring Fails Over Concrete: Moisture and Slab Prep",
     metadataDescription:
       "Learn why floors fail over concrete and what moisture, slab flatness, adhesive, cracks, contaminants, and underlayment issues to check first.",
     readTime: "9 min read",
@@ -1059,7 +1059,7 @@ const guideDrafts: GuideDraft[] = [
     title: "Why Is My Floor Bouncing?",
     description:
       "Troubleshoot floor bounce caused by joist movement, loose subfloor panels, floating floor feel, soft underlayment, uneven substrate, or structural concerns.",
-    metadataTitle: "Why Is My Floor Bouncing? Subfloor, Joist, and Floating Floor Causes",
+    metadataTitle: "Why Is My Floor Bouncing? Subfloor and Joist Causes",
     metadataDescription:
       "Learn why floors bounce, what to check first, and when bouncing points to subfloor movement, underlayment compression, floating floor movement, or structural concerns.",
     readTime: "8 min read",
@@ -1282,7 +1282,7 @@ const guideDrafts: GuideDraft[] = [
     title: "Why Are My Flooring Joints Opening?",
     description:
       "Learn why flooring joints open in LVP, laminate, hardwood, and engineered floors, including humidity movement, expansion gaps, locking damage, poor acclimation, and fixed objects.",
-    metadataTitle: "Why Are My Flooring Joints Opening? Gaps, Movement, and Moisture",
+    metadataTitle: "Why Are My Flooring Joints Opening? Gaps and Movement",
     metadataDescription:
       "Troubleshoot opening flooring joints caused by seasonal movement, humidity, damaged locking systems, expansion gaps, long runs, and pinned floating floors.",
     readTime: "8 min read",
@@ -1656,7 +1656,7 @@ const guideDrafts: GuideDraft[] = [
     title: "Why Is My LVP Floor Buckling?",
     description:
       "Troubleshoot LVP buckling caused by expansion pressure, missing expansion gaps, fixed cabinets, moisture or temperature movement, long runs, and subfloor issues.",
-    metadataTitle: "Why Is My LVP Floor Buckling? Expansion, Moisture, and Fixed Objects",
+    metadataTitle: "Why Is My LVP Floor Buckling? Expansion and Moisture",
     metadataDescription:
       "Learn why LVP buckles, what to check first, and how expansion gaps, cabinets, moisture, temperature, long runs, and subfloor movement affect vinyl plank.",
     readTime: "8 min read",
@@ -1770,6 +1770,7 @@ const guideDrafts: GuideDraft[] = [
     metadataTitle: "Why Are My LVP Seams Showing? What's Normal vs. a Problem",
     metadataDescription:
       "Some LVP seam visibility is normal, but raised edges or widening gaps usually point to subfloor issues, expansion pressure, or locking damage. Here's how to tell.",
+    dateModified: "2026-06-10",
     readTime: "8 min read",
     primaryEcosystem: "lvp",
     secondaryEcosystems: ["lvt"],
@@ -1876,7 +1877,7 @@ const guideDrafts: GuideDraft[] = [
     title: "Why Is My Floor Swelling?",
     description:
       "Troubleshoot floor swelling caused by moisture, humidity, leaks, wet subfloors, slab moisture, product limits, and installation conditions.",
-    metadataTitle: "Why Is My Floor Swelling? Moisture, Humidity, and Subfloor Causes",
+    metadataTitle: "Why Is My Floor Swelling? Moisture and Humidity Causes",
     metadataDescription:
       "Learn why floors swell, what to check first, and how moisture, humidity, concrete slabs, wet subfloors, and product limits affect flooring.",
     readTime: "8 min read",
@@ -1991,7 +1992,7 @@ const guideDrafts: GuideDraft[] = [
     title: "Why Is My Subfloor Wet?",
     description:
       "Find common reasons a subfloor is wet, including leaks, crawlspace moisture, concrete vapor, wet cleaning, appliance issues, and construction moisture.",
-    metadataTitle: "Why Is My Subfloor Wet? Leaks, Concrete Moisture, and Crawlspaces",
+    metadataTitle: "Why Is My Subfloor Wet? Leaks, Concrete, and Crawlspaces",
     metadataDescription:
       "Learn why subfloors get wet, what to check first, and how leaks, slab moisture, crawlspaces, humidity, and flooring failures connect.",
     readTime: "9 min read",
@@ -2101,7 +2102,7 @@ const guideDrafts: GuideDraft[] = [
     title: "Can Moisture Come Through Concrete?",
     description:
       "Understand how concrete moisture vapor affects flooring, why slabs can look dry while releasing moisture, and what to check before installation.",
-    metadataTitle: "Can Moisture Come Through Concrete? Flooring Slab Moisture Guide",
+    metadataTitle: "Can Moisture Come Through Concrete? Slab Moisture Guide",
     metadataDescription:
       "Learn how moisture can move through concrete slabs, why testing matters, and how vapor, basements, adhesives, and underlayment affect flooring.",
     readTime: "8 min read",
@@ -2214,7 +2215,7 @@ const guideDrafts: GuideDraft[] = [
     title: "Why Is My Floor Expanding?",
     description:
       "Troubleshoot floor expansion caused by humidity, moisture, temperature changes, blocked expansion gaps, long runs, and product-specific movement.",
-    metadataTitle: "Why Is My Floor Expanding? Moisture, Humidity, and Expansion Gaps",
+    metadataTitle: "Why Is My Floor Expanding? Moisture and Expansion Gaps",
     metadataDescription:
       "Learn why flooring expands, what to check first, and how humidity, moisture, blocked expansion, cabinets, long runs, and temperature affect floors.",
     readTime: "8 min read",
@@ -2435,7 +2436,7 @@ const guideDrafts: GuideDraft[] = [
     title: "Concrete Slab Flooring Guide",
     description:
       "A practical concrete slab flooring hub covering moisture, flatness, cracks, vapor barriers, acclimation, and flooring choices for LVP, laminate, engineered hardwood, carpet, and tile.",
-    metadataTitle: "Concrete Slab Flooring Guide: Moisture, Cracks, and Floor Choices",
+    metadataTitle: "Concrete Slab Flooring Guide: Moisture, Cracks, Choices",
     metadataDescription:
       "Plan flooring over concrete slabs with practical guidance on moisture testing, flatness, cracks, vapor barriers, LVP, laminate, engineered hardwood, carpet, and tile.",
     dateModified: "2026-06-01",
@@ -2599,7 +2600,7 @@ const guideDrafts: GuideDraft[] = [
     title: "Can Concrete Be Too Dry For Flooring?",
     description:
       "Learn when very dry, dusty, porous, or over-absorptive concrete can create flooring problems, especially for adhesives, primers, patching, and glue-down flooring systems.",
-    metadataTitle: "Can Concrete Be Too Dry For Flooring? Adhesive and Slab Prep Guide",
+    metadataTitle: "Can Concrete Be Too Dry for Flooring? Adhesive and Prep",
     metadataDescription:
       "Concrete moisture is not the only slab concern. Learn how dusty, porous, over-absorptive, or weak concrete can affect adhesive bond, primers, patching, and flooring prep.",
     dateModified: "2026-06-01",
@@ -2820,7 +2821,7 @@ const guideDrafts: GuideDraft[] = [
     title: "Why Is Moisture Coming Through My Slab?",
     description:
       "Troubleshoot moisture coming through a concrete slab, including vapor drive, basement conditions, missing vapor barriers, drainage, cracks, humidity, and flooring failure clues.",
-    metadataTitle: "Why Is Moisture Coming Through My Slab? Flooring Troubleshooting",
+    metadataTitle: "Why Is Moisture Coming Through My Slab? What to Check",
     metadataDescription:
       "Learn why concrete slab moisture happens, what to check first, and how vapor drive, basements, cracks, drainage, humidity, and flooring systems affect repairs.",
     dateModified: "2026-06-01",
@@ -2932,7 +2933,7 @@ const guideDrafts: GuideDraft[] = [
     title: "What Flooring Works Best Over Concrete?",
     description:
       "Compare LVP, laminate, engineered hardwood, carpet, and tile over concrete slabs with practical guidance for moisture, flatness, comfort, cracks, and installation method.",
-    metadataTitle: "Best Flooring for Concrete Slabs: LVP, Laminate, Hardwood, Carpet, Tile",
+    metadataTitle: "Best Flooring for Concrete Slabs: LVP, Wood, Tile, Carpet",
     metadataDescription:
       "Compare flooring options for concrete slabs, including LVP, laminate, engineered hardwood, carpet, and tile, with moisture, flatness, cracks, comfort, and prep tips.",
     dateModified: "2026-06-01",
@@ -4029,7 +4030,7 @@ const guideDrafts: GuideDraft[] = [
     title: "Tile Installation Checklist",
     description:
       "A practical tile installation checklist for measuring, substrate prep, flatness, cracks, layout, grout joints, transitions, installation day, and after-installation checks.",
-    metadataTitle: "Tile Installation Checklist: Subfloor, Layout, Grout, Transitions",
+    metadataTitle: "Tile Installation Checklist: Subfloor, Layout, and Grout",
     metadataDescription:
       "Use this tile installation checklist to plan measuring, substrate prep, flatness, cracks, layout, grout joints, transitions, installation day, and aftercare.",
     dateModified: "2026-06-02",
@@ -4424,7 +4425,7 @@ const guideDrafts: GuideDraft[] = [
     title: "Concrete Floor Problems Under Flooring",
     description:
       "A master troubleshooting hub for flooring over concrete, including slab moisture, cracks, vapor barriers, moisture testing, hollow sounds, adhesive failure, and flooring compatibility.",
-    metadataTitle: "Concrete Floor Problems Under Flooring: Moisture, Cracks, Failures",
+    metadataTitle: "Concrete Floor Problems: Moisture, Cracks, and Failures",
     metadataDescription:
       "Troubleshoot concrete floor problems under flooring, including slab moisture, cracks, vapor barriers, moisture testing, hollow sounds, adhesive failure, and floor compatibility.",
     dateModified: "2026-06-03",
@@ -5595,7 +5596,7 @@ const guideDrafts: GuideDraft[] = [
     title: "Flooring Symptom Comparison Guide",
     description:
       "Compare common flooring symptoms like clicking, lifting, peaking, buckling, separation, cupping, crowning, moisture problems, and concrete slab issues.",
-    metadataTitle: "Flooring Symptom Comparison Guide: Clicking, Lifting, Buckling, Moisture",
+    metadataTitle: "Flooring Symptom Comparison: Clicking, Lifting, Buckling",
     metadataDescription:
       "Compare flooring symptoms side by side, including clicking, lifting, buckling, peaking, gaps, moisture, acclimation, concrete, cupping, and crowning.",
     dateModified: "2026-06-09",
