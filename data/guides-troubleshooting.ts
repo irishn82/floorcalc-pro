@@ -12,19 +12,21 @@ export const troubleshootingGuides: Guide[] = [
     metadataTitle: "Why Is My Floor Clicking? Common Flooring Noise Causes",
     metadataDescription:
       "Learn why floors click, pop, or move underfoot and what to check first with floating floors, subfloors, underlayment, expansion gaps, and moisture.",
-    dateModified: "2026-05-24",
-    readTime: "8 min read",
+    dateModified: "2026-06-11",
+    readTime: "10 min read",
     primaryEcosystem: "planning-measuring-transitions",
     secondaryEcosystems: ["lvp", "laminate", "hardwood-engineered-hardwood"],
     materialTypes: ["lvp", "lvt", "laminate", "engineered-hardwood"],
     topicCluster: "subfloor-prep",
     relatedTools: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"],
     relatedGuides: [
-      "subfloor-flatness-requirements-lvp",
       "why-is-my-lvp-floor-clicking",
+      "why-wont-my-laminate-floor-click-together",
+      "subfloor-flatness-requirements-lvp",
       "why-is-my-lvp-floor-separating",
       "why-is-my-laminate-floor-separating",
       "why-is-my-laminate-floor-buckling",
+      "why-is-my-floor-squeaking",
       "glue-down-vs-floating-floor"
     ],
     sections: [
@@ -33,20 +35,34 @@ export const troubleshootingGuides: Guide[] = [
         title: "Quick answer",
         paragraphs: [
           "A clicking floor usually means something is moving. The most common causes are uneven subfloors, floating floor movement, locking system stress, underlayment that is too soft, debris under the planks, tight expansion gaps, or moisture and humidity changes.",
-          "The sound matters, but the location matters even more. A repeated click in the same spot often points to a support or movement problem that should be checked before the joint damage gets worse."
+          "The sound matters, but the location matters even more. A repeated click in the same spot often points to a support or movement problem that should be checked before the joint damage gets worse.",
+          "One clarification before diagnosing: this guide covers floors that click when you walk on them. If you are mid-installation and the planks will not click together, that is a different problem with different fixes — see the guide on laminate that won't lock together in the related links."
+        ]
+      },
+      {
+        id: "clicking-vs-other-noises",
+        title: "Clicking, squeaking, popping: the noise narrows the cause",
+        paragraphs: [
+          "Different floor noises implicate different layers of the floor, so it pays to listen before you diagnose.",
+          "Clicking — a crisp plastic-on-plastic or tap sound under each step — is the signature of floating floors. It typically comes from plank locking joints flexing against each other, or a plank edge tapping against a low spot, trim, or transition. Glue-down and nail-down floors rarely click; their noises are different.",
+          "Squeaking — a rubbing, creaking sound — usually lives deeper in the assembly: wood subfloor panels rubbing on loose fasteners, joists, or each other. Nail-down hardwood squeaks; floating LVP usually does not.",
+          "Popping or cracking from tile usually signals a bond or movement problem in the mortar layer, which is a different diagnosis entirely. Matching the sound to the right layer saves you from pulling up a floor to fix a squeaky subfloor screw."
         ]
       },
       {
         id: "common-causes",
         title: "Common causes",
         paragraphs: [
-          "Clicking is most common with floating floors because the floor is designed to move as a connected surface. That movement is normal in a broad sense, but repeated movement at one joint or one low spot can stress the flooring system."
+          "Clicking is most common with floating floors because the floor is designed to move as a connected surface. That movement is normal in a broad sense, but repeated movement at one joint or one low spot stresses the locking system — and locking profiles that flex thousands of times eventually wear or fail.",
+          "Subfloor flatness is the most frequent root cause. Floating floor manufacturers commonly require the subfloor to be flat within roughly 3/16 inch over 10 feet (the exact tolerance is in each product's instructions). Over a dip, planks bridge the void and flex down into it with each step; over a hump, the floor see-saws. Both make joints move, and moving joints make noise.",
+          "The remaining causes cluster around the floor's freedom to move: expansion gaps pinched by trim, transitions, or heavy fixed objects; underlayment that allows too much vertical travel; debris trapped under planks during installation; and humidity swings pushing the floor beyond the movement the installation allowed for."
         ],
         bullets: [
-          "Uneven subfloor with low spots or humps under the finished floor.",
+          "Uneven subfloor — low spots or humps beyond the product's flatness tolerance (commonly ~3/16 in over 10 ft).",
           "Underlayment that is too soft, too thick, doubled up, or not approved for the product.",
           "Damaged locking tabs from forcing planks together or installing over debris.",
           "Expansion gaps that are too tight at walls, doorways, cabinets, or transitions.",
+          "Heavy fixed objects — kitchen islands, built-ins — pinning a floating floor that needs to move.",
           "Moisture or humidity changes causing movement beyond normal expectations.",
           "Loose trim or transition pieces that sound like the floor itself."
         ]
@@ -55,31 +71,43 @@ export const troubleshootingGuides: Guide[] = [
         id: "what-to-check-first",
         title: "What to check first",
         paragraphs: [
-          "Start by identifying whether the click happens in one fixed location or across a larger area. A fixed spot often points to a local low spot, damaged joint, debris, or a transition problem. A larger area can point to underlayment, room conditions, or installation method.",
-          "Check the edges of the room for tight trim, pinned transitions, heavy fixed objects, and missing expansion space. If the floor is new, also review whether the product was acclimated or conditioned as directed."
+          "Start by mapping the sound. Walk the floor slowly and mark every spot where the click repeats — painter's tape works well. The map is the diagnosis: a single fixed spot points to a local problem (low spot, damaged joint, debris, transition); clicks spread across a whole room point to a system problem (underlayment, flatness in general, expansion, or product).",
+          "Next, check the floor's edges. Remove or inspect a section of baseboard or quarter-round near the noise and look at the gap between the flooring and the wall. If the flooring is touching the wall, trim, or door frame — or if a transition strip is screwed down tight through the floating floor — the floor has lost its expansion space, and joints under compression click and eventually peak or buckle.",
+          "Then test the specific spot. Press down on the clicking area with your full weight, slowly: visible plank deflection means a void or soft support underneath; a click with no visible movement is more likely joint-on-joint noise. If the floor is new, also review whether the product was acclimated as directed and what underlayment went under it.",
+          "If you can find a leftover plank, check the locking profile style — knowing whether yours is an angle-angle or fold-down system helps an installer (or you) understand which joints are vulnerable and how planks can be removed for inspection without damage."
         ],
         bullets: [
-          "Walk the floor slowly and mark where the sound repeats.",
-          "Check nearby transitions, doorways, and wall trim.",
-          "Look for visible gaps, peaking, loose planks, or joint movement.",
-          "Review the underlayment and installation method if that information is available.",
-          "If the floor is not installed yet, check flatness with a straightedge before proceeding."
+          "Walk the floor slowly and mark every spot where the sound repeats.",
+          "Check expansion gaps behind trim near the noise — flooring touching the wall is a finding, not a detail.",
+          "Look for pinned transitions, tight door frames, and heavy fixed furniture or islands.",
+          "Press-test clicking spots for visible deflection (void below) versus pure joint noise.",
+          "Look for companion symptoms: gaps, peaking, lifting edges, or seams becoming visible.",
+          "If the floor is not installed yet, check flatness with a 10-ft straightedge before proceeding."
+        ]
+      },
+      {
+        id: "by-material",
+        title: "What clicking means by flooring type",
+        paragraphs: [
+          "The same sound carries different weight depending on the floor. On floating LVP, clicking concentrated in one area usually means subfloor flatness or a damaged lock — the dedicated LVP clicking guide walks through that diagnosis in detail. On floating laminate, clicking plus visible gaps is the classic signature of joints under stress, and it tends to progress: click first, gap later, broken lock last.",
+          "On engineered hardwood that is floated, the same floating-floor logic applies. On glued or nailed wood floors, a click-like noise is more often a loose board, a fastener, or trim — and on nail-down floors specifically, squeaks from the subfloor or fasteners are far more common than true clicking.",
+          "If a brand-new floor clicks from day one, suspect installation conditions: flatness that was never checked, doubled underlayment, or debris under planks. If clicking appeared after a season change, suspect expansion and humidity. If it appeared after new trim, a new island, or other work — something probably pinned the floor."
         ]
       },
       {
         id: "when-to-call-an-installer",
         title: "When to call an installer",
         paragraphs: [
-          "Call an installer if the clicking is getting worse, if joints are separating, if the floor is lifting, if moisture is suspected, or if the sound is concentrated in a high-traffic area. Continuing to walk on a moving joint can make a small issue harder to repair.",
-          "A pro can often tell the difference between trim noise, floating floor movement, damaged locking joints, and a subfloor problem without guessing."
+          "Call an installer if the clicking is getting worse, if joints are separating or peaking, if the floor is lifting, if moisture is suspected, or if the sound is concentrated in a high-traffic area. A clicking joint is a joint in motion, and locking profiles have a finite number of flex cycles in them — continuing to walk on a moving joint converts a flatness fix into a plank-replacement job.",
+          "A pro can usually distinguish trim noise, normal floating floor movement, damaged locks, and subfloor problems quickly — especially if you hand them the tape-map of where the floor clicks and the history of when it started."
         ]
       },
       {
         id: "example-scenario",
         title: "Example scenario",
         paragraphs: [
-          "A homeowner hears a click in the same hallway spot every time they step near a bedroom doorway. The transition is tight and the LVP joint flexes slightly. The likely issue is not the visible plank color or finish. It is movement at a stressed area.",
-          "The repair may require removing the transition, checking expansion space, and inspecting the subfloor support near that doorway."
+          "A homeowner hears a click in the same hallway spot every time they step near a bedroom doorway. The transition strip is screwed down tight and the LVP joint beside it flexes slightly under weight. The floor cannot move at the doorway, so every step works the nearest joints.",
+          "The repair is not a new plank — it is restoring movement: removing the transition, confirming expansion space at the doorway, checking the subfloor for a local dip, and reinstalling a transition that does not pin the floor. The plank only needs replacing if its lock is already damaged."
         ]
       }
     ],
@@ -87,22 +115,32 @@ export const troubleshootingGuides: Guide[] = [
       {
         question: "Is floor clicking always a serious problem?",
         answer:
-          "No. Some sounds can come from trim or normal floating floor movement, but repeated clicking in the same spot should be checked."
+          "No. Some sounds come from trim or normal floating floor movement. But repeated clicking in the same spot is a joint in motion, and it should be checked before the locking profile wears out."
       },
       {
         question: "Can an uneven subfloor make a floating floor click?",
         answer:
-          "Yes. Low spots and humps can allow planks to flex, which stresses locking joints and creates noise."
+          "Yes — it is the most common root cause. Floating floors commonly require flatness within about 3/16 inch over 10 feet; over dips and humps, planks flex with each step and the joints make noise."
       },
       {
         question: "Can underlayment cause clicking?",
         answer:
-          "Yes. Underlayment that is too soft, too thick, doubled, or not approved for the flooring can allow excess movement."
+          "Yes. Underlayment that is too soft, too thick, doubled, or not approved for the flooring allows extra vertical movement at every step, which works the locking joints."
+      },
+      {
+        question: "Why is my floor clicking only in winter?",
+        answer:
+          "Seasonal humidity changes make floating floors expand and contract. A floor with marginal expansion space can move freely in one season and bind in another — clicking that follows the seasons usually points to expansion or humidity, not damage."
+      },
+      {
+        question: "What's the difference between clicking and squeaking?",
+        answer:
+          "Clicking is a crisp tap, typical of floating floor locking joints. Squeaking is a rubbing creak, usually from the wood subfloor or fasteners underneath. They have different causes and different fixes."
       },
       {
         question: "Should I repair a clicking floor myself?",
         answer:
-          "Simple trim noise may be easy to correct, but lifting flooring or changing expansion details should be reviewed carefully or handled by an installer."
+          "Trim noise and a pinned transition are reasonable DIY checks. Lifting flooring, changing expansion details, or replacing planks with damaged locks is usually better reviewed or handled by an installer."
       }
     ],
     disclaimer: troubleshootingDisclaimer
@@ -783,23 +821,25 @@ export const troubleshootingGuides: Guide[] = [
   },
   {
     slug: "why-is-my-hardwood-floor-gapping",
-    title: "Why Is My Hardwood Floor Gapping?",
+    title: "Why Is My Hardwood Floor Separating?",
     description:
-      "Understand hardwood floor gaps, including seasonal humidity, acclimation, moisture imbalance, solid versus engineered wood, and when gaps are concerning.",
-    metadataTitle: "Why Is My Hardwood Floor Gapping? Seasonal and Moisture Causes",
+      "Why hardwood floors separate and gap between boards: seasonal humidity, acclimation, moisture imbalance, solid vs engineered wood, and when gaps need repair.",
+    metadataTitle: "Why Is My Hardwood Floor Separating? Gaps Between Boards",
     metadataDescription:
-      "Learn why hardwood floors gap, what seasonal gaps mean, and what to monitor with humidity, acclimation, moisture imbalance, solid wood, and engineered hardwood.",
-    dateModified: "2026-05-26",
-    readTime: "9 min read",
+      "Hardwood boards separating usually means the wood is shrinking. Learn which gaps are normal seasonal movement, which signal a moisture problem, and what to check first.",
+    dateModified: "2026-06-11",
+    readTime: "11 min read",
     primaryEcosystem: "hardwood-engineered-hardwood",
     materialTypes: ["hardwood", "engineered-hardwood"],
     topicCluster: "installation-method",
     relatedTools: ["flooring-square-footage-calculator", "waste-calculator"],
     relatedGuides: [
+      "why-is-my-engineered-hardwood-separating",
       "flooring-movement-problems",
       "how-long-should-hardwood-acclimate",
       "hardwood-acclimation-mistakes",
       "why-is-my-hardwood-floor-cupping",
+      "why-are-my-flooring-joints-opening",
       "can-engineered-hardwood-go-over-concrete",
       "solid-hardwood-vs-engineered-hardwood"
     ],
@@ -808,82 +848,120 @@ export const troubleshootingGuides: Guide[] = [
         id: "quick-answer",
         title: "Quick answer",
         paragraphs: [
-          "Hardwood floors gap when boards shrink or move apart. Small seasonal gaps can be normal in dry months, especially with solid hardwood, but wide, uneven, growing, or year-round gaps may point to moisture imbalance, poor acclimation, installation issues, or unstable indoor humidity.",
-          "The most useful first step is to track indoor humidity and whether the gaps close during more humid seasons. That pattern helps separate normal seasonal movement from a problem that needs repair."
+          "Hardwood floors separate when boards shrink or move apart — homeowners usually call it separating; flooring professionals call the same thing gapping. Small, even gaps that appear in dry winter months and close again in humid months are normal seasonal movement, especially with solid hardwood. Wide, uneven, growing, or year-round gaps point to moisture imbalance, poor acclimation, or installation issues.",
+          "The most useful first step is to track indoor humidity and watch whether the gaps change with the seasons. That pattern — more than the gaps themselves — tells you whether you are looking at normal wood behavior or a problem that needs repair."
+        ]
+      },
+      {
+        id: "why-wood-separates",
+        title: "Why wood boards separate",
+        paragraphs: [
+          "Wood is hygroscopic: every board constantly exchanges moisture with the air and changes size as it does. When indoor air dries out — typically in winter when heating systems run — boards release moisture and shrink across their width. Each board pulls away from its neighbors a hair, and across a whole floor those hairs add up to visible lines between boards.",
+          "The National Wood Flooring Association's guidance frames the expectations: most wood flooring is manufactured to perform in roughly 30 to 50 percent relative humidity and normal room temperatures. Homes that swing well below that range in winter will see seasonal separation in solid wood floors — it is the material working as designed, not a defect.",
+          "Board width amplifies the effect. A 5-inch plank shrinks more in absolute terms than a 2-1/4-inch strip at the same humidity change, so wide-plank floors show seasonal gaps more prominently. Species and cut matter too: flatsawn boards move more across their width than quartersawn boards of the same species."
+        ]
+      },
+      {
+        id: "normal-vs-problem",
+        title: "Normal seasonal gaps vs. problem separation",
+        paragraphs: [
+          "The distinguishing features are pattern, timing, and consistency. Normal seasonal separation is distributed fairly evenly across the floor, appears in the dry season, and closes most of the way when humidity returns. Problem separation breaks at least one of those rules."
+        ],
+        bullets: [
+          "Normal: thin, fairly even gaps across many boards in winter that narrow by late spring.",
+          "Normal: slightly larger seasonal gaps on wide-plank solid wood in homes without humidification.",
+          "Problem: gaps that stay open year-round or keep growing season over season.",
+          "Problem: gaps concentrated in one area — near a slab, exterior door, crawlspace, or plumbing wall.",
+          "Problem: separation paired with cupping, crowning, squeaks, finish cracks, or loose boards.",
+          "Problem: wide gaps that appeared within the first year after installation, which usually trace to acclimation or moisture conditions at install time."
         ]
       },
       {
         id: "common-causes",
-        title: "Common causes",
+        title: "Common causes beyond the seasons",
         paragraphs: [
-          "Wood expands and contracts with moisture. Gapping usually means the boards have lost moisture, were installed before reaching suitable conditions, or are responding to indoor humidity that is outside the expected range."
+          "When separation is not simple seasonal shrinkage, the cause is usually one of these:"
         ],
         bullets: [
-          "Dry winter indoor air causing seasonal shrinkage.",
-          "Hardwood installed before flooring and subfloor moisture were within range.",
-          "HVAC or humidity conditions changing after installation.",
-          "Moisture imbalance from crawlspaces, basements, slabs, or leaks.",
-          "Solid hardwood moving more noticeably than some engineered products.",
-          "Fastening, milling, or installation issues that leave irregular gaps."
+          "Installation before the flooring and subfloor reached compatible moisture levels — NWFA guidance calls for solid strip flooring to be within about 4 percentage points of the subfloor's moisture content, and wide plank within about 2 points. A floor installed wetter than its environment shrinks into permanent gaps as it dries.",
+          "Indoor humidity left unmanaged after installation — a floor installed at 45% RH that lives at 20% RH every winter will gap hard.",
+          "Moisture imbalance from below: crawlspaces without ground cover, damp basements, or slabs that were never tested (ASTM F1869 calcium chloride or ASTM F2170 RH probe testing) push boards through wet-dry cycles.",
+          "Subfloor movement or deflection working fasteners loose, letting boards creep apart mechanically.",
+          "Milling or fastening issues that leave irregular, random gaps from day one rather than developing over time."
         ]
       },
       {
         id: "what-to-check-first",
         title: "What to check first",
         paragraphs: [
-          "Measure indoor relative humidity and note the season. If gaps appear in winter and close in spring or summer, the movement may be seasonal. If gaps stay open year-round, grow quickly, or appear with cupping, crowning, squeaks, or loose boards, investigate further.",
-          "Look at whether the gaps are even across the room or concentrated in one area. Local gaps near exterior doors, vents, fireplaces, leaks, or concrete may point to room-specific conditions."
+          "Start with a $20 hygrometer and a notebook. Measure indoor relative humidity in the affected rooms for several weeks and note the season. If gaps appeared in winter and humidity reads below 30%, you are likely watching seasonal movement. If gaps persist through humid months, grow, or cluster in one area, keep investigating.",
+          "Map the gaps. Even distribution across the floor suggests a whole-home condition (humidity). Concentration near exterior doors, fireplaces, HVAC vents, kitchens, baths, or over a slab or crawlspace suggests a local moisture source — and local sources are findable and fixable.",
+          "If the floor is recent, pull the paperwork: were moisture readings of the wood and subfloor documented at installation? Was the flooring acclimated to the NWFA-style targets, or just stored in the garage for a week? Those records often settle the question of cause immediately."
         ],
         bullets: [
           "Track humidity for several weeks instead of guessing.",
           "Note whether gaps are seasonal, stable, growing, or localized.",
-          "Look for cupping, crowning, loose boards, or moisture stains.",
-          "Review acclimation and moisture readings if available.",
-          "Compare solid hardwood and engineered hardwood expectations for the exact product."
+          "Look for companion symptoms: cupping, crowning, loose boards, moisture stains.",
+          "Check crawlspaces for missing ground cover and slabs for moisture history.",
+          "Review acclimation and moisture documentation from installation if available."
+        ]
+      },
+      {
+        id: "repair",
+        title: "Repair: why patience beats filler",
+        paragraphs: [
+          "The instinct is to fill the gaps. Resist it until you know which kind of separation you have. Filler applied to seasonal gaps gets crushed when the boards expand again in summer — it cracks, squeezes out, or worse, acts as a wedge that pushes boards sideways and stresses fasteners.",
+          "For confirmed seasonal movement, the standard remedy is environmental, not mechanical: keep indoor humidity inside the 30–50% band year-round with humidification in winter. Many floors tighten up dramatically once the home stops cycling between 20% and 60% RH.",
+          "Permanent gaps from a drying-out or bad-acclimation event can be candidates for filler, slivers, or board replacement — but only after the floor has stabilized through at least one full season and the moisture source, if any, is corrected. A hardwood professional with a moisture meter can confirm boards and subfloor have equalized before any repair."
         ]
       },
       {
         id: "when-to-call-an-installer",
-        title: "When to call an installer",
+        title: "When to call a professional",
         paragraphs: [
-          "Call a hardwood professional if gaps are large, uneven, increasing, paired with cupping or crowning, or not changing seasonally. Also call if the floor is over concrete, near a crawlspace, or installed recently without documented moisture readings.",
-          "Filling gaps too soon can backfire. If boards expand later, filler can crack, squeeze out, or create pressure."
+          "Call a hardwood professional if gaps are wide, uneven, increasing, paired with cupping or crowning, or unchanged across seasons. Also call if the floor is over concrete, above a crawlspace, or was installed recently without documented moisture readings — those cases usually need meter readings to diagnose properly.",
+          "Bring the seasonal history you tracked. A floor that gaps every January and recovers every June is a different conversation than a floor that opened up in one corner last month, and your notes shortcut the diagnosis."
         ]
       },
       {
         id: "example-scenario",
         title: "Example scenario",
         paragraphs: [
-          "A solid oak floor develops thin gaps in January after the heat has been running for weeks. The homeowner measures low indoor humidity, and the gaps narrow again in late spring.",
-          "That pattern is different from a floor with wide permanent gaps after installation. Monitoring humidity, product expectations, and seasonal movement helps decide whether the issue is normal movement or a repair concern."
+          "A solid oak floor develops thin, even gaps across the living room in January after weeks of heating. The homeowner's hygrometer reads 24% RH. By late May the gaps have mostly closed. That is textbook seasonal separation — the fix is winter humidification, not filler.",
+          "Contrast that with a floor showing wide gaps along one wall, year-round, with slight cupping nearby. That pattern says local moisture — and it warrants a professional with a moisture meter, not a tube of filler."
         ]
       }
     ],
     faq: [
       {
+        question: "Why is my hardwood floor separating?",
+        answer:
+          "Boards separate when wood shrinks — usually from dry indoor air in winter, but persistent or growing gaps point to moisture imbalance, poor acclimation at installation, or a local moisture source like a slab or crawlspace."
+      },
+      {
         question: "Are gaps in hardwood floors normal?",
         answer:
-          "Small seasonal gaps can be normal, especially in dry months. Large, uneven, permanent, or growing gaps should be evaluated."
+          "Small, even seasonal gaps are normal, especially in solid wood during dry months when humidity falls below the 30–50% range most products are built for. Large, uneven, permanent, or growing gaps should be evaluated."
       },
       {
         question: "Will hardwood floor gaps close on their own?",
         answer:
-          "Seasonal gaps may narrow when indoor humidity rises. Gaps caused by installation, moisture imbalance, damaged boards, or unstable conditions may not close without correction."
+          "Seasonal gaps typically narrow when indoor humidity rises in spring and summer. Gaps caused by installation problems, moisture imbalance, or permanent drying usually do not close without correction."
       },
       {
-        question: "Should I fill hardwood floor gaps?",
+        question: "How do I fix separating hardwood floors?",
         answer:
-          "Do not rush to fill seasonal gaps. If the boards expand later, filler can crack or create pressure. Have persistent or wide gaps evaluated before repair."
+          "First identify the cause. Seasonal separation is managed with humidity control, not filler. Permanent gaps can be filled or repaired, but only after the floor has stabilized through a full season and any moisture source is fixed — filling too soon creates pressure damage when boards expand."
       },
       {
-        question: "Does engineered hardwood gap less than solid hardwood?",
+        question: "Does engineered hardwood separate less than solid hardwood?",
         answer:
-          "Engineered hardwood is often more dimensionally stable, but it can still gap if indoor conditions, moisture, acclimation, or installation details are wrong."
+          "Generally yes — cross-ply construction makes engineered boards more dimensionally stable. But engineered floors can still gap when conditions, acclimation, or installation details are wrong."
       },
       {
         question: "Can poor acclimation cause hardwood gaps?",
         answer:
-          "Yes. If hardwood is installed before the flooring, subfloor, and home are within required conditions, movement after installation can show up as gaps, cupping, or other problems."
+          "Yes. NWFA guidance calls for flooring and subfloor moisture content to be within roughly 2–4 percentage points of each other at installation, depending on board width. Wood installed wetter than its environment shrinks into permanent gaps as it dries."
       }
     ],
     disclaimer: troubleshootingDisclaimer

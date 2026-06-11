@@ -116,6 +116,7 @@ export type GuideSlug =
   | "why-is-my-lvp-lifting"
   | "why-is-my-lvp-floor-separating"
   | "why-is-my-laminate-floor-buckling"
+  | "why-wont-my-laminate-floor-click-together"
   | "why-is-my-hardwood-floor-gapping"
   | "why-is-my-carpet-wrinkling-or-buckling"
   | "why-is-my-tile-cracking"

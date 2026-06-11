@@ -205,6 +205,7 @@ const guideDrafts: GuideDraft[] = [
     topicCluster: "subfloor-prep",
     relatedTools: ["flooring-square-footage-calculator", "waste-calculator"],
     relatedGuides: [
+      "concrete-floor-problems",
       "flooring-moisture-problems",
       "can-high-humidity-damage-flooring",
       "ideal-humidity-for-flooring",
@@ -957,6 +958,7 @@ const guideDrafts: GuideDraft[] = [
     topicCluster: "subfloor-prep",
     relatedTools: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"],
     relatedGuides: [
+      "concrete-floor-problems",
       "concrete-slab-flooring-guide",
       "how-to-test-concrete-moisture",
       "why-is-moisture-coming-through-my-slab",
@@ -2112,6 +2114,7 @@ const guideDrafts: GuideDraft[] = [
     topicCluster: "subfloor-prep",
     relatedTools: ["flooring-square-footage-calculator", "waste-calculator"],
     relatedGuides: [
+      "concrete-floor-problems",
       "concrete-slab-flooring-guide",
       "how-to-test-concrete-moisture",
       "why-is-moisture-coming-through-my-slab",
@@ -2335,6 +2338,7 @@ const guideDrafts: GuideDraft[] = [
     topicCluster: "installation-method",
     relatedTools: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"],
     relatedGuides: [
+      "concrete-floor-problems",
       "hardwood-acclimation-mistakes",
       "how-long-should-hardwood-acclimate",
       "hardwood-installation-humidity",
@@ -2611,6 +2615,7 @@ const guideDrafts: GuideDraft[] = [
     topicCluster: "subfloor-prep",
     relatedTools: ["flooring-square-footage-calculator", "waste-calculator"],
     relatedGuides: [
+      "concrete-floor-problems",
       "concrete-slab-flooring-guide",
       "how-to-test-concrete-moisture",
       "why-flooring-fails-over-concrete",
@@ -2721,6 +2726,7 @@ const guideDrafts: GuideDraft[] = [
     topicCluster: "subfloor-prep",
     relatedTools: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"],
     relatedGuides: [
+      "concrete-floor-problems",
       "concrete-slab-flooring-guide",
       "why-flooring-fails-over-concrete",
       "how-to-test-concrete-moisture",
@@ -2832,6 +2838,7 @@ const guideDrafts: GuideDraft[] = [
     topicCluster: "subfloor-prep",
     relatedTools: ["flooring-square-footage-calculator", "waste-calculator"],
     relatedGuides: [
+      "concrete-floor-problems",
       "concrete-slab-flooring-guide",
       "can-moisture-come-through-concrete",
       "how-to-test-concrete-moisture",
@@ -2944,6 +2951,7 @@ const guideDrafts: GuideDraft[] = [
     topicCluster: "installation-method",
     relatedTools: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"],
     relatedGuides: [
+      "concrete-floor-problems",
       "concrete-slab-flooring-guide",
       "how-to-test-concrete-moisture",
       "why-flooring-fails-over-concrete",
@@ -4427,8 +4435,8 @@ const guideDrafts: GuideDraft[] = [
       "A master troubleshooting hub for flooring over concrete, including slab moisture, cracks, vapor barriers, moisture testing, hollow sounds, adhesive failure, and flooring compatibility.",
     metadataTitle: "Concrete Floor Problems: Moisture, Cracks, and Failures",
     metadataDescription:
-      "Troubleshoot concrete floor problems under flooring, including slab moisture, cracks, vapor barriers, moisture testing, hollow sounds, adhesive failure, and floor compatibility.",
-    dateModified: "2026-06-03",
+      "Diagnose concrete floor problems and slab issues under flooring: moisture, cracks, vapor barriers, ASTM moisture testing, hollow sounds, and adhesive failure.",
+    dateModified: "2026-06-11",
     readTime: "14 min read",
     primaryEcosystem: "planning-measuring-transitions",
     secondaryEcosystems: ["lvp", "laminate", "hardwood-engineered-hardwood", "tile", "carpet-padding"],
@@ -4452,7 +4460,7 @@ const guideDrafts: GuideDraft[] = [
       "common-basement-flooring-problems"
     ],
     quickAnswer: [
-      "Concrete floor problems under flooring usually come from moisture, flatness, cracks, surface contamination, wrong underlayment, adhesive incompatibility, hollow spots, or flooring installed before the slab and jobsite were ready.",
+      "Concrete floor problems under flooring usually come from moisture, flatness, cracks, surface contamination, wrong underlayment, adhesive incompatibility, hollow spots, or flooring installed before the slab and jobsite were ready. Most concrete floor issues are slab-condition issues wearing a flooring costume — the symptom shows in the finish floor, but the cause is underneath.",
       "Concrete is not automatically ready because it looks dry or feels hard. Flooring over concrete should be planned around the exact product requirements for moisture testing, surface preparation, vapor control, flatness, adhesive or underlayment compatibility, and movement."
     ],
     keySections: [
@@ -4484,6 +4492,22 @@ const guideDrafts: GuideDraft[] = [
           "Check basement slabs, older slabs, newer slabs, prior flooring failures, and slabs with unknown history.",
           "Review pH, porosity, sealers, old adhesive, dust, and surface strength where required.",
           "Bring in a flooring professional when testing, mitigation, or adhesive compatibility is unclear."
+        ]
+      },
+      {
+        id: "standards-and-numbers",
+        title: "The standards and numbers behind slab readiness",
+        paragraphs: [
+          "The tests and tolerances installers reference are published standards, not folklore. Knowing their names helps you read product instructions and hold a useful conversation with an installer.",
+          "ASTM F710 is the standard practice for preparing concrete to receive resilient flooring — it is where the familiar requirements for clean, smooth, dry, sound concrete come from, along with surface pH checks (resilient products commonly specify an acceptable range around 7 to 10, with exact limits set by each manufacturer).",
+          "Slab moisture itself is quantified two ways. The calcium chloride test (ASTM F1869) measures the moisture vapor emission rate at the surface — many resilient products historically specify a limit around 3 pounds per 1,000 square feet per 24 hours, though products vary. The in-situ probe test (ASTM F2170) measures relative humidity inside the slab, with limits commonly in the 75 to 80 percent range depending on the product and adhesive. Neither test substitutes for the other, and the flooring's instructions name which one (or both) is required.",
+          "New slabs add a waiting question: concrete commonly needs 60 days or more of curing before moisture-sensitive flooring can even be tested meaningfully, and slabs without a vapor retarder underneath — common in older homes — may never test reliably dry in wet seasons."
+        ],
+        bullets: [
+          "ASTM F710: the prep standard — clean, smooth, dry, sound; surface pH commonly 7–10 for resilient flooring.",
+          "ASTM F1869 (calcium chloride): vapor emission, with ~3 lb/1,000 sq ft/24 hr a commonly cited resilient limit.",
+          "ASTM F2170 (in-situ RH probes): internal slab humidity, commonly limited to 75–80% depending on product.",
+          "Always defer to the exact limit in your flooring and adhesive instructions — these are the typical ranges, not universal rules."
         ]
       },
       {
@@ -5883,6 +5907,128 @@ const guideDrafts: GuideDraft[] = [
         question: "Do industry standards give one universal repair?",
         answer:
           "No. NWFA, CRI, TCNA/ANSI, RFCI, ASTM-style substrate guidance, and manufacturer instructions point to field verification. Repair depends on product, installation method, substrate, and jobsite conditions."
+      }
+    ],
+    disclaimer: installConditionDisclaimer
+  },
+  {
+    slug: "why-wont-my-laminate-floor-click-together",
+    title: "Why Won't My Laminate Floor Click Together?",
+    description:
+      "Mid-install and the planks won't lock or lay flat? The usual culprits: debris in the groove, wrong locking technique, an unflat subfloor, or a damaged locking profile.",
+    metadataTitle: "Laminate Won't Click Together? Causes and Fixes",
+    metadataDescription:
+      "Laminate planks that won't snap together usually have debris in the groove, the wrong engagement angle, or a subfloor flatness problem. Here's what to check, in order.",
+    dateModified: "2026-06-11",
+    readTime: "9 min read",
+    primaryEcosystem: "laminate",
+    secondaryEcosystems: ["lvp"],
+    materialTypes: ["laminate"],
+    topicCluster: "installation-method",
+    relatedTools: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"],
+    relatedGuides: [
+      "why-is-my-laminate-floor-separating",
+      "laminate-floor-separating-what-to-check-first",
+      "how-flat-should-a-subfloor-be-for-laminate",
+      "best-underlayment-for-laminate-flooring",
+      "laminate-installation-checklist",
+      "why-is-my-floor-clicking"
+    ],
+    quickAnswer: [
+      "When laminate planks will not click together, the cause is almost always one of four things: debris or a chipped fragment inside the groove, the wrong engagement angle or technique for that product's locking system, a first row that is not straight, or a subfloor that is not flat enough for the joint to seat. Damaged locking edges from repeated forcing are the fifth — and once a lock is damaged, that plank edge will not hold.",
+      "Work through the causes in order before forcing anything. Hammering directly on a plank edge to close a stubborn joint is how a fixable problem becomes a damaged-lock problem."
+    ],
+    keySections: [
+      {
+        id: "check-the-groove",
+        title: "Check the groove and the locking edge first",
+        paragraphs: [
+          "The single most common reason a joint will not close is a physical obstruction: sawdust, a chip of core material from a previous cut, or underlayment fragments sitting inside the groove. The locking profiles on laminate are precise — a few millimeters of debris is enough to hold a joint open or make it close at the wrong height.",
+          "Run a finger or a vacuum nozzle along the groove of both planks and check the tongue for burrs. Then inspect the locking edge itself under good light. If the tongue or groove shows crushed, whitish, or flaking material, that edge has been damaged — usually by forcing or by tapping directly with a hammer — and no technique will make it hold reliably. Replace the plank or trim that edge for use in a cut position at a wall."
+        ],
+        bullets: [
+          "Vacuum the groove and wipe the tongue on both planks before re-trying.",
+          "Look for chips of core material left over from cutting.",
+          "Inspect for crushed or flaking edges — damaged locks do not recover.",
+          "Dry-fit two scrap pieces off the floor to confirm the profiles mate at all."
+        ]
+      },
+      {
+        id: "locking-technique",
+        title: "Use the locking technique the product was designed for",
+        paragraphs: [
+          "Click-lock systems are not interchangeable, and using the wrong motion is a top cause of joints that will not seat. Angle-angle products want the long edge engaged at roughly 20 to 30 degrees and folded down, then the short end engaged. Fold-down (drop-lock) products want the long edge angled in and the short end pressed straight down until it clicks — angling a drop-lock end joint can break the plastic or fiberboard catch inside it.",
+          "The installation instructions for your exact product show the intended motion — and they are worth the two minutes, because the same brand can use different locking systems across product lines.",
+          "Tools matter too: use a tapping block against the joint (never a bare hammer on the plank edge) and a pull bar at walls where there is no room to swing. Tapping blocks spread the force across the profile; a hammer concentrates it and crushes the lock."
+        ],
+        bullets: [
+          "Angle-angle systems: engage the long edge at ~20–30°, fold down, then close the end.",
+          "Fold-down systems: angle the long edge, then press the end joint straight down.",
+          "Always use a tapping block or pull bar — never strike the plank edge directly.",
+          "If one specific joint resists everywhere you try it, swap that plank: occasional milling defects happen."
+        ]
+      },
+      {
+        id: "first-row-and-flatness",
+        title: "The first row and the floor underneath",
+        paragraphs: [
+          "If joints engage but the row will not lie flat, or each successive row gets harder to close, look at the foundation of the install rather than the planks. A first row that is not perfectly straight telegraphs into every following row — the locking system needs the rows parallel, and a bowed first row (often from following a wavy wall) makes joints fight you a little more each course. Snap a chalk line for row one instead of trusting the wall.",
+          "Subfloor flatness is the other quiet culprit. Laminate manufacturers commonly require flatness in the neighborhood of 3/16 inch over 10 feet — check your product's exact figure. Over a dip or hump, the locking profiles meet at an angle instead of in plane, so the joint clicks partially or pops back open, and planks see-saw rather than laying flat. If joints close on one side of the room and refuse on the other, lay a straightedge on the subfloor where they refuse.",
+          "Underlayment can mimic this: doubled-up padding, or cushion that is too thick or too soft for the product, lets planks tilt as you work the joint. Use only the underlayment the manufacturer approves, and never stack a separate pad under planks that have one attached."
+        ],
+        bullets: [
+          "Snap a chalk line for the first row — do not trace a wavy wall.",
+          "Check subfloor flatness with a straightedge where joints refuse to close (commonly ~3/16 in over 10 ft allowed — verify your product).",
+          "One layer of approved underlayment only.",
+          "Joints that pop back open after clicking usually mean flatness or debris, not technique."
+        ]
+      },
+      {
+        id: "not-laying-flat",
+        title: "Why planks click but won't lay flat",
+        paragraphs: [
+          "A row that closes but rocks, peaks slightly at the joints, or will not sit flush usually has one of three explanations. First, the joint is only partially engaged — listen for the full click and check the seam with your fingertips; a half-engaged drop-lock end feels like a tiny ledge. Second, there is debris under the plank or in the groove holding one edge proud. Third, the planks themselves are not flat: boards stored flat in dry conditions stay flat, while boards stored on edge, in a damp garage, or without the typical 48 hours of on-site acclimation many manufacturers require can arrive slightly cupped and resist seating.",
+          "If a plank is visibly bowed or cupped on its own, set it aside for cut pieces rather than wrestling it into the field of the floor. And if many planks from one box behave that way, stop and check the box's condition and batch — a storage or moisture problem with the material is a return conversation, not a technique problem."
+        ]
+      }
+    ],
+    example: [
+      "Halfway through a bedroom, end joints start refusing to click. The installer has been cutting planks in the same room, and a vacuum pass through the grooves of the next three planks pulls out fiberboard dust — joints click again. Two rows later one end still will not seat: the straightedge reveals a 1/4-inch dip the underlayment had hidden. A bag of patch compound on the dip would have prevented both problems on day one.",
+      "The pattern matters: debris failures are random planks; flatness failures cluster in one area of the room; technique and damaged-lock failures follow specific joints wherever the plank goes."
+    ],
+    commonMistakes: [
+      "Hammering directly on the plank edge instead of using a tapping block — the fastest way to destroy a locking profile.",
+      "Using the angle-angle motion on a fold-down product (or vice versa) instead of checking the instructions.",
+      "Tracing a wavy wall with the first row instead of snapping a straight line.",
+      "Ignoring subfloor flatness because the underlayment hides it — the joints find it anyway.",
+      "Skipping acclimation or storing boxes on edge in a garage, then fighting cupped planks.",
+      "Forcing a joint that resists, then reusing the now-damaged plank in the field of the floor."
+    ],
+    faq: [
+      {
+        question: "Why won't my laminate planks snap together?",
+        answer:
+          "Check in this order: debris in the groove, damaged locking edges, wrong engagement technique for the product's locking system, a crooked first row, and subfloor flatness. The first two account for most stubborn joints."
+      },
+      {
+        question: "What do I do when laminate won't click on the short end?",
+        answer:
+          "Identify the locking type first. Fold-down ends press straight down; angle-angle ends rotate in. Using the wrong motion can break the catch. If the motion is right, vacuum the groove and check the tongue for burrs."
+      },
+      {
+        question: "Why is my laminate floor not laying flat?",
+        answer:
+          "Either the joint is only partially engaged, debris is holding an edge up, the subfloor has a dip or hump beyond the product's flatness tolerance, or the planks themselves cupped from storage or skipped acclimation."
+      },
+      {
+        question: "Can I reuse a plank whose lock I damaged?",
+        answer:
+          "Not in the field of the floor — a crushed lock will not hold and becomes a future gap or squeak. Trim the damaged edge and use the plank where a cut piece is needed at a wall."
+      },
+      {
+        question: "How flat does the floor need to be for laminate?",
+        answer:
+          "Most laminate manufacturers specify flatness in the neighborhood of 3/16 inch over 10 feet, though the exact tolerance varies by product. Check and correct flatness before installing — underlayment does not fix an out-of-tolerance subfloor."
       }
     ],
     disclaimer: installConditionDisclaimer

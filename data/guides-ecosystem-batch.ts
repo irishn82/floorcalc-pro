@@ -911,6 +911,7 @@ const guideDrafts: GuideDraft[] = [
     topicCluster: "installation-method",
     relatedTools: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"],
     relatedGuides: [
+      "why-wont-my-laminate-floor-click-together",
       "flooring-problem-comparison-guide",
       "buckling-vs-peaking-flooring",
       "flooring-movement-problems",
