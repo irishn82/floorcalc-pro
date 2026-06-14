@@ -467,8 +467,8 @@ const guideDrafts: GuideDraft[] = [
     metadataTitle: "Why Is My LVP Floor Clicking? 6 Causes and What to Check",
     metadataDescription:
       "LVP clicking usually means a locking joint is under stress — and it gets worse if ignored. Learn the 6 most common causes and what to check before calling a pro.",
-    dateModified: "2026-06-10",
-    readTime: "9 min read",
+    dateModified: "2026-06-14",
+    readTime: "11 min read",
     primaryEcosystem: "lvp",
     secondaryEcosystems: ["lvt"],
     materialTypes: ["lvp", "lvt"],
@@ -730,8 +730,10 @@ const guideDrafts: GuideDraft[] = [
     relatedTools: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"],
     relatedGuides: [
       "how-flat-should-a-subfloor-be-for-laminate",
+      "why-is-my-laminate-floor-not-laying-flat",
       "can-laminate-flooring-be-waterproof",
       "why-is-my-laminate-floor-separating",
+      "how-to-fix-laminate-floor-separation",
       "glue-down-vs-floating-floor"
     ],
     quickAnswer: [
@@ -911,6 +913,10 @@ const guideDrafts: GuideDraft[] = [
     topicCluster: "installation-method",
     relatedTools: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"],
     relatedGuides: [
+      "how-to-fix-laminate-floor-separation",
+      "laminate-floor-separation-repair-guide",
+      "laminate-floor-not-clicking-together",
+      "why-is-my-laminate-floor-not-laying-flat",
       "why-wont-my-laminate-floor-click-together",
       "flooring-problem-comparison-guide",
       "buckling-vs-peaking-flooring",
@@ -1004,6 +1010,46 @@ const guideDrafts: GuideDraft[] = [
         ]
       },
       {
+        id: "repair-paths",
+        title: "Repair paths: close, reopen, replace, or investigate",
+        paragraphs: [
+          "Laminate separation repairs fall into four buckets. A clean joint with intact edges may be closed after the cause is corrected. A middle-of-room gap may require working rows apart from the nearest wall. A damaged lock or swollen edge usually needs board replacement. A gap tied to moisture, buckling, or a wet subfloor should be investigated before any surface repair.",
+          "This is why the best repair question is not just how to close the gap. It is whether the gap is cosmetic, mechanical, moisture-related, or a sign that the floor is trapped or unsupported."
+        ],
+        comparisonTable: {
+          columns: ["Visible issue", "Likely category", "Practical next step"],
+          rows: [
+            ["Small clean gap that appeared once", "Open joint or minor movement", "Check expansion and support, then close carefully if the lock is intact."],
+            ["Gap keeps reopening", "Movement, flatness, or damaged lock", "Inspect subfloor support, expansion restrictions, and locking edges."],
+            ["Long-side separation", "Row alignment, flatness, or locking stress", "Check first-row alignment, low spots, and whether the long edge is damaged."],
+            ["Gap plus buckling or peaking", "Pressure or moisture concern", "Investigate expansion space, fixed objects, and moisture before forcing flat."],
+            ["Gap plus swollen edge", "Moisture damage", "Find the moisture source and plan for possible board replacement."]
+          ]
+        }
+      },
+      {
+        id: "homeowner-repair-limits",
+        title: "Can homeowners repair laminate separation?",
+        paragraphs: [
+          "Homeowners can usually handle the first diagnostic steps: mapping gaps, checking for tight trim, looking for swelling, reviewing cleaning history, and checking whether a joint is visibly damaged.",
+          "The repair itself depends on access. A gap near an open edge may be repairable without removing much flooring. A gap in the center of a room, a long-side separation, or a joint that reopens often needs rows lifted, boards replaced, or the subfloor checked."
+        ],
+        bullets: [
+          "Reasonable DIY checks: gap mapping, expansion-space inspection, moisture clues, and product-instruction review.",
+          "Use caution with gap-closing tools; they can hide a problem or damage a weak lock.",
+          "Avoid gluing or filling joints unless the manufacturer allows that repair.",
+          "Call an installer when the repair requires lifting rows or correcting the substrate."
+        ]
+      },
+      {
+        id: "long-side-separation",
+        title: "Laminate separating on the long side",
+        paragraphs: [
+          "Long-side separation deserves extra attention because it often points to row alignment, a low spot, an unsupported joint, or a damaged locking edge. End gaps can sometimes be a single plank issue; long-side separation often tells you the row is under stress.",
+          "Check whether the first row was straight, whether the wall forced the floor into a curve, and whether the subfloor is allowing the long joint to flex. If the long side will not stay closed, replacing one board may not solve the problem unless support and alignment are corrected."
+        ]
+      },
+      {
         id: "homeowner-expectations",
         title: "What homeowners should expect from a repair",
         paragraphs: [
@@ -1078,6 +1124,31 @@ const guideDrafts: GuideDraft[] = [
         question: "Can laminate gaps be fixed?",
         answer:
           "Sometimes. Small gaps may be closed if the locking joints are intact and the floor is not being pushed apart by movement, moisture, or a subfloor problem. If the same gap returns, the repair should start with the cause, not just the visible opening."
+      },
+      {
+        question: "How do you close gaps in laminate flooring?",
+        answer:
+          "First check why the gap opened. If the locking edges are intact and the floor is not wet, pinned, or unsupported, the joint may be closed by carefully working from an accessible edge or using a product-appropriate gap-closing method. Do not force or glue the joint unless the manufacturer's instructions allow it."
+      },
+      {
+        question: "Why is my laminate floor separating on the long side?",
+        answer:
+          "Long-side separation often points to row alignment, subfloor flatness, partial engagement, damaged locking edges, or repeated flex in that row. Check whether the first row was straight and whether the joint is moving over a low spot."
+      },
+      {
+        question: "What if my laminate floor will not snap back together?",
+        answer:
+          "Stop and inspect the tongue and groove. Debris, damaged locking edges, swelling, or an unflat subfloor can prevent the joint from seating. A damaged lock usually needs board replacement rather than more force."
+      },
+      {
+        question: "Why is my laminate flooring moving after installation?",
+        answer:
+          "Movement after installation can come from normal floating-floor behavior, but visible gaps, clicking, buckling, or recurring separation often mean the floor is unsupported, pinned, moisture-affected, or outside the product's installation requirements."
+      },
+      {
+        question: "Can I repair laminate separation without replacing boards?",
+        answer:
+          "Sometimes. If the boards are not swollen or damaged and the cause has been corrected, the floor may be reassembled. Replacement is more likely when the locking edge is crushed, chipped, swollen, or will not hold after reassembly."
       },
       {
         question: "Why does my laminate floor keep separating after I tap it back?",
@@ -1158,6 +1229,9 @@ const guideDrafts: GuideDraft[] = [
     relatedGuides: [
       "best-underlayment-for-laminate-flooring",
       "why-is-my-laminate-floor-separating",
+      "why-is-my-laminate-floor-not-laying-flat",
+      "laminate-floor-not-clicking-together",
+      "how-to-fix-laminate-floor-separation",
       "glue-down-vs-floating-floor",
       "subfloor-flatness-requirements-lvp"
     ],

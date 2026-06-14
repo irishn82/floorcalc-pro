@@ -90,6 +90,28 @@ export const guideHowToSteps: Partial<Record<GuideSlug, HowToStep[]>> = {
       text: "If separation appeared shortly after installation, check whether the laminate was given adequate time to acclimate to the room's temperature and humidity before installation."
     }
   ],
+  "how-to-fix-laminate-floor-separation": [
+    {
+      name: "Map the separated joints",
+      text: "Mark every open joint and note whether the gap is at an end joint, long-side joint, doorway, hallway, or across the whole room."
+    },
+    {
+      name: "Check for blocked movement",
+      text: "Inspect walls, door frames, transitions, cabinets, islands, and trim to see whether the floating floor is pinned or missing required expansion space."
+    },
+    {
+      name: "Inspect support and moisture",
+      text: "Look for bounce, hollow sound, low spots, swollen edges, water history, or high humidity before closing the joint."
+    },
+    {
+      name: "Inspect the locking edges",
+      text: "Check the tongue and groove for crushed, chipped, swollen, or worn material. Damaged locking edges may need board replacement."
+    },
+    {
+      name: "Choose the repair path",
+      text: "Close the joint only if the cause has been corrected and the locking edges are intact. Otherwise plan for board replacement, substrate correction, or professional inspection."
+    }
+  ],
   "can-engineered-hardwood-go-over-concrete": [
     {
       name: "Test concrete moisture",

@@ -124,6 +124,8 @@ export const problemBrowseSections: ProblemBrowseSection[] = [
       "why-is-my-lvp-floor-peaking",
       "why-is-my-lvp-floor-separating",
       "why-is-my-laminate-floor-separating",
+      "how-to-fix-laminate-floor-separation",
+      "laminate-floor-separation-repair-guide",
       "why-is-my-engineered-hardwood-separating",
       "cupping-vs-crowning-hardwood",
       "why-are-my-flooring-joints-opening",
@@ -212,7 +214,12 @@ export const problemBrowseSections: ProblemBrowseSection[] = [
       "flooring-separation-problems",
       "buckling-vs-peaking-flooring",
       "why-is-my-laminate-floor-separating",
+      "how-to-fix-laminate-floor-separation",
+      "laminate-floor-separation-repair-guide",
+      "laminate-floor-not-clicking-together",
+      "why-is-my-laminate-floor-not-laying-flat",
       "why-is-my-laminate-floor-buckling",
+      "why-wont-my-laminate-floor-click-together",
       "laminate-floor-separating-what-to-check-first",
       "why-is-my-floor-clicking",
       "best-underlayment-for-laminate-flooring",
@@ -352,6 +359,10 @@ export const relatedProblemGuideSlugs: Partial<Record<GuideSlug, GuideSlug[]>> =
     "flooring-movement-problems"
   ],
   "why-is-my-laminate-floor-separating": [
+    "how-to-fix-laminate-floor-separation",
+    "laminate-floor-separation-repair-guide",
+    "laminate-floor-not-clicking-together",
+    "why-is-my-laminate-floor-not-laying-flat",
     "flooring-symptom-comparison-guide",
     "why-is-my-laminate-floor-buckling",
     "why-is-my-engineered-hardwood-separating",
@@ -359,6 +370,48 @@ export const relatedProblemGuideSlugs: Partial<Record<GuideSlug, GuideSlug[]>> =
     "flooring-moisture-problems",
     "can-high-humidity-damage-flooring",
     "why-are-my-flooring-joints-opening"
+  ],
+  "how-to-fix-laminate-floor-separation": [
+    "why-is-my-laminate-floor-separating",
+    "laminate-floor-separation-repair-guide",
+    "laminate-floor-not-clicking-together",
+    "why-is-my-laminate-floor-not-laying-flat",
+    "flooring-separation-problems",
+    "flooring-movement-problems",
+    "flooring-moisture-problems"
+  ],
+  "laminate-floor-separation-repair-guide": [
+    "why-is-my-laminate-floor-separating",
+    "how-to-fix-laminate-floor-separation",
+    "laminate-floor-not-clicking-together",
+    "why-is-my-laminate-floor-not-laying-flat",
+    "laminate-floor-separating-what-to-check-first",
+    "flooring-separation-problems",
+    "why-is-my-laminate-floor-buckling"
+  ],
+  "laminate-floor-not-clicking-together": [
+    "why-wont-my-laminate-floor-click-together",
+    "why-is-my-laminate-floor-not-laying-flat",
+    "how-to-fix-laminate-floor-separation",
+    "why-is-my-laminate-floor-separating",
+    "how-flat-should-a-subfloor-be-for-laminate",
+    "flooring-movement-problems"
+  ],
+  "why-is-my-laminate-floor-not-laying-flat": [
+    "laminate-floor-not-clicking-together",
+    "why-is-my-laminate-floor-separating",
+    "how-to-fix-laminate-floor-separation",
+    "why-is-my-laminate-floor-buckling",
+    "how-flat-should-a-subfloor-be-for-laminate",
+    "flooring-movement-problems"
+  ],
+  "why-wont-my-laminate-floor-click-together": [
+    "laminate-floor-not-clicking-together",
+    "why-is-my-laminate-floor-not-laying-flat",
+    "how-to-fix-laminate-floor-separation",
+    "why-is-my-laminate-floor-separating",
+    "how-flat-should-a-subfloor-be-for-laminate",
+    "flooring-movement-problems"
   ],
   "why-is-my-floor-bouncing": [
     "are-bouncy-floors-dangerous",

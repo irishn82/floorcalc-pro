@@ -99,7 +99,13 @@ export const diagnosisOptions: DiagnosisOption[] = [
       "The floor is buckling, lifting, or showing swelling.",
       "Moisture, soft subfloor, or slab issues may be involved."
     ],
-    recommendedGuides: ["why-are-my-flooring-joints-opening", "why-is-my-laminate-floor-separating", "why-is-my-lvp-floor-separating"],
+    recommendedGuides: [
+      "why-are-my-flooring-joints-opening",
+      "why-is-my-laminate-floor-separating",
+      "how-to-fix-laminate-floor-separation",
+      "laminate-floor-separation-repair-guide",
+      "why-is-my-lvp-floor-separating"
+    ],
     relatedCalculators: ["waste-calculator", "transition-estimator"],
     relatedChecklists: ["lvp-installation-checklist", "laminate-installation-checklist", "engineered-hardwood-installation-checklist"],
     relatedHubs: ["flooring-separation-problems", "flooring-movement-problems", "flooring-moisture-problems"]

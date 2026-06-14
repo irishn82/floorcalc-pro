@@ -382,6 +382,7 @@ export const decisionTrees: DecisionTree[] = [
           "flooring-separation-problems",
           "why-is-my-lvp-floor-separating",
           "why-is-my-laminate-floor-separating",
+          "how-to-fix-laminate-floor-separation",
           "why-does-my-floor-feel-hollow"
         ],
         relatedCalculators: ["waste-calculator", "flooring-square-footage-calculator"]
@@ -428,6 +429,8 @@ export const decisionTrees: DecisionTree[] = [
         ],
         relatedGuides: [
           "why-are-my-flooring-joints-opening",
+          "laminate-floor-separation-repair-guide",
+          "laminate-floor-not-clicking-together",
           "why-is-my-engineered-hardwood-separating",
           "laminate-floor-separating-what-to-check-first",
           "flooring-symptom-comparison-guide"

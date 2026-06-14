@@ -1,4 +1,5 @@
 import { ecosystemGuideBatch } from "@/data/guides-ecosystem-batch";
+import { laminateSeparationAuthorityGuides } from "@/data/guides-laminate-separation-authority";
 import { searchConsoleGuideBatch } from "@/data/guides-search-console-batch";
 import { troubleshootingGuides } from "@/data/guides-troubleshooting";
 import type { Guide } from "@/data/types";
@@ -2207,6 +2208,7 @@ export const guides: Guide[] = [
       "This guide provides general transition planning information. Transition profiles, expansion gaps, stair noses, fastening methods, height limits, and product requirements vary by flooring system. Verify with the manufacturer's written instructions and installer before ordering trim."
   },
   ...ecosystemGuideBatch,
+  ...laminateSeparationAuthorityGuides,
   ...searchConsoleGuideBatch,
   ...troubleshootingGuides
 ];

@@ -49,6 +49,10 @@ export const troubleshootingProblemGroups: TroubleshootingProblemGroup[] = [
       "why-is-my-lvp-floor-peaking",
       "why-is-my-lvp-floor-buckling",
       "why-is-my-laminate-floor-separating",
+      "how-to-fix-laminate-floor-separation",
+      "laminate-floor-separation-repair-guide",
+      "laminate-floor-not-clicking-together",
+      "why-is-my-laminate-floor-not-laying-flat",
       "why-is-my-engineered-hardwood-separating",
       "why-is-my-hardwood-floor-gapping",
       "why-is-my-hardwood-floor-cupping",
@@ -121,6 +125,11 @@ export const troubleshootingProblemGroups: TroubleshootingProblemGroup[] = [
     ecosystemSlug: "laminate",
     guideSlugs: [
       "why-is-my-laminate-floor-separating",
+      "how-to-fix-laminate-floor-separation",
+      "laminate-floor-separation-repair-guide",
+      "laminate-floor-not-clicking-together",
+      "why-is-my-laminate-floor-not-laying-flat",
+      "why-wont-my-laminate-floor-click-together",
       "why-is-my-laminate-floor-buckling",
       "laminate-floor-separating-what-to-check-first",
       "why-is-my-floor-clicking",
@@ -767,6 +776,90 @@ const troubleshootingFlows: Partial<Record<GuideSlug, TroubleshootingFlow>> = {
       "The same problem returned after a repair.",
       "The project lacks moisture testing or installation records.",
       "Large areas may need removal before the cause is visible."
+    ]
+  },
+  "how-to-fix-laminate-floor-separation": {
+    group: "laminate",
+    causeRows: [
+      { cause: "Open but intact joint", symptom: "Clean gap with no swelling or broken edge", check: "Check expansion and support before closing the joint." },
+      { cause: "Damaged locking profile", symptom: "Gap returns or edge looks crushed or chipped", check: "Inspect tongue and groove before forcing repair." },
+      { cause: "Unsupported floor movement", symptom: "Gap with clicking, bounce, or hollow sound", check: "Check flatness, underlayment, and low spots." },
+      { cause: "Moisture or humidity", symptom: "Swollen edges, seasonal gaps, or gaps near wet areas", check: "Look for water history, high humidity, or damp substrate." }
+    ],
+    whatToCheckFirst: [
+      "Map every gap and note whether it is an end joint, long-side joint, doorway, hallway, or room-wide pattern.",
+      "Check expansion space at walls, transitions, fixed objects, cabinets, and door frames.",
+      "Inspect the locking edges for crushed, chipped, swollen, or worn material.",
+      "Look for moisture and subfloor movement before using gap-closing tools."
+    ],
+    whenToCallAPro: [
+      "The same gap keeps reopening after repair.",
+      "The floor is buckling, lifting, swelling, or sounding hollow near the gap.",
+      "Boards may need to be removed from the middle of the room.",
+      "Moisture, slab, or subfloor correction may be needed."
+    ]
+  },
+  "laminate-floor-separation-repair-guide": {
+    group: "laminate",
+    causeRows: [
+      { cause: "Mechanical separation", symptom: "Clean joint opens with no moisture signs", check: "Inspect lock shape, row alignment, and expansion space." },
+      { cause: "Long-side stress", symptom: "Long edge opens or will not stay tight", check: "Check first-row straightness, flatness, and support." },
+      { cause: "Expansion pressure", symptom: "Gap appears near tight transitions or fixed objects", check: "Inspect trim, tracks, door jambs, cabinets, and islands." },
+      { cause: "Moisture damage", symptom: "Swollen, raised, soft, or stained edges", check: "Investigate water source and damaged boards before reassembly." }
+    ],
+    whatToCheckFirst: [
+      "Decide whether the repair is a close-up, row removal, board replacement, or moisture investigation.",
+      "Check whether the gap returns after being closed.",
+      "Look for damaged tongue-and-groove edges before applying force.",
+      "Review manufacturer repair guidance before gluing, filling, or replacing planks."
+    ],
+    whenToCallAPro: [
+      "Long-side separation is recurring or paired with movement.",
+      "A large installed area must be disassembled.",
+      "The gap appears with swelling, buckling, odor, or dampness.",
+      "Subfloor flatness, moisture testing, or transition correction is likely."
+    ]
+  },
+  "laminate-floor-not-clicking-together": {
+    group: "laminate",
+    causeRows: [
+      { cause: "Debris in groove", symptom: "Joint almost closes but leaves a fine line", check: "Vacuum and inspect the tongue and groove." },
+      { cause: "Wrong locking motion", symptom: "Long side or short end refuses repeatedly", check: "Review the exact product locking instructions." },
+      { cause: "Crooked first row", symptom: "Rows get harder to seat as installation continues", check: "Snap a straight reference line." },
+      { cause: "Unflat substrate or wrong pad", symptom: "Joint seats in one area but not another", check: "Check flatness and approved underlayment." }
+    ],
+    whatToCheckFirst: [
+      "Stop forcing the joint and clean both locking edges.",
+      "Confirm whether the product is angle-angle, fold-down, or another locking style.",
+      "Check the first row for straightness.",
+      "Use a straightedge where the joint refuses to close."
+    ],
+    whenToCallAPro: [
+      "Multiple boxes or rows refuse to lock.",
+      "The subfloor is visibly uneven or outside product tolerance.",
+      "Planks look swollen, bowed, or moisture affected.",
+      "You may have damaged several locking profiles while forcing joints."
+    ]
+  },
+  "why-is-my-laminate-floor-not-laying-flat": {
+    group: "laminate",
+    causeRows: [
+      { cause: "Partial locking", symptom: "One edge sits proud or has a tiny ledge", check: "Inspect joint engagement and debris." },
+      { cause: "Subfloor flatness", symptom: "Planks rock, bridge, or flex in one area", check: "Use a straightedge and verify product tolerance." },
+      { cause: "Wrong underlayment", symptom: "Soft movement or unstable joints", check: "Confirm approved pad and no doubled layers." },
+      { cause: "Moisture or blocked expansion", symptom: "Raised areas, swelling, or buckling after installation", check: "Check water history, humidity, trim, and transitions." }
+    ],
+    whatToCheckFirst: [
+      "Decide whether the floor never laid flat or changed after installation.",
+      "Check for partially engaged joints and debris.",
+      "Inspect flatness, underlayment, and expansion space.",
+      "Look for moisture, swelling, or buckling before forcing the floor down."
+    ],
+    whenToCallAPro: [
+      "Several rows are raised, rocking, or buckling.",
+      "Moisture or swelling is visible.",
+      "The repair requires lifting rows or correcting the substrate.",
+      "A flatness or underlayment issue may affect a large area."
     ]
   },
   "why-is-my-laminate-floor-separating": {

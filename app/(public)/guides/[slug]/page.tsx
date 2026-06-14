@@ -165,6 +165,10 @@ const targetedNextStepTargets: Partial<
     primary: { type: "guide", slug: "laminate-floor-separating-what-to-check-first" },
     secondary: [
       { type: "guide", slug: "flooring-separation-problems" },
+      { type: "guide", slug: "how-to-fix-laminate-floor-separation" },
+      { type: "guide", slug: "laminate-floor-separation-repair-guide" },
+      { type: "guide", slug: "laminate-floor-not-clicking-together" },
+      { type: "guide", slug: "why-is-my-laminate-floor-not-laying-flat" },
       { type: "guide", slug: "flooring-moisture-problems" },
       { type: "guide", slug: "laminate-installation-checklist" },
       { type: "guide", slug: "flooring-movement-problems" },
@@ -179,6 +183,51 @@ const targetedNextStepTargets: Partial<
       { type: "guide", slug: "best-underlayment-for-laminate-flooring" },
       { type: "guide", slug: "flooring-direction-mistakes" },
       { type: "guide", slug: "why-is-my-floor-clicking" }
+    ]
+  },
+  "how-to-fix-laminate-floor-separation": {
+    primary: { type: "guide", slug: "why-is-my-laminate-floor-separating" },
+    secondary: [
+      { type: "guide", slug: "laminate-floor-separation-repair-guide" },
+      { type: "guide", slug: "laminate-floor-not-clicking-together" },
+      { type: "guide", slug: "why-is-my-laminate-floor-not-laying-flat" },
+      { type: "guide", slug: "flooring-separation-problems" },
+      { type: "guide", slug: "flooring-movement-problems" },
+      { type: "guide", slug: "flooring-moisture-problems" },
+      { type: "tool", slug: "waste-calculator" }
+    ]
+  },
+  "laminate-floor-separation-repair-guide": {
+    primary: { type: "guide", slug: "how-to-fix-laminate-floor-separation" },
+    secondary: [
+      { type: "guide", slug: "why-is-my-laminate-floor-separating" },
+      { type: "guide", slug: "laminate-floor-not-clicking-together" },
+      { type: "guide", slug: "why-is-my-laminate-floor-not-laying-flat" },
+      { type: "guide", slug: "laminate-installation-checklist" },
+      { type: "guide", slug: "how-flat-should-a-subfloor-be-for-laminate" },
+      { type: "guide", slug: "best-underlayment-for-laminate-flooring" }
+    ]
+  },
+  "laminate-floor-not-clicking-together": {
+    primary: { type: "guide", slug: "why-wont-my-laminate-floor-click-together" },
+    secondary: [
+      { type: "guide", slug: "why-is-my-laminate-floor-not-laying-flat" },
+      { type: "guide", slug: "how-to-fix-laminate-floor-separation" },
+      { type: "guide", slug: "why-is-my-laminate-floor-separating" },
+      { type: "guide", slug: "how-flat-should-a-subfloor-be-for-laminate" },
+      { type: "guide", slug: "best-underlayment-for-laminate-flooring" },
+      { type: "guide", slug: "laminate-installation-checklist" }
+    ]
+  },
+  "why-is-my-laminate-floor-not-laying-flat": {
+    primary: { type: "guide", slug: "how-flat-should-a-subfloor-be-for-laminate" },
+    secondary: [
+      { type: "guide", slug: "laminate-floor-not-clicking-together" },
+      { type: "guide", slug: "why-is-my-laminate-floor-separating" },
+      { type: "guide", slug: "why-is-my-laminate-floor-buckling" },
+      { type: "guide", slug: "how-to-fix-laminate-floor-separation" },
+      { type: "guide", slug: "flooring-movement-problems" },
+      { type: "guide", slug: "flooring-moisture-problems" }
     ]
   },
   "which-direction-should-flooring-run": {
