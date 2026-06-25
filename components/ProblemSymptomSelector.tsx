@@ -53,6 +53,22 @@ export function ProblemSymptomSelector({
           </Link>
         ))}
       </div>
+      {compact ? (
+        <div className="mt-3 flex flex-wrap gap-2 border-t border-line pt-3">
+          <Link
+            href="/diagnose"
+            className="rounded-md border border-accent-100 bg-accent-50 px-3 py-2 text-xs font-black uppercase tracking-[0.08em] text-accent-700 transition hover:border-accent-200 hover:bg-white"
+          >
+            Problem Finder
+          </Link>
+          <Link
+            href="/decision-trees"
+            className="rounded-md border border-line bg-white px-3 py-2 text-xs font-black uppercase tracking-[0.08em] text-slate-700 transition hover:border-accent-100 hover:bg-accent-50 hover:text-accent-700"
+          >
+            Guided Decision Trees
+          </Link>
+        </div>
+      ) : null}
     </section>
   );
 }

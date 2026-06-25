@@ -7,6 +7,7 @@ import { BrowseRelatedProblems } from "@/components/BrowseRelatedProblems";
 import { Container } from "@/components/Container";
 import { DisclaimerBox } from "@/components/DisclaimerBox";
 import { FAQSection } from "@/components/FAQSection";
+import { FieldVerificationChecklist } from "@/components/FieldVerificationChecklist";
 import { FlooringIcon } from "@/components/FlooringIcon";
 import { GuideUtilityVisual } from "@/components/GuideUtilityVisual";
 import { IndustryReferences } from "@/components/IndustryReferences";
@@ -1015,6 +1016,14 @@ export default async function GuidePage({ params }: GuidePageProps) {
   const bodySections = quickAnswerSection
     ? visibleGuideSections.filter((section) => section.id !== quickAnswerSection.id)
     : visibleGuideSections;
+  const guideVerificationText = `${guide.slug} ${guide.title} ${guide.description} ${guide.topicCluster ?? ""}`.toLowerCase();
+  const shouldShowFieldVerificationChecklist =
+    Boolean(troubleshootingFlow) ||
+    Boolean(authorityHubPathway) ||
+    ["repairs", "subfloor-prep", "installation-method", "radiant-heat"].includes(guide.topicCluster ?? "") ||
+    ["moisture", "concrete", "slab", "movement", "separat", "buckl", "click", "lift", "flat", "hollow"].some((term) =>
+      guideVerificationText.includes(term)
+    );
 
   return (
     <>
@@ -1142,6 +1151,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
               ) : (
                 <GuideUtilityVisual guide={guide} />
               )}
+              {shouldShowFieldVerificationChecklist ? <FieldVerificationChecklist guide={guide} /> : null}
               <div className="prose-flooring mt-5">
                 {bodySections.map((section) => (
                   <GuideSectionContent key={section.id} section={section} />
