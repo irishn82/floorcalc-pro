@@ -47,7 +47,7 @@ export const diagnosisOptions: DiagnosisOption[] = [
       "There are moisture signs, odor, swelling, cupping, or adhesive release.",
       "The floor feels soft, strongly bouncy, sagging, or unsafe."
     ],
-    recommendedGuides: ["flooring-movement-problems", "flooring-symptom-comparison-guide", "why-is-my-lvp-floor-clicking"],
+    recommendedGuides: ["is-this-flooring-movement-normal", "flooring-movement-problems", "flooring-symptom-comparison-guide", "why-is-my-lvp-floor-clicking"],
     relatedCalculators: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"],
     relatedChecklists: ["lvp-installation-checklist", "laminate-installation-checklist", "engineered-hardwood-installation-checklist"],
     relatedHubs: ["flooring-movement-problems", "flooring-separation-problems", "flooring-moisture-problems"]
@@ -73,7 +73,7 @@ export const diagnosisOptions: DiagnosisOption[] = [
       "Joints are separating or planks are lifting.",
       "The floor feels soft, bouncy, or unsupported."
     ],
-    recommendedGuides: ["clicking-vs-lifting-flooring", "why-is-my-floor-clicking", "why-is-my-lvp-floor-clicking"],
+    recommendedGuides: ["is-floor-clicking-normal", "clicking-vs-lifting-flooring", "why-is-my-floor-clicking", "why-is-my-lvp-floor-clicking"],
     relatedCalculators: ["flooring-square-footage-calculator", "transition-estimator"],
     relatedChecklists: ["lvp-installation-checklist", "laminate-installation-checklist"],
     relatedHubs: ["flooring-movement-problems", "flooring-separation-problems"]
@@ -101,7 +101,9 @@ export const diagnosisOptions: DiagnosisOption[] = [
     ],
     recommendedGuides: [
       "why-are-my-flooring-joints-opening",
+      "is-floor-separation-serious",
       "why-is-my-laminate-floor-separating",
+      "can-i-keep-installing-laminate",
       "how-to-fix-laminate-floor-separation",
       "laminate-floor-separation-repair-guide",
       "why-is-my-lvp-floor-separating"
@@ -313,7 +315,7 @@ export const diagnosisOptions: DiagnosisOption[] = [
       "A concrete slab or basement is involved.",
       "Flooring has already failed once in the same area."
     ],
-    recommendedGuides: ["flooring-moisture-problems", "moisture-vs-acclimation-problems", "how-to-test-concrete-moisture"],
+    recommendedGuides: ["when-to-stop-floor-installation", "flooring-moisture-problems", "moisture-vs-acclimation-problems", "how-to-test-concrete-moisture"],
     relatedCalculators: ["waste-calculator", "flooring-square-footage-calculator"],
     relatedChecklists: ["lvp-installation-checklist", "engineered-hardwood-installation-checklist", "carpet-installation-checklist"],
     relatedHubs: ["flooring-moisture-problems", "concrete-floor-problems"]
@@ -339,7 +341,7 @@ export const diagnosisOptions: DiagnosisOption[] = [
       "Cracks are moving, widening, or transferring through flooring.",
       "A glue-down or tile system is releasing, hollow, or cracking."
     ],
-    recommendedGuides: ["concrete-floor-problems", "concrete-slab-flooring-guide", "why-flooring-fails-over-concrete"],
+    recommendedGuides: ["when-to-stop-floor-installation", "concrete-floor-problems", "concrete-slab-flooring-guide", "why-flooring-fails-over-concrete"],
     relatedCalculators: ["flooring-square-footage-calculator", "waste-calculator", "transition-estimator"],
     relatedChecklists: ["lvp-installation-checklist", "engineered-hardwood-installation-checklist", "tile-installation-checklist"],
     relatedHubs: ["concrete-floor-problems", "flooring-moisture-problems"]

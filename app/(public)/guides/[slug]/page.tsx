@@ -58,7 +58,12 @@ const problemFinderCalloutSlugs = new Set<GuideSlug>([
   "cupping-vs-crowning-hardwood",
   "moisture-vs-acclimation-problems",
   "flooring-symptom-comparison-guide",
-  "flooring-problem-comparison-guide"
+  "flooring-problem-comparison-guide",
+  "is-floor-clicking-normal",
+  "is-floor-separation-serious",
+  "is-this-flooring-movement-normal",
+  "can-i-keep-installing-laminate",
+  "when-to-stop-floor-installation"
 ]);
 
 function uniqueLinks(links: ResourceLink[]) {

@@ -25,6 +25,9 @@ export const authorityHubPathways: AuthorityHubPathway[] = [
       "Sort the likely cause into moisture, expansion pressure, subfloor flatness/support, or structure/framing before forcing joints closed or fastening anything down."
     ],
     symptomLookup: [
+      { label: "Normal movement?", guideSlug: "is-this-flooring-movement-normal", note: "Use this when the user is asking whether clicking, shifting, bouncing, lifting, or separation is normal. Urgency: compare symptom severity before repair." },
+      { label: "Clicking normal?", guideSlug: "is-floor-clicking-normal", note: "Likely concern: normal sound versus support, locking-joint, moisture, or expansion issue. Urgency: monitor if isolated, inspect if repeated." },
+      { label: "Separation serious?", guideSlug: "is-floor-separation-serious", note: "Likely concern: cosmetic gap versus recurring movement, moisture, or damaged joints. Urgency: investigate if gaps keep reopening." },
       { label: "Clicking", guideSlug: "why-is-my-lvp-floor-clicking", note: "Likely cause: low spots, locking stress, soft underlayment, or pinned floating floor. Urgency: inspect if repeated. Next step: check support and movement." },
       { label: "Lifting", guideSlug: "why-is-my-lvp-lifting", note: "Likely cause: pressure, moisture, adhesive release, or unsupported edges. Urgency: inspect before forcing flat. Next step: identify floating vs glue-down." },
       { label: "Peaking", guideSlug: "why-is-my-lvp-floor-peaking", note: "Likely cause: expansion pressure, fixed objects, heat, or moisture. Urgency: medium to high if spreading. Next step: check gaps and pinning." },
@@ -40,6 +43,9 @@ export const authorityHubPathways: AuthorityHubPathway[] = [
     checklists: ["lvp-installation-checklist", "laminate-installation-checklist", "engineered-hardwood-installation-checklist", "tile-installation-checklist"],
     troubleshooting: [
       "why-is-my-lvp-floor-clicking",
+      "is-this-flooring-movement-normal",
+      "is-floor-clicking-normal",
+      "is-floor-separation-serious",
       "why-is-my-lvp-lifting",
       "why-is-my-lvp-floor-peaking",
       "why-is-my-lvp-floor-buckling",
@@ -78,6 +84,7 @@ export const authorityHubPathways: AuthorityHubPathway[] = [
       "how-to-fix-laminate-floor-separation",
       "laminate-floor-separation-repair-guide",
       "laminate-floor-not-clicking-together",
+      "can-i-keep-installing-laminate",
       "why-is-my-laminate-floor-not-laying-flat",
       "why-is-my-laminate-floor-buckling",
       "why-are-my-flooring-joints-opening"

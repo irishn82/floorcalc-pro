@@ -16,6 +16,11 @@ export type ProblemBrowseSection = {
 
 export const problemSymptomLinks: ProblemSymptomLink[] = [
   {
+    label: "Risk / severity",
+    href: "/guides/is-this-flooring-movement-normal",
+    description: "Decide whether movement, clicking, gaps, or lifting should be monitored or investigated."
+  },
+  {
     label: "Compare symptoms",
     href: "/guides/flooring-symptom-comparison-guide",
     description: "Use side-by-side comparisons when two flooring symptoms look similar."
@@ -107,6 +112,9 @@ export const problemBrowseSections: ProblemBrowseSection[] = [
       "flooring-movement-problems",
       "flooring-problem-comparison-guide",
       "flooring-symptom-comparison-guide",
+      "is-floor-separation-serious",
+      "is-floor-clicking-normal",
+      "is-this-flooring-movement-normal",
       "clicking-vs-lifting-flooring",
       "buckling-vs-peaking-flooring",
       "flooring-separation-problems",
@@ -124,6 +132,7 @@ export const problemBrowseSections: ProblemBrowseSection[] = [
       "why-is-my-lvp-floor-peaking",
       "why-is-my-lvp-floor-separating",
       "why-is-my-laminate-floor-separating",
+      "can-i-keep-installing-laminate",
       "how-to-fix-laminate-floor-separation",
       "laminate-floor-separation-repair-guide",
       "why-is-my-engineered-hardwood-separating",
@@ -157,6 +166,7 @@ export const problemBrowseSections: ProblemBrowseSection[] = [
       "ideal-humidity-for-flooring",
       "why-is-moisture-coming-through-my-slab",
       "what-happens-if-flooring-is-installed-too-soon",
+      "when-to-stop-floor-installation",
       "common-basement-flooring-problems"
     ],
     toolSlugs: ["flooring-square-footage-calculator", "waste-calculator"]
@@ -306,6 +316,50 @@ export const problemBrowseSections: ProblemBrowseSection[] = [
 ];
 
 export const relatedProblemGuideSlugs: Partial<Record<GuideSlug, GuideSlug[]>> = {
+  "is-floor-clicking-normal": [
+    "why-is-my-floor-clicking",
+    "why-is-my-lvp-floor-clicking",
+    "clicking-vs-lifting-flooring",
+    "why-does-my-floor-feel-hollow",
+    "flooring-movement-problems",
+    "is-this-flooring-movement-normal",
+    "when-to-stop-floor-installation"
+  ],
+  "is-floor-separation-serious": [
+    "flooring-separation-problems",
+    "why-is-my-laminate-floor-separating",
+    "how-to-fix-laminate-floor-separation",
+    "why-is-my-lvp-floor-separating",
+    "why-is-my-engineered-hardwood-separating",
+    "flooring-moisture-problems",
+    "when-to-stop-floor-installation"
+  ],
+  "is-this-flooring-movement-normal": [
+    "flooring-movement-problems",
+    "is-floor-clicking-normal",
+    "is-floor-separation-serious",
+    "why-is-my-floor-moving",
+    "why-is-my-floor-bouncing",
+    "why-is-my-floor-squeaking",
+    "when-to-stop-floor-installation"
+  ],
+  "can-i-keep-installing-laminate": [
+    "laminate-floor-not-clicking-together",
+    "why-wont-my-laminate-floor-click-together",
+    "why-is-my-laminate-floor-not-laying-flat",
+    "why-is-my-laminate-floor-separating",
+    "laminate-installation-checklist",
+    "when-to-stop-floor-installation"
+  ],
+  "when-to-stop-floor-installation": [
+    "what-happens-if-flooring-is-installed-too-soon",
+    "can-i-keep-installing-laminate",
+    "is-this-flooring-movement-normal",
+    "how-to-test-concrete-moisture",
+    "flooring-moisture-problems",
+    "concrete-floor-problems",
+    "flooring-movement-problems"
+  ],
   "flooring-movement-problems": [
     "flooring-symptom-comparison-guide",
     "clicking-vs-lifting-flooring",

@@ -1,5 +1,6 @@
 import { ecosystemGuideBatch } from "@/data/guides-ecosystem-batch";
 import { laminateSeparationAuthorityGuides } from "@/data/guides-laminate-separation-authority";
+import { riskAssessmentGuides } from "@/data/guides-risk-assessment";
 import { searchConsoleGuideBatch } from "@/data/guides-search-console-batch";
 import { troubleshootingGuides } from "@/data/guides-troubleshooting";
 import type { Guide } from "@/data/types";
@@ -2210,5 +2211,6 @@ export const guides: Guide[] = [
   ...ecosystemGuideBatch,
   ...laminateSeparationAuthorityGuides,
   ...searchConsoleGuideBatch,
+  ...riskAssessmentGuides,
   ...troubleshootingGuides
 ];

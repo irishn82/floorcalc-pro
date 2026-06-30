@@ -101,7 +101,14 @@ export function getGuideIndustryReferences(guide: Guide) {
     }
   }
 
-  const referenceLimit = ["flooring-symptom-comparison-guide", "flooring-problem-comparison-guide"].includes(guide.slug)
+  const referenceLimit = [
+    "flooring-symptom-comparison-guide",
+    "flooring-problem-comparison-guide",
+    "is-floor-clicking-normal",
+    "is-floor-separation-serious",
+    "is-this-flooring-movement-normal",
+    "when-to-stop-floor-installation"
+  ].includes(guide.slug)
     ? 6
     : [
         "flooring-separation-problems",

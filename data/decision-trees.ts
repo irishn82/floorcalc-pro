@@ -128,9 +128,11 @@ export const decisionTrees: DecisionTree[] = [
         ],
         relatedGuides: [
           "why-is-my-lvp-floor-clicking",
+          "is-floor-clicking-normal",
           "why-does-my-floor-feel-hollow",
           "subfloor-flatness-requirements-lvp",
-          "flooring-movement-problems"
+          "flooring-movement-problems",
+          "is-this-flooring-movement-normal",
         ],
         relatedCalculators: ["flooring-square-footage-calculator", "waste-calculator"]
       },
@@ -178,6 +180,7 @@ export const decisionTrees: DecisionTree[] = [
           "clicking-vs-lifting-flooring",
           "why-is-my-lvp-floor-clicking",
           "why-is-my-laminate-floor-separating",
+          "is-floor-separation-serious",
           "flooring-symptom-comparison-guide"
         ],
         relatedCalculators: ["transition-estimator", "waste-calculator"]
@@ -224,6 +227,7 @@ export const decisionTrees: DecisionTree[] = [
         ],
         relatedGuides: [
           "flooring-moisture-problems",
+          "when-to-stop-floor-installation",
           "moisture-vs-acclimation-problems",
           "how-to-test-concrete-moisture",
           "why-is-my-floor-swelling"
@@ -431,6 +435,7 @@ export const decisionTrees: DecisionTree[] = [
           "why-are-my-flooring-joints-opening",
           "laminate-floor-separation-repair-guide",
           "laminate-floor-not-clicking-together",
+          "can-i-keep-installing-laminate",
           "why-is-my-engineered-hardwood-separating",
           "laminate-floor-separating-what-to-check-first",
           "flooring-symptom-comparison-guide"
